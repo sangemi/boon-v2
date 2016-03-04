@@ -27,8 +27,16 @@ class User extends Authenticatable
     /**
      * user는 many ccMailsResult 가질수
      */
-    public function ccMails() {
+    public function ccMail() {
         return $this->hasMany('App\CcMail');
+    }
+
+    public function userRequest(){
+        return $this->hasMany('App\UserRequest');
+    }
+
+    public function userPayment(){
+        return $this->hasMany('App\UserPayment');
     }
 
     public function pecon() {
@@ -45,14 +53,13 @@ class User extends Authenticatable
 
     public function is($roleName)
     {
-    foreach ($this->roles()->get() as $role)
-    {
-    if ($role->name == $roleName)
-    {
-    return true;
-    }
-    }
-
-    return false;
+        foreach ($this->roles()->get() as $role)
+        {
+            if ($role->name == $roleName)
+            {
+                return true;
+            }
+        }
+        return false;
     }*/
 }

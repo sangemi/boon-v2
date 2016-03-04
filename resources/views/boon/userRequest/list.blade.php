@@ -52,7 +52,7 @@
     <div class="">
 
         {{--n개씩 정렬하는 방법--}}
-        @if (empty($ccMails))
+        @if (empty($userRequest))
 
             <div class="container">
                 <div class="jumbotron">
@@ -63,20 +63,11 @@
             </div>
 
         @else
-            @foreach(array_chunk( $ccMails->all(), 2) as $row)
+            @foreach(array_chunk( $userRequest->all(), 2) as $row)
                 <div class="row">
                     @foreach ($row as $ccMail)
                         <div class="col-sm-6">
                             <div class="panel panel-default divCcMailBox ">{{--ribon_new--}}
-                                <div class="panel-heading">
-                                    <b><i class="small">{{ $ccMail->id }}</i>.
-
-                                        {{--{{ $ccMail->cate3 }}--}}
-                                        {{ "".$ccMail->receiver_name }}
-                                        {{ "".$ccMail->status_show }}
-
-                                    </b>
-                                </div>
                                 {{--
 
                                         <div class="panel-body divCcMailBoxBody">
@@ -87,12 +78,16 @@
                                         </div>
                                 --}}
 
-                                <div class="panel-body clearfix " style="padding:0px;">
-                                    <div style="font-size:0.8em;overflow-y:scroll;height:100px;padding:5px;">
-                                        {!! nl2br(e($ccMail->content)) !!}
-                                    </div>
+                                <div class="panel-body clearfix " style="">
+                                    <b><i class="small">{{ $ccMail->id }}</i>.
 
-                                    <form method="get" action="{{URL::to('/ccmail/work/'.$ccMail->id)}}" class="" style="position:absolute;bottom:10px;right:10px;">
+                                        {{--{{ $ccMail->cate3 }}--}}
+                                        {{ $userRequest->ask_origin or ''}}
+                                        {{ $userRequest->create_at or ''}}
+
+                                    </b>
+
+                                    <form method="get" action="{{URL::to('/request/'.$userRequest->id)}}" class="" style="position:absolute;bottom:10px;right:10px;">
                                         <button type="submit" class="btn btn-default">
                                             <span class="glyphicon glyphicon-menu-right"></span>
                                         </button>
@@ -110,13 +105,13 @@
                         <!--페이징-->
 
                 <div class="text-center">
-                    {!! $ccMails->appends( Request::input() )->render() !!}
-                    {{--{!! $ccMails->appends( compact('cate1', 'cate2'))->links('ddddddd') !!} links는 안씀이제? --}}
+                    {!! $userRequest->appends( Request::input() )->render() !!}
+                    {{--{!! $userRequest->appends( compact('cate1', 'cate2'))->links('ddddddd') !!} links는 안씀이제? --}}
                     {{--
                     < ?php $cate1 = Input::get('cate1');
                     $cate2 = Input::get('cate2');
                     $q = Input::get('q'); ? >
-                    {!! $ccMails->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
+                    {!! $userRequest->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
                 </div>
                 @endif
     </div>
@@ -126,7 +121,7 @@
 
 
 
-    {{--{{SKHelper::p($ccMails)}}--}}
+    {{--{{SKHelper::p($userRequest)}}--}}
 
 
 

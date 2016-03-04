@@ -121,10 +121,8 @@ $(document).ready(function(){
 
             </div>
 
-            {!! BootForm::open()->id('form-내용증명')->action('/ccmail/work') !!}
+            {!! BootForm::open()->id('form-내용증명')->action('/ccmail/work/'. $ccMail->id)->put() !!}
             {!! BootForm::bind($ccMail) !!} {{--헐.......--}}
-            {!! BootForm::hidden('sample_id')->value( $ccMail->id ) !!}
-            {!! BootForm::hidden('create_id')->value( Auth::user()->id ) !!}
 
             <div class="panel-body ">
                 <div class="pull-left">
@@ -177,18 +175,21 @@ $(document).ready(function(){
                 <div class=" col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 
                     <div class="">
-                        <h4>제목 : {{$ccMail->cate3}}의 건</h4>
+                        <div class="col-sm-2"><h4>제목 <small>?</small></h4> </div>
+                        <div class="col-sm-10">
+                            {!! BootForm::text('', 'title')->value( $ccMail->cate3?$ccMail->cate3."의 건":'' )
+                            ->hideLabel()->placeholder("예) 계약해지의 건 / 안적어도 됩니다.")  !!}</div>
 
                     </div>
-
-                    <textarea name="content" class="form-control ccmail-content">{{ $ccMail->content }}</textarea>
+                    {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content')->hideLabel() !!}
+                    {{--<textarea name="content" class="form-control ccmail-content">{{ $ccMail->content }}</textarea>--}}
                 </div>
 
                 <div class=" col-sm-12 text-center alert">
                     <button class="btn btn-default btn-lg btn-ccmail-save" type="submit">내용저장</button>
 
                     @if(Auth::user())
-                        클릭시, 종류 고르는 페이지로.
+
                     @endif
                 </div>
 
@@ -197,17 +198,12 @@ $(document).ready(function(){
             {!! BootForm::close() !!}
 
             <div class="panel-footer">
-                <span>{{ $ccMail->create_id }}</span>
 
-                <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccMail/sample/' . $ccMail->id . '/edit') }}">
-                    저  장
-                </a>
-
-                <form method="post" action="/public/todo/{{$ccMail->id}}" class="pull-left">
+                {{--<form method="post" action="/ccmail/todo/{{$ccMail->id}}" class="pull-left">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="_token" value="{{ csrf_token()  }}">
                     <input type="submit" value="Del" class="btn btn-link btn-xs">
-                </form>
+                </form>--}}
             </div>
 
         </div>

@@ -182,7 +182,7 @@ $(document).ready(function(){
                 #preview_defenname	{padding:0 20px;}
                 #preview_defenaddr	{padding:0 20px;}
                 #preview_defenhp	{padding:0 20px;}
-                #preview_subject	{padding:20px 20px;}
+                #preview_subject	{padding:10px 10px 0 10px;}
                 #preview_content	{padding:20px 0px;}
                 #preview_date		{text-align:center;padding:20px;}
                 #preview_signature	{padding-right:130px;text-align:right;}
@@ -372,8 +372,9 @@ function calculate_charge_amt(obj){
                     /*PayApp.setDefault('redirecturl','http://<?=$_SERVER['HTTP_HOST']?>/v/consultList');	//결제안내문자 발송시
                      PayApp.setDefault('redirect',	'opener');		//opener [기본값] 부모창 self 현재창*/
 
-                    PayApp.setDefault('returnurl',	'http://<?=$_SERVER['HTTP_HOST']?>/ccmail/work?flag=paymentok');	//결제성공시
-                    PayApp.setDefault('feedbackurl','http://<?=$_SERVER['HTTP_HOST']?>/lib/payapp/payapp_response.php');	//
+                    PayApp.setDefault('returnurl',	'http://<?=$_SERVER['HTTP_HOST']?>/ccmail/order');	//결제성공시
+                    PayApp.setDefault('feedbackurl','http://<?=$_SERVER['HTTP_HOST']?>/lib/payapp/payapp_response.php');	// 이부분 잘못되면 에러코드 70080 / 고객사 응답 실패
+
 
 
                     $("#btn접수하기").click(function(){
@@ -542,7 +543,7 @@ function calculate_charge_amt(obj){
                         $consult = $ccMail;
 
                         ?>
-                        <div class='' style="color:royalblue;">※ 미리보기 화면입니다. 실제 더 정돈된 형태로 발송합니다 ※</div>
+                        <div class='text-center' style="color:royalblue;">※ 미리보기 화면입니다. 실제 더 정돈된 형태로 발송합니다 ※</div>
                         <div class='post_title c' id="preview_top"></div>
                         <div class='post_title c' id="preview_title">
                             내용증명
@@ -567,10 +568,9 @@ function calculate_charge_amt(obj){
                             <div class="work_icon" id="work_icon2"></div>
                         </div>
                         <div class='post_title c' id="preview_cen___"></div>
-
-                        <!--div class='post_title' id="preview_subject">
-						<div class='post_content'><?=htmlspecialchars($consult['post_title'])?></div>
-						</div-->
+                        <div class='post_title' id="preview_subject">
+                             <div class='post_content'><?=$consult['title']?></div>
+						</div>
 
 
 
@@ -610,11 +610,9 @@ function calculate_charge_amt(obj){
             <div class="panel-footer">
                 {{--<span>{{ $ccMail->create_id }}</span>--}}
 
-                <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/work/' . $ccMail->id . '/edit') }}">
-                    수정
-                </a>
+                <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#confirmDelete">삭제</button>
 
-                <button type="button" class="btn btn-xs btn-default btn-flat" data-toggle="modal" data-target="#confirmDelete">Del</button>
+                <a class="pull-right btn btn-sm btn-default" href="{{ URL::to('ccmail/work/' . $ccMail->id . '/edit') }}">수정</a>
 
             </div>
 

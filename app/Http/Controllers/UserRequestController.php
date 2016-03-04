@@ -1,22 +1,18 @@
 <?php namespace App\Http\Controllers;
 
-use App\CcMailWork;
-use App\CcMailSample;
+use App\UserRequest;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-use Guzzle\Plugin\Cookie\Cookie;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 
 
-class CcMailWorkController extends Controller {
+class UserRequestController extends Controller {
 
 	/*
 	 * 	GET			/photo				index	photo.index		리스트
@@ -37,10 +33,10 @@ class CcMailWorkController extends Controller {
 	public function index()
 	{
 
-		$ccMails = CcMailWork::where('create_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
-		//$ccMails = DB::table('ccmails_work')->orderBy('id', 'desc')->paginate(9);
+		$userRequest = UserRequest::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
+		//$ccMails = DB::table('ccmails_order')->orderBy('id', 'desc')->paginate(9);
 
-		return view('boon.ccMail.work_list', compact('ccMails'));
+		return view('boon.userRequest.list', compact('userRequest'));
 	}
 
 	/**
@@ -84,20 +80,20 @@ class CcMailWorkController extends Controller {
 
 		if (Auth::check()) { // 로그인여부
 			/*print_r(Request::all());
-			print_r(Input::all());*/
-			$validator = $this->validator(Input::all());
+			print_r(Request::all());*/
+			$validator = $this->validator(Request::all());
 
 			if ($validator->fails()) {
 
 				Session::flash('message', '입력값을 확인해주세요.');
 
-				return Redirect::to('ccmail/work/create/'.Input::get('sample_id'))
+				return Redirect::to('ccmail/work/create/'.Request::get('sample_id'))
 					->withErrors($validator)
-					->withInput(Input::except('password'));
+					->withInput(Request::except('password'));
 
 			} else {
-				$data = Input::all();
-				$ccmail = new CcMailWork();
+				$data = Request::all();
+				$ccmail = new UserRequest();
 
 				$ccmail->sample_id = $data['sample_id'];
 				$ccmail->sender_name = $data['sender_name'];
@@ -136,7 +132,7 @@ class CcMailWorkController extends Controller {
 	 */
 	public function show($id, $direction = null)
 	{
-		$ccMail = CcMailWork::find($id);
+		$ccMail = UserRequest::findOrFail($id);
 		if( empty($ccMail) ) abort(404, '자료가 없습니다.');
 
 		/*if( $ccMail->status_inner == '접수' || $ccMail->status_inner == '' ){
@@ -155,7 +151,7 @@ class CcMailWorkController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$ccMail = CcMailWork::find($id);
+		$ccMail = UserRequest::find($id);
 		return view('boon.ccMail.work_edit', compact('ccMail', 'id'));
 	}
 
@@ -184,7 +180,7 @@ class CcMailWorkController extends Controller {
 			} else {
 
 				/*이건 프로퍼티 방식이라고 함. 배열방식은 select없이 바로 update하는데, 보안때문에 모델에 fillable 지정해야.*/
-				$ccmail = CcMailWork::find($id);
+				$ccmail = UserRequest::find($id);
 
 				$data = Request::all();
 
@@ -226,7 +222,7 @@ class CcMailWorkController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		CcMailWork::destroy($id);
+		UserRequest::destroy($id);
 		/*$work = $this->ccmail->findOrFail($id);
 		$work->destroy($id);*/
 		return $this->index();

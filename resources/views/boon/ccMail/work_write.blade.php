@@ -82,17 +82,21 @@ $(document).ready(function(){
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('ccmail') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
-    <li><a href="{{ URL::to('ccmail?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
-    @if($ccMail->cate2)
-    <li><a href="{{ URL::to('ccmail?cate2='.$ccMail->cate2) }}">{{ $ccMail->cate2 }}</a></li>
+    @if($ccMail->cate1)
+        <li><a href="{{ URL::to('ccmail?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
     @endif
-    <li class="active">{{ $ccMail->id }}</li>
+    @if($ccMail->cate2)
+        <li><a href="{{ URL::to('ccmail?cate2='.$ccMail->cate2) }}">{{ $ccMail->cate2 }}</a></li>
+    @endif
+    @if($ccMail->id)
+        <li class="active">{{ $ccMail->id }}</li>
+    @endif
 
-    <li style="" class="pull-right">{{--이전 샘플 / 다음 샘플--}}
+    {{--샘플에서 불러오기. 등 뭐넣지..
+    <li style="" class="pull-right">--}}{{--이전 샘플 / 다음 샘플--}}{{--
         <span class="btn btn-xs btn-default btnPrev glyphicon glyphicon-menu-left" aria-hidden="true"></span>
         <span class="btn btn-xs btn-default btnNext glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-
-    </li>
+    </li>--}}
 
 </ol>
 {{--    <div class="corner-ribbon top-left sticky red shadow">New</div>
@@ -103,6 +107,10 @@ $(document).ready(function(){
     <h1>Corner Ribbons</h1>
     <h2>(with custom settings and all...)</h2>--}}
 
+<!-- 세션에 메세지 있으면 보여주기 -->
+@if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
+@endif
 
 <div class="">{{--내용증명 리스트 간략 박스형태--}}
     <div class="row">
@@ -120,11 +128,6 @@ $(document).ready(function(){
                     </div>
 
             </div>
-
-            {!! Form::open(array('id' => 'form-내용증명', 'url'=>'/ccmail/work')) !!}
-            {!! Form::email('ddd', null, ['class' => 'form-control']) !!}
-
-            {!! Form::close() !!}
 
             {!! BootForm::open()->id('form-내용증명')->action('/ccmail/work') !!}
             {!! BootForm::hidden('sample_id')->value( $ccMail->id ) !!}
@@ -181,11 +184,14 @@ $(document).ready(function(){
                 <div class=" col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 
                     <div class="">
-                        <h4>제목 : {{$ccMail->cate3}}의 건</h4>
+                        <div class="col-sm-2"><h4>제목 <small>?</small></h4> </div>
+                        <div class="col-sm-10">
+                            {!! BootForm::text('', 'title')->value( $ccMail->cate3?$ccMail->cate3."의 건":'' )
+                            ->hideLabel()->placeholder("예) 계약해지의 건 / 안적어도 됩니다.")  !!}</div>
 
                     </div>
-
-                    <textarea name="content" class="form-control ccmail-content">{{ $ccMail->content }}</textarea>
+                    {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content')->hideLabel() !!}
+                    {{--<textarea name="content" class="form-control ccmail-content">{{ $ccMail->content }}</textarea>--}}
                 </div>
 
                 <div class=" col-sm-12 text-center alert">
