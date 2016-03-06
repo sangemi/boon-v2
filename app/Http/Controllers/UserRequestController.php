@@ -32,7 +32,7 @@ class UserRequestController extends Controller {
 	 */
 	public function index()
 	{
-
+		dd("index");
 		$userRequest = UserRequest::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
 		//$ccMails = DB::table('ccmails_order')->orderBy('id', 'desc')->paginate(9);
 
@@ -75,52 +75,47 @@ class UserRequestController extends Controller {
 		]); //|email|max:255|unique:users 'password' => 'required|confirmed|min:6',
 		// receiver. 에서 numeric|alpha 숫자+하이픈만 어떻게 하는지 모르겠네.....
 	}
-	public function store()
+	private function makePaperHTML($type, $content){
+		// 서식 생성기. SK
+		return $content;
+	}
+	public function store($fromWhere)
 	{
+		//if (Auth::check()) { // 로그인여부는 route에서..
+		if ( 1 ) {
+			// 은행이체를 누른 경우
+			$fromWhere = ($fromWhere)?$fromWhere:'';
 
-		if (Auth::check()) { // 로그인여부
-			/*print_r(Request::all());
-			print_r(Request::all());*/
-			$validator = $this->validator(Request::all());
+			$userReq = new UserRequest();
+			$data = Request::all();
 
-			if ($validator->fails()) {
+			$userReq->user_id = Auth::user()->id;
+			$userReq->model_name = $data['model_name'];
+			$userReq->model_id = $data['model_id'];
+			$userReq->ask_origin = $data['ask_origin'];
 
-				Session::flash('message', '입력값을 확인해주세요.');
+			$worked_paper = \stdClass();
+			$worked_paper->sender_name = $data['sender_name'];
+			$worked_paper->sender_addr = $data['sender_addr'];
+			$worked_paper->sender_phone = $data['sender_phone'];
 
-				return Redirect::to('ccmail/work/create/'.Request::get('sample_id'))
-					->withErrors($validator)
-					->withInput(Request::except('password'));
+			$worked_paper->receiver_name = $data['receiver_name'];
+			$worked_paper->receiver_addr = $data['receiver_addr'];
+			$worked_paper->receiver_phone = $data['receiver_phone'];
 
-			} else {
-				$data = Request::all();
-				$ccmail = new UserRequest();
+			$worked_paper->content = $data['content'];
 
-				$ccmail->sample_id = $data['sample_id'];
-				$ccmail->sender_name = $data['sender_name'];
-				$ccmail->sender_addr = $data['sender_addr'];
-				$ccmail->sender_phone = $data['sender_phone'];
+			$userReq->worked_paper = $this->makePaperHTML('ccmail', $worked_paper)
 
-				$ccmail->receiver_name = $data['receiver_name'];
-				$ccmail->receiver_addr = $data['receiver_addr'];
-				$ccmail->receiver_phone = $data['receiver_phone'];
+			$userReq->status_inner = $data['status_inner'];
+			$userReq->status_show = $data['status_show'];
 
-				$ccmail->content = $data['content'];
 
-				$ret = $ccmail->save();
+			$ret = $userReq->save();
 
-				Session::flash('message', '보관함에 저장되었습니다.');
-				return redirect()->to('/ccmail/work/'.$ccmail->id);
-			}
-			return response()->json(['result' => $ret, 'ccmail' => $ccmail],
-				200, [], JSON_PRETTY_PRINT);
-
-		}else{
-			//Session::put('temp_ccmail_data', $_POST); // flash : 다음번 요청에서만 사용하기. <> put
-			//Session::put('return_url', Request::url());
-
-			return redirect()->to('/auth/login'); //->with('temp_ccmail_data', $_POST); //with는 Session::flash인듯. 다음번 요청에서만 사용.
+			Session::flash('message', '보관함에 저장되었습니다.');
+			return redirect()->to('/ccmail/work/'.$userReq->id);
 		}
-
 	}
 
 
@@ -132,10 +127,11 @@ class UserRequestController extends Controller {
 	 */
 	public function show($id, $direction = null)
 	{
-		$ccMail = UserRequest::findOrFail($id);
-		if( empty($ccMail) ) abort(404, '자료가 없습니다.');
 
-		/*if( $ccMail->status_inner == '접수' || $ccMail->status_inner == '' ){
+		$userReq = UserRequest::findOrFail($id);
+		if( empty($userReq) ) abort(404, '자료가 없습니다.');
+
+		/*if( $userReq->status_inner == '접수' || $userReq->status_inner == '' ){
 			return view('boon.ccMail.work_show', compact('ccMail', 'id'));
 		}else{
 

@@ -19,17 +19,17 @@ Route::group(['middleware' => ['web']], function () { //소스중에서 Token, S
 
     Route::group(['middleware' => 'auth'], function () {
         Route::resource('ccmail/work', 'CcMailWorkController');
-        Route::get('ccmail/work/create/{id}', ['middleware'=>'auth', 'uses'=>'CcMailWorkController@create']);
+        //Route::get('ccmail/work/create/{id}', ['middleware'=>'auth', 'uses'=>'CcMailWorkController@create']);
+        Route::get('ccmail/work/create/{id}', 'CcMailWorkController@create');
         //Route::get('ccmail/work/{id}', ['middleware'=>'auth', 'uses'=>'CcMailWorkController@show']); //기본 route지만 auth해야해서. ??
 
         Route::resource('request', 'UserRequestController');
+        //Route::resource('request/ccmail', 'RequestCcmailController'); //what : ccmail, ordpay, consult 등
+
+        Route::resource('boon/charge', 'BoonSystemController');
 
     });
 
-    /*Route::resource('ccmail', 'CcMailController');
-    Route::get('ccmail/sample/{id}/{direction?}', 'CcMailController@show');
-    Route::get('ccmail/write/{id}', ['middleware'=>'auth', 'uses'=>'CcMailController@create']);
-    Route::get('ccmail/result/{id}', ['middleware'=>'auth', 'uses'=>'CcMailController@result']);*/
 
 
 

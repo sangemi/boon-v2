@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /* '의뢰' : 내용증명, 지급명령, 상담 신청, 주문 Request*/
-class UserRequest extends Model {
+class UserPayment extends Model {
     protected $table = 'user_requests';
 
     /*public function __construct($table_name = null, array $attributes = array())

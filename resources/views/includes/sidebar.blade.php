@@ -3,7 +3,7 @@
     <ul class="nav nav-pills nav-stacked">
         @if(Request::is('ccmail/*'))
             <li><a href="{{ URL::to('/ccmail/work') }}">보관함</a></li>
-            <li><a href="{{ URL::to('/request') }}">발송내역</a></li>
+            <li><a href="{{ URL::to('/request/ccmail') }}">신청내역</a></li>
         @elseif(Request::is('sosong/*'))
             <li><a href="{{ URL::to('/sosong/work') }}">나의 이력</a></li>
         @else
@@ -13,5 +13,6 @@
 
         @endif
 
+        <li><a href="{{ URL::to('/boon/charge') }}">분노 충전</a></li>
     </ul>
 </nav>

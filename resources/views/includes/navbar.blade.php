@@ -35,7 +35,7 @@
 
 
                 <ul class="nav navbar-nav navbar-right">
-
+                    <li><a href="{{ URL::to('/boon/charge') }}"><small>충전</small></a></li>
                     @if (Auth::guest())
                         <li><a href="{{ url('/auth/login') }}">
                                 <i class="fa fa-search icon icon-search"></i>

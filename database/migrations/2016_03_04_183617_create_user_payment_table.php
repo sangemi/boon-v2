@@ -26,7 +26,7 @@ class CreateUserPaymentTable extends Migration
             $table->timestamp('pay_date');
             $table->string('pay_type');  // 은행 카드
 
-            $table->text('request_paper'); // (직접작성한) 신청자료
+            $table->text('worked_paper'); // (직접작성한) 신청자료
 
             $table->text('answer_ask'); // 요청사항에 대한 답변
             // $table->text('answer_request'); // 작업결과물은 file 또는 result_table로
