@@ -26,7 +26,9 @@ Route::group(['middleware' => ['web']], function () { //소스중에서 Token, S
         Route::resource('request', 'UserRequestController');
         //Route::resource('request/ccmail', 'RequestCcmailController'); //what : ccmail, ordpay, consult 등
 
-        Route::resource('boon/charge', 'BoonSystemController');
+        Route::resource('boon/status', 'BoonStatusController');
+        Route::resource('boon/cash', 'BoonCashController'); /*실제 돈 충전, 환불*/
+        Route::resource('boon/point', 'BoonPointController'); /*포인트 적립, 삭감*/
 
     });
 

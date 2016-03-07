@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBoonSystemTable extends Migration
+class CreateBoonStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateBoonSystemTable extends Migration
     public function up()
     {
 
-        Schema::create('boon_system', function(Blueprint $table)
+        Schema::create('boon_status', function(Blueprint $table)
         {
             $table->increments('id');
 
@@ -44,6 +44,6 @@ class CreateBoonSystemTable extends Migration
      */
     public function down()
     {
-        Schema::drop('boon_system');
+        Schema::drop('boon_status');
     }
 }

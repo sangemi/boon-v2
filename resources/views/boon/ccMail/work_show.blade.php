@@ -623,18 +623,17 @@ function calculate_charge_amt(obj){
     </div>
 </div>
 
-<div class="modal fade" id="modal계좌안내" tabindex="-1" role="dialog" aria-labelledby="계좌안내">
+<div class="modal fade" id="modal신청확인" tabindex="-1" role="dialog" aria-labelledby="신청확인">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">계좌안내</h4>
+                <h4 class="modal-title">신청확인</h4>
             </div>
             <div class="modal-body">
 
-                    <p><span style="font-size:1.3em;color:royalblue">우리 1005-502-237770 (주)모이어</span></p>
-                    <p>위 계좌에 비용입금 후, 입금완료 버튼을 클릭해주세요.</p>
-                    <p>※ 통상 오전2시 이전 접수시 당일 발송가능합니다. </p>
+                    <p></p>
+                    <p>※ 오전2시 이전 접수시 통상 당일 발송가능합니다. </p>
 
             </div>
             <div class="modal-footer">
@@ -646,7 +645,7 @@ function calculate_charge_amt(obj){
                 {!! BootForm::hidden('text')->defaultValue('입금하였습니다.') !!}
 
                 <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-                <button type="submit" class="btn btn-primary">입금 완료하였습니다</button>
+                <button type="button" class="btn btn-primary" onclick="$('#form접수').submit()">신청</button>
                 {!! BootForm::close() !!}
             </div>
         </div>

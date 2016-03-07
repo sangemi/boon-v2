@@ -25,8 +25,16 @@ class User extends Authenticatable
     ];
 
     /**
-     * user는 many ccMailsResult 가질수
      */
+
+    public function userInfo(){
+        return $this->hasOne('App\UserInfo');
+    }
+
+    public function boonStatus(){
+        return $this->hasOne('App\BoonStatus');
+    }
+
     public function ccMail() {
         return $this->hasMany('App\CcMail');
     }

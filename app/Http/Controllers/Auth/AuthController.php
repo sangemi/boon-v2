@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\BoonStatus;
 use App\User;
+use App\UserInfo;
 use Laravel\Socialite\Facades\Socialite;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -64,11 +66,23 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user_id = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        // SK 추가함 - 회원가입할 때 hasOne인것들은 자동 추가
+        UserInfo::create([
+            'user_id' => $user_id
+        ]);
+
+        // 최초 500 포인트 공짜
+        BoonStatus::create([
+            'boot_point' => 500,
+            'user_id' => $user_id
+        ]);
+        return $user_id;
     }
 
 
