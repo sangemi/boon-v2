@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/v1/btn_pay_banking.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/v1/btn_pay_phone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BoonCash.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/BoonPoint.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/UserInfo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_07_174752_create_users_info_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ko/auth.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ko/boon.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ko/pagination.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ko/passwords.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/ko/validation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/boon/boonSystem/list.blade.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/point/cash_list.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/ccMail/work_show.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/ccMail/work_show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/BoonSystem.php" afterPath="$PROJECT_DIR$/app/BoonStatus.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Http/Controllers/BoonSystemController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BoonStatusController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2016_03_06_192341_create_boon_system_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_06_192341_create_boon_status_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,8 +37,8 @@
       <file leaf-file-name="BoonCashController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.571428">
-              <caret line="111" column="35" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="35" />
+            <state vertical-scroll-proportion="-15.607142">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
               <folding>
                 <element signature="e#39#56#0#PHP" expanded="true" />
               </folding>
@@ -79,20 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="status.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.892858">
-              <caret line="105" column="99" selection-start-line="105" selection-start-column="99" selection-end-line="105" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.43359375">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="e#654#674#0#HTML" expanded="true" />
                 <element signature="e#1768#1827#0#HTML" expanded="true" />
-                <element signature="e#6280#6307#0#HTML" expanded="true" />
-                <element signature="e#6739#6774#0#HTML" expanded="true" />
-                <element signature="e#6994#7029#0#HTML" expanded="true" />
-                <element signature="e#7887#7926#0#HTML" expanded="true" />
-                <element signature="e#9284#9324#0#HTML" expanded="true" />
-                <marker date="1457355149566" expanded="true" signature="8566:8567" placeholder="..." />
+                <element signature="e#6267#6294#0#HTML" expanded="true" />
+                <element signature="e#6726#6761#0#HTML" expanded="true" />
+                <element signature="e#6981#7016#0#HTML" expanded="true" />
+                <element signature="e#7874#7913#0#HTML" expanded="true" />
+                <element signature="e#9271#9311#0#HTML" expanded="true" />
+                <marker date="1457357872923" expanded="true" signature="8553:8554" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -131,17 +110,17 @@
       <file leaf-file-name="cash_list.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/point/cash_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.25">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_03_07_160820_create_boon_cash_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2016_03_07_160820_create_boon_cash_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54356307">
+            <state vertical-scroll-proportion="-14.928572">
               <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
@@ -222,9 +201,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/BoonStatusController.php" />
         <option value="$PROJECT_DIR$/app/BoonCash.php" />
         <option value="$PROJECT_DIR$/app/BoonPoint.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
       </list>
     </option>
   </component>
@@ -829,7 +808,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457262586295</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="초기개발 3 - 카드결제 테스트전&#10;">
+      <created>1457355874343</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1457355874343</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -849,15 +834,15 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23869105" sideWeight="0.49196142" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12567714" sideWeight="0.5072185" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10606061" sideWeight="0.49278152" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10617551" sideWeight="0.49278152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33261105" sideWeight="0.4971146" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.095283926" sideWeight="0.49624866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24466951" sideWeight="0.5080386" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -883,7 +868,8 @@
     <MESSAGE value="새로시작" />
     <MESSAGE value="초기개발 1" />
     <MESSAGE value="초기개발 2&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="초기개발 2&#10;" />
+    <MESSAGE value="초기개발 3 - 카드결제 테스트전&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="초기개발 3 - 카드결제 테스트전&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -987,6 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.5">
           <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,6 +1095,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.785714">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1210,14 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/cash_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Lib/skHelper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.285715">
@@ -1260,38 +1240,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.892858">
-          <caret line="105" column="99" selection-start-line="105" selection-start-column="99" selection-end-line="105" selection-end-column="99" />
-          <folding>
-            <element signature="e#654#674#0#HTML" expanded="true" />
-            <element signature="e#1768#1827#0#HTML" expanded="true" />
-            <element signature="e#6280#6307#0#HTML" expanded="true" />
-            <element signature="e#6739#6774#0#HTML" expanded="true" />
-            <element signature="e#6994#7029#0#HTML" expanded="true" />
-            <element signature="e#7887#7926#0#HTML" expanded="true" />
-            <element signature="e#9284#9324#0#HTML" expanded="true" />
-            <marker date="1457355149566" expanded="true" signature="8566:8567" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-14.928572">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.571428">
-          <caret line="111" column="35" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="35" />
+        <state vertical-scroll-proportion="-15.607142">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
           <folding>
             <element signature="e#39#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/cash_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54356307">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.25">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43359375">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#654#674#0#HTML" expanded="true" />
+            <element signature="e#1768#1827#0#HTML" expanded="true" />
+            <element signature="e#6267#6294#0#HTML" expanded="true" />
+            <element signature="e#6726#6761#0#HTML" expanded="true" />
+            <element signature="e#6981#7016#0#HTML" expanded="true" />
+            <element signature="e#7874#7913#0#HTML" expanded="true" />
+            <element signature="e#9271#9311#0#HTML" expanded="true" />
+            <marker date="1457357872923" expanded="true" signature="8553:8554" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

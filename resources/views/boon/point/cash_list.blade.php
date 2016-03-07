@@ -18,11 +18,11 @@
     {{--세부페이지 네비바--}}
     <nav class="navbar navbar-default">
         <div class="navbar-header">
-            <a class="navbar-brand" href="{{ URL::to('boon/list') }}">BOON</a>
+            <a class="navbar-brand" href="{{ URL::to('boon/list') }}">분노 내역</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{ URL::to('boon/status') }}">충전</a></li>
+                <li><a href="{{ URL::to('boon/status') }}">분노 충전</a></li>
             </ul>
             <ul class="nav navbar-nav" style="float: right">
                 <li><a href="#" class="navbar-nav pull-right"></a></li>
@@ -58,41 +58,49 @@
         {{--<p>분노게이지를 충전하는 방법은 여러가지입니다.</p>--}}
     </div>
 
-    <div class="">
-        <div class="well">
-            현재 보유량
-            <table class="table">
-                <tr>
-                    <td colspan="2" style="color:yellowgreen;font-size:1.6em;font-weight:bold;">
-                        총 {{( $list->boon_cash + $list->boon_point)}} point</td>
-                <tr>
-                    <td>
-                        <b>캐쉬</b> : {{ $list->boon_cash." point" }}
-                        <br>
-                        <i>
+    @if (!count($list))
 
-                            {{--최근 입력한것만 보여주려고함.--}}
-                            <?php $boon_cash = Auth::user()->boonStatus->boonCash->last(); ?>
-
-                            <div>
-                            {{ date('Y-m-d', strtotime($boon_cash ->updated_at)) }} /
-                            <?=number_format($boon_cash ->pay_amt)?> point /
-                            {{ ($boon_cash ->confirmed)?"반영완료":"입금 확인중.." }}
-                            </div>
-
-                        </i>
-                    </td>
-                    <td>
-                        <b>포인트</b> : {{ $list->boon_point." point"}}
-                    </td>
-                </tr>
-            </table>
+        <div class="row alert alert-info">
+            현재 분노게이지는 0입니다.
         </div>
-        {{--현재 분 상태. 나중 평균 분 상태 도시?--}}
-    </div>
 
+    @else
+        <div class="row">
+        @foreach($list as $row)
+            {{--현재 분 상태. 나중 평균 분 상태 도시?--}}
+            <div class="col-sm-6">
+                <div class="panel panel-default divCcMailBox ">{{--ribon_new--}}
+                    {{--
+                            <div class="panel-body divCcMailBoxBody">
+                                <div class="corner-ribbon top-right blue" style="opacity:0.5;">추 천
+                                    <span class="badge">{{ $ccMail->used_cnt }}</span>
+                                </div>
+                                {!! nl2br(e($ccMail->content)) !!}
+                            </div>
+                    --}}
 
-        <!-- Payapp.kr 결제모듈 시작 -->
+                    <div class="panel-body clearfix " style="">
+                        <b><i class="small">{{ $row->id }}</i>.
+
+                            {{--{{ $ccMail->cate3 }}--}}
+                            {{ "캐쉬 분노 : ".$row->boon_cash or ''}}
+                            {{ "포인트 분노 : ".$row->boon_point or ''}}
+
+                        </b>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+        </div>
+
+        <!--페이징-->
+        <div class="text-center">
+            {!! $list->appends( Request::input() )->render() !!}
+            {{--{!! $list->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
+        </div>
+
+    @endif
+            <!-- Payapp.kr 결제모듈 시작 -->
         <script src="http://lite.payapp.kr/public/api/payapp-lite.js"></script>
         <script>
             $(document).ready(function(){
@@ -102,8 +110,8 @@
                 /*PayApp.setDefault('redirecturl','http://<?=$_SERVER['HTTP_HOST']?>/v/consultList');	//결제안내문자 발송시
                  PayApp.setDefault('redirect',	'opener');		//opener [기본값] 부모창 self 현재창*/
 
-                PayApp.setDefault('returnurl',	'http://<?=$_SERVER['HTTP_HOST']?>/boon/status');	//결제성공시
-                PayApp.setDefault('feedbackurl','http://<?=$_SERVER['HTTP_HOST']?>/boon/cash');	// 이부분 잘못되면 에러코드 70080 / 고객사 응답 실패
+                PayApp.setDefault('returnurl',	'http://<?=$_SERVER['HTTP_HOST']?>/ccmail/order');	//결제성공시
+                PayApp.setDefault('feedbackurl','http://<?=$_SERVER['HTTP_HOST']?>/lib/payapp/payapp_response.php');	// 이부분 잘못되면 에러코드 70080 / 고객사 응답 실패
 
 
 
@@ -117,17 +125,15 @@
                  });*/
 
                 $("#btn페이앱결제").click(function(){
-                    $(".input결제액").val( $("#input충전예정액").val() );
-
                     $(this).attr('disabled', 'disabled');
                     payapp_call();
                     $(this).removeAttr('disabled');
 
                 });
 
-                $("#input충전예정액").keyup(function(){
+                $("#btn계좌안내").click(function(){
+                    $("#btnModal계좌안내").show();
 
-                    $(".input결제액").val( $(this).val() );
 
                 });
                 /*임의금액 결제할 때*/
@@ -155,35 +161,24 @@
         <!-- Payapp.kr 결제모듈 끝 -->
 
         <?php
-        $sms_memo = ""; //"모든 진행과정은 웹에서 확인가능합니다. 내용 검토 후 이상있는 경우 유선 연락드리겠습니다. 감사합니다.";
-        $txt_goodname = "포인트 충전";
-        $initialAmt = 10000;
+        $sms_memo = "모든 진행과정은 웹에서 확인가능합니다. 내용 검토 후 이상있는 경우 유선 연락드리겠습니다. 감사합니다.";
+        $txt_type = "";
         ?>
         <form>
-            <input type=hidden name="price_sum" id="price_sum" value="" class="input결제액" />
-            <input type=hidden name="good_name" id=good_name value="<?=$txt_goodname?>" />
+            <input type=hidden name="price_sum" id="price_sum" value="" />
+            <input type=hidden name="good_name" id=good_name value="{{}}" />
             <input type=hidden name="sms_memo" id=sms_memo value="<?=$sms_memo?>" />
-            <input type=hidden name="sender_phone" id=sender_phone value="<?=Auth::user()->userInfo->phone?>" />
+            <input type=hidden name="sender_phone" id=sender_phone value="" />
 
             <input type=hidden name="work_id" id="work_id" value="<?=Auth::user()->id?>" />
         </form>
 
     {{--신용카드 은행이체--}}
     <div class="row" id="">
-        <h2>충전하기</h2>
-        <hr />
-        {!! BootForm::openHorizontal(['sm'=>[3,7],'method' => 'POST'])->action('/boon/cash') !!}
-
-        <div class="input-group col-xs-6 col-xs-offset-3" style="margin-bottom:30px;">
-            <input type="text" id="input충전예정액" placeholder="<?=$initialAmt?>" value="<?=$initialAmt?>" class="form-control text-center" required>
-            <span class="input-group-addon" id="basic-addon">원</span>
-        </div>
-        {!! BootForm::close() !!}
-
-        <div class="col-xs-6 text-right">
+        <div class="col-xs-6 text-center">
             <div id="phone_pay"><a href="javascript:void(0);" class="" id="btn페이앱결제"><img src="/img/v1/btn_pay_phone.png" style="width:100%;max-width:300px;"></a></div>
         </div>
-        <div class="col-xs-6 text-left">
+        <div class="col-xs-6 text-center">
             <div id="banking_pay">
                 <a type="button" data-toggle="modal" data-target="#modal계좌안내"><img src="/img/v1/btn_pay_banking.png" style="width:100%;max-width:300px;" /></a>
 
@@ -214,24 +209,22 @@
 
                     <p><span style="font-size:1.3em;color:royalblue">우리 1005-502-237770 (주)모이어</span></p>
                     {!! BootForm::text('입금자명','bank_owner')->value( Auth::user()->name ) !!}
+                    {!! BootForm::text('연락처','phone')->value( Auth::user()->userInfo->phone ) !!}
 
-                    {!! BootForm::text('연락처','recvphone')->value( \app\Lib\skHelper::tel_html( Auth::user()->userInfo->phone) ) !!}
-                    {!! BootForm::hidden('price')->class( 'input결제액' )->value( $initialAmt ) !!}
 
-                    <small>
-                    <p>위 계좌에 <u>입금하신 후</u> 아래 버튼을 클릭해주세요. 확인 후 자동 충전됩니다.</p>
-                    <p>연락처는 진행상황 안내를 위해 사용됩니다. </p>
-                    </small>
+
+
+
+                    <p>위 계좌에 입금하신 후 아래 버튼을 클릭해주세요. </p>
+                    <p>확인 후 자동 충전됩니다. </p>
 
                 </div>
                 <div class="modal-footer">
 
-                    {{--
-                    {1 ! ! BootForm::open(['method' => 'POST', 'action' => 'SmsController@sendSms']) !! }
-                    {1 ! ! BootForm::hidden('to')->value( '01047750852' ) !! } 회사 담당자 전번
-                    {1 ! ! BootForm::hidden('from')->value( '' / *$user->sender_phone* / ) !! } 의뢰인 전번
-                    {1 ! ! BootForm::hidden('memo')->value('입금하였습니다.') !! }
-                    --}}
+                    {{--{!! BootForm::open(['method' => 'POST', 'action' => 'SmsController@sendSms']) !!}--}}
+                    {!! BootForm::hidden('to')->value( '01047750852' ) !!} {{--회사 담당자 전번--}}
+                    {!! BootForm::hidden('from')->value( '' /*$user->sender_phone*/ ) !!} {{--의뢰인 전번--}}
+                    {!! BootForm::hidden('memo')->value('입금하였습니다.') !!}
 
                     <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
                     <button type="submit" class="btn btn-primary">입금 완료하였습니다</button>

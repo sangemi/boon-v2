@@ -33,7 +33,9 @@ class BoonCashController extends Controller {
 	 */
 	public function index()
 	{
-		$list = BoonCash::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
+		dd(Request::all());
+		//$list = BoonCash::where('boon_status_id', Auth::user()->boonStatus->id)->orderBy('id', 'desc')->paginate(9);
+		$list = Auth::user()->boonStatus->boonCash;
 		//$ccMails = DB::table('ccmails_order')->orderBy('id', 'desc')->paginate(9);
 
 		return view('boon.point.cash_list', compact('list'));
