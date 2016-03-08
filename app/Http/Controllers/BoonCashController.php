@@ -26,6 +26,10 @@ class BoonCashController extends Controller {
 	 * index 	create 	store	show 	 edit	update	destroy
 	 *
 	 */
+	public function __construct()
+	{
+
+	}
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -33,9 +37,8 @@ class BoonCashController extends Controller {
 	 */
 	public function index()
 	{
-		dd(Request::all());
-		//$list = BoonCash::where('boon_status_id', Auth::user()->boonStatus->id)->orderBy('id', 'desc')->paginate(9);
-		$list = Auth::user()->boonStatus->boonCash;
+		//$list = BoonCash::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
+		$list = Auth::user()->boonCash;
 		//$ccMails = DB::table('ccmails_order')->orderBy('id', 'desc')->paginate(9);
 
 		return view('boon.point.cash_list', compact('list'));
@@ -93,7 +96,7 @@ class BoonCashController extends Controller {
 
 		// 은행이체했다고 클릭시.
 		if( empty($data['linkval']) ){
-			$boon_cash->boon_status_id = Auth::user()->boonStatus->id;
+			$boon_cash->user_id = Auth::user()->id;
 			$boon_cash->title = '은행이체';
 			$boon_cash->pay_memo = "입금자명 : ".$data['bank_owner']." / 전번 : ".$data['recvphone'];
 			$boon_cash->pay_amt = $data['price'];
@@ -103,8 +106,11 @@ class BoonCashController extends Controller {
 
 		}else{ // if payapp의 Feedbackurl 경로로 자동 로드된거면
 			/*https://payapp.kr/home/apiman/developers.html*/
-
-			$boon_cash->boon_status_id = Auth::user()->boonStatus->id;
+			if($data['linkval'] != '67Jxavz/oj9leJsAIF9UUpDbPmLgU/Imt3Oc/7Xz0T0=') {
+				Session::flash('message', '연동 value 오류입니다. 관리자 문의 부탁합니다. 02-2135-5251');
+				return redirect()->to('/boon/status');
+			}
+			$boon_cash->user_id = Auth::user()->id;
 			$boon_cash->title = '간편결제'; //카드, 휴대폰결제
 			$boon_cash->pay_memo = "전번 : ".$data['recvphone']." / 변수1 : ".$data['var1']." / 변수2 : ".$data['var2'];
 			$boon_cash->pay_amt = $data['price'];
@@ -120,7 +126,7 @@ class BoonCashController extends Controller {
 
 			/*캐쉬 이력 넣은 후, payapp 이면 boon_status 변경 / 계좌이체 누른거면 관리자페이지에서 status변경.*/
 			$boon_status = BoonStatus::firstOrNew( ['id' => Auth::user()->id] ); // 해당 user table
-			$boon_status->boon_cash = $boon_status->boon_cash +
+			$boon_status->boon_cash = $boon_status->boon_cash + $data['price'];
 			$boon_status->save();
 
 		}

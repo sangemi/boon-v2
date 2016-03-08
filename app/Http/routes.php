@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function () { //소스중에서 Token, S
 
     });
 
+    Route::controller('boon/payment', 'PaymentController'); /*pg사와 결제*/
 
 
 

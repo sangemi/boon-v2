@@ -21,6 +21,7 @@ class CreateBoonStatusTable extends Migration
             $table->integer('user_id')->unsigned()->unique(); // 연결된 user id 무조건 하나.
             $table->foreign('user_id')->references('id')->on('users'); //참조 무결성 강제. 외래 키 제한
 
+            $table->integer('boon')->unsigned();
             $table->integer('boon_cash')->unsigned();
             $table->integer('boon_point')->unsigned();
 

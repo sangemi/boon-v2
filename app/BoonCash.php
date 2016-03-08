@@ -15,4 +15,7 @@ class BoonCash extends Model {
     public function boonStatus(){
         return $this->belongsToMany('App\BoonStatus');
     }
+    public function user(){
+        return $this->belongsToMany('App\User');
+    }
 }

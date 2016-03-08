@@ -152,8 +152,8 @@ $(document).ready(function(){
                 .txt_post_pay_amt {margin:20px 0px 30px 0px;font-size:2.0em;color:#f05634;letter-spacing:-2px;font-weight:800;}
                 .btn_post_title {font-size:1.4em;color:#504b49;letter-spacing:-2px;font-weight:600;}
                 #btn접수하기 {text-align:center; padding:11px 0;border:0px;font-size:1.4em;background-color:#ed1b23;color:#fff;letter-spacing:-2px;font-weight:600;}
-                #btn페이앱결제 {text-align:center; padding:11px 0;border:0px;font-size:1.3em;background-color:tomato;color:#fff;letter-spacing:-2px;font-weight:600;}
-                #btn계좌안내 {text-align:center; padding:11px 0;border:0px;font-size:1.3em;background-color:#2e6da4;color:#fff;letter-spacing:-2px;font-weight:600;}
+                #btn포인트구매 {display:none;text-align:center; padding:11px 0;border:0px;font-size:1.3em;background-color:tomato;color:#fff;letter-spacing:-2px;font-weight:600;}
+                #btn포인트사용 {display:none;text-align:center; padding:11px 0;border:0px;font-size:1.3em;background-color:#2e6da4;color:#fff;letter-spacing:-2px;font-weight:600;}
                 .small {margin-bottom:10px;font-size:0.9em;color:#888;letter-spacing:-1px;font-weight:300;}
                 .small2 {margin:0px 0px 10px 0px;font-size:1.2em;color:#555555;letter-spacing:-1px;font-weight:400;}
                 .btn_post_blue {text-align:center;width:150px; background-color:#14abc0;color:#fff;font-size:1.2em;padding:4px;letter-spacing:-1px;}
@@ -260,6 +260,9 @@ $(document).ready(function(){
         }
         //change_btn_post_type($(this));
         calculate_charge_amt($("#btn_post_type" + flag_clicking_btn));
+
+        $("#btn접수하기").show()
+        $("#btn접수wrap, #btn포인트사용, #btn포인트구매").hide();
     });
     $("#btn_post_type2").click(); //기본
     $("#div_post_type_wrap").scrollLeft(100);
@@ -350,8 +353,9 @@ function calculate_charge_amt(obj){
                         <div class="txt_post_pay_amt"><span class="">원</span></div>
                         <div id="btn접수하기" >접수하기</div>
                         <div id="btn접수wrap" style="display:none;">
-                            <div id="btn페이앱결제" class="col-xs-6">카드결제</div>
-                            <div id="btn계좌안내" class="col-xs-6" data-toggle="modal" data-target="#modal계좌안내">은행이체</div>
+
+                            <div id="btn포인트구매" class="">포인트 충전</div>
+                            <div id="btn포인트사용" class="" data-toggle="modal" data-target="#modal신청확인">포인트 사용</div>
 
                         </div>
 
@@ -362,42 +366,28 @@ function calculate_charge_amt(obj){
             </div>
 
 
-            <!-- Payapp.kr 결제모듈 시작 -->
-            <script src="http://lite.payapp.kr/public/api/payapp-lite.js"></script>
             <script>
                 $(document).ready(function(){
-                    PayApp.setDefault('userid',     'moior');
-                    PayApp.setDefault('shopname',   '분쟁제로 (법무법인예율)');
-
-                    /*PayApp.setDefault('redirecturl','http://<?=$_SERVER['HTTP_HOST']?>/v/consultList');	//결제안내문자 발송시
-                     PayApp.setDefault('redirect',	'opener');		//opener [기본값] 부모창 self 현재창*/
-
-                    PayApp.setDefault('returnurl',	'http://<?=$_SERVER['HTTP_HOST']?>/ccmail/order');	//결제성공시
-                    PayApp.setDefault('feedbackurl','http://<?=$_SERVER['HTTP_HOST']?>/lib/payapp/payapp_response.php');	// 이부분 잘못되면 에러코드 70080 / 고객사 응답 실패
-
-
 
                     $("#btn접수하기").click(function(){
                         $(this).hide();
                         $("#btn접수wrap").show();
-                    });
-                    /*$("#btn접수wrap").mouseleave(function(){
-                        $(this).hide();
-                        $("#btn접수하기").show();
-                    });*/
+                        var boon_now = '<?=Auth::user()->boonStatus->boon?>';
+                        var boon_need = $("input[name=price_sum]").val()
 
-                    $("#btn페이앱결제").click(function(){
-                        $(this).attr('disabled', 'disabled');
-                        payapp_call();
-                        $(this).removeAttr('disabled');
-
+                        if( boon_now * 1 > boon_need * 1 ){ //강제형변환
+                            $("#btn포인트사용").show();
+                        }else{
+                            alert('포인트가 부족합니다. 현재 포인트는 ' + boon_now + '입니다.');
+                            $("#btn포인트구매").show();
+                        }
                     });
 
-                    $("#btn계좌안내").click(function(){
-                        $("#btnModal계좌안내").show();
-
-
+                    $("#btn포인트구매").click(function(){
+                        location.href='/boon/status';
                     });
+
+
                     /*임의금액 결제할 때*/
                     $("#btnChangeCharge").click(function(){
                         $("#price_sum").val( $(this).prev().val() );
@@ -405,22 +395,7 @@ function calculate_charge_amt(obj){
                         $(this).parent().hide();
                     });
                 });
-                function payapp_call(){  //.call() 호출 후 setParam된 값은 초기화
-                    PayApp.setParam('goodname',		$("#good_name").val());
-                    PayApp.setParam('price',		$("#price_sum").val());
-                    PayApp.setParam('memo',			$("#sms_memo").val()); //판매자 메모란에 같이 보일 내용
-                    PayApp.setParam('recvphone',	$("#sender_phone").val()); //
-
-                    PayApp.setParam('returnurl',	'http://<?=$_SERVER['HTTP_HOST']?>/v/consultList?flag=paymentok&amt=' + $("#price_sum").val() );
-
-                    if($("#work_id").val()){
-                        PayApp.setParam('var1',    $("#work_id").val());
-                    }
-
-                    PayApp.call();
-                }
             </script>
-            <!-- Payapp.kr 결제모듈 끝 -->
             <?php
             $sms_memo = "모든 진행과정은 웹에서 확인가능합니다. 내용 검토 후 이상있는 경우 유선 연락드리겠습니다. 감사합니다.";
             $txt_type = "내용증명";
@@ -640,9 +615,9 @@ function calculate_charge_amt(obj){
 
                 {{--{!! BootForm::open(['method' => 'POST', 'action' => 'SmsController@sendSms']) !!}--}}
                 {!! BootForm::open(['method' => 'POST'])->action('/sms') !!}
-                {!! BootForm::hidden('to')->defaultValue( '01047750852' ) !!} {{--회사 담당자 전번--}}
-                {!! BootForm::hidden('from')->defaultValue( $ccMail->sender_phone ) !!} {{--의뢰인 전번--}}
-                {!! BootForm::hidden('text')->defaultValue('입금하였습니다.') !!}
+                {!! BootForm::hidden('to')->value( '01047750852' ) !!} {{--회사 담당자 전번--}}
+                {!! BootForm::hidden('from')->value( $ccMail->sender_phone ) !!} {{--의뢰인 전번--}}
+                {!! BootForm::hidden('text')->value('입금하였습니다.') !!}
 
                 <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
                 <button type="button" class="btn btn-primary" onclick="$('#form접수').submit()">신청</button>

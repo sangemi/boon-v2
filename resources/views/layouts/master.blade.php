@@ -18,7 +18,7 @@
 
 
         <!-- main content -->
-        <div id="content" class="col-md-10">
+        <div id="content" class="col-md-10" style="margin-bottom:50px;">
             @yield('content')
         </div>
 

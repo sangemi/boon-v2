@@ -34,6 +34,9 @@ class User extends Authenticatable
     public function boonStatus(){
         return $this->hasOne('App\BoonStatus');
     }
+    public function boonCash(){
+        return $this->hasMany('App\BoonCash');
+    }
 
     public function ccMail() {
         return $this->hasMany('App\CcMail');
