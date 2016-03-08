@@ -61,25 +61,6 @@ class BoonCashController extends Controller {
 
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	protected function validator(array $data)
-	{
-		return Validator::make($data, [
-			'sender_name' => 'required|max:255',
-			'sender_addr' => 'max:255',
-			'sender_phone' => 'required|max:255',
-			'receiver_name' => 'required|max:255',
-			'receiver_addr' => 'required|max:255',
-			'receiver_phone' => 'max:255',
-			'title' => 'max:255',
-			'content' => 'required',
-		]); //|email|max:255|unique:users 'password' => 'required|confirmed|min:6',
-		// receiver. 에서 numeric|alpha 숫자+하이픈만 어떻게 하는지 모르겠네.....
-	}
 
 	public function store($where = null)
 	{

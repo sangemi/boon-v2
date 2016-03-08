@@ -1,37 +1,43 @@
-    <nav class="navbar navbar-inverse navbar-static-top">
+    <style>
+
+    </style>
+    <nav class="navbar navbar-inverse navbar-static-top">  {{--navbar-inverse--}}
         <div class="container-fluid">
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar">1</span>
-                    <span class="icon-bar">2</span>
-                    <span class="icon-bar">3</span>
+                    <span class="sr-only">줄3 아이콘</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url('/') }}">분쟁제로</a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{--<nobr>
+                        <img src="http://localhost/img/v1/peace_tree.png" style="width:52px;">
+                    </nobr>--}}Boon
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 {{--메뉴 시작--}}
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                </ul>
+                {{--<ul class="nav navbar-nav">
+                    <li><a href="{{ url('/') }}"></a></li>
+                </ul>--}}
 
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/ccmail/sample') }}">내용증명</a></li>
                 </ul>
 
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/paymentorder') }}">지급명령</a></li>
-                </ul>
+                {{--<ul class="nav navbar-nav">
+                    <li><a href="{{ url('/payorder/sample') }}">지급명령</a></li>
+                </ul>--}}
 
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/consult') }}">승소체크</a></li>
-                </ul>
+                {{--<ul class="nav navbar-nav">
+                    <li><a href="{{ url('/consult') }}">승소체크</a></li> / 소송검토
+                </ul>--}}
 
 
                 <ul class="nav navbar-nav navbar-right">

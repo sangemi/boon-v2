@@ -5,14 +5,46 @@ namespace App\Http\Controllers;
 use App\BoonCash;
 
 use App\Http\Requests;
+use App\Lib\skHelper;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
 class PaymentController extends Controller
 {
+    public function postPayappStart()
+    {
+        //$data = Request::all(); Request는 안넘겨도됨.ㅎ
+
+        return view('boon.point.payapp_start');
+    }
+
     public $path_payapp_lib = '../app/Lib/payapp/payapp_lib.php';
+
     public function postPayappPay()
     {
         $data = Request::all();
+        $data['recvphone'] = skHelper::number_only($data['recvphone']);
+        $data['price'] = skHelper::number_only($data['price']);
+
+
+        $new_phone = $data['recvphone'];
+        if($new_phone) { //필수값이지만 만약을 위해. && 나중에는 if phone_format.. 으로 바꾸자.
+            $user_info = Auth::user()->userInfo;
+            $user_info->phone = $new_phone;
+            $user_info->save();
+        }
+
+    /*    $this->validate($request, [
+            'recvphone' => ''
+        ]);*/
+        /*$validator->extend(               나중 validate 전체 물갈이하자.
+            'phone_number',
+            function ($attribute, $value, $parameters)
+            {
+                return preg_match("/^([0-9\s\-\+\(\)]*)$/", $value);
+            }
+        );*/
+
         include $this->path_payapp_lib;
 
         $postdata = array(
@@ -21,7 +53,7 @@ class PaymentController extends Controller
 
             'goodname' => '포인트 충전',            // 상품명, 필수
             'price' => '1000',                    // 결제요청 금액 (1,000원 이상), 필수
-            'recvphone' => '',                        // 수신자 휴대폰번호 (구매자), 필수
+            'recvphone' => '01047750852',                        // 수신자 휴대폰번호 (구매자), 필수
             'memo' => '최종 결제 후 금액에 따라 서비스포인트가 지급됩니다.',        // 결제요청시 메모
             'reqaddr' => '0',                        // 주소요청 여부
             'feedbackurl' => 'http://'.$_SERVER['HTTP_HOST'].'/boon/payment/payapp-feedback',        // 피드백 URL, feedbackurl은 외부에서 접근이 가능해야 합니다. payapp 서버에서 호출 하는 페이지 입니다.
@@ -31,7 +63,8 @@ class PaymentController extends Controller
             'smsuse' => 'n',                        // 결제요청 SMS 발송여부 ('n'인 경우 SMS 발송 안함)
             'currency' => 'krw',                    // 통화기호 (krw:원화결제, usd:US달러 결제)
             'vccode' => '',                        // 국제전화 국가번호 (currency가 usd일 경우 필수)
-            'returnurl' => 'http://'.$_SERVER['HTTP_HOST'].'/boon/status',    // 결제완료 이동 URL (결제완료 후 매출전표 페이지에서 "확인" 버튼 클릭시 이동)
+            //'returnurl' => 'http://'.$_SERVER['HTTP_HOST'].'/boon/status',    // 결제완료 이동 URL (결제완료 후 매출전표 페이지에서 "확인" 버튼 클릭시 이동)
+            'returnurl' => 'http://'.$_SERVER['HTTP_HOST'].'/boon/payment/window-close',    // 결제완료 후 닫기
             'openpaytype' => '',  // 결제수단 선택 (휴대전화:phone, 신용카드:card, 계좌이체:rbank, 가상계좌:vbank)
             // 판매자 사이트 "설정" 메뉴의 "결제 설정"이 우선 합니다.
             // 해외결제는 현재 신용카드 결제만 가능하며, 입력된 값은 무시됩니다.
@@ -44,7 +77,7 @@ class PaymentController extends Controller
 
         $oResData = payapp_oapi_post($postdata);
 
-        print_r($oResData);
+        //print_r($oResData);
         //Array ( [state] => 1
         //      [errorMessage] =>
         //      [mul_no] => 6390750
@@ -73,7 +106,9 @@ class PaymentController extends Controller
                                 'pay_amt' =>$data['price']
                             ]);
 
+            // boon_cash에 저장후에 실제 결제 나아감.
             return redirect()->to($oResData['payurl']);
+
         } else {
             // 결제요청실패
             // 오류메시지($oResData['errorMessage'])를 확인하고, 오류를 수정하셔야 합니다.
@@ -93,7 +128,17 @@ class PaymentController extends Controller
 
     }
 
-    public function postPayappFeedback()
+    public function getWindowClose()
+    {
+
+        return "
+        <script>
+            window.close();
+            self.close();
+        </script>
+        ";
+    }
+        public function postPayappFeedback()
     {
         include $this->path_payapp_lib;
 

@@ -122,11 +122,17 @@
     <div class="row" id="">
         <h2>충전하기</h2>
         <hr />
-
+        <script>
+            $(document).ready(function(){
+            })
+            function boonPayWindow(){
+                window.open("_blank", "boon-pay-window", "toolbar=no, scrollbars=yes, resizable=yes, width=400, height=600");
+                return true;
+            }
+        </script>
         <div class="row">
-        {!! BootForm::openHorizontal(['sm'=>[3,7],'method' => 'POST'])->action('/boon/payment/payapp-pay')->target('_blank') !!}
-        {!! BootForm::hidden('goodname')->value( '포인트 충전' ) !!} {{----}}
-        {!! BootForm::hidden('recvphone')->value( Auth::user()->userInfo->mobile ) !!}
+        {!! BootForm::openHorizontal(['sm'=>[3,7],'method' => 'POST'])->action('/boon/payment/payapp-start')
+            ->id("form포인트충전")->target('boon-pay-window')->onsubmit('return boonPayWindow();') !!}
 
 
             <div class="col-xs-2 col-xs-offset-1" style="">

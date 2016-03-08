@@ -111,7 +111,7 @@ class CcMailSampleController extends Controller {
 			$validator = $this->validator(Request::all());
 			//dd($validator);
 			if ($validator->fails()) {
-				Session::flash('message', 'Successfully created nerd!');
+				Session::flash('message', '입력값 확인 바랍니다.!');
 				return Redirect::to('ccmail/write/'.Request::input('sample_id'))
 					->withErrors($validator)
 					->withInput(Request::except('password'));
