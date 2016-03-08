@@ -44,7 +44,7 @@ class PaymentController extends Controller
 
         $oResData = payapp_oapi_post($postdata);
 
-        //print_r($oResData);
+        print_r($oResData);
         //Array ( [state] => 1
         //      [errorMessage] =>
         //      [mul_no] => 6390750
