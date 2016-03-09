@@ -80,8 +80,8 @@ $(document).ready(function(){
 
 {{--세부페이지 네비바--}}
 <ol class="breadcrumb">
-    <li><a href="{{ URL::to('ccmail') }}">
-            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
+    <li><a href="{{ URL::to('ccmail/sample') }}">
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 샘플</a></li>
     @if($ccMail->cate1)
         <li><a href="{{ URL::to('ccmail?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
     @endif
@@ -184,10 +184,20 @@ $(document).ready(function(){
                 <div class=" col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 
                     <div class="">
-                        <div class="col-sm-2"><h4>제목 <small>?</small></h4> </div>
+                        <div class="col-sm-2"><h4>제목
+                            <small style="">
+                                <a id="popover1" tabindex="0" data-placement="bottom" role="button" data-toggle="popover" data-trigger="focus"
+                                   title="제목이란" data-content="<nobr>예제 : 계약 해제통보의 건</nobr> <br>제목은 비워두셔도 됩니다.">?</a>
+                            </small></h4>
+                            <script> $('#popover1').popover({'html':true});</script>
+
+                        </div>
                         <div class="col-sm-10">
                             {!! BootForm::text('', 'title')->value( $ccMail->cate3?$ccMail->cate3."의 건":'' )
-                            ->hideLabel()->placeholder("예) 계약해지의 건 / 안적어도 됩니다.")  !!}</div>
+                            ->hideLabel()->placeholder("예) 계약해지의 건 / 안적어도 됩니다.")  !!}
+
+                        </div>
+
 
                     </div>
                     {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content')->hideLabel() !!}

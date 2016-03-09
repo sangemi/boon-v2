@@ -1,7 +1,9 @@
     <style>
 
     </style>
-    <nav class="navbar navbar-inverse navbar-static-top">  {{--navbar-inverse--}}
+    <nav class="navbar navbar-inverse navbar-static-top"
+         style="background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/always_grey.png);"
+    >  {{--navbar-inverse--}}
         <div class="container-fluid">
 
             <!-- Brand and toggle get grouped for better mobile display -->

@@ -25,8 +25,9 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{ URL::to('ccmail/sample') }}">분류</a></li>
-                <li><a href="{{ URL::to('ccmail/sample/create') }}">작성하기</a></li>
+                <li><a>천여개의 샘플에서 골라보세요</a></li>
+                {{--<li><a href="{{ URL::to('ccmail/sample') }}">분류</a></li>--}}
+                <li><a href="{{ URL::to('ccmail/work/create') }}">직접작성</a></li>
             </ul>
             <ul class="nav navbar-nav" style="float: right">
                 <li><a href="#" class="navbar-nav pull-right"></a></li>
@@ -115,7 +116,7 @@
         {{--n개씩 정렬하는 방법--}}
         @if (empty($ccMails))
 
-            <div class="container">
+            <div class="">
                 <div class="jumbotron">
                     <h1>분야 선택<span class="glyphicon glyphicon-hand-up"></span>! </h1>
                     <p>또는 특정 단어로 <span class="glyphicon glyphicon-search"></span>검색해주세요!  <small>예:월세</small></p>

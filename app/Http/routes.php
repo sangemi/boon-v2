@@ -1,19 +1,16 @@
 <?php
+/** index 	create 	store	show 	 edit	update	destroy
+ * 리스트 	입력폼	DB저장	특정view 수정폼	DB업뎃	DB삭제*/
+
+Route::post('/sms', 'SmsController@sendSms'); /*SMS post방식으로 바꿔야*/
 
 
-/*SMS post방식으로 바꿔야*/
-Route::post('/sms', 'SmsController@sendSms');
 
+Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기본
 
+    Route::get('/','MainController@index');
 
-
-Route::group(['middleware' => ['web']], function () { //소스중에서 Token, Session, Cookie, Errors 사용한다면
     /* 내용증명 */
-    /*Route::get('ccmail/sample/{sample_id}', 'CcMailController@show');
-    Route::get('ccmail/send', 'CcMailController@send');
-    Route::get('ccmail/my', 'CcMailController@my');*/
-    /** index 	create 	store	show 	 edit	update	destroy
-     * 리스트 	입력폼	DB저장	특정view 수정폼	DB업뎃	DB삭제*/
     Route::resource('ccmail/sample', 'CcMailSampleController');
     Route::get('ccmail/sample/{id}/{direction?}', 'CcMailSampleController@show');
 
@@ -49,7 +46,6 @@ Route::group(['middleware' => ['web']], function () { //소스중에서 Token, S
         'password' => 'Auth\PasswordController',
     ]);
 
-    Route::get('/', 'MainController@index');
 
     //// 화면 (J)
     // 패스워드 초기화 링크 요청 routes...
@@ -72,20 +68,7 @@ Route::group(['middleware' => ['web']], function () { //소스중에서 Token, S
 });
 
 
+//Route::get('/moior/email', 'contactController'); // 7500명 로스쿨러들 모두 연락 가능 이메일... 한명이 구조(어느학교 120명..등 칸을 만듬)를 입력하면 십시일반 메우는 방식
+// 약관 : 나는 이 조합에 가입하며, 내가 알고있는 신규조합원에게 가입권유(이메일, 문자)하는 것을 위임한다.
+// 스팸용도로 쓰는 것은 절대 안되기 때문에.. 가입메일은 1주당 1개만 가능? 등의 제한.
 
-
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
-
-Route::group(['middleware' => ['web']], function () {
-    //
-});

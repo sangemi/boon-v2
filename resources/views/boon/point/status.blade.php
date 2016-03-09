@@ -50,7 +50,7 @@
 
     {{--리스트 형태--}}
 
-    <div class="container">
+    <div class="">
         <div class="jumbotron">
             <h1><span class="glyphicon glyphicon-fire"></span> 포인트 충전 </h1>
             <p> <small>분노의 포인트를 충전하세요</small></p>

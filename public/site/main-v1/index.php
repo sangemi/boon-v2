@@ -86,7 +86,11 @@
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
 					<ul class="fh5co-special" data-offcanvass="yes">
-						<li><a href="/auth/login">Login</a></li>
+						@if(Auth::user())
+							<li><a href="/auth/logout">Logout</a></li>
+						@else
+							<li><a href="/auth/login">Login</a></li>
+						@endif
 						<li><a href="#" class="call-to-action">시작하기</a></li>
 					</ul>
 				</div>
@@ -106,11 +110,11 @@
 					<div class="row">
 						<div class="col-md-push-6 col-md-6 full-height js-full-height">
 							<div class="fh5co-cover-intro">
-								<h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">분쟁을 줄이는 가장 쉬운 방법</h1>
-								<h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+								<h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">분쟁을 관리하는 가장 쉬운 방법</h1>
+								<h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
 									분쟁이 예상될 때에는 내용증명으로 시작하세요. 어렵지 않습니다. 천여개의 샘플과 법률 전문가가 기다리고 있으니까요.
 								</h2>
-								<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="http://freehtml5.co/" class="btn btn-primary btn-outline btn-lg">See Our Work</a></p>
+								<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.1s"><a href="/ccmail/sample" class="btn btn-primary btn-outline btn-lg">1000개 샘플보기</a></p>
 							</div>
 						</div>
 					</div>
@@ -125,15 +129,17 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Our Best Projects</h2>
-						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
-						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s"><a href="#" class="btn btn-success btn-lg">Start your project</a></p>
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">다양한 전략</h2>
+						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+
+						</p>
+						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"><a href="#" class="btn btn-success btn-lg">Start your project</a></p>
 					</div>
 				</div>
 			</div>
 			<div class="fh5co-projects">
 				<ul>
-					<li class="wow fadeInUp" style="background-image: url(images/full_4.jpg);" data-wow-duration="1s" data-wow-delay="1.4s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(images/full_4.jpg);" data-wow-duration="1s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -148,7 +154,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration="1s" data-wow-delay="1.7s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration="1s" data-wow-delay=".7s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -163,7 +169,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration="1s" data-wow-delay="2s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration="1s" data-wow-delay="1s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">

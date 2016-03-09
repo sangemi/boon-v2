@@ -3,7 +3,7 @@
 
 @include('includes.head')
 
-<body>
+<body style="background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/bgnoise_lg.png);">
 
 @include('includes.navbar') {{-- 어디에있든, 메뉴 --}}
 
