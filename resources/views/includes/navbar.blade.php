@@ -30,7 +30,11 @@
                 </ul>--}}
 
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/ccmail/sample') }}">내용증명</a></li>
+                    <li><a href="{{ url('/ccmail') }}">내용증명</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/ccmail/sample') }}">양식</a></li>
                 </ul>
 
                 {{--<ul class="nav navbar-nav">

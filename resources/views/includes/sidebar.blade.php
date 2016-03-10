@@ -89,18 +89,25 @@
 
         <li><a href="{{ URL::to('/boon/status') }}"><small>포인트 충전</small></a></li>
 
-        {{--구글 배너광고--}}
-        <li>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- Boonzero.com -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-6287081345728133"
-                 data-ad-slot="1676107409"
-                 data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </li>
+
+
+
     </ul>
+    {{--구글 배너광고--}}
+    <div style="">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Boonzero.com -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6287081345728133"
+             data-ad-slot="1676107409"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    </div>
+    <div style="height:300px;">
+
+    </div>
 </nav>

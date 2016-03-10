@@ -45,22 +45,22 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="site/main-v1/css/animate.css">
+	<link rel="stylesheet" href="site/ccmail/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="site/main-v1/css/icomoon.css">
+	<link rel="stylesheet" href="site/ccmail/css/icomoon.css">
 	<!-- Magnific Popup-->
-	<link rel="stylesheet" href="site/main-v1/css/magnific-popup.css">
+	<link rel="stylesheet" href="site/ccmail/css/magnific-popup.css">
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="site/main-v1/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="site/main-v1/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="site/ccmail/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="site/ccmail/css/owl.theme.default.min.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="site/main-v1/css/bootstrap.css">
+	<link rel="stylesheet" href="site/ccmail/css/bootstrap.css">
 
 	<!-- Cards -->
-	<link rel="stylesheet" href="site/main-v1/css/cards.css">
+	<link rel="stylesheet" href="site/ccmail/css/cards.css">
 
 	<!-- Modernizr JS -->
-	<script src="site/main-v1/js/modernizr-2.6.2.min.js"></script>
+	<script src="site/ccmail/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="site/ccmail/js/respond.min.js"></script>
@@ -75,24 +75,27 @@
 			<div class="container">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
 					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
-					<a href="#">Boon</a>
+					<a href="/">Boon</a>
 				</div>
 				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
+
+
 					<ul data-offcanvass="yes">
-						<li class="active"><a href="/ccmail/sample">내용증명 양식</a></li>
-						<li><a href="/ccmail/work">보관함</a></li>
-						<li><a href="/board/free">게시판</a></li>
+						<li class="active"><big>내용증명</big></li>
+						<li><a href="/ccmail/sample"><i>샘플</i></a></li>
+						<li><a href="/ccmail/work"><i>보관함</i></a></li>
+						{{--<li><a href="/board/free">게시판</a></li>--}}
 						<!--<li><a href="#">Pricing</a></li>-->
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
 					<ul class="fh5co-special" data-offcanvass="yes">
 						@if(Auth::user())
-							<li><a href="/auth/logout">Logout</a></li>
+							<li><a href="/auth/logout">로그아웃</a></li>
+							<li><a href="/ccmail/work/create" class="call-to-action">바로시작</a></li>
 						@else
-							<li><a href="/auth/login">Login</a></li>
+							<li><a href="/auth/login">로그인</a></li>
 						@endif
-						<li><a href="/ccmail/work/create" class="call-to-action">바로시작</a></li>
 					</ul>
 				</div>
 			</div>
@@ -100,7 +103,7 @@
 
 
 		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"
-			 style="background-image: url(site/main-v1/images/full_5.jpg);background-color:rgba(0, 0, 0, 0.5);">
+			 style="background-image: url(site/ccmail/images/full_5.jpg);background-color:rgba(0, 0, 0, 0.5);">
 		  	<span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
 				<a href="#">
 					<span class="mouse"><span></span></span>
@@ -210,6 +213,7 @@
 													가입
 												</button>
 											</div>
+											<div class="col-md-6 col-md-offset-4" style="font-size:0.8em;">※ 이미 가입하셨으면 <a href="/auth/login">로그인</a></div>
 										</div>
 										@if($errors->any())
 											<div class="alert alert-danger">
@@ -352,7 +356,7 @@
 			</div>
 			<div class="fh5co-projects">
 				<ul>
-					<li class="wow fadeInUp" style="background-image: url(site/main-v1/images/full_1.jpg);" data-wow-duration="1s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(site/ccmail/images/full_1.jpg);" data-wow-duration="1s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -376,7 +380,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(site/main-v1/images/full_2.jpg);" data-wow-duration="1s" data-wow-delay=".7s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(site/ccmail/images/full_2.jpg);" data-wow-duration="1s" data-wow-delay=".7s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -398,7 +402,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(site/main-v1/images/ccmail/ccmail3_002.png);background-size: contain"
+					<li class="wow fadeInUp" style="background-image: url(site/ccmail/images/ccmail/ccmail3_002.png);background-size: contain"
 						data-wow-duration="1s" data-wow-delay="1s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
@@ -421,7 +425,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(site/main-v1/images/full_4.jpg);" data-wow-duration="1s" data-wow-delay="1.2s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(site/ccmail/images/full_4.jpg);" data-wow-duration="1s" data-wow-delay="1.2s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -769,7 +773,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
 							<div class="fh5co-name">
-								<img src="site/main-v1/images/person_5.jpg" alt="">
+								<img src="site/ccmail/images/person_5.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>중소기업</h3>
 									<span class="fh5co-company">신영석 (유통업체 대표)</span>
@@ -784,7 +788,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
 							<div class="fh5co-name">
-								<img src="site/main-v1/images/person_4.jpg" alt="">
+								<img src="site/ccmail/images/person_4.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>주부</h3>
 									<span class="fh5co-company">전혜영</span>
@@ -801,7 +805,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
 							<div class="fh5co-name">
-								<img src="site/main-v1/images/person_3.jpg" alt="">
+								<img src="site/ccmail/images/person_3.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>거래서 사장</h3>
 									<span class="fh5co-company">서OO 대표이사</span>
@@ -818,7 +822,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
 							<div class="fh5co-name">
-								<img src="site/main-v1/images/person_1.jpg" alt="">
+								<img src="site/ccmail/images/person_1.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>회사원</h3>
 									<span class="fh5co-company">홍영O</span>
@@ -836,7 +840,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.3s">
 							<div class="fh5co-name">
-								<img src="site/main-v1/images/person_2.jpg" alt="">
+								<img src="site/ccmail/images/person_2.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>기술계약위반</h3>
 									<span class="fh5co-company">재단 이사장</span>
@@ -851,7 +855,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.6s">
 							<div class="fh5co-name">
-								<img src="site/main-v1/images/person_6.jpg" alt="">
+								<img src="site/ccmail/images/person_6.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>공사업체</h3>
 									<span class="fh5co-company">관리자</span>
@@ -871,28 +875,28 @@
 
 
 		<!-- jQuery -->
-		<script src="site/main-v1/js/jquery.min.js"></script>
+		<script src="site/ccmail/js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
-		<script src="site/main-v1/js/jquery.easing.1.3.js"></script>
+		<script src="site/ccmail/js/jquery.easing.1.3.js"></script>
 		<!-- Bootstrap -->
-		<script src="site/main-v1/js/bootstrap.min.js"></script>
+		<script src="site/ccmail/js/bootstrap.min.js"></script>
 		<!-- Waypoints -->
-		<script src="site/main-v1/js/jquery.waypoints.min.js"></script>
+		<script src="site/ccmail/js/jquery.waypoints.min.js"></script>
 		<!-- Owl Carousel -->
-		<script src="site/main-v1/js/owl.carousel.min.js"></script>
+		<script src="site/ccmail/js/owl.carousel.min.js"></script>
 		<!-- Magnific Popup -->
-		<script src="site/main-v1/js/jquery.magnific-popup.min.js"></script>
+		<script src="site/ccmail/js/jquery.magnific-popup.min.js"></script>
 		<!-- Stellar -->
-		<script src="site/main-v1/js/jquery.stellar.min.js"></script>
+		<script src="site/ccmail/js/jquery.stellar.min.js"></script>
 		<!-- countTo -->
-		<script src="site/main-v1/js/jquery.countTo.js"></script>
+		<script src="site/ccmail/js/jquery.countTo.js"></script>
 		<!-- WOW -->
-		<script src="site/main-v1/js/wow.min.js"></script>
+		<script src="site/ccmail/js/wow.min.js"></script>
 		<script>
 			new WOW().init();
 		</script>
 		<!-- Main -->
-		<script src="site/main-v1/js/main.js"></script>
+		<script src="site/ccmail/js/main.js"></script>
 
 
 		<div class="fh5co-footer-style-3">

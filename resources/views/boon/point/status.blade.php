@@ -69,18 +69,18 @@
                     <td>
                         <b>캐쉬</b> : {{ number_format($list->boon_cash)." point" }}
                         <br>
-                        <i>
+                        <div><i>
 
                             {{--최근 입력한것만 보여주려고함.--}}
-                            <?php $boon_cash = Auth::user()->boonCash->last(); ?>
+                            <?php $boon_cash = Auth::user()->boonCash->last();?>
+                            @if( isset($boon_cash) )
+                                {{ date('Y-m-d', strtotime($boon_cash->updated_at)) }} /
+                                <?=isset($boon_cash->pay_amt)?number_format($boon_cash->pay_amt):"0";?> point /
+                                {{ ($boon_cash ->confirmed)?"반영완료":"입금 확인중.." }}
+                            @else
 
-                            <div>
-                            {{ date('Y-m-d', strtotime($boon_cash ->updated_at)) }} /
-                            <?=number_format($boon_cash ->pay_amt)?> point /
-                            {{ ($boon_cash ->confirmed)?"반영완료":"입금 확인중.." }}
-                            </div>
-
-                        </i>
+                            @endif
+                        </i></div>
                     </td>
                     <td>
                         <b>포인트</b> : {{ number_format($list->boon_point)." point"}}

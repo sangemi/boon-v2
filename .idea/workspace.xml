@@ -2,11 +2,179 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/ccmail/images/ccmail/ccmail2_part1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/ccmail/images/ccmail/ccmail3_001.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/ccmail/images/ccmail/ccmail3_002.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/ccmail/images/full_5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/main-v1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/main-v1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/.DS_Store" afterPath="$PROJECT_DIR$/public/site/ccmail/.DS_Store" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/README.txt" afterPath="$PROJECT_DIR$/public/site/ccmail/README.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/.DS_Store" afterPath="$PROJECT_DIR$/public/site/ccmail/css/.DS_Store" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/animate.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/animate.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/public/site/ccmail/css/bootstrap.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/cards.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/cards.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/cards.css.map" afterPath="$PROJECT_DIR$/public/site/ccmail/css/cards.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/icomoon.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/icomoon.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/magnific-popup.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/magnific-popup.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/owl.carousel.min.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/owl.carousel.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/owl.theme.default.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/style.css" afterPath="$PROJECT_DIR$/public/site/ccmail/css/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/css/style.css.map" afterPath="$PROJECT_DIR$/public/site/ccmail/css/style.css.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/.DS_Store" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/.DS_Store" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/bootstrap/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/bootstrap/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/bootstrap/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/bootstrap/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/bootstrap/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/bootstrap/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/bootstrap/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/bootstrap/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/icomoon/.DS_Store" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/icomoon/.DS_Store" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/icomoon/icomoon.eot" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/icomoon/icomoon.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/icomoon/icomoon.svg" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/icomoon/icomoon.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/icomoon/icomoon.ttf" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/icomoon/icomoon.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/fonts/icomoon/icomoon.woff" afterPath="$PROJECT_DIR$/public/site/ccmail/fonts/icomoon/icomoon.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/.DS_Store" afterPath="$PROJECT_DIR$/public/site/ccmail/images/.DS_Store" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/full_1.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/full_1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/full_2.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/full_2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/full_3.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/full_3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/full_4.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/full_4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_1.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_2.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_3.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_4.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_1.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_2.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_3.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_4.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_5.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_6.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_6.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_7.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_7.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/img_same_dimension_8.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/img_same_dimension_8.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/iphone_1.png" afterPath="$PROJECT_DIR$/public/site/ccmail/images/iphone_1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_1.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_2.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_3.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_4.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_5.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_6.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_6.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_7.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_7.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_8.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_8.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/images/person_9.jpg" afterPath="$PROJECT_DIR$/public/site/ccmail/images/person_9.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/index.php" afterPath="$PROJECT_DIR$/public/site/ccmail/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/.DS_Store" afterPath="$PROJECT_DIR$/public/site/ccmail/js/.DS_Store" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/jquery.countTo.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/jquery.countTo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/jquery.easing.1.3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/jquery.magnific-popup.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/jquery.magnific-popup.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/jquery.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/jquery.stellar.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/jquery.stellar.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/jquery.style.switcher.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/jquery.style.switcher.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/jquery.waypoints.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/main.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/modernizr-2.6.2.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/modernizr-2.6.2.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/owl.carousel.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/respond.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/respond.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/js/wow.min.js" afterPath="$PROJECT_DIR$/public/site/ccmail/js/wow.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/.DS_Store" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/.DS_Store" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/_bootstrap-compass.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/_bootstrap-compass.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/_bootstrap-mincer.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/_bootstrap-mincer.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/_bootstrap-sprockets.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/_bootstrap-sprockets.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/_style.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/_style.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_alerts.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_alerts.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_badges.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_badges.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_breadcrumbs.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_breadcrumbs.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_button-groups.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_button-groups.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_buttons.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_buttons.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_carousel.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_carousel.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_close.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_close.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_code.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_code.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_component-animations.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_component-animations.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_dropdowns.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_dropdowns.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_forms.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_forms.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_glyphicons.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_glyphicons.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_grid.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_grid.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_input-groups.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_input-groups.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_jumbotron.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_jumbotron.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_labels.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_labels.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_list-group.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_list-group.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_media.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_media.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_mixins.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_mixins.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_modals.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_modals.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_navbar.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_navbar.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_navs.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_navs.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_normalize.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_normalize.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_pager.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_pager.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_pagination.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_pagination.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_panels.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_panels.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_popovers.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_popovers.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_print.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_print.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_progress-bars.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_progress-bars.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_responsive-embed.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_responsive-embed.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_responsive-utilities.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_responsive-utilities.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_scaffolding.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_scaffolding.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_tables.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_tables.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_theme.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_theme.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_thumbnails.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_thumbnails.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_tooltip.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_tooltip.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_type.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_type.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_utilities.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_utilities.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_variables.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_variables.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/_wells.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/_wells.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_alerts.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_alerts.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_background-variant.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_background-variant.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_border-radius.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_border-radius.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_buttons.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_buttons.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_center-block.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_center-block.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_clearfix.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_clearfix.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_forms.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_forms.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_gradients.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_gradients.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_grid-framework.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_grid-framework.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_grid.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_grid.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_hide-text.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_hide-text.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_image.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_image.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_labels.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_labels.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_list-group.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_list-group.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_nav-divider.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_nav-divider.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_nav-vertical-align.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_nav-vertical-align.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_opacity.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_opacity.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_pagination.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_pagination.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_panels.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_panels.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_progress-bar.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_progress-bar.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_reset-filter.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_reset-filter.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_reset-text.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_reset-text.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_resize.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_resize.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_responsive-visibility.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_responsive-visibility.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_size.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_size.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_tab-focus.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_tab-focus.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_table-row.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_table-row.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_text-emphasis.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_text-emphasis.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_text-overflow.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_text-overflow.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/bootstrap/mixins/_vendor-prefixes.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/bootstrap/mixins/_vendor-prefixes.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-base.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-base.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-blogs.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-blogs.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-contents.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-contents.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-counter.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-counter.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-covers.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-covers.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-features.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-features.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-footers.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-footers.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-misc.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-misc.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-mixin-variables.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-mixin-variables.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-navigations.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-navigations.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-pricing.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-pricing.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-projects.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-projects.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-team.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-team.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/cards/_card-testimonial.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/cards/_card-testimonial.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/site/main-v1/sass/style.scss" afterPath="$PROJECT_DIR$/public/site/ccmail/sass/style.scss" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,27 +203,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.448276">
-              <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-              <folding>
-                <element signature="e#6#97#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-v1.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main-v1.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/site/main-v1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43879908">
-              <caret line="126" column="61" selection-start-line="126" selection-start-column="61" selection-end-line="126" selection-end-column="61" />
+            <state vertical-scroll-proportion="-6.0">
+              <caret line="354" column="86" selection-start-line="354" selection-start-column="79" selection-end-line="354" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -63,22 +218,33 @@
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1457581950893" expanded="true" signature="8430:8824" placeholder="..." />
-                <marker date="1457581950893" expanded="true" signature="8457:8824" placeholder="..." />
-                <marker date="1457581950893" expanded="true" signature="8483:8824" placeholder="..." />
-                <marker date="1457581950893" expanded="true" signature="8539:8824" placeholder="..." />
-                <marker date="1457581950893" expanded="true" signature="8715:8727" placeholder="..." />
+                <marker date="1457602224093" expanded="true" signature="8672:9074" placeholder="..." />
+                <marker date="1457602224093" expanded="true" signature="8699:9074" placeholder="..." />
+                <marker date="1457602224093" expanded="true" signature="8725:9074" placeholder="..." />
+                <marker date="1457602224093" expanded="true" signature="8781:9074" placeholder="..." />
+                <marker date="1457602224093" expanded="true" signature="8957:8969" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/site/main-v1/css/cards.css">
+      <file leaf-file-name="status.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.035714">
-              <caret line="893" column="20" selection-start-line="893" selection-start-column="20" selection-end-line="893" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="-20.357143">
+              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+              <folding>
+                <element signature="e#4637#4672#0#HTML" expanded="true" />
+                <element signature="e#5243#5267#0#HTML" expanded="true" />
+                <element signature="e#5385#5420#0#HTML" expanded="true" />
+                <element signature="e#6416#6455#0#HTML" expanded="true" />
+                <element signature="e#7890#7959#0#HTML" expanded="true" />
+                <marker date="1457600044418" expanded="true" signature="4325:4517" placeholder="..." />
+                <marker date="1457600044418" expanded="true" signature="4440:4451" placeholder="..." />
+                <marker date="1457600044418" expanded="true" signature="4461:4478" placeholder="..." />
+                <marker date="1457600044418" expanded="true" signature="4490:4515" placeholder="..." />
+                <marker date="1457600044418" expanded="true" signature="7172:7173" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,8 +252,8 @@
       <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.535714">
-              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state vertical-scroll-proportion="-13.714286">
+              <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
               <folding>
                 <element signature="e#45#64#0#PHP" expanded="true" />
               </folding>
@@ -95,23 +261,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.857142">
-              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state vertical-scroll-proportion="-6.821429">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.535714">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ccmail.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48267898">
+              <caret line="212" column="54" selection-start-line="212" selection-start-column="54" selection-end-line="212" selection-end-column="54" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,19 +301,32 @@
       <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-25.107143">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticatesAndRegistersUsers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
+      <file leaf-file-name="validation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/ko/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.464286">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.214286">
+              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.285714">
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#ins#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#nav#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,23 +334,9 @@
       <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.357143">
-              <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-              <folding>
-                <element signature="e#92#196#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.428571">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-11.535714">
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,7 +349,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserOrderController.php" />
         <option value="$PROJECT_DIR$/app/UserOrder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_04_172621_create_user_request_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_02_01_134302_create_cc_mails_table.php" />
@@ -201,8 +380,6 @@
         <option value="$PROJECT_DIR$/resources/views/boon/point/payapp_start.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/home/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/work_write.blade.php" />
@@ -210,16 +387,19 @@
         <option value="$PROJECT_DIR$/public/site/union/index.html" />
         <option value="$PROJECT_DIR$/public/site/main-v1/index.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/site/ccmail-v1.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/public/site/main-v1/css/cards.css" />
         <option value="$PROJECT_DIR$/resources/views/boon/site/main-v1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
       </list>
     </option>
   </component>
@@ -418,6 +598,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="point" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ccMail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -457,6 +663,46 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -489,8 +735,26 @@
               <option name="myItemId" value="site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="union" />
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccmail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,7 +776,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="union" />
+              <option name="myItemId" value="ccmail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -538,33 +802,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main-v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
+              <option name="myItemId" value="ccmail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main-v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="ccmail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -774,10 +1020,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\dev\php\xampp\htdocs\resources\views\boon\site" />
+      <recent name="D:\dev\php\xampp\htdocs\public\site\main-v1\images\ccmail" />
+      <recent name="D:\dev\php\xampp\htdocs\public\site\main-v1\images" />
       <recent name="D:\dev\php\xampp\htdocs\public\site\union" />
       <recent name="D:\dev\php\xampp\htdocs\public\site\main-v1" />
-      <recent name="D:\dev\php\xampp\htdocs\resources\lang\en" />
-      <recent name="D:\dev\php\xampp\htdocs\public\img\v1" />
     </key>
   </component>
   <component name="RunManager">
@@ -875,7 +1121,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457517421352</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="초기개발 4 - 메인화면도 개선&#10;">
+      <created>1457582531094</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1457582531094</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -940,20 +1192,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserRequestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.035714">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/work_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.571428">
-          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CcMailWorkController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.571428">
@@ -1106,14 +1344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ko/validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BoonCashController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-42.75">
@@ -1190,30 +1420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.107143">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <marker date="1457485841380" expanded="true" signature="4221:4413" placeholder="..." />
-            <marker date="1457485841380" expanded="true" signature="4336:4347" placeholder="..." />
-            <marker date="1457485841380" expanded="true" signature="4357:4374" placeholder="..." />
-            <marker date="1457485841380" expanded="true" signature="4386:4411" placeholder="..." />
-            <marker date="1457485841380" expanded="true" signature="7068:7069" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#ins#0;n#li#6;n#ul#0;n#nav#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="11.535714">
@@ -1227,7 +1433,7 @@
         <state vertical-scroll-proportion="-13.964286">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
-            <element signature="e#237#286#0#HTML" expanded="true" />
+            <element signature="e#237#286#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1251,7 +1457,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/site/main-v1/index.php">
+    <entry file="file://$PROJECT_DIR$/public/site/ccmail/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.071428">
           <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
@@ -1269,14 +1475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.214286">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/work_show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.035714">
@@ -1287,32 +1485,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.448276">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding>
-            <element signature="e#6#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.428571">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.357143">
-          <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-          <folding>
-            <element signature="e#92#196#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1321,24 +1499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.464286">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.535714">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-          <folding>
-            <element signature="e#45#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1361,7 +1521,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/site/main-v1/css/cards.css">
+    <entry file="file://$PROJECT_DIR$/public/site/ccmail/css/cards.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.035714">
           <caret line="893" column="20" selection-start-line="893" selection-start-column="20" selection-end-line="893" selection-end-column="20" />
@@ -1369,14 +1529,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ko/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ko/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.214286">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.357143">
+          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding>
+            <element signature="e#4637#4672#0#HTML" expanded="true" />
+            <element signature="e#5243#5267#0#HTML" expanded="true" />
+            <element signature="e#5385#5420#0#HTML" expanded="true" />
+            <element signature="e#6416#6455#0#HTML" expanded="true" />
+            <element signature="e#7890#7959#0#HTML" expanded="true" />
+            <marker date="1457600044418" expanded="true" signature="4325:4517" placeholder="..." />
+            <marker date="1457600044418" expanded="true" signature="4440:4451" placeholder="..." />
+            <marker date="1457600044418" expanded="true" signature="4461:4478" placeholder="..." />
+            <marker date="1457600044418" expanded="true" signature="4490:4515" placeholder="..." />
+            <marker date="1457600044418" expanded="true" signature="7172:7173" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.285714">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#ins#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.535714">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.821429">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.714286">
+          <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+          <folding>
+            <element signature="e#45#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/site/main-v1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43879908">
-          <caret line="126" column="61" selection-start-line="126" selection-start-column="61" selection-end-line="126" selection-end-column="61" />
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="354" column="86" selection-start-line="354" selection-start-column="79" selection-end-line="354" selection-end-column="86" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1384,11 +1623,34 @@
             <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1457581950893" expanded="true" signature="8430:8824" placeholder="..." />
-            <marker date="1457581950893" expanded="true" signature="8457:8824" placeholder="..." />
-            <marker date="1457581950893" expanded="true" signature="8483:8824" placeholder="..." />
-            <marker date="1457581950893" expanded="true" signature="8539:8824" placeholder="..." />
-            <marker date="1457581950893" expanded="true" signature="8715:8727" placeholder="..." />
+            <marker date="1457602224093" expanded="true" signature="8672:9074" placeholder="..." />
+            <marker date="1457602224093" expanded="true" signature="8699:9074" placeholder="..." />
+            <marker date="1457602224093" expanded="true" signature="8725:9074" placeholder="..." />
+            <marker date="1457602224093" expanded="true" signature="8781:9074" placeholder="..." />
+            <marker date="1457602224093" expanded="true" signature="8957:8969" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.107143">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48267898">
+          <caret line="212" column="54" selection-start-line="212" selection-start-column="54" selection-end-line="212" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

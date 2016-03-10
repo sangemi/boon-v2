@@ -12,22 +12,16 @@ class MainController extends Controller
 {
     public function index()
     {
-        /*메일 보내는 방법
-        $data['message'] = '김수로님';
-        Mail::send('emails.welcome', $data, function($message)
-        {
-            $message->to('sangemi@daum.net', 'John Smith')->subject('[분쟁제로] 사이트 이용방법');
-        });*/
-        return view('boon.site.main-v1');
-
-        if(Auth::user()){
-            //return Redirect::to('/site/main-v1');
+        /*if(Auth::user()){
+            //return Redirect::to('/site/ccmail');
         }else{
-            return view('boon.site.main-v1');
+            return view('boon.site.ccmail');
 
-        }
-
-
+        }*/
+        return view('boon.site.ccmail'); // 잠시 안씀. 지급명령 등 나오면 통합 페이지를 열것.
     }
-
+    public function ccmail()
+    {
+        return view('boon.site.ccmail');
+    }
 }

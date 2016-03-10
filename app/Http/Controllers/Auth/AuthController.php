@@ -54,8 +54,8 @@ class AuthController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
-        ]);
+            'password' => 'required|min:6',
+        ]); /*confirmed| 삭제함*/
     }
 
     /**
@@ -66,23 +66,32 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        $user_id = User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        $user_id = $user->id;
 
-        // SK 추가함 - 회원가입할 때 hasOne인것들은 자동 추가
+        // 회원가입할 때 hasOne인것들은 자동 추가 / SK 추가
         UserInfo::create([
             'user_id' => $user_id
         ]);
 
         // 최초 500 포인트 공짜
         BoonStatus::create([
-            'boot_point' => 500,
-            'user_id' => $user_id
+            'user_id' => $user_id,
+            'boon_point' => 500
         ]);
-        return $user_id;
+
+        /*메일 보내는 방법
+        $data['message'] = '김수로님';
+        Mail::send('emails.welcome', $data, function($message)
+        {
+            $message->to('sangemi@daum.net', 'John Smith')->subject('[분쟁제로] 사이트 이용방법');
+        });*/
+
+        return $user;
     }
 
 

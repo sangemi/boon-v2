@@ -11,6 +11,7 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::get('/','MainController@index');
 
     /* 내용증명 */
+    Route::get('ccmail','MainController@ccmail');
     Route::resource('ccmail/sample', 'CcMailSampleController');
     Route::get('ccmail/sample/{id}/{direction?}', 'CcMailSampleController@show');
 
