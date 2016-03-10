@@ -23,9 +23,11 @@
         </div>
 
         <!-- sidebar content -->
+        @section('sidebar-right')
         <div id="sidebar" class="col-md-2">
             @include('includes.sidebar')
         </div>
+        @show
     </div>
 
     <footer class="row">

@@ -109,18 +109,129 @@
 			<div class="fh5co-cover-text">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-push-6 col-md-6 full-height js-full-height">
+						<div class="col-md-12 full-height js-full-height">
 							<div class="fh5co-cover-intro">
-								<?php $rand = rand(0, 1);
-								$textSupertitle = array('분쟁을 관리하는 가장 쉬운 방법', '분쟁에 대처하는 엘레강스한 방법');
-								?>
-								<h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><?=$textSupertitle[$rand]?></h1>
-								<h2 class="cover-text-sublead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-									분쟁이 예상될 때에는 내용증명으로 시작하세요. <br>어렵지 않습니다. <big>천여개의 샘플</big>과 <big>법률 전문가</big>가 기다리고 있으니까요.
-								</h2>
-								<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline btn-lg">샘플보기</a></p>
+
+								<style>
+
+								</style>
+								<style> /*js-full-height : 화면높이 계산해서 이미지를 꽉 채움.*/
+									.cover-text-lead {
+										font-size: 30px;
+									}
+									@media (max-width : 768px) { /*휴대폰에서 최상당화면만 정렬다시*/
+										#area메인문구 h1{
+											margin-top:60px;
+										}
+										#area메인문구 p{
+											text-align:right;
+										}
+										#area회원가입 {
+											line-height:80%;
+										}
+										#area회원가입 h1{
+											margin-bottom:0px;
+										}
+										#area회원가입 #area가입버튼{
+											text-align:right;
+										}
+									}
+
+								</style>
+								<div class="col-sm-6" id="area메인문구">
+									<?php $rand = rand(0, 1);
+									$textSupertitle = array('분쟁을 관리하는 가장 쉬운 방법', '분쟁에 대처하는 엘레강스한 방법');
+									?>
+										<h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><?=$textSupertitle[$rand]?></h1>
+										<h2 class="cover-text-sublead wow fadeInUp" data-wow-duratio="1s" data-wow-delay=".4s">
+										분쟁이 예상될 때에는 내용증명으로 시작하세요. <br>어렵지 않습니다. <big>천여개의 샘플</big>과 <big>법률 전문가</big>가 기다리고 있으니까요.
+									</h2>
+									<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline btn-lg">샘플보기</a></p>
+
+								</div>
+
+								{{--회원가입 바로 유도!--}}
+
+								<div class="col-sm-6" id="area회원가입">
+
+									@if($errors->any())
+										<div class="alert alert-danger">
+											<strong>Error</strong> 입력값에 오류가 있는듯 합니다.<br><br>
+											<ul>
+												@foreach ($errors->all() as $error)
+													<li>{{ $error }}</li>
+												@endforeach
+											</ul>
+										</div>
+									@endif
+
+									<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
+										<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+
+										<div class="form-group">
+											<label class="col-md-4 control-label"></label>
+											<div class="col-md-6">
+												<h1 style="color:white;font-size:2em;">처음이세요?</h1>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-4 control-label">이름</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="col-md-4 control-label">이메일</label>
+											<div class="col-md-6">
+												<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="col-md-4 control-label">비밀번호</label>
+											<div class="col-md-6">
+												<input type="password" class="form-control" name="password">
+											</div>
+										</div>
+
+										{{--왜냐면, 비번 잘못입력시 다시 이메일로 승인받으면 될일. <div class="form-group">
+                                            <label class="col-md-4 control-label">비밀번호 확인</label>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" name="password_confirmation">
+                                            </div>
+                                        </div>--}}
+
+										{{--추가정보 받기
+                                        <div class="form-group">
+                                            <label for="resume">Resume</label>
+                                            <textarea class="form-control" id="resume" name="resume" rows="10"></textarea>
+                                        </div>--}}
+
+
+										<div class="form-group">
+											<div class="col-md-6 col-md-offset-4" id="area가입버튼">
+												{{--<div><small>가입하기 버튼을 클릭하면 <a>약관</a>에 동의한 것으로 간주됩니다.</small></div>--}}
+												<button type="submit" class="btn btn-primary">
+													가입
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+
+
+
 							</div>
 						</div>
+
+						{{--<div class="col-md-6  full-height js-full-height">
+							<div class="fh5co-cover-intro">
+
+							</div>
+						</div>--}}
+
 					</div>
 				</div>
 			</div>

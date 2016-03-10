@@ -1,4 +1,3 @@
-{{--@ ex te nds('app ')--}}
 @extends('layouts.master')
 
 @section('content')

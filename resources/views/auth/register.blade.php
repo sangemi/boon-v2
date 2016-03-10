@@ -1,4 +1,14 @@
-@extends('app')
+@extends('layouts.master')
+
+
+@section('sidebar-right') {{--사이드바 내용없음으로 대체하고, 본문은 너비100%로--}}
+	<script>
+		$(document).ready(function(){
+			$("#content").removeClass('col-md-10');
+		});
+
+	</script>
+@endsection
 
 @section('content')
 <div class="container-fluid">
@@ -9,7 +19,7 @@
 				<div class="panel-body">
 					@if($errors->any())
 						<div class="alert alert-danger">
-							<strong>이런!</strong> 입력값에 오류가 있는듯 합니다.<br><br>
+							<strong>Error</strong> 입력값에 오류가 있는듯 합니다.<br><br>
 							<ul>
 								@foreach ($errors->all() as $error)
 									<li>{{ $error }}</li>
@@ -42,12 +52,12 @@
 							</div>
 						</div>
 
-						<div class="form-group">
+						{{--왜냐면, 비번 잘못입력시 다시 이메일로 승인받으면 될일. <div class="form-group">
 							<label class="col-md-4 control-label">비밀번호 확인</label>
 							<div class="col-md-6">
 								<input type="password" class="form-control" name="password_confirmation">
 							</div>
-						</div>
+						</div>--}}
 
 						{{--추가정보 받기
 						<div class="form-group">
@@ -58,8 +68,9 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
+								{{--<div><small>가입하기 버튼을 클릭하면 <a>약관</a>에 동의한 것으로 간주됩니다.</small></div>--}}
 								<button type="submit" class="btn btn-primary">
-									Register
+									가입하기
 								</button>
 							</div>
 						</div>
