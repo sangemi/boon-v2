@@ -92,7 +92,7 @@
 					<ul class="fh5co-special" data-offcanvass="yes">
 						@if(Auth::user())
 							<li><a href="/auth/logout">로그아웃</a></li>
-							<li><a href="/ccmail/work/create" class="call-to-action">바로시작</a></li>
+							<li><a href="/ccmail/work/create" class="call-to-action">바로작성</a></li>
 						@else
 							<li><a href="/auth/login">로그인</a></li>
 						@endif
@@ -104,11 +104,12 @@
 
 		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"
 			 style="background-image: url(site/ccmail/images/full_5.jpg);background-color:rgba(0, 0, 0, 0.5);">
+		  	{{--한블럭 내려가는 버튼
 		  	<span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
 				<a href="#">
 					<span class="mouse"><span></span></span>
 				</a>
-			</span>
+			</span>--}}
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover-text">
 				<div class="container">
@@ -123,7 +124,7 @@
 									}
 									@media (max-width : 768px) { /*휴대폰에서 최상당화면만 정렬다시*/
 										#area메인문구 h1{
-											margin-top:60px;
+											margin-top:120px;
 										}
 										#area메인문구 p{
 											text-align:right;
@@ -134,13 +135,15 @@
 									<?php $rand = rand(0, 1);
 									$textSupertitle = array('분쟁을 관리하는 가장 쉬운 방법', '분쟁에 대처하는 엘레강스한 방법');
 									?>
-										<h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><?=$textSupertitle[$rand]?></h1>
-										<h2 class="cover-text-sublead wow fadeInUp" data-wow-duratio="1s" data-wow-delay=".4s">
-										분쟁이 예상될 때에는 내용증명으로 시작하세요. <br>어렵지 않습니다. <big>천여개의 샘플</big>과 <big>법률 전문가</big>가 기다리고 있으니까요.
+										<h1 class="cover-text-lead wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="0s"><?=$textSupertitle[$rand]?></h1>
+										<h2 class="cover-text-sublead wow fadeInUp" style="display:none;" data-wow-duratio="1s" data-wow-delay=".4s">
+										분쟁이 예상될 때는 내용증명으로 시작하세요. <br>어렵지 않습니다. <big>천여개의 샘플</big>과 <big>법률 전문가</big>가 기다리고 있으니까요.
 									</h2>
-									<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline btn-lg">샘플보기</a></p>
+									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline btn-lg">샘플보기</a></p>
 
 								</div>
+
+
 								@if( !Auth::user() )
 								{{--회원가입 바로 유도!--}}
 								<style>
@@ -255,7 +258,7 @@
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">다양한 발송방법</h2>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-
+							간단한 대행부터 전문가 활용까지
 						</p>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
 							<a href="javascript:$('#div내용증명비교표').toggle();" class="btn btn-success font-size-up">상세 비교표 보기</a>
@@ -758,20 +761,22 @@
 			</div>
 		</div>
 --}}
+
 		<div class="fh5co-testimonial-style-2">
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">추천 말씀</h2>
-						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
-							실제 분제로 닷컴을 사용하신 분들의 인사말을 모았습니다. <i class="heart icon-heart"></i> 의견주신 분들께 한분 한분 감사인사 드립니다.
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">추천 말씀</h2>
+						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+							<i class="heart icon-heart"></i><br>
+							실제 분제로를 이용해본 고객님들의 인사말입니다.
 						</p>
 					</div>
 				</div>
 				<div class="row">
 
 					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 							<div class="fh5co-name">
 								<img src="site/ccmail/images/person_5.jpg" alt="">
 								<div class="fh5co-meta">
@@ -780,13 +785,13 @@
 								</div>
 							</div>
 							<div class="fh5co-text">
-								<p>&ldquo;업무상 한달에 한두번 정도 내용증명을 보낼 일이 있었는데, 직원을 직접 보내는 것보다 훨씬 싸고 편합니다. 보관도 되니 나중 찾아보기도 좋고요.
+								<p>&ldquo;업무상 한달에 한두번 정도 내용증명을 보낼 일이 있는데, 직원을 직접 보내는 것보다 훨씬 싸고 편합니다. 보관도 되니 나중 찾아보기도 좋고요.
 									&rdquo;</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
+						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
 							<div class="fh5co-name">
 								<img src="site/ccmail/images/person_4.jpg" alt="">
 								<div class="fh5co-meta">
@@ -795,7 +800,7 @@
 								</div>
 							</div>
 							<div class="fh5co-text">
-								<p>&ldquo;집에 컴퓨터가 없어 출력을 하지도 못하는데, 다 알아서 해주니 너무 좋았습니다. 다음에 또 이용할게요.  &rdquo;</p>
+								<p>&ldquo;집에 프린터가 없어 출력부터 걱정했는데, 귀찮은건 다 알아서 해주니 너무 좋았습니다. 다음에 또 이용할게요.  &rdquo;</p>
 							</div>
 						</div>
 					</div>
@@ -803,7 +808,7 @@
 					<div class="clearfix visible-sm-block"></div>
 
 					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
+						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
 							<div class="fh5co-name">
 								<img src="site/ccmail/images/person_3.jpg" alt="">
 								<div class="fh5co-meta">
@@ -812,7 +817,7 @@
 								</div>
 							</div>
 							<div class="fh5co-text">
-								<p>&ldquo;미지급 대금상환 요구의 건. 법무법인 명의발송의 효력을 보았습니다. 작은 차이이지만 확실히 효과가 있더군요.&rdquo;</p>
+								<p>&ldquo;법무법인 명의 발송의 효력을 톡톡히 보았습니다. 작은 차이가 확실히 효과가 있더군요. 소송에 휘말리기 싫었는지 생각도 않은 이자까지 정리되었네요.&rdquo;</p>
 							</div>
 						</div>
 					</div>
@@ -820,16 +825,16 @@
 					<div class="clearfix visible-lg-block visible-md-block"></div>
 
 					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
 							<div class="fh5co-name">
 								<img src="site/ccmail/images/person_1.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>회사원</h3>
-									<span class="fh5co-company">홍영O</span>
+									<span class="fh5co-company">홍영실</span>
 								</div>
 							</div>
 							<div class="fh5co-text">
-								<p>&ldquo; 미루기만 하다가 마음을 먹으니 하루만에 처리가 되네요. 실명을 쓴 모욕적인 글들도 다 삭제되었습니다.
+								<p>&ldquo; 미루기만 하다가 마음을 먹으니 며칠만에 사건이 종료 되네요. 실명을 쓴 모욕적인 글들도 다 삭제되었습니다.
 									법조문이 들어간 강력한 경고메세지를 작성해 주신게 효과가 있었던것 같아요. &rdquo;</p>
 							</div>
 						</div>
@@ -838,22 +843,22 @@
 					<div class="clearfix visible-sm-block"></div>
 
 					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.3s">
+						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".9s">
 							<div class="fh5co-name">
 								<img src="site/ccmail/images/person_2.jpg" alt="">
 								<div class="fh5co-meta">
 									<h3>기술계약위반</h3>
-									<span class="fh5co-company">재단 이사장</span>
+									<span class="fh5co-company">재단 이사장 박찬성</span>
 								</div>
 							</div>
 							<div class="fh5co-text">
 
-								<p>&ldquo; 두서없는 글을 정돈해 주시니 좋았습니다. 복잡한 관계가 깔끔해진 느낌입니다. 현재 소송진행중입니다. &rdquo;</p>
+								<p>&ldquo; 두서없는 글을 정돈해 주시니 좋았습니다. 복잡한 관계가 깔끔해진 느낌입니다. 지금 소송을 하고 있는데 미리 보내놓았던 내용증명이 정말 도움되고 있습니다. &rdquo;</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="2.6s">
+						<div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
 							<div class="fh5co-name">
 								<img src="site/ccmail/images/person_6.jpg" alt="">
 								<div class="fh5co-meta">
@@ -862,7 +867,7 @@
 								</div>
 							</div>
 							<div class="fh5co-text">
-								<p>&ldquo; 기성고에 대해서 확정증거를 마련할 필요가 있어서 이용했습니다. 친절히 응대해주셔서 감사드립니다. &rdquo;</p>
+								<p>&ldquo; 말로 하는건 의미가 없습니다. 기성고<small>(=공사진행율)</small>에 대해서 확정증거를 마련할 필요가 있어서 이용했습니다. 항상 친절히 대해주셔서 감사드립니다. &rdquo;</p>
 							</div>
 						</div>
 					</div>
@@ -902,14 +907,14 @@
 		<div class="fh5co-footer-style-3">
 			<div class="container">
 				<div class="row p-b">
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 						<div class="fh5co-logo"><span class="logo">B</span> Boonzero</div>
 						<p class="fh5co-copyright">&copy; 2013 Boonzero. <br>All Rights Reserved.
 							<br>Designed by <a target="_blank" href="about:blank">Moior</a>
 							<br>Work with <a target="_blank" href="http://www.yeyul.com">Yeyul</a>
 							{{--<br>Images: <a target="_blank" href="http://unsplash.com/">Unsplash</a>, <a target="_blank" href="http://pexels.com/">Pexels</a></p>--}}
 					</div>
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
 						<h3>Company</h3>
 						<ul class="fh5co-links">
 							<li>(주)모이어</li>
@@ -924,7 +929,7 @@
 						</ul>
 					</div>
 					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
 						{{--<h3>Connect</h3>
 						<ul class="fh5co-links fh5co-social">
 							<li><a href="#"><i class="icon icon-facebook2"></i> Facebook</a></li>
@@ -933,7 +938,7 @@
 							<li><a href="#"><i class="icon icon-instagram"></i> Instagram</a></li>
 						</ul>--}}
 					</div>
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
 						<h3>About Site</h3>
 						<p>분쟁관리 전문사이트 분제로닷컴</p>
 						<p><a href="javascript:void(0)" id="addFavorite3" title="즐겨찾기 등록" class="btn btn-success btn-sm btn-outline">+북마크</a></p>
@@ -985,3 +990,14 @@
 
 	</body>
 </html>
+
+
+<script>
+
+	$(document).ready(function(){
+		/*메인화면의 글자들이, 순간적으로 보였다가 슬라이드 나타남.. 별루라서 수정시도*/
+		setTimeout(function(){
+			$(".fadeInUp").css("display", "block");
+		},100);
+	});
+</script>

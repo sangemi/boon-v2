@@ -19,10 +19,13 @@
 					@endif
 
 
+					{{-- 소셜 로그인은, 버튼으로 만들어서 바로 할 수 있도록 하자.
+
+
 					<ul id="tabs" class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">일반</a></li>
 						<li role="presentation"><a href="#social-login" aria-controls="social-login" role="tab" data-toggle="tab">소셜 로그인</a></li>
-					</ul>
+					</ul>--}}
 
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="login">

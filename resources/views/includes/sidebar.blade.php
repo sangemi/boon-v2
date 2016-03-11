@@ -1,17 +1,13 @@
 <style>
     /*사이드바의 탑 타이틀*/
-    @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
+    @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600');
 
-    article.title{
-
+    .title-area{
+        padding:10px;
         margin: 0 auto 0 auto;
         padding-bottom: 0px;
         font-family: 'Source Sans Pro', sans-serif;
-    }
-    article.title p{
-        width: 100%;
-        max-width:500px;
-        margin: 0 auto 0 auto;
+        background-image:url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/random_grey_variations.png);
     }
 
     .title-container{
@@ -31,40 +27,48 @@
         margin: 0;
         position: absolute;
     }
-    .title-container h1.small{
+    .title-container h1.title-small{
         font-size: 15px;
         font-weight: 300;
-        color:#a29595;
+        color:#bbb;
+        top:0;        left: 2%;
     }
-    .title-container h1.large{
-        font-size: 28px;
-        font-weight: 900;
-        color:#5d5959;
-        font-style:italic;
-    }
-
-    #line-1{
-        top:0;        left: 3%;
-    }
-    #line-2{
-        top:28%;        left: 6%;
+    .title-container h1.title-large{
+        font-size: 26px;
+        font-weight: 600;
+        color:goldenrod;
+        display: inline-block;
+        white-space: nowrap;
+        text-shadow: 0 1px 0 #000;
+        top:28%;      left: 8%;
     }
     /*사이드바의 탑 타이틀 끝*/
+
+    /*사이드 박스화*/
+    .neat-box{
+        border:1px solid #fff;
+        margin-bottom:20px;
+        background-color: #fff;
+    }
+
+
 </style>
 
 
+
+<div class="neat-box">
 <!-- sidebar nav -->
 <nav id="sidebar-nav">
     <ul class="nav nav-pills nav-stacked">
         @if(Request::is('ccmail/*')) {{--내용증명--}}
-            <article class="title">
+            <div class="title-area">
                 <div class="title-container">
 
-                    <h1 class="small" id="line-1">분쟁관리</h1>
-                    <h1 class="large"id="line-2">내용증명</h1>
+                    <h1 class="title-small">분쟁관리</h1>
+                    <h1 class="title-large">내용증명</h1>
 
                 </div>
-            </article>
+            </div>
             <li><a href="{{ URL::to('/ccmail/sample') }}"><span class="glyphicon glyphicon-th"></span> 샘플</a></li>
             <li><a href="{{ URL::to('/ccmail/work') }}"><span class="glyphicon glyphicon-save"></span> 보관함</a></li>
             <li><a href="{{ URL::to('/request/ccmail') }}">신청내역</a></li>
@@ -73,14 +77,14 @@
             <li><a href="{{ URL::to('/sosong/work') }}">나의 이력</a></li>
 
         @else {{--메인메뉴 등 일반적인 경우--}}
-            <article class="title">
+            <div class="title-area">
                 <div class="title-container">
 
-                    <h1 class="small" id="line-1">분쟁관리</h1>
-                    <h1 class="large"id="line-2">Boon Zero</h1>
+                    <h1 class="title-small">분쟁관리</h1>
+                    <h1 class="title-large">Boon Zero</h1>
 
                 </div>
-            </article>
+            </div>
             <li><a href="/ccmail/sample">{{Lang::get('boon.내용증명')}}</a></li>
             {{--<li><a href="#">{{Lang::get('boon.지급명령')}}</a></li>
             <li><a href="#">승소체크</a></li>--}}
@@ -93,6 +97,8 @@
 
 
     </ul>
+</nav>
+</div>
     {{--구글 배너광고--}}
     <div style="">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -107,7 +113,6 @@
         </script>
 
     </div>
-    <div style="height:300px;">
+    <div style="">
 
     </div>
-</nav>
