@@ -99,6 +99,7 @@ class CcMailWorkController extends Controller {
 				$data = Input::all();
 				$ccmail = new CcMailWork();
 
+				$ccmail->user_id = Auth::id();
 				$ccmail->sample_id = $data['sample_id'];
 				$ccmail->sender_name = $data['sender_name'];
 				$ccmail->sender_addr = $data['sender_addr'];

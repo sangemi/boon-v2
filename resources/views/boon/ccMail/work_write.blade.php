@@ -200,7 +200,7 @@ $(document).ready(function(){
 
 
                     </div>
-                    {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content')->hideLabel() !!}
+                    {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content')->hideLabel()->value( $ccMail->content ) !!}
                     {{--<textarea name="content" class="form-control ccmail-content">{{ $ccMail->content }}</textarea>--}}
                 </div>
 
