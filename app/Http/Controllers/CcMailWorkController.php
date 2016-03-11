@@ -37,7 +37,11 @@ class CcMailWorkController extends Controller {
 	public function index()
 	{
 
-		$ccMails = CcMailWork::where('create_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
+		//$ccMails = CcMailWork::where('create_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
+		//$ccMails = Auth::user()->ccMailWork()->orderBy('id', 'desc')->paginate(9);
+		//$ccMails = auth()->user()->ccMailWork; => 변수형식으로 하면, query 실행해버림! 따라서 ()함수형식으로 연결연결..
+		$ccMails = auth()->user()->ccMailWork()->orderBy('id', 'desc')->paginate(9);
+
 		//$ccMails = DB::table('ccmails_work')->orderBy('id', 'desc')->paginate(9);
 
 		return view('boon.ccMail.work_list', compact('ccMails'));

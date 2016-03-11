@@ -130,8 +130,8 @@ $(document).ready(function(){
             </div>
 
             {!! BootForm::open()->id('form-내용증명')->action('/ccmail/work') !!}
-            {!! BootForm::hidden('sample_id')->value( $ccMail->id ) !!}
-            {!! BootForm::hidden('create_id')->value( Auth::user()->id ) !!}
+
+            {!! BootForm::hidden('sample_id')->defaultValue( $ccMail->id ) !!}
 
             <div class="panel-body ">
                 <div class="pull-left">
@@ -165,7 +165,7 @@ $(document).ready(function(){
                         {!! BootForm::text('이름', 'receiver_name')->placeholder('이름')->defaultValue('')->hideLabel()->required() !!}
                         {!! BootForm::text('주소', 'receiver_addr')->placeholder('주소. 익일 특급으로 등기발송됩니다.')->hideLabel()->required() !!}
                         {!! BootForm::text('휴대폰', 'receiver_phone')->placeholder('휴대폰번호')->hideLabel() !!}
-                        {!! BootForm::button('인맥에서 불러오기')->addClass('btn-sm') !!}
+                        {{--{!! BootForm::button('인맥에서 불러오기')->addClass('btn-sm') !!}--}}
 
                         <?php /*$builder2 = new AdamWathan\Form\FormBuilder; // */?>
                         <?php /* $builder->open()->action('/ccmail'); */?>
@@ -193,14 +193,14 @@ $(document).ready(function(){
 
                         </div>
                         <div class="col-sm-10">
-                            {!! BootForm::text('', 'title')->value( $ccMail->cate3?$ccMail->cate3."의 건":'' )
+                            {!! BootForm::text('', 'title')->defaultValue( $ccMail->cate3?$ccMail->cate3."의 건":'' )
                             ->hideLabel()->placeholder("예) 계약해지의 건 / 안적어도 됩니다.")  !!}
 
                         </div>
 
 
                     </div>
-                    {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content')->hideLabel()->value( $ccMail->content ) !!}
+                    {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content')->hideLabel()->defaultValue( $ccMail->content ) !!}
                     {{--<textarea name="content" class="form-control ccmail-content">{{ $ccMail->content }}</textarea>--}}
                 </div>
 
@@ -217,7 +217,7 @@ $(document).ready(function(){
             {!! BootForm::close() !!}
 
             <div class="panel-footer">
-                <span>{{ $ccMail->create_id }}</span>
+                <span>{{ $ccMail->user_id }}</span>
 
                 <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccMail/sample/' . $ccMail->id . '/edit') }}">
                     저  장

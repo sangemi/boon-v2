@@ -18,7 +18,7 @@ class CcMailSample extends Model {
 
     /* 보안을 위하여, 값을 입력할 수 있는 컬럼을 whitelist (fillable)로 지정해줘야함
     하지 않으면 Mass Assignment 에러가 나옴 */
-    protected $fillable = ['sample_code', 'cate1', 'cate2', 'cate3', 'content', 'used_cnt', 'create_id'];
+    protected $fillable = ['sample_code', 'cate1', 'cate2', 'cate3', 'content', 'used_cnt'];
     //guarded = ['title']; // 지정한것 외에 다 쓸 수 있음.
 
     /*소프트딜리트 사용하기 위해서 모델에 정의하고 Controll에는 그냥 그대로 delete() 쓰면됨 */

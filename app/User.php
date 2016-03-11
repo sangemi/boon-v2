@@ -38,7 +38,7 @@ class User extends Authenticatable
         return $this->hasMany('App\BoonCash');
     }
 
-    public function ccMail() {
+    public function ccMailWork() {
         return $this->hasMany('App\CcMailWork');
     }
 
