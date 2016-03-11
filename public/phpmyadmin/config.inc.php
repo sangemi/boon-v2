@@ -3,7 +3,7 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-$cfg['blowfish_secret'] = 'xampp'; /* YOU SHOULD CHANGE THIS FOR A MORE SECURE COOKIE AUTH! */
+$cfg['blowfish_secret'] = 'asdijfklsdijiod(dKJKD2376SKLHD2IU288ikdjkaj'; /* YOU SHOULD CHANGE THIS FOR A MORE SECURE COOKIE AUTH! */
 
 /*
  * Servers configuration
@@ -16,7 +16,7 @@ $i = 0;
 $i++;
 
 /* Authentication type and info */
-$cfg['Servers'][$i]['auth_type'] = 'config';
+$cfg['Servers'][$i]['auth_type'] = 'http';
 $cfg['Servers'][$i]['user'] = 'root';
 $cfg['Servers'][$i]['password'] = '';
 $cfg['Servers'][$i]['extension'] = 'mysqli';
