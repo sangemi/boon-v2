@@ -607,20 +607,35 @@ function calculate_charge_amt(obj){
             </div>
             <div class="modal-body">
 
-                    <p></p>
-                    <p>※ 오전2시 이전 접수시 통상 당일 발송가능합니다. </p>
+                <p>내용증명 발송을 신청합니다.</p>
+
+                <p>※ 발송 시각 안내</p>
+                <ul style="margin-left:30px;">
+                <li>
+                    <h5>발송대행, 법인명의발송의 경우</h5>
+                    <p style="font-size:;"><b>오전2시 이전</b> 접수시 통상 당일 발송가능합니다. </p>
+                </li>
+                <li>
+                    <h5>변호사작성 이상의 경우</h5>
+                    <p style="font-size:;">담당 변호사님과 내용에 대하여 통화한 이후 발송됩니다.
+                        <b>당일 또는 다음날</b> 적어주신 휴대폰으로 연락드립니다.
+                        <small>재판일정이 있어 바로 전화드리기 어려운 점 양해바랍니다.</small></p>
+                </li>
+                </ul>
+
+
 
             </div>
             <div class="modal-footer">
 
                 {{--{!! BootForm::open(['method' => 'POST', 'action' => 'SmsController@sendSms']) !!}--}}
-                {!! BootForm::open(['method' => 'POST'])->action('/sms') !!}
+                {!! BootForm::open(['method' => 'POST'])->action('/request')->id('form최종신청') !!}
                 {!! BootForm::hidden('to')->value( '01047750852' ) !!} {{--회사 담당자 전번--}}
                 {!! BootForm::hidden('from')->value( $ccMail->sender_phone ) !!} {{--의뢰인 전번--}}
                 {!! BootForm::hidden('text')->value('입금하였습니다.') !!}
 
                 <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-                <button type="button" class="btn btn-primary" onclick="$('#form접수').submit()">신청</button>
+                <button type="button" class="btn btn-primary" onclick="$('#form최종신청').submit()">신청</button>
                 {!! BootForm::close() !!}
             </div>
         </div>
