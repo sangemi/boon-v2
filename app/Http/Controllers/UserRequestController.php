@@ -105,7 +105,7 @@ class UserRequestController extends Controller {
 
 			$worked_paper->content = $data['content'];
 
-			$userReq->worked_paper = $this->makePaperHTML('ccmail', $worked_paper)
+			$userReq->worked_paper = $this->makePaperHTML('ccmail', $worked_paper);
 
 			$userReq->status_inner = $data['status_inner'];
 			$userReq->status_show = $data['status_show'];

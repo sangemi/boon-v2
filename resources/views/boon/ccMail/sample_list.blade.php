@@ -18,7 +18,7 @@
         #sample_top {text-align:center;margin:30px auto;}
     </style>
 
-    {{--세부페이지 네비바--}}
+    {{--세부페이지 상단 소 메뉴--}}
     <nav class="navbar navbar-default">
         <div class="navbar-header">
             <a class="navbar-brand" href="{{ URL::to('ccmail/sample') }}">내용증명</a>
@@ -45,8 +45,8 @@
         	<span class="sample_srch" style="white-space:nowrap;">
 				<input type=text name="q" value="<?=htmlspecialchars(stripslashes(Request::input('q')))?>"
                        style="border:5px solid #1b558e;box-sizing: border-box;margin:0px;padding:2px 5px 2px 5px;
-                            font-size:4em;height:80px;font-weight:bold;"
-                       placeholder="검색어를 입력하세요" maxlength="80" />
+                            font-size:3.7em; width:72%; height:80px;font-weight:bold;"
+                       placeholder="검색어 입력" maxlength="80" />
 				<input type=image src="{{URL::asset('/img/v1/btn_srch.gif')}}" id="btn_srch_sample" style="border:0px solid red; vertical-align:bottom; width:94px;height:74px;" alt="검색" title="검색" />
 			</span>
         </form>
