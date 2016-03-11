@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{URL::asset('/css/boon/ccMail.css')}}">
 
     <style>
-        #sample_top {background:url({{URL::asset('/img/v1/09_title.png')}}) no-repeat center; background-size:contain; padding:180px 0px 100px 65%; margin:10px auto;}
+        #sample_top {text-align:center;margin:30px auto;}
     </style>
 
     {{--세부페이지 네비바--}}
@@ -36,25 +36,22 @@
     </nav>
 
 
+
     <div id="sample_top">
-        <!-- <h2>
-            <p align="center"><img src="/img/09_title.png" alt="내용증명 양식찾기" /></p>
-        </h2>
-         -->
 
         <form name="srch_sample_f" method="get" action="/ccmail/sample" no-error-return-url="true">
             <input type="hidden" name=cate1 value="{!! Request::input('cate1') !!}" />
             <input type="hidden" name=cate2 value="{!! Request::input('cate2') !!}" />
         	<span class="sample_srch" style="white-space:nowrap;">
 				<input type=text name="q" value="<?=htmlspecialchars(stripslashes(Request::input('q')))?>"
-                       style="border:5px solid #1b558e;height:36px;box-sizing: border-box;margin:0px;padding:2px 5px 2px 5px;"
+                       style="border:5px solid #1b558e;box-sizing: border-box;margin:0px;padding:2px 5px 2px 5px;
+                            font-size:4em;height:80px;font-weight:bold;"
                        placeholder="검색어를 입력하세요" maxlength="80" />
-				<input type=image src="{{URL::asset('/img/v1/btn_srch.gif')}}" id="btn_srch_sample" style="border:0px solid red; vertical-align:bottom; width:47px;height:37px;" alt="검색" title="검색" />
+				<input type=image src="{{URL::asset('/img/v1/btn_srch.gif')}}" id="btn_srch_sample" style="border:0px solid red; vertical-align:bottom; width:94px;height:74px;" alt="검색" title="검색" />
 			</span>
         </form>
 
     </div>
-
 
 
 
