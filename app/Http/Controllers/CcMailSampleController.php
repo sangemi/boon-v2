@@ -34,17 +34,17 @@ class CcMailSampleController extends Controller {
 	{
 
 		//$ccMails = CcMail::paginate(5);
-		$ccMailsCate1s = DB::table('ccmails_sample')
+		$ccMailsCate1s = DB::table('ccmail_samples')
 			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate1, count(*) as cnt'))
 			-> groupBy('cate1')
 			-> orderBy('usedsum', 'desc') -> get();
-		$ccMailsCate2s = DB::table('ccmails_sample')
+		$ccMailsCate2s = DB::table('ccmail_samples')
 			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate2, count(*) as cnt'))
 			-> where('cate1', Request::input('cate1'))
 			-> groupBy('cate1','cate2')
 			-> orderBy('usedsum', 'desc') -> get();
 
-		$ccMails = DB::table ( 'ccmails_sample' );
+		$ccMails = DB::table ( 'ccmail_samples' );
 		if(Request::input('cate2')) {
 			$ccMails = $ccMails -> where ( 'cate1', Request::input('cate1'))
 								-> where ( 'cate2', Request::input('cate2'))
@@ -81,7 +81,7 @@ class CcMailSampleController extends Controller {
 	 */
 	public function create($id)
 	{
-		$ccMail = CcMail::find($id);  /*ccmails_sample table에 접속 */
+		$ccMail = CcMail::find($id);
 		return view('boon.ccMail.result_write', compact('ccMail', 'id'));
 
 	}

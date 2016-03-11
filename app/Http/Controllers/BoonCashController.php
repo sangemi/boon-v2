@@ -55,7 +55,7 @@ class BoonCashController extends Controller {
 			$ccMail = new BoonCash(); /*빈 모델. 첨부터 직접 작성*/
 		}else{
 			// /ccmail/work/create/307 형식일때 샘플을 불러와서 작성함!
-			$ccMail = CcMailSample::findOrFail($id);  /*ccmails_sample table에 접속 */
+			$ccMail = CcMailSample::findOrFail($id);
 		}
 		return view('boon.ccMail.work_write', compact('ccMail', 'id'));
 

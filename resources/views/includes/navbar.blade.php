@@ -52,8 +52,8 @@
                         <li><a href="{{ url('/auth/login') }}">
                                 <i class="fa fa-search icon icon-search"></i>
                                 <span class="icon icon-user fa fa-sign-in"></span>
-                                Login </a></li>
-                        <li><a href="{{ url('/auth/register') }}">Register</a></li>
+                                로그인 </a></li>
+                        <li><a href="{{ url('/auth/register') }}">회원가입</a></li>
                     @else
                         {{--<li><img class="circ" src="{{ Gravatar::get(Auth::user()->email)  }}"></li>--}}
                         <li class="dropdown">

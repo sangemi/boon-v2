@@ -39,7 +39,7 @@ class User extends Authenticatable
     }
 
     public function ccMail() {
-        return $this->hasMany('App\CcMail');
+        return $this->hasMany('App\CcMailWork');
     }
 
     public function userRequest(){

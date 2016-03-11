@@ -4,13 +4,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CcMailWork extends Model {
-    public function __construct($table_name = null, array $attributes = array())
+    protected $table = 'ccmail_works';
+
+/*    public function __construct($table_name = null, array $attributes = array())
     {
         parent::__construct($attributes);
-
-        /* 원래 자동으로 cc_mails ? 테이블과 연결됨 // protected $table = 'ccmails_sample'; */
-        $this->table = 'ccmails_work'; //
-    }
+$this->table = 'ccmails_work'; //
+    }*/
 
 
     /* 보안을 위하여, 값을 입력할 수 있는 컬럼을 whitelist (fillable)로 지정해줘야함
@@ -27,7 +27,9 @@ class CcMailWork extends Model {
     {
         return $query->where('due_date', '>', \Carbon\Carbon::now()->subDays($days));
     }
-
+    public function user(){
+        return $this->belongsToMany('App\User');
+    }
 }
 
 
