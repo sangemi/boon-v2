@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_04_183615_create_ccmail_samples_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_03_04_183616_create_ccmail_works_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,13 +108,13 @@
       <file leaf-file-name="sample_list.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6408776">
-              <caret line="254" column="33" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.57505774">
+              <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
               <folding>
                 <element signature="e#792#812#0#HTML" expanded="true" />
-                <element signature="e#8522#8542#0#HTML" expanded="true" />
-                <element signature="e#8585#8652#0#HTML" expanded="true" />
-                <element signature="e#8889#8938#0#HTML" expanded="true" />
+                <element signature="e#8532#8552#0#HTML" expanded="true" />
+                <element signature="e#8595#8662#0#HTML" expanded="true" />
+                <element signature="e#8899#8948#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -759,7 +756,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457689737107</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="0.9533&#10;&#10;공개시작 &#10;조금 수정">
+      <created>1457695753214</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1457695753214</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -822,7 +825,8 @@
     <MESSAGE value="0.953&#10;&#10;공개시작 &#10;DB조금 수정" />
     <MESSAGE value="0.9531&#10;&#10;공개시작 &#10;조금 수정" />
     <MESSAGE value="0.9532&#10;&#10;공개시작 &#10;조금 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.9532&#10;&#10;공개시작 &#10;조금 수정" />
+    <MESSAGE value="0.9533&#10;&#10;공개시작 &#10;조금 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.9533&#10;&#10;공개시작 &#10;조금 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1269,13 +1273,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6408776">
-          <caret line="254" column="33" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.57505774">
+          <caret line="251" column="46" selection-start-line="251" selection-start-column="46" selection-end-line="251" selection-end-column="46" />
           <folding>
             <element signature="e#792#812#0#HTML" expanded="true" />
-            <element signature="e#8522#8542#0#HTML" expanded="true" />
-            <element signature="e#8585#8652#0#HTML" expanded="true" />
-            <element signature="e#8889#8938#0#HTML" expanded="true" />
+            <element signature="e#8532#8552#0#HTML" expanded="true" />
+            <element signature="e#8595#8662#0#HTML" expanded="true" />
+            <element signature="e#8899#8948#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

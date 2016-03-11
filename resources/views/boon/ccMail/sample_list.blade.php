@@ -240,8 +240,8 @@
             <div class="">
                 <div class="jumbotron">
                     {{--<h1>분야 선택<span class="glyphicon glyphicon-hand-up"></span>! </h1>--}}
-                    <h1>분야 선택<span class="fa fa-hand-o-up"></span>! </h1>
-                    <p>또는 특정 단어로 <span class="glyphicon glyphicon-search"></span>검색해주세요!  <small>예:월세</small></p>
+                    <h2>관심분야 선택 <span class="fa fa-hand-o-up"></span> </h2>
+                    {{--<p>또는 특정 단어로 <span class="glyphicon glyphicon-search"></span>검색해주세요!  <small>예:월세</small></p>--}}
                 </div>
                 {{--<p>This is some text.</p>--}}
             </div>
