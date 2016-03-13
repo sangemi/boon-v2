@@ -32,7 +32,6 @@ class CcMailSampleController extends Controller {
 	 */
 	public function index()
 	{
-
 		//$ccMails = CcMail::paginate(5);
 		$ccMailsCate1s = DB::table('ccmail_samples')
 			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate1, count(*) as cnt'))
