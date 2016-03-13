@@ -50,7 +50,6 @@
                     <li><a href="{{ URL::to('/boon/status') }}"><small>충전</small></a></li>
                     @if (Auth::guest())
                         <li><a href="{{ url('/auth/login') }}">
-                                <i class="fa fa-search icon icon-search"></i>
                                 <span class="icon icon-user fa fa-sign-in"></span>
                                 로그인 </a></li>
                         <li><a href="{{ url('/auth/register') }}">회원가입</a></li>

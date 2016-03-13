@@ -124,7 +124,7 @@ $(document).ready(function(){
                     <div class="row text-center">
 
                         <h1>내 용 증 명</h1>
-                        <p class="text-info">※ 비용을 최초 화면에서도 쉽게 알도록!! ※</p>
+                        <p class="text-info"></p>
 
 
 
