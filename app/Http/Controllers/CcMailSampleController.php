@@ -79,11 +79,15 @@ class CcMailSampleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create($id)
+	public function create($id = null)
 	{
-		$ccMail = CcMail::find($id);
-		return view('boon.ccMail.result_write', compact('ccMail', 'id'));
-
+		if( empty($id) ){
+			$ccMail = new CcMailSample(); /*빈 모델. 첨부터 직접 작성*/
+		}else{
+			// /ccmail/sample/create/307 형식일때 샘플을 불러와서 작성함
+			$ccMail = CcMailSample::findOrFail($id);
+		}
+		return view('boon.ccMail.sample_write', compact('ccMail', 'id'));
 	}
 
 	/**
@@ -94,57 +98,48 @@ class CcMailSampleController extends Controller {
 	protected function validator(array $data)
 	{
 		return Validator::make($data, [
-			'sender_name' => 'required|max:255',
-			'sender_phone' => 'required|numeric',
-			'receiver_name' => 'required|max:255',
-			'receiver_addr' => 'required|max:255',
-			'receiver_phone' => 'max:255',
+			'cate1' => 'required|max:255',
+			'cate2' => 'max:255',
+			'cate3' => 'required|max:255',
+			'used_cnt' => 'numeric',
+			'create_id' => 'max:255',
 			'content' => 'required',
 		]); //|email|max:255|unique:users 'password' => 'required|confirmed|min:6',
 		// receiver. 에서 numeric|alpha 숫자+하이픈만 어떻게 하는지 모르겠네.....
 	}
 	public function store()
 	{
+		if ( !Auth::check() ) { // 샘플은 누구나 볼수 있으니, 수정시 권한 체크
 
-		if (Auth::check()) { // 로그인여부
-			print_r(Request::all());
-			$validator = $this->validator(Request::all());
-			//dd($validator);
-			if ($validator->fails()) {
-				Session::flash('message', '입력값 확인 바랍니다.!');
-				return Redirect::to('ccmail/write/'.Request::input('sample_id'))
-					->withErrors($validator)
-					->withInput(Request::except('password'));
-			} else {
-				$data = Request::all();
-				$ccmail = new CcMail('result'); /*ccmails_result table에 접속 */
 
-				$ccmail->sample_id = $data['sample_id'];
-				$ccmail->sender_name = $data['sender_name'];
-				$ccmail->sender_addr = $data['sender_addr'];
-				$ccmail->sender_phone = $data['sender_phone'];
+			// 권한 관리해야함. 지금은 로그인체크만 하는 상태..
 
-				$ccmail->receiver_name = $data['receiver_name'];
-				$ccmail->receiver_addr = $data['receiver_addr'];
-				$ccmail->receiver_phone = $data['receiver_phone'];
-
-				$ccmail->content = $data['content'];
-
-				$ret = $ccmail->save();
-
-				Session::flash('message', 'Successfully created nerd!');
-				return redirect()->to('/ccmail/result/'.$ccmail->id);
-			}
-			return response()->json(['result' => $ret, 'ccmail' => $ccmail],
-				200, [], JSON_PRETTY_PRINT);
-
-		}else{
-			//Session::put('temp_ccmail_data', $_POST); // flash : 다음번 요청에서만 사용하기. <> put
-			//Session::put('return_url', Request::url());
-
-			return redirect()->to('/auth/login'); //->with('temp_ccmail_data', $_POST); //with는 Session::flash인듯. 다음번 요청에서만 사용.
+			return redirect()->to('/auth/login');
 		}
 
+		$validator = $this->validator(Request::all());
+		//dd($validator);
+		if ($validator->fails()) {
+			Session::flash('message', '입력을 확인해주세요.');
+			return redirect()->back()
+				->withErrors($validator)
+				->withInput(Request::except('password'));
+		} else {
+			$task = new CcMailSample();
+			$data = Request::all();
+
+			$task->cate1 = $data['cate1'];
+			$task->cate2 = $data['cate2'];
+			$task->cate3 = $data['cate3'];
+			$task->content = $data['content'];
+			$task->create_id= Auth::id();
+
+			$ret = $task->save();
+			if($ret) Session::flash('message', '입력되었습니다.');
+			else  Session::flash('message', '오류가 발생하였습니다. SK1083');
+			return redirect()->to('/ccmail/sample/'.$task->id );
+
+		}
 	}
 
 
@@ -178,7 +173,8 @@ class CcMailSampleController extends Controller {
 	 */
 	public function edit($id)
 	{
-		return view('boon.ccMail.list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s'));
+		$ccMail = CcMailSample::find($id);
+		return view('boon.ccMail.sample_edit', compact('ccMail', 'id'));
 	}
 
 	/**
@@ -189,23 +185,40 @@ class CcMailSampleController extends Controller {
 	 */
 	public function update($id)
 	{
-		/* apibox SMS */
-		$sms['from']	= "02-2135-5251";
-		$sms['to']		= "010-4775-0852";
-		$sms['message']	= "Test 감사합니다. 몇자까지 될까요?";
-		$return = $apibox->sms($sms);
+		if ( !Auth::check() ) { // 샘플은 누구나 볼수 있으니, 수정시 권한 체크
 
-		/*이건 프로퍼티 방식이라고 함. 배열방식은 select없이 바로 update하는데, 보안때문에 모델에 fillable 지정해야.*/
-		$task = CcMail::find($id);
 
-		$task->name = '';
-		$task->project_id = 1;
-		$task->description = 'insert 예제 작성';
+			// 권한 관리해야함. 지금은 로그인체크만 하는 상태..
 
-		$ret = $task->save();
+			return redirect()->to('/auth/login'); //->with('temp_ccmail_data', $_POST); //with는 Session::flash인듯. 다음번 요청에서만 사용.
+		}
 
-		return response()->json(['result' => $ret, 'task' => $task],
-			200, [], JSON_PRETTY_PRINT);
+		$validator = $this->validator(Request::all());
+		if ($validator->fails()) {
+
+			Session::flash('message', '입력값을 확인해주세요.');
+
+			return Redirect::back()
+				->withErrors($validator)
+				->withInput(Request::except('password'));
+
+		} else {
+
+			/*이건 프로퍼티 방식이라고 함. 배열방식은 select없이 바로 update하는데, 보안때문에 모델에 fillable 지정해야.*/
+			$task = CcMailSample::find($id);
+			$data = Request::all();
+
+			$task->cate1 = $data['cate1'];
+			$task->cate2 = $data['cate2'];
+			$task->cate3 = $data['cate3'];
+			$task->content = $data['content'];
+
+			$ret = $task->save();
+			if($ret) Session::flash('message', '수정되었습니다.');
+			else  Session::flash('message', '저장시 오류가 발생하였습니다.');
+			return redirect()->to('/ccmail/sample/'.$task->id);
+		}
+
 	}
 
 	/**

@@ -47,9 +47,9 @@ $(document).ready(function(){
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('ccmail') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
-    <li><a href="{{ URL::to('ccmail/sample?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
+    <li><a href="{{ URL::to('ccmail?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
     @if($ccMail->cate2)
-    <li>{{ $ccMail->cate2 }}</li>
+    <li><a href="{{ URL::to('ccmail?cate2='.$ccMail->cate2) }}">{{ $ccMail->cate2 }}</a></li>
     @endif
     <li class="active">{{ $ccMail->id }}</li>
 
@@ -68,63 +68,47 @@ $(document).ready(function(){
     <h1>Corner Ribbons</h1>
     <h2>(with custom settings and all...)</h2>--}}
 
+
+{{--세션에 메세지 있으면 보여주기--}}
+@if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
+@endif
+
+
 <div class="">{{--내용증명 리스트 간략 박스형태--}}
     <div class="row">
-
-        <div class="panel panel-default divCcMailBox ribon_new">
-
+        <div class="panel panel-default divCcMailBox">
 
             <div class="panel-heading">
-                <b><i class="small">{{ $ccMail->id }}</i>.
 
-                    {{ $ccMail->cate3 }}
+                <b>새로 작성
 
                 </b>
             </div>
+            {!! BootForm::openHorizontal(['sm' => [2, 10],'lg' => [2, 10]])->id('form-내용증명')
+                ->action('/ccmail/sample') !!}
+            {!! BootForm::bind($ccMail) !!}
+
             <div class="panel-body ">
                 <div class="pull-left">
                     {{--Up Down Voting 툴 && 댓글 업 다운. 심자! 이런게 나중 확산장치임!--}}
                 </div>
+                {!! BootForm::text( "카테고리 1" , 'cate1')->placeholder("카테고리 1")  !!}
+                {!! BootForm::text( "카테고리 2" , 'cate2')->placeholder("카테고리 2")  !!}
+                {!! BootForm::text( "제목" , 'cate3')->placeholder("제목 (카테고리 3)")  !!}
 
-                <form method="get" action="{{URL::to('/ccmail/work/create/'.$ccMail->id)}}" class="pull-right">
-                    <input type="submit" class="btn btn-primary"
-                           value="샘플 적용하기">
-                </form>
+
+                {!! BootForm::textarea('내용', 'content')->addClass('ccmail-content') !!}
+                {!! BootForm::submit('내용저장') !!}
+
             </div>
+            {!! BootForm::close() !!}
 
-
-
-
-
-            <div class="panel-body divCcMailBoxBody">
-                <div class="corner-ribbon top-right blue" style="opacity:0.5;">
-                    <?php if( $ccMail->used_cnt ){ ?>
-                    추 천
-                    <span class="badge">+{{ $ccMail->used_cnt }}</span>
-                    <?php } ?>
-                </div>
-
-                {!! nl2br(e($ccMail->content)) !!}
-            </div>
             <div class="panel-footer">
-                <span>{{ $ccMail->create_id }}</span>
 
-
-
-                @if(Auth::check() && (Auth::user()->name == '김상겸' || Auth::user()->name == '정지혜' ) )
-                    ※ 권한관리해야!
-
-
-                    <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/' . $ccMail->id . '/edit') }}">Edit</a>
-                    <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/create') }}">새 양식 추가</a>
-
-                <form method="post" action="/public/todo/{{$ccMail->id}}" class="pull-left">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <input type="hidden" name="_token" value="{{ csrf_token()  }}">
-                    <input type="submit" value="Del" class="btn btn-link btn-xs">
-                </form>
-                @endif
+                &nbsp;
             </div>
+
 
         </div>
 

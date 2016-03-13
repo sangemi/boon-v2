@@ -61,7 +61,6 @@ class CcMailWorkController extends Controller {
 			$ccMail = CcMailSample::findOrFail($id);  /*ccmail_samples table에 접속 */
 		}
 		return view('boon.ccMail.work_write', compact('ccMail', 'id'));
-
 	}
 
 	/**
@@ -115,13 +114,11 @@ class CcMailWorkController extends Controller {
 
 				$ccmail->content = $data['content'];
 
-				$ret = $ccmail->save();
+				$ccmail->save();
 
 				Session::flash('message', '보관함에 저장되었습니다.');
 				return redirect()->to('/ccmail/work/'.$ccmail->id);
 			}
-			return response()->json(['result' => $ret, 'ccmail' => $ccmail],
-				200, [], JSON_PRETTY_PRINT);
 
 		}else{
 			//Session::put('temp_ccmail_data', $_POST); // flash : 다음번 요청에서만 사용하기. <> put
@@ -173,53 +170,51 @@ class CcMailWorkController extends Controller {
 	public function update($id)
 	{
 
-		if (Auth::check()) { // 로그인여부
-			/*print_r(Request::all()); //보이지도 않고 지나가버림*/
-
-			$validator = $this->validator(Request::all());
-
-			if ($validator->fails()) {
-
-				Session::flash('message', '입력값을 확인해주세요.');
-
-				return Redirect::back()
-					->withErrors($validator)
-					->withInput(Request::except('password'));
-
-			} else {
-
-				/*이건 프로퍼티 방식이라고 함. 배열방식은 select없이 바로 update하는데, 보안때문에 모델에 fillable 지정해야.*/
-				$ccmail = CcMailWork::find($id);
-
-				$data = Request::all();
-
-				/*$ccmail->sample_id = $data['sample_id'];*/
-				$ccmail->sender_name = $data['sender_name'];
-				$ccmail->sender_addr = $data['sender_addr'];
-				$ccmail->sender_phone = $data['sender_phone'];
-
-				$ccmail->receiver_name = $data['receiver_name'];
-				$ccmail->receiver_addr = $data['receiver_addr'];
-				$ccmail->receiver_phone = $data['receiver_phone'];
-
-				$ccmail->title = $data['title'];
-				$ccmail->content = $data['content'];
-
-				$ret = $ccmail->save();
-				if($ret) Session::flash('message', '수정되었습니다.');
-				else  Session::flash('message', '저장시 오류가 발생하였습니다.');
-
-				return redirect()->to('/ccmail/work/'.$ccmail->id);
-			}
-			return response()->json(['result' => $ret, 'ccmail' => $ccmail],
-				200, [], JSON_PRETTY_PRINT);
-
-		}else{
+		if ( !Auth::check() ) { // 샘플은 그냥 다 볼수 있으니, 수정시 로그인여부 체크!
 			//Session::put('temp_ccmail_data', $_POST); // flash : 다음번 요청에서만 사용하기. <> put
 			//Session::put('return_url', Request::url());
 
 			return redirect()->to('/auth/login'); //->with('temp_ccmail_data', $_POST); //with는 Session::flash인듯. 다음번 요청에서만 사용.
 		}
+		/*print_r(Request::all()); //보이지도 않고 지나가버림*/
+
+		$validator = $this->validator(Request::all());
+
+		if ($validator->fails()) {
+
+			Session::flash('message', '입력값을 확인해주세요.');
+
+			return Redirect::back()
+				->withErrors($validator)
+				->withInput(Request::except('password'));
+
+		} else {
+
+			/*이건 프로퍼티 방식이라고 함. 배열방식은 select없이 바로 update하는데, 보안때문에 모델에 fillable 지정해야.*/
+			$task = CcMailWork::find($id);
+
+			$data = Request::all();
+
+			/*$task->sample_id = $data['sample_id'];*/
+			$task->sender_name = $data['sender_name'];
+			$task->sender_addr = $data['sender_addr'];
+			$task->sender_phone = $data['sender_phone'];
+
+			$task->receiver_name = $data['receiver_name'];
+			$task->receiver_addr = $data['receiver_addr'];
+			$task->receiver_phone = $data['receiver_phone'];
+
+			$task->title = $data['title'];
+			$task->content = $data['content'];
+
+			$ret = $task->save();
+			if($ret) Session::flash('message', '수정되었습니다.');
+			else  Session::flash('message', '저장시 오류가 발생하였습니다.');
+
+			return redirect()->to('/ccmail/work/'.$task->id);
+		}
+		return response()->json(['result' => $ret, 'ccmail' => $task],
+			200, [], JSON_PRETTY_PRINT);
 
 	}
 
