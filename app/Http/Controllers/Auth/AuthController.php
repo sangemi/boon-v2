@@ -10,6 +10,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -83,6 +84,9 @@ class AuthController extends Controller
             'user_id' => $user_id,
             'boon_point' => 500
         ]);
+
+        Session::flash('message', 'Boon 계정이 생성되었습니다. ');
+        Session::flash('tip', '내용증명을 미리 작성해두고, 나중 보관함에서 꺼내어 보낼 수도 있습니다. ');
 
         /*메일 보내는 방법
         $data['message'] = '김수로님';
