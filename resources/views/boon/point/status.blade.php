@@ -126,7 +126,7 @@
             $(document).ready(function(){
             })
             function boonPayWindow(){
-                window.open("_blank", "boon-pay-window", "toolbar=no, scrollbars=yes, resizable=yes, width=400, height=600");
+                window.open("_blank", "boon-pay-window", "toolbar=no, scrollbars=yes, resizable=yes, width=400, height=620");
                 return true;
             }
         </script>

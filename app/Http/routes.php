@@ -68,6 +68,19 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     ]);
 });
 
+# Admin routes 베껴봤음ㅋ
+/*Route::when('admin/*', 'admin'); # Route filters
+Route::group([ 'prefix' => 'admin', 'namespace' => 'Controllers\Admin' ], function () {
+    Route::controller('tags', 'TagsController', [
+        'getIndex' => 'admin.tags.index',
+        'getView'  => 'admin.tags.view'
+    ]);
+    Route::controller('categories', 'CategoriesController', [
+        'getIndex' => 'admin.categories.index',
+        'getView'  => 'admin.categories.view'
+    ]);
+    Route::controller('users', 'UsersController');
+});*/
 
 //Route::get('/moior/email', 'contactController'); // 7500명 로스쿨러들 모두 연락 가능 이메일... 한명이 구조(어느학교 120명..등 칸을 만듬)를 입력하면 십시일반 메우는 방식
 // 약관 : 나는 이 조합에 가입하며, 내가 알고있는 신규조합원에게 가입권유(이메일, 문자)하는 것을 위임한다.

@@ -130,17 +130,40 @@ class PaymentController extends Controller
 
     }
 
+    public function getTempWindow()
+    {
+        echo "
+        <form method='post' action='http://".$_SERVER['HTTP_HOST']."/boon/payment/payapp-feedback'>
+            <input type=text name='userid' value='moior' />
+            <input type=text name='linkkey' value='67Jxavz/oj9leJsAIF9UUu1DPJnCCRVaOgT+oqg6zaM=' />
+            <input type=text name='linkval' value='67Jxavz/oj9leJsAIF9UUpDbPmLgU/Imt3Oc/7Xz0T0=' />
+            <input type=text name='price' value='1010' />
+            <input type=text name='mul_no' value='6400724' />
+            <input type=text name='pay_state' value='4' />
+
+            <input type=submit >
+        </form>
+        ";
+        $payapp_userid	= 'moior';	// payapp 판매자 아이디
+        $payapp_linkkey	= '67Jxavz/oj9leJsAIF9UUu1DPJnCCRVaOgT+oqg6zaM=';				// payapp 연동key, 판매자 사이트 로그인 후 설정 메뉴에서 확인 가능
+        $payapp_linkval	= '67Jxavz/oj9leJsAIF9UUpDbPmLgU/Imt3Oc/7Xz0T0=';				// payapp 연동value, 판매자 사이트 로그인 후 설정 메뉴에서 확인 가능
+    }
     public function getWindowClose()
     {
+        Session::flash('message', '결제가 완료되었습니다.');
 
         return "
         <script>
+            if(window.opener) window.opener.location.reload();
             window.close();
             self.close();
         </script>
         ";
     }
 
+    /** Payapp에서는 token을 못보냄. 따라서 여긴 예외를 두어야함
+     * app/Http/Middleware/VerifyCsrfToken.php 을 열고 $except 변수에 예외 처리
+     */
     public function postPayappFeedback()
     {
         include $this->path_payapp_lib;
@@ -198,7 +221,16 @@ class PaymentController extends Controller
         $check_userid	= isset($_POST['userid']) && $_POST['userid'] == $payapp_userid;
         $check_key	= isset($_POST['linkkey']) && $_POST['linkkey'] == $payapp_linkkey;
         $check_val	= isset($_POST['linkval']) && $_POST['linkval'] == $payapp_linkval;
+
         $check_price	= isset($_POST['price']) ; //&& $_POST['price'] == $order_price;
+        /*echo "--". $check_userid  ."--";
+        echo "--". $check_key  ."--";
+        echo "--". $check_val  ."--";
+        echo "--". $check_price  ."--";
+        if( $check_userid && $check_key && $check_val && $check_price ) {
+            echo "========";
+        }
+        dd($_POST);*/
 
         $aa = BoonCash::create(['user_id'=>1, 'title'=> 'Payapp에서 Post데이터 전송옴!' ]);
 
@@ -220,7 +252,7 @@ class PaymentController extends Controller
 
                     /*스텝 Step 1*/
                     $bc = BoonCash::where('pg_payid', $_POST['mul_no'] )->get()->first();
-                    $bc->pg_status = $_POST['state'];
+                    $bc->pg_status = $_POST['pay_state'];
                     $bc->confirmed = 1;
                     $bc->status_inner = '자동 확인완료';
                     $bc->status_show = '결제가 확인되었습니다';

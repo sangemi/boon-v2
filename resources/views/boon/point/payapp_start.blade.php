@@ -60,7 +60,7 @@
 
 @section('bottom')
     <div class="" style="position:absolute;bottom:0px;width:100%;background-color:#e2e2e2;text-align:center;font-size:1em;margin-top:10px;padding:20px;">
-        (주)모이어<small> / 기술문의 : <a href="tel:070-7525-2370">070-7525-2370</a></small>
+        (주)모이어<small> / 장해문의 : <a href="tel:070-7525-2370">070-7525-2370</a></small>
         <br><small>서울 강남구 테헤란로 207, A&Company 빌딩 7층</small>
 
     </div>
