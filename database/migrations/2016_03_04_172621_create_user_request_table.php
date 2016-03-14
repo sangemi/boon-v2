@@ -22,6 +22,7 @@ class CreateUserRequestTable extends Migration
             $table->string('model_name');
             $table->integer('model_id')->unsigned();
 
+            $table->string('title'); // 리스트에서 보일 내용. 나중 자동생성됨..
             $table->text('ask_origin'); // 요청사항
             $table->text('ask_modify'); // 요청사항을 전화 등을 통해 1차 요원이 정리
 

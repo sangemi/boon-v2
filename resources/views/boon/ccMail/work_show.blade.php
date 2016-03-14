@@ -52,23 +52,6 @@ $(document).ready(function(){
         //prevent the form from actually submitting in browser
         //return false;
     } );
-
-
-    $("#btn-ccmail-save").click(function(){
-        $.post(
-                $( this ).prop( 'action' ),
-                {
-                    "_token": $( this ).find( 'input[name=_token]' ).val(),
-                    "setting_name": $( '#setting_name' ).val(),
-                    "setting_value": $( '#setting_value' ).val()
-                },
-                function( data ) {
-                    //do something with data/response returned by server
-                },
-                'json'
-        );
-    });
-
 })
 
 </script>
@@ -145,8 +128,9 @@ $(document).ready(function(){
                 .btn_post_type:hover {}
                 .btn_post_pay {clear:both;padding:20px 0px 20px 0px;text-align:center;cursor:pointer;}
                 .btn_post_pay:hover {}
-                .txt_money {color:tomato;font:bold 2.0em}
-                .txt_post_pay_amt {margin:20px 0px 30px 0px;font-size:2.0em;color:#f05634;letter-spacing:-2px;font-weight:800;}
+                .txt_money {color:tomato;font-size:2.0em;color:#f05634;}
+                .txt_post_pay_amt {margin:20px 0px 10px 0px;letter-spacing:-2px;font-weight:800;}
+                .txt_my_point {margin-bottom:10px;}
                 .btn_post_title {font-size:1.4em;color:#504b49;letter-spacing:-2px;font-weight:600;}
                 #btn접수하기 {text-align:center; padding:11px 0;border:0px;font-size:1.4em;background-color:#ed1b23;color:#fff;letter-spacing:-2px;font-weight:600;}
                 #btn포인트구매 {display:none;text-align:center; padding:11px 0;border:0px;font-size:1.3em;background-color:tomato;color:#fff;letter-spacing:-2px;font-weight:600;}
@@ -156,8 +140,10 @@ $(document).ready(function(){
                 .btn_post_blue {text-align:center;width:150px; background-color:#14abc0;color:#fff;font-size:1.2em;padding:4px;letter-spacing:-1px;}
 
 
+                #btn상품비교표:hover {border-bottom:2px solid #449fdb}
+
                 /* Post Title list */
-                #post_preview_wrap {clear:both;max-width:500px;margin:40px auto;padding:10px;}
+                #post_preview_wrap {clear:both;max-width:500px;margin:10px auto 50px auto;padding:10px;}
                 #post_wrap		{margin:0px auto;width:100%;padding-top:40px;}
                 #post_preview	{overflow:hidden;border:1px solid #e1e1e1;border-radius:5px;background-color:#efefef;padding:10px;margin:0px auto;background-color:#ffffff;}
                 #post_preview .post_title {max-width:600px;font-weight:bold;font-size:1.2em;}
@@ -224,15 +210,15 @@ $(document).ready(function(){
         if( flag_clicking_btn == 1 ){
             flag_clicked_btn = 1;
             $("#preview_top, #preview_cen, #preview_btm, #preview_btm2").hide();
-            $("input[name=consult_cate]").val("[내용증명]발송대행");
-            $("input[name=goodname]").val("내용증명 발송대행");
+            $("input[name=goodname]").val("[내용증명]발송대행");
+
             change_btn_post_type($("#btn_post_type1"));
         }else if( flag_clicking_btn == 2 ){
             flag_clicked_btn = 2;
             $("#preview_btm").hide();
             $("#work_icon1").show();
-            $("input[name=consult_cate]").val("[내용증명]법인명의");
-            $("input[name=goodname]").val("내용증명 법인발송");
+            $("input[name=goodname]").val("[내용증명]법인명의");
+
             change_btn_post_type($("#btn_post_type1"));
             change_btn_post_type($("#btn_post_type2"));
         }else if( flag_clicking_btn == 3 ){
@@ -241,8 +227,8 @@ $(document).ready(function(){
             change_btn_post_type($("#btn_post_type1"));
             change_btn_post_type($("#btn_post_type2"));
             change_btn_post_type($("#btn_post_type3"));
-            $("input[name=consult_cate]").val("[내용증명]내용검토");
-            $("input[name=goodname]").val("내용증명 변호사검토");
+            $("input[name=goodname]").val("[내용증명]변호사작성");
+
             $("#type3_txt1").show();
         }else if( flag_clicking_btn == 4 ){
             flag_clicked_btn = 4;
@@ -251,8 +237,8 @@ $(document).ready(function(){
             change_btn_post_type($("#btn_post_type2"));
             change_btn_post_type($("#btn_post_type3"));
             change_btn_post_type($("#btn_post_type4"));
-            $("input[name=consult_cate]").val("[내용증명]상대방통화");
-            $("input[name=goodname]").val("담당변호사 내용증명");
+            $("input[name=goodname]").val("[내용증명]상대방전화");
+
             $("#type3_txt1, #type4_txt1").show();
         }
         //change_btn_post_type($(this));
@@ -260,7 +246,9 @@ $(document).ready(function(){
 
         $("#btn접수하기").show()
         $("#btn접수wrap, #btn포인트사용, #btn포인트구매").hide();
+
     });
+
     $("#btn_post_type2").click(); //기본
     $("#div_post_type_wrap").scrollLeft(100);
 
@@ -292,7 +280,7 @@ function calculate_charge_amt(obj){
         $(".txt_free").html(" 무료! (실비)");
     } //실비안내!
 
-    $(".txt_post_pay_amt").html("<span class='txt_money'>"+number_format(amt)+"</span>");
+    $(".txt_post_pay_amt").html("<span class='txt_money'>"+number_format(amt)+"</span><small>원</small>");
 }
 
 </script>
@@ -318,7 +306,7 @@ function calculate_charge_amt(obj){
                         <div id="btn_post_type2" class="btn_post_type">
                             {{--<div class="btn_post_title"><img src="/img/v1/btn_ccmail_02.png"></div>--}}
                             <div class="btn_post_title">법무법인 명의 발송</div>
-						    <div class="small2">+<?=number_format($post_amt[1])?>원 추가</div>
+						    <div class="small2">+<?=number_format($post_amt[1])?>원 <small>추가</small></div>
 						    <div class="small">법무법인 고퀄리티 서식에 <br />공신력을 담아 안전하게 발송대행</div>
 						    <div class="btn_post_blue">선택후 미리보기</div>
                         </div>
@@ -328,7 +316,7 @@ function calculate_charge_amt(obj){
                         <div id="btn_post_type3" class="btn_post_type">
                             {{--<div class="btn_post_title"><img src="/img/v1/btn_ccmail_03.png"></div>--}}
                             <div class="btn_post_title">변호사 직접 작성</div>
-						    <div class="small2">+<?=number_format($post_amt[2])?>원 추가</div>
+						    <div class="small2">+<?=number_format($post_amt[2])?>원 <small>추가</small></div>
 						    <div class="small">
                                 내용을 <b>법률요건</b>에 맞추고 <b>불리한 내용</b>은 빼고 다듬어<br />
                                 실제 소송 완벽대비 & 담당변호사의 위엄있는 문장</div>
@@ -340,7 +328,7 @@ function calculate_charge_amt(obj){
                         <div id="btn_post_type4" class="btn_post_type">
                             {{--<div class="btn_post_title"><img src="/img/v1/btn_ccmail_04.png"></div>--}}
                             <div class="btn_post_title">담당변호사 전화 설득</div>
-						    <div class="small2">+<?=number_format($post_amt[3])?>원 추가</div>
+						    <div class="small2">+<?=number_format($post_amt[3])?>원 <small>추가</small></div>
 						    <div class="small">변호사가 사건을 이해한 후, 상대방과 무게있는 설득 시도.
 						    <br />곧 시작될 <b>소송의 피로함을 설명</b>하여 사건을 조기해결</div>
 						    <div class="btn_post_blue">선택후 미리보기</div>
@@ -351,11 +339,14 @@ function calculate_charge_amt(obj){
                     <div class="btn_post_pay" >
                         <div class="text-center">최종 <small>실비, VAT포함</small></div>
                         <div class="txt_post_pay_amt"><span class="">원</span></div>
+                        <div class="txt_my_point"><small>보유 : {{number_format($point['point']) }}point</small></div>
                         <div id="btn접수하기" >접수하기</div>
                         <div id="btn접수wrap" style="display:none;">
 
                             <div id="btn포인트구매" class="">포인트 충전</div>
-                            <div id="btn포인트사용" class="" data-toggle="modal" data-target="#modal신청확인">포인트 사용</div>
+                            <div id="btn포인트사용" class="" data-toggle="modal" data-target="#modal신청확인">
+                                포인트 사용
+                            </div>
 
                         </div>
 
@@ -377,7 +368,7 @@ function calculate_charge_amt(obj){
                         var boon_now = '<?=$point['point']?>';
 
                         /*var boon_now = '< ? =Auth::user()->boonStatus->getBoon()? >';*/
-                        var boon_need = $("input[name=price_sum]").val()
+                        var boon_need = $("input[name=price_sum]").val();
 
                         if( boon_now * 1 > boon_need * 1 ){ //강제형변환
                             $("#btn포인트사용").show();
@@ -391,35 +382,30 @@ function calculate_charge_amt(obj){
                         location.href='/boon/status';
                     });
 
+                    $("#form최종신청").submit(function(){
+                        $("input[name=worked_paper]").val( $("#post_preview_wrap").html() );
 
-                    /*임의금액 결제할 때*/
-                    $("#btnChangeCharge").click(function(){
-                        $("#price_sum").val( $(this).prev().val() );
-                        $('#total_charge_content').text( number_format($(this).prev().val()) );
-                        $(this).parent().hide();
+                        return true;
                     });
+
+
                 });
             </script>
             <?php
-            $sms_memo = "모든 진행과정은 웹에서 확인가능합니다. 내용 검토 후 이상있는 경우 유선 연락드리겠습니다. 감사합니다.";
-            $txt_type = "내용증명";
+            /*$sms_memo = "모든 진행과정은 웹에서 확인가능합니다. 내용 검토 후 이상있는 경우 유선 연락드리겠습니다. 감사합니다.";
+            $txt_type = "내용증명";*/
             ?>
-            <form>
-                <input type=hidden name="price_sum" id="price_sum" value="" />
-                <input type=hidden name="good_name" id=good_name value="<?=$txt_type?>" />
-                <input type=hidden name="sms_memo" id=sms_memo value="<?=$sms_memo?>" />
-                <input type=hidden name="sender_phone" id=sender_phone value="<?=$ccMail['sender_phone']?>" />
+            {{--<form>
+                <input type=hidden name="good_name" id=good_name value="< ?=$txt_type? >" />
+                <input type=hidden name="sms_memo" id=sms_memo value="< ?=$sms_memo? >" />
+                <input type=hidden name="sender_phone" id=sender_phone value="< ?=$ccMail['sender_phone']? >" />
 
-                <input type=hidden name="work_id" id="work_id" value="<?=$ccMail->id?>" />
-            </form>
+                <input type=hidden name="work_id" id="work_id" value="< ?=$ccMail->id? >" />
+            </form>--}}
 
-
-
-
-
-
-            <div style="cursor:pointer;clear:both;margin-top:20px;" class="text-center" onclick="$('#div내용증명비교표').toggle();">
-                &nbsp; <br/>상품 비교표 ▼
+            &nbsp; <br/>
+            <div style="cursor:pointer;clear:both;margin-top:20px;" id="btn상품비교표" class="text-center" onclick="$('#div내용증명비교표').toggle();">
+                상품 비교표 ▼
             </div>
             <div id="div내용증명비교표" style="display:none;">
                 <table class="table text-center">
@@ -446,7 +432,7 @@ function calculate_charge_amt(obj){
                         <td>O</td>
                     </tr>
                     <tr>
-                        <td>요금(약5천원)</td>
+                        <td>우체국 요금(약5천원)</td>
                         <td>O</td>
                         <td>O</td>
                         <td>O</td>
@@ -528,16 +514,16 @@ function calculate_charge_amt(obj){
 
             <div class="panel-body">
                 <!--  미리보기 -->
+                <div class='text-center' style="color:royalblue;margin-top:30px;">※ 미리보기 화면입니다. 실제 더 정돈된 형태로 발송합니다 ※</div>
                 <div id="post_preview_wrap" class="" >
 
 
+                    <?php
+
+                    $consult = $ccMail;
+
+                    ?>
                     <div id="post_preview">
-                        <?php
-
-                        $consult = $ccMail;
-
-                        ?>
-                        <div class='text-center' style="color:royalblue;">※ 미리보기 화면입니다. 실제 더 정돈된 형태로 발송합니다 ※</div>
                         <div class='post_title c' id="preview_top"></div>
                         <div class='post_title c' id="preview_title">
                             내용증명
@@ -596,21 +582,14 @@ function calculate_charge_amt(obj){
 
 
 
-
-
-
-
-
             <div class="panel-footer">
                 {{--<span>{{ $ccMail->create_id }}</span>--}}
 
-                <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#confirmDelete">삭제</button>
+                <button type="button" class="btn btn-sm btn-link" data-toggle="modal" data-target="#confirmDelete">삭제</button>
 
                 <a class="pull-right btn btn-sm btn-default" href="{{ URL::to('ccmail/work/' . $ccMail->id . '/edit') }}">수정</a>
 
             </div>
-
-
 
         </div>
 
@@ -649,9 +628,12 @@ function calculate_charge_amt(obj){
 
                 {{--{!! BootForm::open(['method' => 'POST', 'action' => 'SmsController@sendSms']) !!}--}}
                 {!! BootForm::open(['method' => 'POST'])->action('/request')->id('form최종신청') !!}
-                {!! BootForm::hidden('to')->value( '01047750852' ) !!} {{--회사 담당자 전번--}}
-                {!! BootForm::hidden('from')->value( $ccMail->sender_phone ) !!} {{--의뢰인 전번--}}
-                {!! BootForm::hidden('text')->value('입금하였습니다.') !!}
+
+                {!! BootForm::hidden('goodname')->value( '' ) !!}
+                {!! BootForm::hidden('price_sum')->value( '' ) !!}
+                {!! BootForm::hidden('worked_paper')->value( '' ) !!}
+                {!! BootForm::text('요청', 'ask_origin')->placeholder( '특별히 요청사항이 있으면 적어주세요.' )->hideLabel() !!}
+                {!! BootForm::hidden('work_id')->value( $ccMail->id ) !!}
 
                 <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
                 <button type="button" class="btn btn-primary" onclick="$('#form최종신청').submit()">신청</button>

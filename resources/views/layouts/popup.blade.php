@@ -27,6 +27,7 @@
 
     <footer class="row">
         {{--@include('includes.footer')--}}
+        @yield('bottom')
     </footer>
 
 </div>

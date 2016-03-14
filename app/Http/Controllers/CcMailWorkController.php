@@ -141,6 +141,7 @@ class CcMailWorkController extends Controller {
 	{
 		$ccMail = CcMailWork::find($id);
 		if( empty($ccMail) ) abort(404, '자료가 없습니다.');
+		else if($ccMail->user_id != Auth::id()) abort(404, '자료를 볼 수 없습니다.'); // 자기것만
 
 		$point = BoonStatusController::getPoint();
 

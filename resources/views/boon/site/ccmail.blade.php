@@ -141,9 +141,11 @@
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline">샘플보기</a></p>
 
+									@if(Auth::user()->name == '김상겸')
 									<div class="alert alert-link"><small>
 										<a href="http://www.moior.com/v/postABC/147696" target="_blank" style="color:#eee;">내용증명이란?</a></small>
 									</div>
+										@endif
 
 								</div>
 
@@ -267,6 +269,12 @@
 					</div>
 				</div>
 			</div>
+
+		  	<span class="scroll-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.0s">
+				<a href="#">
+					▼
+				</a>
+			</span>
 		</div>
 
 
@@ -310,7 +318,7 @@
 									<td>O</td>
 								</tr>
 								<tr>
-									<td>요금(약5천원)</td>
+									<td>우체국 요금(약5천원)</td>
 									<td>O</td>
 									<td>O</td>
 									<td>O</td>

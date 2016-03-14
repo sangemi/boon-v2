@@ -18,12 +18,10 @@
     {{--세부페이지 네비바--}}
     <nav class="navbar navbar-default">
         <div class="navbar-header">
-            <a class="navbar-brand" href="{{ URL::to('ccmail/work') }}">보관함</a>
+            <a class="navbar-brand" href="{{ URL::to('request') }}">신청내역</a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="{{ URL::to('ccmail/work/create') }}">새로 작성</a></li>
-            </ul>
+
             <ul class="nav navbar-nav" style="float: right">
                 <li><a href="#" class="navbar-nav pull-right"></a></li>
             </ul>
@@ -52,68 +50,46 @@
     <div class="">
 
         {{--n개씩 정렬하는 방법--}}
-        @if (empty($userRequest))
+        @if (empty($tasks))
 
             <div class="container">
-                <div class="jumbotron">
-                    <h1>분야 선택<span class="glyphicon glyphicon-hand-up"></span>! </h1>
-                    <p>또는 특정 단어로 <span class="glyphicon glyphicon-search"></span>검색해주세요!  <small>예:월세</small></p>
+                <div style="text-align:center;padding:140px;">
+                    <p>내역이 없습니다. <small></small></p>
                 </div>
-                {{--<p>This is some text.</p>--}}
             </div>
 
         @else
-            @foreach(array_chunk( $userRequest->all(), 2) as $row)
-                <div class="row">
-                    @foreach ($row as $ccMail)
-                        <div class="col-sm-6">
-                            <div class="panel panel-default divCcMailBox ">{{--ribon_new--}}
-                                {{--
 
-                                        <div class="panel-body divCcMailBoxBody">
-                                            <div class="corner-ribbon top-right blue" style="opacity:0.5;">추 천
-                                                <span class="badge">{{ $ccMail->used_cnt }}</span>
-                                            </div>
-                                            {!! nl2br(e($ccMail->content)) !!}
-                                        </div>
-                                --}}
+            <ul class="list-group">
+            @foreach( $tasks as $userReq)
 
-                                <div class="panel-body clearfix " style="">
-                                    <b><i class="small">{{ $ccMail->id }}</i>.
+                    <li class="list-group-item">
+                            <i class="small">{{ $userReq->id }}</i>.
+                            <b><a href="{{URL::to('/request/'.$userReq->id)}}">
+                                {{ $userReq->title or ''}}
 
-                                        {{--{{ $ccMail->cate3 }}--}}
-                                        {{ $userRequest->ask_origin or ''}}
-                                        {{ $userRequest->create_at or ''}}
+                            {{ $userReq->ask_origin or ''}}
+                                </a></b>
+                            <small><i>{{ substr($userReq->created_at, 5, 11)}}</i></small>
+                            {{--{!!  $userReq->worked_paper or '' !!}--}}
 
-                                    </b>
+                    </li>
 
-                                    <form method="get" action="{{URL::to('/request/'.$userRequest->id)}}" class="" style="position:absolute;bottom:10px;right:10px;">
-                                        <button type="submit" class="btn btn-default">
-                                            <span class="glyphicon glyphicon-menu-right"></span>
-                                        </button>
-                                    </form>
+            @endforeach
+            </ul>
 
+            <!--페이징-->
 
-
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                @endforeach
-
-                        <!--페이징-->
-
-                <div class="text-center">
-                    {!! $userRequest->appends( Request::input() )->render() !!}
-                    {{--{!! $userRequest->appends( compact('cate1', 'cate2'))->links('ddddddd') !!} links는 안씀이제? --}}
-                    {{--
-                    < ?php $cate1 = Input::get('cate1');
-                    $cate2 = Input::get('cate2');
-                    $q = Input::get('q'); ? >
-                    {!! $userRequest->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
-                </div>
-                @endif
+            <div class="text-center clearfix">
+                {!! $tasks->appends( Request::input() )->render() !!}
+                {{--{!! $tasks->appends( compact('cate1', 'cate2'))->links('ddddddd') !!} links는 안씀이제? --}}
+                {{--
+                < ?php $cate1 = Input::get('cate1');
+                $cate2 = Input::get('cate2');
+                $q = Input::get('q'); ? >
+                {!! $tasks->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
+            </div>
+        @endif
     </div>
 
 
@@ -121,7 +97,7 @@
 
 
 
-    {{--{{SKHelper::p($userRequest)}}--}}
+    {{--{{SKHelper::p($tasks)}}--}}
 
 
 

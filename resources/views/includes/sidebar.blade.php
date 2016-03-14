@@ -71,7 +71,7 @@
             </div>
             <li><a href="{{ URL::to('/ccmail/sample') }}"><span class="glyphicon glyphicon-th"></span> 샘플</a></li>
             <li><a href="{{ URL::to('/ccmail/work') }}"><span class="glyphicon glyphicon-save"></span> 보관함</a></li>
-            <li><a href="{{ URL::to('/request/ccmail') }}">신청내역</a></li>
+            <li><a href="{{ URL::to('/request') }}">신청내역</a></li>
 
         @elseif(Request::is('sosong/*'))
             <li><a href="{{ URL::to('/sosong/work') }}">나의 이력</a></li>
@@ -86,6 +86,7 @@
                 </div>
             </div>
             <li><a href="/ccmail/sample">{{Lang::get('boon.내용증명')}}</a></li>
+            <li><a href="{{ URL::to('/request') }}">신청내역</a></li>
             {{--<li><a href="#">{{Lang::get('boon.지급명령')}}</a></li>
             <li><a href="#">승소체크</a></li>--}}
 

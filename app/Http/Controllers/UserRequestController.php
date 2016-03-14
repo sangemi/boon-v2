@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\CcMailWork;
 use App\UserRequest;
 use App\Http\Requests;
 
@@ -32,11 +33,9 @@ class UserRequestController extends Controller {
 	 */
 	public function index()
 	{
-		dd("index");
-		$userRequest = UserRequest::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
-		//$ccMails = DB::table('ccmails_order')->orderBy('id', 'desc')->paginate(9);
+		$tasks = UserRequest::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
 
-		return view('boon.userRequest.list', compact('userRequest'));
+		return view('boon.userRequest.list', compact('tasks'));
 	}
 
 	/**
@@ -72,43 +71,54 @@ class UserRequestController extends Controller {
 		// 서식 생성기. SK
 		return $content;
 	}
-	public function store($fromWhere)
+	public function store($fromWhere = null)
 	{
-		//if (Auth::check()) { // 로그인여부는 route에서..
-		if ( 1 ) {
-			// 은행이체를 누른 경우
-			$fromWhere = ($fromWhere)?$fromWhere:'';
+		// 은행이체를 누른 경우
+		//$fromWhere = ($fromWhere)?$fromWhere:'';
 
-			$userReq = new UserRequest();
-			$data = Request::all();
+		$task = new UserRequest();
+		$data = Request::all();
 
-			$userReq->user_id = Auth::user()->id;
-			$userReq->model_name = $data['model_name'];
-			$userReq->model_id = $data['model_id'];
-			$userReq->ask_origin = $data['ask_origin'];
-
-			$worked_paper = \stdClass();
-			$worked_paper->sender_name = $data['sender_name'];
-			$worked_paper->sender_addr = $data['sender_addr'];
-			$worked_paper->sender_phone = $data['sender_phone'];
-
-			$worked_paper->receiver_name = $data['receiver_name'];
-			$worked_paper->receiver_addr = $data['receiver_addr'];
-			$worked_paper->receiver_phone = $data['receiver_phone'];
-
-			$worked_paper->content = $data['content'];
-
-			$userReq->worked_paper = $this->makePaperHTML('ccmail', $worked_paper);
-
-			$userReq->status_inner = $data['status_inner'];
-			$userReq->status_show = $data['status_show'];
-
-
-			$ret = $userReq->save();
-
-			Session::flash('message', '보관함에 저장되었습니다.');
-			return redirect()->to('/ccmail/work/'.$userReq->id);
+		$task->user_id = Auth::user()->id;
+		if( isset($data['work_id']) ){
+			$task->model_name = 'CcMailWork';
+			$task->model_id = $data['work_id'];
+			$title_text = CcMailWork::find($data['work_id'])->receiver_name;
+		}else{
+			$task->model_name = '';
+			$task->model_id = '';
 		}
+
+		$task->title = $data['goodname']." / 수신 ". $title_text . " ";
+		$task->ask_origin = " 결제액 : ". number_format($data['price_sum']) . "원  / 요청사항 : ". $data['ask_origin'];
+
+		/*$worked_paper = \stdClass();
+		$worked_paper->sender_name = $data['sender_name'];
+		$worked_paper->sender_addr = $data['sender_addr'];
+		$worked_paper->sender_phone = $data['sender_phone'];
+
+		$worked_paper->receiver_name = $data['receiver_name'];
+		$worked_paper->receiver_addr = $data['receiver_addr'];
+		$worked_paper->receiver_phone = $data['receiver_phone'];
+
+		$worked_paper->content = $data['content'];
+
+		$task->worked_paper = $this->makePaperHTML('ccmail', $worked_paper);*/
+		$task->worked_paper = $data['worked_paper'];
+
+		$task->status_inner = '신청';
+		$task->status_show = '접수되었습니다.';
+
+
+		$ret = $task->save();
+		if($ret){
+			BoonStatusController::usePoint( $data['price_sum'] );
+
+			Session::flash('message', '정상 신청되었습니다. 처리시 문자안내 드리오니 잠시 기다려 주세요. 감사합니다.');
+		}
+		else  Session::flash('message', '저장시 오류가 발생하였습니다. 에러No.5303');
+
+		return redirect()->to('/request/'.$task->id);
 	}
 
 
@@ -120,16 +130,16 @@ class UserRequestController extends Controller {
 	 */
 	public function show($id, $direction = null)
 	{
-
-		$userReq = UserRequest::findOrFail($id);
-		if( empty($userReq) ) abort(404, '자료가 없습니다.');
+		$task = UserRequest::findOrFail($id); /** 이렇게 하니까. view에서 $task->akak 없는 변수라도 에러가 안나네. ->paginate() 등 으로 처리하면 에러날때도.. 이부분 공부해야 */
+		if( empty($task) ) abort(404, '자료가 없습니다.');
+		else if($task->user_id != Auth::id()) abort(404, '자료를 볼 수 없습니다.'); // 자기것만
 
 		/*if( $userReq->status_inner == '접수' || $userReq->status_inner == '' ){
 			return view('boon.ccMail.work_show', compact('ccMail', 'id'));
 		}else{
 
 		}*/
-		return view('boon.ccMail.work_show', compact('ccMail', 'id'));
+		return view('boon.userRequest.show', compact('task', 'id'));
 	}
 
 	/**

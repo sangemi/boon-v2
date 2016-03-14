@@ -51,57 +51,16 @@ class BoonStatusController extends Controller {
 	{
 		return Validator::make($data, [
 			'sender_name' => 'required|max:255',
-			'sender_addr' => 'max:255',
-			'sender_phone' => 'required|max:255',
-			'receiver_name' => 'required|max:255',
-			'receiver_addr' => 'required|max:255',
-			'receiver_phone' => 'max:255',
-			'title' => 'max:255',
+
+					'title' => 'max:255',
 			'content' => 'required',
 		]); //|email|max:255|unique:users 'password' => 'required|confirmed|min:6',
 		// receiver. 에서 numeric|alpha 숫자+하이픈만 어떻게 하는지 모르겠네.....
 	}
-	private function makePaperHTML($type, $content){
-		// 서식 생성기. SK
-		return $content;
-	}
+
 	public function store($fromWhere)
 	{
-		//if (Auth::check()) { // 로그인여부는 route에서..
-		if ( 1 ) {
-			// 은행이체를 누른 경우
-			$fromWhere = ($fromWhere)?$fromWhere:'';
 
-			$userReq = new BoonStatus();
-			$data = Request::all();
-
-			$userReq->user_id = Auth::user()->id;
-			$userReq->model_name = $data['model_name'];
-			$userReq->model_id = $data['model_id'];
-			$userReq->ask_origin = $data['ask_origin'];
-
-			$worked_paper = \stdClass();
-			$worked_paper->sender_name = $data['sender_name'];
-			$worked_paper->sender_addr = $data['sender_addr'];
-			$worked_paper->sender_phone = $data['sender_phone'];
-
-			$worked_paper->receiver_name = $data['receiver_name'];
-			$worked_paper->receiver_addr = $data['receiver_addr'];
-			$worked_paper->receiver_phone = $data['receiver_phone'];
-
-			$worked_paper->content = $data['content'];
-
-			$userReq->worked_paper = $this->makePaperHTML('ccmail', $worked_paper);
-
-			$userReq->status_inner = $data['status_inner'];
-			$userReq->status_show = $data['status_show'];
-
-
-			$ret = $userReq->save();
-
-			Session::flash('message', '보관함에 저장되었습니다.');
-			return redirect()->to('/ccmail/work/'.$userReq->id);
-		}
 	}
 
 
@@ -109,16 +68,17 @@ class BoonStatusController extends Controller {
 	 */
 	public function show($id, $direction = null)
 	{
-
-		$value = BoonStatus::findOrFail($id);
+		// 여기는 안쓰는듯.
+		$task = BoonStatus::findOrFail($id);
 		if( empty($value) ) abort(404, '자료가 없습니다.');
+		else if($task->user_id != Auth::id()) abort(404, '자료를 볼 수 없습니다.'); // 자기것만
 
 		/*if( $userReq->status_inner == '접수' || $userReq->status_inner == '' ){
 			return view('boon.ccMail.work_show', compact('ccMail', 'id'));
 		}else{
 
 		}*/
-		return view('boon.point.show', compact('value', 'id'));
+		return view('boon.point.show', compact('$task', 'id'));
 	}
 
 	/**
@@ -146,13 +106,58 @@ class BoonStatusController extends Controller {
 	 */
 	static public function getPoint($user_id = null)
 	{
-		if( empty($user_id) ) $user_id = Auth::id();
+		if (empty($user_id)) $user_id = Auth::id();
 		$boonStatus = User::find($user_id)->boonStatus;
+		if ($boonStatus->boon_point == $boonStatus->boon_cash + $boonStatus->boon_free){
+			//맞음.
+		}else{
+			//뭔가이상..... 자동update 할까..
+		}
 
 		return [
-			'point' =>$boonStatus->boon_point,
+			'point' =>$boonStatus->boon_cash + $boonStatus->boon_free,
 			'cash' =>$boonStatus->boon_cash,
 			'free'=>$boonStatus->boon_free
+		];
+	}
+
+	/**
+	 */
+	static public function usePoint($use_amt, $use_what = null, $user_id = null)
+	{
+		if (empty($user_id)) $user_id = Auth::id(); //자신하고 관리자만 감할 수 있어야.. 하는데 권한관리 후에 수정하자.
+
+		//$statusUpdate = BoonStatus::where('user_id', Auth::id()); // Builder Obj
+		$statusNow = BoonStatus::where('user_id', Auth::id())->get()->first(); // Collection Obj
+
+		$point_sum = $statusNow->boon_cash + $statusNow->boon_free;
+
+		/*if use_what = null 이면, 캐쉬를 우선 사용 -> 이후 포인트 사용*/
+		if( !isset($use_what) ){
+			if ($use_amt >= $statusNow->boon_cash ) {
+				/*use_amt =====================
+				  cash    ==========
+				  free              ==================*/
+				$statusNow->boon_cash = 0; //다씀
+				$statusNow->boon_free = $point_sum - $use_amt;
+				$statusNow->boon_point = $point_sum - $use_amt;
+
+			}else if($use_amt < $statusNow->boon_cash ) {
+				/*use_amt ======
+				  cash    ==========
+				  free              ==================*/
+				$statusNow->boon_cash = $statusNow->boon_cash - $use_amt;
+				//$statusUpdate->boon_free = $statusUpdate->boon_free; //안변함
+				$statusNow->boon_point = $point_sum - $use_amt;
+			}
+		}
+
+		$statusNow->save();
+
+		return [
+			'point' => $statusNow->boon_cash + $statusNow->boon_free,
+			'cash'  => $statusNow->boon_cash,
+			'free'  => $statusNow->boon_free
 		];
 	}
 
