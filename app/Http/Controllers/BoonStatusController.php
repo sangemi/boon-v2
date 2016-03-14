@@ -142,4 +142,18 @@ class BoonStatusController extends Controller {
 
 	}
 
+	/**
+	 */
+	static public function getPoint($user_id = null)
+	{
+		if( empty($user_id) ) $user_id = Auth::id();
+		$boonStatus = User::find($user_id)->boonStatus;
+
+		return [
+			'point' =>$boonStatus->boon_point,
+			'cash' =>$boonStatus->boon_cash,
+			'free'=>$boonStatus->boon_free
+		];
+	}
+
 }

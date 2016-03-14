@@ -64,10 +64,10 @@
             <table class="table">
                 <tr>
                     <td colspan="2" style="color:darkgoldenrod;font-size:1.6em;font-weight:bold;">
-                        총 {{number_format( $list->boon_cash + $list->boon_point)}} point</td>
+                        총 {{number_format( $list->boon_cash + $list->boon_free)}} point</td>
                 <tr>
                     <td>
-                        <b>캐쉬</b> : {{ number_format($list->boon_cash)." point" }}
+                        <b>유료결제 포인트</b> : {{ number_format($list->boon_cash)." point" }}
                         <br>
                         <div><i>
 
@@ -83,7 +83,7 @@
                         </i></div>
                     </td>
                     <td>
-                        <b>포인트</b> : {{ number_format($list->boon_point)." point"}}
+                        <b>무료 포인트</b> : {{ number_format($list->boon_free)." point"}}
                     </td>
                 </tr>
             </table>

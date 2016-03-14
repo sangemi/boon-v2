@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\BoonStatus;
 use App\CcMailWork;
 use App\CcMailSample;
 use App\Http\Requests;
@@ -141,12 +142,14 @@ class CcMailWorkController extends Controller {
 		$ccMail = CcMailWork::find($id);
 		if( empty($ccMail) ) abort(404, '자료가 없습니다.');
 
+		$point = BoonStatusController::getPoint();
+
 		/*if( $ccMail->status_inner == '접수' || $ccMail->status_inner == '' ){
 			return view('boon.ccMail.work_show', compact('ccMail', 'id'));
 		}else{
 
 		}*/
-		return view('boon.ccMail.work_show', compact('ccMail', 'id'));
+		return view('boon.ccMail.work_show', compact('ccMail', 'id', 'point'));
 	}
 
 	/**

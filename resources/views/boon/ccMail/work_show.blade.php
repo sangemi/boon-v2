@@ -133,7 +133,7 @@ $(document).ready(function(){
             </div>
 
             <?php
-            $post_amt = array(4000, 12000, 64900, 97900);
+            $post_amt = array(4400, 13900, 75400, 106800);
             //                 4400 33000 97900 195800
             $post_silbi = 4500;
             ?>
@@ -284,7 +284,8 @@ function calculate_charge_amt(obj){
     }else if( obj.attr("id") == "btn_post_type4" ){
         amt = <?=($post_amt[0]+$post_amt[1]+$post_amt[2]+$post_amt[3])?>; //amt = 178000; 세후 195800
     }
-    amt = Math.floor(amt * 1.1/100)*100;
+    //amt = Math.floor(amt * 1.1/100)*100;
+
     amt = amt + <?=$post_silbi?>;
     $("input[name=price_sum]").val(amt);
     if(!amt){
@@ -304,7 +305,9 @@ function calculate_charge_amt(obj){
                         <div id="btn_post_type1" class="btn_post_type">
                             {{--<div class="btn_post_title"><img src="/img/v1/btn_ccmail_01.png"></div>--}}
                             <div class="btn_post_title">발송대행</div>
-						    <div class="small2"><?=number_format($post_amt[0])?>원<span class=txt_free></span></div>
+						    <div class="small2">
+                                <?=number_format($post_amt[0])?>원<small> + 실비<?=$post_silbi?>원</small><span class=txt_free></span>
+                            </div>
 						    <div class="small">우체국을 직접 가지 않고,<br />실비용 결제로 간단히 발송</div>
 
 						    <div class="btn_post_blue">선택후 미리보기</div>
@@ -315,7 +318,7 @@ function calculate_charge_amt(obj){
                         <div id="btn_post_type2" class="btn_post_type">
                             {{--<div class="btn_post_title"><img src="/img/v1/btn_ccmail_02.png"></div>--}}
                             <div class="btn_post_title">법무법인 명의 발송</div>
-						    <div class="small2">+<?=number_format($post_amt[1])?>원</div>
+						    <div class="small2">+<?=number_format($post_amt[1])?>원 추가</div>
 						    <div class="small">법무법인 고퀄리티 서식에 <br />공신력을 담아 안전하게 발송대행</div>
 						    <div class="btn_post_blue">선택후 미리보기</div>
                         </div>
@@ -325,7 +328,7 @@ function calculate_charge_amt(obj){
                         <div id="btn_post_type3" class="btn_post_type">
                             {{--<div class="btn_post_title"><img src="/img/v1/btn_ccmail_03.png"></div>--}}
                             <div class="btn_post_title">변호사 직접 작성</div>
-						    <div class="small2">+<?=number_format($post_amt[2])?>원</div>
+						    <div class="small2">+<?=number_format($post_amt[2])?>원 추가</div>
 						    <div class="small">
                                 내용을 <b>법률요건</b>에 맞추고 <b>불리한 내용</b>은 빼고 다듬어<br />
                                 실제 소송 완벽대비 & 담당변호사의 위엄있는 문장</div>
@@ -337,7 +340,7 @@ function calculate_charge_amt(obj){
                         <div id="btn_post_type4" class="btn_post_type">
                             {{--<div class="btn_post_title"><img src="/img/v1/btn_ccmail_04.png"></div>--}}
                             <div class="btn_post_title">담당변호사 전화 설득</div>
-						    <div class="small2">+<?=number_format($post_amt[3])?>원</div>
+						    <div class="small2">+<?=number_format($post_amt[3])?>원 추가</div>
 						    <div class="small">변호사가 사건을 이해한 후, 상대방과 무게있는 설득 시도.
 						    <br />곧 시작될 <b>소송의 피로함을 설명</b>하여 사건을 조기해결</div>
 						    <div class="btn_post_blue">선택후 미리보기</div>
@@ -362,14 +365,18 @@ function calculate_charge_amt(obj){
 
             </div>
 
+<?php
 
+?>
             <script>
                 $(document).ready(function(){
 
                     $("#btn접수하기").click(function(){
                         $(this).hide();
                         $("#btn접수wrap").show();
-                        var boon_now = '<?=Auth::user()->boonStatus->boon?>';
+                        var boon_now = '<?=$point['point']?>';
+
+                        /*var boon_now = '< ? =Auth::user()->boonStatus->getBoon()? >';*/
                         var boon_need = $("input[name=price_sum]").val()
 
                         if( boon_now * 1 > boon_need * 1 ){ //강제형변환

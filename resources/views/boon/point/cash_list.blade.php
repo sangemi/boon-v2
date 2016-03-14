@@ -83,8 +83,8 @@
                         <b><i class="small">{{ $row->id }}</i>.
 
                             {{--{{ $ccMail->cate3 }}--}}
-                            {{ "캐쉬 분노 : ".$row->boon_cash or ''}}
-                            {{ "포인트 분노 : ".$row->boon_point or ''}}
+                            {{ "결제한 분노 : ".$row->boon_cash or ''}}
+                            {{ "모은 분노 : ".$row->boon_free or ''}}
 
                         </b>
                     </div>
