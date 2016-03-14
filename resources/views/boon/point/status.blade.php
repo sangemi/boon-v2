@@ -58,8 +58,9 @@
         {{--<p>분노게이지를 충전하는 방법은 여러가지입니다.</p>--}}
     </div>
 
-    <div class="">
-        <div class="well">
+
+    <div class="panel panel-default" id="">
+        <div class="panel-body">
             현재 보유량
             <table class="table">
                 <tr>
@@ -67,7 +68,7 @@
                         총 {{number_format( $list->boon_cash + $list->boon_free)}} point</td>
                 <tr>
                     <td>
-                        <b>유료결제 포인트</b> : {{ number_format($list->boon_cash)." point" }}
+                        <b>유료충전 포인트</b> : {{ number_format($list->boon_cash)." point" }}
                         <br>
                         <div><i>
 
@@ -119,7 +120,8 @@
         </form>
 
     {{--신용카드 은행이체--}}
-    <div class="row" id="">
+    <div class="well" id="">
+        <div class="">
         <h2>충전하기</h2>
         <hr />
         <script>
@@ -139,39 +141,39 @@
                 return true;
             }
         </script>
-        <div class="row">
-        {!! BootForm::openHorizontal(['sm'=>[3,7],'method' => 'POST'])->action('/boon/payment/payapp-start')
-            ->id("form포인트충전")->target('boon-pay-window')->onsubmit('return boonPayWindow();') !!}
+            <div class="row">
+            {!! BootForm::openHorizontal(['sm'=>[3,7],'method' => 'POST'])->action('/boon/payment/payapp-start')
+                ->id("form포인트충전")->target('boon-pay-window')->onsubmit('return boonPayWindow();') !!}
 
 
-            <div class="col-xs-2 col-xs-offset-1" style="">
+                <div class="col-xs-2 col-xs-offset-1" style="">
 
-                <img src="/img/v1/btn_pay_phone.png" style="width:100%;max-width:150px;">
+                    <img src="/img/v1/btn_pay_phone.png" style="width:100%;max-width:150px;">
+                </div>
+                <div class="col-xs-6">
+                    신용카드, 온라인 계좌이체
+                    <div class="input-group ">
+                        <input type="text" name="price" id="input충전예정액" placeholder="<?=$initialAmt?>" value="<?=$initialAmt?>" class="form-control text-center" required>
+                        <span class="input-group-addon" id="basic-addon">원</span>
+                        <button type="submit" class="form-control">결제</button>
+                    </div>
+                </div>
+                {!! BootForm::close() !!}
             </div>
-            <div class="col-xs-6">
-                신용카드, 온라인 계좌이체
-                <div class="input-group ">
-                    <input type="text" name="price" id="input충전예정액" placeholder="<?=$initialAmt?>" value="<?=$initialAmt?>" class="form-control text-center" required>
-                    <span class="input-group-addon" id="basic-addon">원</span>
-                    <button type="submit" class="form-control">결제</button>
+
+            <div class="row" style="margin-top:10px;">
+                <div class="col-xs-2 col-xs-offset-1" style="">
+
+                    <img src="/img/v1/btn_pay_banking.png" style="width:100%;max-width:150px;" />
+                </div>
+                <div class=" col-xs-6" style="">
+                    <div class="input-group">
+                        은행입금
+                        <div><a class="btn btn-default" data-toggle="modal" data-target="#modal계좌안내">계좌안내</a></div>
+                    </div>
                 </div>
             </div>
-            {!! BootForm::close() !!}
         </div>
-
-        <div class="row" style="margin-top:10px;">
-            <div class="col-xs-2 col-xs-offset-1" style="">
-
-                <img src="/img/v1/btn_pay_banking.png" style="width:100%;max-width:150px;" />
-            </div>
-            <div class=" col-xs-6" style="">
-                <div class="input-group">
-                    은행입금
-                    <div><a class="btn btn-default" data-toggle="modal" data-target="#modal계좌안내">계좌안내</a></div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
 

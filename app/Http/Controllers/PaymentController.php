@@ -133,7 +133,11 @@ class PaymentController extends Controller
 
     public function getTempWindow()
     {
-        echo "
+        // feedbackurl 을 시험하는 코드
+
+        // 다 삭제하여야 ㅜㅜ DB로 넣던지. 깃헙에 올라가있음 흙흙........
+
+        /*echo "
         <form method='post' action='http://".$_SERVER['HTTP_HOST']."/boon/payment/payapp-feedback'>
             <input type=text name='userid' value='moior' />
             <input type=text name='linkkey' value='67Jxavz/oj9leJsAIF9UUu1DPJnCCRVaOgT+oqg6zaM=' />
@@ -141,13 +145,9 @@ class PaymentController extends Controller
             <input type=text name='price' value='1010' />
             <input type=text name='mul_no' value='6400724' />
             <input type=text name='pay_state' value='4' />
-
             <input type=submit >
         </form>
-        ";
-        $payapp_userid	= 'moior';	// payapp 판매자 아이디
-        $payapp_linkkey	= '67Jxavz/oj9leJsAIF9UUu1DPJnCCRVaOgT+oqg6zaM=';				// payapp 연동key, 판매자 사이트 로그인 후 설정 메뉴에서 확인 가능
-        $payapp_linkval	= '67Jxavz/oj9leJsAIF9UUpDbPmLgU/Imt3Oc/7Xz0T0=';				// payapp 연동value, 판매자 사이트 로그인 후 설정 메뉴에서 확인 가능
+        ";*/
     }
     public function getWindowClose()
     {
@@ -218,6 +218,7 @@ class PaymentController extends Controller
         $payapp_linkkey	= '67Jxavz/oj9leJsAIF9UUu1DPJnCCRVaOgT+oqg6zaM=';				// payapp 연동key, 판매자 사이트 로그인 후 설정 메뉴에서 확인 가능
         $payapp_linkval	= '67Jxavz/oj9leJsAIF9UUpDbPmLgU/Imt3Oc/7Xz0T0=';				// payapp 연동value, 판매자 사이트 로그인 후 설정 메뉴에서 확인 가능
         $order_price = '1000';                      // 결제요청한 금액
+        // 다 삭제하여야 ㅜㅜ DB로 넣던지. 깃헙에 올라가있음 흙흙........
 
         $check_userid	= isset($_POST['userid']) && $_POST['userid'] == $payapp_userid;
         $check_key	= isset($_POST['linkkey']) && $_POST['linkkey'] == $payapp_linkkey;
@@ -232,8 +233,7 @@ class PaymentController extends Controller
             echo "========";
         }
         dd($_POST);*/
-
-        $aa = BoonCash::create(['user_id'=>1, 'title'=> 'Payapp에서 Post데이터 전송옴!' ]);
+        //$aa = BoonCash::create(['user_id'=>1, 'title'=> 'Payapp에서 Post데이터 전송옴!' ]);
 
         /*
         userid, linkkey, linkval 값을 비교 확인 하고 동일한 경우에만 결제여부를 처리 하셔야 합니다.
@@ -255,8 +255,8 @@ class PaymentController extends Controller
                     $bc = BoonCash::where('pg_payid', $_POST['mul_no'] )->get()->first();
                     $bc->pg_status = $_POST['pay_state'];
                     $bc->confirmed = 1;
-                    $bc->status_inner = '자동 확인완료';
-                    $bc->status_show = '결제가 확인되었습니다';
+                    $bc->status_inner = '자동 결제완료';
+                    $bc->status_show = '결제가 완료되었습니다';
                     $bc->save();
 
                     /*스텝 Step 2*/

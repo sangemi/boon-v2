@@ -68,10 +68,10 @@ $(document).ready(function(){
     <h1>Corner Ribbons</h1>
     <h2>(with custom settings and all...)</h2>--}}
 
-<div class="">{{--내용증명 리스트 간략 박스형태--}}
-    <div class="row">
+<div class="row">{{--내용증명 리스트 간략 박스형태--}}
+    <div class=" col-sm-10 col-sm-push-1">
 
-        <div class="panel panel-default divCcMailBox ribon_new">
+        <div class="panel panel-default divCcMailBox ">
 
 
             <div class="panel-heading">
@@ -87,8 +87,7 @@ $(document).ready(function(){
                 </div>
 
                 <form method="get" action="{{URL::to('/ccmail/work/create/'.$ccMail->id)}}" class="pull-right">
-                    <input type="submit" class="btn btn-primary"
-                           value="샘플 적용하기">
+                    <input type="submit" class="btn btn-link" value="샘플 적용하기">
                 </form>
             </div>
 
@@ -107,7 +106,11 @@ $(document).ready(function(){
                 {!! nl2br(e($ccMail->content)) !!}
             </div>
             <div class="panel-footer">
-                <span>{{ $ccMail->create_id }}</span>
+                {{--<span>{{ $ccMail->create_id }}</span>--}}
+
+                <form method="get" action="{{URL::to('/ccmail/work/create/'.$ccMail->id)}}" class="pull-right">
+                    <input type="submit" class="btn btn-primary" value="샘플 적용하기">
+                </form>
 
 
 
@@ -124,6 +127,8 @@ $(document).ready(function(){
                     <input type="submit" value="Del" class="btn btn-link btn-xs">
                 </form>
                 @endif
+
+                <div class="clearfix"></div>
             </div>
 
         </div>

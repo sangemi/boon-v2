@@ -49,6 +49,10 @@
         border:1px solid #fff;
         margin-bottom:20px;
         background-color: #fff;
+
+        -moz-box-shadow: 0px 0px 5px #999;
+        -webkit-box-shadow: 0px 0px 5px #999;
+        box-shadow: 0px 0px 5px #999;
     }
 
 

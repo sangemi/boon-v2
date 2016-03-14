@@ -141,10 +141,12 @@
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline">샘플보기</a></p>
 
-									@if(Auth::user()->name == '김상겸')
-									<div class="alert alert-link"><small>
-										<a href="http://www.moior.com/v/postABC/147696" target="_blank" style="color:#eee;">내용증명이란?</a></small>
-									</div>
+										@if(Auth::check())
+											@if(Auth::user()->name == '김상겸')
+												<div class="alert alert-link"><small>
+													<a href="http://www.moior.com/v/postABC/147696" target="_blank" style="color:#eee;">내용증명이란?</a></small>
+												</div>
+											@endif
 										@endif
 
 								</div>

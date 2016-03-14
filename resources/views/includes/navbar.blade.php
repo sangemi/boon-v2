@@ -1,7 +1,11 @@
     <style>
-
+        #navbar-top {
+            box-shadow: 0px 0px 10px #000;
+            -moz-box-shadow: 0px 0px 10px #000;
+            -webkit-box-shadow: 0px 0px 10px #000;
+        }
     </style>
-    <nav class="navbar navbar-inverse navbar-static-top"
+    <nav class="navbar navbar-inverse navbar-static-top" id="navbar-top"
          style="background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/always_grey.png);"
     >  {{--navbar-inverse--}}
         <div class="container-fluid">
