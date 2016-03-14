@@ -4,9 +4,6 @@
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/point/payapp_start.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/point/payapp_start.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -39,14 +36,14 @@
       <file leaf-file-name="status.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.0">
-              <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
+            <state vertical-scroll-proportion="-10.357142">
+              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding>
-                <marker date="1457959133479" expanded="true" signature="4332:4524" placeholder="..." />
-                <marker date="1457959133479" expanded="true" signature="4447:4458" placeholder="..." />
-                <marker date="1457959133479" expanded="true" signature="4468:4485" placeholder="..." />
-                <marker date="1457959133479" expanded="true" signature="4497:4522" placeholder="..." />
-                <marker date="1457959133479" expanded="true" signature="7179:7180" placeholder="..." />
+                <marker date="1457961621946" expanded="true" signature="4374:4566" placeholder="..." />
+                <marker date="1457961621946" expanded="true" signature="4489:4500" placeholder="..." />
+                <marker date="1457961621946" expanded="true" signature="4510:4527" placeholder="..." />
+                <marker date="1457961621946" expanded="true" signature="4539:4564" placeholder="..." />
+                <marker date="1457961621946" expanded="true" signature="7221:7222" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -107,10 +104,10 @@
       <file leaf-file-name="PaymentController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89042675">
-              <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41637832">
+              <caret line="205" column="34" selection-start-line="205" selection-start-column="34" selection-end-line="205" selection-end-column="34" />
               <folding>
-                <marker date="1457961384651" expanded="true" signature="6203:6338" placeholder="..." />
+                <marker date="1457961621906" expanded="true" signature="6243:6378" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -206,10 +203,10 @@
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/work_show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/popup.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/point/payapp_start.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/point/status.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" />
       </list>
     </option>
   </component>
@@ -889,7 +886,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457959004072</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="0.999&#10;&#10;">
+      <created>1457961419678</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1457961419678</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -958,7 +961,8 @@
     <MESSAGE value="0.97&#10;&#10;" />
     <MESSAGE value="0.99&#10;&#10;" />
     <MESSAGE value="0.998&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.998&#10;&#10;" />
+    <MESSAGE value="0.999&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.999&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1341,20 +1345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0">
-          <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
-          <folding>
-            <marker date="1457959133479" expanded="true" signature="4332:4524" placeholder="..." />
-            <marker date="1457959133479" expanded="true" signature="4447:4458" placeholder="..." />
-            <marker date="1457959133479" expanded="true" signature="4468:4485" placeholder="..." />
-            <marker date="1457959133479" expanded="true" signature="4497:4522" placeholder="..." />
-            <marker date="1457959133479" expanded="true" signature="7179:7180" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/point/payapp_start.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.5">
@@ -1410,12 +1400,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/point/status.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.357142">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding>
+            <marker date="1457961621946" expanded="true" signature="4374:4566" placeholder="..." />
+            <marker date="1457961621946" expanded="true" signature="4489:4500" placeholder="..." />
+            <marker date="1457961621946" expanded="true" signature="4510:4527" placeholder="..." />
+            <marker date="1457961621946" expanded="true" signature="4539:4564" placeholder="..." />
+            <marker date="1457961621946" expanded="true" signature="7221:7222" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PaymentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89042675">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41637832">
+          <caret line="205" column="34" selection-start-line="205" selection-start-column="34" selection-end-line="205" selection-end-column="34" />
           <folding>
-            <marker date="1457961384651" expanded="true" signature="6203:6338" placeholder="..." />
+            <marker date="1457961621906" expanded="true" signature="6243:6378" placeholder="..." />
           </folding>
         </state>
       </provider>

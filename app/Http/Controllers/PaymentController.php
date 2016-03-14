@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Lib\skHelper;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Session;
 
 class PaymentController extends Controller
 {

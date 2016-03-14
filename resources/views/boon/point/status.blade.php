@@ -126,7 +126,16 @@
             $(document).ready(function(){
             })
             function boonPayWindow(){
-                window.open("_blank", "boon-pay-window", "toolbar=no, scrollbars=yes, resizable=yes, width=400, height=620");
+                // if 휴대폰이라면, 전체창
+
+
+
+
+
+
+
+
+                window.open("_blank", "boon-pay-window", "toolbar=no, scrollbars=yes, resizable=yes, width=400, height=630");
                 return true;
             }
         </script>
