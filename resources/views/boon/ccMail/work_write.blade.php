@@ -115,7 +115,7 @@ $(document).ready(function(){
 <div class="">{{--내용증명 리스트 간략 박스형태--}}
     <div class="row">
 
-        <div class="panel panel-default divCcMailBox ribon_new">
+        <div class="panel panel-default divCcMailBox">
 
 
             <div class="panel-heading">
@@ -187,7 +187,7 @@ $(document).ready(function(){
                         <div class="col-sm-2"><h4>제목
                             <small style="">
                                 <a id="popover1" tabindex="0" data-placement="bottom" role="button" data-toggle="popover" data-trigger="focus"
-                                   title="제목이란" data-content="<nobr>예제 : 계약 해제통보의 건</nobr> <br>제목은 비워두셔도 됩니다.">?</a>
+                                   title="내용증명 상단에 적힐 제목입니다." data-content="한문장으로 목적을 요약하세요. 어려우면 안적어도 됩니다.<br><nobr>예제 : 계약 해제통보의 건</nobr> ">?</a>
                             </small></h4>
                             <script> $('#popover1').popover({'html':true});</script>
 
@@ -205,7 +205,7 @@ $(document).ready(function(){
                 </div>
 
                 <div class=" col-sm-12 text-center alert">
-                    <button class="btn btn-default btn-lg btn-ccmail-save" type="submit">내용저장</button>
+                    <button class="btn btn-default btn-lg btn-ccmail-save" type="submit">보관함에 담기</button>{{--내용저장--}}
 
                     @if(Auth::user())
 

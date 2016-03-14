@@ -45,7 +45,7 @@ $(document).ready(function(){
 
 {{--세부페이지 네비바--}}
 <ol class="breadcrumb">
-    <li><a href="{{ URL::to('ccmail') }}">
+    <li><a href="{{ URL::to('ccmail/sample') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
     <li><a href="{{ URL::to('ccmail/sample?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
     @if($ccMail->cate2)

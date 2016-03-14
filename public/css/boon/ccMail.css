@@ -115,15 +115,15 @@ body{
 
 
 /*초간단 코너리본 시작*/
-.ribon_new{
+.ribon_mini{
     border: 1px solid #d3d3d3;
     position: relative;
     box-shadow: 1px 1px 10px #ddd
 }
-.ribon_new:before{
+.ribon_mini:before{
     position: absolute;
     display: block;
-    content: 'new';
+    content: '';
     font-size:8pt;
     text-align: center;
     width: 50px;
@@ -139,6 +139,15 @@ body{
     color: #f0f0f0;
     box-shadow: 1px 1px 1px #777;
 }
+
+.ribon_new:before{
+    content: 'new';
+}
+.ribon_hot:before{
+    content: 'hot';
+    background: #aa4444;
+}
+
 /*초간단 코너리본 끝*/
 
 

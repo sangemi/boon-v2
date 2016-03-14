@@ -250,23 +250,27 @@
             @foreach(array_chunk( $ccMails->all(), 3) as $row)
                 <div class="row">
                     @foreach ($row as $ccMail)
+                        <?php /* 리본으로 강조하기 */
+                        if($ccMail->used_cnt >= 2) $ribon_class = " ribon_mini ribon_hot";
+                        //else if( $ccMail->created_at->format('Y-m-d')->diffForHumans() ) $ribon_class = " ribon_mini ribon_new";
+                        else  $ribon_class = "";
+                        ?>
                         <div class="col-sm-4">
-                            <div class="panel panel-default divCcMailBox ribon_new">
+                            <div class="panel panel-default divCcMailBox <?=$ribon_class?>">
                                 <div class="panel-heading">
                                     <b><i class="small">{{ $ccMail->id }}</i>.
 
-                                        {{ $ccMail->cate3 }}
+                                        <a href="{{URL::to('/ccmail/sample/'.$ccMail->id)}}">{{ $ccMail->cate3 }}</a>
 
                                     </b>
                                 </div>
                                 {{--
-
-                                        <div class="panel-body divCcMailBoxBody">
-                                            <div class="corner-ribbon top-right blue" style="opacity:0.5;">추 천
-                                                <span class="badge">{{ $ccMail->used_cnt }}</span>
-                                            </div>
-                                            {!! nl2br(e($ccMail->content)) !!}
+                                    <div class="panel-body divCcMailBoxBody">
+                                        <div class="corner-ribbon top-right blue" style="opacity:0.5;">추 천
+                                            <span class="badge">{{ $ccMail->used_cnt }}</span>
                                         </div>
+                                        {!! nl2br(e($ccMail->content)) !!}
+                                    </div>
                                 --}}
 
                                 <div class="panel-body clearfix " style="padding:0px;">
@@ -274,11 +278,7 @@
                                         {!! nl2br(e($ccMail->content)) !!}
                                     </div>
 
-                                    <form method="get" action="{{URL::to('/ccmail/sample/'.$ccMail->id)}}" class="" style="position:absolute;bottom:10px;right:10px;">
-                                        <button type="submit" class="btn btn-default">
-                                            <span class="glyphicon glyphicon-menu-right"></span>
-                                        </button>
-                                    </form>
+
 
 
 
