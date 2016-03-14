@@ -424,7 +424,22 @@ function calculate_charge_amt(obj){
                         <th>전화 설득</th>
                     </tr>
                     <tr>
+                        <td>비용(만원)</td>
+                        <td>약1</td>
+                        <td>약2.2</td>
+                        <td>약9.5</td>
+                        <td>약20</td>
+                    </tr>
+
+                    <tr>
                         <td>우체국 방문접수</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>요금(약5천원)</td>
                         <td>O</td>
                         <td>O</td>
                         <td>O</td>

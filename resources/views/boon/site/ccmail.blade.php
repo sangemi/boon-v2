@@ -139,8 +139,11 @@
 										<h2 class="cover-text-sublead wow fadeInUp" style="display:none;" data-wow-duratio="1s" data-wow-delay=".4s">
 										분쟁이 예상될 때는 내용증명으로 시작하세요. <br>어렵지 않습니다. <big>천여개의 샘플</big>과 <big>법률 전문가</big>가 기다리고 있으니까요.
 									</h2>
-									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline btn-lg">샘플보기</a></p>
-									<div class="alert alert-link">내용증명이란?</div>
+									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline">샘플보기</a></p>
+
+									<div class="alert alert-link"><small>
+										<a href="http://www.moior.com/v/postABC/147696" target="_blank" style="color:#eee;">내용증명이란?</a></small>
+									</div>
 
 								</div>
 
@@ -307,6 +310,12 @@
 									<td>O</td>
 								</tr>
 								<tr>
+									<td>요금(약5천원)</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+									<td>O</td>
+								</tr>								<tr>
 									<td>내용증명 3부 제작</td>
 									<td>O</td>
 									<td>O</td>
@@ -944,6 +953,7 @@
 							<li>(주)모이어</li>
 							<li><a target="_blank" href="https://www.google.co.kr/maps/place/%EC%95%84%EA%B0%80%EB%B0%A9%EB%B9%8C%EB%94%A9/@37.5019931,127.038773,18.29z/data=!4m12!1m9!4m8!1m0!1m6!1m2!1s0x357ca3ff15a01301:0xa36dcf2c34b2115a!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDsl63sgrwx64-ZIDY3OC0zNiDslYTqsIDrsKnruYzrlKk!2m2!1d127.0387154!2d37.5016827!3m1!1s0x0000000000000000:0xa36dcf2c34b2115a">
 									서울 강남 테헤란로207, 7층</a></li>
+							<li><a href="tel:1661-5521">02-1661-5521</a></li>
 							{{--<li><a href="#">How it Works</a></li>
 							<li><a href="#">Services</a></li>
 							<li><a href="#">Products</a></li>
