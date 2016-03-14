@@ -37,7 +37,7 @@
 
     <div id="box결제액확인" style="">
     {!! BootForm::open(['method' => 'POST'])->action('/boon/payment/payapp-pay') !!}
-        {!! BootForm::hidden('goodname')->value( '분제로 포인트충전' ) !!} {{----}}
+        {!! BootForm::hidden('goodname')->value( 'Boon(분제로) 포인트' ) !!} {{----}}
 
         {!! BootForm::text('결제액','price')->value( \app\Lib\skHelper::number_format( Request::get('price') ) ) !!}
         {!! BootForm::text('휴대폰번호','recvphone')

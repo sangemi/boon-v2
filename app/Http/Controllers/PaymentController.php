@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BoonCash;
 
+use App\BoonStatus;
 use App\Http\Requests;
 use App\Lib\skHelper;
 use Illuminate\Support\Facades\Auth;
@@ -103,8 +104,9 @@ class PaymentController extends Controller
                                 'pg_company'=>'payapp',
                                 'pg_payid' => $oResData['mul_no'],
                                 'pg_status' => $oResData['state'],
-                                'pay_amt' =>$data['price']
-                            ]);
+                                'pay_amt' =>$data['price'],
+                                'status_inner' => 'access 결제페이지'
+            ]);
 
             // boon_cash에 저장후에 실제 결제 나아감.
             return redirect()->to($oResData['payurl']);
@@ -138,7 +140,8 @@ class PaymentController extends Controller
         </script>
         ";
     }
-        public function postPayappFeedback()
+
+    public function postPayappFeedback()
     {
         include $this->path_payapp_lib;
 
@@ -157,9 +160,7 @@ class PaymentController extends Controller
 
         이 페이지에서 페이지 이동을 하시면 정상적인 동작이 되지 않습니다.
         (javascript, http code 302 등을 사용한 페이지 이동 포함)
-
         */
-
 
         /*
         $_POST['userid'];	판매자 회원 아이디
@@ -199,6 +200,8 @@ class PaymentController extends Controller
         $check_val	= isset($_POST['linkval']) && $_POST['linkval'] == $payapp_linkval;
         $check_price	= isset($_POST['price']) ; //&& $_POST['price'] == $order_price;
 
+        $aa = BoonCash::create(['user_id'=>1, 'title'=> 'Payapp에서 Post데이터 전송옴!' ]);
+
         /*
         userid, linkkey, linkval 값을 비교 확인 하고 동일한 경우에만 결제여부를 처리 하셔야 합니다.
         */
@@ -210,20 +213,25 @@ class PaymentController extends Controller
                     // 결제완료
                     // 결제요청한 결제건이 결제가 완료된 상태입니다.
                     // 이곳에서 결제완료에 대한 처리 (상품배송/서비스 제공 등)를 하시면 됩니다.
-
-                    $aa = BoonCash::create(['user_id'=>1, 'title'=> '결제완료!' ]);
                     /*
                     TODO : 이곳에서 결제완료 처리를 합니다.
-                    //$aa = BoonCash::create(['user_id'=>1, 'title'=> $_POST['pay_state'] ]);
-
-
                     ex) UPDATE payrequest SET pay_state='결제완료', pay_date='{$_POST['pay_date']}' WHERE orderno='$_POST['var1']' AND mul_no={$_POST['mul_no']};
                     */
-                    $bc = BoonCash::where('pg_payid', $_POST['mul_no'] );
+
+                    /*스텝 Step 1*/
+                    $bc = BoonCash::where('pg_payid', $_POST['mul_no'] )->get()->first();
                     $bc->pg_status = $_POST['state'];
                     $bc->confirmed = 1;
                     $bc->status_inner = '자동 확인완료';
+                    $bc->status_show = '결제가 확인되었습니다';
                     $bc->save();
+
+                    /*스텝 Step 2*/
+                    $bs = BoonStatus::where('user_id', Auth::id())->get()->first();
+                    $bs->boon_cash = $bs->boon_cash + $_POST['price'];
+                    $bs->boon_point = $bs->boon_point + $_POST['price'];
+                    $bs->save();
+
                     break;
                 case '8':
                 case '16':
@@ -233,6 +241,7 @@ class PaymentController extends Controller
                     /*
                     TODO : 이곳에서 결제요청 취소 처리를 합니다. (결제하지 않은 상태에서 취소)
                     */
+
                     break;
                 case '9':
                 case '64':
@@ -244,6 +253,20 @@ class PaymentController extends Controller
 
                     ex) UPDATE payrequest SET pay_state='결제취소', pay_date='{$_POST['pay_date']}' WHERE orderno='$_POST['var1']' AND mul_no={$_POST['mul_no']};
                     */
+                    /*스텝 Step 1*/
+                    $bc = BoonCash::where('pg_payid', $_POST['mul_no'] )->get()->first();
+                    $bc->pg_status = $_POST['state'];
+                    $bc->confirmed = 1;
+                    $bc->status_inner = '자동 결제취소';
+                    $bc->status_show = '결제가 취소되었습니다';
+                    $bc->save();
+
+                    /*스텝 Step 2*/
+                    $bs = BoonStatus::where('user_id', Auth::id())->get()->first();
+                    $bs->boon_cash = $bs->boon_cash - $_POST['price'];
+                    $bs->boon_point = $bs->boon_point - $_POST['price'];
+                    $bs->save();
+
                     break;
                 case '10':
                     // 결제대기
