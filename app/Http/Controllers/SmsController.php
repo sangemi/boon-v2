@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use App\Lib\Coolsms;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Session;
 
 class SmsController extends Controller {
 
@@ -18,25 +20,124 @@ class SmsController extends Controller {
     [error_count] => 0
     [result_code] => 00
     [result_message] => Success*/
-	public function sendSms() /*$to='', $from, $text, $goto = ''*/
-	{
-		$data = Request::all();
-		$rest = new Coolsms();
-		//$senderid = $rest->get_senderid_list($options)->getResult();
-		$options = new \stdClass();
 
-		$options->to = $data['to'];
-		$options->from = $data['from'];
-		$options->text = $data['text'];
-		$result = $rest->send($options)->getResult();
+
+	public function getForm($data = null)
+	{
+		echo "<form action='/sms/send'>
+			<input type='text' name='from' value='02-1661-5521' />
+			<input type='text' name='to' value='010-4775-0852' />
+			<input type='text' name='text' value='테스트...' />
+			<input type='text' name='type' value='SMS' />
+			<input type='submit' value='submit' />
+		</form>
+		";
+	}
+
+	// SK가 작성함. 하수 코딩. 제대로 고쳐야.. ㅜ
+
+	/*유저 페이지에서 post나 get으로 불려진 경우, 그 값 사용*/
+	public function postSend()
+	{
+		if( count(Request::all()) ) $data = Request::all();
+	}
+
+	/*다른 Class에서 send(['to'=>'010...']) 식으로 불려진 경우
+      온리 text만 넘길 수도 있음(현재 로그인된 사람에게 문자전송) */
+	public function send($data = null)
+	{
+		if( empty($data['to']) && empty(Auth::user()->userInfo->phone)) return 0; //'받는사람 없음.';
+
+		$default = [
+			'text'=>'빈 메세지 (SmsController)',
+			'from'=>'02-1661-5521',
+			'to'=>Auth::user()->userInfo->phone
+		];
+		if(!isset($data['from'])) $data['from'] = $default['from'];
+		if(!isset($data['to'])) $data['to'] = $default['to'];
+
+		$ret = self::sendCoolsms($data);
+		/*{#248 ▼
+		+"group_id": "R1G56E7E99824235"
+		+"success_count": 1
+		+"error_count": 0
+		+"result_code": "00"
+		+"result_message": "Success"}*/
+
 
 		// Return the message object to the browser as JSON
 		if( isset($data['goto']) ){
 			return redirect( $data['goto'] );
-		}else
-			return redirect()->back();
-
+		}else //else return redirect()->back(); // get방식으로 들어왔을때, 순환오류 위험함.
+			return $ret->success_count;
 	}
+
+	/*얘는 무조건 data값을 정상적으로 받아야 함*/
+	private function sendCoolsms($data) /*$to='', $from, $text, $goto = ''*/
+	{
+		if( empty($data['from']) || empty($data['to']) || empty($data['text']) ) return false;
+		//$senderid = $rest->get_senderid_list($options)->getResult();
+		$options = new \stdClass();
+		$options->from = $data['from'];
+		$options->to   = $data['to'];
+		$options->text = $data['text'];
+		//단문 MMS 자동 구분 // 80자?이상시 강제로 LMS로 변경해야.
+		if( mb_strwidth( $options->text , "UTF-8") > 90 ){ $options->type = 'LMS';}
+  		else $options->type = "SMS";
+
+		/*http://www.coolsms.co.kr/SDK_PHP_Examples_ko
+		$options->type = "MMS";
+		//type 은 default 가 sms 로 되있으므로 mms 로 바꾸어 주어야 사진이 보내집니다.
+		$options->image = "myPic.jpg";*/
+		$options->type = "SMS";
+
+		$rest = new Coolsms();
+		//$this->recordHistory($rest); // 기록허장.
+		return $rest->send($options);
+	}
+
+
+	private function recordHistory(){
+		// DB::table('SmsHistory') ...
+	}
+
+	public function getSentCoolsms(){
+		$options = new \stdClass();
+		/*$options->mid = 'VAXZxcasd1a';                 //Message ID
+		$options->gid = 'AVCXZ124ASD';                 //Group ID*/
+		$options->count = '10';                 //default 는 20개로 되있습니다.
+		$options->page = '3';                   //전체 전송결과 갯수 / count 로 나온 페이지 중에 자신이 확인하고 싶은 페이지 선택
+		//$options->s_rcpt = '01000000000';              //발송번호 검색
+		$options->s_start = '2016-03-01 00:00:00';     //검색 시작일
+		$options->s_end = '2016-3-31 24:59:59';       //검색 끝나는일
+
+		$rest = new Coolsms();
+		$result = $rest->sent($options);
+
+		dd( $result);
+	}
+
+	public function getBalanceCoolsms()
+	{
+		$rest = new Coolsms();
+		$result = $rest->balance();
+		print_r( $result);
+		//return $result;
+	}
+
+	/*예약 발송 취소하기*/
+	public function getCancelBookCoolsms()
+	{
+		$options = new \stdClass();
+		$options->mid = ''; // 예약건 message_id를 DB에 저장해놓아야함.. 예) R1M56E7EC4BB20AA
+		//$options->gid = 'zxcvas2asdvc';
+		//mid 나 gid 둘중에 하나만 넣으시면 됩니다.
+		$rest = new Coolsms();
+		$rest->cancel($options);
+		//cancel 은 결과값이 없습니다.
+	}
+
+
 
 
 

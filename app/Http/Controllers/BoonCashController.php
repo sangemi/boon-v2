@@ -39,6 +39,7 @@ class BoonCashController extends Controller {
 	{
 		//$list = BoonCash::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->paginate(9);
 		$list = Auth::user()->boonCash;
+		echo "여기...............";
 		//$ccMails = DB::table('ccmails_order')->orderBy('id', 'desc')->paginate(9);
 
 		return view('boon.point.cash_list', compact('list'));
@@ -113,6 +114,13 @@ class BoonCashController extends Controller {
 		}
 
 		Session::flash('message', '정상처리 되었습니다. 감사합니다. (최종 반영시까지 시간이 다소 걸릴 수 있습니다)');
+
+
+		// 문자 2줄로 SK.
+		$text = '[BOON]결제됨!'. number_format($data['price']) .'원/'. $boon_cash->title;
+		$ret = (new SmsController)->send(['text'=>$text, 'to'=>'010-4775-0852']); // KSK에게 보고!!
+		//if($ret) Session::flash('message', $ret.'건 문자가 전송되었습니다.');
+
 		return redirect()->to('/boon/status'); //.$boon_status->id
 	}
 

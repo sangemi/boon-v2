@@ -23,6 +23,9 @@ class Coolsms
     private $result;
     private $basecamp;
     private $user_agent;
+
+    private $content;
+
     public function __construct($basecamp=false)
     {
         if($basecamp)
@@ -81,9 +84,13 @@ class Coolsms
         }
         else
         {
-            foreach($options as $key => $val)
-                $this->content .= $key."=".urlencode($val)."&";
+            foreach($options as $key => $val) {
+
+                $this->content .= $key . "=" . urlencode($val) . "&";
+
+            }
         }
+
     }
     private function getSignature()
     {

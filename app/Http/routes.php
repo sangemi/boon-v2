@@ -2,13 +2,16 @@
 /** index 	create 	store	show 	 edit	update	destroy
  * 리스트 	입력폼	DB저장	특정view 수정폼	DB업뎃	DB삭제*/
 
-Route::post('/sms', 'SmsController@sendSms'); /*SMS post방식으로 바꿔야*/
+
 
 
 
 Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기본
 
     Route::get('/','MainController@index');
+
+    //Route::post('/sms/send', 'SmsController@send'); /*Get방식은 절대X*/
+    Route::controller('/sms', 'SmsController'); /*Get방식은 절대X*/
 
     /* 내용증명 */
     Route::get('ccmail','MainController@ccmail');
