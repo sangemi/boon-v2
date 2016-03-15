@@ -66,8 +66,17 @@
             @foreach(array_chunk( $ccMails->all(), 2) as $row)
                 <div class="row">
                     @foreach ($row as $ccMail)
+
+
+                        <?php /* 리본으로 강조하기 */
+                        $created = new \Carbon\Carbon($ccMail->created_at);
+                        $now = \Carbon\Carbon::now();
+                        $ribon_class = ($created->diff($now)->days < 3)
+                                ? " ribon_mini ribon_new" : ""; //$created->diffForHumans($now);
+                        ?>
+
                         <div class="col-sm-6">
-                            <div class="panel panel-default divCcMailBox ">{{--ribon_new--}}
+                            <div class="panel panel-default divCcMailBox <?=$ribon_class?>">{{--ribon_new--}}
                                 <div class="panel-heading">
                                     <b><i class="small">{{ $ccMail->id }}</i>.
 

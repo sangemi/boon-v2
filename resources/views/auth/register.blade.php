@@ -11,15 +11,37 @@
 @endsection
 
 @section('content')
+<style>
+#title설득멘트 {
+	padding:0px 20px 20px 20px ;font-size:1.6em;font-weight:600;color:#195F91;
+
+	background-color: #195F91;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+#title설득멘트2 {
+	padding:10px 20px 0px 20px;
+	font-style: italic;;
+}
+</style>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">회원가입</div>
 				<div class="panel-body">
+					<div id="title설득멘트2">
+						서식작성까지 단 10분!
+					</div>
+					<div id="title설득멘트">
+						쉽고 빠른 <span style="">분쟁관리사</span><br>
+						<small>가입만 하면 쓸 수 있습니다.</small>
+					</div>
 					@if($errors->any())
 						<div class="alert alert-danger">
-							<strong>Error</strong> 입력값에 오류가 있는듯 합니다.<br><br>
 							<ul>
 								@foreach ($errors->all() as $error)
 									<li>{{ $error }}</li>
@@ -75,6 +97,9 @@
 							</div>
 						</div>
 					</form>
+				</div>
+				<div class="panel-body text-center" style="background-color:#f9f2f4">
+					<a href="/auth/login" style="color:gray;">로그인</a>
 				</div>
 			</div>
 		</div>

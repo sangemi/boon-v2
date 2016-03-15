@@ -245,16 +245,25 @@
                 </div>
                 {{--<p>This is some text.</p>--}}
             </div>
-
         @else
+
             @foreach(array_chunk( $ccMails->all(), 3) as $row)
                 <div class="row">
                     @foreach ($row as $ccMail)
+
                         <?php /* 리본으로 강조하기 */
-                        if($ccMail->used_cnt >= 2) $ribon_class = " ribon_mini ribon_hot";
-                        //else if( $ccMail->created_at->format('Y-m-d')->diffForHumans() ) $ribon_class = " ribon_mini ribon_new";
-                        else  $ribon_class = "";
+                        if($ccMail->used_cnt >= 2)
+                            $ribon_class = " ribon_mini ribon_hot";
+                        else{
+                            $created = new \Carbon\Carbon($ccMail->created_at);
+                            $now = \Carbon\Carbon::now();
+                            $difference = $created->diff($now)->days; //$created->diffForHumans($now);
+                            if( $difference < 10  )
+                                $ribon_class = " ribon_mini ribon_new";
+                            else  $ribon_class = "";
+                        }
                         ?>
+
                         <div class="col-sm-4">
                             <div class="panel panel-default divCcMailBox <?=$ribon_class?>">
                                 <div class="panel-heading">

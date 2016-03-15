@@ -105,7 +105,7 @@
 </nav>
 </div>
     {{--구글 배너광고--}}
-    <div style="">
+    <div style=" max-height:500px;overflow-y:hidden;">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Boonzero.com -->
         <ins class="adsbygoogle"

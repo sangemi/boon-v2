@@ -1,14 +1,31 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container-fluid">
+	<style>
+		#title설득멘트 {
+			padding:0px 20px 20px 20px ;font-size:1.6em;font-weight:600;color:#195F91;
+
+			background-color: #666666;
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+		}
+		#title설득멘트2 {
+			padding:10px 20px 0px 20px;
+			font-style: italic;;
+		}
+	</style>
+
+	<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">로그인</div>
 				<div class="panel-body">
 
-					@if (!empty($errors) && count($errors) > 0)
+					@if($errors->any()) {{--@if (!empty($errors) && count($errors) > 0)--}}
 						<div class="alert alert-danger">
 							<ul>
 								@foreach ($errors->all() as $error)
@@ -17,7 +34,6 @@
 							</ul>
 						</div>
 					@endif
-
 
 					{{-- 소셜 로그인은, 버튼으로 만들어서 바로 할 수 있도록 하자.
 
@@ -35,7 +51,7 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">이메일 주소</label>
+							<label class="col-md-4 control-label">이메일</label>
 							<div class="col-md-6">
 								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
 							</div>
@@ -63,11 +79,12 @@
 								<button type="submit" class="btn btn-primary">로그인</button>
 
 								<a class="btn btn-link" href="{{ url('/password/email') }}">비밀번호를 잊으셨나요?</a>
+
 							</div>
 						</div>
 					</form>
 
-						</div>
+					</div>
 
 						<div role="tabpanel" class="tab-pane" id="social-login">
 							<br/>
@@ -78,6 +95,18 @@
 					</div>
 
 				</div>
+				<div class="panel-body text-center" style="background-color:#f9f2f4">
+					<div id="title설득멘트2">
+						서식작성까지 단 10분!
+					</div>
+					<div id="title설득멘트">
+						쉽고 빠른 <span style="">분쟁관리사</span><br>
+					</div>
+
+					<a href="/auth/register">회원가입</a>
+
+				</div>
+
 			</div>
 		</div>
 	</div>

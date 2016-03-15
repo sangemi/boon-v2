@@ -1,8 +1,8 @@
     <style>
         #navbar-top {
-            box-shadow: 0px 0px 10px #000;
             -moz-box-shadow: 0px 0px 10px #000;
             -webkit-box-shadow: 0px 0px 10px #000;
+            box-shadow: 0px 0px 10px #000;
         }
     </style>
     <nav class="navbar navbar-inverse navbar-static-top" id="navbar-top"
