@@ -164,12 +164,13 @@
         });
     });
 </script>
-    <form name="srch_sample_f" method="get" action="/ccmail/sample" no-error-return-url="true"
+
+    <form name="srch_sample_f" method="get" action="{{Request::url()}}" no-error-return-url="true"
           class="search-wrapper cf">
-        <input type="hidden" name=cate1 value="{!! Request::input('cate1') !!}" />
-        <input type="hidden" name=cate2 value="{!! Request::input('cate2') !!}" />
+        {{--<input type="hidden" name=cate1 value="{!! Request::input('cate1') !!}" />
+        <input type="hidden" name=cate2 value="{!! Request::input('cate2') !!}" />--}}
         <input type=text name="q" value="<?=htmlspecialchars(stripslashes(Request::input('q')))?>"
-               placeholder="검색어 입력" maxlength="80" />
+               placeholder="검색" maxlength="80" />
         <button type=submit id="btn_srch_sample" style="" alt="검색" title="검색" >
             <i class="fa fa-search"></i>
         </button>
@@ -178,7 +179,10 @@
 
 
 
-
+<style>
+    .btnCate1s span.fa {font-size:2.5em;}
+    .cate1_text {font-size:0.8em;font-family:'맑은 고딕';}
+</style>
 
 
     <div class="text-center">
@@ -187,15 +191,32 @@
         @if (!empty($ccMailsCate1s))
 
             <a href="{{url('/ccmail/sample?q='.Request::input('q'))}}"
-               class="btn ccMailsCate1s <?php echo !Request::input('cate1')?"btn-primary":"btn-default"; ?>" >
+               class="btn ccMailsCate1s <?php echo empty($cate['cate1'])?"btn-primary":"btn-default"; ?>" >
                 <b>All</b>
             </a>
 
             @foreach ($ccMailsCate1s as $ccMailsCate1)
+                <?php
+                $txtCate1_pre = "";
+                switch($ccMailsCate1->cate1){
+                    case "이혼,가족": $txtCate1_pre = "<span class='fa fa-male'></span><span class='fa fa-female'></span>"; break;
+                    case "채권,채무": $txtCate1_pre = "<span class='fa fa-krw'></span>"; break;
+                    case "임대차":    $txtCate1_pre = "<span class='fa fa-home'></span>"; break;
+                    case "부동산":    $txtCate1_pre = "<span class='fa fa-building'></span>"; break;
+                    case "근로자":      $txtCate1_pre = "<span class='fa fa-briefcase'></span>"; break;
+                    case "공사":      $txtCate1_pre = "<span class='fa fa-truck'></span>"; break;
+                    case "손해배상":  $txtCate1_pre = "<span class='fa fa-money'></span><span class='fa fa-bolt'></span>"; break;
+                    case "계약해지":  $txtCate1_pre = "<span class='fa fa-hand-stop-o'></span>"; break;
+                    case "물품거래":  $txtCate1_pre = "<span class='fa fa-cubes'></span>"; break;
+                    case "기타":      $txtCate1_pre = "<span class='fa fa-ellipsis-h'></span>"; break;
+                    case "지적재산":  $txtCate1_pre = "<span class='fa fa-copyright'></span>"; break;
+                } //pencil-square-o
+                $txtCate1 = $txtCate1_pre ."<br><span class='cate1_text'>" .$ccMailsCate1->cate1 ."</span>";
+                ?>
 
-                <a href="{{url('/ccmail/sample?cate1='.$ccMailsCate1->cate1.'&q='.Request::input('q'))}}"
-                   class="btn ccMailsCate1s <?php echo $ccMailsCate1->cate1 == Request::input('cate1')?"btn-primary":"btn-default"; ?>" >
-                    <b>{{ $ccMailsCate1->cate1 }}</b>
+                <a href="{{ url('/ccmail/cate/'.$ccMailsCate1->cate1) }}{{  (Request::input('q'))?'?q='.Request::input('q'):'' }}"
+                   class="btn btnCate1s ccMailsCate1s <?php echo (isset($cate['cate1']) && $ccMailsCate1->cate1 == $cate['cate1'])?"btn-primary":"btn-default"; ?>" >
+                    <b>{!! $txtCate1 !!} </b>
                     {{--<span class="badge"> {{ $ccMailsCate1->cnt}} </span>--}}
                     {{--<span class=""> {{ $ccMailsCate1->usedsum}} </span>--}}
                     {{--<span class=""> {{ floor($ccMailsCate1->usedsum / $ccMailsCate1->cnt * 100)/100 }} </span>--}}
@@ -205,18 +226,18 @@
         @endif
     </div>
 
+    @if (!empty($ccMailsCate2s))
     <div class="text-center inner-shadow div-ccmail-cate2">
-        @if (!empty($ccMailsCate2s))
             @foreach ($ccMailsCate2s as $ccMailsCate2)
 
-                <a href="{{url('/ccmail/sample?cate1='.Request::input('cate1').'&cate2='.$ccMailsCate2->cate2)}}"
+                <a href="{{url('/ccmail/cate/'.$cate['cate1'].'/'.$ccMailsCate2->cate2)}}"
                    class="btn btn-xs ccMailsCate1s <?php echo $ccMailsCate2->cate2 == Request::input('cate2')?"btn-info":"btn-link"; ?>" >
                     <b>{{ $ccMailsCate2->cate2 }}</b>
                     <span class="badge"> {{ $ccMailsCate2->cnt}} </span>
                 </a>
             @endforeach
-        @endif
     </div>
+    @endif
 
     {{--    <div class="corner-ribbon top-left sticky red shadow">New</div>
         <div class="corner-ribbon top-right sticky blue">Updated</div>
@@ -235,19 +256,19 @@
     <div class="">
 
         {{--n개씩 정렬하는 방법--}}
-        @if (empty($ccMails))
+        @if ( $ccMails->isEmpty() )
 
             <div class="">
-                <div class="jumbotron">
+                <div class="jumbotron text-center">
                     {{--<h1>분야 선택<span class="glyphicon glyphicon-hand-up"></span>! </h1>--}}
-                    <h2>관심분야 선택 <span class="fa fa-hand-o-up"></span> </h2>
+                    <h2>검색된 내용이 없습니다. <span class="fa fa-meh-o"></span> </h2>
                     {{--<p>또는 특정 단어로 <span class="glyphicon glyphicon-search"></span>검색해주세요!  <small>예:월세</small></p>--}}
                 </div>
                 {{--<p>This is some text.</p>--}}
             </div>
         @else
 
-            @foreach(array_chunk( $ccMails->all(), 3) as $row)
+            @foreach(array_chunk( $ccMails->all(), 2) as $row)
                 <div class="row">
                     @foreach ($row as $ccMail)
 
@@ -264,7 +285,7 @@
                         }
                         ?>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <div class="panel panel-default divCcMailBox <?=$ribon_class?>">
                                 <div class="panel-heading">
                                     <b><i class="small">{{ $ccMail->id }}</i>.
@@ -273,30 +294,12 @@
 
                                     </b>
                                 </div>
-                                {{--
-                                    <div class="panel-body divCcMailBoxBody">
-                                        <div class="corner-ribbon top-right blue" style="opacity:0.5;">추 천
-                                            <span class="badge">{{ $ccMail->used_cnt }}</span>
-                                        </div>
-                                        {!! nl2br(e($ccMail->content)) !!}
-                                    </div>
-                                --}}
 
-                                <div class="panel-body clearfix " style="padding:0px;">
-                                    <div style="font-size:0.8em;overflow-y:scroll;height:100px;padding:5px;">
-                                        {!! nl2br(e($ccMail->content)) !!}
-                                    </div>
-
-
-
-
-
-                                </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
-                @endforeach
+            @endforeach
 
                         <!--페이징-->
 
@@ -309,7 +312,7 @@
                     $q = Request::input('q'); ? >
                     {!! $ccMails->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
                 </div>
-                @endif
+        @endif
     </div>
 
 

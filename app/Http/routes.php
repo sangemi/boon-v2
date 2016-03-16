@@ -4,7 +4,7 @@
 
 
 
-
+Route::pattern('id', '[0-9]+');
 
 Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기본
 
@@ -17,6 +17,9 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::get('ccmail','MainController@ccmail');
     Route::resource('ccmail/sample', 'CcMailSampleController');
     Route::get('ccmail/sample/{id}/{direction?}', 'CcMailSampleController@show');
+    Route::get('ccmail/cate/{cate1}/{cate2?}', 'CcMailSampleController@cate')->where(['cate' => '[^0-9]+']); //숫자 아닌경우
+
+
 
     Route::group(['middleware' => 'auth'], function () {
         Route::resource('ccmail/work', 'CcMailWorkController');
@@ -74,6 +77,7 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
 Route::get('help/ccmail','HelpController@ccmail');
 Route::get('help',       'HelpController@ccmail');
 
+Route::get('sitemap/xml', 'Admin\SitemapController@showXML');
 
 
 

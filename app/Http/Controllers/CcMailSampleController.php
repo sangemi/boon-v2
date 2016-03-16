@@ -44,32 +44,24 @@ class CcMailSampleController extends Controller {
 			-> orderBy('usedsum', 'desc') -> get();
 
 		$ccMails = DB::table ( 'ccmail_samples' );
-		if(Request::input('cate2')) {
-			$ccMails = $ccMails -> where ( 'cate1', Request::input('cate1'))
-								-> where ( 'cate2', Request::input('cate2'))
-								-> orderBy('created_at', 'desc');
-		}else if(Request::input('cate1')){
-			$ccMails = $ccMails -> where ( 'cate1', Request::input('cate1'))
-								-> orderBy('created_at', 'desc');
-		}
+
 		if(Request::input('q')) { //
 			$ccMails = $ccMails -> where (function($query){
 				$query  -> where('cate3', 'like', '%'.Request::input('q').'%')
 						-> orWhere ( 'content', 'like', '%'.Request::input('q').'%');
 			} );
-
 		}
 
-		if(!Request::input('cate1') && !Request::input('cate2') && !Request::input('q')){ // 카테고리 둘다 없을 때
-			$ccMails = null;
+		if(!Request::input('q')){ // 최초 샘플화면
+			$ccMails = $ccMails -> orderByRaw("RAND()")-> paginate(10);
 
 		}else{
 			/* sql만들고 마지막에 get 또는 paginate */
 			$ccMails = $ccMails -> paginate(10);
 		}
 		//\SKHelper::p($ccMails);
-
-		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s'));
+		$cate = ['cate1'=>'', 'cate2'=>''];
+		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'cate'));
 		//return view('boon.ccMail.list', compact('ccMailstt')); // resources/views/boon/ccMail/sample_list.blade.php 불러옴 //So compact('var1', 'var2') is the same as saying array('var1' => $var1, 'var2' => $var2) as long as $var1 and $var2 are set.
 	}
 
@@ -143,26 +135,77 @@ class CcMailSampleController extends Controller {
 
 
 	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id, $direction = null)
+	* ccmail/임대차 : cate1 = '임대차'
+	* ccmail/임대차에서... 청구하는 경우 : cate3 like(자연어검색ㅜ) '임대차에서... 경우'
+	*/
+	public function cate($cate1, $cate2 = null)
 	{
-		if( empty($direction) ){
-			$ccMail = CcMailSample::find($id);
-			if( empty($ccMail) ) abort(404, '자료가 없습니다.');
+		$ccMails = CcMailSample::where('cate1', $cate1 );
+		/*if(Request::input('cate2')) {
+			$ccMails = $ccMails -> where ( 'cate1', Request::input('cate1'))
+								-> where ( 'cate2', Request::input('cate2'))
+								-> orderBy('created_at', 'desc');
+		}*/
+		if( !empty($cate2) ) {
+			$ccMails = $ccMails -> where ('cate2', $cate2);
+
+		}
+		if(Request::input('q')) { //
+			$ccMails = $ccMails -> where (function($query){
+				$query  -> where('cate3', 'like', '%'.Request::input('q').'%')
+					-> orWhere ( 'content', 'like', '%'.Request::input('q').'%');
+			} );
+		}
+		$ccMails = $ccMails->orderBy('created_at', 'desc')->paginate(10);
+
+		$ccMailsCate1s = DB::table('ccmail_samples')
+			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate1, count(*) as cnt'))
+			-> groupBy('cate1')
+			-> orderBy('usedsum', 'desc') -> get();
+		$ccMailsCate2s = DB::table('ccmail_samples')
+			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate2, count(*) as cnt'))
+			-> where('cate1', $cate1)
+			-> groupBy('cate1','cate2')
+			-> orderBy('usedsum', 'desc') -> get();
+		$cate = ['cate1'=>$cate1, 'cate2'=>$cate2];
+		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'cate' ));
+
+
+	}
+	/**
+	 * @param  int  $search_text
+	 * @return Response
+	 * ccmail/sample/4 : 4번 샘플
+	 * ccmail/sample/4/prev : 4번 다음 샘플
+	 */
+	public function show($search_text, $direction = null)
+	{
+		if( !count($direction) ){
+
+			if( is_null($search_text)){
+				$ccMail = CcMailSample::find($search_text);
+				$id = $search_text;
+				if( !count($ccMail) ) abort(404, '자료가 없습니다.');
+
+			}else{ // ccmail/sample/임대차-관계에서-..-경우  주소인 경우.
+
+				// 업무 라는 글자가 들어가면 Object not found! 에러가 나옴...... 뭐지?? -_- 뭐지?
+				// 여긴 자연어 검색해야... ㅎ
+				$ccMail = CcMailSample::where('cate3', str_replace('-', ' ', $search_text) )->first();
+
+				if( !count($ccMail) ) abort(404, '자료가 없습니다.'); // 메인 리스트로 보내자.
+				$id = $ccMail->id;
+			}
 
 			// 해당 카테고리 다른샘플
-			$lists = CcMailSample::where('cate1', $ccMail->cate1)->orderByRaw("RAND()")->take(10)->get();
+			$lists = CcMailSample::where('cate1', $ccMail->cate1)->orderByRaw("RAND()")->take(15)->get();
 
 			return view('boon.ccMail.sample_show', compact('ccMail', 'id', 'lists'));
 		}else if($direction == 'prev'){ //이전버튼
-			$id = CcMailSample::where('id', '<', $id)->max('id');
+			$id = CcMailSample::where('id', '<', $search_text)->max('id');
 			return redirect()->to('/ccmail/sample/'.$id);
 		}else if($direction == 'next'){ //다음버튼
-			$id = CcMailSample::where('id', '>', $id)->min('id');
+			$id = CcMailSample::where('id', '>', $search_text)->min('id');
 			return redirect()->to('/ccmail/sample/'.$id);
 		}
 

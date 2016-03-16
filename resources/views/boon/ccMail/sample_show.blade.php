@@ -137,18 +137,26 @@ $(document).ready(function(){
 
                 작업하자
 
-
         --}}
         {{--본 카테고리 예제--}}
         <div class="" style="padding:20px;">
-            <h5>{{ $ccMail->cate1 }} 카테고리</h5>
+            <h5><a href="/ccmail/sample?cate1={{ $ccMail->cate1 }}">{{ $ccMail->cate1 }}</a> 카테고리</h5>
             <ul style="list-style:none ;line-height:180%;">
             @foreach( $lists as $list )
-                <li style="border-bottom:1px solid #ccc;"><a href="/ccmail/sample/{{ $list->id }}" style="color:;">
-                        <small>{{ $list->id }}.</small> {{ $list->cate3 }}</a>
+                <li style="border-bottom:1px solid #ccc;">
+                    <a href="/ccmail/sample/{{ $list->id }}" style="color:;"><small>{{ $list->id }}.</small> {{ $list->cate3 }}</a>
                 </li>
             @endforeach
             </ul>
+        </div>
+
+
+        {{--안되는게 더 많아.. "사기에 대한 피해보상을 청구할때-최고장. 이것도 안됨 ㅎㅎ--}}
+        <div class="" style="padding:20px;font-size:0.9em;color:#777;">
+            이 페이지의 다른 주소 :
+            <a href="/ccmail/sample/{{ str_replace(' ', '-', $ccMail->cate3) }}" style="color:gray;;">
+                {{Request::server ("HTTP_HOST")}}/ccmail/sample/{{ str_replace(' ', '-', $ccMail->cate3) }}
+            </a>
         </div>
 
     </div>

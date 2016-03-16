@@ -160,6 +160,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         AdamWathan\BootForms\BootFormsServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class, // facebook
+        Roumen\Sitemap\SitemapServiceProvider::class, // auto sitemap
     ],
 
     /*
