@@ -47,10 +47,7 @@ $(document).ready(function(){
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('ccmail') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
-    <li><a href="{{ URL::to('ccmail?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
-    @if($ccMail->cate2)
-    <li><a href="{{ URL::to('ccmail?cate2='.$ccMail->cate2) }}">{{ $ccMail->cate2 }}</a></li>
-    @endif
+
     <li class="active">{{ $ccMail->id }}</li>
 
     <li style="" class="pull-right">{{--이전 샘플 / 다음 샘플--}}

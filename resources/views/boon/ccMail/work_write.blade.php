@@ -83,10 +83,10 @@ $(document).ready(function(){
     <li><a href="{{ URL::to('ccmail/sample') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 샘플</a></li>
     @if($ccMail->cate1)
-        <li><a href="{{ URL::to('ccmail?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
+        <li><a href="{{ URL::to('ccmail/cate/'.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
     @endif
     @if($ccMail->cate2)
-        <li><a href="{{ URL::to('ccmail?cate2='.$ccMail->cate2) }}">{{ $ccMail->cate2 }}</a></li>
+        <li><a href="{{ URL::to('ccmail/cate/'.$ccMail->cate1.'/'.$ccMail->cate2) }}">{{ $ccMail->cate2 }}</a></li>
     @endif
     @if($ccMail->id)
         <li class="active">{{ $ccMail->id }}</li>

@@ -18,7 +18,9 @@
     {{--세부페이지 상단 소 메뉴--}}
     <nav class="navbar navbar-default">
         <div class="navbar-header">
-            <a class="navbar-brand" href="{{ URL::to('ccmail/sample') }}">내용증명</a>
+            <a class="navbar-brand" href="{{ URL::to('ccmail/sample') }}" style="letter-spacing: -0.1em">{{--내용증명--}}
+                <small>내용증명</small>
+            </a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -33,25 +35,18 @@
     </nav>
 
 <style>
-
     .cf:before, .cf:after{
         content:"";
         display:table;
     }
+    .cf:after{ clear:both; }
 
-    .cf:after{
-        clear:both;
-    }
-
-    .cf{
-        zoom:1;
-    }
+    .cf{ zoom:1; }
 
     /* Form wrapper styling */
     .search-wrapper {
         width: 75%;
         margin: 45px auto 50px auto;
-
     }
 
     /* Form text input */
@@ -64,31 +59,23 @@
         border: 0;
         background: #fff;
         border-radius: 5px 0 0 5px;
-
     }
-
     .search-wrapper input:hover + .search-wrapper button {
         background: #ccc
     }
-
     .search-wrapper input:focus {
         outline: 0;
         background: #fff;
-
     }
-
     .search-wrapper input::-webkit-input-placeholder {
         color: #c6c7c6;
         font-weight: normal;
-
     }
-
     .search-wrapper input:-moz-placeholder {
         color: #999;
         font-weight: normal;
         font-style: italic;
     }
-
     .search-wrapper input:-ms-input-placeholder {
         color: #999;
         font-weight: normal;
@@ -134,19 +121,16 @@
         -moz-transition: all 0s linear;
         -ms-transition: all 0s linear;
         -o-transition: all 0s linear;
-
     }
 
     .search-wrapper button:hover:before{
         border-right-color: #e54040;
-
     }
 
     .search-wrapper button:focus:before,
     .search-wrapper button:active:before{
         border-right-color: #c42f2f;
     }
-
     .search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
         border: 0;
         padding: 0;
@@ -180,7 +164,8 @@
 
 
 <style>
-    .btnCate1s span.fa {font-size:2.5em;}
+    .btnCate1s {padding:8px 10px;}
+    .btnCate1s span.fa {font-size:2.0em;}
     .cate1_text {font-size:0.8em;font-family:'맑은 고딕';}
 </style>
 
@@ -228,7 +213,7 @@
 
     @if (!empty($ccMailsCate2s))
     <div class="inner-shadow " style="overflow-x:scroll;width:100%;">
-        <div class="text-center div-ccmail-cate2" style="min-width:500px;">
+        <div class="text-center div-ccmail-cate2" style="min-width:300px;">
             @foreach ($ccMailsCate2s as $ccMailsCate2)
 
                 <a href="{{url('/ccmail/cate/'.$cate['cate1'].'/'.$ccMailsCate2->cate2)}}"
@@ -304,17 +289,16 @@
                 </div>
             @endforeach
 
-                        <!--페이징-->
-
-                <div class="text-center">
-                    {!! $ccMails->appends( Request::input() )->render() !!}
-                    {{--{!! $ccMails->appends( compact('cate1', 'cate2'))->links('ddddddd') !!} links는 안씀이제? --}}
-                    {{--
-                    < ?php $cate1 = Request::input('cate1');
-                    $cate2 = Request::input('cate2');
-                    $q = Request::input('q'); ? >
-                    {!! $ccMails->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
-                </div>
+            <!--페이징-->
+            <div class="text-center">
+                {!! $ccMails->appends( Request::input() )->render() !!}
+                {{--{!! $ccMails->appends( compact('cate1', 'cate2'))->links('ddddddd') !!} links는 안씀이제? --}}
+                {{--
+                < ?php $cate1 = Request::input('cate1');
+                $cate2 = Request::input('cate2');
+                $q = Request::input('q'); ? >
+                {!! $ccMails->appends( compact('cate1', 'cate2', 'q') )->render() !!} 넘길 변수 제한하려면. --}}
+            </div>
         @endif
     </div>
 

@@ -47,7 +47,7 @@ $(document).ready(function(){
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('ccmail/sample') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
-    <li><a href="{{ URL::to('ccmail/sample?cate1='.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
+    <li><a href="{{ URL::to('ccmail/cate/'.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
     @if($ccMail->cate2)
     <li>{{ $ccMail->cate2 }}</li>
     @endif
@@ -140,7 +140,7 @@ $(document).ready(function(){
         --}}
         {{--본 카테고리 예제--}}
         <div class="" style="padding:20px;">
-            <h5><a href="/ccmail/sample?cate1={{ $ccMail->cate1 }}">{{ $ccMail->cate1 }}</a> 카테고리</h5>
+            <h5><a href="/ccmail/cate/{{ $ccMail->cate1 }}">{{ $ccMail->cate1 }}</a> 카테고리</h5>
             <ul style="list-style:none ;line-height:180%;">
             @foreach( $lists as $list )
                 <li style="border-bottom:1px solid #ccc;">

@@ -103,13 +103,15 @@
 
 
 		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"
-			 style="background-image: url(site/ccmail/images/full_5.jpg);background-color:rgba(0, 0, 0, 0.5);">
-		  	{{--한블럭 내려가는 버튼
-		  	<span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
-				<a href="#">
-					<span class="mouse"><span></span></span>
-				</a>
-			</span>--}}
+			 style="position:relative;background-image: url(site/ccmail/images/full_5.jpg);background-color:rgba(0, 0, 0, 0.5);">
+			<small style="position:fixed;bottom:10px;left:10px;"><a href="tel:1661-5521" style="color:gray;">사용법 문의</a></small>
+
+			{{--한블럭 내려가는 버튼
+            <span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
+              <a href="#">
+                  <span class="mouse"><span></span></span>
+              </a>
+          </span>--}}
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover-text">
 				<div class="container">
@@ -144,7 +146,7 @@
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
 										<a href="/ccmail/sample" class="btn btn-primary btn-outline">샘플보기</a>
 										&nbsp;&nbsp;&nbsp;
-										<small><a href="tel:1661-5521">사용방법 안내전화</a></small>
+
 									</p>
 
 										@if(Auth::check())
@@ -154,7 +156,6 @@
 												</div>
 											@endif
 										@endif
-
 								</div>
 
 
