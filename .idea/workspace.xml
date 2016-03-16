@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_show.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,28 +44,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample_list.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sample_list.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.857142">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.50461894">
+              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
               <folding>
-                <element signature="e#4559#4605#0#HTML" expanded="true" />
-                <element signature="e#7177#7214#0#HTML" expanded="true" />
-                <element signature="e#7266#7290#0#HTML" expanded="true" />
-                <element signature="e#8419#8443#0#HTML" expanded="true" />
-                <marker date="1458135007265" expanded="true" signature="7214:7378" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="8443:10141" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="8536:8974" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="8588:8905" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="9086:10141" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="9848:10141" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="9941:10141" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="10001:10141" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="10041:10141" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="10488:10612" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="11092:11122" placeholder="..." />
-                <marker date="1458135007265" expanded="true" signature="11123:11175" placeholder="..." />
+                <element signature="e#4531#4577#0#HTML" expanded="true" />
+                <element signature="e#7149#7186#0#HTML" expanded="true" />
+                <element signature="e#7238#7262#0#HTML" expanded="true" />
+                <element signature="e#8391#8415#0#HTML" expanded="true" />
+                <marker date="1458135291052" expanded="true" signature="7186:7350" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="8415:10113" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="8508:8946" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="8560:8877" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="9058:10113" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="9820:10113" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="9913:10113" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="9973:10113" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="10013:10113" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="10460:10584" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="11064:11094" placeholder="..." />
+                <marker date="1458135291052" expanded="true" signature="11095:11147" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -161,11 +158,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5704388">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.964285">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -230,9 +227,9 @@
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/work_edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/work_write.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
       </list>
     </option>
   </component>
@@ -1034,7 +1031,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458133101155</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="1.04&#10;&#10;메인화면 변경해봄.&#10;&#10;&#10;">
+      <created>1458135174151</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1458135174151</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1086,7 +1089,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="초기개발 1" />
     <MESSAGE value="초기개발 2&#10;" />
     <MESSAGE value="초기개발 3 - 카드결제 테스트전&#10;" />
     <MESSAGE value="초기개발 4 - 메인화면도 개선&#10;" />
@@ -1111,7 +1113,8 @@
     <MESSAGE value="1.01&#10;&#10;" />
     <MESSAGE value="1.02&#10;&#10;카테1 아이콘추가&#10;&#10;" />
     <MESSAGE value="1.03&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.03&#10;&#10;&#10;" />
+    <MESSAGE value="1.04&#10;&#10;메인화면 변경해봄.&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.04&#10;&#10;메인화면 변경해봄.&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1476,7 +1479,7 @@
         <state vertical-scroll-proportion="-18.714285">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <element signature="e#46#82#0#PHP" expanded="true" />
+            <element signature="e#46#82#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1486,7 +1489,7 @@
         <state vertical-scroll-proportion="-9.172414">
           <caret line="204" column="53" selection-start-line="204" selection-start-column="53" selection-end-line="204" selection-end-column="53" />
           <folding>
-            <element signature="e#39#60#0#PHP" expanded="true" />
+            <element signature="e#39#60#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1564,31 +1567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.857142">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="e#4559#4605#0#HTML" expanded="true" />
-            <element signature="e#7177#7214#0#HTML" expanded="true" />
-            <element signature="e#7266#7290#0#HTML" expanded="true" />
-            <element signature="e#8419#8443#0#HTML" expanded="true" />
-            <marker date="1458135007265" expanded="true" signature="7214:7378" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="8443:10141" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="8536:8974" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="8588:8905" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="9086:10141" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="9848:10141" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="9941:10141" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="10001:10141" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="10041:10141" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="10488:10612" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="11092:11122" placeholder="..." />
-            <marker date="1458135007265" expanded="true" signature="11123:11175" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.892858">
@@ -1601,9 +1579,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5704388">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.964285">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50461894">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="e#4531#4577#0#HTML" expanded="true" />
+            <element signature="e#7149#7186#0#HTML" expanded="true" />
+            <element signature="e#7238#7262#0#HTML" expanded="true" />
+            <element signature="e#8391#8415#0#HTML" expanded="true" />
+            <marker date="1458135291052" expanded="true" signature="7186:7350" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="8415:10113" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="8508:8946" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="8560:8877" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="9058:10113" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="9820:10113" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="9913:10113" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="9973:10113" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="10013:10113" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="10460:10584" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="11064:11094" placeholder="..." />
+            <marker date="1458135291052" expanded="true" signature="11095:11147" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

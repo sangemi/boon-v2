@@ -26,10 +26,11 @@
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('ccmail/sample') }}">
         <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 내용증명</a></li>
-    <li>샘플에서 고르거나, 직접 작성</li>
+
     <li class="pull-right"><a href="{{ URL::to('ccmail/work/create') }}">
         <span class="btn btn-xs btn-default" aria-hidden="true">직접 <span class="fa fa-pencil"></span></span></a>
     </li>
+
 
 </ol>
 
