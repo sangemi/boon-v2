@@ -71,6 +71,14 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     ]);
 });
 
+Route::get('help/ccmail','HelpController@ccmail');
+Route::get('help',       'HelpController@ccmail');
+
+
+
+
+
+
 # Admin routes 베껴봤음ㅋ
 /*Route::when('admin/*', 'admin'); # Route filters
 Route::group([ 'prefix' => 'admin', 'namespace' => 'Controllers\Admin' ], function () {

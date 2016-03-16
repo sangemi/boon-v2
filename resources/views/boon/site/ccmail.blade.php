@@ -141,7 +141,11 @@
 										<h2 class="cover-text-sublead wow fadeInUp" style="display:none;" data-wow-duratio="1s" data-wow-delay=".4s">
 										분쟁이 예상될 때는 내용증명으로 시작하세요. <br>어렵지 않습니다. <big>천여개의 샘플</big>과 <big>법률 전문가</big>가 기다리고 있으니까요.
 									</h2>
-									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s"><a href="/ccmail/sample" class="btn btn-primary btn-outline">샘플보기</a></p>
+									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
+										<a href="/ccmail/sample" class="btn btn-primary btn-outline">샘플보기</a>
+										&nbsp;&nbsp;&nbsp;
+										<small><a href="tel:1661-5521">사용방법 안내전화</a></small>
+									</p>
 
 										@if(Auth::check())
 											@if(Auth::user()->name == '김상겸')
