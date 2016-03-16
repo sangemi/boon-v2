@@ -153,13 +153,17 @@ class CcMailSampleController extends Controller {
 		if( empty($direction) ){
 			$ccMail = CcMailSample::find($id);
 			if( empty($ccMail) ) abort(404, '자료가 없습니다.');
-			return view('boon.ccMail.sample_show', compact('ccMail', 'id'));
+
+			// 해당 카테고리 다른샘플
+			$lists = CcMailSample::where('cate1', $ccMail->cate1)->orderByRaw("RAND()")->take(10)->get();
+
+			return view('boon.ccMail.sample_show', compact('ccMail', 'id', 'lists'));
 		}else if($direction == 'prev'){ //이전버튼
 			$id = CcMailSample::where('id', '<', $id)->max('id');
-			return redirect()->to('/ccmail/sample'.$id);
+			return redirect()->to('/ccmail/sample/'.$id);
 		}else if($direction == 'next'){ //다음버튼
 			$id = CcMailSample::where('id', '>', $id)->min('id');
-			return redirect()->to('/ccmail/sample'.$id);
+			return redirect()->to('/ccmail/sample/'.$id);
 		}
 
 	}

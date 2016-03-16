@@ -121,16 +121,34 @@ $(document).ready(function(){
                     <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/' . $ccMail->id . '/edit') }}">Edit</a>
                     <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/create') }}">새 양식 추가</a>
 
-                <form method="post" action="/public/todo/{{$ccMail->id}}" class="pull-left">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <input type="hidden" name="_token" value="{{ csrf_token()  }}">
-                    <input type="submit" value="Del" class="btn btn-link btn-xs">
-                </form>
+                    <form method="post" action="/public/todo/{{$ccMail->id}}" class="pull-left">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token()  }}">
+                        <input type="submit" value="Del" class="btn btn-link btn-xs">
+                    </form>
                 @endif
 
                 <div class="clearfix"></div>
             </div>
 
+        </div>
+
+        {{--다른 카테고리 리스트
+
+                작업하자
+
+
+        --}}
+        {{--본 카테고리 예제--}}
+        <div class="" style="padding:20px;">
+            <h5>{{ $ccMail->cate1 }} 카테고리</h5>
+            <ul style="list-style:none ;line-height:180%;">
+            @foreach( $lists as $list )
+                <li style="border-bottom:1px solid #ccc;"><a href="/ccmail/sample/{{ $list->id }}" style="color:;">
+                        <small>{{ $list->id }}.</small> {{ $list->cate3 }}</a>
+                </li>
+            @endforeach
+            </ul>
         </div>
 
     </div>
