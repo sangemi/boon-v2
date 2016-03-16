@@ -94,6 +94,7 @@
 							<li><a href="/ccmail/work/create" class="call-to-action">바로작성</a></li>
 						@else
 							<li><a href="/auth/login">로그인</a></li>
+							<li><a href="/auth/register">가입</a></li>
 						@endif
 					</ul>
 				</div>

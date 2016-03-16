@@ -52,7 +52,7 @@ class SitemapController extends Controller
             foreach ($posts as $post)
             {
                 //$sitemap->add($post->slug, $post->modified, $post->priority, $post->freq);
-                $sitemap->add( URL::to( '/ccmail/sample/'.$post->cate1 ), $post->created_at, 0.9, 'daily');
+                $sitemap->add( URL::to( '/ccmail/cate/'.$post->cate1 ), $post->created_at, 0.9, 'daily');
             }
 
             // 내용증명 개별

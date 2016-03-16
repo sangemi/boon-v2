@@ -182,7 +182,7 @@ class CcMailSampleController extends Controller {
 	{
 		if( !count($direction) ){
 
-			if( is_null($search_text)){
+			if( is_numeric($search_text)){
 				$ccMail = CcMailSample::find($search_text);
 				$id = $search_text;
 				if( !count($ccMail) ) abort(404, '자료가 없습니다.');

@@ -185,7 +185,7 @@
 </style>
 
 
-    <div class="text-center">
+    <div class="text-center" style="overflow-x:scroll;white-space: nowrap;">
         {{--{{dd( Request::input(), http_build_query (Request::input()) ) }}--}}
 
         @if (!empty($ccMailsCate1s))
@@ -227,15 +227,18 @@
     </div>
 
     @if (!empty($ccMailsCate2s))
-    <div class="text-center inner-shadow div-ccmail-cate2">
+    <div class="inner-shadow " style="overflow-x:scroll;width:100%;">
+        <div class="text-center div-ccmail-cate2" style="min-width:500px;">
             @foreach ($ccMailsCate2s as $ccMailsCate2)
 
                 <a href="{{url('/ccmail/cate/'.$cate['cate1'].'/'.$ccMailsCate2->cate2)}}"
                    class="btn btn-xs ccMailsCate1s <?php echo $ccMailsCate2->cate2 == Request::input('cate2')?"btn-info":"btn-link"; ?>" >
                     <b>{{ $ccMailsCate2->cate2 }}</b>
-                    <span class="badge"> {{ $ccMailsCate2->cnt}} </span>
+                    {{--<span class="badge">--}}
+                    <small>{{ $ccMailsCate2->cnt}}</small>
                 </a>
             @endforeach
+        </div>
     </div>
     @endif
 
@@ -253,7 +256,7 @@
     @endif
 
     {{--내용증명 리스트 간략 박스형태--}}
-    <div class="">
+    <div class="" style="margin-top:30px;">
 
         {{--n개씩 정렬하는 방법--}}
         @if ( $ccMails->isEmpty() )
