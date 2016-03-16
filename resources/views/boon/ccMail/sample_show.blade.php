@@ -36,29 +36,27 @@ $(document).ready(function(){
     } /*버티컬센터 http://stackoverflow.com/questions/20547819/vertical-align-with-bootstrap-3/25517025#25517025*/
 </style>
 
+
+
+{{--세부페이지 네비바 대체--}}
 <style>
     .breadcrumb > li + li.pull-right:last-child:before {
         content: " "; // breadcrumb 특정슬래시 없애기. 공백이면안됨
     }
 </style>
-
-
-{{--세부페이지 네비바--}}
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('ccmail/sample') }}">
-            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>
     <li><a href="{{ URL::to('ccmail/cate/'.$ccMail->cate1) }}">{{ $ccMail->cate1 }}</a></li>
     @if($ccMail->cate2)
-    <li>{{ $ccMail->cate2 }}</li>
+        <li><a href="{{ URL::to('ccmail/cate/'.$ccMail->cate1.'/'.$ccMail->cate2) }}">{{ $ccMail->cate2 }}</a></li>
     @endif
     <li class="active">{{ $ccMail->id }}</li>
 
     <li style="" class="pull-right">{{--이전 샘플 / 다음 샘플--}}
         <span class="btn btn-xs btn-default btnPrev glyphicon glyphicon-menu-left" aria-hidden="true"></span>
         <span class="btn btn-xs btn-default btnNext glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-
     </li>
-
 </ol>
 {{--    <div class="corner-ribbon top-left sticky red shadow">New</div>
     <div class="corner-ribbon top-right sticky blue">Updated</div>

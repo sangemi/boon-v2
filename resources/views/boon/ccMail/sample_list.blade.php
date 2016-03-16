@@ -12,27 +12,27 @@
 @section('content')
 
 
-    <link rel="stylesheet" href="{{URL::asset('/css/boon/ccMail.css')}}">
+<link rel="stylesheet" href="{{URL::asset('/css/boon/ccMail.css')}}">
 
 
-    {{--세부페이지 상단 소 메뉴--}}
-    <nav class="navbar navbar-default">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="{{ URL::to('ccmail/sample') }}" style="letter-spacing: -0.1em">{{--내용증명--}}
-                <small>내용증명</small>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a>천여개의 샘플에서 골라보세요</a></li>
-                {{--<li><a href="{{ URL::to('ccmail/sample') }}">분류</a></li>--}}
-                <li><a href="{{ URL::to('ccmail/work/create') }}">직접작성</a></li>
-            </ul>
-            <ul class="nav navbar-nav" style="float: right">
-                <li><a href="#" class="navbar-nav pull-right"></a></li>
-            </ul>
-        </div>
-    </nav>
+{{--페이지 작은 네비바 대체--}}
+<style>
+
+    .breadcrumb > li + li.pull-right:last-child:before {
+        content: " "; // breadcrumb 특정슬래시 없애기. 공백이면안됨
+    }
+</style>
+
+<ol class="breadcrumb">
+    <li><a href="{{ URL::to('ccmail/sample') }}">
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 내용증명</a></li>
+    <li>샘플에서 고르거나, 직접 작성</li>
+    <li class="pull-right"><a href="{{ URL::to('ccmail/work/create') }}">
+        <span class="btn btn-xs btn-default" aria-hidden="true">직접 <span class="fa fa-pencil"></span></span></a>
+    </li>
+
+</ol>
+
 
 <style>
     .cf:before, .cf:after{
@@ -190,7 +190,7 @@
                     case "부동산":    $txtCate1_pre = "<span class='fa fa-building'></span>"; break;
                     case "근로자":      $txtCate1_pre = "<span class='fa fa-briefcase'></span>"; break;
                     case "공사":      $txtCate1_pre = "<span class='fa fa-truck'></span>"; break;
-                    case "손해배상":  $txtCate1_pre = "<span class='fa fa-money'></span><span class='fa fa-bolt'></span>"; break;
+                    case "손해배상":  $txtCate1_pre = "<span class='fa fa-bolt'></span><small><span class='fa fa-money'></span></small>"; break;
                     case "계약해지":  $txtCate1_pre = "<span class='fa fa-hand-stop-o'></span>"; break;
                     case "물품거래":  $txtCate1_pre = "<span class='fa fa-cubes'></span>"; break;
                     case "기타":      $txtCate1_pre = "<span class='fa fa-ellipsis-h'></span>"; break;
