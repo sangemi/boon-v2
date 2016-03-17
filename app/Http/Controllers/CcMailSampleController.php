@@ -275,7 +275,10 @@ class CcMailSampleController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$task = CcMailSample::find($id);
+		$task->delete();
+		//return redirect()->back(2);
+		return redirect()->to('/ccmail/sample');
 	}
 
 }

@@ -82,7 +82,7 @@ $(document).ready(function(){
 
             {!! BootForm::openHorizontal(['sm' => [2, 10],'lg' => [2, 10]])->id('form-내용증명')
                 ->action('/ccmail/sample/'. $ccMail->id)->put() !!}
-            {!! BootForm::bind($ccMail) !!} {{--헐.......--}}
+            {!! BootForm::bind($ccMail) !!}
 
             <div class="panel-heading">
 

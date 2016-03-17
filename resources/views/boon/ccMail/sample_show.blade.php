@@ -117,18 +117,16 @@ $(document).ready(function(){
 
 
 
-                @if(Auth::check() && (Auth::user()->name == '김상겸' || Auth::user()->name == '정지혜' ) )
+                @if(Auth::check() && (Auth::user()->name == '김상겸' || Auth::user()->name == '정지혜'
+                     || Auth::user()->name == '김수로' || Auth::user()->name == '최다현'  ) )
                     ※ 권한관리해야!
 
-
-                    <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/' . $ccMail->id . '/edit') }}">Edit</a>
-                    <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/create') }}">새 양식 추가</a>
-
-                    <form method="post" action="/public/todo/{{$ccMail->id}}" class="pull-left">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <input type="hidden" name="_token" value="{{ csrf_token()  }}">
-                        <input type="submit" value="Del" class="btn btn-link btn-xs">
-                    </form>
+                    <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/' . $ccMail->id . '/edit') }}">
+                        Edit</a>
+                    <a class="pull-left btn btn-xs btn-link" href="{{ URL::to('ccmail/sample/create') }}">
+                        +양식</a>
+                    <a class="pull-left btn btn-xs btn-link" data-toggle="modal" data-target="#confirmDelete">
+                        삭제</a>
                 @endif
 
                 <div class="clearfix"></div>
@@ -162,6 +160,29 @@ $(document).ready(function(){
             </a>
         </div>
 
+    </div>
+</div>
+
+<div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-labelledby="confirmDelete">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">삭제</h4>
+            </div>
+            <div class="modal-body">
+                <p>{{ $ccMail->id }}번 / 삭제합니다.</p>
+            </div>
+            <div class="modal-footer">
+                <form method="post" action="/ccmail/sample/{{$ccMail->id}}" class="pull-right">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="_token" value="{{ csrf_token()  }}">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    <button type="submit" class="btn btn-primary">삭제</button>
+                </form>
+
+            </div>
+        </div>
     </div>
 </div>
 
