@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample_list.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sample_list.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50461894">
-              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+            <state vertical-scroll-proportion="-16.285715">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="e#4531#4577#0#HTML" expanded="true" />
                 <element signature="e#7149#7186#0#HTML" expanded="true" />
@@ -67,6 +66,16 @@
                 <marker date="1458135291052" expanded="true" signature="11064:11094" placeholder="..." />
                 <marker date="1458135291052" expanded="true" signature="11095:11147" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="googlecd247427628999ab.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/googlecd247427628999ab.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,21 +148,6 @@
             <state vertical-scroll-proportion="-10.178572">
               <caret line="15" column="13" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ccmail.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.714285">
-              <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#small#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1458130633255" expanded="true" signature="6471:6553" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -739,11 +733,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\php\xampp\htdocs\public" />
       <recent name="D:\dev\php\xampp\htdocs\app\Http\Controllers\Admin" />
       <recent name="D:\dev\php\xampp\htdocs\public\site" />
       <recent name="D:\dev\php\xampp\htdocs\resources\views\layouts" />
       <recent name="D:\dev\php\xampp\htdocs\resources\views\boon\help" />
-      <recent name="D:\dev\php\xampp\htdocs\app\Http\Controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\dev\php\xampp\htdocs\public\img\v1" />
@@ -1037,7 +1031,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458135174151</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="1.04&#10;&#10;메인화면 변경해봄.&#10;&#10;&#10;">
+      <created>1458135295258</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1458135295258</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1123,14 +1123,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/userRequest/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.642857">
-          <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/popup.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.857142">
@@ -1587,8 +1579,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50461894">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        <state vertical-scroll-proportion="-16.285715">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="e#4531#4577#0#HTML" expanded="true" />
             <element signature="e#7149#7186#0#HTML" expanded="true" />
@@ -1607,6 +1599,14 @@
             <marker date="1458135291052" expanded="true" signature="11064:11094" placeholder="..." />
             <marker date="1458135291052" expanded="true" signature="11095:11147" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/googlecd247427628999ab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
