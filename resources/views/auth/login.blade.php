@@ -46,7 +46,6 @@
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="login">
 						<br/>
-
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -95,7 +94,7 @@
 					</div>
 
 				</div>
-				<div class="panel-body text-center" style="background-color:#f9f2f4">
+				<div class="panel-body text-center" style="background-color:#dcf0fa">
 					<div id="title설득멘트2">
 						서식작성까지 단 10분!
 					</div>

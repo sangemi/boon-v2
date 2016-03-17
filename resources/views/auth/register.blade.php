@@ -98,7 +98,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="panel-body text-center" style="background-color:#f9f2f4">
+				<div class="panel-body text-center" style="background-color:#dcf0fa">
 					<a href="/auth/login" style="color:gray;">로그인</a>
 				</div>
 			</div>

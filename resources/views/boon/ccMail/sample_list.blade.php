@@ -171,7 +171,7 @@
 </style>
 
 
-    <div class="text-center" style="overflow-x:scroll;white-space: nowrap;">
+    <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         {{--{{dd( Request::input(), http_build_query (Request::input()) ) }}--}}
 
         @if (!empty($ccMailsCate1s))
@@ -236,9 +236,9 @@
         <h1>Corner Ribbons</h1>
         <h2>(with custom settings and all...)</h2>--}}
 
-            <!-- 세션에 메세지 있으면 보여주기 -->
+    {{-- 세션에 메세지 있으면 보여주기 --}}
     @if (Session::has('message'))
-        <div class="alert alert-info">{{ Session::get('message') }}</div>
+        <div class="alert alert-info" style="margin:10px 0;">{{ Session::get('message') }}</div>
     @endif
 
     {{--내용증명 리스트 간략 박스형태--}}

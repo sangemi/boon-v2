@@ -66,6 +66,11 @@ $(document).ready(function(){
     <h1>Corner Ribbons</h1>
     <h2>(with custom settings and all...)</h2>--}}
 
+{{-- 세션에 메세지 있으면 보여주기 --}}
+@if (Session::has('message'))
+    <div class="alert alert-info" style="margin:10px 0;">{{ Session::get('message') }}</div>
+@endif
+
 <div class="row">{{--내용증명 리스트 간략 박스형태--}}
     <div class=" col-sm-10 col-sm-push-1">
 

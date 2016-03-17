@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\BoonStatus;
+use App\Lib\skHelper;
 use App\User;
 use App\UserInfo;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 use Laravel\Socialite\Facades\Socialite;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -33,7 +37,7 @@ class AuthController extends Controller
      * @var string
      */
     protected $redirectTo = '/';
-
+    //protected $redirectPath = '/adda'; //redirectTo, redirectPath 둘가 있으면 Path우선
     /**
      * Create a new authentication controller instance.
      *
@@ -41,7 +45,9 @@ class AuthController extends Controller
      */
     public function __construct()
     {
+
         $this->middleware('guest', ['except' => 'getLogout']); //원래 5.2 버전은 except => logout 이었음.
+
     }
 
     /**
@@ -99,13 +105,50 @@ class AuthController extends Controller
     }
 
 
+
     // 쇼설로긴? // 그냥 하니까 AuthenticatesAndRegistersUsers.php 덮어쓰네..
     public function getLogin()
     {
-        //$data = Session::all();
-        //\SKHelper::p($data);
+        /* 로그인전 화면으로 되돌아가기 1단계 */
+        $prev_url = parse_url(URL::previous());
+        Session::put('return_url', $prev_url['path']);
+        //echo $prev_url['path'];
         return view('auth.login');
     }
+    /** 덮어씀. trait AuthenticatesUsers의 postLogin()
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postLogin(Request $request)
+    {
+        /* 로그인전 화면으로 되돌아가기 2단계 */
+        if(Session::has('return_url'))
+            $this->redirectTo = Session::pull('return_url');
+
+        return $this->login($request);
+    }
+
+
+
+    public function getRegister()
+    {
+        /* 로그인화면에서 가입버튼 클릭시, 로그인전 화면으로 되돌아가기 1단계 */
+        $prev_url = parse_url(URL::previous());
+        if(  $prev_url['path'] != '/auth/login' && $prev_url['path'] != '/login' )
+            Session::put('return_url', $prev_url['path']);
+        //echo $prev_url['path']. '=='. Session::get('return_url');
+        return view('auth.register');
+    }
+    public function postRegister(Request $request)
+    {
+        /* 로그인전 화면으로 되돌아가기 2단계 */
+        if(Session::has('return_url'))
+            $this->redirectTo = Session::pull('return_url');
+        //echo $this->redirectTo;
+        return $this->register($request);
+    }
+
 
     public function getSocialAuth($provider=null)
     {
