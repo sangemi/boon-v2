@@ -212,9 +212,10 @@
         @endif
     </div>
 
-    @if (!empty($ccMailsCate2s))
+    @if (!empty($ccMailsCate2s)) {{--//dd($ccMails->count());--}}
     <div class="inner-shadow " style="overflow-x:scroll;width:100%;">
         <div class="text-center div-ccmail-cate2" style="min-width:300px;">
+
             @foreach ($ccMailsCate2s as $ccMailsCate2)
 
                 <a href="{{url('/ccmail/cate/'.$cate['cate1'].'/'.$ccMailsCate2->cate2)}}"
@@ -250,7 +251,7 @@
             <div class="">
                 <div class="jumbotron text-center">
                     {{--<h1>분야 선택<span class="glyphicon glyphicon-hand-up"></span>! </h1>--}}
-                    <h2>검색된 내용이 없습니다. <span class="fa fa-meh-o"></span> </h2>
+                    <h2 style="opacity:0.3;">검색된 내용이 없습니다. <span class="fa fa-meh-o"></span> </h2>
                     {{--<p>또는 특정 단어로 <span class="glyphicon glyphicon-search"></span>검색해주세요!  <small>예:월세</small></p>--}}
                 </div>
                 {{--<p>This is some text.</p>--}}

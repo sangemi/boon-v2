@@ -45,8 +45,10 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-
-        $this->middleware('guest', ['except' => 'getLogout']); //원래 5.2 버전은 except => logout 이었음.
+        $this->middleware('guest',
+            ['except' => ['getLogout', 'getRegisterEnd'] ]
+        ); //원래 5.2 버전은 except => logout 이었음.
+        /*로그인된 상태여도 getRegisterEnd 페이지는 보이도록. */
 
     }
 
@@ -130,24 +132,28 @@ class AuthController extends Controller
     }
 
 
-
     public function getRegister()
     {
         /* 로그인화면에서 가입버튼 클릭시, 로그인전 화면으로 되돌아가기 1단계 */
         $prev_url = parse_url(URL::previous());
         if(  $prev_url['path'] != '/auth/login' && $prev_url['path'] != '/login' )
             Session::put('return_url', $prev_url['path']);
-        //echo $prev_url['path']. '=='. Session::get('return_url');
+
         return view('auth.register');
     }
     public function postRegister(Request $request)
     {
         /* 로그인전 화면으로 되돌아가기 2단계 */
-        if(Session::has('return_url'))
-            $this->redirectTo = Session::pull('return_url');
-        //echo $this->redirectTo;
+        /*if(Session::has('return_url'))
+            $this->redirectTo = Session::pull('return_url');*/
+        $this->redirectTo = "/auth/register-end";
         return $this->register($request);
     }
+    public function getRegisterEnd() /*구글 목표관리. 회원가입 실적*/
+    {
+        return view('auth.register_end');
+    }
+
 
 
     public function getSocialAuth($provider=null)

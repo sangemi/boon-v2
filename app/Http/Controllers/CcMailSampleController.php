@@ -3,6 +3,7 @@
 use App\CcMailSample;
 use App\Http\Requests;
 
+use App\Lib\skHelper;
 use Guzzle\Plugin\Cookie\Cookie;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
@@ -23,9 +24,9 @@ class CcMailSampleController extends Controller {
 		PUT/PATCH	/photo/{photo}		update	photo.update	> DB업뎃
 		DELETE		/photo/{photo}		destroy	photo.destroy	DB삭제
 	 * index 	create 	store	show 	 edit	update	destroy
-	 *
 	 */
-	/**
+
+	/** 기본 전체 리스트
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -65,6 +66,43 @@ class CcMailSampleController extends Controller {
 		//return view('boon.ccMail.list', compact('ccMailstt')); // resources/views/boon/ccMail/sample_list.blade.php 불러옴 //So compact('var1', 'var2') is the same as saying array('var1' => $var1, 'var2' => $var2) as long as $var1 and $var2 are set.
 	}
 
+	/** 카테고리 클릭한 경우 리스트
+	 * ccmail/임대차 : cate1 = '임대차'
+	 * ccmail/임대차에서... 청구하는 경우 : cate3 like(자연어검색ㅜ) '임대차에서... 경우'
+	 */
+	public function cate($cate1, $cate2 = null)
+	{
+		$ccMails = CcMailSample::where('cate1', $cate1 );
+
+		if( !empty($cate2) ) {
+			$ccMails = $ccMails -> where ('cate2', $cate2);
+
+		}
+		if(Request::input('q')) { //
+			$ccMails = $ccMails -> where (function($query){
+				$query  -> where('cate3', 'like', '%'.Request::input('q').'%')
+					-> orWhere ( 'content', 'like', '%'.Request::input('q').'%');
+			} );
+		}
+
+		$ccMails = $ccMails->orderBy('created_at', 'desc')->paginate(15);
+
+		$ccMailsCate1s = DB::table('ccmail_samples')
+			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate1, count(*) as cnt'))
+			-> where('deleted_at', null) // deleted_at 없애버리자.. 용도가 뭐지..
+			-> groupBy('cate1')
+			-> orderBy('usedsum', 'desc') -> get();
+		$ccMailsCate2s = DB::table('ccmail_samples')
+			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate2, count(*) as cnt'))
+			-> where('cate1', $cate1)
+			-> where('deleted_at', null)  // deleted_at 없애버리자.. 용도가 뭐지..
+			-> groupBy('cate1','cate2')
+			-> orderBy('usedsum', 'desc') -> get();
+		$cate = ['cate1'=>$cate1, 'cate2'=>$cate2];
+		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'cate' ));
+
+
+	}
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -134,44 +172,6 @@ class CcMailSampleController extends Controller {
 	}
 
 
-	/**
-	* ccmail/임대차 : cate1 = '임대차'
-	* ccmail/임대차에서... 청구하는 경우 : cate3 like(자연어검색ㅜ) '임대차에서... 경우'
-	*/
-	public function cate($cate1, $cate2 = null)
-	{
-		$ccMails = CcMailSample::where('cate1', $cate1 );
-		/*if(Request::input('cate2')) {
-			$ccMails = $ccMails -> where ( 'cate1', Request::input('cate1'))
-								-> where ( 'cate2', Request::input('cate2'))
-								-> orderBy('created_at', 'desc');
-		}*/
-		if( !empty($cate2) ) {
-			$ccMails = $ccMails -> where ('cate2', $cate2);
-
-		}
-		if(Request::input('q')) { //
-			$ccMails = $ccMails -> where (function($query){
-				$query  -> where('cate3', 'like', '%'.Request::input('q').'%')
-					-> orWhere ( 'content', 'like', '%'.Request::input('q').'%');
-			} );
-		}
-		$ccMails = $ccMails->orderBy('created_at', 'desc')->paginate(10);
-
-		$ccMailsCate1s = DB::table('ccmail_samples')
-			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate1, count(*) as cnt'))
-			-> groupBy('cate1')
-			-> orderBy('usedsum', 'desc') -> get();
-		$ccMailsCate2s = DB::table('ccmail_samples')
-			-> select(DB::raw('id, sum(used_cnt) as usedsum, cate2, count(*) as cnt'))
-			-> where('cate1', $cate1)
-			-> groupBy('cate1','cate2')
-			-> orderBy('usedsum', 'desc') -> get();
-		$cate = ['cate1'=>$cate1, 'cate2'=>$cate2];
-		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'cate' ));
-
-
-	}
 	/**
 	 * @param  int  $search_text
 	 * @return Response
@@ -275,10 +275,9 @@ class CcMailSampleController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$task = CcMailSample::find($id);
-		$task->delete();
-		//return redirect()->back(2);
-		return redirect()->to('/ccmail/sample');
+		CcMailSample::destroy($id); //CcMailSample::find($id)->delete();
+		Session::flash('message', '삭제되었습니다.');
+		return $this->index();
 	}
 
 }

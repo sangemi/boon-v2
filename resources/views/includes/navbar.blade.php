@@ -4,6 +4,13 @@
             -webkit-box-shadow: 0px 0px 10px #000;
             box-shadow: 0px 0px 10px #000;
         }
+        #navbar-top a.navbar-brand {
+            font-size:1.7em; font-weight: 300; font-family: "Noto Sans CJK SC Thin";
+            letter-spacing: -1.5px;
+            color:goldenrod;
+            text-shadow: 0px 2px 3px #555;
+        }
+
     </style>
     <nav class="navbar navbar-inverse navbar-static-top" id="navbar-top"
          style="background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/always_grey.png);"
@@ -18,10 +25,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="">
                     {{--<nobr>
                         <img src="http://localhost/img/v1/peace_tree.png" style="width:52px;">
-                    </nobr>--}}Boon
+                    </nobr>--}}
+                    Boon
+
                 </a>
             </div>
 

@@ -41,7 +41,6 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::controller('boon/payment', 'PaymentController'); /*pg사와 결제*/
 
 
-
     //// 로그인 routes...
     Route::get('login', 'Auth\AuthController@getLogin');
     Route::post('login', 'Auth\AuthController@postLogin');

@@ -230,9 +230,8 @@ class CcMailWorkController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		CcMailWork::destroy($id);
-		/*$work = $this->ccmail->findOrFail($id);
-		$work->destroy($id);*/
+		CcMailWork::destroy($id); /*$work = $this->ccmail->findOrFail($id)->destroy($id);*/
+		Session::flash('message', '삭제되었습니다.');
 		return $this->index();
 		//return redirect()->route('dashboard.products.index')->with('alert-danger', 'Product successfully deleted.');
 

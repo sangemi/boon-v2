@@ -34,13 +34,14 @@
         top:0;        left: 2%;
     }
     .title-container h1.title-large{
-        font-size: 26px;
-        font-weight: 600;
+        font-size:1.7em; font-weight: 300; font-family: "Noto Sans CJK SC Thin";
+        letter-spacing: -1.5px;
         color:goldenrod;
+        text-shadow: 0px 2px 3px #555;
+
         display: inline-block;
         white-space: nowrap;
-        text-shadow: 0 1px 0 #000;
-        top:28%;      left: 8%;
+        top:30%;      left: 8%;
     }
     /*사이드바의 탑 타이틀 끝*/
 

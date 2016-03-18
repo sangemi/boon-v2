@@ -37,7 +37,6 @@
 </div>
 
 </body>
-</html>
 
 {{--페이스북 로그인--}}
 <script>
@@ -68,3 +67,5 @@
     ga('send', 'pageview');
 
 </script>
+
+</html>

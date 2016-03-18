@@ -146,27 +146,27 @@
                 ->id("form포인트충전")->target('boon-pay-window')->onsubmit('return boonPayWindow();') !!}
 
 
-                <div class="col-xs-2 col-xs-offset-1" style="">
+                <div class="col-xs-4 col-sm-2 col-sm-offset-1" style="">
 
-                    <img src="/img/v1/btn_pay_phone.png" style="width:100%;max-width:150px;">
+                    <img src="/img/v1/btn_pay_phone.png" style="width:100%;max-width:150px; opacity: 0.75;">
                 </div>
-                <div class="col-xs-6">
+                <div class="col-xs-8 col-sm-6">
                     신용카드, 온라인 계좌이체
                     <div class="input-group ">
                         <input type="text" name="price" id="input충전예정액" placeholder="<?=$initialAmt?>" value="<?=$initialAmt?>" class="form-control text-center" required>
                         <span class="input-group-addon" id="basic-addon">원</span>
-                        <button type="submit" class="form-control">결제</button>
+                        <button type="submit" class="form-control"><span class="fa fa-credit-card"></span></button>
                     </div>
                 </div>
                 {!! BootForm::close() !!}
             </div>
 
             <div class="row" style="margin-top:10px;">
-                <div class="col-xs-2 col-xs-offset-1" style="">
+                <div class="col-xs-4 col-sm-2 col-sm-offset-1" style="">
 
-                    <img src="/img/v1/btn_pay_banking.png" style="width:100%;max-width:150px;" />
+                    <img src="/img/v1/btn_pay_banking.png" style="width:100%;max-width:150px; opacity: 0.75;" />
                 </div>
-                <div class=" col-xs-6" style="">
+                <div class="col-xs-8 col-sm-6" style="">
                     <div class="input-group">
                         은행입금
                         <div><a class="btn btn-default" data-toggle="modal" data-target="#modal계좌안내">계좌안내</a></div>
