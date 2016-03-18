@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -61,8 +62,16 @@ class CcMailSampleController extends Controller {
 			$ccMails = $ccMails -> paginate(10);
 		}
 		//\SKHelper::p($ccMails);
-		$cate = ['cate1'=>'', 'cate2'=>''];
-		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'cate'));
+		$etc = ['cate1'=>'', 'cate2'=>'', 'showHelpText' => false ];
+
+		$prev_url = parse_url(URL::previous());
+		$now_url = parse_url(URL::current());
+
+		if( $prev_url['host'] != $now_url['host']){ //타사이트에서 유입. 아마 키워드광고
+			$etc['showHelpText'] = true;
+		}
+
+		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'etc'));
 		//return view('boon.ccMail.list', compact('ccMailstt')); // resources/views/boon/ccMail/sample_list.blade.php 불러옴 //So compact('var1', 'var2') is the same as saying array('var1' => $var1, 'var2' => $var2) as long as $var1 and $var2 are set.
 	}
 
@@ -98,8 +107,8 @@ class CcMailSampleController extends Controller {
 			-> where('deleted_at', null)  // deleted_at 없애버리자.. 용도가 뭐지..
 			-> groupBy('cate1','cate2')
 			-> orderBy('usedsum', 'desc') -> get();
-		$cate = ['cate1'=>$cate1, 'cate2'=>$cate2];
-		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'cate' ));
+		$etc = ['cate1'=>$cate1, 'cate2'=>$cate2, 'showHelpText' => null];
+		return view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'etc' ));
 
 
 	}

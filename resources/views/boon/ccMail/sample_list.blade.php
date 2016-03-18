@@ -35,6 +35,7 @@
 </ol>
 
 
+{{-- 검색부분 끝 --}}
 <style>
     .cf:before, .cf:after{
         content:"";
@@ -150,19 +151,44 @@
     });
 </script>
 
-    <form name="srch_sample_f" method="get" action="{{Request::url()}}" no-error-return-url="true"
-          class="search-wrapper cf">
-        {{--<input type="hidden" name=cate1 value="{!! Request::input('cate1') !!}" />
-        <input type="hidden" name=cate2 value="{!! Request::input('cate2') !!}" />--}}
-        <input type=text name="q" value="<?=htmlspecialchars(stripslashes(Request::input('q')))?>"
-               placeholder="검색" maxlength="80" />
-        <button type=submit id="btn_srch_sample" style="" alt="검색" title="검색" >
-            <i class="fa fa-search"></i>
-        </button>
-    </form>
+<form name="srch_sample_f" method="get" action="{{Request::url()}}" no-error-return-url="true"
+      class="search-wrapper cf">
+    {{--<input type="hidden" name=cate1 value="{!! Request::input('cate1') !!}" />
+    <input type="hidden" name=cate2 value="{!! Request::input('cate2') !!}" />--}}
+    <input type=text name="q" value="<?=htmlspecialchars(stripslashes(Request::input('q')))?>"
+           placeholder="검색" maxlength="80" />
+    <button type=submit id="btn_srch_sample" style="" alt="검색" title="검색" >
+        <i class="fa fa-search"></i>
+    </button>
+</form>
+{{-- 검색부분 끝 --}}
 
-
-
+{{-- 타사이트에서 처음 들어왔을 때만 보이는 설명서 --}}
+@if( $etc['showHelpText']  )
+    <style>
+        .title설득멘트 {
+            padding:0px 20px 30px 20px ;font-size:1.5em;font-weight:600;color:#195F91;
+text-align:center;
+            background-color: #666666;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+        }
+    </style>
+    <p class="title설득멘트">샘플을 고르면 직접 우체국에 가서 내용증명을 발송해드립니다.</p>
+@endif
+<?php
+/*$prev_url = parse_url(URL::previous());
+$now_url = parse_url(URL::current());
+\App\Lib\skHelper::p($prev_url );
+\App\Lib\skHelper::p($now_url);
+//echo $prev_url['path'] .'='. $now_url['path'];
+if( $prev_url['host'] != $now_url['host']){ //타사이트에서 유입. 아마 키워드광고
+echo "ddddddd다름";
+}*/
+?>
 
 <style>
     .btnCate1s {padding:8px 10px;}
@@ -177,7 +203,7 @@
         @if (!empty($ccMailsCate1s))
 
             <a href="{{url('/ccmail/sample?q='.Request::input('q'))}}"
-               class="btn ccMailsCate1s <?php echo empty($cate['cate1'])?"btn-primary":"btn-default"; ?>" >
+               class="btn ccMailsCate1s <?php echo empty($etc['cate1'])?"btn-primary":"btn-default"; ?>" >
                 <b>All</b>
             </a>
 
@@ -201,7 +227,7 @@
                 ?>
 
                 <a href="{{ url('/ccmail/cate/'.$ccMailsCate1->cate1) }}{{  (Request::input('q'))?'?q='.Request::input('q'):'' }}"
-                   class="btn btnCate1s ccMailsCate1s <?php echo (isset($cate['cate1']) && $ccMailsCate1->cate1 == $cate['cate1'])?"btn-primary":"btn-default"; ?>" >
+                   class="btn btnCate1s ccMailsCate1s <?php echo (isset($etc['cate1']) && $ccMailsCate1->cate1 == $etc['cate1'])?"btn-primary":"btn-default"; ?>" >
                     <b>{!! $txtCate1 !!} </b>
                     {{--<span class="badge"> {{ $ccMailsCate1->cnt}} </span>--}}
                     {{--<span class=""> {{ $ccMailsCate1->usedsum}} </span>--}}
@@ -218,7 +244,7 @@
 
             @foreach ($ccMailsCate2s as $ccMailsCate2)
 
-                <a href="{{url('/ccmail/cate/'.$cate['cate1'].'/'.$ccMailsCate2->cate2)}}"
+                <a href="{{url('/ccmail/cate/'.$etc['cate1'].'/'.$ccMailsCate2->cate2)}}"
                    class="btn btn-xs ccMailsCate1s <?php echo $ccMailsCate2->cate2 == Request::input('cate2')?"btn-info":"btn-link"; ?>" >
                     <b>{{ $ccMailsCate2->cate2 }}</b>
                     {{--<span class="badge">--}}
