@@ -99,7 +99,7 @@ $(document).ready(function(){
 <div class="">{{--내용증명 리스트 간략 박스형태--}}
     <div class="row">
 
-        <div class="panel panel-default divCcMailBox ribon_new">
+        <div class="panel panel-default divCcMailBox">
 
 
             <div class="panel-heading">

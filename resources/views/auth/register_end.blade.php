@@ -42,6 +42,14 @@
 	color: transparent;
 	text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
 }
+@media screen and (min-width:600px) {
+	#title멘트 {
+		padding: 100px 20px 20px 20px;
+	}
+}
+@media screen and (max-width:599px) {
+
+}
 .margin-top-30 {margin-top:30px;}
 </style>
 <div class="container-fluid margin-top-30">
@@ -55,7 +63,7 @@
 
 						</div>
 						<div id="title멘트">
-							{!! $return_url = Session::pull('return_url') !!}
+							<?php $return_url = Session::pull('return_url'); ?>
 							<a class="btn btn-lg btn-default" href="{{$return_url or "/"}}">작업을 계속합니다</a>
 							<p><small>잠깐, 분제로를 북마크에 추가해 보세요</small></p>
 						</div>
