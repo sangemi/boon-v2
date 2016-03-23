@@ -168,7 +168,7 @@
     <style>
         .title설득멘트 {
             padding:0px 20px 30px 20px ;font-size:1.5em;font-weight:600;color:#195F91;
-text-align:center;
+            text-align:center;
             background-color: #666666;
             -webkit-background-clip: text;
             -moz-background-clip: text;
@@ -179,6 +179,7 @@ text-align:center;
     </style>
     <p class="title설득멘트">샘플을 고르면 직접 우체국에 가서 내용증명을 발송해드립니다.</p>
 @endif
+
 <?php
 /*$prev_url = parse_url(URL::previous());
 $now_url = parse_url(URL::current());

@@ -134,10 +134,11 @@
 									}
 								</style>
 								<div class="col-sm-6" id="area메인문구">
-									<?php $rand = rand(0, 3);
+									<?php $rand = rand(0, 2);
 
-									$textSupertitle = array('분쟁을 관리하는 가장 쉬운 방법', '분쟁에 대처하는 엘레강스한 방법',
-												'서식작성까지 단 10분! 쉽고 빠른 분쟁관리사', '천여개의 샘플로 서식작성 단 10분');
+									$textSupertitle = array('샘플만 고르시면 직접 우체국에 가드립니다',
+												'서식작성까지 단 10분! 쉽고 빠른 분쟁관리사', '천개의 샘플로 서식작성 단 10분'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
+
 									?>
 										<h1 class="cover-text-lead wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="0s"><?=$textSupertitle[$rand]?></h1>
 										<h2 class="cover-text-sublead wow fadeInUp" style="display:none;" data-wow-duratio="1s" data-wow-delay=".4s">

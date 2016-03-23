@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
+    <meta name="description" content="분쟁관리의 시작 내용증명, 적은 비용으로 가볍게 시작해는 지급명령, 복잡한 소송단계까지 일괄지원 가능합니다." />
+    <meta name="keywords" content="분쟁, 내용증명, 최소비용, 지급명령, 소송, 소액소송, 분쟁관리, 내용증명 작성방법, 내용증명 양식, 채권추심, 차용증쓰는법, 차용증양식, 사직서양식" />
+    <meta name="author" content="(주)모이어" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />

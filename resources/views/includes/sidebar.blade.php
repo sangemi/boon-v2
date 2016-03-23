@@ -74,6 +74,9 @@
 
                 </div>
             </div>
+
+            {{--<li><a href="{{ URL::to('/help/ccmail') }}"><span class="fa fa-exclamation"></span> 내용증명이란</a></li>--}}
+            <li><a href="{{ URL::to('/help/ccmail') }}"><span class="fa  fa-folder-o"></span> 내용증명이란</a></li>
             <li><a href="{{ URL::to('/ccmail/sample') }}"><span class="glyphicon glyphicon-th"></span> 샘플</a></li>
             <li><a href="{{ URL::to('/ccmail/work') }}"><span class="glyphicon glyphicon-save"></span> 보관함</a></li>
             <li><a href="{{ URL::to('/request') }}">신청내역</a></li>

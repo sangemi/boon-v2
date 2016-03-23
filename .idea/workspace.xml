@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/admin/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/site/randing_news.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,90 +41,121 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.321429">
-              <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="54" />
+            <state vertical-scroll-proportion="-7.214286">
+              <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="23" />
               <folding>
-                <element signature="e#45#64#0#PHP" expanded="true" />
+                <element signature="e#6#97#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="work_show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/work_show.blade.php">
+      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.75">
-              <caret line="656" column="48" selection-start-line="656" selection-start-column="48" selection-end-line="656" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.6574395">
+              <caret line="84" column="70" selection-start-line="84" selection-start-column="70" selection-end-line="84" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding>
-                <element signature="e#25286#25311#0#HTML" expanded="true" />
+                <element signature="e#46#74#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_03_06_192341_create_boon_status_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_06_192341_create_boon_status_table.php">
+      <file leaf-file-name="ccmail.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.214286">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_03_04_183616_create_ccmail_works_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_04_183616_create_ccmail_works_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_03_07_160820_create_boon_cash_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.928572">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample_list.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40762123">
-              <caret line="168" column="20" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
+            <state vertical-scroll-proportion="-11.035714">
+              <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
               <folding>
-                <element signature="e#5361#5432#0#HTML" expanded="true" />
+                <element signature="e#2277#6667#0#HTML" expanded="true" />
+                <element signature="e#11493#11514#0#HTML" expanded="true" />
+                <element signature="e#11787#11807#0#HTML" expanded="true" />
+                <element signature="e#14015#14044#0#HTML" expanded="true" />
+                <element signature="e#14261#14349#0#HTML" expanded="true" />
+                <element signature="e#14440#14461#0#HTML" expanded="true" />
+                <element signature="e#15785#15814#0#HTML" expanded="true" />
+                <element signature="e#16876#16905#0#HTML" expanded="true" />
+                <element signature="e#18471#18609#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <file leaf-file-name="randing_news.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/site/randing_news.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.5">
-              <caret line="14" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.035714">
+              <caret line="25" column="89" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="89" />
+              <folding>
+                <element signature="n#style#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#LI#0;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#LI#1;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#LI#2;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#LI#3;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#LI#4;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#A#0;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#A#1;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#A#2;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#1;n#tr#0;n#table#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#2;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#center#0;n#td#0;n#tr#4;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#7;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#4;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#4;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#5;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#6;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#7;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#TD#0;n#TR#4;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="work_list.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/work_list.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info-라라벨 변수.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SK/info-라라벨 변수.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/admin/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.0">
-              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,19 +163,33 @@
       <file leaf-file-name="CcMailSampleController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.0">
-              <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <folding>
+                <element signature="e#39#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_list.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_03_04_183617_create_user_payment_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_04_183617_create_user_payment_table.php">
+      <file leaf-file-name="ccmail.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+              <folding>
+                <marker date="1458566711529" expanded="true" signature="6497:6579" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,9 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_04_183615_create_ccmail_samples_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/head.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/point/cash_list.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_04_172621_create_user_request_table.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/userRequest/list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserRequestController.php" />
@@ -169,11 +219,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/SmsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HelpController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/help.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
         <option value="$PROJECT_DIR$/public/css/boon/ccMail.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SitemapController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_write.blade.php" />
@@ -184,7 +232,6 @@
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CcMailWorkController.php" />
@@ -192,14 +239,20 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/popup.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/public/img/v1/boon-icon.svg" />
-        <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register_end.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/work_show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/head.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/admin/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/site/randing_news.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
       </list>
     </option>
   </component>
@@ -218,8 +271,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2004" />
-    <option name="width" value="1049" />
+    <option name="x" value="1931" />
+    <option name="y" value="1" />
+    <option name="width" value="1305" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -315,6 +369,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="boon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -341,7 +439,163 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="post" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="point" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="help" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ccMail" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,6 +727,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Jobs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -587,11 +859,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\php\xampp\htdocs\resources\views\boon\site" />
+      <recent name="D:\dev\php\xampp\htdocs\resources\views\boon\admin" />
       <recent name="D:\dev\php\xampp\htdocs\resources\views\auth" />
       <recent name="D:\dev\php\xampp\htdocs\public\img\v1" />
       <recent name="D:\dev\php\xampp\htdocs\public" />
-      <recent name="D:\dev\php\xampp\htdocs\app\Http\Controllers\Admin" />
-      <recent name="D:\dev\php\xampp\htdocs\public\site" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\dev\php\xampp\htdocs\public\img\v1" />
@@ -927,7 +1199,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458292902724</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="1.07&#10;&#10;status table - auto increse 추가&#10;&#10;&#10;">
+      <created>1458294747776</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1458294747776</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -940,28 +1218,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2004" y="0" width="1049" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="1931" y="1" width="1305" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24466951" sideWeight="0.5080386" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26491407" sideWeight="0.49196142" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21767068" sideWeight="0.49196142" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12567714" sideWeight="0.5072185" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45287108" sideWeight="0.49278152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33261105" sideWeight="0.4971146" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19302154" sideWeight="0.49624866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24466951" sideWeight="0.5080386" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45287108" sideWeight="0.49278152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1013,62 +1291,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HelpController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.821428">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/site/help/ccmail/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10614525">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/help.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.535714">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/head.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/home/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3571428">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.107143">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/pages.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.142858">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/robots.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1132,13 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.464286">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.642857">
@@ -1157,7 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.785714">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,7 +1379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.071429">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,7 +1386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="41.0">
           <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,9 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.607142">
           <caret line="45" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1198,9 +1407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.428571">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1211,13 +1417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.714285">
-          <caret line="1069" column="42" selection-start-line="1069" selection-start-column="42" selection-end-line="1069" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.892857">
@@ -1225,18 +1424,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.642857">
-          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CcMailWorkController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.785715">
           <caret line="233" column="46" selection-start-line="233" selection-start-column="46" selection-end-line="233" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,12 +1435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="166" column="107" selection-start-line="166" selection-start-column="107" selection-end-line="166" selection-end-column="107" />
-          <folding>
-            <marker date="1458220661307" expanded="true" signature="4438:4634" placeholder="..." />
-            <marker date="1458220661307" expanded="true" signature="4557:4568" placeholder="..." />
-            <marker date="1458220661307" expanded="true" signature="4578:4595" placeholder="..." />
-            <marker date="1458220661307" expanded="true" signature="4607:4632" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1257,29 +1442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-          <folding>
-            <marker date="1457959059513" expanded="true" signature="1234:1433" placeholder="..." />
-            <marker date="1457959059513" expanded="true" signature="1291:1352" placeholder="..." />
-            <marker date="1457959059513" expanded="true" signature="1390:1431" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1287,7 +1449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1295,7 +1456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1303,25 +1463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.464285">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.678572">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding>
-            <element signature="e#3232#3251#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,7 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.678572">
           <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,7 +1477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1345,7 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.214286">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1353,7 +1491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,7 +1498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.928572">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,9 +1505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.75">
           <caret line="656" column="48" selection-start-line="656" selection-start-column="48" selection-end-line="656" selection-end-column="48" />
-          <folding>
-            <element signature="e#25286#25311#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1379,27 +1512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.0">
           <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.321429">
-          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="54" />
-          <folding>
-            <element signature="e#45#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0">
-          <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1407,17 +1519,197 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.5">
           <caret line="14" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/help.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.71428573">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.928572">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.035715">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.821428">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/home/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/post/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/admin/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/work_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#60#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40762123">
-          <caret line="168" column="20" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
           <folding>
-            <element signature="e#5361#5432#0#HTML" expanded="true" />
+            <marker date="1458566711529" expanded="true" signature="6497:6579" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/randing_news.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.035714">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="89" />
+          <folding>
+            <element signature="n#style#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#LI#0;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#LI#1;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#LI#2;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#LI#3;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#LI#4;n#UL#0;n#DIV#0;n#TD#4;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#A#0;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#A#1;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#A#2;n#TD#5;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#0;n#table#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#1;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#2;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#center#0;n#td#0;n#tr#4;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#7;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#4;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#4;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#5;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#6;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#7;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#TD#0;n#TR#3;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#TD#0;n#TR#4;n#TBODY#0;n#TABLE#0;n#TD#1;n#TR#0;n#TBODY#0;n#TABLE#0;n#DIV#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.035714">
+          <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+          <folding>
+            <element signature="e#2277#6667#0#HTML" expanded="true" />
+            <element signature="e#11493#11514#0#HTML" expanded="true" />
+            <element signature="e#11787#11807#0#HTML" expanded="true" />
+            <element signature="e#14015#14044#0#HTML" expanded="true" />
+            <element signature="e#14261#14349#0#HTML" expanded="true" />
+            <element signature="e#14440#14461#0#HTML" expanded="true" />
+            <element signature="e#15785#15814#0#HTML" expanded="true" />
+            <element signature="e#16876#16905#0#HTML" expanded="true" />
+            <element signature="e#18471#18609#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.214286">
+          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6574395">
+          <caret line="84" column="70" selection-start-line="84" selection-start-column="70" selection-end-line="84" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>

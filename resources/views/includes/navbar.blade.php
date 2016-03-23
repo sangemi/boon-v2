@@ -78,6 +78,11 @@
                                 <li><a >{{ Auth::user()->name }}</a></li>
                                 <li><a href="{{ url('/auth/logout') }}">로그아웃</a></li>
 
+                                @if(Auth::check() && (Auth::user()->name == '김상겸' || Auth::user()->name == '정지혜'
+                                                     || Auth::user()->name == '김수로' || Auth::user()->name == '최다현'  ) )
+                                    <li><a href="/admin/">관리화면</a></li>
+                                @endif
+
                             </ul>
                         </li>
                     @endif
