@@ -10,7 +10,17 @@
 			-moz-background-clip: text;
 			background-clip: text;
 			color: transparent;
-			text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;*/
+			text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+
+
+
+			익스에서 안됨!!
+
+
+
+
+
+			*/
 		}
 		#title설득멘트2 {
 			padding:10px 20px 0px 20px;
