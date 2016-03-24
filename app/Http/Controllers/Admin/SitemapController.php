@@ -28,8 +28,12 @@ class SitemapController extends Controller
         if (!$sitemap->isCached())
         {
             // add item to the sitemap (url, date, priority, freq)
+            // 메인페이지
             $sitemap->add(URL::to('/'), '2016-01-25T20:10:00+02:00', '1.0', 'daily');
             $sitemap->add(URL::to('ccmail/sample'), '2016-01-26T12:30:00+02:00', '0.8', 'weekly');
+
+            // 도움말페이지
+            $sitemap->add( URL::to( '/help/ccmail' ), '2016-3-23', 0.9, 'weekly');
 
             /*// add item with translations (url, date, priority, freq, images, title, translations)
             $translations = [
@@ -62,6 +66,8 @@ class SitemapController extends Controller
                 //$sitemap->add($post->slug, $post->modified, $post->priority, $post->freq);
                 $sitemap->add( URL::to( '/ccmail/sample/'.$post->id ), $post->created_at, 0.7, 'weekly');
             }
+
+
         }
 
         // show your sitemap (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')

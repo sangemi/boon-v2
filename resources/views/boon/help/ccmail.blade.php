@@ -89,6 +89,10 @@
 
 
         <div class="markdown-body content-body ">
+
+            <p><em>내용증명은 그리 어려운것이 아니다. 단순히 생각해 나중 분쟁이 생겼을 때, "너 그때 이렇게 이야기 했지? 그래서 나는 이렇게 이야기했잖아"라고
+                말하기 위해서 가장 좋은 것이 내용증명일 뿐이다. 가벼운 마음으로 읽어보도록 하자. (8분 소요)</em></p>
+
             <p><a id="intro" title="Intro 관련 사이트" class="toc-item"></a></p>
 
             <p><bold>내용증명 관련 사이트 모음</bold></p>
@@ -109,11 +113,6 @@
                         http://boonzero.com/ccmail/work
                     </a>
                 </p>
-                <p><strong>내용증명 나무위키</strong> :
-                    <a href="https://namu.wiki/w/%EB%82%B4%EC%9A%A9%EC%A6%9D%EB%AA%85" target="_blank">
-                        https://namu.wiki/w/내용증명
-                    </a>
-                </p>
                 <p><strong>내용증명 생활법령정보</strong> :
                     <a href="http://oneclick.law.go.kr/CSP/CnpClsMain.laf?csmSeq=272&ccfNo=4&cciNo=3&cnpClsNo=1" target="_blank">
                         http://oneclick.law.go.kr 보기
@@ -123,8 +122,6 @@
 
             </blockquote>
 
-            <p><em>내용증명은 결코 어려운것이 아니다. 나중 분쟁이 생겼을 때 "너 그때 이렇게 이야기 했지? 그래서 나는 이렇게 이야기했잖아"라고
-                말하기 위해서 내용증명이 필요한 것이다.</em></p>
             {{--<p>그래서 엄밀히 내용증명은 특수한 몇명 경우를 제외하고는 필요하지 않다. 보낸사실만 남기면 되기 때문에, 평소 상대방이 쓰는 이메일주소로 메일을 남기고, 평소 쓰는 핸드폰에 문자를 남기는 것으로
             내용증명의 효력과 같은 효과를 볼 수 있다.</p>
             <p>위의 방법은 99% 유효하다. 하지만 1% 상대방이 받지 않았다고 항변할것이 걱정되어 법조인들도 내용증명을 보내곤 한다.</p>--}}
@@ -139,9 +136,10 @@
 
             <img src="http://www.moior.com/sangdam/images/sangdam.post.1.jpg" style="vertical-align: middle; border-style: none;" />
 
-            <p>내용증명이란 <em>'발송인이 특정한 날에 어떠한 내용의 문서를 수신인에게 보냈다'</em>라는 사실을 국가가 증명해주는 것을 말한다.
-                내용증명이 반드시 필요한 경우는 법적으로 상대방에게 '고지'를 한 후 후속절차를 취할 수 있도록 제한한 경우인데, 그 예들은 밑에 따로 설명하겠다.
-                그러나 반드시 '고지'가 필요한 경우에만 내용증명이 활용되는 것은 아니고,
+            <p>내용증명이란 <em>'발송인이 특정한 날짜에 어떠한 내용의 문서를 수신인에게 보냈다'</em>라는 사실을 공식적으로 증명해주는 제도이다.
+                내용증명이 <b>반드시</b> 필요한 경우는, 상대방에게 고지를 한 후라야 후속절차를 할 수 있도록 법적으로 제한한 경우인데, 그 예들은 밑에 따로 설명하겠다.
+            </p>
+            <p>그러나 반드시 '고지'가 필요한 경우에만 내용증명이 활용되는 것은 아니고,
                 상대방에게 자신의 확정된 의사를 밝힘으로써 심리적 압박감을 주기 위한 용도로도 충분히 활용될 수 있다.</p>
 
 
@@ -178,7 +176,7 @@
                     <font color="#951015"><em>금원을 빌려간 일에 대하여 발신인이 채무변제를 촉구하였다</em></font>
                     <font color="#333333">"라는 사실만이 입증된다.
                         10회에 걸쳐 연락하였다는 것도 사실은 입증된 것은 아닌데, 이러한 내용들이 실제 소송에서 정황증거로 활용될 수는 있다.</font></p>
-                <p>&nbsp;</p>
+
                 <p><b>통보사실이 왜 중요한지</b>&nbsp;모르는 분들이 많다.</p>
                 <p>어떤 계약이 있는데, 일방이 계약이행일로부터 9년이 지나서, 상대방이 계약내용을 이행하지 않아서 발생한 손해를 배상하라는&nbsp;소송을 가정해보자.</p>
                 <p>&nbsp;</p>
@@ -212,15 +210,15 @@
             <h2>#3 내용증명 작성방법</h2>
 
 
-            <p>내용증명에는 특별한 형식이 정해져 있지 않습니다.<br />
-            따라서 간략히 주의할 점 몇가지와 실제 발송방법을 설명하겠습니다.</p>
+            <p>내용증명에는 특별한 형식이 정해져 있지 않다.<br />
+            따라서 간략히 주의할 점 몇가지와 실제 발송방법을 설명해 보겠다.</p>
 
             <ol>
-                <li> 발신인과 수신인의 <code>이름</code>과 정확한 <code>주소</code>를 상단에 기재합니다.</li>
-                <li> 수신인에게 전하고자 하는 <code>내용</code>을 '육하원칙'에 따라 작성합니다.</li>
-                <li> 작성된 서면의 하단에 기명날인(이름을 적고 도장을 찍음)합니다. (필수 아님)</li>
-                <li> 작성한 서면을 2부 복사하여 <code>동일한 서면을 3부</code> 만듭니다.</li>
-                <li> 우체국의 내용증명 창구에 우편봉투와 3부의 동일한 서면을 봉인하지 않은 상태로 제출합니다. </li>
+                <li> 발신인과 수신인의 <code>이름</code>과 정확한 <code>주소</code>를 상단에 기재한다.</li>
+                <li> 수신인에게 전하고자 하는 <code>내용</code>을 '육하원칙'에 따라 작성한다.</li>
+                <li> 작성된 서면의 하단에 기명날인(이름을 적고 도장을 찍음)한다. (필수 아님)</li>
+                <li> 작성한 서면을 2부 복사하여 <code>동일한 서면을 3부</code> 만든다.</li>
+                <li> 우체국의 내용증명 창구에 우편봉투와 3부의 동일한 서면을 봉인하지 않은 상태로 제출한다. </li>
             </ol>
 
 
@@ -239,129 +237,34 @@
 
 
 
-            <p><a id="commit" title="#4 내용증명 실제비용" class="toc-item"></a></p>
+    <p><a id="pr" title="#4 이럴땐 반드시!" class="toc-item"></a></p>
 
-            <h2>#4. 내용증명 발송시 실제 드는 비용은</h2>
+    <h2>#4 내용증명이 특히 필요한 경우</h2>
 
-            <p>
-                <div class="container-fluid" style="background-color:#fff">
-                    <div class="col-xs-6">
-                        <img src="http://www.moior.com/v/files/attach/images/147694/698/147/d245804bae3603ccb6583063d4930696.jpg"
-                             align="left" style=" width: 290px; height: 197px; vertical-align: middle; clear: left; margin: 10px;" alt="우체국 내용증명 비용" />
-                    </div>
-                    <div class="col-xs-6" style="padding:10px;">
-                        대한민국 우체국<br>
-                        <a href="www.epost.go.kr" target="_blank">www.epost.go.kr</a><br>
-                        <a href="tel:1588-1300">1588-1300</a><br>
+    <div class="panel">
+        <ol>
+            <li><h5>상대방이 계약을 위반하기 시작할 때</h5>
+                그리고 머지 않아 계약을 해제할 것이 예상된다면, <u>반드시 정상적인 계약사항 이행을 촉구하는 내용증명</u>을 보내야 한다.
+                계약관계가 갑자기 무너지는 경우는 잘 없다. 긴 시간을 통해서 어느 한 쪽이 계약을 어기는 일이 누적되어 결국은 분쟁에 돌입하게 된다.
+                미리 보내놓은 내용증명 하나는 나중 서로의 과실비율 10%를 좌우하고, 결과적으로 수천만원 상당의 효과를 낼 수도 있음을 명심하자.
+            </li>
+            <li><h5>임대차 해지통보</h5></li>
+            <li><h5>채권을 양도한 경우</h5></li>
+            <li><small>(ing..)</small></li>
+        </ol>
+    </div>
 
-                        실제 우체국에 방문하여 지불해야 하는 내용증명 비용을 계산해보겠습니다.  (내용증명 가격)
-                    </div>
-                </div>
-            </p>
-
-
-
-            <p>내용증명은 기본 등기우편 비용 + 특별 내용증명 관리비용으로 구성됩니다.</p>
-            <ol>
-                <li>내용증명 취급 비용</li>
-                <li>등기우편 비용</li>
-
-            </ol>
-
-            <h4>1. 먼저 내용증명 취급 비용</h4>
-
-            취급비용은 총 3부의 내용증명 중 하나를 우체국에 보관하는 시스템을 이용하는데 드는 비용입니다.
-
-
-            <div class="container-fluid ">
-                취급비용은 문서의 장수에 따라 계산합니다.
-                <ul class="col-xs-6">
-                    <li>기본 1매 - 1300원</li>
-                    <li>1매 추가당 - 650원</li>
-                </ul>
-
-                <ul class="col-xs-6">
-                    즉 내용증명의 페이지가
-                    <li>1장일 경우 1,300원</li>
-                    <li>2장일 경우 1,950원</li>
-                    <li>3장일 경우 2,600원</li>
-                    <li>4장일 경우 3,250원</li>
-                    <li>6장일 경우 4,550원</li>
-                    <li>8장일 경우 5,850원</li>
-                </ul>
-                의 비용이 기본적으로 부과됩니다.
-            </div>
-
-            <h4>2. 등기우편 비용</h4>
-
-            <div class="container-fluid" style="background-color:#fff">
-                <div class="col-xs-6">
-
-                    <h5>1) 보통우편 비용</h5>
-
-                    규격우편물
-                    <small>
-                    <ul>
-                        <li>5g까지 270원</li>
-                        <li>5g초과 25g까지 300원</li>
-                        <li>25g초과 50g까지 320원</li>
-                    </ul>
-                    </small>
-                        규격외우편물
-                    <small>
-                    <ul>
-                        <li>50g까지 390원</li>
-                        <li>50g초과 1kg까지 50g까지 마다 120원 가산</li>
-                        <li>1kg초과 2kg까지 200g까지 마다 120원 가산</li>
-                        <li>2kg초과 6kg까지 1kg까지 마다 400원 가산</li>
-                    </ul>
-                    </small>
-                </div>
-                <div class="col-xs-6">
-                    <h5>2) 등기우편 비용</h5>
-                    <em><small>내용증명은 무조건 등기우편입니다.</small></em>
-                    <li>1통 1,630원 우편요금에 가산</li>
-                </div>
-            </div>
-
-
-            <h4>실제 계산 예제입니다.</h4>
-
-            <div class="container-fluid" style="background-color:#fff">
-                <div class="col-xs-6">
-                    <li>1장짜리 가장 짧은 내용증명을 보내는 경우</li>
-                    우편요금 270원(5g까지)<br />
-                    내용증명 취급비용 1300원<br />
-                    등기비용 1630원<br />
-                    ----------------------------<br />
-                    총 합 3200원입니다.
-                </div>
-                <div class="col-xs-6">
-                    <li>2장짜리 중량 7g짜리 통상의 내용증명을 규격봉투로 보내는 경우</li>
-                    우편요금 300원(5g까지)<br />
-                    내용증명 취급비용 1950원<br />
-                    등기비용 1630원<br />
-                    -----------------------<br />
-                    총 합 3880원을 우체국 창구에 내셔야 합니다.
-                </div>
-            </div>
-
-
-
-            <p>Bravo! 수고하셨습니다.</p>
-            <p>마지막단계가 남았습니다.<br />
-                내용증명에서 가장 중요한 것을 꼽으라 하면 당연 그 '내용'이겠지요.<br />
-                <br />
-                내용증명은 추후 법적 절차에 이용하기 위한 전제행위이기 때문에,
-                내용증명이 실제 소송에서 어떻게 효과를 내는지 많이 다루어 본
-                법률 전문가에게 내용을 검수받는 것을 권장합니다.<br />
-                <br />
-                다음 챕터로 넘어가 보겠습니다.<br />
-            </p>
-
-
-
-
+    <p>Bravo, 거의 마지막 단계입니다.</p>
+    <p>
+        내용증명에서 가장 중요한 것을 꼽으라 하면 당연히 그 "내용"이다.</p>
+    <p>
+        내용증명은 나중 법적 절차에 이용하기 위한 전제행위이기 때문에,
+        실제 소송에서 이것이 어떻게 이용되는지 많이 다루어 본
+        법률 전문가에게 내용을 검수받는 것을 권장한다.
+    </p>
+    <p>
+        다음 챕터에서 좀 더 자세히 보자.
+    </p>
 
 
 
@@ -371,7 +274,7 @@
 
             <h2>#5 소송을 대비한 내용증명</h2>
 
-            <p><span style="font-size: 14pt;"><font color="#0075c8"><b>내용증명, 가능하면 법무법인의 명의로 보내보세요.</b></font></span></p>
+            <p><span style="font-size: 14pt;"><font color="#0075c8"><b>법무법인 내용증명으로 형식과 내용을 다 잡아보자.</b></font></span></p>
 
 
             <blockquote>
@@ -383,44 +286,32 @@
             </blockquote>
 
             <blockquote style="padding: 0px; margin: 0px 0px 0px 40px; border: medium none;">
-                <p>법적 분쟁이 생겼을 때,&nbsp;<br />내용증명은 특정한 사실을 상대방과의 다툼없이 증명할 수 있다고 하였습니다.</p>
-                <p>그런데 내용증명의 내용에 자신에게 불리하고 상대방에게 유리한 내용이 들어가면 어떻게 될까요?</p>
+                <p>법적 분쟁이 생겼을 때,&nbsp;<br />내용증명은 특정 사실을 상대방과 다툼없이 증명할 수 있다고 하였다.</p>
+                <p>그런데 내용증명의 내용에 자신에게 불리하고 상대방에게 유리한 내용이 들어가면 어떻게 될까?</p>
 
-                <p><u>내용증명에 들어갈 내용은 추후 분쟁을 예상하여 치밀하게 작성하여 보내야 합니다.</u></p>
+                <p>내용증명에 들어갈 내용은 <u>추후 분쟁을 예상하여</u> 작성해야 한다. 위에서도 이야기 했지만 내용증명에는 하고싶은 말을 다 적으면 안된다.</p>
                 <p>전문가들이 작성을 완료한 서식을 보면, "이렇게 나도 따라 쓰면되겠네"라고 쉽게 생각할 수 있는데,</p>
-                <p>사안에 따라 내용증명에 넣어야 될 사실과 넣지 말아야 될 사실을 구분할 필요가 분명히 있습니다.</p>
-                <p>어떤 사례도 인터넷에 널린 예제와 똑같을 수 없고 사건마다 생각치 못한 특별한 쟁점이 숨어있을 수 있습니다.</p>
+                <p>사안에 따라 내용증명에 넣어야 될 사실과 넣지 말아야 될 사실을 구분할 필요가 있다.</p>
+                <p>어떤 사례도 인터넷에 널린 예제와 똑같을 수 없고 사건마다 생각치 못한 특별한 쟁점이 숨어있을 수도 있다.</p>
 
-                <p>또한 상대방에게 내가 법적인 조치를 곧 취할 수도 있겠구나라는 심리적 압박감을 주려는 목적을 달성하려면, 법적 후속절차를 바로 밟을 수 있는 법무법인의 명의로 내용증명을 보내는 것이 어느정도 효과적입니다.</p>
+                <p>또한 상대방에게 법적 조치가 곧 시작될 수도 있겠구나라는 심리적 압박감을 주려면, 법무법인의 명의로 내용증명을 보내는 것도 어느정도 효과적이다.</p>
 
-                <p>실제로 10건의 내용증명 중에서 2건 정도가 내용증명단계에서 해결이 됩니다.&nbsp;<span>(상대방이 법인으로 전화를 해서 앞으로 제가 어떻게 해야하냐고 물어보는 경우도 있는데&nbsp;</span><span>그럴때면 발송인의 입장을 대변하여 최대한 문제가 발생하지 않을 방향으로 안내를 해주기도 합니다.)</span></p>
-
-
-                <h4>법인명의의 내용증명은 비용이 발생합니다.</h4>
-                <p>이 비용은 [우편료과 교통·인건비, 변호사 사례 검토비, 상대방 연락에 대한 응대비] 등에 대한 비용으로 부담되지 않도록 책정되어 있습니다. 또한 나중 해당 사건이 실제 소송으로 발전될 경우,&nbsp;<u>수임료에서 공제</u>하고 있습니다. 이제 법무법인을 통한 내용증명이라는 '<span style="font-size: 1.3em; font-weight: bold;">보험</span>'을 들어보세요.</p>
-
-
-                <p><b>내용증명 양식찾기 : </b> <a href="http://www.boonzero.com/ccmail/sample">http://boonzero.com/ccmail/sample</a></p>
-                <p><b>분쟁제로 : </b> <a href="http://www.boonzero.com/ccmail/sample">http://www.boonzero.com</a></p>
-
-            </blockquote>
-
-
-
-
-            <p><em>내용증명 도달여부 확인방법</em></p>
-            <hr />
-            <blockquote>
-                <p>
-                    <strong>등기배송 실시간 확인</strong> :
-                    <a href="http://service.epost.go.kr/iservice/trace/Trace.jsp" target="_blank">
-                        http://service.epost.go.kr/iservice/trace/Trace.jsp
-                    </a>
-                    {{-- 파일 끌어다 놓기... 사이트 헐.
-                    <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#using-emoji">emoji</a> and
-                    <a href="https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/">drag and drop images and gifs</a> onto comments and Pull Requests.--}}
+                <p>실제로 10건의 내용증명 중에서 2건 정도가 내용증명단계에서 해결이 된다.&nbsp;
+                    <span>상대방이 법인으로 전화를 해서 그러면 어떻게 하면 좋을지 물어보는 경우도 있는데&nbsp;</span><span>그럴때 발송인의 입장을 대변하여 안내를 해주기도 한다.</span>
                 </p>
+
+
+                <h5>법인명의의 내용증명은 비용이 발생합니다.</h5>
+                <p>이 비용은 [우편료과 교통·인건비, 변호사 검토비] 등으로 구성되어 있다.
+                    또한 나중 해당 사건이 실제 소송으로 발전될 경우,&nbsp;<u>수임료에서 공제</u>하고 있습니다. 이제 법무법인을 통한 내용증명이라는 '<span style=" font-size: 1.3em; font-weight: bold;">보험</span>'을 들어보도록 하자.
+                </p>
+
             </blockquote>
+
+
+    {{--<p><b>내용증명 양식찾기 : </b> <a href="http://www.boonzero.com/ccmail/sample">http://boonzero.com/ccmail/sample</a></p>
+    <p><b>분쟁제로 : </b> <a href="http://www.boonzero.com/ccmail/sample">http://www.boonzero.com</a></p>--}}
+
 
 
 
@@ -433,31 +324,169 @@
             <p>보통 : 접수일로부터 약 4일</p>
             <p>익일특급 : 접수일로부터 약 2일</p>
 
+            <h4>내용증명 재발급</h4>
+            <p>내용증명을 분실한 경우, 3년 내에 우체국에 방문시 재발급받을 수 있다. 하지만 소송을 하더라도 원본 그 자체가 필요한 경우는 별로 없으니 걱정은 말자.
+                참고로 분쟁제로를 통하여 내용증명을 보낼 경우,
+                분쟁제로가 존재하는 한 영구히 보관시킬 수 있으며, PDF파일로도 저장할 수 있다.
+            </p>
+
+            <h4>등기배송 실시간 확인</h4>
+            <hr />
+            <blockquote>
+                <p>
+                    <strong></strong> :
+                    <a href="http://service.epost.go.kr/iservice/trace/Trace.jsp" target="_blank">
+                        http://service.epost.go.kr/iservice/trace/Trace.jsp
+                    </a>
+                    {{-- 파일 끌어다 놓기... 사이트 헐.
+                    <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#using-emoji">emoji</a> and
+                    <a href="https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/">drag and drop images and gifs</a> onto comments and Pull Requests.--}}
+                </p>
+            </blockquote>
 
 
 
 
-            <p><a id="merge" title="#0 요정정리" class="toc-item"></a></p>
+            <p><a id="commit" title="#7 내용증명 실제비용" class="toc-item"></a></p>
 
-            <h2>#0 요점정리.</h2>
+            <h2>#7. 내용증명 발송시 실제 드는 비용은</h2>
+
+            <p>
+                <div class="container-fluid" style="background-color:#fff">
+                    <div class="col-xs-6">
+                        <img src="http://www.moior.com/v/files/attach/images/147694/698/147/d245804bae3603ccb6583063d4930696.jpg"
+                             align="left" style=" width: 290px; height: 197px; vertical-align: middle; clear: left; margin: 10px;" alt="우체국 내용증명 비용" />
+                    </div>
+                    <div class="col-xs-6" style="padding:10px;">
+                        대한민국 우체국<br>
+                        <a href="www.epost.go.kr" target="_blank">www.epost.go.kr</a><br>
+                        <a href="tel:1588-1300">1588-1300</a><br>
+
+                        <small>우체국 방문시 실제 지불하는 내용증명 비용은,</small>
+                        1장일 경우 3620원, 2장일 경우 약4300원<small>이다.</small>
+            <p><a href="javascript:$('#detail내용증명비용').toggle();">▷ 아주 자세히 보기</a></p>
+        </div>
+    </div>
+    </p>
+
+    <div id="detail내용증명비용" style="display:none;">
+
+        <p>내용증명은 기본 등기우편 비용 + 특별 내용증명 관리비용으로 구성됩니다.</p>
+        <ol>
+            <li>내용증명 취급 비용</li>
+            <li>등기우편 비용</li>
+
+        </ol>
+
+        <h4>1. 먼저 내용증명 취급 비용</h4>
+
+        취급비용은 총 3부의 내용증명 중 하나를 우체국에 보관하는 시스템을 이용하는데 드는 비용이다.
+
+
+        <div class="container-fluid ">
+            <ul class="col-xs-6">
+                취급비용 계산원칙 :
+                <li>기본 1매 - 1300원</li>
+                <li>1매 추가당 - 650원</li>
+
+            </ul>
+
+            <ul class="col-xs-6">
+                즉 페이지 수에 따라
+                <li>1장일 경우 1,300원</li>
+                <li>2장일 경우 1,950원</li>
+                <li>3장일 경우 2,600원</li>
+                <li>4장일 경우 3,250원</li>
+                <li>6장일 경우 4,550원</li>
+                <li>8장일 경우 5,850원</li>
+            </ul>
+
+        </div>
+
+        <h4>2. 등기우편 비용</h4>
+
+        <div class="container-fluid" style="background-color:#fff">
+            <div class="col-xs-6">
+
+                <h5>1) 보통우편 비용</h5>
+
+                규격우편물
+                <small>
+                    <ul>
+                        <li>5g까지 270원</li>
+                        <li>5g초과 25g까지 300원</li>
+                        <li>25g초과 50g까지 320원</li>
+                    </ul>
+                </small>
+                규격외우편물
+                <small>
+                    <ul>
+                        <li>50g까지 390원</li>
+                        <li>50g초과 1kg까지 50g까지 마다 120원 가산</li>
+                        <li>1kg초과 2kg까지 200g까지 마다 120원 가산</li>
+                        <li>2kg초과 6kg까지 1kg까지 마다 400원 가산</li>
+                    </ul>
+                </small>
+            </div>
+            <div class="col-xs-6">
+                <h5>2) 등기우편 비용</h5>
+                <em><small>내용증명은 무조건 등기우편입니다.</small></em>
+                <li>1통 1,630원 우편요금에 가산</li>
+            </div>
+        </div>
+
+
+        <h4>실제 계산 예제입니다.</h4>
+
+        <div class="container-fluid" style="background-color:#fff">
+            <div class="col-xs-6">
+                <li>1장짜리 가장 짧은 내용증명을 보내는 경우</li>
+                우편요금 270원(5g까지)<br />
+                내용증명 취급비용 1300원<br />
+                등기비용 1630원<br />
+                ----------------------------<br />
+                총 합 3620원이다.
+            </div>
+            <div class="col-xs-6">
+                <li>2장짜리 중량 7g짜리 통상의 내용증명을 규격봉투로 보내는 경우</li>
+                우편요금 300원(5g까지)<br />
+                내용증명 취급비용 1950원<br />
+                등기비용 1630원<br />
+                -----------------------<br />
+                총 합 4270원을 우체국 창구에 내야 한다.
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <p><a id="merge" title="#0 기타사항" class="toc-item"></a></p>
+
+            <h2>#0 기타사항</h2>
             {{--<em>시간이 없으신 경우 이것만 챙겨보세요!</em>--}}
 
-            <p>마지막으로 요점정리를 해볼까요 :</p>
+            <p>마지막으로 내용증명 작업에 도움될 짤막한 팁들을 다시 살펴볼까요?</p>
 
             <ul>
                 <li>하고 싶은 말을 다 적지 않는다.</li>
-                <li>내용증명은 사이가 좋을 때 보내는 것도 방법이다.</li>
+                <li>내용증명은 분쟁전 사이가 좋을 때 보낼 수도 있다.</li>
                 <li>내용증명보다 바로 지급명령이나 소송을 시작하는 것도 좋다.</li>
-                <li></li>
+                <li>불리한 것을 스스로 자백할 필요는 없다.</li>
             </ul>
 
-            <h3>축하합니다!</h3>
-            <em>분쟁해결의 기본중의 기본, 내용증명을 마스터 하셨습니다.
-                <img class='emoji' title=':tada:' alt=':tada:' src='https://assets.github.com/images/icons/emoji/unicode/1f389.png' height='20' width='20' align='absmiddle' /> <img class='emoji' title=':octocat:' alt=':octocat:' src='https://assets.github.com/images/icons/emoji/octocat.png' height='20' width='20' align='absmiddle' /> <img class='emoji' title=':zap:' alt=':zap:' src='https://assets.github.com/images/icons/emoji/unicode/26a1.png' height='20' width='20' align='absmiddle' />
+            <h2>축하합니다!</h2>
+            <em>분쟁해결의 기본, 내용증명을 마스터 하셨습니다.
+                <img class='emoji' title=':tada:' alt=':tada:' src='https://assets.github.com/images/icons/emoji/unicode/1f389.png' height='20' width='20' align='absmiddle' />
+                <img class='emoji' title=':zap:' alt=':zap:' src='https://assets.github.com/images/icons/emoji/unicode/26a1.png' height='20' width='20' align='absmiddle' />
+                수고하셨습니다. 이제 잠깐 쉬시고 샘플을 통해서 분쟁해결, 분쟁제로에 도전해보세요. :-)
+                <img class='emoji' title=':octocat:' alt=':octocat:' src='https://assets.github.com/images/icons/emoji/octocat.png' height='20' width='20' align='absmiddle' />
+
             </em>
 
             <blockquote>
-                <p><strong>Tip</strong>: 내용증명 샘플 모음 <a href="/ccmail/sample">내용증명 샘플</a>
+                <p>내용증명 샘플로 <strong>Start</strong> : <a href="/ccmail/sample">Go, Go</a>
                     {{--and <a href="">지급명령 샘플 모음</a> --}}
                 </p>
             </blockquote>
