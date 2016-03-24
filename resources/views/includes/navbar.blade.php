@@ -5,7 +5,7 @@
             box-shadow: 0px 0px 10px #000;
         }
         #navbar-top a.navbar-brand {
-            font-size:1.7em; font-weight: 300; font-family: "Noto Sans CJK SC Thin";
+            font-size:1.7em; font-weight: 300; font-family: "Noto Sans CJK", "맑은 고딕";
             letter-spacing: -1.5px;
             color:goldenrod;
             text-shadow: 0px 2px 3px #555;

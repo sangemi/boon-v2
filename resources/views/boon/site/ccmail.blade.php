@@ -81,6 +81,7 @@
 
 					<ul data-offcanvass="yes">
 						<li class="active"><big>내용증명</big></li>
+						<li><a href="/help/ccmail"><i>ABC</i></a></li>
 						<li><a href="/ccmail/sample"><i>샘플</i></a></li>
 						<li><a href="/ccmail/work"><i>보관함</i></a></li>
 						{{--<li><a href="/board/free">게시판</a></li>--}}

@@ -4,17 +4,17 @@
 	<style>
 		#title설득멘트 {
 			padding:0px 20px 20px 20px ;font-size:1.6em;font-weight:600;color:#195F91;
-
+/*
 			background-color: #666666;
 			-webkit-background-clip: text;
 			-moz-background-clip: text;
 			background-clip: text;
 			color: transparent;
-			text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+			text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;*/
 		}
 		#title설득멘트2 {
 			padding:10px 20px 0px 20px;
-			font-style: italic;;
+			font-style: italic;
 		}
 	</style>
 

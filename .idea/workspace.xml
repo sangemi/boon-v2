@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SitemapController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SitemapController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,9 +51,23 @@
       <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.035715">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-6.25">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.821428">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding>
+                <element signature="e#523#627#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,40 +82,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-              <folding>
-                <element signature="e#46#74#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ccmail.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ccmail.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33371824">
-              <caret line="460" column="0" selection-start-line="460" selection-start-column="0" selection-end-line="460" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.892858">
+              <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding>
                 <element signature="e#2277#6667#0#HTML" expanded="true" />
                 <element signature="e#11284#11305#0#HTML" expanded="true" />
                 <element signature="e#11578#11598#0#HTML" expanded="true" />
-                <element signature="e#14641#14665#0#HTML" expanded="true" />
-                <element signature="e#14789#14832#0#HTML" expanded="true" />
-                <element signature="e#14983#15121#0#HTML" expanded="true" />
-                <element signature="e#15224#15292#0#HTML" expanded="true" />
-                <element signature="e#16329#16374#0#HTML" expanded="true" />
-                <element signature="e#18037#18875#0#HTML" expanded="false" />
-                <element signature="e#18086#18115#0#HTML" expanded="true" />
-                <element signature="e#18332#18420#0#HTML" expanded="true" />
-                <element signature="e#18511#18532#0#HTML" expanded="true" />
-                <element signature="e#19011#19032#0#HTML" expanded="true" />
-                <element signature="e#18988#21555#0#HTML" expanded="false" />
-                <element signature="e#19875#19904#0#HTML" expanded="true" />
-                <element signature="e#20894#20923#0#HTML" expanded="true" />
+                <element signature="e#14683#14707#0#HTML" expanded="true" />
+                <element signature="e#14831#14874#0#HTML" expanded="true" />
+                <element signature="e#15025#15163#0#HTML" expanded="true" />
+                <element signature="e#15266#15334#0#HTML" expanded="true" />
+                <element signature="e#16371#16416#0#HTML" expanded="true" />
+                <element signature="e#18079#18917#0#HTML" expanded="false" />
+                <element signature="e#18128#18157#0#HTML" expanded="true" />
+                <element signature="e#18374#18462#0#HTML" expanded="true" />
+                <element signature="e#18553#18574#0#HTML" expanded="true" />
+                <element signature="e#19053#19074#0#HTML" expanded="true" />
+                <element signature="e#19030#21597#0#HTML" expanded="false" />
+                <element signature="e#19917#19946#0#HTML" expanded="true" />
+                <element signature="e#20936#20965#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,16 +154,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="work_list.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/ccMail/work_list.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CcMailSampleController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -184,11 +179,21 @@
       <file leaf-file-name="ccmail.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+            <state vertical-scroll-proportion="-8.285714">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
-                <marker date="1458566711529" expanded="true" signature="6497:6579" placeholder="..." />
+                <marker date="1458815612373" expanded="true" signature="6550:6632" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41685912">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,7 +230,6 @@
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_write.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/work_edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/work_write.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/SK/info-라라벨 변수.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
@@ -243,15 +247,16 @@
         <option value="$PROJECT_DIR$/resources/views/includes/head.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CcMailSampleController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/ccMail/sample_list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/site/randing_news.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SitemapController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
       </list>
     </option>
   </component>
@@ -910,12 +915,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00002" summary="초기개발 1">
-      <created>1457094427338</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1457094427338</updated>
-    </task>
     <task id="LOCAL-00003" summary="초기개발 2&#10;">
       <created>1457262586295</created>
       <option name="number" value="00003" />
@@ -1204,7 +1203,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458735859796</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;">
+      <created>1458807630249</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1458807630249</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1256,7 +1261,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="0.95&#10;&#10;공개시작 &#10;" />
     <MESSAGE value="0.951&#10;&#10;공개시작 &#10;" />
     <MESSAGE value="0.952&#10;&#10;공개시작 &#10;phpmyadmin추가" />
     <MESSAGE value="0.953&#10;&#10;공개시작 &#10;DB조금 수정" />
@@ -1281,7 +1285,8 @@
     <MESSAGE value="1.06&#10;&#10;&#10;&#10;&#10;" />
     <MESSAGE value="1.07&#10;&#10;status table - auto increse 추가&#10;&#10;&#10;" />
     <MESSAGE value="1.08&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.08&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
+    <MESSAGE value="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1508,13 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.5">
-          <caret line="14" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/help.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.71428573">
@@ -1547,14 +1545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="120" column="16" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1618,16 +1608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
-          <folding>
-            <marker date="1458566711529" expanded="true" signature="6497:6579" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/site/randing_news.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.035714">
@@ -1681,14 +1661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.035715">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SitemapController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.321428">
@@ -1699,26 +1671,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/help/ccmail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33371824">
-          <caret line="460" column="0" selection-start-line="460" selection-start-column="0" selection-end-line="460" selection-end-column="0" />
+        <state vertical-scroll-proportion="-12.892858">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
             <element signature="e#2277#6667#0#HTML" expanded="true" />
             <element signature="e#11284#11305#0#HTML" expanded="true" />
             <element signature="e#11578#11598#0#HTML" expanded="true" />
-            <element signature="e#14641#14665#0#HTML" expanded="true" />
-            <element signature="e#14789#14832#0#HTML" expanded="true" />
-            <element signature="e#14983#15121#0#HTML" expanded="true" />
-            <element signature="e#15224#15292#0#HTML" expanded="true" />
-            <element signature="e#16329#16374#0#HTML" expanded="true" />
-            <element signature="e#18037#18875#0#HTML" expanded="false" />
-            <element signature="e#18086#18115#0#HTML" expanded="true" />
-            <element signature="e#18332#18420#0#HTML" expanded="true" />
-            <element signature="e#18511#18532#0#HTML" expanded="true" />
-            <element signature="e#19011#19032#0#HTML" expanded="true" />
-            <element signature="e#18988#21555#0#HTML" expanded="false" />
-            <element signature="e#19875#19904#0#HTML" expanded="true" />
-            <element signature="e#20894#20923#0#HTML" expanded="true" />
+            <element signature="e#14683#14707#0#HTML" expanded="true" />
+            <element signature="e#14831#14874#0#HTML" expanded="true" />
+            <element signature="e#15025#15163#0#HTML" expanded="true" />
+            <element signature="e#15266#15334#0#HTML" expanded="true" />
+            <element signature="e#16371#16416#0#HTML" expanded="true" />
+            <element signature="e#18079#18917#0#HTML" expanded="false" />
+            <element signature="e#18128#18157#0#HTML" expanded="true" />
+            <element signature="e#18374#18462#0#HTML" expanded="true" />
+            <element signature="e#18553#18574#0#HTML" expanded="true" />
+            <element signature="e#19053#19074#0#HTML" expanded="true" />
+            <element signature="e#19030#21597#0#HTML" expanded="false" />
+            <element signature="e#19917#19946#0#HTML" expanded="true" />
+            <element signature="e#20936#20965#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.821428">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="e#523#627#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ccmail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.285714">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <marker date="1458815612373" expanded="true" signature="6550:6632" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41685912">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

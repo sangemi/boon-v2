@@ -34,7 +34,7 @@
         top:0;        left: 2%;
     }
     .title-container h1.title-large{
-        font-size:1.7em; font-weight: 300; font-family: "Noto Sans CJK SC Thin";
+        font-size:1.7em; font-weight: 400; font-family: "맑은 고딕"; /*Noto Sans CJK SC Thin*/
         letter-spacing: -1.5px;
         color:goldenrod;
         text-shadow: 0px 2px 3px #555;
@@ -76,7 +76,7 @@
             </div>
 
             {{--<li><a href="{{ URL::to('/help/ccmail') }}"><span class="fa fa-exclamation"></span> 내용증명이란</a></li>--}}
-            <li><a href="{{ URL::to('/help/ccmail') }}"><span class="fa  fa-folder-o"></span> 내용증명이란</a></li>
+            <li><a href="{{ URL::to('/help/ccmail') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 내용증명이란</a></li>
             <li><a href="{{ URL::to('/ccmail/sample') }}"><span class="glyphicon glyphicon-th"></span> 샘플</a></li>
             <li><a href="{{ URL::to('/ccmail/work') }}"><span class="glyphicon glyphicon-save"></span> 보관함</a></li>
             <li><a href="{{ URL::to('/request') }}">신청내역</a></li>
