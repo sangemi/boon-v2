@@ -13,17 +13,15 @@
 @section('content')
 <style>
 #title설득멘트 {
-	padding:0px 20px 20px 20px ;font-size:1.6em;font-weight:600;color:#195F91;
+	font-size:1.6em;font-weight:600;color:#195F91;
+	padding:0px 20px 20px 20px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 	0 1px 0 #666, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 
-	/*background-color: #195F91;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;*/
 }
 #title설득멘트2 {
-	padding:10px 20px 0px 20px;
+	padding:10px 20px 0px 20px ;
 	font-style: italic;;
 }
 </style>
@@ -35,10 +33,10 @@
 				<div class="panel-body">
 					<div id="title설득멘트2">
 						서식작성까지 단 10분!
+						<small>가입만 하면 쓸 수 있습니다.</small>
 					</div>
 					<div id="title설득멘트">
-						쉽고 빠른 <span style="">분쟁관리사</span><br>
-						<small>가입만 하면 쓸 수 있습니다.</small>
+						쉽고 빠른 <span style="">분쟁관리사</span>
 					</div>
 					@if($errors->any())
 						<div class="alert alert-danger">

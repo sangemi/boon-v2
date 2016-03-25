@@ -8,3 +8,8 @@
     Work with 법무법인 예율 @ 02-2135-5251
 </div>
 
+<small style="position:fixed;bottom:10px;left:10px;">
+    <a href="tel:1661-5521" style="background-color:gray;color:cornsilk;letter-spacing: -0.7px;" class="btn btn-xs btn-default">
+        문의 1661-5521
+    </a>
+</small>

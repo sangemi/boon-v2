@@ -4,24 +4,15 @@
 	<style>
 		#title설득멘트 {
 			padding:0px 20px 20px 20px ;font-size:1.6em;font-weight:600;color:#195F91;
-/*
-			background-color: #666666;
-			-webkit-background-clip: text;
-			-moz-background-clip: text;
-			background-clip: text;
-			color: transparent;
-			text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+			color: #fff;
+			font-weight: bold;
+			text-shadow: 	0 1px 0 #777, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 
-
-
-			익스에서 안됨!!
-
-
-
-
-
+			/* 글씨가 4em쯤 되면 멋짐
+			text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 			*/
 		}
+
 		#title설득멘트2 {
 			padding:10px 20px 0px 20px;
 			font-style: italic;

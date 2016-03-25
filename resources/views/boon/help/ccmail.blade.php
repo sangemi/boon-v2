@@ -115,7 +115,7 @@
                 </p>
                 <p><strong>내용증명 생활법령정보</strong> :
                     <a href="http://oneclick.law.go.kr/CSP/CnpClsMain.laf?csmSeq=272&ccfNo=4&cciNo=3&cnpClsNo=1" target="_blank">
-                        http://oneclick.law.go.kr 보기
+                        http://oneclick.law.go.kr
                     </a>
                 </p>
 
@@ -148,9 +148,9 @@
 
 
 
-            <h4>하고싶은 말을 다 적지 말아라.</h4>
+            <h4>하고싶은 말을 다 적지 말자.</h4>
 
-            <blockquote><p><strong>Tip:</strong> 하고싶은 말은 친구들과 하고, 내용증명에는 필요한 말만 하라.</p></blockquote>
+            <blockquote><p><strong>Tip:</strong> 하고 싶은 말은 친구들과 나누고, 내용증명에는 분쟁해결에 필요한 말만 하라.</p></blockquote>
 
 
 

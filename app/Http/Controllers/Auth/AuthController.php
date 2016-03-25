@@ -113,7 +113,9 @@ class AuthController extends Controller
     {
         /* 로그인전 화면으로 되돌아가기 1단계 */
         $prev_url = parse_url(URL::previous());
-        Session::put('return_url', $prev_url['path']);
+        if(isset($prev_url['path'])){
+            Session::put('return_url', $prev_url['path']);
+        }
         //echo $prev_url['path'];
         return view('auth.login');
     }

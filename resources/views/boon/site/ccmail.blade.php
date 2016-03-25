@@ -105,7 +105,7 @@
 
 		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"
 			 style="position:relative;background-image: url(site/ccmail/images/full_5.jpg);background-color:rgba(0, 0, 0, 0.5);">
-			<small style="position:fixed;bottom:10px;left:10px;"><a href="tel:1661-5521" style="color:gray;">사용법 문의</a></small>
+			<small style="position:fixed;bottom:10px;left:10px;"><a href="tel:1661-5521" style="background-color:gray;color:cornsilk;letter-spacing: -0.7px;" class="btn btn-xs btn-default">문의 1661-5521</a></small>
 
 			{{--한블럭 내려가는 버튼
             <span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.7s">
