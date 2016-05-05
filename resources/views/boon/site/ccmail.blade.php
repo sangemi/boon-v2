@@ -113,6 +113,7 @@
                   <span class="mouse"><span></span></span>
               </a>
           </span>--}}
+
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover-text">
 				<div class="container">

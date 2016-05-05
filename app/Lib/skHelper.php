@@ -11,6 +11,10 @@ class skHelper {
     function __construct()
     {
     }
+    public function get($data = [])
+    {
+        echo "foo";
+    }
 
     // 변수이름 반환하는 함수
     static function var_name(&$var, $scope=false, $prefix='unique', $suffix='value'){

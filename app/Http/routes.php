@@ -6,7 +6,15 @@
 
 Route::pattern('id', '[0-9]+');
 
+
 Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기본
+
+    // IP start !!
+    Route::group(array('domain' => 'ip.local-boonzero.com'), function() { //{account}.
+        Route::get('/','IpMainController@index');
+
+    });
+    // IP end !!
 
     //Route::get('/', 'CcMailSampleController@index');
     Route::get('/','MainController@index');
@@ -75,6 +83,8 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
         'uses' => 'Auth\AuthController@getSocialAuthCallback',
         'as'   => 'auth.getSocialAuthCallback'
     ]);
+
+
 });
 
 Route::get('help/ccmail','HelpController@ccmail');
@@ -105,4 +115,5 @@ Route::group([ 'prefix' => 'admin', 'namespace' => 'Controllers\Admin' ], functi
 //Route::get('/moior/email', 'contactController'); // 7500명 로스쿨러들 모두 연락 가능 이메일... 한명이 구조(어느학교 120명..등 칸을 만듬)를 입력하면 십시일반 메우는 방식
 // 약관 : 나는 이 조합에 가입하며, 내가 알고있는 신규조합원에게 가입권유(이메일, 문자)하는 것을 위임한다.
 // 스팸용도로 쓰는 것은 절대 안되기 때문에.. 가입메일은 1주당 1개만 가능? 등의 제한.
-
+/*
+*/

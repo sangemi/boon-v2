@@ -161,6 +161,10 @@ return [
         AdamWathan\BootForms\BootFormsServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class, // facebook
         Roumen\Sitemap\SitemapServiceProvider::class, // auto sitemap
+        Riari\Forum\ForumServiceProvider::class, // forum
+        Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
+
+        App\Providers\skServiceProvider::class,
     ],
 
     /*
@@ -213,6 +217,7 @@ return [
         'BootForm' => AdamWathan\BootForms\Facades\BootForm::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
+        'sk' => App\Lib\Facades\sk::class,
     ],
 
 ];

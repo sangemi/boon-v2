@@ -12,7 +12,10 @@
         "laravelcollective/html": "5.2.*",
         "zizaco/entrust": "^1.5",
         "adamwathan/bootforms": "^0.8.0",
-        "roumen/sitemap": "^2.6"
+        "roumen/sitemap": "^2.6",
+
+        "riari/laravel-forum" : "~3.0",
+        "riari/laravel-forum-frontend": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
