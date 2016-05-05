@@ -12,7 +12,9 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     // IP start !!
     Route::group(array('domain' => 'ip.local-boonzero.com'), function() { //{account}.
         Route::get('/','IpMainController@index');
-
+    });
+    Route::group(array('domain' => 'ip.boonzero.com'), function() {
+        Route::get('/','IpMainController@index');
     });
     // IP end !!
 
