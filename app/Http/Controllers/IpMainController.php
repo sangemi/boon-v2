@@ -6,20 +6,35 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 class IpMainController extends Controller
 {
     public function index()
     {
-        /*if(Auth::user()){
-            //return Redirect::to('/site/ccmail');
+        return view('boon.site.ip');
+
+        /*로그인 상태면 바로 관리화면으로!*/
+        if(Auth::user()){
+            $ccMailsCate1s = DB::table('ccmail_samples')
+                -> select(DB::raw('id, sum(used_cnt) as usedsum, cate1, count(*) as cnt'))
+                -> groupBy('cate1')
+                -> orderBy('usedsum', 'desc') -> get();
+            $ccMails = DB::table ( 'ccmail_samples' );
+            $ccMails = $ccMails -> where (function($query){
+                $query  -> where('cate3', 'like', '%aa%')
+                    -> orWhere ( 'content', 'like', '%aa%');
+            } );
+            $ccMails = $ccMails -> paginate(10);
+
+            return view('boon.ip.dashboard', compact('ccMails', 'ccMailsCate1s'));
+
         }else{
-            return view('boon.site.ccmail');
+            return view('boon.site.ip');
+        }
 
-        }*/
 
-        return view('boon.site.ip'); // 잠시 안씀. 지급명령 등 나오면 통합 페이지를 열것.
     }
     public function ccmail()
     {

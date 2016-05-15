@@ -81,9 +81,9 @@
 
 					<ul data-offcanvass="yes">
 						<li class="active"><big>기업</big></li>
-						<li><a href="/help/patent"><i>ABC</i></a></li>
+						{{--<li><a href="/help/patent"><i>ABC</i></a></li>
 						<li><a href="/ip/sample"><i>출원</i></a></li>
-						<li><a href="/ip/work"><i>작업</i></a></li>
+						<li><a href="/ip/work"><i>작업</i></a></li>--}}
 						{{--<li><a href="/board/free">게시판</a></li>--}}
 						<!--<li><a href="#">Pricing</a></li>-->
 					</ul>
@@ -92,7 +92,7 @@
 					<ul class="fh5co-special" data-offcanvass="yes">
 						@if(Auth::user())
 							<li><a href="/auth/logout">로그아웃</a></li>
-							<li><a href="/ccmail/work/create" class="call-to-action">바로작성</a></li>
+							<li><a href="tel:0221355251" class="call-to-action">상담전화</a></li>
 						@else
 							<li><a href="/auth/login">로그인</a></li>
 							<li><a href="/auth/register">가입</a></li>
@@ -155,7 +155,7 @@
 										@if(Auth::check())
 											@if(Auth::user()->name == '김상겸')
 												<div class="alert alert-link"><small>
-													<a href="http://www.moior.com/v/postABC/147696" target="_blank" style="color:#eee;">내용증명이란?</a></small>
+													<a href="/site/ip/book/company and ip 20160515.pdf" target="_blank" style="color:#eee;">최신 책자 다운로드</a></small>
 												</div>
 											@endif
 										@endif
@@ -296,9 +296,9 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">가격정책</h2>
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">비용안내</h2>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-							간단한 발송대행부터, 전문가 활용까지
+							권리확보부터 분쟁까지
 						</p>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
 							<a href="javascript:$('#div비용표').toggle();" class="btn btn-success font-size-up">비용표 보기</a>
@@ -310,28 +310,28 @@
 							<table class="table text-center">
 								<tr>
 									<th></th>
-									<th>상표</th>
-									<th>디자인</th>
-									<th>특허</th>
-									<th>정기자문</th>
+									<th class="text-center">상표</th>
+									<th class="text-center"><nobr>디자인</nobr></th>
+									<th class="text-center">특허</th>
+									<th class="text-center">자문</th>
 								</tr>
 								<tr>
-									<td>착수비(만원)
+									<td>착수비
 										<small style="font-size:0.7em;">다량의뢰 협의</small></td>
-									<td>약20</td>
-									<td>약25~</td>
-									<td>약120~</td>
-									<td>약30</td>
+									<td><small style="font-size:0.7em;">약</small>20<small style="font-size:0.7em;">만</small></td>
+									<td>25<small style="font-size:0.7em;">만</small>~</td>
+									<td>120<small style="font-size:0.7em;">만</small>~</td>
+									<td><small style="font-size:0.7em;">약</small>30<small style="font-size:0.7em;">만</small></td>
 								</tr>
 								<tr>
-									<td>선행권리조사</td>
+									<td>선행권리 조사</td>
 									<td>O</td>
 									<td>O</td>
 									<td>O</td>
 									<td>O</td>
 								</tr>
 								<tr>
-									<td>중간사건비용</td>
+									<td>중간사건 비용</td>
 									<td>1O</td>
 									<td>1O</td>
 									<td>1O</td>
@@ -346,10 +346,10 @@
 								</tr>
 								<tr>
 									<td>소송시 유불리 검토</td>
-									<td>-</td>
-									<td>-</td>
-									<td>O</td>
-									<td>O</td>
+									<td>△</td>
+									<td>○</td>
+									<td>○</td>
+									<td>○</td>
 								</tr>
 
 							</table>
