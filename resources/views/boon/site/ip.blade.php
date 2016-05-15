@@ -92,7 +92,8 @@
 					<ul class="fh5co-special" data-offcanvass="yes">
 						@if(Auth::user())
 							<li><a href="/auth/logout">로그아웃</a></li>
-							<li><a href="tel:0221355251" class="call-to-action">상담전화</a></li>
+							<li><a href="/ip/askvisit" class="call-to-action">방문요청</a></li>
+
 						@else
 							<li><a href="/auth/login">로그인</a></li>
 							<li><a href="/auth/register">가입</a></li>
@@ -147,16 +148,18 @@
 										특허상표 그물망으로 분쟁을 예방하세요. <br>어렵지 않습니다. <big>기업지식재산 전문가</big>가 기다리고 있습니다.
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
-										<a href="/ip/askvisit" class="btn btn-primary btn-outline">방문요청</a>
+										<a href="tel:022135525" class="btn btn-primary btn-outline">상담전화</a>
+										<a href="tel:022135525" class="btn btn-primary btn-outline">방문요청</a>
+										{{--/ip/askvisit--}}
 										&nbsp;&nbsp;&nbsp;
 
 									</p>
 
+										<div class="alert alert-link"><small>
+												<a href="/site/ip/book/company and ip 20160515.pdf" target="_blank" style="color:#eee;">최신 책자 다운로드</a></small>
+										</div>
 										@if(Auth::check())
 											@if(Auth::user()->name == '김상겸')
-												<div class="alert alert-link"><small>
-													<a href="/site/ip/book/company and ip 20160515.pdf" target="_blank" style="color:#eee;">최신 책자 다운로드</a></small>
-												</div>
 											@endif
 										@endif
 								</div>
