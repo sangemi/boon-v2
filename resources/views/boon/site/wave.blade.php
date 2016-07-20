@@ -353,15 +353,15 @@
 						<p>(바) 소송비용 : 인지대, 송달료를 포함하여 <b>44만원</b>.</p>
 	</div>
 
-<div style="border:1px solid gray;">
-	<p>* 가족 구성원이 모두 원고가 되는 경우, 할인하여 진행합니다. 하단 표를 확인해주세요.
-	(가족 구성원 중 일부만 A타입, 일부는 B타입으로 선택하시려면 아래 표가 적용되지 않습니다) 이때 주민등록상 주소지가 계약자 주소지와 동일한 분만 신청 가능합니다.</p>
+<div style="border:1px solid gray;padding:10px;">
+	※ 가족 구성원이 모두 원고가 되는 경우, 할인하여 진행합니다. 하단 표를 확인해주세요.
+	(가족 구성원 중 일부만 A타입, 일부는 B타입으로 선택하시려면 아래 표가 적용되지 않습니다) 이때 주민등록상 주소지가 계약자 주소지와 동일한 분만 신청 가능합니다.
 </div>
 
-
+						<p></p>
 <h3>4. 유의사항</h3>
 
-						<p>1) 코웨이 측과 개별적으로 제품교환 및 렌탈료의 반환을 받아, 합의를 경료한(추후 민, 형사상의 이의를 제기하지 아니하기로 하는 취지의 합의) 소비자의 경우 소송의 참여가 불가함을 고지드립니다.</p>
+						<p>1) 코웨이 측과 개별적으로 제품교환 및 렌탈료의 반환을 받아, 합의를 경료한(<u>추후 민형사상의 이의를 제기하지 아니하기로 하는 취지의 합의</u>) 소비자의 경우 소송의 참여가 불가함을 고지드립니다.</p>
 
 						<p>2) 현재 이후부터 코웨이가 제시하는 서류에 임의로 서명 및 날인하지 마시고, 제품 “교환”이 아닌 새로운 제품 “지급”을 요청하시기 바랍니다(추후 정수기 음용수에 대한 중금속 농도 수질감정이 필요합니다. 모든 원고의 제품을 검사하지는 않으나 저희가 요청하는 경우 도움을 주셔야 할 수도 있습니다).</p>
 
@@ -399,7 +399,6 @@
 									<th class="text-center">3명</th>
 									<th class="text-center">4명</th>
 									<th class="text-center">5명 이상</th>
-									<th class="text-center">비고</th>
 								</tr>
 								<tr>
 									<td><small style="font-size:0.7em;">집단소송</small><br>
@@ -410,7 +409,10 @@
 									<td>29<small style="font-size:0.7em;">만</small></td>
 									<td>37<small style="font-size:0.7em;">만</small></td>
 									<td>8<small style="font-size:0.7em;">만 추가</small></td>
-									<td><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
 								</tr>
 								<tr>
 									<td><small style="font-size:0.7em;">개별소송</small><br>
@@ -421,12 +423,14 @@
 									<td>116<small style="font-size:0.7em;">만</small></td>
 									<td>148<small style="font-size:0.7em;">만</small></td>
 									<td>32<small style="font-size:0.7em;">만 추가</small></td>
-									<td><small style="font-size:0.7em;">인지대, 송달료 일부포함 </small></td>
-
 								</tr>
 								<tr>
 									<td></td>
-									<td colspan="6"><small style="font-size:0.7em;">※ 주민등록지가 설치주소와 동일한 주소지에 등록되어 있는 경우에 한함.</small></td>
+									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 일부 포함 </small></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td colspan="6"><small style="font-size:0.7em;">※ 일괄신청은 주민등록지가 설치주소와 동일한 주소지에 등록되어 있는 경우에 가능합니다</small></td>
 								</tr>
 
 							</table>
@@ -443,17 +447,13 @@
 								<div class="fh5co-text">
 									<div class="fh5co-text-inner">
 										<div class="row">
-											<div class="col-md-6"><h3> #1 단체소송 이해</h3></div>
+											<div class="col-md-6"><h3> #1 소송의 기간</h3></div>
 											<div class="col-md-6"><p>
-												사무소<small>(서울 역삼 / 부산 연산)</small>까지 나오실 필요 없습니다.
-												정기적으로 각 지역을 변리사/변호사/전문직원이 직접 방문합니다.
-													{{--직접 내용증명을 보내는 방법 안내</a>
-
-
-													--}}
+												대기업을 상대로 하는 단체소송은 짧은면 1년, 길면 2년이상 걸리는 지난한 싸움입니다.
+												따라서 <small>긴 시간 참을성있게 기다리실 수 있는 분</small>만 참여해주시기 바랍니다.
 													<br>
 													<span style="font-size:0.7em">
-														방문요청은 유료가 원칙이나, 일정에 따라 조정가능합니다.
+														다만 상대방이 사실을 인정하고 다투지 않을 경우, 6개월 조기종결도 가능합니다.
 													</span>
 												</p></div>
 										</div>
@@ -469,12 +469,14 @@
 								<div class="fh5co-text">
 									<div class="fh5co-text-inner">
 										<div class="row">
-											<div class="col-md-6"><h3> #2 지식법 변천의 산 증인</h3></div>
+											<div class="col-md-6"><h3> #2 소송의 목적</h3></div>
 											<div class="col-md-6"><p>
-													30년 경력의 옥특허법률사무소를 비롯하여 분쟁제로 기업전담팀은 오랜 세월동안 기업과 함께하여 왔습니다.
+													소비자 단체소송은 단순히 금전적인 이익만이 목적이 아닙니다.
+													반복되는 기업의 부도덕에 대하여 벌하는 위해서는 꾸준한 소비자운동/소송으로 기업을 견제하여야 합니다.
+
 													<span style="font-size:0.7em">
-														<br>+
-														풍부한 데이터베이스를 바탕으로 어떤 일이든 최적의 결과를 도출합니다.
+														<br>
+														징벌적 손해배상제도의 도입은 아직 요원합니다. 그때를 기다리시겠습니까?
 													</span>
 
 												</p></div>
@@ -492,13 +494,14 @@
 								<div class="fh5co-text">
 									<div class="fh5co-text-inner">
 										<div class="row">
-											<div class="col-md-6"><h3> #3 변호사 연계 사무실</h3></div>
+											<div class="col-md-6"><h3> #3 소송 비용</h3></div>
 											<div class="col-md-6"><p>
-												옥/예율특허법률사무소는 법무법인(유한)예율과 긴밀하게 협력하여 모든 사건을 진행합니다.
-												지식재산은 향후 소송에 활용하기 위한 도구입니다. <b>실소송을 예상</b>하여 타사 대비 고급 권리를 만들어낼 수 있습니다.
+												단체소송은 변호사 배만 불린다? 그렇지 않습니다.
+												대기업 상대 소송은 보통 1심만 2년 이상 걸립니다. 24개월 천여명의 소송인단을 꾸려가는 것은 한두명의 인력으로 부족합니다.
+												마르지않는 자금을 가진 상대에 대처하려면 체력이 튼튼해야 합니다.
 													<span style="font-size:0.7em">
-														<br>+
-														변호사 사건검토, 법률요건 검토/적용, 소송시 유불리 검토,
+														<br>
+														예율은 소비자소송을 통해 얻은 이익을 소비자 권익운동에 활용하고 있습니다.
 													</span>
 											</p></div>
 										</div>
@@ -514,14 +517,13 @@
 								<div class="fh5co-text">
 									<div class="fh5co-text-inner">
 										<div class="row">
-											<div class="col-md-6"><h3> #4 직원 개인서비스</h3></div>
+											<div class="col-md-6"><h3> #4 소송에 임하는 각오</h3></div>
 											<div class="col-md-6"><p>
-													기업의 가입으로 회사의 모든 직원이 분제로의 다양한 기능을 이용할 수 있습니다.
-													<b>개인 법률문제, 인사문제</b> 등 직원의 모든 일까지 일시에 관리하여 줍니다.
+													예율 임직원은 어떠한 어려움이 와도 굴하지 아니하고 소송인단의 최종 목표를 위해 매진하겠습니다.
+													지켜보아 주십시오. 감사합니다.
 
 													<span style="font-size:0.7em">
-														<br>+
-														회사와의 분쟁은 제외합니다.
+														<br>지금이 아니면 다음은 없습니다.
 													</span>
 												</p></div>
 										</div>
@@ -873,7 +875,7 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-3 col-sm-6 fh5co-footer-widget"> {{--wow fadeInUp  data-wow-duration="1s" data-wow-delay=".1s"--}}
-						<div class="fh5co-logo"><span class="logo">B</span> Boonzero</div>
+						<div class="fh5co-logo"><span class="logo">Y</span> 법무법인(유)예율</div>
 						<p class="fh5co-copyright">&copy; 2013 Boonzero. <br>All Rights Reserved.
 							<br>Designed by <a target="_blank" href="about:blank">Moior</a>
 							<br>Work with <a target="_blank" href="http://www.yeyul.com">Yeyul</a>
