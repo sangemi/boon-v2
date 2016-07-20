@@ -18,6 +18,15 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     });
     // IP end !!
 
+    // 집단소송
+    Route::group(array('domain' => 'wave.local-boonzero.com'), function() { //{account}.
+        Route::get('/','WaveMainController@index');
+    });
+    Route::group(array('domain' => 'wave.boonzero.com'), function() { //{account}.
+        Route::get('/','WaveMainController@index');
+    });
+    // 집단소송
+
     //Route::get('/', 'CcMailSampleController@index');
     Route::get('/','MainController@index');
 

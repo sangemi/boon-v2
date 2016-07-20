@@ -155,7 +155,7 @@
 
 									</p>
 
-										<div class="alert alert-link"><small>
+										<div class="alert alert-link text-right"><small>
 												<a href="/site/ip/book/company and ip 20160515.pdf" target="_blank" style="color:#eee;">최신 책자 다운로드</a></small>
 										</div>
 										@if(Auth::check())
