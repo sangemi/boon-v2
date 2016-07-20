@@ -137,7 +137,7 @@
 									}
 								</style>
 								<div class="col-sm-6" id="area메인문구">
-									<?php $rand = rand(0, 2);
+									<?php $rand = 0 ; //rand(0, 2);
 
 									$textSupertitle = array('#5. 정수기 피해 지원'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
 

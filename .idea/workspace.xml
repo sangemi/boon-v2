@@ -2,175 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/.DS_Store" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/book/company and ip 20160515.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/.DS_Store" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/.DS_Store" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/bootstrap/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/bootstrap/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/bootstrap/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/icomoon/.DS_Store" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/icomoon/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/icomoon/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/icomoon/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/.DS_Store" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/ccmail/ccmail2_part1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/ccmail/ccmail3_001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/ccmail/ccmail3_002.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/full_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/full_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/full_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/full_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/full_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/img_same_dimension_8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/iphone_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/person_9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/.DS_Store" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/.DS_Store" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/cards.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/cards.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/icomoon.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/magnific-popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/owl.carousel.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/owl.theme.default.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/css/style.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/bootstrap/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/fonts/icomoon/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.countTo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.easing.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.magnific-popup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.stellar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.style.switcher.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.waypoints.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/modernizr-2.6.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/owl.carousel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/respond.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/wow.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/_bootstrap-compass.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/_bootstrap-mincer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/_bootstrap-sprockets.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/_style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_badges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_breadcrumbs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_button-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_close.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_code.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_component-animations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_dropdowns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_glyphicons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_input-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_jumbotron.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_modals.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_navs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_normalize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_pager.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_panels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_popovers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_print.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_progress-bars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_responsive-embed.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_responsive-utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_scaffolding.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_theme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_thumbnails.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_tooltip.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_type.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/_wells.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_background-variant.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_border-radius.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_center-block.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_clearfix.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_gradients.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_grid-framework.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_hide-text.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_image.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_nav-divider.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_nav-vertical-align.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_opacity.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_panels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_progress-bar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_reset-filter.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_reset-text.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_resize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_responsive-visibility.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_size.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_tab-focus.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_table-row.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_text-emphasis.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_text-overflow.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/bootstrap/mixins/_vendor-prefixes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-base.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-blogs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-contents.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-counter.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-covers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-features.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-footers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-misc.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-mixin-variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-navigations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-pricing.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-projects.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-team.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/cards/_card-testimonial.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/sass/style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/ip/dashboard.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/ip.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/ip.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/wave.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/wave.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -209,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wave.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wave.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.821428">
-              <caret line="339" column="20" selection-start-line="339" selection-start-column="20" selection-end-line="339" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.6832695">
+              <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -234,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67943805">
-              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+            <state vertical-scroll-proportion="-15.607142">
+              <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -259,16 +92,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ip.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/site/ip.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="62" selection-start-line="138" selection-start-column="62" selection-end-line="138" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -341,8 +164,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/IpMainController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/site/ip.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/site/wave.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/site/wave.blade.php" />
       </list>
     </option>
   </component>
@@ -737,12 +560,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00013" summary="0.951&#10;&#10;공개시작 &#10;">
-      <created>1457675923625</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1457675923625</updated>
-    </task>
     <task id="LOCAL-00014" summary="0.951&#10;&#10;공개시작 &#10;">
       <created>1457677372870</created>
       <option name="number" value="00014" />
@@ -1031,7 +848,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469027108111</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="3.0001&#10;&#10;wave.bonzero.com 시작&#10;&#10;&#10;">
+      <created>1469027542907</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1469027542907</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1447,29 +1270,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.821428">
-          <caret line="339" column="20" selection-start-line="339" selection-start-column="20" selection-end-line="339" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#td#5;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Windows/System32/drivers/etc/hosts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53884095">
@@ -1488,9 +1288,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67943805">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        <state vertical-scroll-proportion="-15.607142">
+          <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6832695">
+          <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#td#5;n#tr#2;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
