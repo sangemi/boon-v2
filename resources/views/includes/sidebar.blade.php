@@ -81,26 +81,38 @@
             <li><a href="{{ URL::to('/ccmail/work') }}"><span class="glyphicon glyphicon-save"></span> 보관함</a></li>
             <li><a href="{{ URL::to('/request') }}">신청내역</a></li>
 
+        <li><a href="{{ URL::to('/boon/status') }}"><small>포인트 충전</small></a></li>
+
         @elseif(Request::is('sosong/*'))
             <li><a href="{{ URL::to('/sosong/work') }}">나의 이력</a></li>
+            <li><a href="{{ URL::to('/boon/status') }}"><small>포인트 충전</small></a></li>
+
+        @elseif(Request::is('wave*'))
+            <div class="title-area">
+                <div class="title-container">
+                    <h1 class="title-small">분쟁관리</h1>
+                    <h1 class="title-large">단체소송</h1>
+                </div>
+            </div>
+
+            {{--<li><a href="javascript:alert('대기중입니다')">나의 이력</a></li>--}}
 
         @else {{--메인메뉴 등 일반적인 경우--}}
             <div class="title-area">
                 <div class="title-container">
 
-                    <h1 class="title-small">분쟁관리</h1>
-                    <h1 class="title-large">Boon Zero</h1>
+                    <h1 class="title-small">Boonzero</h1>
+                    <h1 class="title-large">분쟁관리</h1>
 
                 </div>
             </div>
-            <li><a href="/ccmail/sample">{{Lang::get('boon.내용증명')}}</a></li>
-            <li><a href="{{ URL::to('/request') }}">신청내역</a></li>
+
             {{--<li><a href="#">{{Lang::get('boon.지급명령')}}</a></li>
             <li><a href="#">승소체크</a></li>--}}
 
         @endif
 
-        <li><a href="{{ URL::to('/boon/status') }}"><small>포인트 충전</small></a></li>
+
 
 
 

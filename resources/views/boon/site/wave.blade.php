@@ -74,7 +74,7 @@
 			<div class="container">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
 					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
-					<a href="/">법무법인(유한) 예율</a>
+					<a href="/">법무법인<small>(유)</small>예율</a>
 				</div>
 				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
 
@@ -92,7 +92,7 @@
 					<ul class="fh5co-special" data-offcanvass="yes">
 						@if(Auth::user())
 							<li><a href="/auth/logout">로그아웃</a></li>
-							<li><a href="/ip/askvisit" class="call-to-action">방문요청</a></li>
+							{{--<li><a href="/ip/askvisit" class="call-to-action">방문요청</a></li>--}}
 
 						@else
 							<li><a href="/auth/login">로그인</a></li>
@@ -139,7 +139,7 @@
 								<div class="col-sm-6" id="area메인문구">
 									<?php $rand = 0 ; //rand(0, 2);
 
-									$textSupertitle = array('#5. 정수기 피해 지원'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
+									$textSupertitle = array('#5 정수기 피해 지원'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
 
 									?>
 										<h1 class="cover-text-lead wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="0s"><?=$textSupertitle[$rand]?></h1>
@@ -147,7 +147,8 @@
 										다수의 경험으로 집단소송을 관리해드립니다. <br>정기적 진행보고. <big>차별화된 소송지원</big>을 경험하세요.
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
-										<a href="#소송비용" class="btn btn-primary btn-outline">소송비용 안내</a>
+										<a href="http://cafe.naver.com/hogu1004" class="btn btn-primary" target="_blank">소비자연합Cafe</a>
+										<a href="#소송비용" class="btn btn-primary btn-outline btn-sm">비용</a>
 										{{--<a href="tel:022135525" class="btn btn-primary btn-outline">방문요청</a>--}}
 										{{--/ip/askvisit--}}
 										&nbsp;&nbsp;&nbsp;
@@ -191,7 +192,7 @@
 										<div class="form-group">
 											<label class="col-md-4 control-label"></label>
 											<div class="col-md-6">
-												<h1 style="color:white;font-size:2em;">소송신청 1단계</h1>
+												<h1 style="color:white;font-size:2em;">접수하기</h1>
 											</div>
 										</div>
 										<div class="form-group">
@@ -233,7 +234,7 @@
 											<div class="col-md-6 col-md-offset-4" id="area가입버튼">
 												{{--<div><small>가입하기 버튼을 클릭하면 <a>약관</a>에 동의한 것으로 간주됩니다.</small></div>--}}
 												<button type="submit" class="btn btn-primary">
-													신청
+													다음
 												</button>
 											</div>
 											<div class="col-md-6 col-md-offset-4" style="font-size:0.8em;">※ 이미 신청하셨으면 <a href="/auth/login">로그인</a></div>
@@ -262,6 +263,7 @@
 											<div class="alert alert-info"><B>Tip.</B> {{ Session::get('tip') }}</div>
 										@endif
 
+										<a href="/wave/main" class="btn btn-primary">관리페이지 바로가기</a>
 									</div>
 
 								@endif
@@ -401,28 +403,28 @@
 									<th class="text-center">5명 이상</th>
 								</tr>
 								<tr>
-									<td><small style="font-size:0.7em;">집단소송</small><br>
+									<td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
 										<nobr>A타입</nobr>
 										</td>
 									<td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
 									<td>20<small style="font-size:0.7em;">만</small></td>
 									<td>29<small style="font-size:0.7em;">만</small></td>
 									<td>37<small style="font-size:0.7em;">만</small></td>
-									<td>8<small style="font-size:0.7em;">만 추가</small></td>
+									<td>8<small style="font-size:0.7em;">만+</small></td>
 								</tr>
 								<tr>
 									<td></td>
 									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
 								</tr>
 								<tr>
-									<td><small style="font-size:0.7em;">개별소송</small><br>
+									<td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
 										B타입
 										</td>
 									<td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
 									<td>80<small style="font-size:0.7em;">만</small></td>
 									<td>116<small style="font-size:0.7em;">만</small></td>
 									<td>148<small style="font-size:0.7em;">만</small></td>
-									<td>32<small style="font-size:0.7em;">만 추가</small></td>
+									<td>32<small style="font-size:0.7em;">만+</small></td>
 								</tr>
 								<tr>
 									<td></td>
@@ -430,7 +432,7 @@
 								</tr>
 								<tr>
 									<td></td>
-									<td colspan="6"><small style="font-size:0.7em;">※ 일괄신청은 주민등록지가 설치주소와 동일한 주소지에 등록되어 있는 경우에 가능합니다</small></td>
+									<td colspan="6"><small style="font-size:0.7em;">※ 복수신청은 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>에 가능합니다</small></td>
 								</tr>
 
 							</table>
@@ -450,10 +452,10 @@
 											<div class="col-md-6"><h3> #1 소송의 기간</h3></div>
 											<div class="col-md-6"><p>
 												대기업을 상대로 하는 단체소송은 짧은면 1년, 길면 2년이상 걸리는 지난한 싸움입니다.
-												따라서 <small>긴 시간 참을성있게 기다리실 수 있는 분</small>만 참여해주시기 바랍니다.
+												따라서 <b>긴 시간 참을성있게 기다리실 수 있는 분</b>께서 참여해주시기 바랍니다.
 													<br>
 													<span style="font-size:0.7em">
-														다만 상대방이 사실을 인정하고 다투지 않을 경우, 6개월 조기종결도 가능합니다.
+														다만 상대방이 사실을 인정하는 경우, 6개월 조기종결도 가능합니다.
 													</span>
 												</p></div>
 										</div>
@@ -476,7 +478,7 @@
 
 													<span style="font-size:0.7em">
 														<br>
-														징벌적 손해배상제도의 도입은 아직 요원합니다. 그때를 기다리시겠습니까?
+														징벌적 손해배상제의 도입은 아직 요원합니다. 그때를 기다리시겠습니까?
 													</span>
 
 												</p></div>
@@ -486,8 +488,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(site/ccmail/images/ccmail/ccmail3_002.png);background-size: contain"
-						data-wow-duration="1s" data-wow-delay="1s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(site/wave/images/full_3.jpg);background-size: contain"
+						data-wow-duration="0.5s" data-wow-delay="0.5s" data-stellar-background-ratio="0.5">{{--site/ccmail/images/ccmail/ccmail3_002.png--}}
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">
@@ -497,11 +499,11 @@
 											<div class="col-md-6"><h3> #3 소송 비용</h3></div>
 											<div class="col-md-6"><p>
 												단체소송은 변호사 배만 불린다? 그렇지 않습니다.
-												대기업 상대 소송은 보통 1심만 2년 이상 걸립니다. 24개월 천여명의 소송인단을 꾸려가는 것은 한두명의 인력으로 부족합니다.
-												마르지않는 자금을 가진 상대에 대처하려면 체력이 튼튼해야 합니다.
+												대기업 소송은 보통 1심만 2년이 걸리며 그동안 수천명을 이끌고 가는것은 쉽지 않습니다.
+												마르지않는 자금을 가진 상대에 대응하려면 체력이 튼튼해야 합니다.
 													<span style="font-size:0.7em">
 														<br>
-														예율은 소비자소송을 통해 얻은 이익을 소비자 권익운동에 활용하고 있습니다.
+														예율은 소비자소송에서 얻은 수익을 소비자 권익운동에 활용합니다.
 													</span>
 											</p></div>
 										</div>
@@ -510,7 +512,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="wow fadeInUp" style="background-image: url(site/wave/images/full_4.jpg);" data-wow-duration="1s" data-wow-delay="1.2s" data-stellar-background-ratio="0.5">
+					<li class="wow fadeInUp" style="background-image: url(site/wave/images/full_4.jpg);" data-wow-duration="0.7s" data-wow-delay="0.8s" data-stellar-background-ratio="0.5">
 						<a href="#">
 							<div class="fh5co-overlay"></div>
 							<div class="container">

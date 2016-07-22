@@ -25,6 +25,9 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::group(array('domain' => 'wave.boonzero.com'), function() { //{account}.
         Route::get('/','WaveMainController@index');
     });
+    Route::get('/wave', 'WaveMainController@index');
+    Route::get('/wave/main', 'WaveMainController@dashboard');
+    Route::resource('wave/client', 'WaveClientController');
     // 집단소송
 
     //Route::get('/', 'CcMailSampleController@index');

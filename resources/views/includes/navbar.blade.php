@@ -29,7 +29,7 @@
                     {{--<nobr>
                         <img src="http://localhost/img/v1/peace_tree.png" style="width:52px;">
                     </nobr>--}}
-                    Boon
+                    예율
 
                 </a>
             </div>
@@ -43,7 +43,11 @@
                 </ul>--}}
 
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/ccmail') }}">Intro</a></li>
+                    <li><a href="{{ url('') }}">Intro</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/wave') }}">단체소송</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav">

@@ -97,10 +97,10 @@
 				</div>
 				<div class="panel-body text-center" style="background-color:#dcf0fa">
 					<div id="title설득멘트2">
-						서식작성까지 단 10분!
+						법무법인(유한)예율
 					</div>
 					<div id="title설득멘트">
-						쉽고 빠른 <span style="">분쟁관리사</span><br>
+						쉽고 빠른 <span style="">분쟁관리</span><br>
 					</div>
 
 					<a href="/auth/register">회원가입</a>
