@@ -179,11 +179,19 @@ echo "ddddddd다름";
     .btnCate1s {padding:8px 10px;}
     .btnCate1s span.fa {font-size:2.0em;}
     .cate1_text {font-size:0.8em;font-family:'맑은 고딕';}
+
+    .bigbox {width:32%;height:120px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;
+        border-radius:10px;
+    }
+    .bigbox h4 {border-bottom:1px solid tomato;padding-bottom:3px;}
+    h1 { color: #00BFFF; }
+
+    }
 </style>
 
     <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div class="" style="width:32%;height:120px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;">
+            <div class="bigbox box2" style="">
                 <h4>진행 소송{{--<small>+등록</small>--}}</h4>
 
                 @if (empty($wave_client))
@@ -207,14 +215,14 @@ echo "ddddddd다름";
 
             </div>
 
-            <div class="" style="width:32%;height:120px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;">
+            <div class="bigbox" style="">
                 <h4>최근 공지</h4>
                 <ul style="text-align: left;margin-left:20px;">
                     <li>소송 준비중입니다.</li>
                 </ul>
             </div>
 
-            <div class="" style="white-space:normal;width:32%;height:120px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;">
+            <div class="bigbox" style="white-space:normal;">
                 <h4>FAQ</h4>
                 <ul style="text-align: left;margin-left:20px;">
                 <li>진행중인 소송내용을 본 게시판에서 확인할 수 있습니다.</li>

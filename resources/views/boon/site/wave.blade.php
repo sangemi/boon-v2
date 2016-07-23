@@ -147,7 +147,8 @@
 										다수의 경험으로 집단소송을 관리해드립니다. <br>정기적 진행보고. <big>차별화된 소송지원</big>을 경험하세요.
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
-										<a href="http://cafe.naver.com/hogu1004" class="btn btn-primary" target="_blank">소비자연합Cafe</a>
+										<a href="http://cafe.naver.com/hogu1004" class="btn btn-primary" target="_blank">카페채널</a>
+										<a href="#소송안내" class="btn btn-primary btn-outline btn-sm">안내</a>
 										<a href="#소송비용" class="btn btn-primary btn-outline btn-sm">비용</a>
 										{{--<a href="tel:022135525" class="btn btn-primary btn-outline">방문요청</a>--}}
 										{{--/ip/askvisit--}}
@@ -263,7 +264,7 @@
 											<div class="alert alert-info"><B>Tip.</B> {{ Session::get('tip') }}</div>
 										@endif
 
-										<a href="/wave/main" class="btn btn-primary">관리페이지 바로가기</a>
+										<a href="/wave/main" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
 									</div>
 
 								@endif
@@ -286,14 +287,15 @@
 				</div>
 			</div>
 
-		  	<span class="scroll-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.0s">
+		  	<span class="scroll-btn wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
 				<a href="#">
-					▼
+					소송안내▼
 				</a>
 			</span>
 		</div>
 
 
+		<a  name="소송안내"></a>
 		<div class="fh5co-project-style-2">
 
 			<div class="container">
@@ -877,7 +879,7 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-3 col-sm-6 fh5co-footer-widget"> {{--wow fadeInUp  data-wow-duration="1s" data-wow-delay=".1s"--}}
-						<div class="fh5co-logo"><span class="logo">Y</span> 법무법인(유)예율</div>
+						<div class="fh5co-logo"><span class="logo">Y</span> Lawfirm YEYUL</div>
 						<p class="fh5co-copyright">&copy; 2013 Boonzero. <br>All Rights Reserved.
 							<br>Designed by <a target="_blank" href="about:blank">Moior</a>
 							<br>Work with <a target="_blank" href="http://www.yeyul.com">Yeyul</a>
@@ -947,8 +949,7 @@
 				</div>
 				<div class="row fh5co-made">
 					<div class="col-md-12">
-					<div class="col-md-12">
-						<p><a href="/wave/status">접수상태 확인</a></p>
+						<p><a href="/wave/main">접수상태 확인</a></p>
 					</div>
 				</div>
 			</div>

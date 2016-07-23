@@ -27,6 +27,16 @@ class CreatWaveStatusTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+        DB::table('wave_status')->insert([
+                'suit_id' => '0',
+                'title' => '신청확인중',
+                'explain' => "
+<p>최소인원이 모이면 순서대로 일괄 접수됩니다. 기다려주세요.</p>
+                ",
+                'status_inner' => '신청확인중',
+                'status_show' => '신청확인중',
+            ]
+        );
     }
 
     /**

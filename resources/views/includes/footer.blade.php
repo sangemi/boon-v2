@@ -5,11 +5,12 @@
     <br />
     (주)모이어 <small><span class="nowrap">서울 테헤란로 207 A&Comp 707/</span> <span class="nowrap">대표 김상겸/ 개인정보 김원영</span> </small> @ 1661-5521
     <br />
-    Work with 법무법인 예율 @ 02-2135-5251
+    시스템문의 <a href="mailto:help@moior.com">help@moior.com</a> / Work with 법무법인 예율 @ 02-2135-5251
 </div>
 
-<small style="position:fixed;bottom:10px;left:10px;">
-    <a href="tel:1661-5521" style="background-color:gray;color:cornsilk;letter-spacing: -0.7px;" class="btn btn-xs btn-default">
+{{--고정된 아이콘 (휴대폰에서는 안됨?)--}}
+<small style="position:fixed;bottom:10px;left:10px; ">
+    {{--<a href="tel:1661-5521" style="background-color:gray;color:cornsilk;letter-spacing: -0.7px;" class="btn btn-xs btn-default">
         문의 1661-5521
-    </a>
+    </a>--}}
 </small>
