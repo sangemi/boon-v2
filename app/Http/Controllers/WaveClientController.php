@@ -92,8 +92,8 @@ class WaveClientController extends Controller {
 			$data = Request::all();
 
 			$task->user_id = Auth::id();
-			$task->suit_id = '1'; // 다른 소송일경우. 변경해야.
-			$task->status_id = '';
+			$task->suit_id = '1'; // 코웨이 중금속 사건. 다른 소송일경우. 변경해야.
+			$task->status_id = '1'; // 처음 접수시에는 무조건 신청확인중.
 
 			$task->name = $data['name'];
 			$task->jumin = $data['jumin'];

@@ -192,9 +192,9 @@ $(document).ready(function(){
 
 * 신청서 작성 후 나중 관련파일을 첨부할 수 있습니다.")  !!}
 
-                {!! BootForm::select('함께 신청할 동거가족 수', 'data06')->options(['0' => '없음', '1' => '1명', '2' => '2명', '3' => '3명', '4' => '4명', '5+' => '5명이상'])->select('green') !!}
+                {!! BootForm::select('함께 신청할 동거인 수', 'data06')->options(['0' => '없음', '1' => '1명', '2' => '2명', '3' => '3명', '4' => '4명', '5+' => '5명이상'])->select('green') !!}
 
-                {!! BootForm::textarea( "동거가족에게 신체상 이상이 있는 경우" , 'data07')->placeholder("1. 홍길동
+                {!! BootForm::textarea( "동거인에게 신체상 이상이 있는 경우" , 'data07')->placeholder("1. 홍길동
   1) 아들
   2) 100525-3450012
   3) 하루 5잔

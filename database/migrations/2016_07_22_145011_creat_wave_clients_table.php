@@ -50,6 +50,8 @@ class CreatWaveClientsTable extends Migration
             $table->string('bank_number');
             $table->string('bank_owner');
 
+            $table->enum('chk_proof', array('','자료부족','자료완료'))->default(''); // 증거가3개면 nnn n-> x -> o
+            $table->enum('chk_payment', array('입금대기', '부족', '면제', '해당없음', '입금완료'))->default('입금대기');
 
             $table->string('status_inner');
             $table->string('status_show');

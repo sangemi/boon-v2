@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -32,24 +38,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
+      <file leaf-file-name="2016_07_22_145011_creat_wave_clients_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.142858">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="-19.0">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client_write.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-68.67857">
+              <caret line="198" column="19" selection-start-line="198" selection-start-column="19" selection-end-line="198" selection-end-column="19" />
               <folding>
-                <element signature="e#40#61#0#PHP" expanded="true" />
+                <marker date="1469246484390" expanded="true" signature="2068:2187" placeholder="..." />
+                <marker date="1469246484390" expanded="true" signature="2171:2185" placeholder="..." />
+                <marker date="1469246484390" expanded="true" signature="7509:7635" placeholder="..." />
+                <marker date="1469246484390" expanded="true" signature="7568:7632" placeholder="..." />
+                <marker date="1469246484390" expanded="true" signature="7836:7964" placeholder="..." />
+                <marker date="1469246484390" expanded="true" signature="7836:8063" placeholder="..." />
+                <marker date="1469246484390" expanded="true" signature="7904:7964" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_07_22_145011_creat_wave_clients_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php">
+      <file leaf-file-name="WaveClientController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.75">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-17.642857">
+              <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+              <folding>
+                <element signature="e#39#58#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,50 +100,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_07_22_151138_creat_wave_suit_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_151138_creat_wave_suit_table.php">
+      <file leaf-file-name="2016_07_22_151443_creat_wave_status_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.642857">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.75">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.25">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
               <folding>
-                <marker date="1469230556976" expanded="true" signature="751:1103" placeholder="..." />
+                <element signature="e#5159#5230#0#HTML" expanded="true" />
+                <element signature="e#6035#6062#0#HTML" expanded="true" />
+                <element signature="e#6115#6178#0#HTML" expanded="true" />
+                <element signature="e#6406#6433#0#HTML" expanded="true" />
+                <element signature="e#6486#6549#0#HTML" expanded="true" />
+                <element signature="e#7449#7471#0#HTML" expanded="true" />
+                <element signature="e#7567#7591#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_07_22_151443_creat_wave_status_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php">
+      <file leaf-file-name="mypage.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.714286">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.25898388">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_07_22_193638_creat_wave_file_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_193638_creat_wave_file_table.php">
+      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.571428">
-              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5687732">
-              <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.571428">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
-                <element signature="e#5097#5168#0#HTML" expanded="true" />
-                <element signature="e#6027#6069#0#HTML" expanded="true" />
-                <element signature="e#6185#6212#0#HTML" expanded="true" />
-                <element signature="e#6265#6307#0#HTML" expanded="true" />
-                <element signature="e#7160#7182#0#HTML" expanded="true" />
-                <element signature="e#7278#7302#0#HTML" expanded="true" />
+                <element signature="e#40#61#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,16 +162,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaveClient.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/WaveClient.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.285715">
-              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -155,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/forum.frontend.php" />
         <option value="$PROJECT_DIR$/resources/lang/vendor/forum/ko/categories.php" />
         <option value="$PROJECT_DIR$/resources/lang/vendor/forum/ko/posts.php" />
         <option value="$PROJECT_DIR$/app/Lib/skHelper.php" />
@@ -192,19 +206,20 @@
         <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_22_193638_creat_wave_file_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/WaveClient.php" />
         <option value="$PROJECT_DIR$/app/WaveSuit.php" />
         <option value="$PROJECT_DIR$/app/WaveStatus.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_22_151138_creat_wave_suit_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/site/wave.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
       </list>
     </option>
@@ -268,6 +283,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wave" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -466,8 +547,8 @@
       <recent name="D:\dev\php\xampp\htdocs\app\Lib" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\dev\php\xampp\htdocs\public\img\wave" />
       <recent name="D:\dev\php\xampp\htdocs\resources\views\boon\wave" />
+      <recent name="D:\dev\php\xampp\htdocs\public\img\wave" />
       <recent name="D:\dev\php\xampp\htdocs\app\Http\Controllers" />
       <recent name="D:\dev\php\xampp\htdocs\app" />
       <recent name="D:\dev\php\xampp\htdocs\resources\views\boon\site" />
@@ -513,12 +594,6 @@
       <created>1457000306532</created>
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
-    </task>
-    <task id="LOCAL-00020" summary="0.9533&#10;&#10;공개시작 &#10;조금 수정">
-      <created>1457695753214</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1457695753214</updated>
     </task>
     <task id="LOCAL-00021" summary="0.96&#10;&#10;">
       <created>1457696304254</created>
@@ -808,7 +883,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469239240684</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="3.0014&#10;&#10;wave.bonzero.com 거의완성&#10;&#10;&#10;">
+      <created>1469239466502</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1469239466502</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
@@ -894,11 +975,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/site/ip/images/iphone_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/site/ccmail/images/full_4.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1148,39 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.321428">
-          <caret line="127" column="63" selection-start-line="127" selection-start-column="63" selection-end-line="127" selection-end-column="63" />
-          <folding>
-            <element signature="e#2846#2903#0#HTML" expanded="true" />
-            <element signature="e#2950#2991#0#HTML" expanded="true" />
-            <element signature="e#3070#3110#0#HTML" expanded="true" />
-            <element signature="e#3187#3228#0#HTML" expanded="true" />
-            <element signature="e#3284#3303#0#HTML" expanded="true" />
-            <element signature="e#4292#4318#0#HTML" expanded="true" />
-            <element signature="e#8846#8870#0#HTML" expanded="true" />
-            <marker date="1469206704777" expanded="true" signature="2068:2187" placeholder="..." />
-            <marker date="1469206704777" expanded="true" signature="2171:2185" placeholder="..." />
-            <marker date="1469206704777" expanded="true" signature="7509:7635" placeholder="..." />
-            <marker date="1469206704777" expanded="true" signature="7568:7632" placeholder="..." />
-            <marker date="1469206704777" expanded="true" signature="7837:7966" placeholder="..." />
-            <marker date="1469206704777" expanded="true" signature="7837:8065" placeholder="..." />
-            <marker date="1469206704777" expanded="true" signature="7906:7966" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.107143">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.178572">
@@ -1239,16 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.142858">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/WaveClient.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.285715">
@@ -1265,14 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.75">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_151138_creat_wave_suit_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.642857">
@@ -1280,14 +1305,6 @@
           <folding>
             <marker date="1469230556976" expanded="true" signature="751:1103" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.714286">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1319,18 +1336,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.0">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.75">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-68.67857">
+          <caret line="198" column="19" selection-start-line="198" selection-start-column="19" selection-end-line="198" selection-end-column="19" />
+          <folding>
+            <marker date="1469246484390" expanded="true" signature="2068:2187" placeholder="..." />
+            <marker date="1469246484390" expanded="true" signature="2171:2185" placeholder="..." />
+            <marker date="1469246484390" expanded="true" signature="7509:7635" placeholder="..." />
+            <marker date="1469246484390" expanded="true" signature="7568:7632" placeholder="..." />
+            <marker date="1469246484390" expanded="true" signature="7836:7964" placeholder="..." />
+            <marker date="1469246484390" expanded="true" signature="7836:8063" placeholder="..." />
+            <marker date="1469246484390" expanded="true" signature="7904:7964" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.642857">
+          <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+          <folding>
+            <element signature="e#39#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.571428">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5687732">
-          <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.25">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding>
-            <element signature="e#5097#5168#0#HTML" expanded="true" />
-            <element signature="e#6027#6069#0#HTML" expanded="true" />
-            <element signature="e#6185#6212#0#HTML" expanded="true" />
-            <element signature="e#6265#6307#0#HTML" expanded="true" />
-            <element signature="e#7160#7182#0#HTML" expanded="true" />
-            <element signature="e#7278#7302#0#HTML" expanded="true" />
+            <element signature="e#5159#5230#0#HTML" expanded="true" />
+            <element signature="e#6035#6062#0#HTML" expanded="true" />
+            <element signature="e#6115#6178#0#HTML" expanded="true" />
+            <element signature="e#6406#6433#0#HTML" expanded="true" />
+            <element signature="e#6486#6549#0#HTML" expanded="true" />
+            <element signature="e#7449#7471#0#HTML" expanded="true" />
+            <element signature="e#7567#7591#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.25898388">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

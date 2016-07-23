@@ -48,7 +48,7 @@ class WaveMainController extends Controller
             $status_obj = $clien->status()->first();
             if(count($status_obj))
                 $my_status[]['title'] = $status_obj->title;
-            else $my_status[]['title'] = "아직 배정되지 않음";
+            else $my_status[]['title'] = "배정전";
 
             /*  echo $phone->user()->first()->email; //사용자의 이메일을 다음처럼 표시하기 보다:
                 echo $phone->user->email;  // 보다 짧고 간단하게 표시할 수 있습니다: */
