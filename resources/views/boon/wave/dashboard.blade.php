@@ -183,7 +183,7 @@ echo "ddddddd다름";
     .bigbox {width:32%;height:120px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;
         border-radius:10px;
     }
-    .bigbox h4 {border-bottom:1px solid tomato;padding-bottom:3px;}
+    .bigbox h4 {border-bottom:1px solid tomato;padding-bottom:3px;background-color:tomato;}
     h1 { color: #00BFFF; }
 
     }
@@ -216,16 +216,16 @@ echo "ddddddd다름";
             </div>
 
             <div class="bigbox" style="">
-                <h4>최근 공지</h4>
+                <h4>지난 자료</h4>
                 <ul style="text-align: left;margin-left:20px;">
                     <li>소송 준비중입니다.</li>
                 </ul>
             </div>
 
             <div class="bigbox" style="white-space:normal;">
-                <h4>FAQ</h4>
+                <h4>향후 기일</h4>
                 <ul style="text-align: left;margin-left:20px;">
-                <li>진행중인 소송내용을 본 게시판에서 확인할 수 있습니다.</li>
+                <li>앞으로의 진행상황을 여기서 확인할 수 있습니다.</li>
                 </ul>
             </div>
         </div>
