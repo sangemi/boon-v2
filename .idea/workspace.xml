@@ -78,19 +78,36 @@
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.44927537">
-              <caret line="250" column="143" selection-start-line="250" selection-start-column="143" selection-end-line="250" selection-end-column="143" />
+              <caret line="258" column="32" selection-start-line="258" selection-start-column="32" selection-end-line="258" selection-end-column="32" />
               <folding>
-                <element signature="e#10761#10783#0#HTML" expanded="true" />
-                <element signature="e#10875#10899#0#HTML" expanded="true" />
-                <element signature="e#14182#14204#0#HTML" expanded="true" />
-                <element signature="e#16148#16172#0#HTML" expanded="true" />
-                <marker date="1469348636451" expanded="true" signature="2068:2187" placeholder="..." />
-                <marker date="1469348636451" expanded="true" signature="2171:2185" placeholder="..." />
-                <marker date="1469348636451" expanded="true" signature="7509:7635" placeholder="..." />
-                <marker date="1469348636451" expanded="true" signature="7568:7632" placeholder="..." />
-                <marker date="1469348636451" expanded="true" signature="7836:7964" placeholder="..." />
-                <marker date="1469348636451" expanded="true" signature="7836:8063" placeholder="..." />
-                <marker date="1469348636451" expanded="true" signature="7904:7964" placeholder="..." />
+                <element signature="e#11126#11148#0#HTML" expanded="true" />
+                <element signature="e#11244#11268#0#HTML" expanded="true" />
+                <element signature="e#14765#14787#0#HTML" expanded="true" />
+                <element signature="e#14978#15002#0#HTML" expanded="true" />
+                <element signature="e#15393#15417#0#HTML" expanded="true" />
+                <element signature="e#15575#15599#0#HTML" expanded="true" />
+                <element signature="e#15609#15633#0#HTML" expanded="true" />
+                <element signature="e#15694#15718#0#HTML" expanded="true" />
+                <element signature="e#15779#15803#0#HTML" expanded="true" />
+                <element signature="e#15864#15888#0#HTML" expanded="true" />
+                <element signature="e#15948#15972#0#HTML" expanded="true" />
+                <element signature="e#16153#16177#0#HTML" expanded="true" />
+                <element signature="e#16314#16338#0#HTML" expanded="true" />
+                <element signature="e#16483#16507#0#HTML" expanded="true" />
+                <element signature="e#16517#16541#0#HTML" expanded="true" />
+                <element signature="e#16602#16626#0#HTML" expanded="true" />
+                <element signature="e#16688#16712#0#HTML" expanded="true" />
+                <element signature="e#16774#16798#0#HTML" expanded="true" />
+                <element signature="e#16859#16883#0#HTML" expanded="true" />
+                <element signature="e#17064#17088#0#HTML" expanded="true" />
+                <element signature="e#17282#17306#0#HTML" expanded="true" />
+                <marker date="1469349248520" expanded="true" signature="2068:2187" placeholder="..." />
+                <marker date="1469349248520" expanded="true" signature="2171:2185" placeholder="..." />
+                <marker date="1469349248520" expanded="true" signature="7509:7635" placeholder="..." />
+                <marker date="1469349248520" expanded="true" signature="7568:7632" placeholder="..." />
+                <marker date="1469349248520" expanded="true" signature="7836:7964" placeholder="..." />
+                <marker date="1469349248520" expanded="true" signature="7836:8063" placeholder="..." />
+                <marker date="1469349248520" expanded="true" signature="7904:7964" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -617,12 +634,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00026" summary="0.99&#10;&#10;">
-      <created>1457955893780</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1457955893780</updated>
-    </task>
     <task id="LOCAL-00027" summary="0.998&#10;&#10;">
       <created>1457959004072</created>
       <option name="number" value="00027" />
@@ -911,7 +922,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469344531336</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="3.1002&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
+      <created>1469348642029</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1469348642029</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1317,7 +1334,7 @@
         <state vertical-scroll-proportion="-4.892857">
           <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
+            <element signature="e#40#61#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1327,7 +1344,7 @@
         <state vertical-scroll-proportion="-4.051724">
           <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
-            <element signature="e#6#97#0#PHP" expanded="true" />
+            <element signature="e#6#97#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1421,19 +1438,36 @@
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44927537">
-          <caret line="250" column="143" selection-start-line="250" selection-start-column="143" selection-end-line="250" selection-end-column="143" />
+          <caret line="258" column="32" selection-start-line="258" selection-start-column="32" selection-end-line="258" selection-end-column="32" />
           <folding>
-            <element signature="e#10761#10783#0#HTML" expanded="true" />
-            <element signature="e#10875#10899#0#HTML" expanded="true" />
-            <element signature="e#14182#14204#0#HTML" expanded="true" />
-            <element signature="e#16148#16172#0#HTML" expanded="true" />
-            <marker date="1469348636451" expanded="true" signature="2068:2187" placeholder="..." />
-            <marker date="1469348636451" expanded="true" signature="2171:2185" placeholder="..." />
-            <marker date="1469348636451" expanded="true" signature="7509:7635" placeholder="..." />
-            <marker date="1469348636451" expanded="true" signature="7568:7632" placeholder="..." />
-            <marker date="1469348636451" expanded="true" signature="7836:7964" placeholder="..." />
-            <marker date="1469348636451" expanded="true" signature="7836:8063" placeholder="..." />
-            <marker date="1469348636451" expanded="true" signature="7904:7964" placeholder="..." />
+            <element signature="e#11126#11148#0#HTML" expanded="true" />
+            <element signature="e#11244#11268#0#HTML" expanded="true" />
+            <element signature="e#14765#14787#0#HTML" expanded="true" />
+            <element signature="e#14978#15002#0#HTML" expanded="true" />
+            <element signature="e#15393#15417#0#HTML" expanded="true" />
+            <element signature="e#15575#15599#0#HTML" expanded="true" />
+            <element signature="e#15609#15633#0#HTML" expanded="true" />
+            <element signature="e#15694#15718#0#HTML" expanded="true" />
+            <element signature="e#15779#15803#0#HTML" expanded="true" />
+            <element signature="e#15864#15888#0#HTML" expanded="true" />
+            <element signature="e#15948#15972#0#HTML" expanded="true" />
+            <element signature="e#16153#16177#0#HTML" expanded="true" />
+            <element signature="e#16314#16338#0#HTML" expanded="true" />
+            <element signature="e#16483#16507#0#HTML" expanded="true" />
+            <element signature="e#16517#16541#0#HTML" expanded="true" />
+            <element signature="e#16602#16626#0#HTML" expanded="true" />
+            <element signature="e#16688#16712#0#HTML" expanded="true" />
+            <element signature="e#16774#16798#0#HTML" expanded="true" />
+            <element signature="e#16859#16883#0#HTML" expanded="true" />
+            <element signature="e#17064#17088#0#HTML" expanded="true" />
+            <element signature="e#17282#17306#0#HTML" expanded="true" />
+            <marker date="1469349248520" expanded="true" signature="2068:2187" placeholder="..." />
+            <marker date="1469349248520" expanded="true" signature="2171:2185" placeholder="..." />
+            <marker date="1469349248520" expanded="true" signature="7509:7635" placeholder="..." />
+            <marker date="1469349248520" expanded="true" signature="7568:7632" placeholder="..." />
+            <marker date="1469349248520" expanded="true" signature="7836:7964" placeholder="..." />
+            <marker date="1469349248520" expanded="true" signature="7836:8063" placeholder="..." />
+            <marker date="1469349248520" expanded="true" signature="7904:7964" placeholder="..." />
           </folding>
         </state>
       </provider>
