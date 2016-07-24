@@ -250,7 +250,7 @@ $(document).ready(function(){
     .hang {margin-left:10px;line-height:180%;font-family:;}
     .b {font-weight:bold}
     .c {text-align:center}
-    #wrap_paper {border:1px solid gray;height:300px;overflow-y:scroll;background-color:#eeeeee;margin:30px auto;padding:20px;width:100%;}
+    #wrap_paper {border:1px solid gray;height:300px;overflow-x:auto;overflow-y:scroll;background-color:#eeeeee;margin:30px auto;padding:20px;}
 
 </style>
                     <div id="wrap_paper">

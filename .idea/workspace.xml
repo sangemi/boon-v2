@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,19 +77,19 @@
       <file leaf-file-name="client_write.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77470356">
-              <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4743083">
+              <caret line="260" column="0" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
               <folding>
-                <element signature="e#10675#10697#0#HTML" expanded="true" />
-                <element signature="e#10793#10817#0#HTML" expanded="true" />
-                <element signature="e#14314#14336#0#HTML" expanded="true" />
-                <marker date="1469344306797" expanded="true" signature="2068:2187" placeholder="..." />
-                <marker date="1469344306797" expanded="true" signature="2171:2185" placeholder="..." />
-                <marker date="1469344306797" expanded="true" signature="7509:7635" placeholder="..." />
-                <marker date="1469344306797" expanded="true" signature="7568:7632" placeholder="..." />
-                <marker date="1469344306797" expanded="true" signature="7836:7964" placeholder="..." />
-                <marker date="1469344306797" expanded="true" signature="7836:8063" placeholder="..." />
-                <marker date="1469344306797" expanded="true" signature="7904:7964" placeholder="..." />
+                <element signature="e#10680#10702#0#HTML" expanded="true" />
+                <element signature="e#10798#10822#0#HTML" expanded="true" />
+                <element signature="e#14319#14341#0#HTML" expanded="true" />
+                <marker date="1469344511233" expanded="true" signature="2068:2187" placeholder="..." />
+                <marker date="1469344511233" expanded="true" signature="2171:2185" placeholder="..." />
+                <marker date="1469344511233" expanded="true" signature="7509:7635" placeholder="..." />
+                <marker date="1469344511233" expanded="true" signature="7568:7632" placeholder="..." />
+                <marker date="1469344511233" expanded="true" signature="7836:7964" placeholder="..." />
+                <marker date="1469344511233" expanded="true" signature="7836:8063" placeholder="..." />
+                <marker date="1469344511233" expanded="true" signature="7904:7964" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -615,12 +616,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00024" summary="0.99&#10;&#10;">
-      <created>1457922060322</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1457922060322</updated>
-    </task>
     <task id="LOCAL-00025" summary="0.99&#10;&#10;">
       <created>1457932177631</created>
       <option name="number" value="00025" />
@@ -909,7 +904,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469344314410</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="3.1002&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
+      <created>1469344326318</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1469344326318</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TodoView">
@@ -961,7 +962,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="0.999&#10;&#10;" />
     <MESSAGE value="0.9991&#10;&#10;" />
     <MESSAGE value="0.9992&#10;&#10;" />
     <MESSAGE value="0.9995&#10;&#10;" />
@@ -986,7 +986,8 @@
     <MESSAGE value="3.0015&#10;&#10;wave.bonzero.com 거의완성&#10;&#10;&#10;" />
     <MESSAGE value="3.1000&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
     <MESSAGE value="3.1001&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1001&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
+    <MESSAGE value="3.1002&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1002&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1418,19 +1419,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77470356">
-          <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4743083">
+          <caret line="260" column="0" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
           <folding>
-            <element signature="e#10675#10697#0#HTML" expanded="true" />
-            <element signature="e#10793#10817#0#HTML" expanded="true" />
-            <element signature="e#14314#14336#0#HTML" expanded="true" />
-            <marker date="1469344306797" expanded="true" signature="2068:2187" placeholder="..." />
-            <marker date="1469344306797" expanded="true" signature="2171:2185" placeholder="..." />
-            <marker date="1469344306797" expanded="true" signature="7509:7635" placeholder="..." />
-            <marker date="1469344306797" expanded="true" signature="7568:7632" placeholder="..." />
-            <marker date="1469344306797" expanded="true" signature="7836:7964" placeholder="..." />
-            <marker date="1469344306797" expanded="true" signature="7836:8063" placeholder="..." />
-            <marker date="1469344306797" expanded="true" signature="7904:7964" placeholder="..." />
+            <element signature="e#10680#10702#0#HTML" expanded="true" />
+            <element signature="e#10798#10822#0#HTML" expanded="true" />
+            <element signature="e#14319#14341#0#HTML" expanded="true" />
+            <marker date="1469344511233" expanded="true" signature="2068:2187" placeholder="..." />
+            <marker date="1469344511233" expanded="true" signature="2171:2185" placeholder="..." />
+            <marker date="1469344511233" expanded="true" signature="7509:7635" placeholder="..." />
+            <marker date="1469344511233" expanded="true" signature="7568:7632" placeholder="..." />
+            <marker date="1469344511233" expanded="true" signature="7836:7964" placeholder="..." />
+            <marker date="1469344511233" expanded="true" signature="7836:8063" placeholder="..." />
+            <marker date="1469344511233" expanded="true" signature="7904:7964" placeholder="..." />
           </folding>
         </state>
       </provider>
