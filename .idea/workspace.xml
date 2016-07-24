@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +76,8 @@
       <file leaf-file-name="client_write.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0500659">
-              <caret line="295" column="39" selection-start-line="295" selection-start-column="39" selection-end-line="295" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.77470356">
+              <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
               <folding>
                 <element signature="e#10675#10697#0#HTML" expanded="true" />
                 <element signature="e#10793#10817#0#HTML" expanded="true" />
@@ -616,12 +615,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00023" summary="0.99&#10;&#10;">
-      <created>1457919669280</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1457919669281</updated>
-    </task>
     <task id="LOCAL-00024" summary="0.99&#10;&#10;">
       <created>1457922060322</created>
       <option name="number" value="00024" />
@@ -910,7 +903,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469339315830</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="3.1001&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
+      <created>1469344314410</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1469344314410</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView">
@@ -962,7 +961,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="0.998&#10;&#10;" />
     <MESSAGE value="0.999&#10;&#10;" />
     <MESSAGE value="0.9991&#10;&#10;" />
     <MESSAGE value="0.9992&#10;&#10;" />
@@ -987,7 +985,8 @@
     <MESSAGE value="3.0014&#10;&#10;wave.bonzero.com 거의완성&#10;&#10;&#10;" />
     <MESSAGE value="3.0015&#10;&#10;wave.bonzero.com 거의완성&#10;&#10;&#10;" />
     <MESSAGE value="3.1000&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1000&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
+    <MESSAGE value="3.1001&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1001&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1419,8 +1418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0500659">
-          <caret line="295" column="39" selection-start-line="295" selection-start-column="39" selection-end-line="295" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.77470356">
+          <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
           <folding>
             <element signature="e#10675#10697#0#HTML" expanded="true" />
             <element signature="e#10793#10817#0#HTML" expanded="true" />
