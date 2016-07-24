@@ -126,7 +126,7 @@ class WaveClientController extends Controller {
 			$ret = $task->save();
 			if($ret) Session::flash('message', '입력되었습니다.');
 			else  Session::flash('message', '오류가 발생하였습니다. SK1083');
-			return redirect()->to('/wave/main' );
+			return redirect()->to('/wave/mypage' );
 
 		}
 	}
