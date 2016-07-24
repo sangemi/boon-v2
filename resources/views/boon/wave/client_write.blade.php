@@ -251,9 +251,9 @@ $(document).ready(function(){
     .b {font-weight:bold}
     .c {text-align:center}
     #wrap_paper {border:1px solid gray;height:300px;overflow-y:scroll;background-color:#eeeeee;margin:30px auto;padding:20px;width:100%;}
-    .wrap_basic_info {width:100%;border:1px solid gray;padding:20px;}
+
 </style>
-                    <div id=wrap_paper>
+                    <div id="wrap_paper">
 
                         <div class="big b c">사건위임계약서(민사)</div>
 
