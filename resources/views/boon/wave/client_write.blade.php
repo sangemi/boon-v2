@@ -238,143 +238,144 @@ $(document).ready(function(){
 
             </div>
             {!! BootForm::close() !!}
+            <div class="">
 
-            <div class="panel-footer">
-                <div class="">
+                <style>
+                    .big {font-size:24px;margin:20px 0;}
+                    .big1{font-size:16px;margin:40px 0;}
+                    .big2{font-size:14px;margin:10px 0;margin-left:10px;}
+                    .batang {margin-left:30px;line-height:150%;font-family:;}
+                    .hang {margin-left:10px;line-height:180%;font-family:;}
+                    .b {font-weight:bold}
+                    .c {text-align:center}
+                    #wrap_paper {border:1px solid gray;height:300px;overflow-x:auto;overflow-y:scroll;background-color:#eeeeee;margin:30px 10px;padding:20px;}
 
-<style>
-    .big {font-size:24px;margin:20px 0;}
-    .big1{font-size:16px;margin:40px 0;}
-    .big2{font-size:14px;margin:10px 0;margin-left:10px;}
-    .batang {margin-left:30px;line-height:150%;font-family:;}
-    .hang {margin-left:10px;line-height:180%;font-family:;}
-    .b {font-weight:bold}
-    .c {text-align:center}
-    #wrap_paper {border:1px solid gray;height:300px;overflow-x:auto;overflow-y:scroll;background-color:#eeeeee;margin:30px auto;padding:20px;}
+                </style>
+                <div id="wrap_paper">
 
-</style>
-                    <div id="wrap_paper">
+                    <div class="big b c">사건위임계약서(민사)</div>
 
-                        <div class="big b c">사건위임계약서(민사)</div>
+                    <div class="big1 b">1. 위임인(갑) : <span id="plain_name_in_contract"></span></div>
 
-                        <div class="big1 b">1. 위임인(갑) : <span id="plain_name_in_contract"></span></div>
 
-                        <div class="big1 b">2. 수임인(을) : 법무법인 예율 대표변호사 김웅, 김상겸</div>
+                    <div class="big1 b">2. 수임인(을) : 법무법인 예율 대표변호사 김웅, 김상겸</div>
 
-                        <div class="big1 b">3. 사건의 표시</div>
-                        <div class="b">제조물 결함으로 인한 손해배상청구 등
-                            1) 원고 : 갑
-                            2) 피고 : 코웨이 주식회사</div>
+                    <div class="big1 b">3. 사건의 표시</div>
+                    <div class="b">제조물 결함으로 인한 손해배상청구 등
+                        1) 원고 : 갑
+                        2) 피고 : 코웨이 주식회사</div>
 
-                        <div class="c" style="margin:40px 0;">상기 당사자들은 위 표시 사건의 사건처리에 관한 위임계약을 다음과 같이 체결한다.</div>
+                    <div class="c" style="margin:40px 0;">상기 당사자들은 위 표시 사건의 사건처리에 관한 위임계약을 다음과 같이 체결한다.</div>
 
-                        <div class="hang" style="margin-top:20px;">
+                    <div class="hang" style="margin-top:20px;">
 
-                            <span class="b">제1조(목적)</span> 갑은 을에게 위 표시 사건의 처리(이하 '위임사무')를 위임하고, 을은 이를 수임한다.
-                            <br />
-                            <br />
-                            <span class="b">제2조(위임한계)</span> 갑이 을에게 위임하는 위임사무의 범위는 1심 절차에 한한다.	<br />
-                            <br />
-                            <span class="b">제3조(수권범위)</span> 갑은 을에게 <u>일체의 소송행위, 화해, 항소 및 상고의 제기, 판결금 수령에 관한 일체의 행위, 공탁물과 그 이자의 반환 청구와 수령행위, 소송비용 신청행위의 권한</u>을 수여한다.
-                            <br />
-                            <br />
-                            <span class="b">제4조(수임인의 의무)</span> 을은 변호사로서 법령에 관한 권리와 의무에 입각하여 위임의 내용에 따라 선량한 관리자의 주의로써 위임사무를 처리한다.
-                            <br />
-                            <br />
-                            <span class="b">제5조(착수금 및 성공보수)</span> <u><span id="chaksu_txt"></span></u>
+                        <span class="b">제1조(목적)</span> 갑은 을에게 위 표시 사건의 처리(이하 '위임사무')를 위임하고, 을은 이를 수임한다.
+                        <br />
+                        <br />
+                        <span class="b">제2조(위임한계)</span> 갑이 을에게 위임하는 위임사무의 범위는 1심 절차에 한한다.	<br />
+                        <br />
+                        <span class="b">제3조(수권범위)</span> 갑은 을에게 <u>일체의 소송행위, 화해, 항소 및 상고의 제기, 판결금 수령에 관한 일체의 행위, 공탁물과 그 이자의 반환 청구와 수령행위, 소송비용 신청행위의 권한</u>을 수여한다.
+                        <br />
+                        <br />
+                        <span class="b">제4조(수임인의 의무)</span> 을은 변호사로서 법령에 관한 권리와 의무에 입각하여 위임의 내용에 따라 선량한 관리자의 주의로써 위임사무를 처리한다.
+                        <br />
+                        <br />
+                        <span class="b">제5조(착수금 및 성공보수)</span> <u><span id="chaksu_txt"></span></u>
 
-                            가. 착수금은 첨부 별표1에 따라 실제 입금된 금액으로 하고(부가가치세 포함), <u>성공보수는 갑의 경제적 이득의 20%(부가가치세 별도)</u>로 한다.<br/>
-                            나. 위 가항의 착수금은 을이 위임사무에 관한 연구, 조사, 서면작성 등 위임사무에 착수한 이후 을에게 책임 없는 사유로 인한 당사자의 소의 부제기 취하, 상소의 부제기 또는 취하, 청구의 포기, 인낙, 소송상 화해, 조정, 소송물의 양도, 당사자의 사망 등의 경우 갑이 그 반환을 청구하지 못한다.<br/>
-                            다. 다음의 경우에는 승소로 보고 위 가항의 성공보수를 지급하여야 한다.
-                             ① 을의 소송수행 결과로 상대방이 청구의 인낙, 조정을 하는 경우
-                             ② 을이 위임사무의 처리를 위하여 상당한 노력을 투입한 이후 갑이 정당한 사유 없이 위임계약을 해지하거나 임의로 조정, 청구의 포기, 소의 취하를 하는 경우<br/>
-                            라. <u>원고 승소시 피고가 부담할 소송비용</u>은 1심 절차 종료 후 갑이 일괄 신청하여 별도 성공보수로 산입한다.
+                        가. 착수금은 첨부 별표1에 따라 실제 입금된 금액으로 하고(부가가치세 포함), <u>성공보수는 갑의 경제적 이득의 20%(부가가치세 별도)</u>로 한다.<br/>
+                        나. 위 가항의 착수금은 을이 위임사무에 관한 연구, 조사, 서면작성 등 위임사무에 착수한 이후 을에게 책임 없는 사유로 인한 당사자의 소의 부제기 취하, 상소의 부제기 또는 취하, 청구의 포기, 인낙, 소송상 화해, 조정, 소송물의 양도, 당사자의 사망 등의 경우 갑이 그 반환을 청구하지 못한다.<br/>
+                        다. 다음의 경우에는 승소로 보고 위 가항의 성공보수를 지급하여야 한다.
+                        ① 을의 소송수행 결과로 상대방이 청구의 인낙, 조정을 하는 경우
+                        ② 을이 위임사무의 처리를 위하여 상당한 노력을 투입한 이후 갑이 정당한 사유 없이 위임계약을 해지하거나 임의로 조정, 청구의 포기, 소의 취하를 하는 경우<br/>
+                        라. <u>원고 승소시 피고가 부담할 소송비용</u>은 1심 절차 종료 후 갑이 일괄 신청하여 별도 성공보수로 산입한다.
 
-                            <br />
-                            <br />
-                            <span class="b">제6조(비용부담)</span>
-                            을이 위임사무를 처리하는 데 필요한 인지대, 송달료, 감정료, 예납금, 보증금, 등사료,여비,
-                            기타 필요한 <u>비용은 그 전액을 을(법무법인 예율)이 우선 지급</u>하고,
-                            <u>일부승소의 경우에 갑의 승소이익에서 우선 충당한다.</u>
-                            <u>패소할 경우에는 그 전액을 을이 여전히 부담</u>하고 갑에게 청구하지 않기로 한다.
-                            <br />
-                            <br />
-                            <span class="b">제7조(계약해지)</span>
-                                가. 을은 총 위임인이 A타입, B타입 각 500인 미만인 경우 소장접수 전 본 위임계약을 해지할 수 있고 그 경우 입금된 금액은 전액 환불하기로 한다.
-                                나. 갑이 위임계약에 정한 의무를 이행하지 아니하거나, 위임사무의 내용에 대하여 진술한 사실이 허위인 경우 을인 본 위임계약을 해지할 수 있다.
-                            <br />
-                            <br />
-                            <span class="b">제8조(인장조각)</span> 이 위임계약의 수행상 필요한 경우, 을은 갑의 인장을 조각하여 사용할 수 있다. (법원에 위임장 제출시 위임인의 도장을 찍어야 하기 때문에 인장조각이 필요합니다)
-                            <br />
-                            <br />
-                            <span class="b">제9조(민법과의 관계)</span> 기타 위임사항에 관하여 이 위임계약서에 특별히 규정되어 있는 사항을 제외하고는 민법상 위임에 관한 규정이 정한 바에 의한다.
-                            <br />
-                            <br />
-                            <span class="b">제10조(관할에 대한 합의)</span> 이 위임계약으로 생기는 일체의 소송에 관하여는 서울중앙지방법원을 관할법원으로 한다.
-                            <br />
-                            <br />
-                            <p class="pull-right"><?=date("Y년 m월 d일")?></p>
-                        </div>
+                        <br />
+                        <br />
+                        <span class="b">제6조(비용부담)</span>
+                        을이 위임사무를 처리하는 데 필요한 인지대, 송달료, 감정료, 예납금, 보증금, 등사료,여비,
+                        기타 필요한 <u>비용은 그 전액을 을(법무법인 예율)이 우선 지급</u>하고,
+                        <u>일부승소의 경우에 갑의 승소이익에서 우선 충당한다.</u>
+                        <u>패소할 경우에는 그 전액을 을이 여전히 부담</u>하고 갑에게 청구하지 않기로 한다.
+                        <br />
+                        <br />
+                        <span class="b">제7조(계약해지)</span>
+                        가. 을은 총 위임인이 A타입, B타입 각 500인 미만인 경우 소장접수 전 본 위임계약을 해지할 수 있고 그 경우 입금된 금액은 전액 환불하기로 한다.
+                        나. 갑이 위임계약에 정한 의무를 이행하지 아니하거나, 위임사무의 내용에 대하여 진술한 사실이 허위인 경우 을인 본 위임계약을 해지할 수 있다.
+                        <br />
+                        <br />
+                        <span class="b">제8조(인장조각)</span> 이 위임계약의 수행상 필요한 경우, 을은 갑의 인장을 조각하여 사용할 수 있다. (법원에 위임장 제출시 위임인의 도장을 찍어야 하기 때문에 인장조각이 필요합니다)
+                        <br />
+                        <br />
+                        <span class="b">제9조(민법과의 관계)</span> 기타 위임사항에 관하여 이 위임계약서에 특별히 규정되어 있는 사항을 제외하고는 민법상 위임에 관한 규정이 정한 바에 의한다.
+                        <br />
+                        <br />
+                        <span class="b">제10조(관할에 대한 합의)</span> 이 위임계약으로 생기는 일체의 소송에 관하여는 서울중앙지방법원을 관할법원으로 한다.
+                        <br />
+                        <br />
+                        <p class="pull-right"><?=date("Y년 m월 d일")?></p>
                     </div>
-
-
-                    <span class="b">착수금 별표1.</span><br />
-                    <br />
-                    A타입) 위자료 및 검진비만을 청구 – 11만원 (VAT포함)<br />
-                    B타입) 위자료, 검진비에 추가적으로 상해 치료비 청구 – 44만원 (VAT포함)<br />
-                    <br />
-                    * 동거인(주민등록상 주소지 동일한 가족)이 모두 원고가 되는 경우, 다음 표에 따름<br />
-                    <div id="div비용표" style="display:block;">
-                        <table class="table text-center">
-                            <tr>
-                                <th></th>
-                                <th class="text-center" style="color:royalblue;">1명</th>
-                                <th class="text-center"><nobr>2명</nobr></th>
-                                <th class="text-center">3명</th>
-                                <th class="text-center">4명</th>
-                                <th class="text-center">5명 이상</th>
-                            </tr>
-                            <tr>
-                                <td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
-                                    <nobr>A타입</nobr>
-                                </td>
-                                <td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
-                                <td>20<small style="font-size:0.7em;">만</small></td>
-                                <td>29<small style="font-size:0.7em;">만</small></td>
-                                <td>37<small style="font-size:0.7em;">만</small></td>
-                                <td>8<small style="font-size:0.7em;">만+</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
-                            </tr>
-                            <tr>
-                                <td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
-                                    B타입
-                                </td>
-                                <td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
-                                <td>80<small style="font-size:0.7em;">만</small></td>
-                                <td>116<small style="font-size:0.7em;">만</small></td>
-                                <td>148<small style="font-size:0.7em;">만</small></td>
-                                <td>32<small style="font-size:0.7em;">만+</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 일부 포함 </small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">※ 복수신청은 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>에 가능합니다</small></td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-
-
-
-
                 </div>
+
+
+                <span class="b">착수금 별표1.</span><br />
+                <br />
+                A타입) 위자료 및 검진비만을 청구 – 11만원 (VAT포함)<br />
+                B타입) 위자료, 검진비에 추가적으로 상해 치료비 청구 – 44만원 (VAT포함)<br />
+                <br />
+                * 동거인(주민등록상 주소지 동일한 가족)이 모두 원고가 되는 경우, 다음 표에 따름<br />
+                <div id="div비용표" style="display:block;">
+                    <table class="table text-center">
+                        <tr>
+                            <th></th>
+                            <th class="text-center" style="color:royalblue;">1명</th>
+                            <th class="text-center"><nobr>2명</nobr></th>
+                            <th class="text-center">3명</th>
+                            <th class="text-center">4명</th>
+                            <th class="text-center">5명 이상</th>
+                        </tr>
+                        <tr>
+                            <td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
+                                <nobr>A타입</nobr>
+                            </td>
+                            <td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
+                            <td>20<small style="font-size:0.7em;">만</small></td>
+                            <td>29<small style="font-size:0.7em;">만</small></td>
+                            <td>37<small style="font-size:0.7em;">만</small></td>
+                            <td>8<small style="font-size:0.7em;">만+</small></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
+                        </tr>
+                        <tr>
+                            <td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
+                                B타입
+                            </td>
+                            <td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
+                            <td>80<small style="font-size:0.7em;">만</small></td>
+                            <td>116<small style="font-size:0.7em;">만</small></td>
+                            <td>148<small style="font-size:0.7em;">만</small></td>
+                            <td>32<small style="font-size:0.7em;">만+</small></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 일부 포함 </small></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="6"><small style="font-size:0.7em;">※ 복수신청은 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>에 가능합니다</small></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="panel-footer">
+
 
             </div>
 
