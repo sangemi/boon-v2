@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaveClientController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WaveClientController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3254282">
-              <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
+            <state vertical-scroll-proportion="-10.178572">
+              <caret line="130" column="9" selection-start-line="130" selection-start-column="9" selection-end-line="130" selection-end-column="9" />
               <folding>
                 <element signature="e#39#58#0#PHP" expanded="true" />
               </folding>
@@ -149,12 +149,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mypage.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mypage.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.928572">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.35968378">
+              <caret line="191" column="101" selection-start-line="191" selection-start-column="101" selection-end-line="191" selection-end-column="101" />
+              <folding>
+                <element signature="e#5291#5318#0#HTML" expanded="true" />
+                <element signature="e#6050#6077#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -225,11 +228,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_22_193638_creat_wave_file_table.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/site/wave.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/client_write.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" />
       </list>
     </option>
   </component>
@@ -630,12 +633,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00030" summary="0.9992&#10;&#10;">
-      <created>1457963733269</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1457963733269</updated>
-    </task>
     <task id="LOCAL-00031" summary="0.9995&#10;&#10;">
       <created>1457965629365</created>
       <option name="number" value="00031" />
@@ -924,7 +921,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469350199951</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="3.1005&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
+      <created>1469350303606</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1469350303606</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1351,14 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.928572">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/WaveClient.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.0">
@@ -1462,10 +1457,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3254282">
-          <caret line="128" column="47" selection-start-line="128" selection-start-column="47" selection-end-line="128" selection-end-column="47" />
+        <state vertical-scroll-proportion="-10.178572">
+          <caret line="130" column="9" selection-start-line="130" selection-start-column="9" selection-end-line="130" selection-end-column="9" />
           <folding>
             <element signature="e#39#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35968378">
+          <caret line="191" column="101" selection-start-line="191" selection-start-column="101" selection-end-line="191" selection-end-column="101" />
+          <folding>
+            <element signature="e#5291#5318#0#HTML" expanded="true" />
+            <element signature="e#6050#6077#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
