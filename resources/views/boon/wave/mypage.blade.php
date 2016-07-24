@@ -27,9 +27,9 @@
     <li><a href="{{ URL::to('wave') }}">
         <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 단체소송</a></li>
 
-    {{--<li class="pull-right"><a href="{{ URL::to('ip/work/create') }}">
-        <span class="btn btn-xs btn-default" aria-hidden="true">의뢰 <span class="fa fa-pencil"></span></span></a>
-    </li>--}}
+    <li class="pull-right"><a href="{{ URL::to('wave/client/create') }}">
+        <span class="btn btn-xs btn-default" aria-hidden="true">신규 <span class="fa fa-pencil"></span></span></a>
+    </li>
 
 
 </ol>

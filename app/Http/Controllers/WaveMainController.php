@@ -26,7 +26,7 @@ class WaveMainController extends Controller
             } );
             $wave_client = $wave_client -> paginate(10);
 
-            return view('boon.wave.dashboard', compact('wave_client'));
+            return view('boon.wave.mypage', compact('wave_client'));
 
         }else{
             return view('boon.site.wave');
@@ -36,6 +36,11 @@ class WaveMainController extends Controller
     }
 
     public function dashboard()
+    {
+        $wave_client = WaveClient::all();
+        return view('boon.wave.dashboard', compact('wave_client'));
+    }
+    public function mypage()
     {
         //$wave_client = WaveClient::where('user_id', Auth::id());
         $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
@@ -56,10 +61,9 @@ class WaveMainController extends Controller
                //echo (string) $clien->suit_id . " - ". $name;*/
         }
 
-
         // 접수된게 있으면 메인 관리페이지,
         if($wave_client->count())
-            return view('boon.wave.dashboard', compact('wave_client', 'my_suit', 'my_status'));
+            return view('boon.wave.mypage', compact('wave_client', 'my_suit', 'my_status'));
 
         // 없으면 바로 소송접수!
         else

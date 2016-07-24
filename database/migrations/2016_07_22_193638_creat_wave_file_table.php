@@ -18,6 +18,8 @@ class CreatWaveFileTable extends Migration
 
             $table->integer('client_id')->unsigned();
 
+            /*$table->string('');*/
+
             $table->string('source_filename');
             $table->string('uploaded_filename');
             $table->string('file_size');

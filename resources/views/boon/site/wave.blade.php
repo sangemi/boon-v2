@@ -235,10 +235,10 @@
 											<div class="col-md-6 col-md-offset-4" id="area가입버튼">
 												{{--<div><small>가입하기 버튼을 클릭하면 <a>약관</a>에 동의한 것으로 간주됩니다.</small></div>--}}
 												<button type="submit" class="btn btn-primary">
-													다음
+													회원등록 & 다음
 												</button>
 											</div>
-											<div class="col-md-6 col-md-offset-4" style="font-size:0.8em;">※ 이미 신청하셨으면 <a href="/auth/login">로그인</a></div>
+											<div class="col-md-6 col-md-offset-4" style="font-size:0.8em;">※ 이미 가입하셨으면 <a href="/auth/login">로그인</a></div>
 										</div>
 										@if($errors->any())
 											<div class="alert alert-danger">
@@ -264,7 +264,7 @@
 											<div class="alert alert-info"><B>Tip.</B> {{ Session::get('tip') }}</div>
 										@endif
 
-										<a href="/wave/main" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
+										<a href="/wave/mypage" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
 									</div>
 
 								@endif

@@ -24,8 +24,9 @@
 </style>
 
 <ol class="breadcrumb">
-    <li><a href="{{ URL::to('wave') }}">
-        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 단체소송</a></li>
+    <li><a href="{{ URL::to('wave/admin') }}">
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 관리어드민</a></li>
+
 
     {{--<li class="pull-right"><a href="{{ URL::to('ip/work/create') }}">
         <span class="btn btn-xs btn-default" aria-hidden="true">의뢰 <span class="fa fa-pencil"></span></span></a>
@@ -192,25 +193,18 @@ echo "ddddddd다름";
     <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
             <div class="bigbox box2" style="">
-                <h4>진행 소송{{--<small>+등록</small>--}}</h4>
+                <h4>접수인단{{--<small>+등록</small>--}}</h4>
 
                 @if (empty($wave_client))
                     <div class="col-sm-12">
                         진행중 소송이 없습니다.
                     </div>
                 @else
+                    @foreach ($wave_client as $client)
 
-                    @foreach ($my_suit as $val)
-                        <div class="col-sm-12">
-                            <b><?=$val['title']?></b>
-                        </div>
+                        <b><?=$client['name']?></b>
                     @endforeach
 
-                    @foreach ($my_status as $val)
-                        <div class="col-sm-12">
-                            <?=$val['title']?>
-                        </div>
-                    @endforeach
                 @endif
 
             </div>

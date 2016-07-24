@@ -67,6 +67,7 @@ class WaveClientController extends Controller {
 			'phone' => 'required|max:255',
 			'data01' => 'required|max:255',
 			'data09' => 'alpha_dash',
+			'약정동의' => 'required'
 		]); //|email|max:255|unique:users 'password' => 'required|confirmed|min:6',
 		// 숫자+하이픈=alpha_dash.... // laravel.com/docs/5.2/validation
 	}

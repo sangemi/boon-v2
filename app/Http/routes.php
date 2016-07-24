@@ -26,7 +26,8 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
         Route::get('/','WaveMainController@index');
     });
     Route::get('/wave', 'WaveMainController@index');
-    Route::get('/wave/main', 'WaveMainController@dashboard');
+    Route::get('/wave/mypage', 'WaveMainController@mypage');
+    Route::get('/wave/admin', 'WaveMainController@dashboard');
     Route::resource('wave/client', 'WaveClientController');
     // 집단소송
 
