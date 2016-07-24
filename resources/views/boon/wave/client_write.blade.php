@@ -82,7 +82,7 @@ $(document).ready(function(){
             {!! BootForm::bind($waveClient) !!}
 
             <style>
-                .choice-product {width:144px;height:160px;float:left;border-radius:10px;margin:6px;border:1px solid gray;
+                .choice-product {width:154px;height:160px;float:left;border-radius:10px;margin:6px;border:1px solid gray;
                     background:url('/img/wave/wave-coway.jpg');background-repeat:no-repeat;}
                 /*width:144px;height:128px;*/
                 .choice-product:hover {border:3px solid gray;}
@@ -96,9 +96,9 @@ $(document).ready(function(){
             </script>
             <div style="border:1px solid #dadada;background-color:#dadada">
 
-                <div class="choice-product" style="background-position:-385px -10px;" data-name="370N (스파클링아이스)"></div>
-                <div class="choice-product" style="background-position:-40px -10px;" data-name="380N (한뼘아이스)"></div>
-                <div class="choice-product" style="background-position:-212px -10px;" data-name="430N (바리스타아이스)"></div>
+                <div class="choice-product" style="background-position:-380px -10px;" data-name="370N (스파클링아이스)"></div>
+                <div class="choice-product" style="background-position:-35px -10px;" data-name="380N (한뼘아이스)"></div>
+                <div class="choice-product" style="background-position:-207px -10px;" data-name="430N (바리스타아이스)"></div>
                 <div style="clear:both;"></div>
             </div>
 
