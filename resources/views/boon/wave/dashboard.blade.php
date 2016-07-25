@@ -202,7 +202,7 @@ echo "ddddddd다름";
                 @else
                     @foreach ($wave_client as $client)
 
-                        <b><?=$client['name']?></b>
+                        <div><?=$client['name']?></div>
                     @endforeach
 
                 @endif

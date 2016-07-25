@@ -19,7 +19,7 @@ class AdminController extends Controller
             return view('boon.site.ccmail');
 
         }*/
-        echo Auth::check(). "========이상하네";
+        echo Auth::check(). "<======= 어드민체크";
         if (Auth::check() && (Auth::user()->name == '김상겸' || Auth::user()->name == '정지혜'
                 || Auth::user()->name == '김수로' || Auth::user()->name == '최다현')
         ){
