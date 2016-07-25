@@ -67,6 +67,7 @@ class WaveClientController extends Controller {
 			'phone' => 'required|max:255',
 			'data01' => 'required|max:255',
 			'data09' => 'alpha_dash',
+			'data15' => 'required',
 			'약정동의' => 'required'
 		]); //|email|max:255|unique:users 'password' => 'required|confirmed|min:6',
 		// 숫자+하이픈=alpha_dash.... // laravel.com/docs/5.2/validation
@@ -119,7 +120,9 @@ class WaveClientController extends Controller {
 			/*$task->data12 = $data['data12'];
 			$task->data13 = $data['data13'];
 			$task->data14 = $data['data14'];
-			$task->data15 = $data['data15'];*/
+			*/
+
+			$task->data15 = $data['data15']; //A타입, B타입
 
 
 

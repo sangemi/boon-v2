@@ -202,7 +202,8 @@ echo "ddddddd다름";
                 @else
                     @foreach ($wave_client as $no => $client)
 
-                        <div><?=($no+1)?>. <?=$client['name']?> [<?=$client['check_payment']?>] </div>
+                        <div><?=($no+1)?>. <?=$client['name']?> [<?=$client['chk_payment']?>] </div>
+
                     @endforeach
 
                 @endif

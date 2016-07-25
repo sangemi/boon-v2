@@ -189,6 +189,7 @@ $(document).ready(function(){
                 {!! BootForm::date( "구입/렌탈 날짜" , 'data02')->placeholder("")  !!}
                 {!! BootForm::text( "사용기간" , 'data03')->placeholder("중간에 판매한 경우만 적어주세요.")  !!}
                 {!! BootForm::text( "평균 사용회수 및 음용량" , 'data04')->placeholder("ex) 하루 10잔/1L 등 자유롭게")  !!}
+
                 {!! BootForm::textarea( "현재 신체 이상증세" , 'data05')->placeholder("발암, 피부질환, 호흡기질환, 안질환, 신장질환 여부
 
 * 신청서 작성 후 나중 관련파일을 첨부할 수 있습니다.")  !!}
@@ -210,10 +211,18 @@ $(document).ready(function(){
                 {!! BootForm::text( "계좌번호" , 'data09')->placeholder("계좌번호")  !!}
                 {!! BootForm::text( "예금주명" , 'data10')->placeholder("예금주")  !!}
 
+                <div class="form-group">
+                    <label class="col-sm-2 col-lg-2 control-label"></label>
+                <div class="col-sm-10 col-lg-10" style="border-top:1px solid royalblue;background-color:cornflowerblue;">
+                    <h4>소송종류 선택</h4>
+                    {!! BootForm::radio( "A타입 (위자료 및 검진비 청구)" , 'data15', 'A') !!}
+                    {!! BootForm::radio( "B타입 (+증상이 있는 경우, 상해치료비 청구)" , 'data15', 'B') !!}
+                </div>
+            </div>
+
                 <label class="col-sm-2 col-lg-2 control-label"></label>
                 <div class="col-sm-10 col-lg-10">
-                    <h4>비용 입금 <small>메인 페이지 비용표를 확인하신 후, 인원에 맞게 입금하시면 됩니다.</small></h4>
-
+                    <h4>비용 입금 <small>하단 비용표를 확인하신 후, 인원에 맞게 입금하시면 됩니다.</small></h4>
                 </div>
 
                 {!! BootForm::text( "비용 입금자" , 'data11')->placeholder("비용 입금시 이름")  !!}
@@ -230,10 +239,10 @@ $(document).ready(function(){
 
                 {{--{!! BootForm::submit('접수') !!}--}}
                 <div class="form-group"><div class="col-sm-offset-2 col-sm-10 col-lg-offset-2 col-lg-10">
-                        <button type="submit" class="btn btn-default btn-primary btn-lg">접수</button>
+                    <button type="submit" class="btn btn-default btn-primary btn-lg">접수</button>
                 </div></div>
 
-                {!! BootForm::checkbox('아래 계약사항을 모두 읽고 동의하며, 접수버튼의 클릭으로 서면약정을 대체합니다.', '약정동의', true) !!}
+                {!! BootForm::checkbox('아래 계약사항을 모두 읽고 동의하며, 접수버튼의 클릭으로 서면약정을 대체합니다.', '약정동의', true)->check() !!}
 
 
 
