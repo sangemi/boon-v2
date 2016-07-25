@@ -181,7 +181,7 @@ echo "ddddddd다름";
     .btnCate1s span.fa {font-size:2.0em;}
     .cate1_text {font-size:0.8em;font-family:'맑은 고딕';}
 
-    .bigbox {width:32%;height:140px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;
+    .bigbox {width:48%;height:300px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;
         border-radius:10px;
     }
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
@@ -192,7 +192,7 @@ echo "ddddddd다름";
 
     <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div class="bigbox box2" style="">
+            <div class="bigbox box2" style="overflow-y:scroll">
                 <h4>접수인단{{--<small>+등록</small>--}}</h4>
 
                 @if (empty($wave_client))
@@ -200,9 +200,9 @@ echo "ddddddd다름";
                         진행중 소송이 없습니다.
                     </div>
                 @else
-                    @foreach ($wave_client as $client)
+                    @foreach ($wave_client as $no => $client)
 
-                        <div><?=$client['name']?></div>
+                        <div><?=$no?>. <?=$client['name']?></div>
                     @endforeach
 
                 @endif
@@ -218,13 +218,6 @@ echo "ddddddd다름";
                 <br>
             </div>
 
-            <div class="bigbox" style="white-space:normal;">
-                <h4>진행 안내</h4>
-                <ul style="text-align: left;margin-left:10px;list-style-type:none;">
-                    <li>접수중</li>
-                    <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
-                </ul>
-            </div>
         </div>
         <div class="row">
 

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,10 +74,11 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58498025">
-              <caret line="204" column="21" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.66007906">
+              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding>
-                <element signature="e#5768#5795#0#HTML" expanded="true" />
+                <element signature="e#5307#5332#0#HTML" expanded="true" />
+                <element signature="e#5802#5829#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -650,12 +649,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00032" summary="0.9996&#10;&#10;">
-      <created>1458011203834</created>
-      <option name="number" value="00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1458011203834</updated>
-    </task>
     <task id="LOCAL-00033" summary="1.0&#10;&#10;">
       <created>1458048858068</created>
       <option name="number" value="00033" />
@@ -944,7 +937,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469350450800</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="3.1006&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
+      <created>1469428194174</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1469428194174</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1482,10 +1481,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58498025">
-          <caret line="204" column="21" selection-start-line="204" selection-start-column="21" selection-end-line="204" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.66007906">
+          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
           <folding>
-            <element signature="e#5768#5795#0#HTML" expanded="true" />
+            <element signature="e#5307#5332#0#HTML" expanded="true" />
+            <element signature="e#5802#5829#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
