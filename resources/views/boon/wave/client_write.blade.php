@@ -213,7 +213,7 @@ $(document).ready(function(){
 
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label"></label>
-                <div class="col-sm-10 col-lg-10" style="border-top:1px solid royalblue;background-color:cornflowerblue;">
+                <div class="col-sm-10 col-lg-10" style="border-top:1px solid royalblue;background-color:lightblue;">
                     <h4>소송종류 선택</h4>
                     {!! BootForm::radio( "A타입 (위자료 및 검진비 청구)" , 'data15', 'A') !!}
                     {!! BootForm::radio( "B타입 (+증상이 있는 경우, 상해치료비 청구)" , 'data15', 'B') !!}
