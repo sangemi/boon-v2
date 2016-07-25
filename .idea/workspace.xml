@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,11 +75,14 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66007906">
-              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.30039525">
+              <caret line="204" column="90" selection-start-line="204" selection-start-column="90" selection-end-line="204" selection-end-column="90" />
               <folding>
                 <element signature="e#5307#5332#0#HTML" expanded="true" />
-                <element signature="e#5802#5829#0#HTML" expanded="true" />
+                <element signature="e#5825#5852#0#HTML" expanded="true" />
+                <element signature="e#5905#5968#0#HTML" expanded="true" />
+                <element signature="e#6922#6944#0#HTML" expanded="true" />
+                <element signature="e#7040#7064#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -649,12 +653,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00033" summary="1.0&#10;&#10;">
-      <created>1458048858068</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1458048858068</updated>
-    </task>
     <task id="LOCAL-00034" summary="1.0&#10;&#10;">
       <created>1458088333738</created>
       <option name="number" value="00034" />
@@ -943,7 +941,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469428194174</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="3.1010&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
+      <created>1469428357042</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1469428357042</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TodoView">
@@ -995,7 +999,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="0.9995&#10;&#10;" />
     <MESSAGE value="0.9996&#10;&#10;" />
     <MESSAGE value="1.0&#10;&#10;" />
     <MESSAGE value="1.01&#10;&#10;" />
@@ -1020,7 +1023,8 @@
     <MESSAGE value="3.1002&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
     <MESSAGE value="3.1005&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
     <MESSAGE value="3.1006&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1006&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
+    <MESSAGE value="3.1010&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1010&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1481,11 +1485,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66007906">
-          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.30039525">
+          <caret line="204" column="90" selection-start-line="204" selection-start-column="90" selection-end-line="204" selection-end-column="90" />
           <folding>
             <element signature="e#5307#5332#0#HTML" expanded="true" />
-            <element signature="e#5802#5829#0#HTML" expanded="true" />
+            <element signature="e#5825#5852#0#HTML" expanded="true" />
+            <element signature="e#5905#5968#0#HTML" expanded="true" />
+            <element signature="e#6922#6944#0#HTML" expanded="true" />
+            <element signature="e#7040#7064#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

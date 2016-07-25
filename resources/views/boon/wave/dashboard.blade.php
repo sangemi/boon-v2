@@ -193,16 +193,16 @@ echo "ddddddd다름";
     <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
             <div class="bigbox box2" style="overflow-y:scroll">
-                <h4>접수인단{{--<small>+등록</small>--}}</h4>
+                <h4>접수인단 <small>결제</small></h4>
 
                 @if (empty($wave_client))
                     <div class="col-sm-12">
-                        진행중 소송이 없습니다.
+                        내역없습니다.
                     </div>
                 @else
                     @foreach ($wave_client as $no => $client)
 
-                        <div><?=$no?>. <?=$client['name']?></div>
+                        <div><?=($no+1)?>. <?=$client['name']?> [<?=$client['check_payment']?>] </div>
                     @endforeach
 
                 @endif
