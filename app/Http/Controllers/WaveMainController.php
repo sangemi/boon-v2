@@ -48,19 +48,21 @@ class WaveMainController extends Controller
 
         foreach($wave_client as $clien){
             $suit_obj = $clien->suit()->first();
-            $my_suit[]['title']= $suit_obj->title;
+            $my_suit[]= $suit_obj;
 
             $status_obj = $clien->status()->first();
-            if(count($status_obj))
+            $my_status[] = $status_obj;
+            /*if(count($status_obj))
                 $my_status[]['title'] = $status_obj->title;
-            else $my_status[]['title'] = "배정전";
+            else $my_status[]['title'] = "배정전";*/
+
 
             /*  echo $phone->user()->first()->email; //사용자의 이메일을 다음처럼 표시하기 보다:
                 echo $phone->user->email;  // 보다 짧고 간단하게 표시할 수 있습니다: */
             /* $name = (string) $clien->name; // If a collection is cast to a string, it will be returned as JSON: ㅜ.ㅜ 삽질2시간.
                //echo (string) $clien->suit_id . " - ". $name;*/
         }
-
+//dd($my_status);
         // 접수된게 있으면 메인 관리페이지,
         if($wave_client->count())
             return view('boon.wave.mypage', compact('wave_client', 'my_suit', 'my_status'));

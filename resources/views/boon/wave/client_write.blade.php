@@ -187,6 +187,8 @@ $(document).ready(function(){
                 </script>
 
                 {!! BootForm::date( "구입/렌탈 날짜" , 'data02')->placeholder("")  !!}
+                {!! BootForm::text( "시리얼번호" , 'data12')->placeholder("기존제품 시리얼번호 (교환시 교환후 번호)")  !!}
+
                 {!! BootForm::text( "사용기간" , 'data03')->placeholder("중간에 판매한 경우만 적어주세요.")  !!}
                 {!! BootForm::text( "평균 사용회수 및 음용량" , 'data04')->placeholder("ex) 하루 10잔/1L 등 자유롭게")  !!}
 
@@ -386,7 +388,11 @@ $(document).ready(function(){
                             </tr>
                             <tr>
                                 <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">※ 복수신청은 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>에 가능합니다</small></td>
+                                <td colspan="6"><small style="font-size:0.7em;">※ 동거인이 있을경우 복수신청 가능합니다. <br> 다만 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>라야 합니다.</small></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="6">입금계좌 <b>신한 100-029-697933 법무법인 예율 </b></td>
                             </tr>
 
                         </table>

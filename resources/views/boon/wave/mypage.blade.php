@@ -200,17 +200,33 @@ echo "ddddddd다름";
                     </div>
                 @else
 
-                    @foreach ($my_suit as $val)
-                        <div class="col-sm-12">
-                            <b><?=$val['title']?></b>
+                    @foreach ($wave_client as $key=> $waveclient)
+                        <div class="col-sm-12" style="text-align: left;">
+                            <b><?=($key+1)?>. <?=$my_suit[$key]['title']?></b>
+                            <p><?=$my_status[$key]['title']?></p>
+                            @if( $waveclient['chk_proof'] == '')
+
+                            @endif
+
+
+                            @if( $waveclient['chk_payment'] == '입금대기')
+                                <?php
+                                $chk_payment = true;
+                                    ?>
+                                <div>
+                                    <p class="bg-warning">입금대기중</p>
+
+                                </div>
+                            @else
+                                <div class="row bg_warning">
+                                    <p><?=$my_status[$key]['chk_payment']?></p>
+                                </div>
+                            @endif
+
                         </div>
                     @endforeach
 
-                    @foreach ($my_status as $val)
-                        <div class="col-sm-12">
-                            <?=$val['title']?>
-                        </div>
-                    @endforeach
+
                 @endif
 
             </div>
@@ -232,39 +248,43 @@ echo "ddddddd다름";
                 </ul>
             </div>
         </div>
-        <div class="row">
 
-        </div>
-    </div>
-
-    {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
-        {{dd( Request::input(), http_build_query (Request::input()) ) }}
-    </div>--}}
-
-    {{--    <div class="corner-ribbon top-left sticky red shadow">New</div>
-        <div class="corner-ribbon top-right sticky blue">Updated</div>
-        <div class="corner-ribbon bottom-left sticky orange">Popular</div>
-        <div class="corner-ribbon bottom-right sticky green shadow">Hello</div>
-
-        <h1>Corner Ribbons</h1>
-        <h2>(with custom settings and all...)</h2>--}}
-
-    {{-- 세션에 메세지 있으면 보여주기 --}}
-    @if (Session::has('message'))
-        <div class="alert alert-info" style="margin:10px 0;">{{ Session::get('message') }}</div>
-    @endif
-
-    {{--내용증명 리스트 간략 박스형태--}}
-    <div class="" style="margin-top:30px;">
-
-    </div>
+</div>
 
 
+@if($chk_payment)
+    <h4>비용 미입금 상태</h4>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
+    <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
+@endif
+
+{{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
+{{dd( Request::input(), http_build_query (Request::input()) ) }}
+</div>--}}
+
+{{--    <div class="corner-ribbon top-left sticky red shadow">New</div>
+<div class="corner-ribbon top-right sticky blue">Updated</div>
+<div class="corner-ribbon bottom-left sticky orange">Popular</div>
+<div class="corner-ribbon bottom-right sticky green shadow">Hello</div>
+
+<h1>Corner Ribbons</h1>
+<h2>(with custom settings and all...)</h2>--}}
+
+{{-- 세션에 메세지 있으면 보여주기 --}}
+@if (Session::has('message'))
+<div class="alert alert-info" style="margin:10px 0;">{{ Session::get('message') }}</div>
+@endif
+
+{{--내용증명 리스트 간략 박스형태--}}
+<div class="" style="margin-top:30px;">
+
+</div>
 
 
 
 
-    {{--{{SKHelper::p($ccMails)}}--}}
+
+
+{{--{{SKHelper::p($ccMails)}}--}}
 
 
 
@@ -275,5 +295,5 @@ echo "ddddddd다름";
 <span style="text-decoration: line-through;">
 @endif--}}
 {{--@if ($ccMail->done == 1)
-    </span>
+</span>
 @endif--}}

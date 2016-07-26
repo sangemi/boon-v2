@@ -117,6 +117,8 @@ class WaveClientController extends Controller {
 			$task->data10 = $data['data10'];
 
 			$task->data11 = $data['data11'];
+			$task->data12 = $data['data12'];
+
 			/*$task->data12 = $data['data12'];
 			$task->data13 = $data['data13'];
 			$task->data14 = $data['data14'];
