@@ -47,7 +47,7 @@ class WaveMainController extends Controller
 
         if($task_name == 'change-payment') {
             //$task = ['task-title' => '입금처리', 'task-description' => '']; //Task::find($task_id);
-            if($request->chk_payment && $request->amt_payment){
+            if($request->chk_payment){ //  && $request->amt_payment 입금액은 없을수도 있음.
                 $wave_client = WaveClient::find($request->row_id);
 
                 $wave_client->chk_payment = $request->chk_payment; //'입금완료';

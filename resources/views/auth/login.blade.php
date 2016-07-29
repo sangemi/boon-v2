@@ -97,7 +97,7 @@
 				</div>
 				<div class="panel-body text-center" style="background-color:#dcf0fa">
 					<div id="title설득멘트2">
-						법무법인(유한)예율
+						법률문제 관리툴
 					</div>
 					<div id="title설득멘트">
 						쉽고 빠른 <span style="">분쟁관리</span><br>

@@ -32,11 +32,11 @@
 				<div class="panel-heading">회원가입</div>
 				<div class="panel-body">
 					<div id="title설득멘트2">
-						서식작성까지 단 10분!
-						<small>가입만 하면 쓸 수 있습니다.</small>
+						쉽고빠른 분쟁관리
+						<small>법률문제 전문 관리사이트</small>
 					</div>
 					<div id="title설득멘트">
-						쉽고 빠른 <span style="">분쟁관리사</span>
+						<span style="color:gold;">분</span>쟁<span style="color:gold;">제로</span>닷컴
 					</div>
 					@if($errors->any())
 						<div class="alert alert-danger">

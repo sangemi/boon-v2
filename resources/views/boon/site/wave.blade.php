@@ -888,10 +888,13 @@
 					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
 						<h3>Company</h3>
 						<ul class="fh5co-links">
-							<li>법무법인(유한)예율</li>
+							<li>(주)모이어</li>
 							<li><a target="_blank" href="https://www.google.co.kr/maps/place/%EC%95%84%EA%B0%80%EB%B0%A9%EB%B9%8C%EB%94%A9/@37.5019931,127.038773,18.29z/data=!4m12!1m9!4m8!1m0!1m6!1m2!1s0x357ca3ff15a01301:0xa36dcf2c34b2115a!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDsl63sgrwx64-ZIDY3OC0zNiDslYTqsIDrsKnruYzrlKk!2m2!1d127.0387154!2d37.5016827!3m1!1s0x0000000000000000:0xa36dcf2c34b2115a">
 									서울 강남 테헤란로207, 7층</a></li>
+							<li><a href="tel:1661-5521">1661-5521</a></li>
+							<li>Work with 법무법인(유한)예율</li>
 							<li><a href="tel:1661-5521">02-2135-5251</a></li>
+
 							{{--<li><a href="#">How it Works</a></li>
 							<li><a href="#">Services</a></li>
 							<li><a href="#">Products</a></li>
