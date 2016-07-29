@@ -193,7 +193,7 @@ echo "ddddddd다름";
     <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
             <div class="bigbox box2" style="overflow-y:scroll">
-                <h4>접수인단 <small>결제</small></h4>
+                <h4>접수인단 <small>[결제]</small></h4>
 
                 @if (empty($wave_client))
                     <div class="col-sm-12">
@@ -202,7 +202,10 @@ echo "ddddddd다름";
                 @else
                     @foreach ($wave_client as $no => $client)
 
-                        <div><?=($no+1)?>. <?=$client['name']?> [<?=$client['chk_payment']?>] </div>
+                        <div><?=($no+1)?>. <?=$client['name']?>
+                            [<a href="/wave/admin?mode=change_payment"><?=$client['chk_payment']?>/<?=$client['data11']?></a>]
+                            <button class="btn btn-warning btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">Edit</button>
+                        </div>
 
                     @endforeach
 
@@ -247,9 +250,130 @@ echo "ddddddd다름";
 
     </div>
 
+{{--이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤--}}
+<meta name="_token" content="{!! csrf_token() !!}" />
+<script>
+    $(document).ready(function() {
 
+        var url = "/wave/admin/tasks";
+        var task_name = '',row_id = '';
+        //display modal form for task editing
+        $('.open-modal').click(function () { // 수정시. 신규입력시에는 task_name = '';로 해서 하자.
+            task_name = $(this).val();
+            row_id = $(this).data('row_id');
+            $('#myModal').modal('show');
 
+            /*var task_name = $(this).val();
+            $.get(url + '/' + task_name, function (data) {
 
+            })*/
+        });
+
+        //create new task / update existing task
+        $("#btn-save").click(function (e) {
+            /*이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤*/
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                }
+            })
+
+            e.preventDefault();
+
+            var formData = {
+                row_id: row_id,
+                amt_payment: $('#amt_payment').val(),
+                chk_payment: $('input[name=chk_payment]:checked').val(),
+            }
+
+            //used to determine the http verb to use [add=POST], [update=PUT]
+            var state = "update"; // $('#btn-save').val();
+            var type = "POST"; //for creating new resource
+            var my_url = url;
+
+            if (state == "update"){
+                type = "PUT"; //for updating existing resource //PUT
+                my_url += '/' + task_name; // + '/' + row_id; // '/change-payment/' +
+            }
+            console.log('SK:'+type+' - ', formData);
+            $.ajax({
+                type: type,
+                url: my_url,
+                data: formData,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    if(data['result'] == 'success'){
+                        $('#myModal').modal('hide');
+                    }else{
+                        alert(data['result'] + '\n\n' + data['data']);
+                    }
+
+                    /*
+                    var task = '<tr id="task' + data.id + '"><td>' + data.id + '</td><td>' + data.task + '</td><td>' + data.description + '</td><td>' + data.created_at + '</td>';
+                    task += '<td><button class="btn btn-warning btn-xs btn-detail open-modal" value="' + data.id + '">Edit</button>';
+                    task += '<button class="btn btn-danger btn-xs btn-delete delete-task" value="' + data.id + '">Delete</button></td></tr>';
+
+                    if (state == "add"){ //if user added a new record
+                        $('#tasks-list').append(task);
+                    }else{ //if user updated an existing record
+
+                        $("#task" + task_id).replaceWith( task );
+                    }
+                    $('#frmTasks').trigger("reset");
+                    */
+
+                },
+                error: function (data) {
+                    console.log('SK Error:', data);
+                }
+            });
+        });
+    });
+</script>
+<!-- Modal (Pop up when detail button clicked) -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">입금처리</h4>
+            </div>
+            <div class="modal-body">
+                <form id="frmTasks" name="frmTasks" class="form-horizontal" novalidate="">
+
+                    <div class="form-group error">
+                        <label for="inputTask" class="col-sm-3 control-label">처리</label>
+                        <div class="col-sm-9">
+                            <input type="radio" class="" id="" name="chk_payment" value="입금대기">입금대기
+                            <input type="radio" class="" id="" name="chk_payment" value="부족">부족
+                            <input type="radio" class="" id="" name="chk_payment" value="면제">면제
+                            <input type="radio" class="" id="" name="chk_payment" value="해당없음">해당없음
+                            <input type="radio" class="" id="" name="chk_payment" value="입금완료">입금완료
+                        </div>
+                    </div>
+                    <div class="form-group error">
+                        <label for="inputTask" class="col-sm-3 control-label">입금액</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control has-error" id="amt_payment" name="amt_payment" placeholder="입금된 금액" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label"></label>
+                        <div class="col-sm-9">
+                            입금자 확인해주세요
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btn-save" value="add">상태 변경</button>
+                <input type="hidden" id="task_id" name="task_id" value="0">
+            </div>
+        </div>
+    </div>
+</div>
 
 
     {{--{{SKHelper::p($ccMails)}}--}}

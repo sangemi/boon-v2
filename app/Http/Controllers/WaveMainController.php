@@ -7,6 +7,7 @@ use App\WaveClient;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -15,6 +16,8 @@ class WaveMainController extends Controller
 {
     public function index()
     {
+
+
         return view('boon.site.wave');
 
         /*로그인 상태면 바로 관리화면으로!*/
@@ -35,11 +38,41 @@ class WaveMainController extends Controller
 
     }
 
+
+    public function tasks(Request $request, $task_name) // ajax 요청들.. // $row_id : client_id
+    {
+        /*      $('#task').val(data.id);
+                $('#task').val(data.task);
+                $('#description').val(data.description); */
+
+        if($task_name == 'change-payment') {
+            //$task = ['task-title' => '입금처리', 'task-description' => '']; //Task::find($task_id);
+            if($request->chk_payment && $request->amt_payment){
+                $wave_client = WaveClient::find($request->row_id);
+
+                $wave_client->chk_payment = $request->chk_payment; //'입금완료';
+                $wave_client->amt_payment = $request->amt_payment;
+
+                $wave_client->save();
+                $task["data"] = $wave_client;
+                $task["result"] = "success";
+            }else{
+                $task = array("data"=>"값을 선택해주세요", "result"=>"fail");
+
+            }
+        }
+
+        return response()->json($task); //return Response::json($task); 5.1에서는 이거 쓰지 마. 헬퍼클래스 쓰면 됨.
+
+    }
+
+
     public function dashboard()
     {
         $wave_client = WaveClient::all();
         return view('boon.wave.dashboard', compact('wave_client'));
     }
+
     public function mypage()
     {
         //$wave_client = WaveClient::where('user_id', Auth::id());
