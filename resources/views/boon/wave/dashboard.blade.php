@@ -181,7 +181,7 @@ echo "ddddddd다름";
     .btnCate1s span.fa {font-size:2.0em;}
     .cate1_text {font-size:0.8em;font-family:'맑은 고딕';}
 
-    .bigbox {width:48%;height:300px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;
+    .bigbox {height:500px;border:1px solid white;background-color:#fff;float:left;margin-bottom:5px;
         border-radius:10px;
     }
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
@@ -192,7 +192,7 @@ echo "ddddddd다름";
 
     <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div class="bigbox box2" style="overflow-y:scroll">
+            <div class="bigbox box2 col-xs-3" style="overflow-y:scroll">
                 <h4>접수인단 <small>[결제]</small></h4>
 
                 @if (empty($wave_client))
@@ -202,9 +202,16 @@ echo "ddddddd다름";
                 @else
                     @foreach ($wave_client as $no => $client)
 
-                        <div><?=($no+1)?>. <?=$client['name']?>
-                            [<a href="/wave/admin?mode=change_payment"><?=$client['chk_payment']?>/<?=$client['data11']?></a>]
-                            <button class="btn btn-warning btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">Edit</button>
+                        <div><?=($no+1)?>.
+                            <a href="javascript:showDetailInfo('<?=$client['id']?>')">
+                                <?=$client['name']?>
+                            </a>
+                            @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
+                                <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
+                            @else
+                                <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
+                            @endif
+
                         </div>
 
                     @endforeach
@@ -213,13 +220,11 @@ echo "ddddddd다름";
 
             </div>
 
-            <div class="bigbox" style="white-space:normal;">
-                <h4>자료업로드</h4>
-                <ul style="text-align: left;margin-left:10px;list-style-type:none;">
-                    <li>발진 피부사진, 관련 진단서 등<br>향후 요청시 업로드주세요</li>
-                </ul>
-                <a class="btn btn-sm btn-default" disabled>업로드</a>
-                <br>
+            <div class="bigbox  col-xs-9" style="white-space:normal;">
+                <h4>세부내용</h4>
+                <div  id="detailInfoBox">
+
+                </div>
             </div>
 
         </div>
@@ -253,14 +258,73 @@ echo "ddddddd다름";
 {{--이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤--}}
 <meta name="_token" content="{!! csrf_token() !!}" />
 <script>
+    var url = "/wave/admin/tasks";
+    var task_name = '',row_id = '';
+
+    function showDetailInfo(row_id){
+        var my_url = url;
+        my_url += '/' + "show-detail-info";
+        var formData = {
+            row_id: row_id
+        }
+        $.ajax({
+            type: "POST",
+            url: my_url,
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                var detail_html = '';
+                detail_html =
+                        "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + '[입금액:'+data['data']['amt_payment']+']원</p></div>' +
+
+                        "<div class='row'><p class='col-xs-2'><b>이름</b></p><p class='col-xs-10'>" + data['data']['name'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" + data['data']['phone'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>주민</p><p class='col-xs-10'>" + data['data']['jumin'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>주소</p><p class='col-xs-10'>" + data['data']['addr'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>주소2</p><p class='col-xs-10'>" + data['data']['addr2'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>우편번호</p><p class='col-xs-10'>" + data['data']['postcode'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>01</p><p class='col-xs-10'>" + data['data']['data01'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'>" + data['data']['data02'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data03'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data04'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data05'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data06'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data08'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data09'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data10'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data12'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data13'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data14'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data15'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>성보입금</p><p class='col-xs-10'>" + data['data']['bank_name'] + data['data']['bank_number']+ data['data']['bank_owner'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>철회여부</p><p class='col-xs-10'>" + data['data']['withdraw'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>비고</p><p class='col-xs-10'>" + data['data']['bigo'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['created_at'] + '</p></div>'
+
+                ;
+
+                $("#detailInfoBox").html(detail_html);
+            },
+            error: function (data) {
+                console.log('SK Error:', data);
+            }
+        });
+    }
+
+
     $(document).ready(function() {
 
-        var url = "/wave/admin/tasks";
-        var task_name = '',row_id = '';
         //display modal form for task editing
         $('.open-modal').click(function () { // 수정시. 신규입력시에는 task_name = '';로 해서 하자.
             task_name = $(this).val();
             row_id = $(this).data('row_id');
+            showDetailInfo(row_id);
             $('#myModal').modal('show');
 
             /*var task_name = $(this).val();
@@ -268,15 +332,15 @@ echo "ddddddd다름";
 
             })*/
         });
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        })
 
         //create new task / update existing task
         $("#btn-save").click(function (e) {
             /*이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤*/
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-                }
-            })
 
             e.preventDefault();
 
@@ -292,7 +356,7 @@ echo "ddddddd다름";
             var my_url = url;
 
             if (state == "update"){
-                type = "PUT"; //for updating existing resource //PUT
+                type = "POST"; //for updating existing resource //PUT
                 my_url += '/' + task_name; // + '/' + row_id; // '/change-payment/' +
             }
             console.log('SK:'+type+' - ', formData);

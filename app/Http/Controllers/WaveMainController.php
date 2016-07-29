@@ -60,7 +60,19 @@ class WaveMainController extends Controller
                 $task = array("data"=>"값을 선택해주세요", "result"=>"fail");
 
             }
+        }else if($task_name == 'show-detail-info'){
+            $wave_client = WaveClient::find($request->row_id);
+            if(count($wave_client)) { //  && $request->amt_payment 입금액은 없을수도 있음.
+                $task["data"] = $wave_client;
+                $task["result"] = "success";
+
+            }else {
+                $task = array("data" => "값을 선택해주세요 2", "result" => "fail");
+            }
+        }else{
+            $task = array("data" => "업무가 없음. SK1 Error", "result" => "fail");
         }
+
 
         return response()->json($task); //return Response::json($task); 5.1에서는 이거 쓰지 마. 헬퍼클래스 쓰면 됨.
 
