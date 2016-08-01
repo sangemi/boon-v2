@@ -125,8 +125,8 @@
       <file leaf-file-name="wave.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61937714">
-              <caret line="893" column="74" selection-start-line="893" selection-start-column="74" selection-end-line="893" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.5536332">
+              <caret line="890" column="53" selection-start-line="890" selection-start-column="53" selection-end-line="890" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -605,12 +605,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00044" summary="1.04&#10;&#10;메인화면 변경해봄.&#10;&#10;&#10;">
-      <created>1458175743882</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1458175743882</updated>
-    </task>
     <task id="LOCAL-00045" summary="1.05&#10;&#10;구글 추적기 추가&#10;&#10;&#10;">
       <created>1458197487101</created>
       <option name="number" value="00045" />
@@ -899,7 +893,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470034502920</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="3.10301&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
+      <created>1470034746460</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1470034746460</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1377,8 +1377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61937714">
-          <caret line="893" column="74" selection-start-line="893" selection-start-column="74" selection-end-line="893" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.5536332">
+          <caret line="890" column="53" selection-start-line="890" selection-start-column="53" selection-end-line="890" selection-end-column="53" />
           <folding />
         </state>
       </provider>
