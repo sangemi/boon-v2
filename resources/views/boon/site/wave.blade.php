@@ -879,7 +879,7 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-3 col-sm-6 fh5co-footer-widget"> {{--wow fadeInUp  data-wow-duration="1s" data-wow-delay=".1s"--}}
-						<div class="fh5co-logo"><span class="logo">M</span> MOIOR corp</div>
+						<div class="fh5co-logo"><span class="logo">M</span> MOIOR corp.</div>
 						<p class="fh5co-copyright">&copy; 2013 Boonzero. <br>All Rights Reserved.
 							<br>Designed by <a target="_blank" href="about:blank">Moior</a>
 							<br>Work with <a target="_blank" href="http://www.yeyul.com">Yeyul</a>
@@ -888,7 +888,7 @@
 					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
 						<h3>Company</h3>
 						<ul class="fh5co-links">
-							<li>(주)모이어</li>
+							<li>(주)모이어 <small>264-81-14053</small></li>
 							<li><a target="_blank" href="https://www.google.co.kr/maps/place/%EC%95%84%EA%B0%80%EB%B0%A9%EB%B9%8C%EB%94%A9/@37.5019931,127.038773,18.29z/data=!4m12!1m9!4m8!1m0!1m6!1m2!1s0x357ca3ff15a01301:0xa36dcf2c34b2115a!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDsl63sgrwx64-ZIDY3OC0zNiDslYTqsIDrsKnruYzrlKk!2m2!1d127.0387154!2d37.5016827!3m1!1s0x0000000000000000:0xa36dcf2c34b2115a">
 									서울 강남 테헤란로207, 7층</a></li>
 							<li><a href="tel:1661-5521">1661-5521</a></li>
