@@ -879,7 +879,7 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-3 col-sm-6 fh5co-footer-widget"> {{--wow fadeInUp  data-wow-duration="1s" data-wow-delay=".1s"--}}
-						<div class="fh5co-logo"><span class="logo">Y</span> Lawfirm YEYUL</div>
+						<div class="fh5co-logo"><span class="logo">M</span> MOIOR corp</div>
 						<p class="fh5co-copyright">&copy; 2013 Boonzero. <br>All Rights Reserved.
 							<br>Designed by <a target="_blank" href="about:blank">Moior</a>
 							<br>Work with <a target="_blank" href="http://www.yeyul.com">Yeyul</a>

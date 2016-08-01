@@ -214,7 +214,7 @@ echo "ddddddd다름";
                                 $chk_payment = true;
                                     ?>
                                 <div>
-                                    <p class="bg-warning">입금대기중</p>
+                                    <p class="bg-warning">입금대기 상태입니다</p>
 
                                 </div>
                             @else
