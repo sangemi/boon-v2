@@ -252,7 +252,7 @@ echo "ddddddd다름";
 </div>
 
 
-@if($chk_payment)
+@if(isset($chk_payment))
     <div class="well bg-warning">
     <h4>비용 미입금 상태</h4>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
     <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>

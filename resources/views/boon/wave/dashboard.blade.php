@@ -285,12 +285,12 @@ echo "ddddddd다름";
                         "<div class='row'><p class='col-xs-2'>주소</p><p class='col-xs-10'>" + data['data']['addr'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>주소2</p><p class='col-xs-10'>" + data['data']['addr2'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>우편번호</p><p class='col-xs-10'>" + data['data']['postcode'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>01</p><p class='col-xs-10'>" + data['data']['data01'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>제품명</p><p class='col-xs-10'>" + data['data']['data01'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'>" + data['data']['data02'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data03'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data04'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>설치일</p><p class='col-xs-10'>" + data['data']['data03'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>음용량</p><p class='col-xs-10'>" + data['data']['data04'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data05'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data06'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>인원</p><p class='col-xs-10'>" + data['data']['data06'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data08'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data09'] + '</p></div>' +
