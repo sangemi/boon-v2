@@ -186,7 +186,14 @@ class WaveClientController extends Controller {
 	{
 		$waveClient = WaveClient::find($id); /*빈 모델. 첨부터 직접 작성*/
 
-		return view('boon.wave.client_edit', compact('waveClient', 'id'));
+		if( Auth::check() && Auth::user()->id == $waveClient->user_id ) {
+			return view('boon.wave.client_edit', compact('waveClient', 'id'));
+		}else if( Auth::id() == '1'){ // 김상겸일 경우 모두 수정가능. Auth 권한관리해야함.
+			return view('boon.wave.client_edit', compact('waveClient', 'id'));
+		}else {
+			return "잘못된 접근입니다.<br><br><a href='/'>HOME</a>";
+		}
+
 
 		/*$ccMail = CcMailSample::find($id);
 		return view('boon.ccMail.sample_edit', compact('ccMail', 'id'));*/
@@ -270,7 +277,7 @@ class WaveClientController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		CcMailSample::destroy($id); //CcMailSample::find($id)->delete();
+		WaveClient::destroy($id); //CcMailSample::find($id)->delete();
 		Session::flash('message', '삭제되었습니다.');
 		return $this->index();
 	}

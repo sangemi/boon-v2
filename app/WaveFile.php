@@ -3,8 +3,8 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class WaveClient extends Model {
-    protected $table = 'wave_clients';
+class WaveFile extends Model {
+    protected $table = 'wave_files';
 
     /*public function __construct($table_name = null, array $attributes = array())
     {
@@ -20,16 +20,9 @@ class WaveClient extends Model {
     use SoftDeletes; /*소프트딜리트 사용하기 위해서 모델에 정의하고 Controll에는 그냥 그대로 delete() 쓰면됨 */
     protected $dates = ['deleted_at'];
 
-    public function suit(){
-        return $this->belongsTo('App\WaveSuit', 'suit_id'); /* 이게 맞음!! */
-    }
 
-    public function status(){
-        return $this->belongsTo('App\WaveStatus', 'status_id'); /* 이게 맞음!! */
-    }
-
-    public function file(){
-        return $this->hasMany('App\WaveFile', 'file_id'); // 이건 안쓸듯한데..
+    public function client(){
+        return $this->belongsTo('App\WaveClient', 'client_id'); // 이건 안쓸듯한데..
     }
 
 }

@@ -25,7 +25,7 @@
 
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('wave') }}">
-        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 단체소송</a></li>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 단체소송 상황판</a></li>
 
     <li class="pull-right"><a href="{{ URL::to('wave/client/create') }}">
         <span class="btn btn-xs btn-default" aria-hidden="true">신규 <span class="fa fa-pencil"></span></span></a>
@@ -205,7 +205,7 @@ echo "ddddddd다름";
                             <b>
                                 <?=($key+1)?>. <?=$my_suit[$key]['title']?>
                                 <a href="{{ URL::to('wave/client/'.$waveclient['id'].'/edit') }}">
-                                        <span class="btn btn-xs btn-link" aria-hidden="true">E<span class="fa fa-pencil"></span></span></a>
+                                        <span class="btn btn-xs btn-link" aria-hidden="true">수정<span class="fa fa-pencil"></span></span></a>
 
                             </b>
                             <p><?=$my_status[$key]['title']?></p>
@@ -247,6 +247,7 @@ echo "ddddddd다름";
             <div class="bigbox" style="white-space:normal;">
                 <h4>진행 안내</h4>
                 <ul style="text-align: left;margin-left:10px;list-style-type:none;">
+                    <li>접수내용 수정이 가능합니다.</li>
                     <li>접수중</li>
                     <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
                 </ul>
