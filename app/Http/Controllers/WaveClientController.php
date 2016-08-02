@@ -184,8 +184,12 @@ class WaveClientController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$ccMail = CcMailSample::find($id);
-		return view('boon.ccMail.sample_edit', compact('ccMail', 'id'));
+		$waveClient = WaveClient::find($id); /*빈 모델. 첨부터 직접 작성*/
+
+		return view('boon.wave.client_edit', compact('waveClient', 'id'));
+
+		/*$ccMail = CcMailSample::find($id);
+		return view('boon.ccMail.sample_edit', compact('ccMail', 'id'));*/
 	}
 
 	/**
@@ -196,7 +200,7 @@ class WaveClientController extends Controller {
 	 */
 	public function update($id)
 	{
-		if ( !Auth::check() ) { // 샘플은 누구나 볼수 있으니, 수정시 권한 체크
+		if ( !Auth::check() ) { // 수정시 권한 체크해야함..
 
 
 			// 권한 관리해야함. 지금은 로그인체크만 하는 상태..
@@ -210,24 +214,50 @@ class WaveClientController extends Controller {
 			Session::flash('message', '입력값을 확인해주세요.');
 
 			return Redirect::back()
-				->withErrors($validator)
-				->withInput(Request::except('password'));
+				->withErrors($validator); /*->withInput(Request::except('password'));*/
 
 		} else {
 
 			/*이건 프로퍼티 방식이라고 함. 배열방식은 select없이 바로 update하는데, 보안때문에 모델에 fillable 지정해야.*/
-			$task = CcMailSample::find($id);
+			$task = WaveClient::find($id);
 			$data = Request::all();
 
-			$task->cate1 = $data['cate1'];
-			$task->cate2 = $data['cate2'];
-			$task->cate3 = $data['cate3'];
-			$task->content = $data['content'];
+			/*$task->suit_id = '1'; // 코웨이 중금속 사건. 다른 소송일경우. 변경해야.
+			$task->status_id = '1'; // 처음 접수시에는 무조건 신청확인중.*/
+
+			$task->name = $data['name'];
+			$task->jumin = $data['jumin'];
+			$task->phone = $data['phone'];
+
+			$task->addr = $data['addr'];
+			$task->addr2 = $data['addr2'];
+			$task->postcode = $data['postcode'];
+
+			$task->data01 = $data['data01'];
+			$task->data02 = $data['data02'];
+			$task->data03 = $data['data03'];
+			$task->data04 = $data['data04'];
+			$task->data05 = $data['data05'];
+			$task->data06 = $data['data06'];
+			$task->data07 = $data['data07'];
+			$task->data08 = $data['data08'];
+			$task->data09 = $data['data09'];
+			$task->data10 = $data['data10'];
+
+			$task->data11 = $data['data11'];
+			$task->data12 = $data['data12'];
+
+			/*$task->data12 = $data['data12'];
+			$task->data13 = $data['data13'];
+			$task->data14 = $data['data14'];
+			*/
+
+			$task->data15 = $data['data15']; //A타입, B타입
 
 			$ret = $task->save();
 			if($ret) Session::flash('message', '수정되었습니다.');
-			else  Session::flash('message', '저장시 오류가 발생하였습니다.');
-			return redirect()->to('/ccmail/sample/'.$task->id);
+			else  Session::flash('message', '오류가 발생하였습니다. SK1088');
+			return redirect()->to('/wave/mypage' ); /*return redirect()->to('/ccmail/sample/'.$task->id);*/
 		}
 
 	}

@@ -5,7 +5,7 @@
 @section('sidebar')
     @parent
 
-    <p>기업 </p>
+    <p>단체소송 </p>
 
 @stop
 

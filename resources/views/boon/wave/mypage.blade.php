@@ -5,7 +5,7 @@
 @section('sidebar')
     @parent
 
-    <p>기업 </p>
+    <p>단체소송 </p>
 
 @stop
 
@@ -202,12 +202,16 @@ echo "ddddddd다름";
 
                     @foreach ($wave_client as $key=> $waveclient)
                         <div class="col-sm-12" style="text-align: left;">
-                            <b><?=($key+1)?>. <?=$my_suit[$key]['title']?></b>
+                            <b>
+                                <?=($key+1)?>. <?=$my_suit[$key]['title']?>
+                                <a href="{{ URL::to('wave/client/'.$waveclient['id'].'/edit') }}">
+                                        <span class="btn btn-xs btn-link" aria-hidden="true">E<span class="fa fa-pencil"></span></span></a>
+
+                            </b>
                             <p><?=$my_status[$key]['title']?></p>
                             @if( $waveclient['chk_proof'] == '')
 
                             @endif
-
 
                             @if( $waveclient['chk_payment'] == '입금대기')
                                 <?php
