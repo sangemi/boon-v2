@@ -31,6 +31,7 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::post('/wave/admin/tasks/{task_name?}', 'WaveMainController@tasks'); //change-payment
 
     Route::resource('wave/client', 'WaveClientController');
+    Route::resource('wave/file', 'WaveFileController');
     // 집단소송
 
     //Route::get('/', 'CcMailSampleController@index');

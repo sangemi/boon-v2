@@ -385,6 +385,7 @@
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">비용안내</h2>
+						<p>VAT별도</p>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
 
 						</p>
@@ -412,7 +413,7 @@
 									<td>20<small style="font-size:0.7em;">만</small></td>
 									<td>29<small style="font-size:0.7em;">만</small></td>
 									<td>37<small style="font-size:0.7em;">만</small></td>
-									<td>8<small style="font-size:0.7em;">만+</small></td>
+									<td>+8<small style="font-size:0.7em;">만씩추가</small></td>
 								</tr>
 								<tr>
 									<td></td>
@@ -426,7 +427,7 @@
 									<td>80<small style="font-size:0.7em;">만</small></td>
 									<td>116<small style="font-size:0.7em;">만</small></td>
 									<td>148<small style="font-size:0.7em;">만</small></td>
-									<td>32<small style="font-size:0.7em;">만+</small></td>
+									<td>+32<small style="font-size:0.7em;">만씩추가</small></td>
 								</tr>
 								<tr>
 									<td></td>

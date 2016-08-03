@@ -4,6 +4,8 @@ use App\WaveClient;
 use App\Http\Requests;
 
 use App\Lib\skHelper;
+use App\WaveFile;
+use App\WaveSuit;
 use Guzzle\Plugin\Cookie\Cookie;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
 
 
-class WaveClientController extends Controller {
+class WaveFileController extends Controller {
 
 	/*
 	 * 	GET			/photo				index	photo.index		리스트
@@ -38,7 +40,7 @@ class WaveClientController extends Controller {
 		$waveSuits = DB::table('wave_suits')
 			-> orderBy('created_at', 'desc') -> get();
 
-		return ""; //view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'etc'));
+		return "파일관리페이지. "; //view('boon.ccMail.sample_list', compact('ccMails', 'ccMailsCate1s', 'ccMailsCate2s', 'etc'));
 	}
 
 	/**
@@ -46,24 +48,26 @@ class WaveClientController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create($id = null)
+	public function create()
 	{
-		$waveClient = new WaveClient(); /*빈 모델. 첨부터 직접 작성*/
+		$waveFile = new WaveFile(); /*빈 모델. 첨부터 직접 작성*/
 		$data = Request::all();
-		if(!count($data)){
-			$data['suit_id'] = 1; // 기본 소송(코웨이)
-		}
-		if(Auth::check()){
-			if(count($waveClient)){
-				return view('boon.wave.client_write_'.$data['suit_id'], compact('waveClient'));
-			}else{
-				return "자료가 없습니다.<br><br><a href='javascript:history.back()'>BACK</a>";
+		if(!empty($data['client_id'])){
+			$client = WaveClient::find($data['client_id']);
+			$suit = WaveSuit::find($client['suit_id']);
+
+			/*기존 미리 입력되었던 파일을 검사해서... html에서 class에 써먹을수 있게 배열로 넘김*/
+			$waveFile_before = WaveFile::where('client_id', $data['client_id'])->orderBy('title_no', 'desc')->get();
+			$document_ok = array_fill(0, 100, 'document-no'); // 100개 증거번호에 모두 no 입력
+			foreach($waveFile_before as $waveFile_before_){ // 업로드 된것만 ok로 변경
+				$document_ok[$waveFile_before_['title_no']] = 'document-ok';
 			}
-		}else{
-			return redirect()->to('/auth/login');
+			/*dd($suit->explain); // wave_suits 테이블에..... 입력해야할 증거자료 종류를 적시할까. 우얄까.*/
+
+			return view('boon.wave.file_write_'.$suit['id'] , compact('waveFile', 'client', 'suit', 'document_ok'));
+		}else {
+			return "로그인 / 접수인단 error";
 		}
-		//return view('boon.ccMail.sample_write', compact('waveClient'));
-		return view('boon.wave.client_write_'.$waveClient['suit_id'], compact('waveClient'));
 	}
 
 	/**
@@ -74,13 +78,7 @@ class WaveClientController extends Controller {
 	protected function validator(array $data)
 	{
 		return Validator::make($data, [
-			'name' => 'required|max:255',
-			'jumin' => 'max:255',
-			'phone' => 'required|max:255',
-			'data01' => 'required|max:255',
-			'data09' => 'alpha_dash',
-			'data15' => 'required',
-			'약정동의' => 'required'
+			'file_data' => 'required'
 		]); //|email|max:255|unique:users 'password' => 'required|confirmed|min:6',
 		// 숫자+하이픈=alpha_dash.... // laravel.com/docs/5.2/validation
 	}
@@ -102,48 +100,45 @@ class WaveClientController extends Controller {
 				->withErrors($validator)
 				->withInput(Request::except('password'));
 		} else {
-			$task = new WaveClient();
+			$task = new WaveFile();
 			$data = Request::all();
 
-			$task->user_id = Auth::id();
-			$task->suit_id = '1'; // 코웨이 중금속 사건. 다른 소송일경우. 변경해야.
-			$task->status_id = '1'; // 처음 접수시에는 무조건 신청확인중.
+			$client = WaveClient::find($data['client_id']);
+			/*$suit = WaveSuit::find($client['suit_id']);*/
 
-			$task->name = $data['name'];
-			$task->jumin = $data['jumin'];
-			$task->phone = $data['phone'];
+			if(Request::hasFile('file_data')){
 
-			$task->addr = $data['addr'];
-			$task->addr2 = $data['addr2'];
-			$task->postcode = $data['postcode'];
+				$file = Request::file('file_data'); //$data->file('file01');
 
-			$task->data01 = $data['data01'];
-			$task->data02 = $data['data02'];
-			$task->data03 = $data['data03'];
-			$task->data04 = $data['data04'];
-			$task->data05 = $data['data05'];
-			$task->data06 = $data['data06'];
-			$task->data07 = $data['data07'];
-			$task->data08 = $data['data08'];
-			$task->data09 = $data['data09'];
-			$task->data10 = $data['data10'];
+				$task->client_id = $client['id'];
+				$task->source_filename= $file->getClientOriginalName();
 
-			$task->data11 = $data['data11'];
-			$task->data12 = $data['data12'];
+				$destinationPath = public_path('/upload/wave/suit/'.$client['suit_id']);
+				$real_filename = $client['id'].'-'.date("Ymd").'-'.$file->getClientOriginalName();
+				$task->uploaded_filename= $destinationPath."/".$real_filename;
 
-			/*$task->data12 = $data['data12'];
-			$task->data13 = $data['data13'];
-			$task->data14 = $data['data14'];
-			*/
+				$task->file_size = $file->getSize();
+				$task->title_no = $data['title_no'];
+				$task->title = $data['title'];
+				$task->explain = $data['file_explain'];
 
-			$task->data15 = $data['data15']; //A타입, B타입
+				echo 'File Name: '.$file->getClientOriginalName(); echo '<br>';
+				echo 'File Extension: '.$file->getClientOriginalExtension(); echo '<br>';
+				echo 'File Real Path: '.$file->getRealPath(); echo '<br>';  //최초 업로드장소
+				echo 'File Size: '.$file->getSize(); echo '<br>';
+				echo 'File Mime Type: '.$file->getMimeType(); echo '<br>';
 
+				//Move Uploaded File
+				$file->move($destinationPath,$real_filename);
+				$ret = $task->save();
 
+			}else{
+				return "파일X";
+			}
 
-			$ret = $task->save();
 			if($ret) Session::flash('message', '입력되었습니다.');
-			else  Session::flash('message', '오류가 발생하였습니다. SK1083');
-			return redirect()->to('/wave/mypage' );
+			else  Session::flash('message', '오류가 발생하였습니다. SK10183');
+			return redirect()->back();
 
 		}
 	}
@@ -199,9 +194,9 @@ class WaveClientController extends Controller {
 		$waveClient = WaveClient::find($id); /*빈 모델. 첨부터 직접 작성*/
 
 		if( Auth::check() && Auth::user()->id == $waveClient->user_id ) {
-			return view('boon.wave.client_edit_'.$waveClient['suit_id'], compact('waveClient', 'id'));
+			return view('boon.wave.client_edit', compact('waveClient', 'id'));
 		}else if( Auth::id() == '1'){ // 김상겸일 경우 모두 수정가능. Auth 권한관리해야함.
-			return view('boon.wave.client_edit_'.$waveClient['suit_id'], compact('waveClient', 'id'));
+			return view('boon.wave.client_edit', compact('waveClient', 'id'));
 		}else {
 			return "잘못된 접근입니다.<br><br><a href='/'>HOME</a>";
 		}

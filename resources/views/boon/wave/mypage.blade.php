@@ -25,7 +25,7 @@
 
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('wave') }}">
-        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 단체소송 상황판</a></li>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 단체소송 상황실</a></li>
 
     <li class="pull-right"><a href="{{ URL::to('wave/client/create') }}">
         <span class="btn btn-xs btn-default" aria-hidden="true">신규 <span class="fa fa-pencil"></span></span></a>
@@ -180,7 +180,7 @@ echo "ddddddd다름";
     .btnCate1s span.fa {font-size:2.0em;}
     .cate1_text {font-size:0.8em;font-family:'맑은 고딕';}
 
-    .bigbox {width:32%;height:220px;border:1px solid white;background-color:#fff;float:left;margin-right:1%;margin-bottom:5px;
+    .bigbox {width:100%;border:1px solid white;background-color:#fff;float:left;margin-bottom:5px;
         border-radius:10px;
     }
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
@@ -191,7 +191,8 @@ echo "ddddddd다름";
 
     <div class="row text-center" style="padding:0 10px 10px 10px;">
         <div class="">
-            <div class="bigbox box2" style="white-space:normal;">
+            <div class="col-sm-6" style="white-space:normal;">
+                <div class="bigbox">
                 <h4>진행 소송{{--<small>+등록</small>--}}</h4>
 
                 @if (empty($wave_client))
@@ -205,7 +206,9 @@ echo "ddddddd다름";
                             <b>
                                 <?=($key+1)?>. <?=$my_suit[$key]['title']?>
                                 <a href="{{ URL::to('wave/client/'.$waveclient['id'].'/edit') }}">
-                                        <span class="btn btn-xs btn-link" aria-hidden="true">수정<span class="fa fa-pencil"></span></span></a>
+                                    <span class="btn btn-xs btn-link" aria-hidden="true">서류수정<span class="fa fa-pencil"></span></span>
+                                </a>
+                                <a class="btn btn-sm btn-link" href="/wave/file/create?client_id=<?=$waveclient['id']?>">증거제출</a>
 
                             </b>
                             <p><?=$my_status[$key]['title']?></p>
@@ -232,25 +235,25 @@ echo "ddddddd다름";
 
 
                 @endif
-
+                </div>
             </div>
 
-            <div class="bigbox" style="white-space:normal;">
-                <h4>자료업로드</h4>
-                <ul style="text-align: left;margin-left:10px;list-style-type:none;">
-                    <li>발진 피부사진, 관련 진단서 등<br>향후 요청시 업로드주세요</li>
+            <div class="col-sm-6" style="white-space:normal;">
+                <div class="bigbox">
+                <h4>공지</h4>
+                <ul style="text-align: left;margin-left:24px;">
+                    <li>자료를 업로드해주세요. <br>왼쪽 '증거제출'버튼 클릭</li>
+                    <li>미납분들은 8.7.까지 비용입금을 완료바랍니다.</li>
                 </ul>
-                <a class="btn btn-sm btn-default" disabled>업로드</a>
-                <br>
-            </div>
+                    <h4>진행상황</h4>
+                    <ul style="text-align: left;margin-left:10px;list-style-type:none;">
+                        <li>7.25. 접수시작</li>
+                        <li>8.1. 접수내용 수정이 가능합니다.</li>
+                        <li>8.3. 파일 업로드가 가능합니다.</li>
+                        <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
+                    </ul>
 
-            <div class="bigbox" style="white-space:normal;">
-                <h4>진행 안내</h4>
-                <ul style="text-align: left;margin-left:10px;list-style-type:none;">
-                    <li>접수내용 수정이 가능합니다.</li>
-                    <li>접수중</li>
-                    <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
-                </ul>
+                </div>
             </div>
         </div>
 
