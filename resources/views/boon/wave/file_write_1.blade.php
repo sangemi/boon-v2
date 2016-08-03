@@ -128,7 +128,9 @@ $(document).ready(function(){
                     수질 검사결과
                 </div>
 
-                <div class="choice-file_type <?=$document_ok[5]?>" style="" data-title_no="5" data-explain="사안과 관련하여 재판부에 하실 말씀을 자유롭게 써서, 스캔/촬영하여 올려주세요. <br>(아기의 발진으로 마음고생을 하였다 등. 정신적 고통 포함)">
+                <div class="choice-file_type <?=$document_ok[5]?>" style="" data-title_no="5" data-explain="사안과 관련하여 재판부에 하실 말씀을 자유롭게 써서, 스캔/촬영하여 올려주세요.
+                <br>(아기의 발진으로 마음고생을 하였다 등. 정신적 고통 포함)
+                <br><br>샘플<br><img src='/site/wave/images/paper_jinsul.png' style='width:350px;border:1px solid gray;' />">
                     진술서
                 </div>
 
