@@ -116,9 +116,11 @@ class WaveFileController extends Controller {
 				$task->client_id = $client['id'];
 				$task->source_filename= $file->getClientOriginalName();
 
-				$destinationPath = public_path('/upload/wave/suit/'.$client['suit_id']); //'/upload/wave/suit/'.$client['suit_id'];
+				$web_path = '/upload/wave/suit/'.$client['suit_id'];
+				$server_path = public_path($web_path);
+
 				$real_filename = $client['id'].'-'.date("Ymd").'-'.$file->getClientOriginalName();
-				$task->uploaded_filename= $destinationPath."/".$real_filename;
+				$task->uploaded_filename= $web_path."/".$real_filename;
 
 				$task->file_size = $file->getSize();
 				$task->title_no = $data['title_no'];
@@ -132,7 +134,7 @@ class WaveFileController extends Controller {
 				echo 'File Mime Type: '.$file->getMimeType(); echo '<br>';
 
 				//Move Uploaded File
-				$file->move($destinationPath,$real_filename);
+				$file->move($server_path,$real_filename);
 				$ret = $task->save();
 
 			}else{
