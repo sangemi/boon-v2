@@ -116,7 +116,7 @@ class WaveFileController extends Controller {
 				$task->client_id = $client['id'];
 				$task->source_filename= $file->getClientOriginalName();
 
-				$destinationPath = '/upload/wave/suit/'.$client['suit_id']; //public_path('/upload/wave/suit/'.$client['suit_id']);
+				$destinationPath = public_path('/upload/wave/suit/'.$client['suit_id']); //'/upload/wave/suit/'.$client['suit_id'];
 				$real_filename = $client['id'].'-'.date("Ymd").'-'.$file->getClientOriginalName();
 				$task->uploaded_filename= $destinationPath."/".$real_filename;
 

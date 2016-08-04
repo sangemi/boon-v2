@@ -4,9 +4,6 @@
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/file_write_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/file_write_1.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +57,8 @@
       <file leaf-file-name="WaveFileController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5697808">
-              <caret line="120" column="78" selection-start-line="120" selection-start-column="78" selection-end-line="120" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.52595156">
+              <caret line="118" column="91" selection-start-line="118" selection-start-column="91" selection-end-line="118" selection-end-column="91" />
               <folding>
                 <element signature="e#39#58#0#PHP" expanded="true" />
               </folding>
@@ -500,12 +497,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00051" summary="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;">
-      <created>1458807630249</created>
-      <option name="number" value="00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1458807630249</updated>
-    </task>
     <task id="LOCAL-00052" summary="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;">
       <created>1458815978986</created>
       <option name="number" value="00052" />
@@ -794,7 +785,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470274774603</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="3.10401&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 완료)&#10;&#10;&#10;">
+      <created>1470276529262</created>
+      <option name="number" value="00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1470276529265</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1303,8 +1300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5697808">
-          <caret line="120" column="78" selection-start-line="120" selection-start-column="78" selection-end-line="120" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.52595156">
+          <caret line="118" column="91" selection-start-line="118" selection-start-column="91" selection-end-line="118" selection-end-column="91" />
           <folding>
             <element signature="e#39#58#0#PHP" expanded="true" />
           </folding>
