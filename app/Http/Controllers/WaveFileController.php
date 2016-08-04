@@ -50,6 +50,9 @@ class WaveFileController extends Controller {
 	 */
 	public function create()
 	{
+		if ( !Auth::check() ) { // 샘플은 누구나 볼수 있으니, 수정시 권한 체크
+			return redirect()->to('/auth/login');
+		}
 		$waveFile = new WaveFile(); /*빈 모델. 첨부터 직접 작성*/
 		$data = Request::all();
 		if(!empty($data['client_id'])){

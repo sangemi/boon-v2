@@ -129,12 +129,13 @@ $(document).ready(function(){
                 </div>
 
                 <div class="choice-file_type <?=$document_ok[5]?>" style="" data-title_no="5" data-explain="사안과 관련하여 재판부에 하실 말씀을 자유롭게 써서, 스캔/촬영하여 올려주세요.
+                <br>진술서, 상대와 주고받은 내용증명 등
                 <br>(아기의 발진으로 마음고생을 하였다 등. 정신적 고통 포함)
                 <br><br>샘플<br><img src='/site/wave/images/paper_jinsul.png' style='width:350px;border:1px solid gray;' />">
                     진술서
                 </div>
 
-                <div class="choice-file_type <?=$document_ok[6]?>" style="" data-title_no="6" data-explain="음용기간 중 진단서만 가능. 스캔 또는 촬영해서 올려주세요.">
+                <div class="choice-file_type <?=$document_ok[6]?>" style="" data-title_no="6" data-explain="발급날짜 확인. 음용기간 중 진단서(확인서)만 가능. 스캔 또는 촬영해서 올려주세요.">
                     (B타입만) 진단서
                 </div>
                 <div class="choice-file_type <?=$document_ok[7]?>" style="" data-title_no="7" data-explain="음용기간 중 영수증만 가능. 기왕증이 있는 경우 감액가능성 있습니다.">
