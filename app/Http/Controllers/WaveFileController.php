@@ -60,14 +60,14 @@ class WaveFileController extends Controller {
 			$suit = WaveSuit::find($client['suit_id']);
 
 			/*기존 미리 입력되었던 파일을 검사해서... html에서 class에 써먹을수 있게 배열로 넘김*/
-			$waveFile_before = WaveFile::where('client_id', $data['client_id'])->orderBy('title_no', 'desc')->get();
+			$uploaded_files = WaveFile::where('client_id', $data['client_id'])->orderBy('title_no', 'asc')->get();
 			$document_ok = array_fill(0, 100, 'document-no'); // 100개 증거번호에 모두 no 입력
-			foreach($waveFile_before as $waveFile_before_){ // 업로드 된것만 ok로 변경
-				$document_ok[$waveFile_before_['title_no']] = 'document-ok';
+			foreach($uploaded_files as $uploaded_files_){ // 업로드 된것만 ok로 변경
+				$document_ok[$uploaded_files_['title_no']] = 'document-ok';
 			}
-			/*dd($suit->explain); // wave_suits 테이블에..... 입력해야할 증거자료 종류를 적시할까. 우얄까.*/
 
-			return view('boon.wave.file_write_'.$suit['id'] , compact('waveFile', 'client', 'suit', 'document_ok'));
+
+			return view('boon.wave.file_write_'.$suit['id'] , compact('waveFile', 'client', 'suit', 'document_ok', 'uploaded_files'));
 		}else {
 			return "로그인 / 접수인단 error";
 		}
@@ -116,7 +116,7 @@ class WaveFileController extends Controller {
 				$task->client_id = $client['id'];
 				$task->source_filename= $file->getClientOriginalName();
 
-				$destinationPath = public_path('/upload/wave/suit/'.$client['suit_id']);
+				$destinationPath = '/upload/wave/suit/'.$client['suit_id']; //public_path('/upload/wave/suit/'.$client['suit_id']);
 				$real_filename = $client['id'].'-'.date("Ymd").'-'.$file->getClientOriginalName();
 				$task->uploaded_filename= $destinationPath."/".$real_filename;
 

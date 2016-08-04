@@ -1,7 +1,7 @@
 
 @extends('layouts.master') {{--master를 상속받음--}}
 
-@section('title', '분쟁제로 - 내용증명')
+@section('title', '단체소송 - 분제로')
 
 @section('sidebar')
     @parent

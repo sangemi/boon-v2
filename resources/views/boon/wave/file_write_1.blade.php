@@ -1,7 +1,7 @@
 
 @extends('layouts.master') {{--master를 상속받음--}}
 
-@section('title', '분쟁제로 - 내용증명')
+@section('title', '단체소송 - 분제로')
 
 @section('sidebar')
     @parent
@@ -83,7 +83,7 @@ $(document).ready(function(){
 
             <div class="panel-heading">
                 <b>
-                    단체소송 증거자료 관리
+                    증거 업로드 - 코웨이 중금속 정수기 사건
                 </b>
             </div>
 
@@ -186,7 +186,20 @@ $(document).ready(function(){
 
                 <div class="" style="border:0px solid gray;padding:20px;margin-bottom:20px;">
 
-                    <div id="text_explain" class="text-center">기제출증거 (확인중)</div>
+                    <div id="text_explain" class="text-center">제출한 파일 리스트</div>
+                    <table class="table">
+                        <tr>
+                        <th>번호. 종류</th><th>파일명</th><th>비고</th>
+                        </tr>
+                    @foreach( $uploaded_files as $key => $uploaded_file)
+                        <tr>
+                            <td><?=$uploaded_file['title_no']?>. <?=$uploaded_file['title']?></td>
+                            <td><a href="<?=$uploaded_file['uploaded_filename']?>" target="_blank"><small><?=$uploaded_file['source_filename']?></small></td>
+                            <td><small><?=$uploaded_file['explain']?></small></td>
+                            <!--<td><?=substr($uploaded_file['created_at'], 0, 10)?></td>-->
+                        </tr>
+                    @endforeach
+                    </table>
 
                 </div>
 
