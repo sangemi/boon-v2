@@ -181,7 +181,7 @@ echo "ddddddd다름";
     .btnCate1s span.fa {font-size:2.0em;}
     .cate1_text {font-size:0.8em;font-family:'맑은 고딕';}
 
-    .bigbox {height:500px;border:1px solid white;background-color:#fff;float:left;margin-bottom:5px;
+    .bigbox {border:1px solid white;background-color:#fff;float:left;margin-bottom:5px;
         border-radius:10px;
     }
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
@@ -190,24 +190,28 @@ echo "ddddddd다름";
     }
 </style>
 
-    <div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
+    <div class="text-center" style="white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
             <div class="bigbox box2 col-xs-3" style="overflow-y:scroll">
                 <h4>접수인단 <small>[결제]</small></h4>
-
+                <?php
+                $amt_total = 0;
+                ?>
                 @if (empty($wave_client))
                     <div class="col-sm-12">
                         내역없습니다.
                     </div>
                 @else
                     @foreach ($wave_client as $no => $client)
-
+                        <?php
+                        $amt_total += $client['amt_payment'];
+                        ?>
                         <div><?=($no+1)?>.
                             <a href="javascript:showDetailInfo('<?=$client['id']?>')">
                                 <?=$client['name']?>
                             </a>
                             @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
-                                <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
+                                <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=number_format($client['amt_payment'])?>원</button>
                             @else
                                 <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
                             @endif
@@ -215,9 +219,11 @@ echo "ddddddd다름";
                         </div>
 
                     @endforeach
-
                 @endif
+                <?php
 
+                echo "<p>총 ".number_format($amt_total)."원 입금</p>";
+                ?>
             </div>
 
             <div class="bigbox  col-xs-9" style="white-space:normal;">
@@ -279,6 +285,10 @@ echo "ddddddd다름";
                         "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + '[입금액:'+data['data']['amt_payment']+']원</p></div>' +
 
+                        "<div class='row'><p class='col-xs-2'>소송타입</p><p class='col-xs-10'>" + data['data']['data15'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + '</p></div>' +
+
                         "<div class='row'><p class='col-xs-2'><b>이름</b></p><p class='col-xs-10'>" + data['data']['name'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" + data['data']['phone'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>주민</p><p class='col-xs-10'>" + data['data']['jumin'] + '</p></div>' +
@@ -293,14 +303,10 @@ echo "ddddddd다름";
                         "<div class='row'><p class='col-xs-2'>인원</p><p class='col-xs-10'>" + data['data']['data06'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>동거인정보</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>은행명</p><p class='col-xs-10'>" + data['data']['data08'] + data['data']['data09'] + data['data']['data10'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data12'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data13'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data14'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>소송타입</p><p class='col-xs-10'>" + data['data']['data15'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>입금자명</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
+
                         "<div class='row'><p class='col-xs-2'>성보입금</p><p class='col-xs-10'>" + data['data']['bank_name'] + data['data']['bank_number']+ data['data']['bank_owner'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + '</p></div>' +
+
                         "<div class='row'><p class='col-xs-2'>철회여부</p><p class='col-xs-10'>" + data['data']['withdraw'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>비고</p><p class='col-xs-10'>" + data['data']['bigo'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['created_at'] + '</p></div>'

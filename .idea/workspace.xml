@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/sitemap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/file_write_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/file_write_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,12 +45,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.357142">
-              <caret line="292" column="132" selection-start-line="292" selection-start-column="132" selection-end-line="292" selection-end-column="132" />
-              <folding />
+            <state vertical-scroll-proportion="0.53979236">
+              <caret line="194" column="69" selection-start-line="194" selection-start-column="69" selection-end-line="194" selection-end-column="69" />
+              <folding>
+                <element signature="e#5134#5187#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4521338">
-              <caret line="49" column="66" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+            <state vertical-scroll-proportion="-16.714285">
+              <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -141,8 +136,8 @@
       <file leaf-file-name="client_edit_1.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.57143">
-              <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
+            <state vertical-scroll-proportion="-11.035714">
+              <caret line="230" column="54" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="54" />
               <folding>
                 <marker date="1470365708476" expanded="true" signature="2066:2184" placeholder="..." />
                 <marker date="1470365708476" expanded="true" signature="2066:2210" placeholder="..." />
@@ -212,11 +207,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/file_write_1.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -559,12 +554,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00054" summary="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;">
-      <created>1458898260531</created>
-      <option name="number" value="00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1458898260531</updated>
-    </task>
     <task id="LOCAL-00055" summary="2.000&#10;&#10;ip.bonzero.com 생성&#10;&#10;&#10;">
       <created>1462451389857</created>
       <option name="number" value="00055" />
@@ -853,7 +842,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470277177644</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;">
+      <created>1470366382409</created>
+      <option name="number" value="00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1470366382409</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -873,6 +868,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23554422" sideWeight="0.49196142" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12567714" sideWeight="0.5072185" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4627027" sideWeight="0.49278152" order="1" side_tool="false" content_ui="tabs" />
@@ -881,7 +877,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24466951" sideWeight="0.5080386" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -905,7 +900,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="1.05&#10;&#10;구글 추적기 추가&#10;&#10;&#10;" />
     <MESSAGE value="1.06&#10;&#10;&#10;&#10;&#10;" />
     <MESSAGE value="1.07&#10;&#10;status table - auto increse 추가&#10;&#10;&#10;" />
     <MESSAGE value="1.08&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
@@ -930,7 +924,8 @@
     <MESSAGE value="3.10301&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
     <MESSAGE value="3.10401&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;" />
     <MESSAGE value="3.10401&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 완료)&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.10401&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 완료)&#10;&#10;&#10;" />
+    <MESSAGE value="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1276,14 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.357142">
-          <caret line="292" column="132" selection-start-line="292" selection-start-column="132" selection-end-line="292" selection-end-column="132" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.964286">
@@ -1297,24 +1284,6 @@
             <marker date="1470365674232" expanded="true" signature="7983:8111" placeholder="..." />
             <marker date="1470365674232" expanded="true" signature="7983:8210" placeholder="..." />
             <marker date="1470365674232" expanded="true" signature="8051:8111" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.57143">
-          <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
-          <folding>
-            <marker date="1470365708476" expanded="true" signature="2066:2184" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="2066:2210" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="2169:2184" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="7680:7806" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="7739:7803" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="7830:8031" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="8009:8030" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="8094:8321" placeholder="..." />
-            <marker date="1470365708476" expanded="true" signature="8162:8318" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1347,9 +1316,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4521338">
-          <caret line="49" column="66" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+        <state vertical-scroll-proportion="-16.714285">
+          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.035714">
+          <caret line="230" column="54" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="54" />
+          <folding>
+            <marker date="1470365708476" expanded="true" signature="2066:2184" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="2066:2210" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="2169:2184" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="7680:7806" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="7739:7803" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="7830:8031" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="8009:8030" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="8094:8321" placeholder="..." />
+            <marker date="1470365708476" expanded="true" signature="8162:8318" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53979236">
+          <caret line="194" column="69" selection-start-line="194" selection-start-column="69" selection-end-line="194" selection-end-column="69" />
+          <folding>
+            <element signature="e#5134#5187#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
