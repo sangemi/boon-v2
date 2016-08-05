@@ -88,8 +88,18 @@
       <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5040369">
-              <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.83275664">
+              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WaveClientController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="15.178572">
+              <caret line="62" column="49" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -143,26 +153,6 @@
               <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
               <folding>
                 <marker date="1470383572004" expanded="true" signature="684:952" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client_edit_1.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.035714">
-              <caret line="230" column="54" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="54" />
-              <folding>
-                <marker date="1470365708476" expanded="true" signature="2066:2184" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="2066:2210" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="2169:2184" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="7680:7806" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="7739:7803" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="7830:8031" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="8009:8030" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="8094:8321" placeholder="..." />
-                <marker date="1470365708476" expanded="true" signature="8162:8318" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -627,12 +617,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00058" summary="2.000&#10;&#10;ip.bonzero.com 생성&#10;&#10;&#10;">
-      <created>1462452267734</created>
-      <option name="number" value="00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1462452267734</updated>
-    </task>
     <task id="LOCAL-00059" summary="2.001&#10;&#10;ip.bonzero.com 링크 우선 다 지움&#10;&#10;&#10;">
       <created>1463313881415</created>
       <option name="number" value="00059" />
@@ -921,7 +905,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470383587534</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;">
+      <created>1470383619749</created>
+      <option name="number" value="00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1470383619749</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1295,16 +1285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.964285">
-          <caret line="259" column="44" selection-start-line="259" selection-start-column="44" selection-end-line="259" selection-end-column="44" />
-          <folding>
-            <element signature="e#39#58#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/head.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1436,10 +1416,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="15.178572">
+          <caret line="62" column="49" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5040369">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.83275664">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
           <folding />
         </state>
       </provider>

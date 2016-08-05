@@ -88,7 +88,7 @@ class WaveMainController extends Controller
             } else {
                 return "접속오류 416";
             }
-        }else return "로그인!";
+        }else redirect()->to('/auth/login');
     }
 
     public function mypage()
