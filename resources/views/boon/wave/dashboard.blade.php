@@ -189,48 +189,59 @@ echo "ddddddd다름";
 
     }
 </style>
-
+<script>
+    $(window).scroll(function()
+    {
+        $('#detailClient').animate({top:$(window).scrollTop()+"px" },{queue: false, duration: 150});
+    });
+</script>
     <div class="text-center" style="white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div class="bigbox box2 col-xs-3" style="overflow-y:scroll">
-                <h4>접수인단 <small>[결제]</small></h4>
-                <?php
-                $amt_total = 0;
-                ?>
-                @if (empty($wave_client))
-                    <div class="col-sm-12">
-                        내역없습니다.
-                    </div>
-                @else
-                    @foreach ($wave_client as $no => $client)
-                        <?php
-                        $amt_total += $client['amt_payment'];
-                        ?>
-                        <div><?=($no+1)?>.
-                            <a href="javascript:showDetailInfo('<?=$client['id']?>')">
-                                <?=$client['name']?>
-                            </a>
-                            @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
-                                <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=number_format($client['amt_payment'])?>원</button>
-                            @else
-                                <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
-                            @endif
+            <div id="detailClient" class="bigbox box2 col-xs-3" style="overflow-y:scroll;height:600px;">
+                <div style="">
 
+                    <h4>접수인단 <small>[결제]</small></h4>
+                    <?php
+                    $amt_total = 0;
+                    ?>
+                    @if (empty($wave_client))
+                        <div class="col-sm-12">
+                            내역없습니다.
                         </div>
+                    @else
+                        @foreach ($wave_client as $no => $client)
+                            <?php
+                            $amt_total += $client['amt_payment'];
+                            ?>
+                            <div><?=($no+1)?>.
+                                <a href="javascript:showDetailInfo('<?=$client['id']?>')">
+                                    <?=$client['name']?>
+                                </a>
+                                @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
+                                    <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=number_format($client['amt_payment'])?>원</button>
+                                @else
+                                    <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
+                                @endif
 
-                    @endforeach
-                @endif
-                <?php
+                            </div>
 
-                echo "<p>총 ".number_format($amt_total)."원 입금</p>";
-                ?>
+                        @endforeach
+                    @endif
+                    <?php
+
+                    echo "<p>총 ".number_format($amt_total)."원 입금</p>";
+                    ?>
+                    <div style="display:block;clear:both;"></div>
+                </div>
+                <div style="display:block;clear:both;"></div>
             </div>
 
             <div class="bigbox  col-xs-9" style="white-space:normal;">
-                <h4>세부내용</h4>
-                <div  id="detailInfoBox">
+                    <h4>세부내용</h4>
+                    <div  id="detailInfoBox">
 
-                </div>
+                    </div>
+
             </div>
 
         </div>

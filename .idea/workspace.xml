@@ -48,10 +48,13 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53979236">
-              <caret line="194" column="69" selection-start-line="194" selection-start-column="69" selection-end-line="194" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.51787776">
+              <caret line="199" column="82" selection-start-line="199" selection-start-column="82" selection-end-line="199" selection-end-column="82" />
               <folding>
-                <element signature="e#5134#5187#0#HTML" expanded="true" />
+                <element signature="e#5299#5352#0#HTML" expanded="true" />
+                <element signature="e#7092#7125#0#HTML" expanded="true" />
+                <element signature="e#7177#7210#0#HTML" expanded="true" />
+                <element signature="e#7280#7307#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -554,12 +557,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00055" summary="2.000&#10;&#10;ip.bonzero.com 생성&#10;&#10;&#10;">
-      <created>1462451389857</created>
-      <option name="number" value="00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1462451389871</updated>
-    </task>
     <task id="LOCAL-00056" summary="2.000&#10;&#10;ip.bonzero.com 생성&#10;&#10;&#10;">
       <created>1462451778018</created>
       <option name="number" value="00056" />
@@ -848,7 +845,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470366382409</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;">
+      <created>1470367785266</created>
+      <option name="number" value="00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1470367785266</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1342,10 +1345,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53979236">
-          <caret line="194" column="69" selection-start-line="194" selection-start-column="69" selection-end-line="194" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.51787776">
+          <caret line="199" column="82" selection-start-line="199" selection-start-column="82" selection-end-line="199" selection-end-column="82" />
           <folding>
-            <element signature="e#5134#5187#0#HTML" expanded="true" />
+            <element signature="e#5299#5352#0#HTML" expanded="true" />
+            <element signature="e#7092#7125#0#HTML" expanded="true" />
+            <element signature="e#7177#7210#0#HTML" expanded="true" />
+            <element signature="e#7280#7307#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
