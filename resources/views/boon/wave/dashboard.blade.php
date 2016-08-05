@@ -11,7 +11,7 @@
 
 @section('content')
 
-
+<script type="text/javascript" src="/lib/common.sk.js"></script>
 <link rel="stylesheet" href="{{URL::asset('/css/boon/ccMail.css')}}">
 
 
@@ -36,7 +36,7 @@
 </ol>
 
 
-{{-- 검색부분 끝 --}}
+{{-- 검색부분 시작 --}}
 <style>
     .cf:before, .cf:after{
         content:"";
@@ -164,6 +164,19 @@
 </form>
 {{-- 검색부분 끝 --}}
 
+{{-- 단체SMS 시작 --}}
+<a href="javascript:void(0);" class="btn_smsbox btn btn-default">SMS발송</a>
+<script>
+    $(document).ready(function(){
+        /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
+        $(".each_client").click(function(){
+            $(this).data('tel')
+        });
+    });
+</script>
+
+{{-- 단체SMS 끝 --}}
+
 
 <?php
 /*$prev_url = parse_url(URL::previous());
@@ -213,7 +226,7 @@ echo "ddddddd다름";
                             <?php
                             $amt_total += $client['amt_payment'];
                             ?>
-                            <div><?=($no+1)?>.
+                            <div class="each_client"><?=($no+1)?>.
                                 <a href="javascript:showDetailInfo('<?=$client['id']?>')">
                                     <?=$client['name']?>
                                 </a>
@@ -301,20 +314,22 @@ echo "ddddddd다름";
                         "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + '</p></div>' +
 
                         "<div class='row'><p class='col-xs-2'><b>이름</b></p><p class='col-xs-10'>" + data['data']['name'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" + data['data']['phone'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" +
+                            "<a href='javascript:void(0)' class='btn_smsbox'>" + data['data']['phone'] + "</a>" +
+                        "</p></div>" +
                         "<div class='row'><p class='col-xs-2'>주민</p><p class='col-xs-10'>" + data['data']['jumin'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>주소</p><p class='col-xs-10'>" + data['data']['addr'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>주소2</p><p class='col-xs-10'>" + data['data']['addr2'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>우편번호</p><p class='col-xs-10'>" + data['data']['postcode'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>제품명</p><p class='col-xs-10'>" + data['data']['data01'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>구입/렌탈 날짜</p><p class='col-xs-10'>" + data['data']['data02'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>구입렌탈일</p><p class='col-xs-10'>" + data['data']['data02'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>설치일</p><p class='col-xs-10'>" + data['data']['data03'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>음용량</p><p class='col-xs-10'>" + data['data']['data04'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>현재 신체 이상증세</p><p class='col-xs-10'>" + data['data']['data05'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>신체증상</p><p class='col-xs-10'>" + data['data']['data05'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>인원</p><p class='col-xs-10'>" + data['data']['data06'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>동거인정보</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>동거인</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>은행명</p><p class='col-xs-10'>" + data['data']['data08'] + data['data']['data09'] + data['data']['data10'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>입금자명</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>입금인</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
 
                         "<div class='row'><p class='col-xs-2'>성보입금</p><p class='col-xs-10'>" + data['data']['bank_name'] + data['data']['bank_number']+ data['data']['bank_owner'] + '</p></div>' +
 
@@ -410,6 +425,7 @@ echo "ddddddd다름";
         });
     });
 </script>
+
 <!-- Modal (Pop up when detail button clicked) -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -455,7 +471,338 @@ echo "ddddddd다름";
 </div>
 
 
-    {{--{{SKHelper::p($ccMails)}}--}}
+
+
+
+
+
+
+{{--<div id="smsBox" style="position: absolute; top:10px left:10px;">
+<form action='/sms/send'>
+    발신인 <input type='text' name='from' value='02-1661-5521' />
+    수신인 <input type='text' name='to' value='010-4775-0852' />
+    문자 <input type='text' name='text' value='테스트...' />
+    <input type='text' name='type' value='SMS' />
+    <input type='submit' value='submit' />
+</form>
+</div>--}}
+
+<style>
+    #smsbox_sk input,  #smsbox_sk textarea {font-size:12px;}
+    #smsbox_sk input {margin-bottom:10px;}
+
+    #smsbox_sk {
+        position:fixed; z-index:99; width:630px;; padding:15px;
+        top:30%; right:5%; height:500px; background-color:#d7e3f0;
+        box-shadow:3px 3px 6px #555; filter:progid:DXImageTransform.Microsoft.Shadow(color=#555555,direction=135,strength=2);
+        border-radius:5px;
+    }
+
+    .textarea문자내용 {height:100px;width:185px;margin-bottom:5px;}
+    .sms_title {color:#59636e; font-weight:bold}
+    #sms_content {width:180px; height:150px; border:1px solid #98b2cc;}
+    #btnSendSMS {background-color:#567696; color:#ffffff; border:1px outset #567696; padding:3px; border-radius:5px;}
+</style>
+
+
+<?php
+/* consult.detail.php
+	vb에서는 이것 안씀
+class="showSMSBox" 된것을 누르면, 해당 text가 전화번호로 입력되어 나옴.
+* 문자는 지정해놓은 문자열 자동 노출
+btn_smsbox 를 클릭시 해당 text() 자동저장
+*/
+
+?>
+
+
+<div id="smsbox_sk" style="display:none">
+    <div style="float:left;width:66.666%;;">
+        예제
+        <?php
+        /*$sql = "select * from sms_text where member_srl = '$member_srl' ";
+        $smstext_arr = select($sql);
+        foreach($smstext_arr as $smstext){
+
+        }
+        if(!$smstext_arr[0]){}*/
+        $selected_smstext = "서울 강남구 테헤란로 207 아가방빌딩 7층, 법무법인 예율입니다. (2호선 역삼역 8번출구 200m)\n";
+
+
+
+        ?>
+        <div>
+            <?php
+            //$fake_consult_id = ($consult_id *3 ) + 1004;
+
+            ?>
+            <textarea name="textarea내용" class="textarea문자내용">[예율]코웨이소송안내. 소송비용 입금부탁드립니다. 감사합니다.http://wave.boonzero.com</textarea>
+            <textarea name="textarea내용" class="textarea문자내용">[예율]코웨이소송안내. 소송비용 입금부탁드립니다. 감사합니다.http://wave.boonzero.com</textarea>
+
+
+<textarea name="textarea내용" class="textarea문자내용">[예율]
+부재중 법률상담 확인연락 드렸으나 현재 통화가 어려우신듯 보입니다. 필요하신 경우 다시 연락주시면 상세한 답변 드리겠습니다. 감사합니다.
+* 증거를 미리 올려주시면 더 빠른 상담을 하실 수 있습니다.
+    <?=$_SERVER['HTTP_HOST']?>/v/easyHelp? $fake_consult_id
+</textarea>
+    <textarea name="textarea내용" class="textarea문자내용">법무법인 예율, 모이어 상담소 입니다.
+        < ? = substr($consult['reg_date'],0,10) ? >자 법률상담 진행여부 문의차 연락드렸습니다.
+통화가 어려우신듯 하니 필요하신 경우 먼저 연락주시면 상세한 답변 드리겠습니다. 1661-5521, http://sangdam.moior.com
+* 더이상 관리를 받지 않고 싶으신 경우 사건종료체크 부탁합니다.
+사건종료요청 : < ? =$_SERVER['HTTP_HOST'] ? >/v/easyHelp?< ? =$fake_consult_id ? >
+</textarea>
+<textarea name="textarea내용" class="textarea문자내용">[변호사님 상담배정]
+    < ? =$consult['cl_name'] ? >
+ www.moior.com/lawfirm/consult.detail.php?co_id= </textarea>
+
+<textarea name="textarea내용" class="textarea문자내용">[찾아오시는길] 법무법인 예율입니다.
+서울 강남구 테헤란로 207 아가방빌딩 7층(2호선 역삼역8번출구 나와서 200m쯤 직진하시면 '아가방'건물이 보입니다.)</textarea>
+<textarea name="textarea내용" class="textarea문자내용">[입금계좌안내]
+신한 100-028-594840 예율
+입금확인 후 연락드리겠습니다. 감사합니다.
+</textarea>
+
+        </div>
+        <small><a>예제 수정</a></small>
+        <div id="staff_hplist">
+            <button type="button" class="btn btn-default btn스탭전번 btn-sm" data-hp="010-4775-0852">
+                김상겸
+            </button>
+            <button type="button" class="btn btn-default btn스탭전번 btn-sm" data-hp="010-2383-9648">
+                정지혜
+            </button>
+            <button type="button" class="btn btn-default btn스탭전번 btn-sm" data-hp="010-8025-3422">
+                곽지영
+            </button>
+            <button type="button" class="btn btn-default btn스탭전번 btn-sm" data-hp="010-4519-4854">
+                신정재
+            </button>
+            <button type="button" class="btn btn-default btn스탭전번 btn-sm" data-hp="010-4618-7725">
+                장미라
+            </button>
+
+
+        </div>
+    </div>
+    <div style="float:left;width:33.333%">
+        <span class="sms_title">내용</span>
+        <div class="sms_saved_text">
+            <?
+            /*foreach($smstext_arr as $smstext){
+
+            }*/
+            ?>
+        </div>
+
+        <form name="formSMS발송" id="formSMS발송" action="/lawfirm/consult.ajax.lawfirm.php" method="post"  enctype='multipart/form-data' target="winNewSMS">
+            <input type="hidden" name="action" value="sendSMS" />
+            <input type="hidden" name="consult_id" value="" />
+
+            <textarea name="sms_content" id="sms_content" class="form-control" >asdf</textarea>
+            <div style="font-size:0.9em; text-align:right;"><span id="txt_len_sms"></span>byte&nbsp;<span id="txt_smstype"></span>
+                <input type=hidden name="smstype" id="smstype" value="SMS" />
+            </div>
+            <span class="sms_title">받는이</span>
+            <input type=text name="sms_number_to" id="sms_recive_num" style="width:180px; height:25px;" class="form-control" />
+
+            <span class="sms_title">보내는이</span>
+            <input type=text name="sms_number_from" id="sms_sender_noum" style="width:180px; height:25px;" class="form-control"
+                   value="1661-5521" />
+            <div style="text-align:center"><input type=button id="btnSendSMS" value="전송" style="width:150px;"></div>
+
+            <div style="background-color:#efefef;padding:5px;">
+                <input type=file name="upload_file" id="" style="" class="form-control" />
+                <div style="text-align:center"><input type=button id="btnSendMMS" value="파일도 전송" style="width:100px;"></div>
+            </div>
+
+            <div style="text-align:right; cursor:pointer; margin-top:10px; font-weight:bold; " id="btnSMSClose">닫기</div>
+            <a href="/lawfirm/sms.setting.php" style="color:#aaa;font-size:9px;" target="_blank">SETTING</a>
+        </form>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function(){
+
+        /*sms보내기_상세페이지*/
+        $(document).on('click', '.btn_smsbox', function(){
+            //$("#sms_recive_num").val( $(this).parents("#txt_consult_info").find(".txt_client_hp").text() );
+            var btn_txt = onlyNumber($(this).text());
+            if($.isNumeric(btn_txt))
+                $("#sms_recive_num").val( btn_txt );
+            else
+                $("#sms_recive_num").val( $(this).data("tel") );
+
+            if($("#smsbox_sk").css("display")=="none"){
+                $("#smsbox_sk").animate({
+                    right:['toggle', 'linear'],
+                    opacity:['toggle', 'linear']
+                },200,'linear',function(){});
+            }else{
+                $("#smsbox_sk").hide();
+            }
+        });
+
+        $("#sms_content").keyup(function(){
+            var str = $(this).val();
+            var len = 0, i, j;
+
+            for(i=0, j=str.length; i<j; i++, len++)
+            {
+                if((str.charCodeAt(i)<0)||(str.charCodeAt(i)>127))len = len+1;
+            }
+
+            $("#txt_len_sms").text(len);
+            if(len<=80){$("#txt_smstype").text("단문"); $("smstype").val("SMS");}else{
+                $("#txt_smstype").text("장문"); $("smstype").val("LMS");
+            }
+        });
+
+        $("#btnSMSClose").click(function(){
+            $("#smsbox_sk").animate({
+                right:['toggle','linear'],
+                opacity:['toggle','linear']
+            },200,'linear',function(){});
+        });
+
+        $("#btnSendSMS").click(function(){
+            /*$(this).attr("disabled", true);*/
+
+            var str = "&from="+$("input[name=sms_number_from]").val()+"&to="+$("input[name=sms_number_to]").val()+"&text="+$("#sms_content").val()+"";
+
+            /*$.post("/lawfirm/consult.ajax.lawfirm.php", str, function(data){*/
+            $.post("/sms/send", str, function(data){
+                $("#btnSendSMS").attr("disabled",false);
+                console.log('COOL SMS 로그');
+                console.log(data);
+                alert(data + '건 발송성공');
+            });
+
+        });
+        /*sms보내기_상세페이지*/
+
+        /*sms보내기_MMS 계약서 보내기*/
+        $("#btnSendMMS").click(function(){
+            $(this).attr("disabled", true);
+
+            $("#formSMS발송").submit();
+        });
+
+        $(".textarea문자내용").click(function(){
+            $(this).select();
+        });
+        $(".btn스탭전번").click(function(){
+            $("#sms_recive_num").val($(this).data("hp"));
+        });
+
+
+    });
+</script>
+
+<?php
+/* (http://www.coolsms.co.kr/devforum)
+
+질문1] 현재 XE 의 textmessage 는 REST API 를 사용하고 있으며, 사용버전이 궁금하시다면 xe/modules/textmessage 폴더 안의
+        coolsms.php 파일을 열어보시면 $version 을 확인하시면 됩니다.
+$oTextmessageModel = &getModel('textmessage');
+$result = $oTextmessageModel->getResult($args);
+
+자세한 에러 관련메시지는 http://www.coolsms.co.kr/REST_API#Response
+if( $output->get('error') == "0" ){
+	[error] => 0 으로 나오면 에러가 없으므로 확인하실 에러는 없는것입니다. 혹시 에러가 날 경우에는
+    [error] => 403
+    [code] => "invalidAPIKey"
+	이런식으로 나옵니다.
+
+--------------------------------------------
+[ output ]
+Object Object
+(
+    [error] => 0
+    [message] => success
+    [variables] => Array
+        (
+            [success_count] => 1
+            [failure_count] => 0
+            [group_id] => R2G5548D6010358C
+        )
+
+    [httpStatusCode] =>
+)
+
+
+[ result ]
+stdClass Object
+(
+    [total_count] => 255
+    [list_count] => 20
+    [page] => 1
+    [data] => Array
+        (
+            [7] => stdClass Object
+                (
+                    [type] => LMS
+                    [accepted_time] => 2015-05-04 14:44:19
+                    [recipient_number] => 010-4186-7066
+                    [group_id] => R2G554707335329B
+                    [message_id] => R2M554707335A6DF
+                    [status] => 2
+                    [result_code] => 00
+                    [result_message] => 정상
+                    [sent_time] => 201505041444
+                    [text] => [모이어]신청이 정상 접수되었습니다. 결과가 나오면 문자를 드리며 나의상담 메뉴에서 확인가능합니다.
+
+[모이어 법률상담소 특장점]
+1. 분야별 전문변호사 배치
+2. 팀단위로 진행하여 보다 치밀한 소송진행
+3. 작업보고서 제공(사건처리에 실제 투입된 변호사들의 타임테이블)
+4. 투입된 업무시간이 적으면 착수금의 일부를 환급하는 안심 착수금 제도
+5. 담당변호사 평가, 변경제도
+6. 항상 최선을 다하는, 믿고 맡길 수 있는 법률상담소가 되겠습니다.
+sangdam.moior.com
+                    [carrier] => LGT
+                    [scheduled_time] =>
+                )
+
+            [8] => stdClass Object
+                (
+                    [type] => LMS
+                    [accepted_time] => 2015-05-04 13:52:48
+                    [recipient_number] => 01058251201
+                    [group_id] => R2G5546FB20BBD31
+                    [message_id] => R2M5546FB20CDCD2
+                    [status] => 2
+                    [result_code] => 00
+                    [result_message] => 정상
+                    [sent_time] => 201505041353
+                    [text] => [사건종료통지] 비용 문제로 진행의사 없는 것으로 처리하겠습니다.
+
+도움이 못되어 죄송합니다. 다음 연락을 주실 때에는 실질적인 도움을 드릴 수 있도록 더 많은 준비를 해놓겠습니다. 항상 발전하는 모이어 상담소가 되겠습니다. 모쪼록 좋은날만 있으시길 기원합니다 :-) http://sangdam.moior.com
+                    [carrier] => LGT
+                    [scheduled_time] =>
+                )
+                   [text] => 모이어 법률상담소입니다.
+사건진행여부 확인차 연락드렸습니다.
+허종섭 실장 / 김상겸 변호사
+편하신 시간에 전화부탁드립니다.
+
+법무법인 예율
+서울 강남구 테헤란로 207 아가방빌딩 7층(2호선 역삼역8번출구)입니다.
+                    [carrier] => SKT
+                    [scheduled_time] =>
+                )
+
+        )
+
+)
+*/
+?>
+
+
+
+
+{{--{{SKHelper::p($ccMails)}}--}}
 
 
 

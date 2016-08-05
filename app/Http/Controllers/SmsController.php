@@ -12,7 +12,7 @@ class SmsController extends Controller {
 	| SMS Controller
 	|--------------------------------------------------------------------------
 	|
-	| 문자발송. Cool sms 우선 씀. 2016.
+	| 문자발송. Cool sms 우선 씀. 2016. 2017.말에 apibox php7버전 지원한다함.
 	| 나중
 	*/
 	/*[group_id] => R1G56D7DF74F02DA
@@ -37,26 +37,30 @@ class SmsController extends Controller {
 	// SK가 작성함. 하수 코딩. 제대로 고쳐야.. ㅜ
 
 	/*유저 페이지에서 post나 get으로 불려진 경우, 그 값 사용*/
-	public function postSend()
+	/*public function postSend()
 	{
-		if( count(Request::all()) ) $data = Request::all();
-	}
+
+	}*/
 
 	/*다른 Class에서 send(['to'=>'010...']) 식으로 불려진 경우
       온리 text만 넘길 수도 있음(현재 로그인된 사람에게 문자전송) */
-	public function send($data = null)
+	public function postSend($data = null)
 	{
+		if( count(Request::all()) ) $data = Request::all();
+		//return self::send($data);
 		if( empty($data['to']) && empty(Auth::user()->userInfo->phone)) return 0; //'받는사람 없음.';
 
 		$default = [
-			'text'=>'빈 메세지 (SmsController)',
-			'from'=>'02-1661-5521',
+			'text'=>'빈 메세지입니다.',
+			'from'=>'02-2135-5251',
 			'to'=>Auth::user()->userInfo->phone
 		];
 		if(!isset($data['from'])) $data['from'] = $default['from'];
 		if(!isset($data['to'])) $data['to'] = $default['to'];
+		if(!isset($data['text'])) $data['text'] = $default['text'];
 
 		$ret = self::sendCoolsms($data);
+
 		/*{#248 ▼
 		+"group_id": "R1G56E7E99824235"
 		+"success_count": 1
@@ -68,14 +72,17 @@ class SmsController extends Controller {
 		// Return the message object to the browser as JSON
 		if( isset($data['goto']) ){
 			return redirect( $data['goto'] );
-		}else //else return redirect()->back(); // get방식으로 들어왔을때, 순환오류 위험함.
+		}else { //else return redirect()->back(); // get방식으로 들어왔을때, 순환오류 위험함.
 			return $ret->success_count;
+		}
 	}
 
 	/*얘는 무조건 data값을 정상적으로 받아야 함*/
 	private function sendCoolsms($data) /*$to='', $from, $text, $goto = ''*/
 	{
+
 		if( empty($data['from']) || empty($data['to']) || empty($data['text']) ) return false;
+
 		//$senderid = $rest->get_senderid_list($options)->getResult();
 		$options = new \stdClass();
 		$options->from = $data['from'];
@@ -89,16 +96,18 @@ class SmsController extends Controller {
 		$options->type = "MMS";
 		//type 은 default 가 sms 로 되있으므로 mms 로 바꾸어 주어야 사진이 보내집니다.
 		$options->image = "myPic.jpg";*/
-		$options->type = "SMS";
+
 
 		$rest = new Coolsms();
-		//$this->recordHistory($rest); // 기록허장.
+		$this->recordHistory($rest); // 기록허장.
 		return $rest->send($options);
 	}
 
 
 	private function recordHistory(){
 		// DB::table('SmsHistory') ...
+		$sms_history = new SmsHistory();
+		//$sms_history->from =
 	}
 
 	public function getSentCoolsms(){

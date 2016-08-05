@@ -81,12 +81,14 @@ class WaveMainController extends Controller
 
     public function dashboard()
     {
-        if(Auth::user()->id == 1 || Auth::user()->id == 294){ // SK 또는 이준호
-            $wave_client = WaveClient::all();
-            return view('boon.wave.dashboard', compact('wave_client'));
-        }else{
-            return "접속오류 416";
-        }
+        if(Auth::check) {
+            if (Auth::user()->id == 1 || Auth::user()->id == 294) { // SK 또는 이준호
+                $wave_client = WaveClient::all();
+                return view('boon.wave.dashboard', compact('wave_client'));
+            } else {
+                return "접속오류 416";
+            }
+        }else return "로그인!";
     }
 
     public function mypage()

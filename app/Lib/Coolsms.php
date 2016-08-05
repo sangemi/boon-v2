@@ -111,7 +111,7 @@ class Coolsms
         else
             $options->api_key = $this->api_key;
         $options->signature = $this->getSignature();
-        print_r($options);
+        /*print_r($options);*/
         $this->setContent($options);
         $this->curlProcess();
     }
