@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SmsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SmsController.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +36,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8275862">
-              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+            <state vertical-scroll-proportion="-5.137931">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83275664">
-              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+            <state vertical-scroll-proportion="-17.642857">
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,8 +108,8 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.25">
-              <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+            <state vertical-scroll-proportion="-11.035714">
+              <caret line="674" column="29" selection-start-line="674" selection-start-column="20" selection-end-line="674" selection-end-column="29" />
               <folding>
                 <element signature="e#5670#5723#0#HTML" expanded="true" />
                 <element signature="e#5815#5854#0#HTML" expanded="true" />
@@ -146,13 +146,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SmsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SmsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.321428">
-              <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.2848904">
+              <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
               <folding>
-                <marker date="1470383572004" expanded="true" signature="684:952" placeholder="..." />
+                <marker date="1470385493295" expanded="true" signature="684:952" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -215,8 +215,8 @@
         <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Lib/Sms.php" />
         <option value="$PROJECT_DIR$/app/Lib/SmsHistory.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SmsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SmsController.php" />
       </list>
     </option>
   </component>
@@ -617,12 +617,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00059" summary="2.001&#10;&#10;ip.bonzero.com 링크 우선 다 지움&#10;&#10;&#10;">
-      <created>1463313881415</created>
-      <option name="number" value="00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1463313881415</updated>
-    </task>
     <task id="LOCAL-00060" summary="2.001&#10;&#10;ip.bonzero.com 링크 우선 다 지움&#10;&#10;&#10;">
       <created>1463314213238</created>
       <option name="number" value="00060" />
@@ -911,7 +905,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470383619749</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;">
+      <created>1470383703970</created>
+      <option name="number" value="00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1470383703970</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1335,43 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8275862">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.25">
-          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
-          <folding>
-            <element signature="e#5670#5723#0#HTML" expanded="true" />
-            <element signature="e#5815#5854#0#HTML" expanded="true" />
-            <element signature="e#7483#7516#0#HTML" expanded="true" />
-            <element signature="e#7568#7601#0#HTML" expanded="true" />
-            <element signature="e#7671#7698#0#HTML" expanded="true" />
-            <element signature="e#19661#19681#0#HTML" expanded="true" />
-            <element signature="e#19692#19726#0#HTML" expanded="true" />
-            <element signature="e#22268#22300#0#HTML" expanded="true" />
-            <element signature="e#22890#22932#0#HTML" expanded="true" />
-            <element signature="e#23218#23251#0#HTML" expanded="true" />
-            <element signature="e#23398#23431#0#HTML" expanded="true" />
-            <element signature="e#23510#23535#0#HTML" expanded="true" />
-            <element signature="e#23582#23602#0#HTML" expanded="true" />
-            <element signature="e#23628#23673#0#HTML" expanded="true" />
-            <element signature="e#23787#23812#0#HTML" expanded="true" />
-            <element signature="e#23863#23883#0#HTML" expanded="true" />
-            <element signature="e#23928#24005#0#HTML" expanded="true" />
-            <element signature="e#24079#24112#0#HTML" expanded="true" />
-            <marker date="1470381503101" expanded="true" signature="10264:10471" placeholder="..." />
-            <marker date="1470381503101" expanded="true" signature="10318:10465" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/WaveSuit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.071429">
@@ -1398,16 +1361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SmsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.321428">
-          <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
-          <folding>
-            <marker date="1470383572004" expanded="true" signature="684:952" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Lib/Coolsms.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.607142">
@@ -1426,9 +1379,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83275664">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+        <state vertical-scroll-proportion="-17.642857">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.035714">
+          <caret line="674" column="29" selection-start-line="674" selection-start-column="20" selection-end-line="674" selection-end-column="29" />
+          <folding>
+            <element signature="e#5670#5723#0#HTML" expanded="true" />
+            <element signature="e#5815#5854#0#HTML" expanded="true" />
+            <element signature="e#7483#7516#0#HTML" expanded="true" />
+            <element signature="e#7568#7601#0#HTML" expanded="true" />
+            <element signature="e#7671#7698#0#HTML" expanded="true" />
+            <element signature="e#19661#19681#0#HTML" expanded="true" />
+            <element signature="e#19692#19726#0#HTML" expanded="true" />
+            <element signature="e#22268#22300#0#HTML" expanded="true" />
+            <element signature="e#22890#22932#0#HTML" expanded="true" />
+            <element signature="e#23218#23251#0#HTML" expanded="true" />
+            <element signature="e#23398#23431#0#HTML" expanded="true" />
+            <element signature="e#23510#23535#0#HTML" expanded="true" />
+            <element signature="e#23582#23602#0#HTML" expanded="true" />
+            <element signature="e#23628#23673#0#HTML" expanded="true" />
+            <element signature="e#23787#23812#0#HTML" expanded="true" />
+            <element signature="e#23863#23883#0#HTML" expanded="true" />
+            <element signature="e#23928#24005#0#HTML" expanded="true" />
+            <element signature="e#24079#24112#0#HTML" expanded="true" />
+            <marker date="1470381503101" expanded="true" signature="10264:10471" placeholder="..." />
+            <marker date="1470381503101" expanded="true" signature="10318:10465" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.137931">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SmsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2848904">
+          <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+          <folding>
+            <marker date="1470385493295" expanded="true" signature="684:952" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

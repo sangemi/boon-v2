@@ -42,8 +42,12 @@ class SmsController extends Controller {
 
 	}*/
 
-	/*다른 Class에서 send(['to'=>'010...']) 식으로 불려진 경우
-      온리 text만 넘길 수도 있음(현재 로그인된 사람에게 문자전송) */
+	public function getSend($data = null)
+	{
+		return "Not this way;";
+	}
+		/*다른 Class에서 send(['to'=>'010...']) 식으로 불려진 경우
+          온리 text만 넘길 수도 있음(현재 로그인된 사람에게 문자전송) */
 	public function postSend($data = null)
 	{
 		if( count(Request::all()) ) $data = Request::all();
@@ -99,7 +103,7 @@ class SmsController extends Controller {
 
 
 		$rest = new Coolsms();
-		$this->recordHistory($rest); // 기록허장.
+		/*$this->recordHistory($rest); // 기록허장.*/
 		return $rest->send($options);
 	}
 
