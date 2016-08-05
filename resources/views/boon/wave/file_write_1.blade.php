@@ -189,13 +189,15 @@ $(document).ready(function(){
                     <div id="text_explain" class="text-center">제출한 파일 리스트</div>
                     <table class="table">
                         <tr>
-                        <th>번호. 종류</th><th>파일명</th><th>비고</th>
+                        <th>번호. 종류</th><th>파일명</th><th>비고</th><th>미리보기</th>
                         </tr>
                     @foreach( $uploaded_files as $key => $uploaded_file)
                         <tr>
                             <td><?=$uploaded_file['title_no']?>. <?=$uploaded_file['title']?></td>
                             <td><a href="<?=$uploaded_file['uploaded_filename']?>" target="_blank"><small><?=$uploaded_file['source_filename']?></small></td>
                             <td><small><?=$uploaded_file['explain']?></small></td>
+                            <td><div style="height:100px;width:150px;background-size:cover;
+                                background-image:url('<?=$uploaded_file['uploaded_filename']?>');"></div></td>
                             <!--<td><?=substr($uploaded_file['created_at'], 0, 10)?></td>-->
                         </tr>
                     @endforeach

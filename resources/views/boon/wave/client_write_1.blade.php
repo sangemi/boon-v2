@@ -209,9 +209,9 @@ $(document).ready(function(){
   3) 사용회수 및 음용량
   3) 질환의 종류 및 치료여부
 ")  !!}
-                {!! BootForm::text( "은행명" , 'data08')->placeholder("승소시 판결금받을 은행명")  !!}
-                {!! BootForm::text( "계좌번호" , 'data09')->placeholder("계좌번호")  !!}
-                {!! BootForm::text( "예금주명" , 'data10')->placeholder("예금주")  !!}
+                {!! BootForm::text( "은행명" , 'bank_name')->placeholder("승소시 판결금받을 은행명")  !!}
+                {!! BootForm::text( "계좌번호" , 'bank_number')->placeholder("계좌번호")  !!}
+                {!! BootForm::text( "예금주명" , 'bank_owner')->placeholder("예금주")  !!}
 
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label"></label>

@@ -286,20 +286,18 @@ echo "ddddddd다름";
                         "<div class='row'><p class='col-xs-2'>주소2</p><p class='col-xs-10'>" + data['data']['addr2'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>우편번호</p><p class='col-xs-10'>" + data['data']['postcode'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>제품명</p><p class='col-xs-10'>" + data['data']['data01'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'>" + data['data']['data02'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>구입/렌탈 날짜</p><p class='col-xs-10'>" + data['data']['data02'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>설치일</p><p class='col-xs-10'>" + data['data']['data03'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>음용량</p><p class='col-xs-10'>" + data['data']['data04'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data05'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>현재 신체 이상증세</p><p class='col-xs-10'>" + data['data']['data05'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>인원</p><p class='col-xs-10'>" + data['data']['data06'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data08'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data09'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data10'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data12'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data13'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data14'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>민</p><p class='col-xs-10'>" + data['data']['data15'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>동거인정보</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>은행명</p><p class='col-xs-10'>" + data['data']['data08'] + data['data']['data09'] + data['data']['data10'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data12'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data13'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>-</p><p class='col-xs-10'>" + data['data']['data14'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>소송타입</p><p class='col-xs-10'>" + data['data']['data15'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>성보입금</p><p class='col-xs-10'>" + data['data']['bank_name'] + data['data']['bank_number']+ data['data']['bank_owner'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + '</p></div>' +

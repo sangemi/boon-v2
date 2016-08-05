@@ -119,7 +119,7 @@ class WaveFileController extends Controller {
 				$web_path = '/upload/wave/suit/'.$client['suit_id'];
 				$server_path = public_path($web_path);
 
-				$real_filename = $client['id'].'-'.date("Ymd").'-'.$file->getClientOriginalName();
+				$real_filename = $client['id'].'-'.date("Ymd-His").'-'.$file->getClientOriginalName();
 				$task->uploaded_filename= $web_path."/".$real_filename;
 
 				$task->file_size = $file->getSize();

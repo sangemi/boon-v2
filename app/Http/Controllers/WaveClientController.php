@@ -124,9 +124,9 @@ class WaveClientController extends Controller {
 			$task->data05 = $data['data05'];
 			$task->data06 = $data['data06'];
 			$task->data07 = $data['data07'];
-			$task->data08 = $data['data08'];
+			/*$task->data08 = $data['data08'];
 			$task->data09 = $data['data09'];
-			$task->data10 = $data['data10'];
+			$task->data10 = $data['data10'];*/
 
 			$task->data11 = $data['data11'];
 			$task->data12 = $data['data12'];
@@ -138,6 +138,9 @@ class WaveClientController extends Controller {
 
 			$task->data15 = $data['data15']; //A타입, B타입
 
+			$task->bank_name = $data['bank_name'];
+			$task->bank_number = $data['bank_number'];
+			$task->bank_owner = $data['bank_owner'];
 
 
 			$ret = $task->save();
@@ -259,9 +262,9 @@ class WaveClientController extends Controller {
 			$task->data05 = $data['data05'];
 			$task->data06 = $data['data06'];
 			$task->data07 = $data['data07'];
-			$task->data08 = $data['data08'];
+			/*$task->data08 = $data['data08'];
 			$task->data09 = $data['data09'];
-			$task->data10 = $data['data10'];
+			$task->data10 = $data['data10'];*/
 
 			$task->data11 = $data['data11'];
 			$task->data12 = $data['data12'];
@@ -272,6 +275,10 @@ class WaveClientController extends Controller {
 			*/
 
 			$task->data15 = $data['data15']; //A타입, B타입
+
+			$task->bank_name = $data['bank_name'];
+			$task->bank_number = $data['bank_number'];
+			$task->bank_owner = $data['bank_owner'];
 
 			$ret = $task->save();
 			if($ret) Session::flash('message', '수정되었습니다.');

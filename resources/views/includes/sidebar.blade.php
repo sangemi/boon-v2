@@ -94,6 +94,7 @@
                     <h1 class="title-large">단체소송</h1>
                 </div>
             </div>
+            <li><a href="{{ URL::to('/wave/mypage') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 상황실</a></li>
 
             {{--<li><a href="javascript:alert('대기중입니다')">나의 이력</a></li>--}}
 
