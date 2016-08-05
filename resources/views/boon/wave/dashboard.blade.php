@@ -167,6 +167,7 @@
 {{-- 단체SMS 시작 --}}
 <div>
     <a href="javascript:void(0);" class="toggle_smsbox btn btn-default">SMS 발송</a>
+    <span class="btn btn-xs btn-default" id="btn-no-payment">미입금자 선택</span>
     <span id="sms_to_list" style="font-size:0.8em;color:gray;">아래 리스트를 클릭 후 발송버튼 눌러주세요.</span>
 </div>
 <script>
@@ -174,6 +175,16 @@
         $(".toggle_smsbox").click(function() {
             toggle_smsbox();
         });
+        $("#btn-no-payment").click(function() {
+            $(".each_client").each(function(){
+                var status = $(this).data('chk_payment');
+                if( status == '입금완료' || status == '해당없음' || status == '면제') {
+                }else{
+                    $(this).click();
+                }
+            });
+        });
+
         /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
         $(".each_client").click(function(){
             var final_to_number = '', final_to_name = '';
@@ -248,7 +259,9 @@ echo "ddddddd다름";
                             <?php
                             $amt_total += $client['amt_payment'];
                             ?>
-                            <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"><?=($no+1)?>.
+                            <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"
+                                                    data-chk_payment="<?=$client['chk_payment']?>">
+                                <?=($no+1)?>.
                                 <a href="javascript:showDetailInfo('<?=$client['id']?>')">
                                     <span  class="each_name"><?=$client['name']?></span>
                                 </a>
