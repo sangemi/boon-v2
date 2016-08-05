@@ -52,7 +52,7 @@ class skHelper {
 
     // 휴대폰 번호에서 -빼기. 이거써라!
     static function tel_db($hp_no){
-        return self::only_number($hp_no);
+        return self::number_only($hp_no);
     }
     // 휴대폰 번호 사이에 '-' 하이픈 넣기 이거써라!
     static function tel_html($hp_no){

@@ -36,6 +36,17 @@ function number_format(num){
 	while (reg.test(str)) str = str.replace(reg, '$1' + ',' + '$2');
 	return str;   간단버전 */
 }
+
+// 양끝 문자제거
+function trimChar(string, charToRemove) {
+	while(string.charAt(0)==charToRemove) {
+		string = string.substring(1);
+	}
+	while(string.charAt(string.length-1)==charToRemove) {
+		string = string.substring(0,string.length-1);
+	}
+	return string;
+}
 // 숫자만리턴
 function onlyNumber(str) {
 	return String(str).replace(/[^0-9]/g,'');

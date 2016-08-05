@@ -165,12 +165,34 @@
 {{-- 검색부분 끝 --}}
 
 {{-- 단체SMS 시작 --}}
-<a href="javascript:void(0);" class="btn_smsbox btn btn-default">SMS발송</a>
+<div>
+    <a href="javascript:void(0);" class="toggle_smsbox btn btn-default">SMS 발송</a>
+    <span id="sms_to_list" style="font-size:0.8em;color:gray;">아래 리스트를 클릭 후 발송버튼 눌러주세요.</span>
+</div>
 <script>
     $(document).ready(function(){
+        $(".toggle_smsbox").click(function() {
+            toggle_smsbox();
+        });
         /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
         $(".each_client").click(function(){
-            $(this).data('tel')
+            var final_to_number = '', final_to_name = '';
+            if( $(this).data('clicked') == true ){
+                $(this).data('clicked', false); $(this).css('background-color', '');
+            }
+            else {
+                $(this).data('clicked', true) ; $(this).css('background-color', 'yellow');
+            }
+            $(".each_client").each(function(){
+                if($(this).data('clicked')) {
+                    final_to_number = final_to_number + ',' + $(this).data('tel');
+                    final_to_name = final_to_name + ', ' + $(this).find(".each_name").text();
+                }
+            });
+            final_to_number = trimChar( trimChar(final_to_number, ' '), ',');
+            final_to_name = trimChar( trimChar(final_to_name, ' '), ',');
+            $("#sms_recive_num").val( final_to_number );
+            $("#sms_to_list").text( final_to_name );;
         });
     });
 </script>
@@ -210,7 +232,7 @@ echo "ddddddd다름";
 </script>
     <div class="text-center" style="white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div id="detailClient" class="bigbox box2 col-xs-3" style="overflow-y:scroll;height:600px;">
+            <div id="detailClient" class="bigbox box2 col-xs-4" style="overflow-y:scroll;height:600px;">
                 <div style="">
 
                     <h4>접수인단 <small>[결제]</small></h4>
@@ -226,9 +248,9 @@ echo "ddddddd다름";
                             <?php
                             $amt_total += $client['amt_payment'];
                             ?>
-                            <div class="each_client"><?=($no+1)?>.
+                            <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"><?=($no+1)?>.
                                 <a href="javascript:showDetailInfo('<?=$client['id']?>')">
-                                    <?=$client['name']?>
+                                    <span  class="each_name"><?=$client['name']?></span>
                                 </a>
                                 @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
                                     <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=number_format($client['amt_payment'])?>원</button>
@@ -249,7 +271,7 @@ echo "ddddddd다름";
                 <div style="display:block;clear:both;"></div>
             </div>
 
-            <div class="bigbox  col-xs-9" style="white-space:normal;">
+            <div class="bigbox  col-xs-8" style="white-space:normal;">
                     <h4>세부내용</h4>
                     <div  id="detailInfoBox">
 
@@ -479,7 +501,7 @@ echo "ddddddd다름";
 
 {{--<div id="smsBox" style="position: absolute; top:10px left:10px;">
 <form action='/sms/send'>
-    발신인 <input type='text' name='from' value='02-1661-5521' />
+    발신인 <input type='text' name='from' value='' />
     수신인 <input type='text' name='to' value='010-4775-0852' />
     문자 <input type='text' name='text' value='테스트...' />
     <input type='text' name='type' value='SMS' />
@@ -536,7 +558,7 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
             //$fake_consult_id = ($consult_id *3 ) + 1004;
 
             ?>
-            <textarea name="textarea내용" class="textarea문자내용">[예율]코웨이소송안내. 소송비용 입금부탁드립니다. 감사합니다.http://wave.boonzero.com</textarea>
+            <textarea name="textarea내용" class="textarea문자내용">[예율]코웨이소송안내. 소송비용 입금부탁드립니다. 신한 100-029-697933 예율 http://wave.boonzero.com</textarea>
             <textarea name="textarea내용" class="textarea문자내용">[예율]코웨이소송안내. 소송비용 입금부탁드립니다. 감사합니다.http://wave.boonzero.com</textarea>
 
 
@@ -547,7 +569,7 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
 </textarea>
     <textarea name="textarea내용" class="textarea문자내용">법무법인 예율, 모이어 상담소 입니다.
         < ? = substr($consult['reg_date'],0,10) ? >자 법률상담 진행여부 문의차 연락드렸습니다.
-통화가 어려우신듯 하니 필요하신 경우 먼저 연락주시면 상세한 답변 드리겠습니다. 1661-5521, http://sangdam.moior.com
+통화가 어려우신듯 하니 필요하신 경우 먼저 연락주시면 상세한 답변 드리겠습니다. 02-2135-5251, http://sangdam.moior.com
 * 더이상 관리를 받지 않고 싶으신 경우 사건종료체크 부탁합니다.
 사건종료요청 : < ? =$_SERVER['HTTP_HOST'] ? >/v/easyHelp?< ? =$fake_consult_id ? >
 </textarea>
@@ -596,9 +618,11 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
 
         <form name="formSMS발송" id="formSMS발송" action="/lawfirm/consult.ajax.lawfirm.php" method="post"  enctype='multipart/form-data' target="winNewSMS">
             <input type="hidden" name="action" value="sendSMS" />
+            <input type="hidden" name="to_user_id" id="to_user_id" value="" />
+
             <input type="hidden" name="consult_id" value="" />
 
-            <textarea name="sms_content" id="sms_content" class="form-control" >asdf</textarea>
+            <textarea name="sms_content" id="sms_content" class="form-control" >[예율] </textarea>
             <div style="font-size:0.9em; text-align:right;"><span id="txt_len_sms"></span>byte&nbsp;<span id="txt_smstype"></span>
                 <input type=hidden name="smstype" id="smstype" value="SMS" />
             </div>
@@ -607,7 +631,7 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
 
             <span class="sms_title">보내는이</span>
             <input type=text name="sms_number_from" id="sms_sender_noum" style="width:180px; height:25px;" class="form-control"
-                   value="1661-5521" />
+                   value="02-2135-5251" />
             <div style="text-align:center"><input type=button id="btnSendSMS" value="전송" style="width:150px;"></div>
 
             <div style="background-color:#efefef;padding:5px;">
@@ -623,6 +647,16 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
 </div>
 
 <script>
+    function toggle_smsbox(){
+        if($("#smsbox_sk").css("display")=="none"){
+            $("#smsbox_sk").animate({
+                right:['toggle', 'linear'],
+                opacity:['toggle', 'linear']
+            },200,'linear',function(){});
+        }else{
+            $("#smsbox_sk").hide();
+        }
+    }
     $(document).ready(function(){
 
         /*sms보내기_상세페이지*/
@@ -634,14 +668,7 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
             else
                 $("#sms_recive_num").val( $(this).data("tel") );
 
-            if($("#smsbox_sk").css("display")=="none"){
-                $("#smsbox_sk").animate({
-                    right:['toggle', 'linear'],
-                    opacity:['toggle', 'linear']
-                },200,'linear',function(){});
-            }else{
-                $("#smsbox_sk").hide();
-            }
+            toggle_smsbox();
         });
 
         $("#sms_content").keyup(function(){
@@ -669,7 +696,8 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
         $("#btnSendSMS").click(function(){
             /*$(this).attr("disabled", true);*/
 
-            var str = "&from="+$("input[name=sms_number_from]").val()+"&to="+$("input[name=sms_number_to]").val()+"&text="+$("#sms_content").val()+"";
+            var str = "&from="+$("input[name=sms_number_from]").val()+"&to="+$("input[name=sms_number_to]").val()+"&text="+$("#sms_content").val()+""
+                    +"&to_user_id="+$("#to_user_id").val()+"";
 
             /*$.post("/lawfirm/consult.ajax.lawfirm.php", str, function(data){*/
             $.post("/sms/send", str, function(data){

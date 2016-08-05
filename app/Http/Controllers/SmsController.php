@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Lib\Coolsms;
+use App\Lib\SmsHistory;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
@@ -25,7 +26,7 @@ class SmsController extends Controller {
 	public function getForm($data = null)
 	{
 		echo "<form action='/sms/send'>
-			<input type='text' name='from' value='02-1661-5521' />
+			<input type='text' name='from' value='02-2135-5251' />
 			<input type='text' name='to' value='010-4775-0852' />
 			<input type='text' name='text' value='테스트...' />
 			<input type='text' name='type' value='SMS' />
@@ -101,17 +102,29 @@ class SmsController extends Controller {
 		//type 은 default 가 sms 로 되있으므로 mms 로 바꾸어 주어야 사진이 보내집니다.
 		$options->image = "myPic.jpg";*/
 
+		self::recordHistory($options, $data); // 기록허장.     $this->
+
+		/*$rest = (object)  array('success_count' => '9999'); // Test시
+		return $rest;*/
 
 		$rest = new Coolsms();
-		/*$this->recordHistory($rest); // 기록허장.*/
 		return $rest->send($options);
 	}
 
+	/*이력 DB 기록*/
+	private function recordHistory($options, $data){
 
-	private function recordHistory(){
-		// DB::table('SmsHistory') ...
 		$sms_history = new SmsHistory();
-		//$sms_history->from =
+		$sms_history->from = $options->from;
+		$sms_history->to = $options->to;
+		$sms_history->text = $options->text;
+		$sms_history->type = $options->type;
+		$sms_history->send_user_id = Auth::user()->id;
+		if(isset($data['to_user_id'])) {
+			$sms_history->user_id = $data['to_user_id'];
+		}
+
+		$sms_history->save();
 	}
 
 	public function getSentCoolsms(){
