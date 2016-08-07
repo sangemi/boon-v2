@@ -346,19 +346,20 @@
 <h3>4. 소송인단의 모집</h3>
 
 	<p>가. 같은일이 반복되는 것은 '망각'때문입니다.<br>
-		1년 후 소송참여자를 제외한 누구도 이 사건을 기억하지 못할 예정입니다.
-		3년이 경과하면 시효의 완성으로 손해배상책임까지 사라집니다.</p>
+		1년 후 소송참여자를 제외한 누구도 이 사건을 기억하지 못할 예정이고,
+		3년이 경과하면 시효의 완성으로 금전배상책임까지 사라집니다. 소비자운동에 동참해주세요.</p>
 	<p>
 		주위에 본 페이지를 소개해주세요. <u>소개해주신 2분이 소송신청을 할 경우 <b>소송비용 1.1만원을 면제</b>해 드리겠습니다.</u>
 	</p>
 	<p>※ 회원가입을 하신 후 아래 링크를 클릭해서 주위에 알려주세요. 노고에 감사드립니다.
+	<p>
 		@if(Auth::check())
 			<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-			<p><a id="kakao-link-btn" href="javascript:;">
+			<a id="kakao-link-btn" href="javascript:;">
 				<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
 			</a>
-							</p>
+
 			<script type='text/javascript'>
 				//<![CDATA[
 				// // 사용할 앱의 JavaScript 키를 설정해 주세요.
@@ -369,21 +370,24 @@
 					label: '카카오링크 샘플에 오신 것을 환영합니다.',
 					image: {
 						src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
-						width: '300',
-						height: '200'
+						width: '200',
+						height: '150'
 					},
 					webButton: {
 						text: '카카오 디벨로퍼스',
 						url: 'https://dev.kakao.com/docs/js' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 					}
+
 				});
+				kakaoTalkLinkMessageBuilder.addWebLink("카카오 홈페이지로 이동")
+
 				//]]>
 			</script>
 		@else
 			로그인 하시면 개인별 공유링크가 보입니다.
 			일반추천 링크 : <p> http://wave.boonzer.com/wave/6</p>
 		@endif
-
+		</p>
 	</p>
 
 <h3>5. 필요한 자료제출</h3>
