@@ -10,7 +10,7 @@
 
 	<title>단체소송 :: 분쟁제로</title>
 	<meta name="description" content="집단소송" />
-	<meta name="keywords" content="민형사 집단소송, 지식재산권 분쟁, 내용증명, 원스탑 소송지원" />
+	<meta name="keywords" content="정보유출소송, 인터파크, 인터파크 집단소송, 민형사 집단소송, 지식재산권 분쟁, 내용증명, 원스탑 소송지원" />
 	<meta name="author" content="(주)모이어" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -139,7 +139,7 @@
 								<div class="col-sm-6" id="area메인문구">
 									<?php $rand = 0 ; //rand(0, 2);
 
-									$textSupertitle = array('#5 정수기 피해 지원'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
+									$textSupertitle = array('#6 인터파크 정보유출'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
 
 									?>
 										<h1 class="cover-text-lead wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="0s"><?=$textSupertitle[$rand]?></h1>
@@ -303,75 +303,96 @@
 					<div class="col-md-6 col-md-offset-3">
 						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">소송 안내</h2>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-							코웨이 정수기 중금속 니켈 검출에 대한 소비자 소송
+							인터파크 정보유출 사건에 대한 소비자 소송
 						</p>
 
 <h3>1. 신청자격의 안내</h3>
 
 						<ul>
-						<li>가. 한뼘얼음정수기(CHPI-380N 또는 CPI-380N) 사용자</li>
-						<li>나. 커피얼음정수기(CHPCI-430N) 사용자</li>
-						<li>다. 스파클링아이스정수기(CPSI-370N) 사용자</li>
+						<li>가. 인터파크 회원 중 정보유출 해당자</li>
+							<a href="http://www.interpark.com/malls/popup_apoligize.html" target="_blank">
+								확인방법 : 클릭
+							</a>
 						</ul>
 
-						<p></p>
+						<p>위 페이지 내용을 캡쳐해서 신청시 파일을 업로드해주세요.</p>
+
 <h3>2. 손해배상 소송에 대하여</h3>
 
-						<p>가. 안녕하십니까. 법무법인 예율입니다. 코웨이는 현재 자사 정수기의 니켈 성분 검출에 대하여 사죄의 뜻을 표하며, 사용기간 중 렌탈료의 환불 및 제품 무상 교환조치를 제시하였습니다.</p>
+		<p>가. 안녕하십니까. 법무법인 예율입니다. 은행권 정보유출 사건이 있은지 2년이 채 되지 않아 또다시 정보유출사건이 발생하였습니다.</p>
 
-						<p>나. 그러나 위 조치만으로 소비자들의 손해가 전보되지 아니함은 자명하다 할 것입니다. 특히 ① 계약자 본인 및 가족의 정신적 고통에 대한 위자료의 청구 및 ② 니켈 흡수와 상당인과관계가 있는 상해에 대한 치료비의 청구, ③ 장래의 정기 건강검진 비용에 대한 청구 등이 필요하다 할 것입니다.</p>
+		<p>나. (주)인터파크는 이번 정보유출사건을 해커조직의 범죄로 인한 것이라며 보호책임을 다 하였지만 불가피하게 발생한 사건으로 치부하고 있습니다.
+			사고에 대한 사과공지만 있을 뿐 개별적인 소비자들에 대한 피해보상은 예정된것이 없습니다.
+			이번 정보유출사건은 기업의 경각심을 일깨워주기 위한 소비자소송입니다.
 
-						<p>다. 소송기간은 최소 1년 6월, 최대 3년이 예상되오나, 소송 중 조정, 화해가 이루어지는 경우 위 기간은 단축될 수 있습니다.</p>
+		<p>다. 	지금까지 축척된 판례에 따르면 <u>승소시 받을 수 있는 금액은 약 10만원</u>입니다.
+			이 금액이 여러분들의 마음을 충분히 위자하지 못하는 것은 자명합니다.
+			하지만 시간과 비용을 써서라도 각자의 '권리'를 행사하려는 많은 분들이 있기에 이번에도 소비자운동은 계속될 것입니다.
+		</p>
 
-						<p>라. 법무법이 예율은 자동차 연비소송 등 다수의 집단소송 경험을 보유하고 있으며, 소송 초기부터 마무리 단계까지 소비자들의 권익을 위하여 최선의 노력을 다할 것을 약속드립니다.</p>
+		<p>라. 소송기간은 <u>최소 1년 6월, 최대 3년이 예상</u>되오나, 소송 중 조정, 화해가 이루어지는 경우 위 기간은 단축될 수 있습니다.</p>
 
-<h3>3. 소송 선택</h3>
+		<p>마. 법무법이 예율은
+						현대/폭스바겐 등 연비소송 (원고 5천명), 여수 바지락 소송 (원고 330명), 산후조리원 결핵 집단전염 사건 (230여명), 가네보 백반증 피해자 소송 등을 진행하고 있으며,
+						정보유출사건으로는 국민은행 등 은행권 정보유출사건/홈플러스 정보유출사건 등의 경험이 있습니다. (본 사건은 현재진행형)
+			이와 같은 다수의 집단소송 경험으로로,소송 초기부터 마무리 단계까지 소비자들의 권익을 위하여 최선의 노력을 다할 것을 약속드립니다.
 
-<p>가. 일반적으로 민사사건 변호사 선임비용은 1인당 500만원 상당이나, 단체소송의 경우 동일한 사실관계에 기인하여 청구를 하는 것이므로 상대적으로 저렴한 비용에 진행이 가능합니다.</p>
+<h3>3. 소송에 필요한 비용</h3>
 
-<p>나. 그러나 단체소송은 당사자가 다수이므로 소송경제, 변론의 원할 등을 위하여 개인의 특수성을 고려하지 못합니다. 예를 들어 위자료를 추가적으로 인정해 달라 라는 취지의 변론을 할 수 없습니다.</p>
+	<p>가. 일반적으로 민사사건 변호사 선임비용은 1인당 500만원 상당이나, 단체소송의 경우 동일한 사실관계에 기인하여 청구를 하는 것이므로 상대적으로 저렴한 비용에 진행이 가능합니다.</p>
 
-<p>다. 다만, 법무법인 예율 소송은 다년간 단체소송을 수행한 경험이 있어 이를 바탕으로 개인의 특성을 고려한 두 가지 소송 진행 방식을 제시합니다.</p>
+	<p>나. 이번 인터파크 소송은 <b><u>착수금 1만1천원</u></b>으로 하며, 법원 인지대, 송달료 등 기타 어떠한 금원도 내실 필요가 없습니다. (법인이 우선 지출 후 승소시 선충당방식)</p>
 
-<h4>소송진행 방식 선택 가능</h4>
+<h3>4. 소송인단의 모집</h3>
 
-<p><b>(1) A타입 - 위자료 및 검진비를 청구하는 경우</b></p>
-	<div style="padding-left:20px;">
-						<p>(가) 위자료 및 장래의 검진비는 일괄하여 청구가 가능합니다. 1인당 30만원 내지 100만원의 위자료를 청구할 계획이며, 검진비의 경우 소송 중 원고 일부의 신체감정 결과를 반영하여 장래의 정기 건강검진 비용을 추가적으로 청구할 예정입니다.</p>
+	<p>가. 같은일이 반복되는 것은 '망각'때문입니다.<br>
+		1년 후 소송참여자를 제외한 누구도 이 사건을 기억하지 못할 예정입니다.
+		3년이 경과하면 시효의 완성으로 손해배상책임까지 사라집니다.</p>
+	<p>
+		주위에 본 페이지를 소개해주세요. <u>소개해주신 2분이 소송신청을 할 경우 <b>소송비용 1.1만원을 면제</b>해 드리겠습니다.</u>
+	</p>
+	<p>※ 회원가입을 하신 후 아래 링크를 클릭해서 주위에 알려주세요. 노고에 감사드립니다.
+		@if(Auth::check())
+			<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-						<p>(나) 다만 이 경우 소비자의 개별적 사정을 반영하지는 못하고 평균적인 검진비용만을 청구할 수 있습니다. 현재 얼음정수기 사용으로 인한 건강상의 이상증세가 존재하지 아니하는 경우 A타입을 선택하시기 바랍니다.</p>
+			<p><a id="kakao-link-btn" href="javascript:;">
+				<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+			</a>
+							</p>
+			<script type='text/javascript'>
+				//<![CDATA[
+				// // 사용할 앱의 JavaScript 키를 설정해 주세요.
+				Kakao.init('fa482b7c7beafe607ce137cd563f02b5');
+				// // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+				Kakao.Link.createTalkLinkButton({
+					container: '#kakao-link-btn',
+					label: '카카오링크 샘플에 오신 것을 환영합니다.',
+					image: {
+						src: 'http://dn.api1.kage.kakao.co.kr/14/dn/btqaWmFftyx/tBbQPH764Maw2R6IBhXd6K/o.jpg',
+						width: '300',
+						height: '200'
+					},
+					webButton: {
+						text: '카카오 디벨로퍼스',
+						url: 'https://dev.kakao.com/docs/js' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+					}
+				});
+				//]]>
+			</script>
+		@else
+			로그인 하시면 개인별 공유링크가 보입니다.
+			일반추천 링크 : <p> http://wave.boonzer.com/wave/6</p>
+		@endif
 
-						<p>(다) 소송비용 : 인지대, 송달료를 포함하여 <b>11만원</b>.</p>
-	</div>
-<p><b>(2) B타입 – 위자료, 검진비에 치료비를 추가적으로 청구하는 경우</b></p>
-	<div style="padding-left:20px;">
+	</p>
 
-						<p>(가) 소비자들의 개별적인 신체 반응에 따라 기 발생한 진료비, 진단서를 분석 및 제출하며, 소송 중 신체감정을 통하여 현재 손해액과 향후 발생할 손해액을 구체적, 개별적으로 주장, 입증할 계획입니다.</p>
+<h3>5. 필요한 자료제출</h3>
 
-						<p>(나) 개인마다 증상이 상이하여 청구하는 소가(소송목적의 가액)도 이에 따라 결정될 것이나, 피해가 특별히 커서 500만원 이상을 청구하는 경우 추가적으로 발생하는 인지대, 송달료는 개인이 부담해주셔야 합니다. (최대 10만원)</p>
+	<p>1) 먼저 상단에서 회원가입을 하신 후, 정보유출사건을 선택하고 신청서를 작성해주세요.</p>
 
-						<p>(다) 특히 치료비 청구에 대하여 신체감정은 필수적 요소이므로, 소비자들이 직접 법원이 지정한 병원에 방문 및 진단을 받아야 하고, 이에 따르는 신체감정 비용은 개인이 부담하여야 합니다(감정비용 : 10만원 내지 100만원, 진료시간 : 2시간 내지 4시간).</p>
-
-						<p>(라) 현재 제조물 책임에 대한 다수의 판례는 소비자의 상해와 제조물의 결함 사이에 인과관계를 쉽게 인정하지 않고 있으나, 법무법인 예율은 본 코웨이 소비자 단체소송을 통하여 이에 대한 선례를 남기고자 하오니, B타입에 적극적인 참여를 부탁드립니다.</p>
-
-						<p>(바) 소송비용 : 인지대, 송달료를 포함하여 <b>44만원</b>.</p>
-	</div>
-
-<div style="border:1px solid gray;padding:10px;">
-	※ 가족 구성원이 모두 원고가 되는 경우, 할인하여 진행합니다. 하단 표를 확인해주세요.
-	(가족 구성원 중 일부만 A타입, 일부는 B타입으로 선택하시려면 아래 표가 적용되지 않습니다) 이때 주민등록상 주소지가 계약자 주소지와 동일한 분만 신청 가능합니다.
-</div>
-
-						<p></p>
-<h3>4. 유의사항</h3>
-
-						<p>1) 코웨이 측과 개별적으로 제품교환 및 렌탈료의 반환을 받아, 합의를 경료한(<u>추후 민형사상의 이의를 제기하지 아니하기로 하는 취지의 합의</u>) 소비자의 경우 소송의 참여가 불가함을 고지드립니다.</p>
-
-						<p>2) 현재 이후부터 코웨이가 제시하는 서류에 임의로 서명 및 날인하지 마시고, 제품 “교환”이 아닌 새로운 제품 “지급”을 요청하시기 바랍니다(추후 정수기 음용수에 대한 중금속 농도 수질감정이 필요합니다. 모든 원고의 제품을 검사하지는 않으나 저희가 요청하는 경우 도움을 주셔야 할 수도 있습니다).</p>
-
-						<p>3) 중금속 농도에 대한 수질감정, 임의집단에 대한 중금속 중독여부 검사는 본 소송의 승패에 핵심적인 요소이고, 감정비가 1,000만원 내지 5,000만원 상당이 소요될 것이나, 위 금액은 기 납부해주신 소송비용에서 충당할 예정입니다.</p>
-
-						<p>4) 집단소송의 특성상 원고가 충분히 모이지 아니하면 긴 시간 소송을 버티지 못합니다. 따라서 원고가 적정수 확보되지 아니할 경우 진행이 힘들 수도 있으니 적극적인 독려 부탁드립니다.</p>
+	<p>2) 신청이 완료되면 증거자료 업로드 기능이 보입니다. 그곳에서 <a href="http://www.interpark.com/malls/popup_apoligize.html" target="_blank">
+			인터파크 정보유출확인
+		</a> 이 페이지의 결과화면을 캡쳐해서 업로드해주세요.</p>
 
 					</div>
 				</div>
@@ -385,7 +406,7 @@
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">비용안내</h2>
-						<p>VAT별도</p>
+						<p>VAT포함</p>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
 
 						</p>
@@ -398,44 +419,13 @@
 						<div id="div비용표" style="display:block;">
 							<table class="table text-center">
 								<tr>
-									<th></th>
-									<th class="text-center" style="color:royalblue;">1명</th>
-									<th class="text-center"><nobr>2명</nobr></th>
-									<th class="text-center">3명</th>
-									<th class="text-center">4명</th>
-									<th class="text-center">5명 이상</th>
+									<th class="text-center" style="color:royalblue;">1인당</th>
 								</tr>
 								<tr>
-									<td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
-										<nobr>A타입</nobr>
-										</td>
-									<td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
-									<td>20<small style="font-size:0.7em;">만</small></td>
-									<td>29<small style="font-size:0.7em;">만</small></td>
-									<td>37<small style="font-size:0.7em;">만</small></td>
-									<td>+8<small style="font-size:0.7em;">만씩추가</small></td>
+									<td style="color:royalblue;">11,000<small style="font-size:0.7em;">원</small></td>
 								</tr>
 								<tr>
-									<td></td>
 									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
-								</tr>
-								<tr>
-									<td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
-										B타입
-										</td>
-									<td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
-									<td>80<small style="font-size:0.7em;">만</small></td>
-									<td>116<small style="font-size:0.7em;">만</small></td>
-									<td>148<small style="font-size:0.7em;">만</small></td>
-									<td>+32<small style="font-size:0.7em;">만씩추가</small></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 일부 포함 </small></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td colspan="6"><small style="font-size:0.7em;">※ 복수신청은 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>에 가능합니다</small></td>
 								</tr>
 
 							</table>

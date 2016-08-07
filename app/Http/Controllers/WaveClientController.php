@@ -51,6 +51,8 @@ class WaveClientController extends Controller {
 		$waveClient = new WaveClient(); /*빈 모델. 첨부터 직접 작성*/
 		$data = Request::all();
 		if(!count($data)){
+			$data['suit_id'] = 5; // 코웨이 중금속 얼음정수기
+			$data['suit_id'] = 6; // 인터파크 정보유출
 			$data['suit_id'] = 1; // 기본 소송(코웨이)
 		}
 		if(Auth::check()){

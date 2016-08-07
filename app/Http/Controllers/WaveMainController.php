@@ -14,11 +14,14 @@ use Illuminate\Support\Facades\Redirect;
 
 class WaveMainController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
 
-
-        return view('boon.site.wave');
+        if(isset($request->suit_number)){
+            return view('boon.site.wave' . $request->suit_number);
+        }else{
+            return view('boon.site.wave');
+        }
 
         /*로그인 상태면 바로 관리화면으로!*/
         if(Auth::user()){
@@ -82,13 +85,16 @@ class WaveMainController extends Controller
     public function dashboard()
     {
         if(Auth::check()) {
-            if (Auth::user()->id == 1 || Auth::user()->id == 294) { // SK 또는 이준호
+            $current_id = Auth::user()->id;
+            if ($current_id == 1 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영
                 $wave_client = WaveClient::all();
                 return view('boon.wave.dashboard', compact('wave_client'));
             } else {
-                return "접속오류 416";
+                return "권한없음. 접속오류";
             }
-        }else redirect()->to('/auth/login');
+        }else{
+            return redirect()->to('/auth/login');
+        }
     }
 
     public function mypage()

@@ -25,10 +25,10 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::group(array('domain' => 'wave.boonzero.com'), function() { //{account}.
         Route::get('/','WaveMainController@index');
     });
-    Route::get('/wave', 'WaveMainController@index');
     Route::get('/wave/mypage', 'WaveMainController@mypage');
     Route::get('/wave/admin', 'WaveMainController@dashboard');
     Route::post('/wave/admin/tasks/{task_name?}', 'WaveMainController@tasks'); //change-payment
+    Route::get('/wave/{suit_number?}', 'WaveMainController@index');
 
     Route::resource('wave/client', 'WaveClientController');
     Route::resource('wave/file', 'WaveFileController');

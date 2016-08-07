@@ -243,13 +243,15 @@ echo "ddddddd다름";
                 <h4>공지</h4>
                 <ul style="text-align: left;margin-left:24px;">
                     <li>자료를 업로드해주세요. <br>왼쪽 '증거제출'버튼 클릭</li>
-                    <li>미납분들은 8.7.까지 비용입금을 완료바랍니다.</li>
+                    <li>8.12.까지 입금기준으로 소송인단 (가)확정합니다.</li>
+                    <li>모발검사 등 자료는 늦어도 9월중순까지 업로드 바랍니다.</li>
                 </ul>
                     <h4>진행상황</h4>
                     <ul style="text-align: left;margin-left:10px;list-style-type:none;">
                         <li>7.25. 접수시작</li>
                         <li>8.1. 접수내용 수정이 가능합니다.</li>
                         <li>8.3. 파일 업로드가 가능합니다.</li>
+                        <li>8.15. 소송인단 확정(예정)</li>
                         <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
                     </ul>
 

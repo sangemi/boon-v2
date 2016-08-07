@@ -10,7 +10,7 @@
 
 	<title>단체소송 :: 분쟁제로</title>
 	<meta name="description" content="집단소송" />
-	<meta name="keywords" content="민형사 집단소송, 지식재산권 분쟁, 내용증명, 원스탑 소송지원" />
+	<meta name="keywords" content="코웨이, 코웨이소송, 중금속집단소송, 민형사 집단소송, 지식재산권 분쟁, 내용증명, 원스탑 소송지원" />
 	<meta name="author" content="(주)모이어" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
