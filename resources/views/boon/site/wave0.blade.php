@@ -139,7 +139,7 @@
 								<div class="col-sm-6" id="area메인문구">
 									<?php $rand = 0 ; //rand(0, 2);
 
-									$textSupertitle = array('#0 단체소송의 시작'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
+									$textSupertitle = array('소비자소송의 시작'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
 
 									?>
 										<h1 class="cover-text-lead wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="0s"><?=$textSupertitle[$rand]?></h1>
