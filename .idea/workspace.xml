@@ -1,30 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="3.1042&#10;&#10;wave.bonzero.com 카톡링크 추가&#10;&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/images/paper_jinsul.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Recommend.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_08_07_195014_create_recommend_user_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_5.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_6.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write_5.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write_6.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write_select.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/file_write_5.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/file_write_6.blade.php" />
+    <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SmsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SmsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_08_03_181927_change_wave_files_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_08_03_181927_change_wave_files_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/wave5.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/wave5.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_edit_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/client_write_1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/boon/site/wave.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/wave0.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,23 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WaveClientController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.714285">
-              <caret line="282" column="72" selection-start-line="282" selection-start-column="72" selection-end-line="282" selection-end-column="72" />
-              <folding>
-                <element signature="e#39#58#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-2.7142856">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum/src/Http/Controllers/API/PostController.php">
+      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.392857">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.52595156">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file_write_6.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="file_write_6.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/file_write_6.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5755479">
-              <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.357142">
+              <caret line="157" column="40" selection-start-line="157" selection-start-column="40" selection-end-line="157" selection-end-column="40" />
               <folding>
                 <element signature="e#7227#7380#0#HTML" expanded="true" />
                 <marker date="1470664226597" expanded="true" signature="2563:2712" placeholder="..." />
@@ -194,7 +171,6 @@
         <option value="$PROJECT_DIR$/app/WaveSuit.php" />
         <option value="$PROJECT_DIR$/app/WaveStatus.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_22_151138_creat_wave_suit_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_22_193638_creat_wave_file_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
@@ -239,6 +215,7 @@
         <option value="$PROJECT_DIR$/resources/views/boon/wave/client_edit_6.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/file_write_6.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MainController.php" />
       </list>
     </option>
   </component>
@@ -713,12 +690,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00067" summary="3.0014&#10;&#10;wave.bonzero.com 거의완성&#10;&#10;&#10;">
-      <created>1469239159705</created>
-      <option name="number" value="00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1469239159705</updated>
-    </task>
     <task id="LOCAL-00068" summary="3.0014&#10;&#10;wave.bonzero.com 거의완성&#10;&#10;&#10;">
       <created>1469239240684</created>
       <option name="number" value="00068" />
@@ -1007,7 +978,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470563784837</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="3.2&#10;&#10;wave.bonzero.com 다중 소송 접수 + 카톡링크 추가&#10;&#10;&#10;">
+      <created>1470664313644</created>
+      <option name="number" value="00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1470664313645</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1059,7 +1036,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="1.07&#10;&#10;status table - auto increse 추가&#10;&#10;&#10;" />
     <MESSAGE value="1.08&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
     <MESSAGE value="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
     <MESSAGE value="2.000&#10;&#10;ip.bonzero.com 생성&#10;&#10;&#10;" />
@@ -1084,7 +1060,8 @@
     <MESSAGE value="3.10401&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 완료)&#10;&#10;&#10;" />
     <MESSAGE value="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;" />
     <MESSAGE value="3.1042&#10;&#10;wave.bonzero.com 카톡링크 추가&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1042&#10;&#10;wave.bonzero.com 카톡링크 추가&#10;&#10;&#10;" />
+    <MESSAGE value="3.2&#10;&#10;wave.bonzero.com 다중 소송 접수 + 카톡링크 추가&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.2&#10;&#10;wave.bonzero.com 다중 소송 접수 + 카톡링크 추가&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1354,24 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.285715">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.285715">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding>
-            <element signature="e#6#97#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave5.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.035714">
@@ -1565,6 +1524,19 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/file_write_6.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.357142">
+          <caret line="157" column="40" selection-start-line="157" selection-start-column="40" selection-end-line="157" selection-end-column="40" />
+          <folding>
+            <element signature="e#7227#7380#0#HTML" expanded="true" />
+            <marker date="1470664226597" expanded="true" signature="2563:2712" placeholder="..." />
+            <marker date="1470664226597" expanded="true" signature="2666:2678" placeholder="..." />
+            <marker date="1470664226597" expanded="true" signature="2689:2710" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveFileController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.321428">
@@ -1573,16 +1545,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/file_write_6.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5755479">
-          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding>
-            <element signature="e#7227#7380#0#HTML" expanded="true" />
-            <marker date="1470664226597" expanded="true" signature="2563:2712" placeholder="..." />
-            <marker date="1470664226597" expanded="true" signature="2666:2678" placeholder="..." />
-            <marker date="1470664226597" expanded="true" signature="2689:2710" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-2.7142856">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52595156">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
