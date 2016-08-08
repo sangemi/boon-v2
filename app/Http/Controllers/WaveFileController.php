@@ -119,7 +119,10 @@ class WaveFileController extends Controller {
 				$web_path = '/upload/wave/suit/'.$client['suit_id'];
 				$server_path = public_path($web_path);
 
-				$real_filename = $client['id'].'-'.date("Ymd-His").'-'.$file->getClientOriginalName();
+				$real_filename = $client['id'].'-'.$data['title_no'].'-'.date("Ymd-His") ;//$file->getClientOriginalName();
+				// .$client['name'].'-'       // 한글파일명이 잘 안되네............ 나중 다시 해보자.
+
+
 				$task->uploaded_filename= $web_path."/".$real_filename;
 
 				$task->file_size = $file->getSize();

@@ -39,8 +39,8 @@ $(document).ready(function(){
 
 {{--세부페이지 네비바--}}
 <ol class="breadcrumb">
-    {{--<li><a href="{{ URL::to('ccmail') }}">
-            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>--}}
+    <li><a href="{{ URL::to('wave/mypage') }}">
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 상황실</a></li>
 
     <li class="active">신청서 수정</li>
 
@@ -71,7 +71,6 @@ $(document).ready(function(){
         <div class="panel panel-default divCcMailBox">
 
             <div class="panel-heading">
-
                 <b>
                     신청서 수정하기
                 </b>
@@ -126,7 +125,7 @@ $(document).ready(function(){
                     <div class="col-sm-10 col-lg-10">
                         <div class="form-inline" style="margin-bottom:4px;">
                             <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="form-control" />
-                            <input type="text" name="postcode" id="postcode" placeholder="우편번호" class="form-control" />
+                            {!! BootForm::text( "" , 'postcode')->placeholder("우편번호")->id('postcode')  !!}
                         </div>
 
                         {!! BootForm::text( "도로명" , 'addr')->placeholder("법원서류는 도로명으로 입력해야합니다.")  !!}

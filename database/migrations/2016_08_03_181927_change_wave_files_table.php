@@ -12,11 +12,10 @@ class ChangeWaveFilesTable extends Migration
      */
     public function up()
     {
-        Schema::table('wave_files', function ($table) {
-            $table->integer('title_no', 2)->after('file_size');
+        Schema::table('wave_files', function (Blueprint $table) {
+            $table->integer('title_no')->after('file_size');
             $table->string('title')->after('file_size');
-
-        });
+        }); //->after('file_size')
     }
 
     /**
@@ -26,7 +25,8 @@ class ChangeWaveFilesTable extends Migration
      */
     public function down()
     {
-        Schema::table('wave_files', function ($table) {
+        Schema::table('wave_files', function (Blueprint $table) {
+            $table->dropColumn('title_no');
             $table->dropColumn('title');
         });
     }

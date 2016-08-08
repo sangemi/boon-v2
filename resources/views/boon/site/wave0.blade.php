@@ -139,7 +139,7 @@
 								<div class="col-sm-6" id="area메인문구">
 									<?php $rand = 0 ; //rand(0, 2);
 
-									$textSupertitle = array('#5 정수기 피해 지원'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
+									$textSupertitle = array('#0 단체소송의 시작'); //분쟁을 관리하는 가장 쉬운 방법  '분쟁에 대처하는 엘레강스한 방법',
 
 									?>
 										<h1 class="cover-text-lead wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="0s"><?=$textSupertitle[$rand]?></h1>
@@ -147,9 +147,11 @@
 										다수의 경험으로 집단소송을 관리해드립니다. <br>정기적 진행보고. <big>차별화된 소송지원</big>을 경험하세요.
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
-										<a href="http://cafe.naver.com/hogu1004" class="btn btn-primary" target="_blank">카페채널</a>
-										<a href="#소송안내" class="btn btn-primary btn-outline btn-sm">안내</a>
-										<a href="#소송비용" class="btn btn-primary btn-outline btn-sm">비용</a>
+										<a href="#소송안내" class="btn btn-primary  btn-outline">안내</a>
+										<a href="#소비자권리단원" class="btn btn-primary btn-outline btn-sm">권리지킴이 모집</a>
+										<br>
+										<a href="/wave/5" class="btn btn-primary btn-sm" target="">#6 코웨이</a>
+										<a href="/wave/6" class="btn btn-primary btn-sm" target="">#7 인터파크</a>
 										{{--<a href="tel:022135525" class="btn btn-primary btn-outline">방문요청</a>--}}
 										{{--/ip/askvisit--}}
 										&nbsp;&nbsp;&nbsp;
@@ -264,7 +266,14 @@
 											<div class="alert alert-info"><B>Tip.</B> {{ Session::get('tip') }}</div>
 										@endif
 
-										<a href="/wave/mypage" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
+										<div class="well text-center" style="">
+											접수할 소송을 선택해주세요.<br><br>
+											<p>
+												<a href="/wave/5" class="btn btn-link" target="">#6 코웨이 중금속 사건</a><br>
+												<a href="/wave/6" class="btn btn-link" target="">#7 인터파크 정보유출 사건</a>
+
+											</p>
+										</div>
 									</div>
 
 								@endif
@@ -301,77 +310,47 @@
 			<div class="container">
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">소송 안내</h2>
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">단체소송 안내</h2>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-							코웨이 정수기 중금속 니켈 검출에 대한 소비자 소송
+
 						</p>
 
-<h3>1. 신청자격의 안내</h3>
+<h3>1. 인사말</h3>
 
-						<ul>
+						<p>가. 안녕하십니까. 법무법인 예율입니다. 예율 단체소송팀은 본 사이트를 통하여 의뢰인분들과 적극 소통하고 있습니다.</p>
+						<p>나. 법무법이 예율은
+							현대/폭스바겐 등 연비소송 (원고 5천명), 여수 바지락 소송 (원고 330명), 산후조리원 결핵 집단전염 사건 (230여명), 가네보 백반증 피해자 소송 등을 진행하고 있으며,
+							정보유출사건으로는 국민은행 등 은행권 정보유출사건/홈플러스 정보유출사건 등의 경험이 있습니다.
+							이와 같은 경험으로, 소송 초기부터 마무리 단계까지 소비자들의 권익을 위하여 최선의 노력을 다할 것을 약속드립니다.
+						{{--<ul>
 						<li>가. 한뼘얼음정수기(CHPI-380N 또는 CPI-380N) 사용자</li>
 						<li>나. 커피얼음정수기(CHPCI-430N) 사용자</li>
 						<li>다. 스파클링아이스정수기(CPSI-370N) 사용자</li>
-						</ul>
+						</ul>--}}
 
 						<p></p>
-<h3>2. 손해배상 소송에 대하여</h3>
+<h3>2. 단체소송의 이해</h3>
+	<p>가. 단체소송은 보통 1심에서만 1년 6월, 최대 3년이 소요되는 경우가 많습니다. 다만 상대가 쟁점을 크게 다투지 않는 경우에는 조정/화해결정을 통해 기간이 단축될 수 있습니다.</p>
 
-						<p>가. 안녕하십니까. 법무법인 예율입니다. 코웨이는 현재 자사 정수기의 니켈 성분 검출에 대하여 사죄의 뜻을 표하며, 사용기간 중 렌탈료의 환불 및 제품 무상 교환조치를 제시하였습니다.</p>
+	<p>나. 일반적으로 민사사건 변호사 선임비용은 1사건당 500만원 상당이나,
+		단체소송의 경우 동일한 사실관계에 기인하여 청구를 하는 것이므로 상대적으로 저렴한 비용에 진행이 가능합니다.</p>
 
-						<p>나. 그러나 위 조치만으로 소비자들의 손해가 전보되지 아니함은 자명하다 할 것입니다. 특히 ① 계약자 본인 및 가족의 정신적 고통에 대한 위자료의 청구 및 ② 니켈 흡수와 상당인과관계가 있는 상해에 대한 치료비의 청구, ③ 장래의 정기 건강검진 비용에 대한 청구 등이 필요하다 할 것입니다.</p>
+	<p>다. 그러나 단체소송은 당사자가 수백~수천명이므로 소송경제, 변론의 원할 등을 위하여 개인의 특수성을 고려하지 못합니다. 예를 들어 원고108번은 위자료를 추가적으로 인정해 달라 라는 취지의 변론을 할 수 없습니다.</p>
 
-						<p>다. 소송기간은 최소 1년 6월, 최대 3년이 예상되오나, 소송 중 조정, 화해가 이루어지는 경우 위 기간은 단축될 수 있습니다.</p>
+	<p>라라 다만, 법무법인 예율 소송은 다년간 단체소송을 수행한 경험을 바탕으로, 소송의 성질에 따라 개인의 특성을 고려한 두 가지 소송 진행 방식을 제안드리기도 합니다.</p>
 
-						<p>라. 법무법이 예율은 자동차 연비소송 등 다수의 집단소송 경험을 보유하고 있으며, 소송 초기부터 마무리 단계까지 소비자들의 권익을 위하여 최선의 노력을 다할 것을 약속드립니다.</p>
+<h3>3. 유의사항</h3>
 
-<h3>3. 소송 선택</h3>
+	<p>1) 집단소송의 특성상 원고가 충분히 모이지 아니하면 긴 시간 소송을 버티지 못합니다.
+		따라서 원고가 적정수 확보되지 아니할 경우 진행이 힘들 수도 있습니다.
+		<u>각 소송인단분들은 주위에 본 페이지를 소개해 주십시오.</u>
+		윤리를 망각한 기업에 대한 유일한 해결책은 소비자들의 적극적인 노력밖에 없습니다.
+		</p>
 
-<p>가. 일반적으로 민사사건 변호사 선임비용은 1인당 500만원 상당이나, 단체소송의 경우 동일한 사실관계에 기인하여 청구를 하는 것이므로 상대적으로 저렴한 비용에 진행이 가능합니다.</p>
-
-<p>나. 그러나 단체소송은 당사자가 다수이므로 소송경제, 변론의 원할 등을 위하여 개인의 특수성을 고려하지 못합니다. 예를 들어 위자료를 추가적으로 인정해 달라 라는 취지의 변론을 할 수 없습니다.</p>
-
-<p>다. 다만, 법무법인 예율 소송은 다년간 단체소송을 수행한 경험이 있어 이를 바탕으로 개인의 특성을 고려한 두 가지 소송 진행 방식을 제시합니다.</p>
-
-<h4>소송진행 방식 선택 가능</h4>
-
-<p><b>(1) A타입 - 위자료 및 검진비를 청구하는 경우</b></p>
-	<div style="padding-left:20px;">
-						<p>(가) 위자료 및 장래의 검진비는 일괄하여 청구가 가능합니다. 1인당 30만원 내지 100만원의 위자료를 청구할 계획이며, 검진비의 경우 소송 중 원고 일부의 신체감정 결과를 반영하여 장래의 정기 건강검진 비용을 추가적으로 청구할 예정입니다.</p>
-
-						<p>(나) 다만 이 경우 소비자의 개별적 사정을 반영하지는 못하고 평균적인 검진비용만을 청구할 수 있습니다. 현재 얼음정수기 사용으로 인한 건강상의 이상증세가 존재하지 아니하는 경우 A타입을 선택하시기 바랍니다.</p>
-
-						<p>(다) 소송비용 : 인지대, 송달료를 포함하여 <b>11만원</b>.</p>
-	</div>
-<p><b>(2) B타입 – 위자료, 검진비에 치료비를 추가적으로 청구하는 경우</b></p>
-	<div style="padding-left:20px;">
-
-						<p>(가) 소비자들의 개별적인 신체 반응에 따라 기 발생한 진료비, 진단서를 분석 및 제출하며, 소송 중 신체감정을 통하여 현재 손해액과 향후 발생할 손해액을 구체적, 개별적으로 주장, 입증할 계획입니다.</p>
-
-						<p>(나) 개인마다 증상이 상이하여 청구하는 소가(소송목적의 가액)도 이에 따라 결정될 것이나, 피해가 특별히 커서 500만원 이상을 청구하는 경우 추가적으로 발생하는 인지대, 송달료는 개인이 부담해주셔야 합니다. (최대 10만원)</p>
-
-						<p>(다) 특히 치료비 청구에 대하여 신체감정은 필수적 요소이므로, 소비자들이 직접 법원이 지정한 병원에 방문 및 진단을 받아야 하고, 이에 따르는 신체감정 비용은 개인이 부담하여야 합니다(감정비용 : 10만원 내지 100만원, 진료시간 : 2시간 내지 4시간).</p>
-
-						<p>(라) 현재 제조물 책임에 대한 다수의 판례는 소비자의 상해와 제조물의 결함 사이에 인과관계를 쉽게 인정하지 않고 있으나, 법무법인 예율은 본 코웨이 소비자 단체소송을 통하여 이에 대한 선례를 남기고자 하오니, B타입에 적극적인 참여를 부탁드립니다.</p>
-
-						<p>(바) 소송비용 : 인지대, 송달료를 포함하여 <b>44만원</b>.</p>
-	</div>
-
-<div style="border:1px solid gray;padding:10px;">
-	※ 가족 구성원이 모두 원고가 되는 경우, 할인하여 진행합니다. 하단 표를 확인해주세요.
-	(가족 구성원 중 일부만 A타입, 일부는 B타입으로 선택하시려면 아래 표가 적용되지 않습니다) 이때 주민등록상 주소지가 계약자 주소지와 동일한 분만 신청 가능합니다.
-</div>
-
-						<p></p>
-<h3>4. 유의사항</h3>
-
-						<p>1) 코웨이 측과 개별적으로 제품교환 및 렌탈료의 반환을 받아, 합의를 경료한(<u>추후 민형사상의 이의를 제기하지 아니하기로 하는 취지의 합의</u>) 소비자의 경우 소송의 참여가 불가함을 고지드립니다.</p>
-
-						<p>2) 현재 이후부터 코웨이가 제시하는 서류에 임의로 서명 및 날인하지 마시고, 제품 “교환”이 아닌 새로운 제품 “지급”을 요청하시기 바랍니다(추후 정수기 음용수에 대한 중금속 농도 수질감정이 필요합니다. 모든 원고의 제품을 검사하지는 않으나 저희가 요청하는 경우 도움을 주셔야 할 수도 있습니다).</p>
-
-						<p>3) 중금속 농도에 대한 수질감정, 임의집단에 대한 중금속 중독여부 검사는 본 소송의 승패에 핵심적인 요소이고, 감정비가 1,000만원 내지 5,000만원 상당이 소요될 것이나, 위 금액은 기 납부해주신 소송비용에서 충당할 예정입니다.</p>
-
-						<p>4) 집단소송의 특성상 원고가 충분히 모이지 아니하면 긴 시간 소송을 버티지 못합니다. 따라서 원고가 적정수 확보되지 아니할 경우 진행이 힘들 수도 있으니 적극적인 독려 부탁드립니다.</p>
+	<p>2) 믿음 - 법무법인은 최소 1년 이상 단체소송을 이끌어 나가가야 합니다.
+		개인별 궁금한 사정이 많으실 것입니다. 소송 진행 중 의뢰인분들의 전화응대에 본업인 소송진행에 힘이드는 경우가 많이 있습니다.
+		<u>필요하실 경우 <a href="tel:02-2135-5251">전화</a>를 주시면 담당자들이 최대한 성실히 답변해 드리오나,
+		부득이 한분 한분 모든 사정을 살펴드리지는 못하는 점 깊은 양해 부탁드립니다.</u> </p>
 
 					</div>
 				</div>
@@ -379,66 +358,67 @@
 		</div>
 
 
-		<a  name="소송비용"></a>
+		<a  name="소비자권리단원"></a>
 		<div class="fh5co-project-style-2">
 			<div class="container">
 				<div class="row p-b">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">비용안내</h2>
-						<p>VAT별도</p>
+					<div class="col-md-6 col-md-offset-3 ">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">소비자권리 지킴이 모집</h2>
+						<p></p>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
 
 						</p>
-						{{--<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-							<a href="javascript:$('#div비용표').toggle();" class="btn btn-success font-size-up">비용표 보기</a>
-						</p>--}}
-						{{--<div style="cursor:pointer;clear:both;margin-top:20px;" class="text-center" onclick="">
-							&nbsp; <br/>상세 비교표 ▼
-						</div>--}}
-						<div id="div비용표" style="display:block;">
-							<table class="table text-center">
-								<tr>
-									<th></th>
-									<th class="text-center" style="color:royalblue;">1명</th>
-									<th class="text-center"><nobr>2명</nobr></th>
-									<th class="text-center">3명</th>
-									<th class="text-center">4명</th>
-									<th class="text-center">5명 이상</th>
-								</tr>
-								<tr>
-									<td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
-										<nobr>A타입</nobr>
-										</td>
-									<td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
-									<td>20<small style="font-size:0.7em;">만</small></td>
-									<td>29<small style="font-size:0.7em;">만</small></td>
-									<td>37<small style="font-size:0.7em;">만</small></td>
-									<td>+8<small style="font-size:0.7em;">만씩추가</small></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
-								</tr>
-								<tr>
-									<td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
-										B타입
-										</td>
-									<td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
-									<td>80<small style="font-size:0.7em;">만</small></td>
-									<td>116<small style="font-size:0.7em;">만</small></td>
-									<td>148<small style="font-size:0.7em;">만</small></td>
-									<td>+32<small style="font-size:0.7em;">만씩추가</small></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 일부 포함 </small></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td colspan="6"><small style="font-size:0.7em;">※ 복수신청은 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>에 가능합니다</small></td>
-								</tr>
+						<div id="" style="display:block;">
+							<p>가. 미국식 집단소송제가 생기지 않는한, 국내에서 소비자는 기업에게 갑일 수 없습니다.
+								현재 발생한 사건들은 1년 후 소송참여자를 제외하고는 거의 기억하지 못할 예정입니다.
+								이후 2년이 더 경과하면 시효의 완성으로 기업은 금전배상책임까지 없게됩니다.
+							<p>나. 현재 상황에서 소비자권리를 보호받는 방법은 단체소송이 가장 현실적입니다.
+								단체소송의 법리는 일반소송과 크게 다르지는 않습니다.
+								다만 수백~수천 소송인단을 이끌고 수년을 버티기가 힘들어 어느 로펌도 쉽게 시작하지 않을 뿐입니다.
+								<b><u>힘을 모아 주세요.</u></b> 본 시스템 하에서 예율이 단체소송을 적극 지원해보겠습니다.
 
-							</table>
+							</p>
+							<p>
+								아래 링크를 통해 다른 분이 소송에 참여시,<br>
+								기록해두었다가 저희가 드릴 수 있는 각종 서비스를 제공드립니다.<br>
+								<small>로그인 후 마이페이지에서 추천이력을 확인할 수 있습니다.</small>
+
+								@if(Auth::check())
+									<div class="well">개인별 추천링크 <small>/이력확인가능</small><br>
+										http://boonzero.com/wave/0/recom/<?=Auth::user()->id?>
+									</div>
+
+									<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+									<a id="kakao-link-btn" href="javascript:;">
+										<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+									</a>
+
+									<script type='text/javascript'>
+										//<![CDATA[
+										Kakao.init('fa482b7c7beafe607ce137cd563f02b5'); // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+										Kakao.Link.createTalkLinkButton({ // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+											container: '#kakao-link-btn',
+											label: '단체소송 소개',
+											image: {
+												src: 'http://wave.boonzero.com/img/wave/wave-main.png',
+												width: '300',
+												height: '184'
+											},
+											webButton: {
+												text: '소비자운동 참여',
+												url: 'http://wave.boonzero.com/wave/0/recom/' + '<?=Auth::user()->id?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+											}
+										});
+										//]]>
+									</script>
+								@else
+									<div class="well">로그인 하시면 개인별 추천링크를 사용하실 수 있습니다.<br /><br />
+									일반추천 링크 : <p> http://wave.boonzero.com/wave</p>
+									</div>
+								@endif
+							</p>
+
+
 						</div>
 					</div>
 				</div>

@@ -80,6 +80,7 @@ $(document).ready(function(){
             {!! BootForm::openHorizontal(['sm' => [2, 10],'lg' => [2, 10]])->id('form-단체소송')
                 ->action('/wave/client') !!}
             {!! BootForm::bind($waveClient) !!}
+            {!! BootForm::hidden( "suit_id" )->value( $data['suit_id'] )  !!}
 
             <style>
                 .choice-product {width:154px;height:160px;float:left;border-radius:10px;margin:6px;border:1px solid gray;
@@ -279,7 +280,7 @@ $(document).ready(function(){
 
                         <div class="big b c">사건위임계약서(민사)</div>
 
-                        <div class="big1 b">1. 위임인(갑) : <span id="plain_name_in_contract"></span></div>
+                        <div class="big1 b">1. 위임인(갑) : <span id="plain_name_in_contract">신청인</span></div>
 
 
                         <div class="big1 b">2. 수임인(을) : 법무법인 예율 대표변호사 김웅, 김상겸</div>

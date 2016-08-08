@@ -264,7 +264,7 @@
 											<div class="alert alert-info"><B>Tip.</B> {{ Session::get('tip') }}</div>
 										@endif
 
-										<a href="/wave/mypage" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
+										<a href="/wave/mypage/<?=$request->suit_number?>" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
 									</div>
 
 								@endif

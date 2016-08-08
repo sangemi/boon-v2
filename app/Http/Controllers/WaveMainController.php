@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Lib\skHelper;
+use App\Recommend;
 use App\WaveClient;
 use Illuminate\Http\Request;
 
@@ -16,11 +17,10 @@ class WaveMainController extends Controller
 {
     public function index(Request $request)
     {
-
         if(isset($request->suit_number)){
-            return view('boon.site.wave' . $request->suit_number);
+            return view('boon.site.wave' . $request->suit_number, compact('request'));
         }else{
-            return view('boon.site.wave');
+            return view('boon.site.wave0', compact('request'));
         }
 
         /*로그인 상태면 바로 관리화면으로!*/
@@ -35,12 +35,33 @@ class WaveMainController extends Controller
             return view('boon.wave.mypage', compact('wave_client'));
 
         }else{
-            return view('boon.site.wave');
+            return view('boon.site.wave0');
         }
 
 
     }
+    /*추천인 링크 Route::get('/wave/{suit_number}/recom/{recommend_id}', 'WaveMainController@recommend');*/
+    public function recommend(Request $request)
+    {
+        self::recordRecommend($request);
+        if (isset($request->suit_number)) { /*무조건여기*/
+            return view('boon.site.wave' . $request->suit_number, compact('request'));
+        } else {
+            return view('boon.site.wave0');
+        }
+    }
+    /*추천링크 DB 기록*/
+    private function recordRecommend($data){
 
+        $recommend_data = new Recommend();
+        $recommend_data->category = 'wave';
+        $recommend_data->cate_number = $data->suit_number;
+        $recommend_data->recommending_id = $data->recommending_id; // 추천한 사람 id
+        $recommend_data->recommended_id = 0; // 추천받아 가입한 사람
+        $recommend_data->ip_addr = $_SERVER['REMOTE_ADDR'];
+
+        $recommend_data->save();
+    }
 
     public function tasks(Request $request, $task_name) // ajax 요청들.. // $row_id : client_id
     {
@@ -86,7 +107,7 @@ class WaveMainController extends Controller
     {
         if(Auth::check()) {
             $current_id = Auth::user()->id;
-            if ($current_id == 1 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영
+            if ($current_id == 1 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
                 $wave_client = WaveClient::all();
                 return view('boon.wave.dashboard', compact('wave_client'));
             } else {
@@ -97,8 +118,12 @@ class WaveMainController extends Controller
         }
     }
 
-    public function mypage()
+    public function mypage(Request $request)
     {
+        if ( !Auth::check() ) {
+            return redirect()->to('/auth/login');
+        }
+
         //$wave_client = WaveClient::where('user_id', Auth::id());
         $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
         $suit_title = Array();
@@ -120,16 +145,24 @@ class WaveMainController extends Controller
                //echo (string) $clien->suit_id . " - ". $name;*/
         }
 //dd($my_status);
-        // 접수된게 있으면 메인 관리페이지,
-        if($wave_client->count())
-            return view('boon.wave.mypage', compact('wave_client', 'my_suit', 'my_status'));
+        /*그냥 /wave/mypage 이면 메인 상황실로.
+        /wave/mypage/suit_id 이면 suit_id 사건에 접수된거 체크하고, 있으면 상황실로/없으면 신청페이지로*/
 
-        // 없으면 바로 소송접수!
-        else
-            return redirect('wave/client/create'); //Route::resource('wave/client', 'WaveClientController');
+        if(!isset($request->suit_id)){
+            return view('boon.wave.mypage', compact('wave_client', 'my_suit', 'my_status'));
+        }else if($wave_client->count()) {
+            foreach ($wave_client as $wclient) {
+                echo $wclient['suit_id'];
+                if ($wclient['suit_id'] == $request->suit_id) {
+                    return view('boon.wave.mypage', compact('wave_client', 'my_suit', 'my_status'));
+                }
+            }
+        }
+        // 없으면 바로 소송접수! / 접수된게 있지만 다른소송이면 소송접수
+        return redirect('wave/client/create?suit_id='.$request->suit_id); //Route::resource('wave/client', 'WaveClientController');
     }
     public function wave() //??
     {
-        return view('boon.site.wave');
+        return view('boon.site.wave0');
     }
 }

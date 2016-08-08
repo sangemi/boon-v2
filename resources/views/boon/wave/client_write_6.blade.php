@@ -42,7 +42,7 @@ $(document).ready(function(){
     {{--<li><a href="{{ URL::to('ccmail') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>--}}
 
-    <li class="active">신청서 수정</li>
+    <li class="active">신규신청</li>
 
     {{--<li style="" class="pull-right">--}}{{--이전 샘플 / 다음 샘플--}}{{--
         <span class="btn btn-xs btn-default btnPrev glyphicon glyphicon-menu-left" aria-hidden="true"></span>
@@ -73,32 +73,32 @@ $(document).ready(function(){
             <div class="panel-heading">
 
                 <b>
-                    신청서 수정하기
+                    단체소송 접수 신청서
                 </b>
             </div>
 
             {!! BootForm::openHorizontal(['sm' => [2, 10],'lg' => [2, 10]])->id('form-단체소송')
-                ->action('/wave/client/'. $waveClient->id)->put() !!}
+                ->action('/wave/client') !!}
+
             {!! BootForm::bind($waveClient) !!}
+            {!! BootForm::hidden( "suit_id" )->value( $data['suit_id'] )  !!}
 
             <style>
-                .choice-product {width:154px;height:160px;float:left;border-radius:10px;margin:6px;border:1px solid gray;
-                    background:url('/img/wave/wave-coway.jpg');background-repeat:no-repeat;}
+                .choice-product {width:154px;height:160px;float:left;border-radius:20px;margin:6px;border:1px solid gray;
+                    background:url('/img/wave/wave-interpark-icon.jpg');background-repeat:no-repeat;}
                 /*width:144px;height:128px;*/
                 .choice-product:hover {border:3px solid gray;}
             </style>
             <script>
                 $(document).ready(function(){
                     $(".choice-product").click(function(){
-                        $("input[name=data01]").val( $(this).data("name") );
+                        /*$("input[name=data01]").val( $(this).data("name") );*/
                     });
                 });
             </script>
             <div style="border:1px solid #dadada;background-color:#dadada">
 
-                <div class="choice-product" style="background-position:-380px -10px;" data-name="370N (스파클링아이스)"></div>
-                <div class="choice-product" style="background-position:-35px -10px;" data-name="380N (한뼘아이스)"></div>
-                <div class="choice-product" style="background-position:-207px -10px;" data-name="430N (바리스타아이스)"></div>
+                <div class="choice-product" style="background-position:;background-size:cover;" data-name="인터파크 회원"></div>
                 <div style="clear:both;"></div>
             </div>
 
@@ -106,8 +106,6 @@ $(document).ready(function(){
                 <div class="pull-left">
 
                 </div>
-
-                {!! BootForm::text( "제품명" , 'data01')->placeholder("위 사진을 클릭하세요.")->readonly()  !!}
 
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label"></label>
@@ -122,11 +120,12 @@ $(document).ready(function(){
 
 
                 <div class="form-group">
-                    <label class="col-sm-2 col-lg-2 control-label">설치장소</label>
+                    <label class="col-sm-2 col-lg-2 control-label">주소</label>
                     <div class="col-sm-10 col-lg-10">
                         <div class="form-inline" style="margin-bottom:4px;">
                             <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="form-control" />
                             <input type="text" name="postcode" id="postcode" placeholder="우편번호" class="form-control" />
+                            {!! BootForm::text( "" , 'postcode')->placeholder("우편번호")->id('postcode')  !!}
                         </div>
 
                         {!! BootForm::text( "도로명" , 'addr')->placeholder("법원서류는 도로명으로 입력해야합니다.")  !!}
@@ -186,46 +185,16 @@ $(document).ready(function(){
                     }
                 </script>
 
-                {!! BootForm::date( "구입/렌탈 날짜" , 'data02')->placeholder("")  !!}
-                {!! BootForm::text( "시리얼번호" , 'data12')->placeholder("기존제품 시리얼번호 (교환시 교환후 번호)")  !!}
+                {!! BootForm::text( "인터파크 아이디" , 'data01')->placeholder("인터파크 회원가입 아이디")  !!}
 
-                {!! BootForm::text( "사용기간" , 'data03')->placeholder("중간에 판매한 경우만 적어주세요.")  !!}
-                {!! BootForm::text( "평균 사용회수 및 음용량" , 'data04')->placeholder("ex) 하루 10잔/1L 등 자유롭게")  !!}
-
-                {!! BootForm::textarea( "현재 신체 이상증세" , 'data05')->placeholder("발암, 피부질환, 호흡기질환, 안질환, 신장질환 여부
-
-* 신청서 작성 후 나중 관련파일을 첨부할 수 있습니다.")  !!}
-
-                {!! BootForm::select('함께 신청할 동거인 수', 'data06')->options(['0' => '없음', '1' => '1명', '2' => '2명', '3' => '3명', '4' => '4명', '5+' => '5명이상'])->select('green')
-                 ->select( $waveClient->data06 )!!} {{--수정폼-select에서는 이것만 추가. ㅜ.ㅜ 감동이야--}}
-
-                {!! BootForm::textarea( "동거인에게 신체상 이상이 있는 경우" , 'data07')->placeholder("1. 홍길동
-  1) 아들
-  2) 100525-3450012
-  3) 하루 5잔
-  3) 발진, 두드러기
-2. OOO (이름)
-  1) 계약자와의 관계(아들, 남편, 아내)
-  2) 주민번호 (원고명단에 필요)
-  3) 사용회수 및 음용량
-  3) 질환의 종류 및 치료여부
-")  !!}
                 {!! BootForm::text( "은행명" , 'bank_name')->placeholder("승소시 판결금받을 은행명")  !!}
                 {!! BootForm::text( "계좌번호" , 'bank_number')->placeholder("계좌번호")  !!}
                 {!! BootForm::text( "예금주명" , 'bank_owner')->placeholder("예금주")  !!}
 
-                <div class="form-group">
-                    <label class="col-sm-2 col-lg-2 control-label"></label>
-                <div class="col-sm-10 col-lg-10" style="border-top:1px solid royalblue;background-color:lightblue;">
-                    <h4>소송종류 선택</h4>
-                    {!! BootForm::radio( "A타입 (위자료 및 검진비 청구)" , 'data15', 'A') !!}
-                    {!! BootForm::radio( "B타입 (+증상이 있는 경우, 상해치료비 청구)" , 'data15', 'B') !!}
-                </div>
-            </div>
 
                 <label class="col-sm-2 col-lg-2 control-label"></label>
                 <div class="col-sm-10 col-lg-10">
-                    <h4>비용 입금 <small>하단 비용표를 확인하신 후, 인원에 맞게 입금하시면 됩니다.</small></h4>
+                    <h4>비용 입금 <small>금1만1천원(vat포함)</small></h4>
                 </div>
 
                 {!! BootForm::text( "비용 입금자" , 'data11')->placeholder("비용 입금시 이름")  !!}
@@ -233,20 +202,19 @@ $(document).ready(function(){
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label">입금계좌</label>
                     <div class="col-sm-10 col-lg-10">
-                        <span style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</span>
-                        {{--<div><small>접수인원이 많을 경우 입금확인이 늦을 수 있으니 기다려주세요.</small></div>--}}
+                        <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b>
+                        <div><small>접수인원이 많을 경우 입금확인이 늦을 수 있으니 기다려주세요.</small></div>
                     </div>
                 </div>
 
-                {{--{!! BootForm::textarea('비고', 'data14')->placeholder("전할 말씀 (간략히)")  !!}--}}
+                {{--{!! BootForm::textarea('비고', 'bigo')->addClass('ccmail-content') !!}--}}
 
                 {{--{!! BootForm::submit('접수') !!}--}}
                 <div class="form-group"><div class="col-sm-offset-2 col-sm-10 col-lg-offset-2 col-lg-10">
-                    <button type="submit" class="btn btn-default btn-primary btn-lg">수정</button>
+                    <button type="submit" class="btn btn-default btn-primary btn-lg">접수</button>
                 </div></div>
 
-                <input type="hidden" name="약정동의" value="true" />
-                {{--{!! BootForm::hidden('약정동의', true) !!} 이거 안되네--}}
+                {!! BootForm::checkbox('아래 계약사항을 모두 읽고 동의하며, 접수버튼의 클릭으로 서면약정을 대체합니다.', '약정동의', true)->check() !!}
 
 
 
@@ -287,9 +255,9 @@ $(document).ready(function(){
                         <div class="big1 b">2. 수임인(을) : 법무법인 예율 대표변호사 김웅, 김상겸</div>
 
                         <div class="big1 b">3. 사건의 표시</div>
-                        <div class="b">제조물 결함으로 인한 손해배상청구 등
+                        <div class="b">개인정보유출로 인한 손해배상청구 등
                             1) 원고 : 갑
-                            2) 피고 : 코웨이 주식회사</div>
+                            2) 피고 : 주식회사 인터파크</div>
 
                         <div class="c" style="margin:40px 0;">상기 당사자들은 위 표시 사건의 사건처리에 관한 위임계약을 다음과 같이 체결한다.</div>
 
@@ -313,7 +281,7 @@ $(document).ready(function(){
                             다. 다음의 경우에는 승소로 보고 위 가항의 성공보수를 지급하여야 한다.
                              ① 을의 소송수행 결과로 상대방이 청구의 인낙, 조정을 하는 경우
                              ② 을이 위임사무의 처리를 위하여 상당한 노력을 투입한 이후 갑이 정당한 사유 없이 위임계약을 해지하거나 임의로 조정, 청구의 포기, 소의 취하를 하는 경우<br/>
-                            라. <u>원고 승소시 피고가 부담할 소송비용</u>은 1심 절차 종료 후 갑이 일괄 신청하여 별도 성공보수로 산입한다.
+                            라. <u>원고 승소시 피고(인터파크)가 부담할 소송비용</u>은 1심 절차 종료 후 갑이 일괄 신청하여 별도 성공보수로 산입한다.
 
                             <br />
                             <br />
@@ -325,7 +293,7 @@ $(document).ready(function(){
                             <br />
                             <br />
                             <span class="b">제7조(계약해지)</span>
-                                가. 을은 총 위임인이 A타입, B타입 각 500인 미만인 경우 소장접수 전 본 위임계약을 해지할 수 있고 그 경우 입금된 금액은 전액 환불하기로 한다.
+                                가. 을은 총 위임인이 1000인 미만인 경우 소장접수 전 본 위임계약을 해지할 수 있고 그 경우 입금된 금액은 전액 환불하기로 한다.
                                 나. 갑이 위임계약에 정한 의무를 이행하지 아니하거나, 위임사무의 내용에 대하여 진술한 사실이 허위인 경우 을인 본 위임계약을 해지할 수 있다.
                             <br />
                             <br />
@@ -338,67 +306,12 @@ $(document).ready(function(){
                             <span class="b">제10조(관할에 대한 합의)</span> 이 위임계약으로 생기는 일체의 소송에 관하여는 서울중앙지방법원을 관할법원으로 한다.
                             <br />
                             <br />
-                            <p class="pull-right"><?=$waveClient['created_at']?></p>
+                            <p class="pull-right"><?=date("Y년 m월 d일")?></p>
                         </div>
                     </div>
 
                     <div style="margin-bottom:20px;text-align:center;"><small>※ 전체내용을 확인하시려면 더블클릭 ※</small></div>
 
-                    <span class="b">착수금 별표1.</span><br />
-                    <br />
-                    A타입) 위자료 및 검진비만을 청구 – 11만원 (VAT포함)<br />
-                    B타입) 위자료, 검진비에 추가적으로 상해 치료비 청구 – 44만원 (VAT포함)<br />
-                    <br />
-                    * 동거인(주민등록상 주소지 동일한 가족)이 모두 원고가 되는 경우, 다음 표에 따름<br />
-                    <div id="div비용표" style="display:block;">
-                        <table class="table text-center">
-                            <tr>
-                                <th></th>
-                                <th class="text-center" style="color:royalblue;">1명</th>
-                                <th class="text-center"><nobr>2명</nobr></th>
-                                <th class="text-center">3명</th>
-                                <th class="text-center">4명</th>
-                                <th class="text-center">5명 이상</th>
-                            </tr>
-                            <tr>
-                                <td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
-                                    <nobr>A타입</nobr>
-                                </td>
-                                <td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
-                                <td>20<small style="font-size:0.7em;">만</small></td>
-                                <td>29<small style="font-size:0.7em;">만</small></td>
-                                <td>37<small style="font-size:0.7em;">만</small></td>
-                                <td>8<small style="font-size:0.7em;">만+</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
-                            </tr>
-                            <tr>
-                                <td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
-                                    B타입
-                                </td>
-                                <td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
-                                <td>80<small style="font-size:0.7em;">만</small></td>
-                                <td>116<small style="font-size:0.7em;">만</small></td>
-                                <td>148<small style="font-size:0.7em;">만</small></td>
-                                <td>32<small style="font-size:0.7em;">만+</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 일부 포함 </small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">※ 동거인이 있을경우 복수신청 가능합니다. <br> 다만 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>라야 합니다.</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6">입금계좌 <b>신한 100-029-697933 법무법인 예율 </b></td>
-                            </tr>
-
-                        </table>
-                    </div>
 
 
 

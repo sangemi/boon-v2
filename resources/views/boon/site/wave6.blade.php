@@ -264,7 +264,7 @@
 											<div class="alert alert-info"><B>Tip.</B> {{ Session::get('tip') }}</div>
 										@endif
 
-										<a href="/wave/mypage" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
+										<a href="/wave/mypage/<?=$request->suit_number?>" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
 									</div>
 
 								@endif
@@ -335,7 +335,7 @@
 		<p>마. 법무법이 예율은
 						현대/폭스바겐 등 연비소송 (원고 5천명), 여수 바지락 소송 (원고 330명), 산후조리원 결핵 집단전염 사건 (230여명), 가네보 백반증 피해자 소송 등을 진행하고 있으며,
 						정보유출사건으로는 국민은행 등 은행권 정보유출사건/홈플러스 정보유출사건 등의 경험이 있습니다. (본 사건은 현재진행형)
-			이와 같은 다수의 집단소송 경험으로로,소송 초기부터 마무리 단계까지 소비자들의 권익을 위하여 최선의 노력을 다할 것을 약속드립니다.
+			이와 같은 다수의 경험으로, 소송 초기부터 마무리 단계까지 소비자들의 권익을 위하여 최선의 노력을 다할 것을 약속드립니다.
 
 <h3>3. 소송에 필요한 비용</h3>
 
@@ -345,14 +345,28 @@
 
 <h3>4. 소송인단의 모집</h3>
 
-	<p>가. 같은일이 반복되는 것은 '망각'때문입니다.<br>
-		1년 후 소송참여자를 제외한 누구도 이 사건을 기억하지 못할 예정이고,
-		3년이 경과하면 시효의 완성으로 금전배상책임까지 사라집니다. 소비자운동에 동참해주세요.</p>
-	<p>
-		주위에 본 페이지를 소개해주세요. <u>소개해주신 2분이 소송신청을 할 경우 <b>소송비용 1.1만원을 면제</b>해 드리겠습니다.</u>
-	</p>
-	<p>※ 회원가입을 하신 후 아래 링크를 클릭해서 주위에 알려주세요. 노고에 감사드립니다.
-	<p>
+						<p>가. 미국식 집단소송제가 생기지 않는한, 국내에서 소비자는 기업에게 갑일 수 없습니다.
+							현재 발생한 사건들은 1년 후 소송참여자를 제외하고는 거의 기억하지 못할 예정입니다.
+							이후 2년이 더 경과하면 시효의 완성으로 기업은 금전배상책임까지 없게됩니다.
+						<p>나. 현재 상황에서 소비자권리를 보호받는 방법은 단체소송이 가장 현실적입니다.
+							단체소송의 법리는 일반소송과 크게 다르지는 않습니다.
+							다만 수백~수천 소송인단을 이끌고 수년을 버티기가 힘들어 어느 로펌도 쉽게 시작하지 않을 뿐입니다.
+							<b><u>힘을 모아 주세요.</u></b> 본 시스템 하에서 예율이 단체소송을 적극 지원해보겠습니다.
+
+						</p>
+						<p>
+							아래 링크를 통해 다른 분이 소송에 참여시,<br>
+							기록해두었다가 저희가 드릴 수 있는 각종 서비스를 제공드립니다.<br>
+							<small>로그인 후 마이페이지에서 추천이력을 확인할 수 있습니다.</small>
+
+						@if(Auth::check())
+							<div class="well">개인별 추천링크 <small>/이력확인가능</small><br>http://boonzero.com/wave/<?=$request->suit_number?>/recom/<?=Auth::user()->id?></div>
+						@else
+							<div class="well">로그인 하시면 개인별 추천링크를 사용하실 수 있습니다.<br />
+								일반추천 링크 : <p> http://wave.boonzero.com/wave</p>
+							</div>
+							@endif
+							</p>
 		@if(Auth::check())
 			<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
@@ -369,23 +383,22 @@
 					container: '#kakao-link-btn',
 					label: '인터파크 정보유출',
 					image: {
-						src: '/site/wave/images/kakao_send_file.png',
-						width: '200',
-						height: '150'
+						src: 'http://wave.boonzero.com/site/wave/images/kakao_send_file.png',
+						width: '300',
+						height: '200'
 					},
 					webButton: {
 						text: '소비자운동 참여',
-						url: 'http://wave.boonzero.com/wave/6' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+						url: 'http://wave.boonzero.com/wave/<?=$request->suit_number?>/recom/' + '<?=Auth::user()->id?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 					}
-
 				});
 				//kakaoTalkLinkMessageBuilder.addWebLink("카카오 홈페이지로 이동")
 
 				//]]>
 			</script>
 		@else
-			로그인 하시면 개인별 공유링크가 보입니다.
-			일반추천 링크 : <p> http://wave.boonzer.com/wave/6</p>
+			로그인 하시면 추천인 전용 링크를 사용하실 수 있습니다.
+			일반추천 링크 : <p> http://wave.boonzero.com/wave/<?=$request->suit_number?></p>
 		@endif
 		</p>
 	</p>

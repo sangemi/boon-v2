@@ -187,7 +187,7 @@
 
         /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
         $(".each_client").click(function(){
-            var final_to_number = '', final_to_name = '';
+            var final_to_number = '', final_to_name = '', final_to_user_id = '', total_cnt = 0;
             if( $(this).data('clicked') == true ){
                 $(this).data('clicked', false); $(this).css('background-color', '');
             }
@@ -198,12 +198,16 @@
                 if($(this).data('clicked')) {
                     final_to_number = final_to_number + ',' + $(this).data('tel');
                     final_to_name = final_to_name + ', ' + $(this).find(".each_name").text();
+                    final_to_user_id = final_to_user_id +  ',' + $(this).data('user_id');
+                    total_cnt++;
                 }
             });
             final_to_number = trimChar( trimChar(final_to_number, ' '), ',');
             final_to_name = trimChar( trimChar(final_to_name, ' '), ',');
+            final_to_user_id = trimChar( trimChar(final_to_user_id, ' '), ',');
             $("#sms_recive_num").val( final_to_number );
-            $("#sms_to_list").text( final_to_name );;
+            $("#sms_to_list").html( final_to_name  + " <b>총 "+total_cnt+"명</b>");
+            $("#to_user_id").val( final_to_user_id );
         });
     });
 </script>
@@ -212,6 +216,10 @@
 
 
 <?php
+
+$current_id = Auth::user()->id; // SK인지 확인
+
+
 /*$prev_url = parse_url(URL::previous());
 $now_url = parse_url(URL::current());
 \App\Lib\skHelper::p($prev_url );
@@ -260,13 +268,22 @@ echo "ddddddd다름";
                             $amt_total += $client['amt_payment'];
                             ?>
                             <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"
-                                                    data-chk_payment="<?=$client['chk_payment']?>">
+                                                    data-chk_payment="<?=$client['chk_payment']?>"
+                                                    data-user_id="<?=$client['id']?>">
                                 <?=($no+1)?>.
                                 <a href="javascript:showDetailInfo('<?=$client['id']?>')">
                                     <span  class="each_name"><?=$client['name']?></span>
                                 </a>
                                 @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
-                                    <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=number_format($client['amt_payment'])?>원</button>
+                                    @if ($current_id == 1 || $current_id == 294 || $current_id == 300 ) {{--SK만 보임--}}
+                                        <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
+                                            <?=number_format($client['amt_payment'])?>원
+                                        </button>
+                                    @else
+                                            <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
+                                                <?=$client['chk_payment']?>
+                                            </button>
+                                    @endif
                                 @else
                                     <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
                                 @endif
@@ -276,8 +293,9 @@ echo "ddddddd다름";
                         @endforeach
                     @endif
                     <?php
-
-                    echo "<p>총 ".number_format($amt_total)."원 입금</p>";
+                    if ($current_id == 1){ // SK만 보임
+                        echo "<p>총 ".number_format($amt_total)."원 입금</p>";
+                    }
                     ?>
                     <div style="display:block;clear:both;"></div>
                 </div>
@@ -711,7 +729,7 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
 
             var str = "&from="+$("input[name=sms_number_from]").val()+"&to="+$("input[name=sms_number_to]").val()+"&text="+$("#sms_content").val()+""
                     +"&to_user_id="+$("#to_user_id").val()+"";
-
+            console.log(str);
             /*$.post("/lawfirm/consult.ajax.lawfirm.php", str, function(data){*/
             $.post("/sms/send", str, function(data){
                 $("#btnSendSMS").attr("disabled",false);

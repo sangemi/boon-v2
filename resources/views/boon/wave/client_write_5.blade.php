@@ -42,7 +42,7 @@ $(document).ready(function(){
     {{--<li><a href="{{ URL::to('ccmail') }}">
             <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 전체</a></li>--}}
 
-    <li class="active">신청서 수정</li>
+    <li class="active">신규신청</li>
 
     {{--<li style="" class="pull-right">--}}{{--이전 샘플 / 다음 샘플--}}{{--
         <span class="btn btn-xs btn-default btnPrev glyphicon glyphicon-menu-left" aria-hidden="true"></span>
@@ -73,13 +73,14 @@ $(document).ready(function(){
             <div class="panel-heading">
 
                 <b>
-                    신청서 수정하기
+                    단체소송 접수 신청서
                 </b>
             </div>
 
             {!! BootForm::openHorizontal(['sm' => [2, 10],'lg' => [2, 10]])->id('form-단체소송')
-                ->action('/wave/client/'. $waveClient->id)->put() !!}
+                ->action('/wave/client') !!}
             {!! BootForm::bind($waveClient) !!}
+            {!! BootForm::hidden( "suit_id" )->value( $data['suit_id'] )  !!}
 
             <style>
                 .choice-product {width:154px;height:160px;float:left;border-radius:10px;margin:6px;border:1px solid gray;
@@ -126,7 +127,7 @@ $(document).ready(function(){
                     <div class="col-sm-10 col-lg-10">
                         <div class="form-inline" style="margin-bottom:4px;">
                             <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="form-control" />
-                            <input type="text" name="postcode" id="postcode" placeholder="우편번호" class="form-control" />
+                            {!! BootForm::text( "" , 'postcode')->placeholder("우편번호")->id('postcode')  !!}
                         </div>
 
                         {!! BootForm::text( "도로명" , 'addr')->placeholder("법원서류는 도로명으로 입력해야합니다.")  !!}
@@ -196,8 +197,7 @@ $(document).ready(function(){
 
 * 신청서 작성 후 나중 관련파일을 첨부할 수 있습니다.")  !!}
 
-                {!! BootForm::select('함께 신청할 동거인 수', 'data06')->options(['0' => '없음', '1' => '1명', '2' => '2명', '3' => '3명', '4' => '4명', '5+' => '5명이상'])->select('green')
-                 ->select( $waveClient->data06 )!!} {{--수정폼-select에서는 이것만 추가. ㅜ.ㅜ 감동이야--}}
+                {!! BootForm::select('함께 신청할 동거인 수', 'data06')->options(['0' => '없음', '1' => '1명', '2' => '2명', '3' => '3명', '4' => '4명', '5+' => '5명이상'])->select('green') !!}
 
                 {!! BootForm::textarea( "동거인에게 신체상 이상이 있는 경우" , 'data07')->placeholder("1. 홍길동
   1) 아들
@@ -233,20 +233,19 @@ $(document).ready(function(){
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label">입금계좌</label>
                     <div class="col-sm-10 col-lg-10">
-                        <span style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</span>
-                        {{--<div><small>접수인원이 많을 경우 입금확인이 늦을 수 있으니 기다려주세요.</small></div>--}}
+                        <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b>
+                        <div><small>접수인원이 많을 경우 입금확인이 늦을 수 있으니 기다려주세요.</small></div>
                     </div>
                 </div>
 
-                {{--{!! BootForm::textarea('비고', 'data14')->placeholder("전할 말씀 (간략히)")  !!}--}}
+                {{--{!! BootForm::textarea('비고', 'bigo')->addClass('ccmail-content') !!}--}}
 
                 {{--{!! BootForm::submit('접수') !!}--}}
                 <div class="form-group"><div class="col-sm-offset-2 col-sm-10 col-lg-offset-2 col-lg-10">
-                    <button type="submit" class="btn btn-default btn-primary btn-lg">수정</button>
+                    <button type="submit" class="btn btn-default btn-primary btn-lg">접수</button>
                 </div></div>
 
-                <input type="hidden" name="약정동의" value="true" />
-                {{--{!! BootForm::hidden('약정동의', true) !!} 이거 안되네--}}
+                {!! BootForm::checkbox('아래 계약사항을 모두 읽고 동의하며, 접수버튼의 클릭으로 서면약정을 대체합니다.', '약정동의', true)->check() !!}
 
 
 
@@ -338,7 +337,7 @@ $(document).ready(function(){
                             <span class="b">제10조(관할에 대한 합의)</span> 이 위임계약으로 생기는 일체의 소송에 관하여는 서울중앙지방법원을 관할법원으로 한다.
                             <br />
                             <br />
-                            <p class="pull-right"><?=$waveClient['created_at']?></p>
+                            <p class="pull-right"><?=date("Y년 m월 d일")?></p>
                         </div>
                     </div>
 

@@ -63,6 +63,7 @@ class SmsController extends Controller {
 		if(!isset($data['from'])) $data['from'] = $default['from'];
 		if(!isset($data['to'])) $data['to'] = $default['to'];
 		if(!isset($data['text'])) $data['text'] = $default['text'];
+		/*$data['to_user_id'] = 1, 4, 66, 233 식으로 받음*/
 
 		$ret = self::sendCoolsms($data);
 
