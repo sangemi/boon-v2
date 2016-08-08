@@ -960,7 +960,7 @@
 				</div>
 				<div class="row fh5co-made">
 					<div class="col-md-12">
-						<p><a href="/wave/main">접수상태 확인</a></p>
+						<p><a href="/wave/mypage">접수상태 확인</a></p>
 					</div>
 				</div>
 			</div>
