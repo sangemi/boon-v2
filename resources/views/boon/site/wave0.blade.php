@@ -147,11 +147,11 @@
 										다수의 경험으로 집단소송을 관리해드립니다. <br>정기적 진행보고. <big>차별화된 소송지원</big>을 경험하세요.
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
-										<a href="#소송안내" class="btn btn-primary  btn-outline">안내</a>
-										<a href="#소비자권리단원" class="btn btn-primary btn-outline btn-sm">권리지킴이 모집</a>
-										<br>
 										<a href="/wave/5" class="btn btn-primary btn-sm" target="">#6 코웨이</a>
 										<a href="/wave/6" class="btn btn-primary btn-sm" target="">#7 인터파크</a>
+										<br>
+										<a href="#소송안내" class="btn btn-primary  btn-outline btn-sm">안내</a>
+										<a href="#소비자권리단원" class="btn btn-primary btn-outline btn-sm">권리지킴이 모집</a>
 										{{--<a href="tel:022135525" class="btn btn-primary btn-outline">방문요청</a>--}}
 										{{--/ip/askvisit--}}
 										&nbsp;&nbsp;&nbsp;
@@ -379,43 +379,56 @@
 
 							</p>
 							<p>
-								아래 링크를 통해 다른 분이 소송에 참여시,<br>
-								기록해두었다가 저희가 드릴 수 있는 각종 서비스를 제공드립니다.<br>
-								<small>로그인 후 마이페이지에서 추천이력을 확인할 수 있습니다.</small>
+								아래 링크를 공유해서 많은 분이 소송에 참여토록 독려해주세요.<br>
+								모든 '소비자권리 지킴이'분들께는 드릴 수 있는 최대한의 서비스를 제공드립니다.
+								<small>회원님의 마이페이지에서 개인별 링크를 클릭해서 소송에 참여한 내역을 모두 확인할 수 있습니다.</small>
 
-								@if(Auth::check())
-									<div class="well">개인별 추천링크 <small>/이력확인가능</small><br>
-										http://boonzero.com/wave/0/recom/<?=Auth::user()->id?>
-									</div>
+								<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-									<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+								<?php
+								if(Auth::check()){
+									$kakao_link = 'http://boonzero.com/wave/0/recom/'.Auth::user()->id;
+									$txt_personal_link = 'http://boonzero.com/wave/0/recom/'.Auth::user()->id;
+									$txt_normal_link = 'http://boonzero.com/wave';
+								}else{
+									$kakao_link = 'http://boonzero.com/wave';
+									$txt_personal_link = '로그인 후 개인별링크 제공됩니다.';
+									$txt_normal_link = 'http://boonzero.com/wave';
+								}
+								?>
+
+
+								<div class="well">개인별 추천링크 <small>/ 이력확인이 가능합니다.</small><br>
+									<?=$txt_personal_link?>
+								</div>
+								<div class="well">
+									일반 링크 : <?=$txt_normal_link?>
+								</div>
+								<p>
 									<a id="kakao-link-btn" href="javascript:;">
 										<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
 									</a>
+								</p>
+								<script type='text/javascript'>
+									//<![CDATA[
+									Kakao.init('fa482b7c7beafe607ce137cd563f02b5'); // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+									Kakao.Link.createTalkLinkButton({ // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+										container: '#kakao-link-btn',
+										label: '단체소송 소개',
+										image: {
+											src: 'http://wave.boonzero.com/img/wave/wave-main.png',
+											width: '300',
+											height: '184'
+										},
+										webButton: {
+											text: '소비자운동 참여',
+											url: '<?=$kakao_link?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+										}
+									});
+									//]]>
+								</script>
 
-									<script type='text/javascript'>
-										//<![CDATA[
-										Kakao.init('fa482b7c7beafe607ce137cd563f02b5'); // // 사용할 앱의 JavaScript 키를 설정해 주세요.
-										Kakao.Link.createTalkLinkButton({ // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-											container: '#kakao-link-btn',
-											label: '단체소송 소개',
-											image: {
-												src: 'http://wave.boonzero.com/img/wave/wave-main.png',
-												width: '300',
-												height: '184'
-											},
-											webButton: {
-												text: '소비자운동 참여',
-												url: 'http://wave.boonzero.com/wave/0/recom/' + '<?=Auth::user()->id?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
-											}
-										});
-										//]]>
-									</script>
-								@else
-									<div class="well">로그인 하시면 개인별 추천링크를 사용하실 수 있습니다.<br /><br />
-									일반추천 링크 : <p> http://wave.boonzero.com/wave</p>
-									</div>
-								@endif
 							</p>
 
 
