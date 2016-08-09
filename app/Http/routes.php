@@ -25,11 +25,13 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::group(array('domain' => 'wave.boonzero.com'), function() { //{account}.
         Route::get('/','WaveMainController@index');
     });
-    Route::get('/wave/mypage/{suit_id?}', 'WaveMainController@mypage');
+    Route::get('/wave/mypage/{suit_id?}', 'WaveMainController@mypage')->where('suit_id', '[0-9]+');
     Route::get('/wave/admin', 'WaveMainController@dashboard');
     Route::post('/wave/admin/tasks/{task_name?}', 'WaveMainController@tasks'); //change-payment
-    Route::get('/wave/{suit_number?}', 'WaveMainController@index');
-    Route::get('/wave/{suit_number}/recom/{recommending_id}', 'WaveMainController@recommend');
+    Route::get('/wave/{suit_number?}', 'WaveMainController@index')->where('suit_number', '[0-9]+');
+    Route::get('/wave/{suit_number}/recom/{recommending_id}', 'WaveMainController@recommendLink')->where(['suit_number'=>'[0-9]+', 'recommending_id'=>'[0-9]+']); //->where('name', '[A-Za-z]+');
+    Route::get('/wave/probono', 'WaveMainController@probono');
+    Route::get('/wave/recommendResult', 'WaveMainController@recommendResult');
 
     Route::resource('wave/client', 'WaveClientController');
     Route::resource('wave/file', 'WaveFileController');

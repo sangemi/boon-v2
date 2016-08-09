@@ -1,11 +1,11 @@
 @extends('layouts.master') {{--master를 상속받음--}}
 
-@section('title', '단체소송 - 분제로')
+@section('title', '집단소송 - 분제로')
 
 @section('sidebar')
     @parent
 
-    <p>단체소송 </p>
+    <p>권익지원단 </p>
 
 @stop
 
@@ -25,11 +25,11 @@
 
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('wave') }}">
-        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 단체소송 상황실</a></li>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 상황실</a></li>
 
-    <li class="pull-right"><a href="{{ URL::to('wave/client/create') }}">
+    {{--<li class="pull-right"><a href="{{ URL::to('wave/client/create') }}">
         <span class="btn btn-xs btn-default" aria-hidden="true">신규 <span class="fa fa-pencil"></span></span></a>
-    </li>
+    </li>--}}
 
 
 </ol>
@@ -42,15 +42,12 @@
         display:table;
     }
     .cf:after{ clear:both; }
-
     .cf{ zoom:1; }
-
     /* Form wrapper styling */
     .search-wrapper {
         width: 75%;
         margin: 45px auto 50px auto;
     }
-
     /* Form text input */
     .search-wrapper input {
         width: 87%;
@@ -66,76 +63,45 @@
         background: #ccc
     }
     .search-wrapper input:focus {
-        outline: 0;
-        background: #fff;
+        outline: 0;  background: #fff;
     }
     .search-wrapper input::-webkit-input-placeholder {
-        color: #c6c7c6;
-        font-weight: normal;
+        color: #c6c7c6;  font-weight: normal;
     }
     .search-wrapper input:-moz-placeholder {
-        color: #999;
-        font-weight: normal;
-        font-style: italic;
+        color: #999;  font-weight: normal;  font-style: italic;
     }
     .search-wrapper input:-ms-input-placeholder {
-        color: #999;
-        font-weight: normal;
-        font-style: italic;
+        color: #999;  font-weight: normal;  font-style: italic;
     }
-
     /* Form submit button */
     .search-wrapper button {
-        overflow: visible;
-        position: relative;
-        float: right;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        height: 40px;
-        width: 13%;
-        font: bold 18px 'Arial', 'Tahoma';
-        color: white;
-        background: #c1c1c1;
-        border-radius: 0 5px 5px 0;
+        overflow: visible;  position: relative;  float: right;
+        border: 0;  padding: 0;  cursor: pointer;
+        height: 40px;  width: 13%;
+        font: bold 18px 'Arial', 'Tahoma';  color: white;
+        background: #c1c1c1;  border-radius: 0 5px 5px 0;
         transition: all 2.0s linear;
-        -webkit-transition: all 0.2s linear;
-        -moz-transition: all 0.2s linear;
-        -ms-transition: all 0.2s linear;
-        -o-transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;  -moz-transition: all 0.2s linear;  -ms-transition: all 0.2s linear;  -o-transition: all 0.2s linear;
     }
-
     .search-wrapper button:hover{
-        background: #5cc924;
-        transition: all 2.0s linear;
-        -webkit-transition: all 0.2s linear;
-        -moz-transition: all 0.2s linear;
-        -ms-transition: all 0.2s linear;
-        -o-transition: all 0.2s linear;
+        background: #5cc924;  transition: all 2.0s linear;
+        -webkit-transition: all 0.2s linear;  -moz-transition: all 0.2s linear;  -ms-transition: all 0.2s linear;  -o-transition: all 0.2s linear;
     }
-
     .search-wrapper button:active,
     .search-wrapper button:focus{
-        background: #329400;
-        outline: 0;
-        transition: all 0s linear;
-        -webkit-transition: all 0s linear;
-        -moz-transition: all 0s linear;
-        -ms-transition: all 0s linear;
-        -o-transition: all 0s linear;
+        background: #329400;  outline: 0;  transition: all 0s linear;
+        -webkit-transition: all 0s linear;  -moz-transition: all 0s linear;  -ms-transition: all 0s linear;  -o-transition: all 0s linear;
     }
-
     .search-wrapper button:hover:before{
         border-right-color: #e54040;
     }
-
     .search-wrapper button:focus:before,
     .search-wrapper button:active:before{
         border-right-color: #c42f2f;
     }
     .search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-        border: 0;
-        padding: 0;
+        border: 0;  padding: 0;
     }
 </style>
 <script>
@@ -184,86 +150,81 @@ echo "ddddddd다름";
         border-radius:10px;
     }
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
-    h1 { color: #00BFFF; }
+    h1 { color: #; }
 
     }
 </style>
 
     <div class="row text-center" style="padding:0 10px 10px 10px;">
         <div class="">
-            <div class="col-sm-6" style="white-space:normal;">
+            <div class="col-sm-5" style="white-space:normal;">
                 <div class="bigbox">
-                <h4>진행 소송{{--<small>+등록</small>--}}</h4>
-
-                @if (empty($wave_client))
-                    <div class="col-sm-12">
-                        진행중 소송이 없습니다.
-                    </div>
-                @else
-                    @foreach ($wave_client as $key=> $waveclient)
-                        <div class="col-sm-12" style="text-align: left;">
-                            <b>
-                                <?=($key+1)?>. <?=$my_suits[$key]['title']?>
-                                <a href="{{ URL::to('wave/client/'.$waveclient['id'].'/edit') }}">
-                                    <span class="btn btn-xs btn-link" aria-hidden="true">서류수정<span class="fa fa-pencil"></span></span>
-                                </a>
-                                <a class="btn btn-sm btn-link" href="/wave/file/create?client_id=<?=$waveclient['id']?>">증거제출</a>
-
-                            </b>
-                            <p><?=$my_status[$key]['title']?></p>
-                            @if( $waveclient['chk_proof'] == '')
-
-                            @endif
-
-                            @if( $waveclient['chk_payment'] == '입금대기')
+                <h4>방문자{{--<small>+등록</small>--}}</h4>
+                    <table class="table table-bordered table-condensed">
+                        <tr><th></th><th>IP</th><th>방문일</th></tr>
+                        @foreach ($recommend_click as $key=> $recommend_val)
+                            <tr>
+                                <!--<td><?=$recommend_val->cate_number?></td>-->
+                                <td><?=(1+$key)?></td>
+                                <td><?=$recommend_val->ip_addr?></td>
+                                <td><?=substr($recommend_val->created_at, 5, 11)?></td>
                                 <?php
-                                $chk_payment = true;
-                                    ?>
-                                <div>
-                                    <p class="bg-warning">입금대기 상태입니다</p>
-
-                                </div>
-                            @else
-                                <div class="bg_warning">
-                                    <p><?=$my_status[$key]['chk_payment']?></p>
-                                </div>
-                            @endif
-
-                        </div>
-                    @endforeach
 
 
-                @endif
+                                ?>
+
+                            </tr>
+                        @endforeach
+                    </table>
+                    {!! $recommend_click->render() !!}
                 </div>
             </div>
 
-            <div class="col-sm-6" style="white-space:normal;">
+            <div class="col-sm-7" style="white-space:normal;">
                 <div class="bigbox">
-                    <h4>공지사항</h4>
-                    @foreach ($wave_suits as $key=> $wave_suit)
+                    <h4>신청서 작성자</h4>
+                    <table class="table table-bordered table-condensed">
+                        <tr><th></th><th>소송</th><th>성함</th><th>IP</th><th>접수일</th></tr>
+                        @foreach ($recommend_join as $key=> $recommend_val)
+                            <tr>
+                                <td><?=(1+$key)?></td>
+                                <td><?=$recommend_val->cate_number?></td>
+                                <td><?=$recommend_val->name?></td> {{--* 익명 처리해야--}}
+                                <td><?=$recommend_val->ip_addr?></td>
+                                <td><?=substr($recommend_val->user_created_at, 5, 11)?></td>
+                                <?php
 
-                        @foreach ($my_suits as $key=> $my_suit)
-                            <?php
-                            $check_my_suit = false;
-                            if($my_suit->id == $wave_suit->id){
-                                $check_my_suit = true;
-                            }
-                            if($check_my_suit == true){
-                                echo $my_suit->notice;
-                                break;
-                            }
-                            ?>
 
+                                ?>
+
+                            </tr>
                         @endforeach
-                    @endforeach
-                {{--<h4>진행상황</h4>
-                    <ul style="text-align: left;margin-left:10px;list-style-type:none;">
-                        <li>7.25. 접수시작</li>
-                        <li>8.1. 접수내용 수정이 가능합니다.</li>
-                        <li>8.3. 파일 업로드가 가능합니다.</li>
-                        <li>8.15. 소송인단 확정(예정)</li>
-                        <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
-                    </ul>--}}
+                    </table>
+                    {!! $recommend_join->render() !!}
+
+
+                </div>
+                <div class="bigbox">
+                    <h4>실제 참여자</h4>
+                    <table class="table table-bordered table-condensed">
+                        <tr><th></th><th>소송</th><th>성함</th><th>IP</th><th>접수일</th></tr>
+                        @foreach ($recommend_pay as $key=> $recommend_val)
+                            <tr>
+                                <td><?=(1+$key)?></td>
+                                <td><?=$recommend_val->cate_number?></td>
+                                <td><?=$recommend_val->name?></td> {{--* 익명 처리해야--}}
+                                <td><?=$recommend_val->ip_addr?></td>
+                                <td><?=substr($recommend_val->created_at, 5, 11)?></td>
+                                <?php
+
+
+                                ?>
+
+                            </tr>
+                        @endforeach
+                    </table>
+                    {!! $recommend_pay->render() !!}
+
 
                 </div>
             </div>
@@ -272,12 +233,6 @@ echo "ddddddd다름";
 </div>
 
 
-@if(isset($chk_payment))
-    <div class="well bg-warning">
-    <h4>비용 미입금 상태</h4>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
-    <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
-    </div>
-@endif
 
 {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
 {{dd( Request::input(), http_build_query (Request::input()) ) }}

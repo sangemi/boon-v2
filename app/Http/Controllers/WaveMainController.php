@@ -41,8 +41,37 @@ class WaveMainController extends Controller
 
 
     }
+
+    /*추천활동 내역*/
+    public function recommendResult(Request $request)
+    {
+        if(Auth::check()) {
+            //$recommend_data = Recommend::where('recommending_id', Auth::user()->id)->where('category', '=', 'wave')->paginate(10); // ->get();
+            $recommend_click = DB::table('recommend_users')
+                ->where('recommending_id', Auth::user()->id)
+                ->where('category', '=', 'wave')->paginate(20);
+            $recommend_join = DB::table('recommend_users')
+                ->leftJoin('users', 'recommend_users.recommended_id', '=', 'users.id')
+                ->select('recommend_users.*', 'users.name', 'users.created_at as user_created_at')
+                ->where('recommending_id', Auth::user()->id)
+                ->where('recommended_id', '<>', '0')
+                ->where('category', '=', 'wave')->paginate(10);
+            $recommend_pay = DB::table('recommend_users')
+                ->leftJoin('users', 'recommend_users.recommended_id', '=', 'users.id')
+                ->select('recommend_users.*', 'users.name')
+                ->where('recommending_id', Auth::user()->id)
+                ->where('category', '=', 'wave')->paginate(10);
+
+            return view('boon.wave.recommend_result', compact('recommend_click', 'recommend_join', 'recommend_pay'));
+        }else{
+            return "로그인해주세요";
+        }
+
+
+    }
+
     /*추천인 링크 Route::get('/wave/{suit_number}/recom/{recommend_id}', 'WaveMainController@recommend');*/
-    public function recommend(Request $request)
+    public function recommendLink(Request $request)
     {
         self::recordRecommend($request);
         if (isset($request->suit_number)) { /*무조건여기*/
@@ -63,7 +92,11 @@ class WaveMainController extends Controller
 
         $recommend_data->save();
     }
-
+    /*공익활동 프로보노. 추천현황확인*/
+    public function probono(Request $request)
+    {
+        return view('boon.wave.probono', compact('request'));
+    }
     public function tasks(Request $request, $task_name) // ajax 요청들.. // $row_id : client_id
     {
         /*      $('#task').val(data.id);

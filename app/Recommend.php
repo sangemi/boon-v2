@@ -17,8 +17,8 @@ class Recommend extends Model {
 
     protected $guarded = ['created_at']; // 지정한것 외에 다 쓸 수 있음.
 
-    use SoftDeletes; /*소프트딜리트 사용하기 위해서 모델에 정의하고 Controll에는 그냥 그대로 delete() 쓰면됨 */
-    protected $dates = ['deleted_at'];
+    /*use SoftDeletes; //소프트딜리트 사용하기 위해서 모델에 정의하고 Controll에는 그냥 그대로 delete() 쓰면됨
+    protected $dates = ['deleted_at'];*/
 
     public function recommending_id(){
         return $this->belongsTo('App\User', 'recommending_id'); // 이건 안쓸듯한데..
