@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Lib\skHelper;
 use App\Recommend;
 use App\WaveClient;
+use App\WaveSuit;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -124,13 +125,14 @@ class WaveMainController extends Controller
             return redirect()->to('/auth/login');
         }
 
+        $wave_suits = WaveSuit::all(); //->get() //all() 에는 get()이 포함되어 있음.
         //$wave_client = WaveClient::where('user_id', Auth::id());
         $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
         $suit_title = Array();
 
         foreach($wave_client as $clien){
             $suit_obj = $clien->suit()->first();
-            $my_suit[]= $suit_obj;
+            $my_suits[]= $suit_obj;
 
             $status_obj = $clien->status()->first();
             $my_status[] = $status_obj;
@@ -149,12 +151,12 @@ class WaveMainController extends Controller
         /wave/mypage/suit_id 이면 suit_id 사건에 접수된거 체크하고, 있으면 상황실로/없으면 신청페이지로*/
 
         if(!isset($request->suit_id)){
-            return view('boon.wave.mypage', compact('wave_client', 'my_suit', 'my_status'));
+            return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits'));
         }else if($wave_client->count()) {
             foreach ($wave_client as $wclient) {
-                echo $wclient['suit_id'];
+
                 if ($wclient['suit_id'] == $request->suit_id) {
-                    return view('boon.wave.mypage', compact('wave_client', 'my_suit', 'my_status'));
+                    return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits'));
                 }
             }
         }

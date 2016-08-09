@@ -116,15 +116,18 @@ $(document).ready(function(){
             <div style="border:1px solid #dadada;background-color:#dadada">
 
                 <div class="choice-file_type <?=$document_ok[1]?>" style="" data-title_no="1" data-explain="<p>인터파크 웹사이트에서 유출여부를 확인해주세요.<br>해당 화면을 캡쳐(또는 휴대폰 사진)해서 업로드 해주세요.
-                    <br><a href='http://www.interpark.com/malls/popup_apoligize.html' target='_blank'>
-                >> 바로가기 클릭 <<
-                </a></p>">
+                    <br><a href='http://www.interpark.com/malls/popup_apoligize.html' target='_blank'>>> 바로가기 클릭 <<</a>
+                    <br><b>스마트폰에서 반응이 없는 경우</b>
+                    <br>브라우저 설정에서 팝업차단기능을 꺼주세요. 안될경우 PC에서 확인해주세요.</p>">
                     (필수) 유출결과 화면
                 </div>
                 <div class="choice-file_type <?=$document_ok[2]?>" style="" data-title_no="2" data-explain="사안과 관련하여 재판부에 하실 말씀을 A4용지에 자유롭게 써서, 스캔/촬영하여 올려주세요.
                 <br>
                 <br><br>샘플<br><img src='/img/wave/wave-interpark-jinsul.jpg' style='width:350px;border:1px solid gray;' />">
                     (선택) 탄원서
+                </div>
+                <div class="choice-file_type <?=$document_ok[3]?>" style="" data-title_no="3" data-explain="기타 도움이 될만한 자료">
+                    기타
                 </div>
 
                 <div style="clear:both;"></div>

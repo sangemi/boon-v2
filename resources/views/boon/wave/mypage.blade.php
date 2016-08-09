@@ -200,11 +200,10 @@ echo "ddddddd다름";
                         진행중 소송이 없습니다.
                     </div>
                 @else
-
                     @foreach ($wave_client as $key=> $waveclient)
                         <div class="col-sm-12" style="text-align: left;">
                             <b>
-                                <?=($key+1)?>. <?=$my_suit[$key]['title']?>
+                                <?=($key+1)?>. <?=$my_suits[$key]['title']?>
                                 <a href="{{ URL::to('wave/client/'.$waveclient['id'].'/edit') }}">
                                     <span class="btn btn-xs btn-link" aria-hidden="true">서류수정<span class="fa fa-pencil"></span></span>
                                 </a>
@@ -240,20 +239,31 @@ echo "ddddddd다름";
 
             <div class="col-sm-6" style="white-space:normal;">
                 <div class="bigbox">
-                <h4>공지</h4>
-                <ul style="text-align: left;margin-left:24px;">
-                    <li>자료를 업로드해주세요. <br>왼쪽 '증거제출'버튼 클릭</li>
-                    <li>8.15.까지 입금기준으로 소송인단 (가)확정합니다.</li>
-                    {{--<li>모발검사 등 자료는 늦어도 9월중순까지 업로드 바랍니다.</li>--}}
-                </ul>
-                    <h4>진행상황</h4>
+                    <h4>공지사항</h4>
+                    @foreach ($wave_suits as $key=> $wave_suit)
+
+                        @foreach ($my_suits as $key=> $my_suit)
+                            <?php
+                            $check_my_suit = false;
+                            if($my_suit->id == $wave_suit->id){
+                                $check_my_suit = true;
+                            }
+                            if($check_my_suit == true){
+                                echo $my_suit->notice;
+                                break;
+                            }
+                            ?>
+
+                        @endforeach
+                    @endforeach
+                {{--<h4>진행상황</h4>
                     <ul style="text-align: left;margin-left:10px;list-style-type:none;">
                         <li>7.25. 접수시작</li>
                         <li>8.1. 접수내용 수정이 가능합니다.</li>
                         <li>8.3. 파일 업로드가 가능합니다.</li>
                         <li>8.15. 소송인단 확정(예정)</li>
                         <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
-                    </ul>
+                    </ul>--}}
 
                 </div>
             </div>
