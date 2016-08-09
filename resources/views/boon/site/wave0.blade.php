@@ -407,6 +407,7 @@
 								}
 								$txt_suit_name = '소비자 권리찾기';
 								$txt_btn_name = '단체소송 살펴보기';
+								$src_image = 'http://wave.boonzero.com/img/wave/wave-main.png';
 								?>
 
 
@@ -428,7 +429,7 @@
 										container: '#kakao-link-btn',
 										label: '<?=$txt_suit_name?>',
 										image: {
-											src: 'http://wave.boonzero.com/img/wave/wave-main.png',
+											src: '<?=$src_image?>',
 											width: '300',
 											height: '184'
 										},

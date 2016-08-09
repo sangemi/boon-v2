@@ -401,6 +401,7 @@
 				}
 				$txt_suit_name = '인터파크 정보유출';
 				$txt_btn_name = '단체소송 살펴보기';
+				$src_image = 'http://wave.boonzero.com/img/wave/wave-kakao-6.png';
 				?>
 
 
@@ -423,7 +424,7 @@
 						container: '#kakao-link-btn',
 						label: '<?=$txt_suit_name?>',
 						image: {
-							src: 'http://wave.boonzero.com/site/wave/images/kakao_send_file.png',
+							src: '<?=$src_image?>',
 							width: '300',
 							height: '184'
 						},
