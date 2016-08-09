@@ -345,67 +345,7 @@
 
 	<p>나. 이번 인터파크 소송은 <b><u>착수금 1만1천원</u></b>으로 하며, 법원 인지대, 송달료 등 기타 어떠한 금원도 내실 필요가 없습니다. (법인이 우선 지출 후 승소시 선충당방식)</p>
 
-<h3>4. 소송인단의 모집</h3>
-
-						<p>가. 미국식 집단소송제가 생기지 않는한, 국내에서 소비자는 기업에게 갑일 수 없습니다.
-							현재 발생한 사건들은 1년 후 소송참여자를 제외하고는 거의 기억하지 못할 예정입니다.
-							이후 2년이 더 경과하면 시효의 완성으로 기업은 금전배상책임까지 없게됩니다.
-						<p>나. 현재 상황에서 소비자권리를 보호받는 방법은 단체소송이 가장 현실적입니다.
-							단체소송의 법리는 일반소송과 크게 다르지는 않습니다.
-							다만 수백~수천 소송인단을 이끌고 수년을 버티기가 힘들어 어느 로펌도 쉽게 시작하지 않을 뿐입니다.
-							<b><u>힘을 모아 주세요.</u></b> 본 시스템 하에서 예율이 단체소송을 적극 지원해보겠습니다.
-
-						</p>
-						<p>
-							아래 링크를 통해 다른 분이 소송에 참여시,<br>
-							기록해두었다가 저희가 드릴 수 있는 각종 서비스를 제공드립니다.<br>
-							<small>로그인 후 마이페이지에서 추천이력을 확인할 수 있습니다.</small>
-
-						@if(Auth::check())
-							<div class="well">개인별 추천링크 <small>/이력확인가능</small><br>http://boonzero.com/wave/<?=$request->suit_number?>/recom/<?=Auth::user()->id?></div>
-						@else
-							<div class="well">로그인 하시면 개인별 추천링크를 사용하실 수 있습니다.<br />
-								일반추천 링크 : <p> http://wave.boonzero.com/wave</p>
-							</div>
-							@endif
-							</p>
-		@if(Auth::check())
-			<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-
-			<a id="kakao-link-btn" href="javascript:;">
-				<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
-			</a>
-
-			<script type='text/javascript'>
-				//<![CDATA[
-				// // 사용할 앱의 JavaScript 키를 설정해 주세요.
-				Kakao.init('fa482b7c7beafe607ce137cd563f02b5');
-				// // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-				Kakao.Link.createTalkLinkButton({
-					container: '#kakao-link-btn',
-					label: '인터파크 정보유출',
-					image: {
-						src: 'http://wave.boonzero.com/site/wave/images/kakao_send_file.png',
-						width: '300',
-						height: '200'
-					},
-					webButton: {
-						text: '소비자운동 참여',
-						url: 'http://wave.boonzero.com/wave/<?=$request->suit_number?>/recom/' + '<?=Auth::user()->id?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
-					}
-				});
-				//kakaoTalkLinkMessageBuilder.addWebLink("카카오 홈페이지로 이동")
-
-				//]]>
-			</script>
-		@else
-			로그인 하시면 추천인 전용 링크를 사용하실 수 있습니다.
-			일반추천 링크 : <p> http://wave.boonzero.com/wave/<?=$request->suit_number?></p>
-		@endif
-		</p>
-	</p>
-
-<h3>5. 필요한 자료제출</h3>
+<h3>4. 필요한 자료제출</h3>
 
 	<p>1) 먼저 상단에서 회원가입을 하신 후, 정보유출사건을 선택하고 신청서를 작성해주세요.</p>
 
@@ -417,6 +357,90 @@
 				</div>
 			</div>
 		</div>
+
+
+
+
+
+
+
+		<div class="col-md-6 col-md-offset-3 " style="margin-top:30px;">
+			<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">소비자 권리지킴이 모집</h2>
+			<p></p>
+			<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+
+			</p>
+			<div id="" style="display:block;">
+				<p>가. 미국식 집단소송제가 도입되기 전까지 국내에서 대기업들의 소비자에 대한 횡포는 지속될 것입니다.
+					<small>※ 경험상 현재 발생 사건들은 1년 후 거의 기억되지 못합니다.
+						이후 2년이 더 경과하면 시효가 완성되어 기업은 금전배상책임까지 없게됩니다.</small>
+				<p>나. 현재 소비자권리를 보호받는 방법은 단체소송이 가장 현실적입니다. 단체소송의 법리는 일반소송과 크게 다르지는 않습니다.
+					다만 수백~수천 소송인단을 이끌고 수년을 버티기가 힘들어 어느 로펌도 쉽게 시작하지 않을 뿐입니다.
+					<br /><br />힘을 보태 주십시오. <br />
+					법무법인 예율 단체소송팀과 함께 마땅히 누려야 할 소비자들의 권리를 지켜 주십시오.
+					기나긴 싸움에서 소송팀도 지치지 않도록 마음을 모아 주십시오.
+					<br><small>※ 예율은 소비자소송에서 얻은 수익을 소비자 권익운동에 활용합니다.</small>
+				</p>
+				<p>
+				아래 링크를 카카오톡/블로그/페이스북 등에 공유해 많은 분들이 소송에 참여할 수 있도록 독려해 주시기 바랍니다. <br>
+				적극적인 노력으로 다수의 소송 참여자를 모집한 분들께는 법무법인 예율에서 ‘소비자 권리지킴이’ 공로상을 수여할 예정입니다.
+				또한 모든 참여자분들께도 예율이 드릴 수 있는 최대한의 서비스를 제공드립니다. 감사합니다.
+				<br><small>※ 마이페이지에서 개인별 링크 클릭수 등을 확인할 수 있습니다.</small>
+
+				<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+				<?php
+				if(Auth::check()){
+				$kakao_link = 'http://boonzero.com/wave/'.$request->suit_number.'
+				/recom/'.Auth::user()->id;
+				$txt_personal_link = 'http://boonzero.com/wave/'.$request->suit_number.'/recom/'.Auth::user()->id;
+				$txt_normal_link = 'http://boonzero.com/wave/'.$request->suit_number;
+				}else{
+				$kakao_link = 'http://boonzero.com/wave';
+				$txt_personal_link = '로그인 후 개인별링크 제공됩니다.';
+				$txt_normal_link = 'http://boonzero.com/wave/'.$request->suit_number;
+				}
+				$txt_suit_name = '인터파크 정보유출';
+				$txt_btn_name = '단체소송 살펴보기';
+				?>
+
+
+				<div class="well">개인별 추천링크 <small>/ 이력확인이 가능합니다.</small><br>
+					<?=$txt_personal_link?>
+				</div>
+				<div class="well">
+					일반 링크 : <?=$txt_normal_link?>
+				</div>
+				<p>
+					<a id="kakao-link-btn" href="javascript:;">
+						<img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+					</a>
+				</p>
+				</p>
+				<script type='text/javascript'>
+					//<![CDATA[
+					Kakao.init('fa482b7c7beafe607ce137cd563f02b5'); // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+					Kakao.Link.createTalkLinkButton({ // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+						container: '#kakao-link-btn',
+						label: '<?=$txt_suit_name?>',
+						image: {
+							src: 'http://wave.boonzero.com/site/wave/images/kakao_send_file.png',
+							width: '300',
+							height: '184'
+						},
+						webButton: {
+							text: '<?=$txt_btn_name?>',
+							url: '<?=$kakao_link?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+						}
+					});
+					//]]>
+				</script>
+
+
+
+
+			</div>
+		</div>
+
 
 
 		<a  name="소송비용"></a>
