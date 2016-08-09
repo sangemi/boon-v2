@@ -424,7 +424,9 @@
 						container: '#kakao-link-btn',
 						label: '<?=$txt_suit_name?>',
 						image: {
-							src: '<?=$src_image?>'
+							src: '<?=$src_image?>',
+							width: '167',
+							height: '159'
 						},
 						webButton: {
 							text: '<?=$txt_btn_name?>',
@@ -432,9 +434,7 @@
 						}
 					});
 					//]]>
-					/*,
-					width: '300',
-							height: '184'*/
+					/**/
 				</script>
 
 

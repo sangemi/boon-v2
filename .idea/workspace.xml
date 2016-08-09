@@ -143,8 +143,8 @@
       <file leaf-file-name="wave6.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60553634">
-              <caret line="462" column="60" selection-start-line="462" selection-start-column="60" selection-end-line="462" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.3206459">
+              <caret line="428" column="40" selection-start-line="428" selection-start-column="40" selection-end-line="428" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -678,12 +678,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00076" summary="3.1002&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
-      <created>1469349253846</created>
-      <option name="number" value="00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1469349253846</updated>
-    </task>
     <task id="LOCAL-00077" summary="3.1005&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
       <created>1469350115747</created>
       <option name="number" value="00077" />
@@ -972,7 +966,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470715879207</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="3.2&#10;&#10;wave.bonzero.com 다중 소송 접수 + 카톡링크 추가&#10;&#10;&#10;">
+      <created>1470716097300</created>
+      <option name="number" value="00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1470716097300</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1550,8 +1550,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60553634">
-          <caret line="462" column="60" selection-start-line="462" selection-start-column="60" selection-end-line="462" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.3206459">
+          <caret line="428" column="40" selection-start-line="428" selection-start-column="40" selection-end-line="428" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
