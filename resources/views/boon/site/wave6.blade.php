@@ -468,7 +468,7 @@
 								<th class="text-center" style="color:royalblue;">1인당</th>
 							</tr>
 							<tr>
-								<td style="color:royalblue;">11,000<small style="font-size:0.7em;">원</small></td>
+								<td style="color:royalblue;">9900<small style="font-size:0.7em;">원</small></td>
 							</tr>
 							<tr>
 								<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
