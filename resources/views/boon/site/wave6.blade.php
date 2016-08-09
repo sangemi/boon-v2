@@ -424,9 +424,7 @@
 						container: '#kakao-link-btn',
 						label: '<?=$txt_suit_name?>',
 						image: {
-							src: '<?=$src_image?>',
-							width: '300',
-							height: '184'
+							src: '<?=$src_image?>'
 						},
 						webButton: {
 							text: '<?=$txt_btn_name?>',
@@ -434,6 +432,9 @@
 						}
 					});
 					//]]>
+					/*,
+					width: '300',
+							height: '184'*/
 				</script>
 
 
@@ -445,38 +446,40 @@
 
 
 		<a  name="소송비용"></a>
-		<div class="fh5co-project-style-2">
-			<div class="container">
-				<div class="row p-b">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">비용안내</h2>
-						<p>VAT포함</p>
-						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+		<div class="container">
+			<div class="row p-b">
+				<div class="col-md-6 col-md-offset-3 text-center">
+					<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">비용안내</h2>
+					<p>VAT포함</p>
+					<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
 
-						</p>
-						{{--<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-							<a href="javascript:$('#div비용표').toggle();" class="btn btn-success font-size-up">비용표 보기</a>
-						</p>--}}
-						{{--<div style="cursor:pointer;clear:both;margin-top:20px;" class="text-center" onclick="">
-							&nbsp; <br/>상세 비교표 ▼
-						</div>--}}
-						<div id="div비용표" style="display:block;">
-							<table class="table text-center">
-								<tr>
-									<th class="text-center" style="color:royalblue;">1인당</th>
-								</tr>
-								<tr>
-									<td style="color:royalblue;">11,000<small style="font-size:0.7em;">원</small></td>
-								</tr>
-								<tr>
-									<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
-								</tr>
+					</p>
+					{{--<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <a href="javascript:$('#div비용표').toggle();" class="btn btn-success font-size-up">비용표 보기</a>
+                    </p>--}}
+					{{--<div style="cursor:pointer;clear:both;margin-top:20px;" class="text-center" onclick="">
+                        &nbsp; <br/>상세 비교표 ▼
+                    </div>--}}
+					<div id="div비용표" style="display:block;">
+						<table class="table text-center">
+							<tr>
+								<th class="text-center" style="color:royalblue;">1인당</th>
+							</tr>
+							<tr>
+								<td style="color:royalblue;">11,000<small style="font-size:0.7em;">원</small></td>
+							</tr>
+							<tr>
+								<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
+							</tr>
 
-							</table>
-						</div>
+						</table>
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="fh5co-project-style-2">
+
 			<div class="fh5co-projects">
 				<ul>
 					<li class="wow " style="background-image: url(site/wave/images/full_1.jpg);" >
