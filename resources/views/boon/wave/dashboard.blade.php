@@ -120,7 +120,7 @@ if(isset($request->suit_id)){
 <script>
     $(function(){
 
-        $('#detailClient').css('height', $(window).height() - 55);
+        $('#detailClient').css('height', $(window).height() - 95);
         $('#detailInfoBox').css('height', $(window).height() - 105);
 
         /*따라다니는 레이어 시작*/
