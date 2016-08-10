@@ -6,11 +6,9 @@
  * Time: 오후 4:03
  */
 
-class skHelper {
-    /* 이거 이제 안씀. sk.php로 쓰자*/
+class sk {
     function __construct()
     {
-        /* 이거 이제 안씀. sk.php로 쓰자*/
     }
     public function get($data = [])
     {
@@ -98,5 +96,4 @@ class skHelper {
         //$str = mb_strimwidth($str, 0, $until, $tail,"utf-8");
         return $str;
     }
-    /* 이거 이제 안씀. sk.php로 쓰자*/
 }

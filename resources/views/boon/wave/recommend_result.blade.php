@@ -1,3 +1,18 @@
+<?php use App\Lib\sk; ?>
+{{--위에꺼 지우고 자동로드하고 싶은데, composor.json에
+    "autoload": {
+    "classmap": [
+    "database"
+    ],
+    "psr-4": {
+    "App\\": "app/"
+    },
+    "files": [
+    "app/Lib/skHelper.php"
+    ]
+해도 안되네..--}}
+
+
 @extends('layouts.master') {{--master를 상속받음--}}
 
 @section('title', '집단소송 - 분제로')
@@ -35,99 +50,6 @@
 </ol>
 
 
-{{-- 검색부분 시작 --}}
-<style>
-    .cf:before, .cf:after{
-        content:"";
-        display:table;
-    }
-    .cf:after{ clear:both; }
-    .cf{ zoom:1; }
-    /* Form wrapper styling */
-    .search-wrapper {
-        width: 75%;
-        margin: 45px auto 50px auto;
-    }
-    /* Form text input */
-    .search-wrapper input {
-        width: 87%;
-        height: 20px;
-        padding: 20px 15px;
-        float: left;
-        font: normal 16px 'Arial', 'Tahoma';
-        border: 0;
-        background: #fff;
-        border-radius: 5px 0 0 5px;
-    }
-    .search-wrapper input:hover + .search-wrapper button {
-        background: #ccc
-    }
-    .search-wrapper input:focus {
-        outline: 0;  background: #fff;
-    }
-    .search-wrapper input::-webkit-input-placeholder {
-        color: #c6c7c6;  font-weight: normal;
-    }
-    .search-wrapper input:-moz-placeholder {
-        color: #999;  font-weight: normal;  font-style: italic;
-    }
-    .search-wrapper input:-ms-input-placeholder {
-        color: #999;  font-weight: normal;  font-style: italic;
-    }
-    /* Form submit button */
-    .search-wrapper button {
-        overflow: visible;  position: relative;  float: right;
-        border: 0;  padding: 0;  cursor: pointer;
-        height: 40px;  width: 13%;
-        font: bold 18px 'Arial', 'Tahoma';  color: white;
-        background: #c1c1c1;  border-radius: 0 5px 5px 0;
-        transition: all 2.0s linear;
-        -webkit-transition: all 0.2s linear;  -moz-transition: all 0.2s linear;  -ms-transition: all 0.2s linear;  -o-transition: all 0.2s linear;
-    }
-    .search-wrapper button:hover{
-        background: #5cc924;  transition: all 2.0s linear;
-        -webkit-transition: all 0.2s linear;  -moz-transition: all 0.2s linear;  -ms-transition: all 0.2s linear;  -o-transition: all 0.2s linear;
-    }
-    .search-wrapper button:active,
-    .search-wrapper button:focus{
-        background: #329400;  outline: 0;  transition: all 0s linear;
-        -webkit-transition: all 0s linear;  -moz-transition: all 0s linear;  -ms-transition: all 0s linear;  -o-transition: all 0s linear;
-    }
-    .search-wrapper button:hover:before{
-        border-right-color: #e54040;
-    }
-    .search-wrapper button:focus:before,
-    .search-wrapper button:active:before{
-        border-right-color: #c42f2f;
-    }
-    .search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-        border: 0;  padding: 0;
-    }
-</style>
-<script>
-    $(document).ready(function(){
-        $(".search-wrapper input").mouseenter(function(){
-            $(".search-wrapper button").css("background-color", "#4aba10");
-
-
-        });
-        $(".search-wrapper input").mouseout(function(){
-            $(".search-wrapper button").css("background-color", "" );
-        });
-    });
-</script>
-
-<form name="srch_sample_f" method="get" action="{{Request::url()}}" no-error-return-url="true"
-      class="search-wrapper cf">
-    {{--<input type="hidden" name=cate1 value="{!! Request::input('cate1') !!}" />
-    <input type="hidden" name=cate2 value="{!! Request::input('cate2') !!}" />--}}
-    <input type=text name="q" value="<?=htmlspecialchars(stripslashes(Request::input('q')))?>"
-           placeholder="검색" maxlength="80" />
-    <button type=submit id="btn_srch_sample" style="" alt="검색" title="검색" >
-        <i class="fa fa-search"></i>
-    </button>
-</form>
-{{-- 검색부분 끝 --}}
 
 
 <?php
@@ -154,6 +76,94 @@ echo "ddddddd다름";
 
     }
 </style>
+
+        <div class="row p-b" style="margin-bottom:30px;background-color:white;">
+            <div class="col-md-10 col-md-offset-1 ">
+                <h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">소비자 권리지킴이 활동</h2>
+                <p></p>
+                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+
+                </p>
+                <div id="" style="display:block;">
+                    <div class="col-sm-6">
+                        <p>가. 미국식 집단소송제가 도입되기 전까지 국내에서 대기업들의 소비자에 대한 횡포는 지속될 것입니다.
+                            <br><small>현재 이슈가 되는 사건들은 경험상 1년 후에는 거의 기억되지 않습니다.
+                                이후 2년이 더 경과하면 시효가 완성되어 기업은 금전배상책임까지 없게됩니다.</small>
+                        <p>나. 현재 소비자권리를 보호받는 방법은 단체소송이 가장 현실적입니다. 단체소송의 법리는 일반소송과 크게 다르지는 않습니다.
+                            다만 수백~수천 소송인단을 이끌고 수년을 버티기가 힘들어 어느 로펌도 쉽게 시작하지 않을 뿐입니다.
+                            <br /><br />힘을 보태 주십시오. <br />
+                            법무법인 예율 단체소송팀과 함께 마땅히 누려야 할 소비자들의 권리를 지켜 주십시오.
+                            긴 싸움에서 소송팀도 지치지 않도록 마음을 모아 주십시오.
+                            <br>
+                            <small>
+                                ※ 예율은 소비자소송에서 얻은 수익을 소비자 권익운동에 활용합니다.
+                                <a href="/wave/probono">활동 살펴보기</a>
+                            </small>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>
+                            아래 링크를 카카오톡/블로그/페이스북 등에 공유해 많은 분들이 소송에 참여할 수 있도록 독려해 주시기 바랍니다. <br><br>
+                            적극적인 노력으로 다수의 소송 참여자를 모집한 분들께는 법무법인 예율에서 ‘소비자 권리지킴이’ 공로상을 수여할 예정입니다.
+                            또한 모든 참여자분들께도 예율이 드릴 수 있는 최대한의 서비스를 제공드립니다. 감사합니다.
+                            <br><small>※ 본 페이지에서 개인별 링크 활용내역을 확인할 수 있습니다.</small>
+
+                            <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+                            <?php
+                            if(Auth::check()){
+                            $kakao_link = 'http://boonzero.com/wave/0/recom/'.Auth::user()->id;
+                            $txt_personal_link = 'http://boonzero.com/wave/0/recom/'.Auth::user()->id;
+                            $txt_normal_link = 'http://boonzero.com/wave';
+                            }else{
+                            $kakao_link = 'http://boonzero.com/wave';
+                            $txt_personal_link = '로그인 후 개인별링크 제공됩니다.';
+                            $txt_normal_link = 'http://boonzero.com/wave';
+                            }
+                            $txt_suit_name = '소비자 권리찾기';
+                            $txt_btn_name = '단체소송 살펴보기';
+                            $src_image = 'http://wave.boonzero.com/img/wave/wave-main.png';
+                            ?>
+
+
+                            <div class="well">개인별 추천링크 <small>/ 이력확인이 가능합니다.</small><br>
+                                <?=$txt_personal_link?>
+                            </div>
+                            <div class="well">
+                                일반 링크 : <?=$txt_normal_link?>
+                            </div>
+                            <p>
+                                <a id="kakao-link-btn" href="javascript:;">
+                                    <img src="//dev.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+                                </a>
+                            </p>
+                            <script type='text/javascript'>
+                                //<![CDATA[
+                                Kakao.init('fa482b7c7beafe607ce137cd563f02b5'); // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+                                Kakao.Link.createTalkLinkButton({ // // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+                                    container: '#kakao-link-btn',
+                                    label: '<?=$txt_suit_name?>',
+                                    image: {
+                                        src: '<?=$src_image?>',
+                                        width: '300',
+                                        height: '184'
+                                    },
+                                    webButton: {
+                                        text: '<?=$txt_btn_name?>',
+                                        url: '<?=$kakao_link?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+                                    }
+                                });
+                                //]]>
+                            </script>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
 
     <div class="row text-center" style="padding:0 10px 10px 10px;">
         <div class="">
@@ -189,7 +199,7 @@ echo "ddddddd다름";
                             <tr>
                                 <td><?=(1+$key)?></td>
                                 <td><?=$recommend_val->cate_number?></td>
-                                <td><?=$recommend_val->name?></td> {{--* 익명 처리해야--}}
+                                <td><?=sk::hide_kname($recommend_val->name)?></td> {{--* 익명 처리해야--}}
                                 <td><?=$recommend_val->ip_addr?></td>
                                 <td><?=substr($recommend_val->user_created_at, 5, 11)?></td>
                                 <?php
@@ -212,7 +222,7 @@ echo "ddddddd다름";
                             <tr>
                                 <td><?=(1+$key)?></td>
                                 <td><?=$recommend_val->cate_number?></td>
-                                <td><?=$recommend_val->name?></td> {{--* 익명 처리해야--}}
+                                <td><?=sk::hide_kname($recommend_val->name)?></td> {{--* 익명 처리해야--}}
                                 <td><?=$recommend_val->ip_addr?></td>
                                 <td><?=substr($recommend_val->created_at, 5, 11)?></td>
                                 <?php

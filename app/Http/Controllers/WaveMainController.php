@@ -46,7 +46,7 @@ class WaveMainController extends Controller
 
             return view('boon.wave.recommend_result', compact('recommend_click', 'recommend_join', 'recommend_pay'));
         }else{
-            return "로그인해주세요";
+            return redirect()->to('/auth/login'); //로그인
         }
 
 
@@ -127,10 +127,10 @@ class WaveMainController extends Controller
             if ($current_id == 1 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
                 if(isset($request->wave_id)){
                     $wave_client = WaveClient::where('suit_id', $request->wave_id)->get();
-                    return view('boon.wave.dashboard', compact('wave_client'));
+                    return view('boon.wave.dashboard', compact('wave_client', 'request'));
                 }else{
                     $wave_client = WaveClient::all();
-                    return view('boon.wave.dashboard', compact('wave_client'));
+                    return view('boon.wave.dashboard', compact('wave_client', 'request'));
                 }
             } else {
                 return "권한없음. 접속오류";

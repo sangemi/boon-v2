@@ -36,133 +36,21 @@
 </ol>
 
 
-{{-- 검색부분 시작 --}}
-<style>
-    .cf:before, .cf:after{
-        content:"";
-        display:table;
-    }
-    .cf:after{ clear:both; }
+<?php
 
-    .cf{ zoom:1; }
-
-    /* Form wrapper styling */
-    .search-wrapper {
-        width: 75%;
-        margin: 15px auto 15px auto;
-    }
-
-    /* Form text input */
-    .search-wrapper input {
-        width: 87%;
-        height: 20px;
-        padding: 20px 15px;
-        float: left;
-        font: normal 16px 'Arial', 'Tahoma';
-        border: 0;
-        background: #fff;
-        border-radius: 5px 0 0 5px;
-    }
-    .search-wrapper input:hover + .search-wrapper button {
-        background: #ccc
-    }
-    .search-wrapper input:focus {
-        outline: 0;
-        background: #fff;
-    }
-    .search-wrapper input::-webkit-input-placeholder {
-        color: #c6c7c6;
-        font-weight: normal;
-    }
-    .search-wrapper input:-moz-placeholder {
-        color: #999;
-        font-weight: normal;
-        font-style: italic;
-    }
-    .search-wrapper input:-ms-input-placeholder {
-        color: #999;
-        font-weight: normal;
-        font-style: italic;
-    }
-
-    /* Form submit button */
-    .search-wrapper button {
-        overflow: visible;
-        position: relative;
-        float: right;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        height: 40px;
-        width: 13%;
-        font: bold 18px 'Arial', 'Tahoma';
-        color: white;
-        background: #c1c1c1;
-        border-radius: 0 5px 5px 0;
-        transition: all 2.0s linear;
-        -webkit-transition: all 0.2s linear;
-        -moz-transition: all 0.2s linear;
-        -ms-transition: all 0.2s linear;
-        -o-transition: all 0.2s linear;
-    }
-
-    .search-wrapper button:hover{
-        background: #5cc924;
-        transition: all 2.0s linear;
-        -webkit-transition: all 0.2s linear;
-        -moz-transition: all 0.2s linear;
-        -ms-transition: all 0.2s linear;
-        -o-transition: all 0.2s linear;
-    }
-
-    .search-wrapper button:active,
-    .search-wrapper button:focus{
-        background: #329400;
-        outline: 0;
-        transition: all 0s linear;
-        -webkit-transition: all 0s linear;
-        -moz-transition: all 0s linear;
-        -ms-transition: all 0s linear;
-        -o-transition: all 0s linear;
-    }
-
-    .search-wrapper button:hover:before{
-        border-right-color: #e54040;
-    }
-
-    .search-wrapper button:focus:before,
-    .search-wrapper button:active:before{
-        border-right-color: #c42f2f;
-    }
-    .search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-        border: 0;
-        padding: 0;
-    }
-</style>
-<script>
-    $(document).ready(function(){
-        $(".search-wrapper input").mouseenter(function(){
-            $(".search-wrapper button").css("background-color", "#4aba10");
+$current_id = Auth::user()->id; // SK인지 확인
 
 
-        });
-        $(".search-wrapper input").mouseout(function(){
-            $(".search-wrapper button").css("background-color", "" );
-        });
-    });
-</script>
+if(isset($request->suit_id)){
+    $suit_id = $request->suit_id;
+    if($suit_id == 5) echo "<h2>코웨이 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    else if($suit_id == 6) echo "<h2>인터파크 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+}else{
+    echo "<h2>모든 사건 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'></a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+}
 
-<form name="srch_sample_f" method="get" action="{{Request::url()}}" no-error-return-url="true"
-      class="search-wrapper cf">
-    {{--<input type="hidden" name=cate1 value="{!! Request::input('cate1') !!}" />
-    <input type="hidden" name=cate2 value="{!! Request::input('cate2') !!}" />--}}
-    <input type=text name="q" value="<?=htmlspecialchars(stripslashes(Request::input('q')))?>"
-           placeholder="검색" maxlength="80" />
-    <button type=submit id="btn_srch_sample" style="" alt="검색" title="검색" >
-        <i class="fa fa-search"></i>
-    </button>
-</form>
-{{-- 검색부분 끝 --}}
+
+?>
 
 {{-- 단체SMS 시작 --}}
 <div>
@@ -215,20 +103,6 @@
 {{-- 단체SMS 끝 --}}
 
 
-<?php
-
-$current_id = Auth::user()->id; // SK인지 확인
-
-
-/*$prev_url = parse_url(URL::previous());
-$now_url = parse_url(URL::current());
-\App\Lib\skHelper::p($prev_url );
-\App\Lib\skHelper::p($now_url);
-//echo $prev_url['path'] .'='. $now_url['path'];
-if( $prev_url['host'] != $now_url['host']){ //타사이트에서 유입. 아마 키워드광고
-echo "ddddddd다름";
-}*/
-?>
 
 <style>
     .btnCate1s {padding:8px 10px;}
