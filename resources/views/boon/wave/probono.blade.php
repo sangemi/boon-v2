@@ -25,7 +25,9 @@
 
 <ol class="breadcrumb">
     <li><a href="{{ URL::to('wave') }}">
-        <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 상황실</a></li>
+            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> 메인</a></li>
+    <li><a href="{{ URL::to('wave/mypage') }}">
+             상황실</a></li>
 
     {{--<li class="pull-right"><a href="{{ URL::to('wave/client/create') }}">
         <span class="btn btn-xs btn-default" aria-hidden="true">신규 <span class="fa fa-pencil"></span></span></a>
@@ -174,15 +176,16 @@ echo "ddddddd다름";
                     <b>헌법 제 124조</b>
                     <p>국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장 한다</p>
                 </blockquote>
-                <p></p> 대부분의 국민들은 ‘소비자보호운동’이 헌법에 명시될 정도로 중요한 ‘권리’임을 알지 못합니다.
+                <p>대부분의 국민들은 ‘소비자보호운동’이 <b><u>헌법에 명시될 정도로 중요한 ‘권리’</u></b>임을 알지 못합니다.</p>
 
                 <p>2016년 '소비자기본법'을 통해서 제정되는 본 기금은,
-                1. 소비자들의 권리의식을 고취
-                2. 소비자주권의식의 함양
+                1. 소비자의 권리의식 고취
+                2. 소비자 주권의식 함양
                 등을 실질적으로 이루어 내는 것을 목적으로 합니다.</p>
 
-                <p>현재까지 소비자단체는 재정자립도가 낮고 ‘생계형’으로 운영하며 제목소리를 내지 못해 예산다툼만을 하게 되는 기형적 구조로 운영되어 왔기 때문에,
-                공정거래위원회가 주도하여 기금구축에 나서게 된 것입니다.</p>
+                <p>현재까지 소비자단체는 재정자립도가 낮아 ‘생계형’으로 운영되며 제 목소리를 내지 못했습니다.
+                    그로인해 실질적인 소비자활동 외에 예산다툼에만 집중 하는 구조로 운영되어 왔기 때문에,
+                    공정거래위원회가 주도하여 기금구축에 나서게 된 것입니다.</p>
 
                 <p>법무법인 예율은 소비자주권을 이루어내기 위해서 소비자 권익증진기금에 매출의 1%이상을 후원합니다.
                 작은 행동을 통해 소비자주권 회복에 일조하겠습니다.</p>
@@ -211,36 +214,40 @@ echo "ddddddd다름";
             <h5>납부하신 착수금을 환급드립니다. 돌려받으신 금원은 소비자권익운동에 써주세요.</h5>
         </blockquote>
 
-        <div class="col-sm-5  text-center" style="height:250px;background-repeat:no-repeat;background-image:url('/img/wave/wave-probono-2.jpg');background-size:contain;">
+        <div class="col-sm-5  text-center" style="height:250px;background-repeat:no-repeat;background-position: center;background-image:url('/img/wave/wave-probono-2.jpg');background-size:contain;">
             {{--<br />
             <b>2016. 소비자 권익증진지금</b>--}}
         </div>
         <div class="col-sm-7" style="">
             <p>
+                <br>
                 변호사비용의 부담으로 소송절차를 홀로 진행하는 경우가 80%가 넘습니다.
-                집단소송비용은 비교적 저렴하나, 그것마저 부담일 수 있습니다.
-
+                집단소송은 착수금이 일반 소송에 비해 비교적 저렴하나, 어떤 분에게는 그것마저 부담일 수 있습니다.
+                여러 분들이 질문하십니다. "확실히 이길지도 모르는데 비용을 내고 진행해야 하나요?" 네, 그 위험부담을 저희가 안고 가겠습니다.
                 <blockquote>
                     {{--억울합니다. 손해만 보고 피해를 보상받을지도 확실히 모르는데 소송비용을 또 내야합니까.--}}
-                    분쟁제로에서 진행하는 모든 소송에 대해서, 소송인단이 1000명일때마다 그 중 100명의 소송비용을 환급드리겠습니다.
+                    분쟁제로에서 진행하는 모든 소송에 대해서, 소송인단이 1000명이 될때마다 그 중 100명의 소송비용을 환급드리겠습니다.
                 </blockquote>
             </p>
             <p></p>
 
             <p>
-                법무법인 예율은 집단소송으로 인한 이익의 일부를 소비자주권 성장에 아낌없이 쓰도록 하겠습니다.
-                <small>※ 환급명단은 공지 및 개별로 알려드립니다.</small>
+                환급 대상자는 매 1천명 초과시 랜덤으로 선정되며 공지 및 개별로 알려드립니다.
+                <small>※ 선정기준은  공지 후 일시 변경될 수 있습니다.</small>
             </p>
+
             <p>
+                법무법인 예율은 집단소송으로 인한 이익의 일부를 소비자주권 성장에 아낌없이 쓰도록 하겠습니다. 감사합니다.
+                <p class="text-right" style="margin-top:35px;">법무법인 예율, 대표변호사 김웅·김상겸</p>
+            </p>
+            {{--<p>
                 <b>관련뉴스</b>
                 <ul style="margin-left:20px;">
                     <li><a href="http://www.asiae.co.kr/news/view.htm?idxno=2014040712223260616" target="_blank">겁나는 변호사 수임료, 소액사건 ‘나홀로 소송’ 는다</a> <small>2014.4.</small></li>
                     <li><a href="http://news1.kr/articles/?1836953" target="_blank">민사 소액사건 '나홀로 소송' 82%…변호사 비용 부담 때문</a> <small>2014.8.</small></li>
                     <li><a href="http://shindonga.donga.com/3/all/13/110512/2" target="_blank">집단소송은 변호사 배만 불린다?</a> <small>2011.9.</small></li>
-
                 </ul>
-
-            </p>
+            </p>--}}
         </div>
     </div>
 </div>

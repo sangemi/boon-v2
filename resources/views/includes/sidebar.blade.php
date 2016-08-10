@@ -1,7 +1,6 @@
 <style>
     /*사이드바의 탑 타이틀*/
     @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600');
-
     .title-area{
         padding:10px;
         margin: 0 auto 0 auto;
@@ -9,51 +8,34 @@
         font-family: 'Source Sans Pro', sans-serif;
         background-image:url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/random_grey_variations.png);
     }
-
     .title-container{
-        background-color: ;
-        position: relative;
-        width: 100%;
-        max-width:500px;
+        background-color: ;  position: relative;
+        width: 100%;  max-width:500px;
         height: 60px;
         margin: 0 auto 0 auto;
         font-family: 'Source Sans Pro', sans-serif;
         line-height: normal;
     }
-
     .title-container h1{
-        font-weight: normal;
-        padding: 0;
-        margin: 0;
-        position: absolute;
+        font-weight: normal;  padding: 0;  margin: 0;  position: absolute;
     }
     .title-container h1.title-small{
-        font-size: 15px;
-        font-weight: 300;
-        color:#bbb;
+        font-size: 15px;  font-weight: 300;  color:#bbb;
         top:0;        left: 2%;
     }
     .title-container h1.title-large{
         font-size:1.7em; font-weight: 400; font-family: "맑은 고딕"; /*Noto Sans CJK SC Thin*/
         letter-spacing: -1.5px;
-        color:goldenrod;
-        text-shadow: 0px 2px 3px #555;
-
-        display: inline-block;
-        white-space: nowrap;
+        color:goldenrod;  text-shadow: 0px 2px 3px #555;
+        display: inline-block;  white-space: nowrap;
         top:30%;      left: 8%;
     }
     /*사이드바의 탑 타이틀 끝*/
 
     /*사이드 박스화*/
     .neat-box{
-        border:1px solid #fff;
-        margin-bottom:20px;
-        background-color: #fff;
-
-        -moz-box-shadow: 0px 0px 5px #999;
-        -webkit-box-shadow: 0px 0px 5px #999;
-        box-shadow: 0px 0px 5px #999;
+        border:1px solid #fff;  margin-bottom:20px;  background-color: #fff;
+        -moz-box-shadow: 0px 0px 5px #999;  -webkit-box-shadow: 0px 0px 5px #999;  box-shadow: 0px 0px 5px #999;
     }
 
 
@@ -83,9 +65,14 @@
 
         <li><a href="{{ URL::to('/boon/status') }}"><small>포인트 충전</small></a></li>
 
+
+
         @elseif(Request::is('sosong/*'))
             <li><a href="{{ URL::to('/sosong/work') }}">나의 이력</a></li>
             <li><a href="{{ URL::to('/boon/status') }}"><small>포인트 충전</small></a></li>
+
+
+
 
         @elseif(Request::is('wave*'))
             <div class="title-area">
@@ -95,6 +82,8 @@
                 </div>
             </div>
             <li><a href="{{ URL::to('/wave/mypage') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 상황실</a></li>
+            <li><a href="{{ URL::to('/wave/probono') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공익활동</a></li>
+            <li><a href="{{ URL::to('/wave/recommendResult') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 추천활동</a></li>
 
             {{--<li><a href="javascript:alert('대기중입니다')">나의 이력</a></li>--}}
 

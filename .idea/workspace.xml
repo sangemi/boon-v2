@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="3.2&#10;&#10;wave.bonzero.com 다중 소송 접수 + 카톡링크 추가&#10;&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/probono.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/boon/wave/recommend_result.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Recommend.php" afterPath="$PROJECT_DIR$/app/Recommend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/mypage.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/probono.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/probono.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -78,17 +73,17 @@
       <file leaf-file-name="probono.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/probono.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39446366">
-              <caret line="158" column="18" selection-start-line="158" selection-start-column="18" selection-end-line="158" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.2249135">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding>
-                <element signature="e#4929#4962#0#HTML" expanded="true" />
-                <element signature="e#5167#5293#0#HTML" expanded="true" />
-                <element signature="e#6266#6291#0#HTML" expanded="true" />
-                <element signature="e#7298#7331#0#HTML" expanded="true" />
-                <element signature="e#7543#7669#0#HTML" expanded="true" />
-                <element signature="e#8396#8421#0#HTML" expanded="true" />
-                <element signature="e#9583#9605#0#HTML" expanded="true" />
-                <element signature="e#9689#9713#0#HTML" expanded="true" />
+                <element signature="e#5006#5039#0#HTML" expanded="true" />
+                <element signature="e#5244#5370#0#HTML" expanded="true" />
+                <element signature="e#6398#6423#0#HTML" expanded="true" />
+                <element signature="e#7430#7463#0#HTML" expanded="true" />
+                <element signature="e#7675#7829#0#HTML" expanded="true" />
+                <element signature="e#8751#8775#0#HTML" expanded="true" />
+                <element signature="e#10076#10098#0#HTML" expanded="true" />
+                <element signature="e#10182#10206#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -672,12 +667,6 @@
       <option name="number" value="Default" />
       <updated>1457000306532</updated>
     </task>
-    <task id="LOCAL-00081" summary="3.1006&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
-      <created>1469428194174</created>
-      <option name="number" value="00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1469428194174</updated>
-    </task>
     <task id="LOCAL-00082" summary="3.1010&#10;&#10;wave.bonzero.com 오픈버전. (파일첨부 해야함)&#10;&#10;&#10;">
       <created>1469428357042</created>
       <option name="number" value="00082" />
@@ -966,7 +955,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470736699926</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="3.2&#10;&#10;wave.bonzero.com 프로보노&#10;&#10;&#10;">
+      <created>1470749898932</created>
+      <option name="number" value="00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1470749898932</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1018,7 +1013,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="1.08&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
     <MESSAGE value="1.081&#10;&#10;Help 페이지 help/ccmail 추가&#10;&#10;&#10;" />
     <MESSAGE value="2.000&#10;&#10;ip.bonzero.com 생성&#10;&#10;&#10;" />
     <MESSAGE value="2.001&#10;&#10;ip.bonzero.com 링크 우선 다 지움&#10;&#10;&#10;" />
@@ -1043,7 +1037,8 @@
     <MESSAGE value="3.1042&#10;&#10;wave.bonzero.com 오픈버전.&#10;&#10;&#10;" />
     <MESSAGE value="3.1042&#10;&#10;wave.bonzero.com 카톡링크 추가&#10;&#10;&#10;" />
     <MESSAGE value="3.2&#10;&#10;wave.bonzero.com 다중 소송 접수 + 카톡링크 추가&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.2&#10;&#10;wave.bonzero.com 다중 소송 접수 + 카톡링크 추가&#10;&#10;&#10;" />
+    <MESSAGE value="3.2&#10;&#10;wave.bonzero.com 프로보노&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.2&#10;&#10;wave.bonzero.com 프로보노&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1553,17 +1548,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/probono.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39446366">
-          <caret line="158" column="18" selection-start-line="158" selection-start-column="18" selection-end-line="158" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.2249135">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding>
-            <element signature="e#4929#4962#0#HTML" expanded="true" />
-            <element signature="e#5167#5293#0#HTML" expanded="true" />
-            <element signature="e#6266#6291#0#HTML" expanded="true" />
-            <element signature="e#7298#7331#0#HTML" expanded="true" />
-            <element signature="e#7543#7669#0#HTML" expanded="true" />
-            <element signature="e#8396#8421#0#HTML" expanded="true" />
-            <element signature="e#9583#9605#0#HTML" expanded="true" />
-            <element signature="e#9689#9713#0#HTML" expanded="true" />
+            <element signature="e#5006#5039#0#HTML" expanded="true" />
+            <element signature="e#5244#5370#0#HTML" expanded="true" />
+            <element signature="e#6398#6423#0#HTML" expanded="true" />
+            <element signature="e#7430#7463#0#HTML" expanded="true" />
+            <element signature="e#7675#7829#0#HTML" expanded="true" />
+            <element signature="e#8751#8775#0#HTML" expanded="true" />
+            <element signature="e#10076#10098#0#HTML" expanded="true" />
+            <element signature="e#10182#10206#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
