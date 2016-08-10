@@ -46,7 +46,7 @@ if(isset($request->suit_id)){
     if($suit_id == 5) echo "<h2>코웨이 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
     else if($suit_id == 6) echo "<h2>인터파크 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }else{
-    echo "<h2>모든 사건 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'></a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    echo "<h2>ALL 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }
 
 
@@ -118,12 +118,33 @@ if(isset($request->suit_id)){
     }
 </style>
 <script>
-    $(window).scroll(function()
-    {
-        $('#detailClient').animate({top:$(window).scrollTop()+"px" },{queue: false, duration: 150});
+    $(function(){
+        var $win = $(window);
+        var top = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
+        console.log(top);
+
+        /*사용자 설정 값 시작*/
+        var speed          = 100;     // 따라다닐 속도 : "slow", "normal", or "fast" or numeric(단위:msec)
+        var easing         = 'linear'; // 따라다니는 방법 기본 두가지 linear, swing
+        var $layer         = $('#detailClient'); // 레이어 셀렉팅
+        var layerTopOffset = 0;   // 레이어 높이 상한선, 단위:px
+        $layer.css('position', 'absolute');
+        $layer.css('height', $(window).height() - 195);
+        /*사용자 설정 값 끝*/
+
+        // 스크롤 바를 내린 상태에서 리프레시 했을 경우를 위해
+        if (top > 0 ) $win.scrollTop(layerTopOffset+top);
+        else $win.scrollTop(0);
+
+        //스크롤이벤트가 발생하면
+        $(window).scroll(function(){
+            yPosition = $win.scrollTop() - 166; //상단간격
+            if (yPosition < 0){ yPosition = 0; }
+            $layer.animate({"top":yPosition }, {duration:speed, easing:easing, queue:false});
+        });
     });
 </script>
-    <div class="text-center" style="white-space: nowrap;padding:0 10px 10px 10px;">
+    <div class="text-center" style="position:relative;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
             <div id="detailClient" class="bigbox box2 col-xs-4" style="overflow-y:scroll;height:600px;">
                 <div style="">
@@ -176,7 +197,7 @@ if(isset($request->suit_id)){
                 <div style="display:block;clear:both;"></div>
             </div>
 
-            <div class="bigbox  col-xs-8" style="white-space:normal;">
+            <div class="bigbox  col-xs-8 col-xs-offset-4" style="white-space:normal;">
                     <h4>세부내용</h4>
                     <div  id="detailInfoBox">
 
@@ -427,7 +448,7 @@ if(isset($request->suit_id)){
 
     .textarea문자내용 {height:100px;width:185px;margin-bottom:5px;}
     .sms_title {color:#59636e; font-weight:bold}
-    #sms_content {width:180px; height:150px; border:1px solid #98b2cc;}
+    #sms_content {width:180pxdow heig; height:150px; border:1px solid #98b2cc;}
     #btnSendSMS {background-color:#567696; color:#ffffff; border:1px outset #567696; padding:3px; border-radius:5px;}
 </style>
 

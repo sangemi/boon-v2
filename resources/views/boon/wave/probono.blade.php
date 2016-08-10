@@ -157,7 +157,11 @@ echo "ddddddd다름";
     }
 </style>
 
+<div class="row" style="padding:0 10px 10px 10px;background-color: white;text-align:center;">
+    <div style="background-image:url('/img/wave/wave-probono-people.jpg');height:246px;" ></div>
+</div>
 <div class="row" style="padding:0 10px 10px 10px;">
+
     <div class="">
         <h1>1. 소비자 권익증진기금 지원</h1>
         <blockquote class="">
