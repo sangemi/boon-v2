@@ -119,17 +119,20 @@ if(isset($request->suit_id)){
 </style>
 <script>
     $(function(){
+
+        $('#detailClient').css('height', $(window).height() - 55);
+        $('#detailInfoBox').css('height', $(window).height() - 105);
+
+        /*따라다니는 레이어 시작*/
         var $win = $(window);
         var top = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
         console.log(top);
-
         /*사용자 설정 값 시작*/
         var speed          = 100;     // 따라다닐 속도 : "slow", "normal", or "fast" or numeric(단위:msec)
         var easing         = 'linear'; // 따라다니는 방법 기본 두가지 linear, swing
         var $layer         = $('#detailClient'); // 레이어 셀렉팅
         var layerTopOffset = 0;   // 레이어 높이 상한선, 단위:px
         $layer.css('position', 'absolute');
-        $layer.css('height', $(window).height() - 195);
         /*사용자 설정 값 끝*/
 
         // 스크롤 바를 내린 상태에서 리프레시 했을 경우를 위해
@@ -142,8 +145,11 @@ if(isset($request->suit_id)){
             if (yPosition < 0){ yPosition = 0; }
             $layer.animate({"top":yPosition }, {duration:speed, easing:easing, queue:false});
         });
+        /*따라다니는 레이어 끝*/
     });
 </script>
+
+
     <div class="text-center" style="position:relative;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
             <div id="detailClient" class="bigbox box2 col-xs-4" style="overflow-y:scroll;height:600px;">
@@ -197,7 +203,7 @@ if(isset($request->suit_id)){
                 <div style="display:block;clear:both;"></div>
             </div>
 
-            <div class="bigbox  col-xs-8 col-xs-offset-4" style="white-space:normal;">
+            <div class="bigbox  col-xs-8 col-xs-offset-4" style="margin-bottom:400px;">
                     <h4>세부내용</h4>
                     <div  id="detailInfoBox">
 
@@ -206,10 +212,13 @@ if(isset($request->suit_id)){
             </div>
 
         </div>
+
         <div class="row">
 
         </div>
     </div>
+
+    <div class="" style="clear:both;display:block;"></div>
 
     {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         {{dd( Request::input(), http_build_query (Request::input()) ) }}
