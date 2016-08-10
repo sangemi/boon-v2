@@ -9,10 +9,8 @@ use App\WaveSuit;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
 
 class WaveMainController extends Controller
 {
@@ -23,22 +21,6 @@ class WaveMainController extends Controller
         }else{
             return view('boon.site.wave0', compact('request'));
         }
-
-        /*로그인 상태면 바로 관리화면으로!*/
-        if(Auth::user()){
-            $wave_client = DB::table ( 'wave_clients' );
-            $wave_client = $wave_client -> where (function($query){
-                $query  -> where('user_id', Auth::id() );
-                    //-> orWhere ( 'content', 'like', '%aa%');
-            } );
-            $wave_client = $wave_client -> paginate(10);
-
-            return view('boon.wave.mypage', compact('wave_client'));
-
-        }else{
-            return view('boon.site.wave0');
-        }
-
 
     }
 
@@ -136,14 +118,20 @@ class WaveMainController extends Controller
 
     }
 
-
-    public function dashboard()
+    /*어드민관리*/
+    public function dashboard(Request $request)
     {
         if(Auth::check()) {
             $current_id = Auth::user()->id;
+
             if ($current_id == 1 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
-                $wave_client = WaveClient::all();
-                return view('boon.wave.dashboard', compact('wave_client'));
+                if(isset($request->wave_id)){
+                    $wave_client = WaveClient::where('suit_id', $request->wave_id)->get();
+                    return view('boon.wave.dashboard', compact('wave_client'));
+                }else{
+                    $wave_client = WaveClient::all();
+                    return view('boon.wave.dashboard', compact('wave_client'));
+                }
             } else {
                 return "권한없음. 접속오류";
             }
