@@ -37,12 +37,14 @@ class WaveMainController extends Controller
                 ->select('recommend_users.*', 'users.name', 'users.created_at as user_created_at')
                 ->where('recommending_id', Auth::user()->id)
                 ->where('recommended_id', '<>', '0')
-                ->where('category', '=', 'wave')->paginate(10);
+                ->where('category', '=', 'wave')->get();
             $recommend_pay = DB::table('recommend_users')
                 ->leftJoin('users', 'recommend_users.recommended_id', '=', 'users.id')
-                ->select('recommend_users.*', 'users.name')
+                ->leftJoin('wave_clients', 'recommend_users.recommended_id', '=', 'wave_clients.user_id')
+                ->select('recommend_users.*', 'users.name', 'wave_clients.chk_payment')
                 ->where('recommending_id', Auth::user()->id)
-                ->where('category', '=', 'wave')->paginate(10);
+                ->where('recommended_id', '<>', '0')
+                ->where('category', '=', 'wave')->get();
 
             return view('boon.wave.recommend_result', compact('recommend_click', 'recommend_join', 'recommend_pay'));
         }else{

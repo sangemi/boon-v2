@@ -72,16 +72,15 @@ echo "ddddddd다름";
         border-radius:10px;
     }
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
-    h1 { color: #; }
 
-    }
+    th {text-align:center;}
 </style>
 
         <div class="row p-b" style="margin-bottom:30px;background-color:white;">
             <div class="col-md-10 col-md-offset-1 ">
-                <h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">소비자 권리지킴이 활동</h2>
+                <h2 class="">소비자 권리지킴이 활동</h2>
                 <p></p>
-                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                <p class="wow fadeInUp">
 
                 </p>
                 <div id="" style="display:block;">
@@ -91,7 +90,8 @@ echo "ddddddd다름";
                                 이후 2년이 더 경과하면 시효가 완성되어 기업은 금전배상책임까지 없게됩니다.</small>
                         <p>나. 현재 소비자권리를 보호받는 방법은 단체소송이 가장 현실적입니다. 단체소송의 법리는 일반소송과 크게 다르지는 않습니다.
                             다만 수백~수천 소송인단을 이끌고 수년을 버티기가 힘들어 어느 로펌도 쉽게 시작하지 않을 뿐입니다.
-                            <br /><br />힘을 보태 주십시오. <br />
+                            <br /><br />
+                            <b><u>힘을 보태 주십시오.</u></b> <br />
                             법무법인 예율 단체소송팀과 함께 마땅히 누려야 할 소비자들의 권리를 지켜 주십시오.
                             긴 싸움에서 소송팀도 지치지 않도록 마음을 모아 주십시오.
                             <br>
@@ -104,7 +104,7 @@ echo "ddddddd다름";
                     <div class="col-sm-6">
                         <p>
                             아래 링크를 카카오톡/블로그/페이스북 등에 공유해 많은 분들이 소송에 참여할 수 있도록 독려해 주시기 바랍니다. <br><br>
-                            적극적인 노력으로 다수의 소송 참여자를 모집한 분들께는 법무법인 예율에서 ‘소비자 권리지킴이’ 공로상을 수여할 예정입니다.
+                            적극적인 노력으로 다수의 소송 참여자를 모집한 분들께는 법무법인 예율에서 <b><u>‘소비자 권리지킴이’ 공로상</u></b>을 수여할 예정입니다.
                             또한 모든 참여자분들께도 예율이 드릴 수 있는 최대한의 서비스를 제공드립니다. 감사합니다.
                             <br><small>※ 본 페이지에서 개인별 링크 활용내역을 확인할 수 있습니다.</small>
 
@@ -192,14 +192,14 @@ echo "ddddddd다름";
 
             <div class="col-sm-7" style="white-space:normal;">
                 <div class="bigbox">
-                    <h4>신청서 작성자</h4>
+                    <h4>가입/신청자</h4>
                     <table class="table table-bordered table-condensed">
-                        <tr><th></th><th>소송</th><th>성함</th><th>IP</th><th>접수일</th></tr>
+                        <tr><th></th><th>소송</th><th>성함</th><th>IP</th><th>가입일</th></tr>
                         @foreach ($recommend_join as $key=> $recommend_val)
                             <tr>
                                 <td><?=(1+$key)?></td>
-                                <td><?=$recommend_val->cate_number?></td>
-                                <td><?=sk::hide_kname($recommend_val->name)?></td> {{--* 익명 처리해야--}}
+                                <td>#<?=$recommend_val->cate_number?></td>
+                                <td><?=sk::hide_kname($recommend_val->name)?></td> {{--* 익명 처리--}}
                                 <td><?=$recommend_val->ip_addr?></td>
                                 <td><?=substr($recommend_val->user_created_at, 5, 11)?></td>
                                 <?php
@@ -210,20 +210,20 @@ echo "ddddddd다름";
                             </tr>
                         @endforeach
                     </table>
-                    {!! $recommend_join->render() !!}
+
 
 
                 </div>
                 <div class="bigbox">
                     <h4>실제 참여자</h4>
                     <table class="table table-bordered table-condensed">
-                        <tr><th></th><th>소송</th><th>성함</th><th>IP</th><th>접수일</th></tr>
+                        <tr><th></th><th>소송</th><th>성함</th><th>접수상태</th><th>접수일</th></tr>
                         @foreach ($recommend_pay as $key=> $recommend_val)
                             <tr>
                                 <td><?=(1+$key)?></td>
-                                <td><?=$recommend_val->cate_number?></td>
-                                <td><?=sk::hide_kname($recommend_val->name)?></td> {{--* 익명 처리해야--}}
-                                <td><?=$recommend_val->ip_addr?></td>
+                                <td>#<?=$recommend_val->cate_number?></td>
+                                <td><?=sk::hide_kname($recommend_val->name)?></td> {{--* 익명 처리--}}
+                                <td><?=($recommend_val->chk_payment == '입금완료')?'참여':'미확정';?></td>
                                 <td><?=substr($recommend_val->created_at, 5, 11)?></td>
                                 <?php
 
@@ -233,7 +233,7 @@ echo "ddddddd다름";
                             </tr>
                         @endforeach
                     </table>
-                    {!! $recommend_pay->render() !!}
+
 
 
                 </div>

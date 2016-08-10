@@ -190,7 +190,7 @@ $(document).ready(function(){
 
                 <label class="col-sm-2 col-lg-2 control-label"></label>
                 <div class="col-sm-10 col-lg-10">
-                    <h4>비용 입금 <small>금1만1천원(vat포함)</small></h4>
+                    <h4>비용 입금 <small>금9900원(vat포함)</small></h4>
                 </div>
 
                 {!! BootForm::text( "비용 입금자" , 'data11')->placeholder("비용 입금시 이름")  !!}
