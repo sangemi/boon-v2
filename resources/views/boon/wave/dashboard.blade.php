@@ -156,7 +156,7 @@ if(isset($request->suit_id)){
 
                     <h4>접수인단 <small>[결제]</small></h4>
                     <?php
-                    $amt_total = 0; $cnt_total = 0;
+                    $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
                     ?>
                     @if (empty($wave_client))
                         <div class="col-sm-12">
@@ -187,21 +187,27 @@ if(isset($request->suit_id)){
                                 @else
                                     <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
                                 @endif
-
+                                <?php //중복가능성 체크
+                                    if(in_array($client['name'], $client_arr_untilnow)){
+                                    echo "<small style='color:red;'>*중복확인</small>";
+                                    }
+                                    $client_arr_untilnow[] = $client['name'];
+                                ?>
                             </div>
 
                         @endforeach
                     @endif
                     <div style="display:block;clear:both;"></div>
+                    <?php
+                    if ($current_id == 1){ // SK만 보임
+                        echo "<p style='background-color:#eee;padding:10px;;' id='div_amt_total'>".number_format($cnt_total)."명 / 총액".number_format($amt_total)."원</p>";
+                        ?><script>$(document).ready(function() { $("#detailInfoBox").append($("#div_amt_total").html()) });</script><?php
+                    }
+                    ?>
                 </div>
                 <div style="display:block;clear:both;"></div>
-                <?php
-                if ($current_id == 1){ // SK만 보임
-                    echo "<p style='position:absolute;bottom:0px;left:45px;'>".number_format($cnt_total)."명/합".number_format($amt_total)."원 입금</p>";
-                }
-                ?>
-
             </div>
+
 
             <div class="bigbox  col-xs-8 col-xs-offset-4" style="margin-bottom:400px;">
                     <h4>세부내용</h4>
