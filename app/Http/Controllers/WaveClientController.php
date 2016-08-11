@@ -322,9 +322,10 @@ class WaveClientController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		WaveClient::destroy($id); //CcMailSample::find($id)->delete();
+		WaveClient::destroy($id);
 		Session::flash('message', '삭제되었습니다.');
-		return $this->index();
+		$return = array("data" => "삭제완료", "result" => "success");
+		return response()->json($return); //return "success"; //$this->index();
 	}
 
 }

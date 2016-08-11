@@ -151,8 +151,7 @@ class WaveMainController extends Controller
         $wave_suits = WaveSuit::all(); //->get() //all() 에는 get()이 포함되어 있음.
         //$wave_client = WaveClient::where('user_id', Auth::id());
         $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
-        $suit_title = Array();
-
+        $my_suits = Array();
         foreach($wave_client as $clien){
             $suit_obj = $clien->suit()->first();
             $my_suits[]= $suit_obj;

@@ -12,7 +12,6 @@
 @section('content')
 
 <script type="text/javascript" src="/lib/common.sk.js"></script>
-<link rel="stylesheet" href="{{URL::asset('/css/boon/ccMail.css')}}">
 
 
 {{--페이지 작은 네비바 대체--}}
@@ -157,7 +156,7 @@ if(isset($request->suit_id)){
 
                     <h4>접수인단 <small>[결제]</small></h4>
                     <?php
-                    $amt_total = 0;
+                    $amt_total = 0; $cnt_total = 0;
                     ?>
                     @if (empty($wave_client))
                         <div class="col-sm-12">
@@ -166,7 +165,7 @@ if(isset($request->suit_id)){
                     @else
                         @foreach ($wave_client as $no => $client)
                             <?php
-                            $amt_total += $client['amt_payment'];
+                            $amt_total += $client['amt_payment']; $cnt_total++;
                             ?>
                             <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"
                                                     data-chk_payment="<?=$client['chk_payment']?>"
@@ -193,14 +192,15 @@ if(isset($request->suit_id)){
 
                         @endforeach
                     @endif
-                    <?php
-                    if ($current_id == 1){ // SK만 보임
-                        echo "<p>총 ".number_format($amt_total)."원 입금</p>";
-                    }
-                    ?>
                     <div style="display:block;clear:both;"></div>
                 </div>
                 <div style="display:block;clear:both;"></div>
+                <?php
+                if ($current_id == 1){ // SK만 보임
+                    echo "<p style='position:absolute;bottom:0px;left:45px;'>".number_format($cnt_total)."명/합".number_format($amt_total)."원 입금</p>";
+                }
+                ?>
+
             </div>
 
             <div class="bigbox  col-xs-8 col-xs-offset-4" style="margin-bottom:400px;">
@@ -262,38 +262,40 @@ if(isset($request->suit_id)){
                 console.log(data);
                 var detail_html = '';
                 detail_html =
-                        "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + '[입금액:'+data['data']['amt_payment']+']원</p></div>' +
+                        "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
+                        "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + "[입금액:'+data['data']['amt_payment']+']원</p></div>" +
 
-                        "<div class='row'><p class='col-xs-2'>소송타입</p><p class='col-xs-10'>" + data['data']['data15'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>소송타입</p><p class='col-xs-10'>" + data['data']['data15'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + "</p></div>" +
 
-                        "<div class='row'><p class='col-xs-2'><b>이름</b></p><p class='col-xs-10'>" + data['data']['name'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'><b>이름</b></p><p class='col-xs-10'>" + data['data']['name'] + "</p></div>" +
                         "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" +
                             "<a href='javascript:void(0)' class='btn_smsbox'>" + data['data']['phone'] + "</a>" +
                         "</p></div>" +
-                        "<div class='row'><p class='col-xs-2'>주민</p><p class='col-xs-10'>" + data['data']['jumin'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>주소</p><p class='col-xs-10'>" + data['data']['addr'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>주소2</p><p class='col-xs-10'>" + data['data']['addr2'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>우편번호</p><p class='col-xs-10'>" + data['data']['postcode'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>제품명</p><p class='col-xs-10'>" + data['data']['data01'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>구입렌탈일</p><p class='col-xs-10'>" + data['data']['data02'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>설치일</p><p class='col-xs-10'>" + data['data']['data03'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>음용량</p><p class='col-xs-10'>" + data['data']['data04'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>신체증상</p><p class='col-xs-10'>" + data['data']['data05'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>인원</p><p class='col-xs-10'>" + data['data']['data06'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>동거인</p><p class='col-xs-10'>" + data['data']['data07'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>은행명</p><p class='col-xs-10'>" + data['data']['data08'] + data['data']['data09'] + data['data']['data10'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>입금인</p><p class='col-xs-10'>" + data['data']['data11'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>주민</p><p class='col-xs-10'>" + data['data']['jumin'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>주소</p><p class='col-xs-10'>" + data['data']['addr'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>주소2</p><p class='col-xs-10'>" + data['data']['addr2'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>우편번호</p><p class='col-xs-10'>" + data['data']['postcode'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>제품명</p><p class='col-xs-10'>" + data['data']['data01'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>구입렌탈일</p><p class='col-xs-10'>" + data['data']['data02'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>설치일</p><p class='col-xs-10'>" + data['data']['data03'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>음용량</p><p class='col-xs-10'>" + data['data']['data04'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>신체증상</p><p class='col-xs-10'>" + data['data']['data05'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>인원</p><p class='col-xs-10'>" + data['data']['data06'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>동거인</p><p class='col-xs-10'>" + data['data']['data07'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>은행명</p><p class='col-xs-10'>" + data['data']['data08'] + data['data']['data09'] + data['data']['data10'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>입금인</p><p class='col-xs-10'>" + data['data']['data11'] + "</p></div>" +
 
-                        "<div class='row'><p class='col-xs-2'>성보입금</p><p class='col-xs-10'>" + data['data']['bank_name'] + data['data']['bank_number']+ data['data']['bank_owner'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>성보입금</p><p class='col-xs-10'>" + data['data']['bank_name'] + data['data']['bank_number']+ data['data']['bank_owner'] + "</p></div>" +
 
-                        "<div class='row'><p class='col-xs-2'>철회여부</p><p class='col-xs-10'>" + data['data']['withdraw'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>비고</p><p class='col-xs-10'>" + data['data']['bigo'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['created_at'] + '</p></div>' +
+                        "<div class='row'><p class='col-xs-2'>철회여부</p><p class='col-xs-10'>" + data['data']['withdraw'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>비고</p><p class='col-xs-10'>" + data['data']['bigo'] + "</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['created_at'] + "</p></div>" +
 
-                        "<div class='row'><p class='col-xs-12 text-right'><span class='btn btn-xs btn-default btn-del-client'>신청서 삭제</span></p></div>"
+                        "<div class='row'><p class='col-xs-12 text-right'><span class='btn-del-client btn btn-xs btn-default'>신청서 삭제</span></p></div>" +
+                        "</div>"
                 ;
 
                 $("#detailInfoBox").html(detail_html);
@@ -308,26 +310,23 @@ if(isset($request->suit_id)){
     $(document).ready(function() {
 
         $(document).on('click', '.btn-del-client', function() {
-            if(confirm('정말 삭제하시겠습니까? \n\n\n되돌릴 수 없습니다.')){
+            if(confirm('정말 삭제하시겠습니까? \n\n되돌릴 수 없습니다.')){
 
-                var my_url = '';
+                $this = $(this);
+                var my_url = '/wave/client/' + $this.parents(".detail_client").data('client_id');
                 var formData = {
-                    row_id: row_id,
-                    amt_payment: $('#amt_payment').val(),
-                    chk_payment: $('input[name=chk_payment]:checked').val(),
+                    /* client_id: $(this).parents(".detail_client").data('client_id'),*/
                 }
 
                 $.ajax({
-                    type: "POST", url: my_url, data: formData, dataType: 'json',
+                    type: "DELETE", url: my_url, data: formData, dataType: 'json',
                     success: function (data) {
                         console.log(data);
                         if(data['result'] == 'success'){
-                            $('#myModal').modal('hide');
+                            $this.parents(".detail_client").html("삭제되었습니다");
                         }else{
                             alert(data['result'] + '\n\n' + data['data']);
                         }
-
-
                     },
                     error: function (data) { console.log('SK Error:', data); }
                 });
