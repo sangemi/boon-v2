@@ -141,7 +141,7 @@ if(isset($request->suit_id)){
 
         //스크롤이벤트가 발생하면
         $(window).scroll(function(){
-            yPosition = $win.scrollTop() - 166; //상단간격
+            yPosition = $win.scrollTop() - 180; //상단간격. 커질수록 위에 붙음
             if (yPosition < 0){ yPosition = 0; }
             $layer.animate({"top":yPosition }, {duration:speed, easing:easing, queue:false});
         });

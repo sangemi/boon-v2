@@ -80,16 +80,16 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::get('register', 'Auth\AuthController@getRegister');
     Route::post('register', 'Auth\AuthController@postRegister');
 
+    // 패스워드 초기화 링크 요청 routes...
     Route::controllers([
         'auth' => 'Auth\AuthController',
         'password' => 'Auth\PasswordController',
     ]);
+    Route::get('home', function () { return redirect('/'); }); // 비번재설정 후 /home으로 가서
 
-
-    //// 화면 (J)
-    // 패스워드 초기화 링크 요청 routes...
-    Route::get('password/email', 'Auth\PasswordController@getEmail');
-    Route::post('password/email', 'Auth\PasswordController@postEmail');
+    // 위에서. 여기 안들어옴.
+    /*Route::get('password/email', 'Auth\PasswordController@getEmail');
+    Route::post('password/email', 'Auth\PasswordController@postEmail');*/
     // 패스워드 초기화 routes...
     Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
     Route::post('password/reset', 'Auth\PasswordController@postReset');

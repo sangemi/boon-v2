@@ -29,6 +29,7 @@ return [
     */
 
     'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    //'host' => env('MAIL_HOST', 'mw-002.cafe24.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'help@boonzero.com', 'name' => '분쟁제로'],
 
     /*
     |--------------------------------------------------------------------------
