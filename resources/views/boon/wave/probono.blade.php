@@ -152,13 +152,17 @@ echo "ddddddd다름";
         border-radius:10px;
     }
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
-    h1 { color: #; }
 
+    #top-image {position: relative; z-index: 1;height:250px;}
+    #top-image:before {
+        content: "";position: absolute; z-index: -1;  top: 0;        left: 0;        width: 100%;
+        opacity: .4;
+        background:url('/img/wave/wave-probono-people.jpg');height:246px;
     }
 </style>
 
-<div class="row" style="padding:0 10px 10px 10px;background-color: white;text-align:center;">
-    <div style="background-image:url('/img/wave/wave-probono-people.jpg');height:246px;" ></div>
+<div class="" id="top-image" style="padding:0 10px 10px 10px;text-align:center;color:gray;:white;font-size:2.5em;">
+    <br><br>공익활동 Probono
 </div>
 <div class="row" style="padding:0 10px 10px 10px;">
 
@@ -168,11 +172,11 @@ echo "ddddddd다름";
             <h5>여러분이 내신 소송비용 일부는 소비자보호운동에 쓰여집니다.</h5>
         </blockquote>
 
-        <div class="col-sm-5  text-center" style="height:250px;background-repeat:no-repeat;background-image:url('/img/wave/wave-probono-1.jpg');background-size:contain;">
+        <div class="col-sm-5  text-center" style="height: 250px;background-repeat: no-repeat;background-image: url('/img/wave/wave-probono-1.jpg');background-size: contain;">
             {{--<br />
             <b>2016. 소비자 권익증진지금</b>--}}
         </div>
-        <div class="col-sm-7" style="">
+        <div class="col-sm-7 well" style="">
             <p>
                 소비자권익을 찾기 위한 소비자보호운동은 헌법에서도 명시적으로 규정되어 있습니다.
 
@@ -222,15 +226,14 @@ echo "ddddddd다름";
             {{--<br />
             <b>2016. 소비자 권익증진지금</b>--}}
         </div>
-        <div class="col-sm-7" style="">
-            <p>
-                <br>
+        <div class="col-sm-7 well" style="">
+            <p class="">
                 변호사비용의 부담으로 소송절차를 홀로 진행하는 경우가 80%가 넘습니다.
                 집단소송은 착수금이 일반 소송에 비해 비교적 저렴하나, 어떤 분에게는 그것마저 부담일 수 있습니다.
                 여러 분들이 질문하십니다. "확실히 이길지도 모르는데 비용을 내고 진행해야 하나요?" 네, 그 위험부담을 저희가 안고 가겠습니다.
                 <blockquote>
                     {{--억울합니다. 손해만 보고 피해를 보상받을지도 확실히 모르는데 소송비용을 또 내야합니까.--}}
-                    분쟁제로에서 진행하는 모든 소송에 대해서, 소송인단이 1000명이 될때마다 그 중 100명의 소송비용을 환급드리겠습니다.
+                    분쟁제로에서 진행하는 모든 소송에 대해서, 소송인단이 1000명이 될때마다 그 중 <b><u>100명의 소송비용을 환급</u></b>드리겠습니다.
                 </blockquote>
             </p>
             <p></p>
@@ -242,7 +245,10 @@ echo "ddddddd다름";
 
             <p>
                 법무법인 예율은 집단소송으로 인한 이익의 일부를 소비자주권 성장에 아낌없이 쓰도록 하겠습니다. 감사합니다.
-                <p class="text-right" style="margin-top:35px;">법무법인 예율, 대표변호사 김웅·김상겸</p>
+                <p class="text-right" style="color:black;background-image:url('/img/wave/yeyul-stamp.png');background-repeat:no-repeat;background-position:right;background-size:contain;margin-top:35px;height:60px;">
+                    <br><b>법무법인 예율, 대표변호사 김웅·김상겸</b> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+
+                </p>
             </p>
             {{--<p>
                 <b>관련뉴스</b>

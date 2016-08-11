@@ -208,7 +208,6 @@ if(isset($request->suit_id)){
                     <div  id="detailInfoBox">
 
                     </div>
-
             </div>
 
         </div>
@@ -292,8 +291,9 @@ if(isset($request->suit_id)){
 
                         "<div class='row'><p class='col-xs-2'>철회여부</p><p class='col-xs-10'>" + data['data']['withdraw'] + '</p></div>' +
                         "<div class='row'><p class='col-xs-2'>비고</p><p class='col-xs-10'>" + data['data']['bigo'] + '</p></div>' +
-                        "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['created_at'] + '</p></div>'
+                        "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['created_at'] + '</p></div>' +
 
+                        "<div class='row'><p class='col-xs-12 text-right'><span class='btn btn-xs btn-default btn-del-client'>신청서 삭제</span></p></div>"
                 ;
 
                 $("#detailInfoBox").html(detail_html);
@@ -306,6 +306,34 @@ if(isset($request->suit_id)){
 
 
     $(document).ready(function() {
+
+        $(document).on('click', '.btn-del-client', function() {
+            if(confirm('정말 삭제하시겠습니까? \n\n\n되돌릴 수 없습니다.')){
+
+                var my_url = '';
+                var formData = {
+                    row_id: row_id,
+                    amt_payment: $('#amt_payment').val(),
+                    chk_payment: $('input[name=chk_payment]:checked').val(),
+                }
+
+                $.ajax({
+                    type: "POST", url: my_url, data: formData, dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        if(data['result'] == 'success'){
+                            $('#myModal').modal('hide');
+                        }else{
+                            alert(data['result'] + '\n\n' + data['data']);
+                        }
+
+
+                    },
+                    error: function (data) { console.log('SK Error:', data); }
+                });
+            }
+        });
+
 
         //display modal form for task editing
         $('.open-modal').click(function () { // 수정시. 신규입력시에는 task_name = '';로 해서 하자.

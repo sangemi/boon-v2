@@ -262,6 +262,7 @@ class Swift_Transport_StreamBuffer extends Swift_ByteStream_AbstractFilterableIn
             $options['socket']['bindto'] = $this->_params['sourceIp'].':0';
         }
 
+        // 실서버에서는 이걸 해야만하네.. ㅜ.ㅜ
         $options['ssl']['verify_peer'] = FALSE;
         $options['ssl']['verify_peer_name'] = FALSE;
 
