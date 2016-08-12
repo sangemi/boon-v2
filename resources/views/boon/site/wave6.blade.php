@@ -297,7 +297,7 @@
 		</div>
 
 		<p class="text-center" style="margin-top:30px;margin-bottom:-30px;">
-		<img src="/site/wave/images/popup/popup-wave6.png" alt="" />
+		<img src="/site/wave/images/popup/popup-wave6.png" alt="" style="width:100%;" />
 		</p>
 
 
