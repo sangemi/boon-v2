@@ -13,8 +13,9 @@
 
 $('.popup_bl').click(function(){
     $(this).hide();
+    $("#정통법소개").attr("tabindex", -1).focus();
 });
-$('.d_winBanner').show();
+
 
 $('.popup_bl').popupWin2({
     moveSpeed:200,

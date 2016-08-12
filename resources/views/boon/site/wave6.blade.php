@@ -296,8 +296,10 @@
 			</span>
 		</div>
 
+
+		<div id="정통법소개">&nbsp;</div>
 		<p class="text-center" style="margin-top:30px;margin-bottom:-30px;">
-		<img src="/site/wave/images/popup/popup-wave6.png" alt="" style="width:100%;" />
+		<img src="/site/wave/images/popup/popup-wave6.png" alt="" style="width:100%;max-width:500px;" />
 		</p>
 
 
@@ -448,7 +450,6 @@
 
 			</div>
 		</div>
-
 
 
 		<a  name="소송비용"></a>
@@ -705,35 +706,37 @@
 
 {{--긴급 팝업 추가 2016.8.--}}
 <div class="popup_bl_position">
-	{{--<div class="popup_bl">
-		<!-- 작은 배너 -->
-		<a href="#none" class="d_open"><img src="/site/wave/images/popup/popup-wave6.png" alt="" /></a>
-		<!-- //작은 배너 -->
+	<div class="popup_bl">
+		{{--<!-- 작은 배너 -->
+		<a href="#none" class="d_open"><img src="/site/wave/images/popup/popup-wave6-icon.png" alt="" /></a>
+		<!-- //작은 배너 -->--}}
+
+		{{--
+                <div class="d_winBanner">
+                    <!-- 큰 배너 -->ddd
+                    <a href="#none"><img src="/site/wave/images/popup/popup-wave6.png"/></a><!--이미지가로 100%-->
+                    <!-- //큰 배너 -->
 
 
-		<div class="d_winBanner">
-			<!-- 큰 배너 -->ddd
-			<a href="#none"><img src="/site/wave/images/popup/popup-wave6.png"/></a><!--이미지가로 100%-->
-			<!-- //큰 배너 -->
+                    <div id="d_checkBox" class="-chk">dd
+                        <input id="d_check1" type="checkbox" />
+                        <label for="d_check1">하루동안 열지 ㅇ낳기</label>
+                    </div>
+                    <div class="d_close"><img src="/site/wave/images/popup/close_btn.png"/></div>
+                </div>--}}
 
 
-			<div id="d_checkBox" class="-chk">dd
-				<input id="d_check1" type="checkbox" />
-				<label for="d_check1">하루동안 열지 ㅇ낳기</label>
-			</div>
-			<div class="d_close"><img src="/site/wave/images/popup/close_btn.png"/></div>
-		</div>
-
-
-	</div>--}}
+	</div>
 </div><!-- //좌측하단 팝업 배너 -->
+<a href="#none" id="btn_wave_300_icon"><img src="/site/wave/images/popup/popup-wave6-icon.png" alt="" /></a>
 <style>
+	#btn_wave_300_icon {position:fixed; z-index:999; left:10; bottom:5px;}
 	/* 좌측하단 팝업 */
-	.popup_bl_position { position:fixed; z-index:999; left:0; top:250px;; widht:0; height:0; font-family:'Nanum Gothic'; }
+	.popup_bl_position { position:fixed; z-index:999; left:10; bottom:5px;; widht:0; height:0; font-family:'Nanum Gothic'; }
 	.popup_bl { position:absolute;left:0; bottom:0; width:150px;height:150px; }
 
 	.popup_bl .d_winBanner { position:absolute; left:40px; bottom:30px; width:500px; height:600px/*사이즈필수*/; overflow:hidden; visibility:hidden; }
-	.popup_bl #d_checkBox { position:absolute; bottom:35px; right:60px; }
+	.popup_bl #d_checkBox { position:absolute; bottom:0px; right:60px; }
 	.popup_bl .d_winBanner .d_close { position:absolute; top:35px; right:25px; cursor:pointer; }
 </style>
 <script src="/site/wave/js/jquery.popup.js"></script>
