@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.popup.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -51,16 +48,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="password.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/emails/password.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.071429">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,45 +58,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31499052">
-              <caret line="184" column="47" selection-start-line="184" selection-start-column="47" selection-end-line="184" selection-end-column="47" />
+            <state vertical-scroll-proportion="-12.392858">
+              <caret line="212" column="53" selection-start-line="212" selection-start-column="53" selection-end-line="212" selection-end-column="53" />
               <folding>
                 <element signature="e#1581#1616#0#HTML" expanded="true" />
-                <element signature="e#5119#5190#0#HTML" expanded="true" />
-                <element signature="e#5282#5321#0#HTML" expanded="true" />
-                <element signature="e#8156#8189#0#HTML" expanded="true" />
-                <element signature="e#8672#8705#0#HTML" expanded="true" />
-                <element signature="e#8792#8820#0#HTML" expanded="true" />
-                <element signature="e#9038#9071#0#HTML" expanded="true" />
-                <element signature="e#9769#9791#0#HTML" expanded="true" />
-                <element signature="e#9887#9911#0#HTML" expanded="true" />
-                <element signature="e#22136#22156#0#HTML" expanded="true" />
-                <element signature="e#22167#22201#0#HTML" expanded="true" />
-                <element signature="e#24761#24793#0#HTML" expanded="true" />
-                <element signature="e#25464#25506#0#HTML" expanded="true" />
-                <element signature="e#25792#25825#0#HTML" expanded="true" />
-                <element signature="e#25972#26005#0#HTML" expanded="true" />
-                <element signature="e#26087#26112#0#HTML" expanded="true" />
-                <element signature="e#26159#26179#0#HTML" expanded="true" />
-                <element signature="e#26205#26250#0#HTML" expanded="true" />
-                <element signature="e#26364#26389#0#HTML" expanded="true" />
-                <element signature="e#26440#26460#0#HTML" expanded="true" />
-                <element signature="e#26505#26582#0#HTML" expanded="true" />
-                <element signature="e#26656#26689#0#HTML" expanded="true" />
-                <marker date="1470917811610" expanded="true" signature="952:968" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="1009:1025" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="1120:1136" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="1177:1193" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="1271:1287" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="1328:1344" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="7853:7863" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="8316:8352" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="8332:8352" placeholder="..." />
-                <marker date="1470917811610" expanded="true" signature="10628:14338" placeholder="..." />
+                <element signature="e#5095#5166#0#HTML" expanded="true" />
+                <element signature="e#5256#5295#0#HTML" expanded="true" />
+                <element signature="e#8150#8183#0#HTML" expanded="true" />
+                <element signature="e#8666#8699#0#HTML" expanded="true" />
+                <element signature="e#8786#8814#0#HTML" expanded="true" />
+                <element signature="e#9052#9085#0#HTML" expanded="true" />
+                <element signature="e#9783#9805#0#HTML" expanded="true" />
+                <element signature="e#9901#9925#0#HTML" expanded="true" />
+                <element signature="e#22150#22170#0#HTML" expanded="true" />
+                <element signature="e#22181#22215#0#HTML" expanded="true" />
+                <element signature="e#24775#24807#0#HTML" expanded="true" />
+                <element signature="e#25478#25520#0#HTML" expanded="true" />
+                <element signature="e#25806#25839#0#HTML" expanded="true" />
+                <element signature="e#25986#26019#0#HTML" expanded="true" />
+                <element signature="e#26101#26126#0#HTML" expanded="true" />
+                <element signature="e#26173#26193#0#HTML" expanded="true" />
+                <element signature="e#26219#26264#0#HTML" expanded="true" />
+                <element signature="e#26378#26403#0#HTML" expanded="true" />
+                <element signature="e#26454#26474#0#HTML" expanded="true" />
+                <element signature="e#26519#26596#0#HTML" expanded="true" />
+                <element signature="e#26670#26703#0#HTML" expanded="true" />
+                <marker date="1470918345526" expanded="true" signature="952:968" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="1009:1025" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="1120:1136" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="1177:1193" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="1271:1287" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="1328:1344" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="7847:7857" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="8310:8346" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="8326:8346" placeholder="..." />
+                <marker date="1470918345526" expanded="true" signature="10642:14352" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wave6.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33472803">
+              <caret line="304" column="43" selection-start-line="304" selection-start-column="43" selection-end-line="304" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.popup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/site/wave/js/jquery.popup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,6 +170,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -186,6 +202,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/public/site/wave/js/jquery.popup.js" />
+        <option value="$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php" />
       </list>
     </option>
   </component>
@@ -396,6 +414,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="boon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -451,6 +495,128 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wave" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wave" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wave" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wave" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -609,6 +775,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\php\xampp\htdocs\public\site\wave\images\popup" />
       <recent name="D:\dev\php\xampp\htdocs\public\fonts" />
       <recent name="D:\dev\php\xampp\htdocs\resources\views\auth\emails" />
     </key>
@@ -679,7 +846,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470917147409</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
+      <created>1470917817412</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1470917817412</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -692,7 +865,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12567714" sideWeight="0.5072185" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36796537" sideWeight="0.49278152" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16233766" sideWeight="0.49278152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33261105" sideWeight="0.4971146" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19302154" sideWeight="0.49624866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
@@ -731,13 +904,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write_select.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.535714">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write_5.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.714286">
@@ -899,14 +1065,6 @@
             <element signature="e#9199#9221#0#HTML" expanded="false" />
             <element signature="e#9305#9329#0#HTML" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.107142">
-          <caret line="479" column="18" selection-start-line="479" selection-start-column="18" selection-end-line="479" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,41 +1347,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31499052">
-          <caret line="184" column="47" selection-start-line="184" selection-start-column="47" selection-end-line="184" selection-end-column="47" />
+        <state vertical-scroll-proportion="-12.392858">
+          <caret line="212" column="53" selection-start-line="212" selection-start-column="53" selection-end-line="212" selection-end-column="53" />
           <folding>
             <element signature="e#1581#1616#0#HTML" expanded="true" />
-            <element signature="e#5119#5190#0#HTML" expanded="true" />
-            <element signature="e#5282#5321#0#HTML" expanded="true" />
-            <element signature="e#8156#8189#0#HTML" expanded="true" />
-            <element signature="e#8672#8705#0#HTML" expanded="true" />
-            <element signature="e#8792#8820#0#HTML" expanded="true" />
-            <element signature="e#9038#9071#0#HTML" expanded="true" />
-            <element signature="e#9769#9791#0#HTML" expanded="true" />
-            <element signature="e#9887#9911#0#HTML" expanded="true" />
-            <element signature="e#22136#22156#0#HTML" expanded="true" />
-            <element signature="e#22167#22201#0#HTML" expanded="true" />
-            <element signature="e#24761#24793#0#HTML" expanded="true" />
-            <element signature="e#25464#25506#0#HTML" expanded="true" />
-            <element signature="e#25792#25825#0#HTML" expanded="true" />
-            <element signature="e#25972#26005#0#HTML" expanded="true" />
-            <element signature="e#26087#26112#0#HTML" expanded="true" />
-            <element signature="e#26159#26179#0#HTML" expanded="true" />
-            <element signature="e#26205#26250#0#HTML" expanded="true" />
-            <element signature="e#26364#26389#0#HTML" expanded="true" />
-            <element signature="e#26440#26460#0#HTML" expanded="true" />
-            <element signature="e#26505#26582#0#HTML" expanded="true" />
-            <element signature="e#26656#26689#0#HTML" expanded="true" />
-            <marker date="1470917811610" expanded="true" signature="952:968" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="1009:1025" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="1120:1136" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="1177:1193" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="1271:1287" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="1328:1344" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="7853:7863" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="8316:8352" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="8332:8352" placeholder="..." />
-            <marker date="1470917811610" expanded="true" signature="10628:14338" placeholder="..." />
+            <element signature="e#5095#5166#0#HTML" expanded="true" />
+            <element signature="e#5256#5295#0#HTML" expanded="true" />
+            <element signature="e#8150#8183#0#HTML" expanded="true" />
+            <element signature="e#8666#8699#0#HTML" expanded="true" />
+            <element signature="e#8786#8814#0#HTML" expanded="true" />
+            <element signature="e#9052#9085#0#HTML" expanded="true" />
+            <element signature="e#9783#9805#0#HTML" expanded="true" />
+            <element signature="e#9901#9925#0#HTML" expanded="true" />
+            <element signature="e#22150#22170#0#HTML" expanded="true" />
+            <element signature="e#22181#22215#0#HTML" expanded="true" />
+            <element signature="e#24775#24807#0#HTML" expanded="true" />
+            <element signature="e#25478#25520#0#HTML" expanded="true" />
+            <element signature="e#25806#25839#0#HTML" expanded="true" />
+            <element signature="e#25986#26019#0#HTML" expanded="true" />
+            <element signature="e#26101#26126#0#HTML" expanded="true" />
+            <element signature="e#26173#26193#0#HTML" expanded="true" />
+            <element signature="e#26219#26264#0#HTML" expanded="true" />
+            <element signature="e#26378#26403#0#HTML" expanded="true" />
+            <element signature="e#26454#26474#0#HTML" expanded="true" />
+            <element signature="e#26519#26596#0#HTML" expanded="true" />
+            <element signature="e#26670#26703#0#HTML" expanded="true" />
+            <marker date="1470918345526" expanded="true" signature="952:968" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="1009:1025" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="1120:1136" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="1177:1193" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="1271:1287" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="1328:1344" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="7847:7857" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="8310:8346" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="8326:8346" placeholder="..." />
+            <marker date="1470918345526" expanded="true" signature="10642:14352" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/site/wave/js/jquery.popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33472803">
+          <caret line="304" column="43" selection-start-line="304" selection-start-column="43" selection-end-line="304" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

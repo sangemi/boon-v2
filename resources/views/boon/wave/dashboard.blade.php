@@ -119,7 +119,7 @@ if(isset($request->suit_id)){
 <script>
     $(function(){
 
-        $('#detailClient').css('height', $(window).height() - 95);
+        $('#clientList').css('height', $(window).height() - 95);
         $('#detailInfoBox').css('height', $(window).height() - 105);
 
         /*따라다니는 레이어 시작*/
@@ -129,7 +129,7 @@ if(isset($request->suit_id)){
         /*사용자 설정 값 시작*/
         var speed          = 100;     // 따라다닐 속도 : "slow", "normal", or "fast" or numeric(단위:msec)
         var easing         = 'linear'; // 따라다니는 방법 기본 두가지 linear, swing
-        var $layer         = $('#detailClient'); // 레이어 셀렉팅
+        var $layer         = $('#clientList'); // 레이어 셀렉팅
         var layerTopOffset = 0;   // 레이어 높이 상한선, 단위:px
         $layer.css('position', 'absolute');
         /*사용자 설정 값 끝*/
@@ -149,12 +149,12 @@ if(isset($request->suit_id)){
 </script>
 
 
-    <div class="text-center" style="position:relative;white-space: nowrap;padding:0 10px 10px 10px;">
+    <div style="position:relative;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div id="detailClient" class="bigbox box2 col-xs-4" style="overflow-y:scroll;height:600px;">
+            <div id="clientList" class="bigbox box2 col-xs-4" style="overflow-y:scroll;height:600px;">
                 <div style="">
 
-                    <h4>접수인단 <small>[결제]</small></h4>
+                    <h4 class="text-center">접수인단 <small>[결제]</small></h4>
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
                     ?>
@@ -210,7 +210,7 @@ if(isset($request->suit_id)){
 
 
             <div class="bigbox  col-xs-8 col-xs-offset-4" style="margin-bottom:400px;">
-                    <h4>세부내용</h4>
+                    <h4 class="text-center">세부내용</h4>
                     <div  id="detailInfoBox">
 
                     </div>
@@ -270,7 +270,7 @@ if(isset($request->suit_id)){
                 detail_html =
                         "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
                         "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + "</p></div>" +
-                        "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + "[입금액:'+data['data']['amt_payment']+']원</p></div>" +
+                        "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + "[입금액:"+data['data']['amt_payment']+"]원</p></div>" +
 
                         "<div class='row'><p class='col-xs-2'>소송타입</p><p class='col-xs-10'>" + data['data']['data15'] + "</p></div>" +
                         "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + "</p></div>" +
