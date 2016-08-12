@@ -11,10 +11,6 @@
 }(jQuery);
 
 
-$('.popup_bl').click(function(){
-    $(this).hide();
-    $("#정통법소개").attr("tabindex", -1).focus();
-});
 
 
 $('.popup_bl').popupWin2({

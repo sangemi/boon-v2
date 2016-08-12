@@ -297,8 +297,8 @@
 		</div>
 
 
-		<div id="정통법소개">&nbsp;</div>
-		<p class="text-center" style="margin-top:30px;margin-bottom:-30px;">
+
+		<p class="text-center" style="margin-top:30px;margin-bottom:-30px;" id="정통법소개">
 		<img src="/site/wave/images/popup/popup-wave6.png" alt="" style="width:100%;max-width:500px;" />
 		</p>
 
@@ -749,6 +749,11 @@
 
 <script>
 	$(document).ready(function(){
+
+		$('#btn_wave_300_icon').click(function(){
+			$(this).hide();
+			$("#정통법소개").attr("tabindex", -1).focus();
+		});
 		/*메인화면의 글자들이, 순간적으로 보였다가 슬라이드 나타남.. 별루라서 수정시도*/
 		setTimeout(function(){
 			$(".fadeInUp").css("display", "block");
