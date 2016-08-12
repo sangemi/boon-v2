@@ -730,7 +730,9 @@
 </div><!-- //좌측하단 팝업 배너 -->
 <a href="#none" id="btn_wave_300_icon"><img src="/site/wave/images/popup/popup-wave6-icon.png" alt="" /></a>
 <style>
-	#btn_wave_300_icon {position:fixed; z-index:999; left:10; bottom:5px;}
+	#btn_wave_300_icon {position:fixed; z-index:999; left:15px; bottom:15px;}
+
+
 	/* 좌측하단 팝업 */
 	.popup_bl_position { position:fixed; z-index:999; left:10; bottom:5px;; widht:0; height:0; font-family:'Nanum Gothic'; }
 	.popup_bl { position:absolute;left:0; bottom:0; width:150px;height:150px; }

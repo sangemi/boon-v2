@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/site/wave/images/popup/popup-wave6-icon.png" afterPath="$PROJECT_DIR$/public/site/wave/images/popup/popup-wave6-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/site/wave/images/popup/popup-wave6.png" afterPath="$PROJECT_DIR$/public/site/wave/images/popup/popup-wave6.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/site/wave/js/jquery.popup.js" afterPath="$PROJECT_DIR$/public/site/wave/js/jquery.popup.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -103,8 +104,8 @@
       <file leaf-file-name="wave6.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44072524">
-              <caret line="302" column="12" selection-start-line="302" selection-start-column="12" selection-end-line="302" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.5230126">
+              <caret line="738" column="0" selection-start-line="738" selection-start-column="0" selection-end-line="738" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -876,7 +877,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470991901958</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
+      <created>1470992117927</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1470992117927</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1420,8 +1427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/site/wave6.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44072524">
-          <caret line="302" column="12" selection-start-line="302" selection-start-column="12" selection-end-line="302" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.5230126">
+          <caret line="738" column="0" selection-start-line="738" selection-start-column="0" selection-end-line="738" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
