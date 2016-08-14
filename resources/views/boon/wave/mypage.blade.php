@@ -239,7 +239,7 @@ echo "ddddddd다름";
 
             <div class="col-sm-6" style="white-space:normal;">
                 <div class="bigbox">
-                    <h4>공지사항</h4>
+
                     @foreach ($wave_suits as $key=> $wave_suit)
 
                         @foreach ($my_suits as $key=> $my_suit)

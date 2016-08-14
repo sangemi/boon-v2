@@ -5,7 +5,7 @@ return [
     'actions'               => "카테고리 actions",
     'category'              => "카테고리",
     'create'                => "카테고리 생성",
-    'created'               => "카테고리 created",
+    'created'               => "카테고리 생성됨",
     'deleted'               => "카테고리 deleted|카테고리들 deleted",
     'disable_threads'       => "Disable threads",
     'enable_threads'        => "Enable threads",
