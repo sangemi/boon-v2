@@ -265,6 +265,19 @@ echo "ddddddd다름";
                         <li><small>진행상황을 여기서 확인할 수 있습니다.</small></li>
                     </ul>--}}
 
+                    {{--forum 글 읽어오기--}}
+
+                        <div id="category" class="text-left " style="margin-left:25px;">
+                            <ul>
+                            @foreach($category as $categori)
+                            <li>
+                                <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
+                            </li>
+                            @endforeach
+                            </ul>
+                        </div>
+
+
                 </div>
             </div>
         </div>
