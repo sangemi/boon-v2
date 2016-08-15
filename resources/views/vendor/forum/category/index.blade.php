@@ -9,14 +9,17 @@
     <h2>{{ trans('forum::general.index') }}</h2>
 
     @foreach ($categories as $category)
+        <div class=" col-xs-6">
         <table class="table table-index">
             <thead>
                 <tr>
-                    <th>{{ trans_choice('forum::categories.category', 1) }}</th>
-                    <th class="col-md-2">{{ trans_choice('forum::threads.thread', 2) }}</th>
-                    <th class="col-md-2">{{ trans_choice('forum::posts.post', 2) }}</th>
-                    <th class="col-md-2">{{ trans('forum::threads.newest') }}</th>
-                    <th class="col-md-2">{{ trans('forum::posts.last') }}</th>
+                    <th>
+                        {{ trans_choice('forum::categories.category', 1) }}
+                        {{--{{ trans_choice('forum::threads.thread', 2) }}
+                        {{ trans_choice('forum::posts.post', 2) }}--}}
+                    </th>
+                    <th class="col-md-4">{{ trans('forum::threads.newest') }}</th>
+                    <th class="col-md-4">{{ trans('forum::posts.last') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +27,8 @@
                     {{--{!! $category  !!}카테고리에 slug는 안넘어가는데. route 함수에서 slug를 어떻게 쓰지.--}}
 
                     @include ('forum::category.partials.list', ['titleClass' => 'lead'])
+
+
                 </tr>
                 @if (!$category->children->isEmpty())
                     <tr>
@@ -35,5 +40,6 @@
                 @endif
             </tbody>
         </table>
+        </div>
     @endforeach
 @stop

@@ -1,21 +1,26 @@
 <?php
-
+/* SK방식
+ * category > 게시판
+ * subcategory > 분류
+ * threads > 글 // 화두(주제)
+ * post > 댓글
+*/
 return [
 
-    'actions'               => "카테고리 actions",
-    'category'              => "카테고리",
-    'create'                => "카테고리 생성",
-    'created'               => "카테고리 생성됨",
-    'deleted'               => "카테고리 deleted|카테고리들 deleted",
+    'actions'               => "게시판 actions",
+    'category'              => "게시판",
+    'create'                => "게시판 생성",
+    'created'               => "게시판 생성됨",
+    'deleted'               => "게시판 deleted|게시판s deleted",
     'disable_threads'       => "Disable threads",
     'enable_threads'        => "Enable threads",
     'make_private'          => "Make private",
     'make_public'           => "Make public",
-    'mark_read'             => "Mark threads in this 카테고리 as read",
-    'marked_read'           => "New/updated threads in :category have been marked as read",
-    'restored'              => "카테고리 restored|카테고리들 restored",
-    'subcategories'         => "Sub카테고리",
+    'mark_read'             => "이 게시판 글, 읽음 상태로",
+    'marked_read'           => ":category 내의 글 읽음상태로 변경됨",
+    'restored'              => "게시판 restored|게시판s restored",
+    'subcategories'         => "분류",
     'threads_disabled'      => "New thread creation is disabled in this 카테고리",
-    'updated'               => "카테고리 updated|카테고리들 updated",
+    'updated'               => "게시판 updated|게시판s updated",
 
 ];

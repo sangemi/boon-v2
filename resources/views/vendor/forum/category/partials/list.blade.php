@@ -7,10 +7,12 @@
             {{--<a href="/forum/{{ $category->id }}-{{ $category->title }}">{{ $category->title }}</a>--}}
         </p>
         <span class="text-muted">{{ $category->description }}</span>
+        <small>
+        / {{ $category->threadCount }} {{ trans_choice('forum::threads.thread', 2) }} /
+        {{ $category->postCount }} {{ trans_choice('forum::posts.post', 2)}}
+        </small>
     </td>
     @if ($category->threadsEnabled)
-        <td>{{ $category->threadCount }}</td>
-        <td>{{ $category->postCount }}</td>
         <td>
             @if ($category->newestThread)
                 <a href="{{ Forum::route('thread.show', $category->newestThread) }}">

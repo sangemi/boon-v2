@@ -105,7 +105,7 @@
 
 
 		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"
-			 style="position:relative;background-image: url('/site/wave/images/full_5.jpg');background-color:rgba(0, 0, 0, 0.5);">
+			 style="position:relative;background-image: url('/site/wave/images/full_6.jpg');background-color:rgba(0, 0, 0, 0.5);">
 			<small style="position:fixed;bottom:10px;left:10px;"><a href="tel:02-2135-5251" style="background-color:gray;color:cornsilk;letter-spacing: -0.7px;" class="btn btn-xs btn-default">문의 02-2135-5251</a></small>
 
 			{{--한블럭 내려가는 버튼
@@ -265,8 +265,14 @@
 										@endif
 
 										<div class="text-center">
-										<a href="/wave/mypage/<?=$request->suit_number?>" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
+											<a href="/wave/mypage/<?=$request->suit_number?>" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
+											<a href="/forum/6-인터파크-집단소송" class="btn btn-lg btn-default" style="color:black"> 공지사항</a>
 										</div>
+
+
+
+
+
 									</div>
 
 								@endif

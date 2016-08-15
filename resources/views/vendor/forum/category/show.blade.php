@@ -68,8 +68,8 @@
                 <thead>
                     <tr>
                         <th>{{ trans('forum::general.subject') }}</th>
-                        <th class="col-md-2 text-right">{{ trans('forum::general.replies') }}</th>
-                        <th class="col-md-2 text-right">{{ trans('forum::posts.last') }}</th>
+                        {{--<th class="col-md-2 text-right">{{ trans('forum::general.replies') }}</th> 총댓글수--}}
+                        <th class="col-md-4 text-right">{{ trans('forum::posts.last') }}</th>
                         @can ('manageThreads', $category)
                             <th class="col-md-1 text-right"><input type="checkbox" data-toggle-all></th>
                         @endcan
@@ -94,22 +94,25 @@
                                             <span class="label label-danger">{{ trans('forum::general.deleted') }}</span>
                                         @endif
                                     </span>
-                                    <p class="lead">
+                                    <p class="lead" style="margin-bottom:0px;">{{--lead에 margin-bottom:20 있음--}}
                                         <a href="{{ Forum::route('thread.show', $thread) }}">{{ $thread->title }}</a>
+                                        <small>{{ $thread->replyCount }}</small>
                                     </p>
-                                    <p>{{ $thread->authorName }} <span class="text-muted">({{ $thread->posted }})</span></p>
+                                    {{--<p>{{ $thread->authorName }} <span class="text-muted">({{ $thread->posted }})</span></p>--}}
                                 </td>
                                 @if ($thread->trashed())
                                     <td colspan="2">&nbsp;</td>
                                 @else
+                                    {{--<td class="text-right">
+
+                                    </td>--}}
                                     <td class="text-right">
-                                        {{ $thread->replyCount }}
-                                    </td>
-                                    <td class="text-right">
-                                        {{ $thread->lastPost->authorName }}
-                                        <p class="text-muted">({{ $thread->lastPost->posted }})</p>
-                                        <a href="{{ Forum::route('thread.show', $thread->lastPost) }}" class="btn btn-primary btn-xs">{{ trans('forum::posts.view') }} &raquo;</a>
-                                    </td>
+                                        {{--{{ $thread->lastPost->authorName }}--}}
+                                        <p class="text-muted">
+                                        <a href="{{ Forum::route('thread.show', $thread->lastPost) }}" class="btn btn-default btn-xs">{{ $thread->lastPost->posted }} &raquo;</a>
+                                            {{--{{ trans('forum::posts.view') }}--}}
+                                        </p>
+                                    </td>{{--댓글보기--}}
                                 @endif
                                 @can ('manageThreads', $category)
                                     <td class="text-right">

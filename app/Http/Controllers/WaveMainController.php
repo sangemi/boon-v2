@@ -142,6 +142,8 @@ class WaveMainController extends Controller
         }
     }
 
+
+
     public function mypage(Request $request)
     {
         if ( !Auth::check() ) {
@@ -172,13 +174,18 @@ class WaveMainController extends Controller
         /*그냥 /wave/mypage 이면 메인 상황실로.
         /wave/mypage/suit_id 이면 suit_id 사건에 접수된거 체크하고, 있으면 상황실로/없으면 신청페이지로*/
 
+        /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
+        //$category = route("forum.api.category.fetch", $request->route('category'));
+        $category = DB::table('forum_threads')->where('category_id', '6')->get();
+        /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
+
         if(!isset($request->suit_id)){
-            return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits'));
+            return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'category'));
         }else if($wave_client->count()) {
             foreach ($wave_client as $wclient) {
 
                 if ($wclient['suit_id'] == $request->suit_id) {
-                    return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits'));
+                    return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'category'));
                 }
             }
         }

@@ -49,7 +49,7 @@
         <table class="table {{ $thread->trashed() ? 'deleted' : '' }}">
             <thead>
                 <tr>
-                    <th class="col-md-2">
+                    <th class="col-md-2"> {{--글쓴이--}}
                         {{ trans('forum::general.author') }}
                     </th>
                     <th>
@@ -62,7 +62,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> {{--본격 글--}}
                 @foreach ($thread->postsPaginated as $post)
                     @include ('forum::post.partials.list', compact('post'))
                 @endforeach
