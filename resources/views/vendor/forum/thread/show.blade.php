@@ -63,8 +63,10 @@
                 </tr>
             </thead>
             <tbody> {{--본격 글--}}
-                @foreach ($thread->postsPaginated as $post)
+                @foreach ($thread->postsPaginated as $tr_number=> $post)
+
                     @include ('forum::post.partials.list', compact('post'))
+
                 @endforeach
             </tbody>
         </table>

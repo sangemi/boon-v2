@@ -83,7 +83,7 @@ $(document).ready(function(){
 
             <div class="panel-heading">
                 <b>
-                    증거 업로드 - 코웨이 중금속 정수기 사건
+                    증거 업로드 - 인터파크 정보유출 사건
                 </b>
             </div>
 

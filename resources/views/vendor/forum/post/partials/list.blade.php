@@ -1,5 +1,8 @@
 
-<tr id="post-{{ $post->id }}" class="{{ $post->trashed() ? 'deleted' : '' }}">
+
+<tr id="post-{{ $post->id }}" class="{{ $post->trashed() ? 'deleted' : '' }}"
+    <?php if($tr_number == 0) echo " style='background-color:#efefef;border:1px solid skyblue;'"; ?>
+    >
     <td>
         <strong>{!! $post->authorName !!}</strong>
     </td>

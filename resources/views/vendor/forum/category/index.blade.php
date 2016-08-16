@@ -14,12 +14,12 @@
         <table class="table table-index">
             <thead>
                 <tr>
-                    <th>
+                    <th style="color:darkgrey;">
                         {{ trans_choice('forum::categories.category', 1) }}
                         {{--{{ trans_choice('forum::threads.thread', 2) }}
                         {{ trans_choice('forum::posts.post', 2) }}--}}
                     </th>
-                    <th class="col-md-7">{{ trans('forum::threads.newest') }} / {{ trans('forum::posts.last') }}</th>
+                    <th class="col-md-7" style="color:darkgrey;">{{ trans('forum::threads.newest') }} / {{ trans('forum::posts.last') }}</th>
                 </tr>
             </thead>
             <tbody>
