@@ -18,8 +18,7 @@
                         {{--{{ trans_choice('forum::threads.thread', 2) }}
                         {{ trans_choice('forum::posts.post', 2) }}--}}
                     </th>
-                    <th class="col-md-4">{{ trans('forum::threads.newest') }}</th>
-                    <th class="col-md-4">{{ trans('forum::posts.last') }}</th>
+                    <th class="col-md-7">{{ trans('forum::threads.newest') }} / {{ trans('forum::posts.last') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,9 +30,9 @@
 
                 </tr>
                 @if (!$category->children->isEmpty())
-                    <tr>
+                    {{--소분류 <tr>
                         <th colspan="5">{{ trans('forum::categories.subcategories') }}</th>
-                    </tr>
+                    </tr>--}}
                     @foreach ($category->children as $subcategory)
                         @include ('forum::category.partials.list', ['category' => $subcategory])
                     @endforeach

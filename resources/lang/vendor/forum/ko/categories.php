@@ -19,7 +19,7 @@ return [
     'mark_read'             => "이 게시판 글, 읽음 상태로",
     'marked_read'           => ":category 내의 글 읽음상태로 변경됨",
     'restored'              => "게시판 restored|게시판s restored",
-    'subcategories'         => "분류",
+    'subcategories'         => "소분류",
     'threads_disabled'      => "New thread creation is disabled in this 카테고리",
     'updated'               => "게시판 updated|게시판s updated",
 
