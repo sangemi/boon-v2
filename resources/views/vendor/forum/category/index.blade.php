@@ -8,8 +8,9 @@
 
     <h2>{{ trans('forum::general.index') }}</h2>
 
+    <div class="row">
     @foreach ($categories as $category)
-        <div class=" col-xs-6">
+        <div class=" col-md-6">
         <table class="table table-index">
             <thead>
                 <tr>
@@ -41,4 +42,5 @@
         </table>
         </div>
     @endforeach
+    </div>
 @stop
