@@ -47,7 +47,20 @@
 <!-- sidebar nav -->
 <nav id="sidebar-nav">
     <ul class="nav nav-pills nav-stacked">
-        @if(Request::is('ccmail/*')) {{--내용증명--}}
+        @if(Request::is('forum*'))
+            <div class="title-area">
+                <div class="title-container">
+                    <h1 class="title-small">분쟁관리</h1>
+                    <h1 class="title-large">분제로</h1>
+                </div>
+            </div>
+            <li><a href="{{ URL::to('/forum') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 커뮤니티 홈</a></li>
+            <li><a href="{{ URL::to('/forum/1') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 자유게시판</a></li>
+            <li><a href="{{ URL::to('/forum/7') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 응원게시판</a></li>
+            <li><a href="{{ URL::to('/forum/4') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 집단소송 공지</a></li>
+
+
+        @elseif(Request::is('ccmail/*')) {{--내용증명--}}
             <div class="title-area">
                 <div class="title-container">
 
@@ -83,6 +96,7 @@
             </div>
             {{--<li><a href="{{ URL::to('/forum/6') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공지사항</a></li>--}}
             <li><a href="{{ URL::to('/wave/mypage') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 상황실</a></li>
+            <li><a href="{{ URL::to('/forum/4') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 게시판</a></li>
             <li><a href="{{ URL::to('/wave/probono') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공익활동</a></li>
             <li><a href="{{ URL::to('/wave/recommendResult') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 추천활동</a></li>
 

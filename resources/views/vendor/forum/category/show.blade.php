@@ -30,10 +30,11 @@
                 <thead>
                     <tr>
                         <th>{{ trans_choice('forum::categories.category', 1) }}</th>
-                        <th class="col-md-2">{{ trans_choice('forum::threads.thread', 2) }}</th>
+                        <th class="col-md-7">{{ trans('forum::threads.newest') }} / {{ trans('forum::posts.last') }}</th>
+                        {{--<th class="col-md-2">{{ trans_choice('forum::threads.thread', 2) }}</th>
                         <th class="col-md-2">{{ trans_choice('forum::posts.post', 2) }}</th>
                         <th class="col-md-2">{{ trans('forum::threads.newest') }}</th>
-                        <th class="col-md-2">{{ trans('forum::posts.last') }}</th>
+                        <th class="col-md-2">{{ trans('forum::posts.last') }}</th>--}}
                     </tr>
                 </thead>
                 <tbody>

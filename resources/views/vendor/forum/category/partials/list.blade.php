@@ -3,7 +3,7 @@
         <p class="{{ isset($titleClass) ? $titleClass : '' }}">
 
             {{--한글은 안됨. 그래서 고침 SK modi --}}
-            <a href="{{ Forum::route('category.show', $category) }}">{{ $category->title }}</a>
+            <a href="{{ Forum::route('category.show', $category) }}" style="font-weight:bold;color:royalblue;">{{ $category->title }}</a>
             {{--<a href="/forum/{{ $category->id }}-{{ $category->title }}">{{ $category->title }}</a>--}}
         </p>
         <span class="text-muted">{{ $category->description }}</span>
