@@ -81,6 +81,7 @@
                     <h1 class="title-large">단체소송</h1>
                 </div>
             </div>
+            {{--<li><a href="{{ URL::to('/forum/6') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공지사항</a></li>--}}
             <li><a href="{{ URL::to('/wave/mypage') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 상황실</a></li>
             <li><a href="{{ URL::to('/wave/probono') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공익활동</a></li>
             <li><a href="{{ URL::to('/wave/recommendResult') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 추천활동</a></li>

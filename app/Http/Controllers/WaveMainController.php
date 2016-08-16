@@ -150,48 +150,65 @@ class WaveMainController extends Controller
             return redirect()->to('/auth/login');
         }
 
+
         $wave_suits = WaveSuit::all(); //->get() //all() 에는 get()이 포함되어 있음.
-        //$wave_client = WaveClient::where('user_id', Auth::id());
-        $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
-        $my_suits = Array();
-        foreach($wave_client as $clien){
-            $suit_obj = $clien->suit()->first();
-            $my_suits[]= $suit_obj;
 
-            $status_obj = $clien->status()->first();
-            $my_status[] = $status_obj;
-            /*if(count($status_obj))
-                $my_status[]['title'] = $status_obj->title;
-            else $my_status[]['title'] = "배정전";*/
-
-
-            /*  echo $phone->user()->first()->email; //사용자의 이메일을 다음처럼 표시하기 보다:
-                echo $phone->user->email;  // 보다 짧고 간단하게 표시할 수 있습니다: */
-            /* $name = (string) $clien->name; // If a collection is cast to a string, it will be returned as JSON: ㅜ.ㅜ 삽질2시간.
-               //echo (string) $clien->suit_id . " - ". $name;*/
-        }
 //dd($my_status);
-        /*그냥 /wave/mypage 이면 메인 상황실로.
-        /wave/mypage/suit_id 이면 suit_id 사건에 접수된거 체크하고, 있으면 상황실로/없으면 신청페이지로*/
-
-        /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
-        //$category = route("forum.api.category.fetch", $request->route('category'));
-        $category = DB::table('forum_threads')->where('category_id', '6')->get();
-        /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
-
+        /*그냥 /wave/mypage 이면 메인 상황실.*/
         if(!isset($request->suit_id)){
-            return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'category'));
-        }else if($wave_client->count()) {
-            foreach ($wave_client as $wclient) {
+            $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
+            $my_suits = Array();
+            foreach($wave_client as $clien){
+                $suit_obj = $clien->suit()->first();
+                $my_suits[]= $suit_obj;
 
-                if ($wclient['suit_id'] == $request->suit_id) {
-                    return view('boon.wave.mypage', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'category'));
+                $status_obj = $clien->status()->first();
+                $my_status[] = $status_obj;
+                /*if(count($status_obj))
+                    $my_status[]['title'] = $status_obj->title;
+                else $my_status[]['title'] = "배정전";*/
+            }
+
+            /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
+            $category_id = 7; // 응원게시판
+            $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
+
+            return view('boon.wave.mypage_all', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads'));
+
+        /*/wave/mypage/suit_id 이면 suit_id 사건에 접수된거 확인하고, 있으면 상황실로/없으면 신청페이지로*/
+        }else{
+            $wave_client = WaveClient::where('user_id', Auth::id())->where('suit_id', $request->suit_id)->get();
+            $my_suits = Array();
+            foreach($wave_client as $clien){
+                $suit_obj = $clien->suit()->first();
+                $my_suits[]= $suit_obj;
+
+                $status_obj = $clien->status()->first();
+                $my_status[] = $status_obj;
+            }
+            if($wave_client->count()) {
+                /*한 집단소송에 신청 2명일수도 있으니까*/
+                foreach ($wave_client as $wclient) {
+                    if ($wclient['suit_id'] == $request->suit_id) { /*suit_id 사건에 접수된게 있음*/
+
+                        /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
+                        $category_id = $wclient->suit()->first()->forum_category_id; // wave_suits T에 forum 정보 저장.
+                        $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
+
+                        return view('boon.wave.mypage_each', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads'));
+                    }
                 }
             }
         }
         // 없으면 바로 소송접수! / 접수된게 있지만 다른소송이면 소송접수
         return redirect('wave/client/create?suit_id='.$request->suit_id); //Route::resource('wave/client', 'WaveClientController');
     }
+
+    /*  echo $phone->user()->first()->email; //사용자의 이메일을 다음처럼 표시하기 보다:
+    echo $phone->user->email;  // 보다 짧고 간단하게 표시할 수 있습니다: */
+    /* $name = (string) $clien->name; // If a collection is cast to a string, it will be returned as JSON: ㅜ.ㅜ 삽질2시간.
+       //echo (string) $clien->suit_id . " - ". $name;*/
+
     public function wave() //??
     {
         return view('boon.site.wave0');

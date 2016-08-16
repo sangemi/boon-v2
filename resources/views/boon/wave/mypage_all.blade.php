@@ -193,41 +193,20 @@ echo "ddddddd다름";
         <div class="">
             <div class="col-sm-6" style="white-space:normal;">
                 <div class="bigbox">
-                <h4>진행 소송{{--<small>+등록</small>--}}</h4>
+                <h4>참가중인 소송{{--<small>+등록</small>--}}</h4>
 
                 @if (empty($wave_client))
                     <div class="col-sm-12">
                         진행중 소송이 없습니다.
                     </div>
                 @else
+                    <div style="text-align:center ;margin:15px;">
+                        상세 내용을 보시려면 클릭해주세요.
+                    </div>
                     @foreach ($wave_client as $key=> $waveclient)
-                        <div class="col-sm-12" style="text-align: left;">
-                            <b>
-                                <?=($key+1)?>. <?=$my_suits[$key]['title']?>
-                                <a href="{{ URL::to('wave/client/'.$waveclient['id'].'/edit') }}">
-                                    <span class="btn btn-xs btn-link" aria-hidden="true">서류수정<span class="fa fa-pencil"></span></span>
-                                </a>
-                                <a class="btn btn-sm btn-link" href="/wave/file/create?client_id=<?=$waveclient['id']?>">증거제출</a>
+                        <div class="col-sm-12" style="text-align:left ;margin-bottom:15px;">
 
-                            </b>
-                            <p><?=$my_status[$key]['title']?></p>
-                            @if( $waveclient['chk_proof'] == '')
-
-                            @endif
-
-                            @if( $waveclient['chk_payment'] == '입금대기')
-                                <?php
-                                $chk_payment = true;
-                                    ?>
-                                <div>
-                                    <p class="bg-warning">입금대기 상태입니다</p>
-
-                                </div>
-                            @else
-                                <div class="bg_warning">
-                                    <p><?=$my_status[$key]['chk_payment']?></p>
-                                </div>
-                            @endif
+                            <a class="btn btn-lg btn-default" href="/wave/mypage/<?=$waveclient['suit_id']?>"><?=($key+1)?>. <?=$my_suits[$key]['title']?></a>
 
                         </div>
                     @endforeach
@@ -240,37 +219,20 @@ echo "ddddddd다름";
             <div class="col-sm-6" style="white-space:normal;">
                 <div class="bigbox">
 
-                    @foreach ($wave_suits as $key=> $wave_suit)
-
-                        @foreach ($my_suits as $key=> $my_suit)
-                            <?php
-                            $check_my_suit = false;
-                            if($my_suit->id == $wave_suit->id){
-                                $check_my_suit = true;
-                            }
-                            if($check_my_suit == true){
-                                echo $my_suit->notice;
-                                break;
-                            }
-                            ?>
-
-                        @endforeach
-                    @endforeach
-
                     {{--forum 글 읽어오기--}}
-
-                        <div id="category" class="text-left " style="margin-left:25px;">
-                            <h4></h4>
-                            <ul>
-                            @foreach($category as $categori)
-                            <li>
-                                <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
-                            </li>
+                    <h4>응원게시판</h4>
+                    <div id="category" class="text-left " style="margin-left:25px;">
+                        <ul>
+                            @foreach($forum_threads as $categori)
+                                <li>
+                                    <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
+                                </li>
                             @endforeach
-                            </ul>
+                        </ul>
+                        <div class="text-right" style="margin:10px;">
+                            <a class="btn btn-xs btn-default" href="/forum/7/thread/create?category_slug=응원게시판">쓰기</a>
                         </div>
-
-
+                    </div>
                 </div>
             </div>
         </div>
@@ -284,6 +246,22 @@ echo "ddddddd다름";
     <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
     </div>
 @endif
+
+<div class="well bg-warning">
+    <h4>이용안내</h4>
+    <p>
+        <b style="font-size:1.2em;">은행계좌번호 관련</b>  신청서 상 은행계좌는 1~2년 후 승소판결금을 입금해드리기 위해 필요합니다.
+        따라서 신청서에는 비워두셨다가 1년 내에만 계좌번호를 입력해주셔도 됩니다.
+    </p>
+    <p>
+        <b style="font-size:1.2em;">증거자료 업로드 관련</b> 업로드 오류시 하단 메일로 내용을 보내주세요. 빠르게 수정하겠습니다.
+        이메일로 증거자료를 보내시면 시스템에 반영되지 않습니다. 유의바랍니다.
+    </p>
+    {{--<p>
+        <b style="font-size:1.2em;">주민등록관련</b> : 소장 접수 후 생년월일을 제외한 자료를 모두 파기조치할 예정입니다.
+    </p>--}}
+    <p>사이트 오류신고 : <b style="font-size:1.2em;">help@moior.com</b></p>
+</div>
 
 {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
 {{dd( Request::input(), http_build_query (Request::input()) ) }}

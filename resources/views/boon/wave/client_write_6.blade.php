@@ -196,13 +196,16 @@ $(document).ready(function(){
                     <h4>비용 입금 <small>금9900원(vat포함)</small></h4>
                 </div>
 
-                {!! BootForm::text( "비용 입금자" , 'data11')->placeholder("비용 입금시 이름")  !!}
+                {!! BootForm::text( "비용 입금자" , 'data11')->placeholder("비용 입금시 이름. 체크바랍니다.")  !!}
 
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label">입금계좌</label>
                     <div class="col-sm-10 col-lg-10">
                         <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b>
-                        <div><small>접수인원이 많을 경우 입금확인이 늦을 수 있으니 기다려주세요.</small></div>
+                        <div>
+                            <p style="color:tomato;">※ 입금자 성함이 달라서 신청인원을 확인하기 어렵습니다. 입금인성명 확인부탁 드립니다!</p>
+                            <small>기다려주시면 입금확인은 순차적으로 됩니다.</small>
+                        </div>
                     </div>
                 </div>
 
