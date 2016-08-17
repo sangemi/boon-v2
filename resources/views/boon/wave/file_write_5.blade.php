@@ -144,6 +144,15 @@ $(document).ready(function(){
                 <div class="choice-file_type <?=$document_ok[8]?>" style="" data-title_no="8" data-explain="눈으로 보이는 질환의 경우, 증상을 찍어 업로드해주세요.">
                     (B타입만) 피부질환 등 사진자료
                 </div>
+
+                <div class="choice-file_type <?=$document_ok[3]?>" style="" data-title_no="3" data-explain="기타 도움이 될만한 자료">
+                    기타
+                </div>
+
+                <div class="choice-file_type <?=$document_ok[9]?>" style="" data-title_no="9" data-explain="신청자가 미성년일 경우 부모의 소송위임 동의가 필요합니다. <br> 가족관계증명서의 제출로 소송동의를 갈음합니다.">
+                    (미성년) 가족관계증명서
+                </div>
+
                 <div style="clear:both;"></div>
 
 

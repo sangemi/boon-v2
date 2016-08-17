@@ -130,6 +130,10 @@ $(document).ready(function(){
                     기타
                 </div>
 
+                <div class="choice-file_type <?=$document_ok[9]?>" style="" data-title_no="9" data-explain="신청자가 미성년일 경우 부모의 소송위임 동의가 필요합니다. <br> 가족관계증명서의 제출로 소송동의를 갈음합니다.">
+                    (미성년) 가족관계증명서
+                </div>
+
                 <div style="clear:both;"></div>
 
 

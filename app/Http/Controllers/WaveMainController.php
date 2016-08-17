@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Lib\skHelper;
 use App\Recommend;
 use App\WaveClient;
+use App\WaveFile;
 use App\WaveSuit;
 use Illuminate\Http\Request;
 
@@ -105,7 +106,10 @@ class WaveMainController extends Controller
         }else if($task_name == 'show-detail-info'){
             $wave_client = WaveClient::find($request->row_id);
             if(count($wave_client)) { //  && $request->amt_payment 입금액은 없을수도 있음.
+                $uploaded_files = WaveFile::where('client_id', $wave_client['id'])->orderBy('title_no', 'asc')->get();
+
                 $task["data"] = $wave_client;
+                $task["file"] = $uploaded_files;
                 $task["result"] = "success";
 
             }else {
@@ -135,7 +139,8 @@ class WaveMainController extends Controller
                     return view('boon.wave.dashboard', compact('wave_client', 'request'));
                 }
             } else {
-                return "권한없음. 접속오류";
+
+                return "권한없음. 접속오류 : ". $current_id;
             }
         }else{
             return redirect()->to('/auth/login');

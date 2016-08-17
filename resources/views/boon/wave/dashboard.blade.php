@@ -267,8 +267,21 @@ if(isset($request->suit_id)){
             success: function (data) {
                 console.log(data);
                 var detail_html = '';
+                var detail_file = '';
+
+
+
+                data['file'].forEach(function(value){
+                    detail_file += "<a href='" + value['uploaded_filename'] + "' target='_blank'>" + value['title_no'] + "번</a> ";
+
+                    console.log(value.toString()); // js 배열 확인하기
+
+                });
                 detail_html =
                         "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
+
+                        "<div class='row'><p class='col-xs-2'>제출파일</p><p class='col-xs-10'>" + detail_file + "</p></div>" +
+
                         "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + "</p></div>" +
                         "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + "[입금액:"+data['data']['amt_payment']+"]원</p></div>" +
 
