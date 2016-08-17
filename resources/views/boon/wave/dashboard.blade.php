@@ -75,6 +75,7 @@ if(isset($request->suit_id)){
         /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
         $(".each_client").click(function(){
             var final_to_number = '', final_to_name = '', final_to_user_id = '', total_cnt = 0;
+
             if( $(this).data('clicked') == true ){
                 $(this).data('clicked', false); $(this).css('background-color', '');
             }
@@ -82,6 +83,7 @@ if(isset($request->suit_id)){
                 $(this).data('clicked', true) ; $(this).css('background-color', 'yellow');
             }
             $(".each_client").each(function(){
+                $(this).css('border', '');
                 if($(this).data('clicked')) {
                     final_to_number = final_to_number + ',' + $(this).data('tel');
                     final_to_name = final_to_name + ', ' + $(this).find(".each_name").text();
@@ -89,6 +91,8 @@ if(isset($request->suit_id)){
                     total_cnt++;
                 }
             });
+            $(this).css('border', '1px solid red');
+
             final_to_number = trimChar( trimChar(final_to_number, ' '), ',');
             final_to_name = trimChar( trimChar(final_to_name, ' '), ',');
             final_to_user_id = trimChar( trimChar(final_to_user_id, ' '), ',');
@@ -171,7 +175,7 @@ if(isset($request->suit_id)){
                                                     data-chk_payment="<?=$client['chk_payment']?>"
                                                     data-user_id="<?=$client['id']?>">
                                 <?=($no+1)?>.
-                                <a href="javascript:clickClientEach('<?=$client['id']?>')">
+                                <a href="javascript:showClientData('<?=$client['id']?>')">
                                     <span  class="each_name"><?=$client['name']?></span>
                                 </a>
                                 @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
@@ -215,7 +219,7 @@ if(isset($request->suit_id)){
                 </div>
                 <div id="" class="row" style="background-color: cornsilk; padding:20px 0;">
                     <div class="col-sm-10">
-                        <textarea name="add_memo" id="textarea_add_memo" class="form-control" placeholder="메모 입력하세요 (의뢰인한테는 안보임)"></textarea>
+                        <textarea name="add_memo" id="textarea_add_memo" class="form-control" placeholder="의뢰인 선택후 메모 입력 (의뢰인에게 안보임)"></textarea>
                     </div>
                     <div class="col-sm-2">
                         <button type="button" id="btnAddMemo" class="form-control">입력</button>
@@ -266,9 +270,10 @@ if(isset($request->suit_id)){
     var url = "/wave/admin/tasks";
     var task_name = '',row_id = '';
 
-    function clickClientEach(clicking_row_id) {
+    function showClientData(clicking_row_id) {
         if(clicking_row_id){
             row_id = clicking_row_id;
+            $("#text_now_client").text(row_id);
             showUserMemoBox(clicking_row_id);
             showDetailInfo(clicking_row_id);
         }else alert('row 선택해주세요')
@@ -402,7 +407,7 @@ if(isset($request->suit_id)){
                     console.log("add-memo : " + JSON.stringify(data)); // js 배열 확인
                     if(data['result'] == 'success') {
                         var memo_html = $("#textarea_add_memo").val();
-                        $("#userMemoBox").html( $("#userMemoBox").html() + '입력완료 : ' + memo_html);
+                        $("#userMemoBox").html( $("#userMemoBox").html() + '<p>입력완료 : ' + memo_html + '</p>');
                         $("#textarea_add_memo").val('');
                     }else{
                         $("#userMemoBox").html('메모입력오류');
@@ -443,7 +448,7 @@ if(isset($request->suit_id)){
         $('.open-modal').click(function () { // 수정시. 신규입력시에는 task_name = '';로 해서 하자.
             task_name = $(this).val();
             row_id = $(this).data('row_id');
-            clickClientEach(row_id);
+            showClientData(row_id);
             $('#myModal').modal('show');
 
             /*var task_name = $(this).val();
