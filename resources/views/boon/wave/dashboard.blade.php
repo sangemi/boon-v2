@@ -171,7 +171,7 @@ if(isset($request->suit_id)){
                                                     data-chk_payment="<?=$client['chk_payment']?>"
                                                     data-user_id="<?=$client['id']?>">
                                 <?=($no+1)?>.
-                                <a href="javascript:showDetailInfo('<?=$client['id']?>')">
+                                <a href="javascript:clickClientEach('<?=$client['id']?>')">
                                     <span  class="each_name"><?=$client['name']?></span>
                                 </a>
                                 @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
@@ -210,10 +210,23 @@ if(isset($request->suit_id)){
 
 
             <div class="bigbox  col-xs-8 col-xs-offset-4" style="margin-bottom:400px;">
-                    <h4 class="text-center">세부내용</h4>
-                    <div  id="detailInfoBox">
+                <div id="userMemoBox"style="background-color: cornsilk;">
 
+                </div>
+                <div id="" class="row" style="background-color: cornsilk; padding:20px 0;">
+                    <div class="col-sm-10">
+                        <textarea name="add_memo" id="textarea_add_memo" class="form-control" placeholder="메모 입력하세요 (의뢰인한테는 안보임)"></textarea>
                     </div>
+                    <div class="col-sm-2">
+                        <button type="button" id="btnAddMemo" class="form-control">입력</button>
+                    </div>
+                </div>
+
+
+                <h4 class="text-center">세부내용</h4>
+                <div  id="detailInfoBox">
+
+                </div>
             </div>
 
         </div>
@@ -253,6 +266,14 @@ if(isset($request->suit_id)){
     var url = "/wave/admin/tasks";
     var task_name = '',row_id = '';
 
+    function clickClientEach(clicking_row_id) {
+        if(clicking_row_id){
+            row_id = clicking_row_id;
+            showUserMemoBox(clicking_row_id);
+            showDetailInfo(clicking_row_id);
+        }else alert('row 선택해주세요')
+    }
+
     function showDetailInfo(row_id){
         var my_url = url;
         my_url += '/' + "show-detail-info";
@@ -265,17 +286,13 @@ if(isset($request->suit_id)){
             data: formData,
             dataType: 'json',
             success: function (data) {
-                console.log(data);
+                console.log("detail-info : " + JSON.stringify(data)); // js 배열 확인하기
                 var detail_html = '';
                 var detail_file = '';
 
-
-
                 data['file'].forEach(function(value){
                     detail_file += "<a href='" + value['uploaded_filename'] + "' target='_blank'>" + value['title_no'] + "번</a> ";
-
-                    console.log(value.toString()); // js 배열 확인하기
-
+                    console.log("detail-file : " + JSON.stringify(value)); // js 배열 확인하기
                 });
                 detail_html =
                         "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
@@ -323,10 +340,79 @@ if(isset($request->suit_id)){
                 console.log('SK Error:', data);
             }
         });
+
+
+    }
+    function showUserMemoBox(){
+        var my_url = url;
+        my_url += '/' + "show-user-memo";
+        var formData = {
+            row_id: row_id
+        };
+        $.ajax({
+            type: "POST", url: my_url, data: formData, dataType: 'json',
+            success: function (data) {
+                console.log("detail-memo : " + JSON.stringify(data)); // js 배열 확인하기
+                if(data['result'] == 'success') {
+                    var memo_html = '';
+                    data['data'].forEach(function(value){
+                        memo_html +=
+                            "<div class='col-sm-6' style='padding:3px;'>"+
+                            "<div class='' style='padding:5px;background-color:#efefef; border:1px solid gray;' data-client_id='" + value['id'] + "'>" +
+                                "<div class=''>" +
+                                "<p class='' style=''>" + value['memo'] + "</p>" +
+                                "</div>" +
+                            "<p class='' style='font-size:0.6em;'></p>" +
+                            "<p style='font-size:0.6em;'>타입 " + value['memo_type'] + " /입력 " + value['reg_id'] + " /담당 " + value['in_charge_id'] + "/처리 " + value['in_charge_check'] +'</p>'+
+                                "<p class='text-right'>" + value['created_at'].substring(5,16) + " <span class='btn-del-memo btn btn-xs btn-default'>del</span></p>" +
+                            "</div>" +
+                            "</div>"
+                            ;
+                    });
+                    $("#userMemoBox").html(memo_html);
+                }else{
+                    $("#userMemoBox").html('메모가 없습니다.');
+                }
+            },
+            error: function (data) {
+                console.log('SK Error 414:', data);
+            }
+        });
     }
 
 
     $(document).ready(function() {
+
+        $('#btnAddMemo').click(function () { // 메모 신규입력
+            if(!row_id) return false;
+            var my_url = url;
+            my_url += '/' + "add-user-memo";
+            var formData = {
+                row_id: row_id,
+                memo: $("#textarea_add_memo").val()
+            };
+            console.log("aformDatamo : " + JSON.stringify(formData)); // js 배열 확인
+
+            $.ajax({
+                type: "POST",
+                url: my_url,
+                data: formData,
+                dataType: 'json',
+                success: function (data) {
+                    console.log("add-memo : " + JSON.stringify(data)); // js 배열 확인
+                    if(data['result'] == 'success') {
+                        var memo_html = $("#textarea_add_memo").val();
+                        $("#userMemoBox").html( $("#userMemoBox").html() + '입력완료 : ' + memo_html);
+                        $("#textarea_add_memo").val('');
+                    }else{
+                        $("#userMemoBox").html('메모입력오류');
+                    }
+                },
+                error: function (data) {
+                    console.log('SK Error 418:', data);
+                }
+            });
+        });
 
         $(document).on('click', '.btn-del-client', function() {
             if(confirm('정말 삭제하시겠습니까? \n\n되돌릴 수 없습니다.')){
@@ -357,7 +443,7 @@ if(isset($request->suit_id)){
         $('.open-modal').click(function () { // 수정시. 신규입력시에는 task_name = '';로 해서 하자.
             task_name = $(this).val();
             row_id = $(this).data('row_id');
-            showDetailInfo(row_id);
+            clickClientEach(row_id);
             $('#myModal').modal('show');
 
             /*var task_name = $(this).val();
@@ -369,7 +455,7 @@ if(isset($request->suit_id)){
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
             }
-        })
+        });
 
         //create new task / update existing task
         $("#btn-save").click(function (e) {

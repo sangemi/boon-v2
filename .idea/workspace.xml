@@ -4,6 +4,8 @@
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,31 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2016_08_16_200054_create_user_memos_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.857142">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/UserInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserMemo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/UserMemo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.392857">
-              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+            <state vertical-scroll-proportion="-10.178572">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43564355">
-              <caret line="132" column="54" selection-start-line="132" selection-start-column="54" selection-end-line="132" selection-end-column="54" />
+            <state vertical-scroll-proportion="-10.642858">
+              <caret line="121" column="78" selection-start-line="121" selection-start-column="78" selection-end-line="121" selection-end-column="78" />
               <folding>
                 <element signature="e#40#61#0#PHP" expanded="true" />
               </folding>
@@ -109,44 +91,77 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2016_08_16_200054_create_user_memos_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.714286">
+              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_03_07_160820_create_boon_cash_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.535714">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_03_04_183617_create_user_payment_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_04_183617_create_user_payment_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_07_22_145011_creat_wave_clients_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.892858">
-              <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.679868">
+              <caret line="228" column="22" selection-start-line="228" selection-start-column="22" selection-end-line="228" selection-end-column="22" />
               <folding>
-                <marker date="1471405067805" expanded="true" signature="952:968" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="1009:1025" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="1120:1136" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="1177:1193" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="1271:1287" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="1328:1344" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="7847:7857" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="8310:8346" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="8326:8346" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="10955:14791" placeholder="..." />
-                <marker date="1471405067805" expanded="true" signature="10961:14791" placeholder="..." />
+                <element signature="e#8787#8815#0#HTML" expanded="true" />
+                <element signature="e#8854#8889#0#HTML" expanded="true" />
+                <element signature="e#8954#9005#0#HTML" expanded="true" />
+                <marker date="1471437061960" expanded="true" signature="952:968" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="1009:1025" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="1120:1136" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="1177:1193" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="1271:1287" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="1328:1344" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="7848:7858" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="8311:8347" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="8327:8347" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="11853:15689" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="11859:15689" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16519:16531" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16586:16646" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16598:16646" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16630:16646" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16684:16772" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16684:16861" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16684:17205" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16684:17331" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16914:16930" placeholder="..." />
+                <marker date="1471437061960" expanded="true" signature="16979:16995" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_07_22_151443_creat_wave_status_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_151443_creat_wave_status_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.285715">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_08_07_195014_create_recommend_user_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_07_195014_create_recommend_user_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.535714">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="40" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -213,10 +228,10 @@
         <option value="$PROJECT_DIR$/resources/views/boon/wave/file_write_5.blade.php" />
         <option value="D:/다운로드/.env" />
         <option value="$PROJECT_DIR$/resources/lang/ko/passwords.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php" />
         <option value="$PROJECT_DIR$/app/UserMemo.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -275,154 +290,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="riari" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-forum-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="riari" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-forum-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="riari" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-forum-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="riari" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-forum-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="riari" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-forum" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -946,6 +813,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1198,7 +1079,13 @@
       <option name="project" value="LOCAL" />
       <updated>1471410042340</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
+      <created>1471410088138</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1471410088138</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1241,7 +1128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;" />
+    <MESSAGE value="3.2.1&#10;&#10;메모기능 추가&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.2.1&#10;&#10;메모기능 추가&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1250,41 +1138,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Post/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.285715">
-          <caret line="34" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="184" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Post/CommentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.857142">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/forum/category/show_backup.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.892858">
-          <caret line="2210" column="40" selection-start-line="2210" selection-start-column="40" selection-end-line="2210" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/forum/post/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.571428">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/vendor/forum/ko/posts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.5">
@@ -1545,14 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ko/passwords.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.535714">
@@ -1585,26 +1430,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.857142">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/UserInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/UserMemo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1637,32 +1466,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.892858">
-          <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-          <folding>
-            <marker date="1471405067805" expanded="true" signature="952:968" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="1009:1025" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="1120:1136" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="1177:1193" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="1271:1287" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="1328:1344" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="7847:7857" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="8310:8346" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="8326:8346" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="10955:14791" placeholder="..." />
-            <marker date="1471405067805" expanded="true" signature="10961:14791" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.35962147">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.37953794">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4389439">
+          <caret line="62" column="78" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/UserMemo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.178572">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_07_160820_create_boon_cash_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.535714">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_04_183617_create_user_payment_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_22_145011_creat_wave_clients_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_16_200054_create_user_memos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.714286">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43564355">
-          <caret line="132" column="54" selection-start-line="132" selection-start-column="54" selection-end-line="132" selection-end-column="54" />
+        <state vertical-scroll-proportion="-10.642858">
+          <caret line="121" column="78" selection-start-line="121" selection-start-column="78" selection-end-line="121" selection-end-column="78" />
           <folding>
             <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.679868">
+          <caret line="228" column="22" selection-start-line="228" selection-start-column="22" selection-end-line="228" selection-end-column="22" />
+          <folding>
+            <element signature="e#8787#8815#0#HTML" expanded="true" />
+            <element signature="e#8854#8889#0#HTML" expanded="true" />
+            <element signature="e#8954#9005#0#HTML" expanded="true" />
+            <marker date="1471437061960" expanded="true" signature="952:968" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="1009:1025" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="1120:1136" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="1177:1193" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="1271:1287" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="1328:1344" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="7848:7858" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="8311:8347" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="8327:8347" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="11853:15689" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="11859:15689" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16519:16531" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16586:16646" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16598:16646" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16630:16646" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16684:16772" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16684:16861" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16684:17205" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16684:17331" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16914:16930" placeholder="..." />
+            <marker date="1471437061960" expanded="true" signature="16979:16995" placeholder="..." />
           </folding>
         </state>
       </provider>

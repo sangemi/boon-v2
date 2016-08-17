@@ -16,8 +16,9 @@ class CreateUserMemosTable extends Migration
         {
             $table->increments('id');
 
+            $table->integer('model_id')->unsigned();
             $table->string('model_name'); // category = WaveClient
-            $table->string('model_id');
+            $table->integer('model_id')->unsigned();
 
             $table->string('memo_type'); // 전화, 문자, 직접
             $table->text('memo');
