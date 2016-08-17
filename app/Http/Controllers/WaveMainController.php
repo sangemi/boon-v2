@@ -130,7 +130,7 @@ class WaveMainController extends Controller
         if(Auth::check()) {
             $current_id = Auth::user()->id;
 
-            if ($current_id == 1 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
+            if ($current_id == 1 || $current_id == 231 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
                 if(isset($request->suit_id)){
                     $wave_client = WaveClient::where('suit_id', $request->suit_id)->get();
                     return view('boon.wave.dashboard', compact('wave_client', 'request'));
@@ -141,6 +141,7 @@ class WaveMainController extends Controller
             } else {
 
                 return "권한없음. 접속오류 : ". $current_id;
+
             }
         }else{
             return redirect()->to('/auth/login');
