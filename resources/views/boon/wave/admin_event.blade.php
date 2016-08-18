@@ -46,10 +46,10 @@ $current_id = Auth::user()->id; // SK인지 확인
 
 if(isset($request->suit_id)){
     $suit_id = $request->suit_id;
-    if($suit_id == 5) echo "<h2>코웨이 이벤트 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
-    else if($suit_id == 6) echo "<h2>인터파크 이벤트 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    if($suit_id == 5) echo "<h2>코웨이 의뢰인 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    else if($suit_id == 6) echo "<h2>인터파크 의뢰인 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }else{
-    echo "<h2>ALL 이벤트 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    echo "<h2>ALL 의뢰인 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }
 
 
@@ -77,7 +77,8 @@ if(isset($request->suit_id)){
         });
 
         /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
-        $(".each_client").click(function(){
+        $("#clientListBox").on("click", ".each_client", function(){
+
             var final_to_number = '', final_to_name = '', final_to_user_id = '', total_cnt = 0;
 
             if( $(this).data('clicked') == true ){
@@ -122,12 +123,11 @@ if(isset($request->suit_id)){
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
     h1 { color: #00BFFF; }
 
-    }
 </style>
 <script>
     $(function(){
 
-        $('#clientList').css('height', $(window).height() - 95);
+        $('#clientListBox').css('height', $(window).height() - 95);
         $('#detailInfoBox').css('height', $(window).height() - 105);
 
         /*따라다니는 레이어 시작*/
@@ -137,7 +137,7 @@ if(isset($request->suit_id)){
         /*사용자 설정 값 시작*/
         var speed          = 100;     // 따라다닐 속도 : "slow", "normal", or "fast" or numeric(단위:msec)
         var easing         = 'linear'; // 따라다니는 방법 기본 두가지 linear, swing
-        var $layer         = $('#clientList'); // 레이어 셀렉팅
+        var $layer         = $('#clientListBox'); // 레이어 셀렉팅
         var layerTopOffset = 0;   // 레이어 높이 상한선, 단위:px
         $layer.css('position', 'absolute');
         /*사용자 설정 값 끝*/
@@ -153,16 +153,36 @@ if(isset($request->suit_id)){
             $layer.animate({"top":yPosition }, {duration:speed, easing:easing, queue:false});
         });
         /*따라다니는 레이어 끝*/
+
+        $("#btnRandom").click(function(){
+            // console.dir($(".each_client")); //배열 확인
+            var yourArray = reorder($(".each_client"));
+            $("#areaClientList").html(yourArray);
+
+
+        });
+        $("#btnSelect100").click(function(){
+
+            $(".each_client").slice(0, 99).click();
+
+        });
     });
+    function reorder(src) {
+        return src.sort(function (a, b) { return 1 - (Math.random() * 2); });
+    }
+
 </script>
 
 
     <div style="position:relative;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div id="clientList" class="bigbox box2 col-xs-4" style="overflow-y:scroll;height:600px;">
+            <div id="clientListBox" class="bigbox box2 col-xs-4" style="overflow-y:scroll;height:600px;">
                 <div style="">
 
-                    <h4 class="text-center">접수인단 <small>[결제]</small></h4>
+                    <h4 class="text-center">입금완료 접수인단</h4>
+                    <a class="btn btn-default" id="btnRandom">썩기</a>
+                    <a class="btn btn-default" id="btnSelect100">100명선택</a>
+                    <div id="areaClientList">
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
                     ?>
@@ -205,6 +225,7 @@ if(isset($request->suit_id)){
 
                         @endforeach
                     @endif
+                    </div>
                     <div style="display:block;clear:both;"></div>
                     <?php
                     if ($current_id == 1){ // SK만 보임

@@ -152,27 +152,35 @@ class WaveMainController extends Controller
     /*어드민관리*/
     public function dashboard(Request $request)
     {
-        if(Auth::check()) {
-            $current_id = Auth::user()->id;
+        if(!Auth::check()) return redirect()->to('/auth/login');
 
-            if ($current_id == 1 || $current_id == 231 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
-                if(isset($request->suit_id)){
-                    $wave_client = WaveClient::where('suit_id', $request->suit_id)->get();
-                    return view('boon.wave.dashboard', compact('wave_client', 'request'));
-                }else{
-                    $wave_client = WaveClient::all();
-                    return view('boon.wave.dashboard', compact('wave_client', 'request'));
-                }
-            } else {
+        $current_id = Auth::user()->id;
 
-                return "권한없음. 접속오류 : ". $current_id;
-
+        if ($current_id == 1 || $current_id == 231 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
+            if(isset($request->suit_id)){
+                $wave_client = WaveClient::where('suit_id', $request->suit_id)->get();
+                return view('boon.wave.dashboard', compact('wave_client', 'request'));
+            }else{
+                $wave_client = WaveClient::all();
+                return view('boon.wave.dashboard', compact('wave_client', 'request'));
             }
-        }else{
-            return redirect()->to('/auth/login');
+        } else {
+
+            return "권한없음. 접속오류 : ". $current_id;
+
         }
+
     }
 
+    /* event */
+    public function event(Request $request)
+    {
+        if(!Auth::check()) return redirect()->to('/auth/login');
+
+        $wave_client = WaveClient::where('suit_id', $request->suit_id)->where('chk_payment', '입금완료')->take(1000)->get(); // skip(1000)->take(1000)
+
+        return view('boon.wave.admin_event', compact('wave_client','request') );
+    }
 
     /*/wave/mypage/client_id 이면 상세 접수내용. */
     public function mypageEach(Request $request)

@@ -28,6 +28,7 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::get('/wave/mypage/{client_id?}', 'WaveMainController@mypage')->where('client_id', '[0-9]+');
     /*Route::get('/wave/mypage/{suit_id?}', 'WaveMainController@mypage')->where('suit_id', '[0-9]+');*/
     Route::get('/wave/admin/{suit_id?}', 'WaveMainController@dashboard')->where('suit_id', '[0-9]+');
+    Route::get('/wave/admin/event/{suit_id?}', 'WaveMainController@event')->where('suit_id', '[0-9]+');
     Route::post('/wave/admin/tasks/{task_name?}', 'WaveMainController@tasks'); //change-payment
     Route::get('/wave/{suit_number?}', 'WaveMainController@index')->where('suit_number', '[0-9]+');
     Route::get('/wave/{suit_number}/recom/{recommending_id}', 'WaveMainController@recommendLink')->where(['suit_number'=>'[0-9]+', 'recommending_id'=>'[0-9]+']); //->where('name', '[A-Za-z]+');
