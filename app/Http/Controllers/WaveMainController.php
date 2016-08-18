@@ -203,7 +203,7 @@ class WaveMainController extends Controller
     {
         if(!Auth::check()) return redirect()->to('/auth/login');
 
-        $wave_client = WaveClient::where('suit_id', $request->suit_id)->where('chk_payment', '입금완료')->orderby('id', 'desc')->take(1000)->get(); // skip(1000)->take(1000)
+        $wave_client = WaveClient::where('suit_id', $request->suit_id)->where('chk_payment', '입금완료')->orderby('id', 'asc')->take(1000)->get(); // skip(1000)->take(1000)
 
         return view('boon.wave.admin_event', compact('wave_client','request') );
     }

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Wave/WaveEventHistory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_08_18_213546_create_wave_event_history_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/admin_event.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/admin_event.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +36,8 @@
       <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55445546">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.27227724">
+              <caret line="205" column="86" selection-start-line="205" selection-start-column="86" selection-end-line="205" selection-end-column="86" />
               <folding>
                 <element signature="e#40#61#0#PHP" expanded="true" />
               </folding>
@@ -1146,7 +1143,13 @@
       <option name="project" value="LOCAL" />
       <updated>1471522734171</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="3.3.0&#10;&#10;이벤트 페이지 추가&#10;&#10;&#10;">
+      <created>1471527872556</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1471527872556</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1195,7 +1198,8 @@
     <MESSAGE value="3.2.2&#10;&#10;이벤트페이지&#10;&#10;&#10;" />
     <MESSAGE value="3.2.3&#10;&#10;이벤트페이지&#10;&#10;&#10;" />
     <MESSAGE value="3.2.4&#10;&#10;마이페이지 접근방식 변경&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.2.4&#10;&#10;마이페이지 접근방식 변경&#10;&#10;&#10;" />
+    <MESSAGE value="3.3.0&#10;&#10;이벤트 페이지 추가&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.3.0&#10;&#10;이벤트 페이지 추가&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1680,8 +1684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55445546">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.27227724">
+          <caret line="205" column="86" selection-start-line="205" selection-start-column="86" selection-end-line="205" selection-end-column="86" />
           <folding>
             <element signature="e#40#61#0#PHP" expanded="true" />
           </folding>
