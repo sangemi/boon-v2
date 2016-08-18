@@ -235,7 +235,11 @@ class WaveMainController extends Controller
         $wave_client = WaveClient::where('user_id', Auth::id())->get();
         if(count($wave_client)){
             if(isset($request->client_id)){
-                return $this->mypageEach($request);
+                // 자기 소송인것 확인해야함.
+                $wave_client_this = WaveClient::find($request->client_id);
+                if($wave_client_this['user_id'] == Auth::user()->id)
+                    return $this->mypageEach($request);
+                else return "잘못된 접근입니다. SK45810";
             }else{
                 return $this->mypageAll();
             }
