@@ -174,17 +174,67 @@ class WaveMainController extends Controller
     }
 
 
-
-    public function mypage(Request $request)
+    /*/wave/mypage/client_id 이면 상세 접수내용. */
+    public function mypageEach(Request $request)
     {
-        if ( !Auth::check() ) {
-            return redirect()->to('/auth/login');
+        if ( !Auth::check() ) { return redirect()->to('/auth/login'); }
+
+        $wave_client = WaveClient::find($request->client_id);
+
+        /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
+        $wave_suit = $wave_client->suit()->first();
+        $category_id = $wave_client->suit()->first()->forum_category_id; // wave_suits T에 공지 forum 번호
+
+        $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
+
+        $uploaded_files = WaveFile::where('client_id', $request->client_id)->orderBy('title_no', 'asc')->get();
+
+        $wave_status = $wave_client->status()->first();
+
+        return view('boon.wave.mypage_each', compact('wave_client', 'wave_suit', 'wave_status', 'forum_threads', 'uploaded_files'));
+    }
+
+    /*그냥 /wave/mypage 이면 메인 상황실.*/
+    static function mypageAll()
+    {
+        if ( !Auth::check() ) { return redirect()->to('/auth/login'); }
+        $wave_suits = WaveSuit::all();
+
+        $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
+        $my_suits = Array();
+        foreach($wave_client as $clien){
+            $suit_obj = $clien->suit()->first();
+            $my_suits[]= $suit_obj;
+
+            $status_obj = $clien->status()->first();
+            $my_status[] = $status_obj;
+            /*if(count($status_obj))
+                $my_status[]['title'] = $status_obj->title;
+            else $my_status[]['title'] = "배정전";*/
         }
 
+        /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
+        $category_id = 7; // 응원게시판
+        $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
 
+        return view('boon.wave.mypage_all', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads'));
+
+    }
+    public function mypage(Request $request)
+    {
+        if(isset($request->client_id)){
+            return $this->mypageEach($request);
+        }else{
+
+            return $this->mypageAll();
+
+        }
+    }
+    public function mypage_del(Request $request)
+    {
+        if ( !Auth::check() ) { return redirect()->to('/auth/login'); }
         $wave_suits = WaveSuit::all(); //->get() //all() 에는 get()이 포함되어 있음.
 
-//dd($my_status);
         /*그냥 /wave/mypage 이면 메인 상황실.*/
         if(!isset($request->suit_id)){
             $wave_client = WaveClient::where('user_id', Auth::id())->get(); //->get() //all() 에는 get()이 포함되어 있음.
@@ -218,7 +268,14 @@ class WaveMainController extends Controller
                 $my_status[] = $status_obj;
             }
             if($wave_client->count()) {
-                /*한 집단소송에 신청 2명일수도 있으니까*/
+                /*한 집단소송에 신청 2명일수도 있으니까
+
+                이게 아니라, 하나만 나오네 지금............ 그냥
+                mypage/{client_id} 이렇게 넘거야겠다.
+
+
+
+                */
                 foreach ($wave_client as $wclient) {
                     if ($wclient['suit_id'] == $request->suit_id) { /*suit_id 사건에 접수된게 있음*/
 
@@ -226,7 +283,9 @@ class WaveMainController extends Controller
                         $category_id = $wclient->suit()->first()->forum_category_id; // wave_suits T에 forum 정보 저장.
                         $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
 
-                        return view('boon.wave.mypage_each', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads'));
+                        $uploaded_files = WaveFile::where('client_id', $wclient['id'])->orderBy('title_no', 'asc')->get();
+
+                        return view('boon.wave.mypage_each', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads', 'uploaded_files'));
                     }
                 }
             }

@@ -206,7 +206,7 @@ echo "ddddddd다름";
                     @foreach ($wave_client as $key=> $waveclient)
                         <div class="col-sm-12" style="text-align:left ;margin-bottom:15px;">
 
-                            <a class="btn btn-lg btn-default" href="/wave/mypage/<?=$waveclient['suit_id']?>"><?=($key+1)?>. <?=$my_suits[$key]['title']?></a>
+                            <a class="btn btn-lg btn-default" href="/wave/mypage/<?=$waveclient['id']?>"><?=($key+1)?>. <?=$my_suits[$key]['title']?> <?=$waveclient['name']?></a>
 
                         </div>
                     @endforeach

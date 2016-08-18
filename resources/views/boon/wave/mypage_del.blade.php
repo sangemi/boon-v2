@@ -191,7 +191,7 @@ echo "ddddddd다름";
 
     <div class="row text-center" style="padding:0 10px 10px 10px;">
         <div class="">
-            <div class="col-sm-6" style="white-space:normal;">
+            <div class="col-sm-12" style="white-space:normal;">
                 <div class="bigbox">
                 <h4>진행 소송{{--<small>+등록</small>--}}</h4>
 
@@ -237,57 +237,68 @@ echo "ddddddd다름";
                 </div>
             </div>
 
-            <div class="col-sm-6" style="white-space:normal;">
-                <div class="bigbox">
 
-                    @foreach ($wave_suits as $key=> $wave_suit)
-
-                        @foreach ($my_suits as $key=> $my_suit)
-                            <?php
-                            $check_my_suit = false;
-                            if($my_suit->id == $wave_suit->id){
-                                $check_my_suit = true;
-                            }
-                            if($check_my_suit == true){
-                                echo $my_suit->notice;
-                                break;
-                            }
-                            ?>
-
-                        @endforeach
-                    @endforeach
-
-                    {{--forum 글 읽어오기--}}
-
-                        <div id="category" class="text-left " style="margin-left:25px;">
-                            <h4></h4>
-                            <ul>
-                            @foreach($category as $categori)
-                            <li>
-                                <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
-                            </li>
-                            @endforeach
-                            </ul>
-                        </div>
-
-
-                </div>
-            </div>
         </div>
 
 </div>
 
 
-@if(isset($chk_payment))
-    <div class="well bg-warning">
-    <h4>비용 미입금 상태</h4>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
-    <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
-    </div>
-@endif
+<div class="row" style="padding:0 10px 10px 10px;">
 
-{{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
-{{dd( Request::input(), http_build_query (Request::input()) ) }}
-</div>--}}
+    {{--공지사항--}}
+    <div class="col-sm-6" style="white-space:normal;">
+        <div class="bigbox">
+
+            @foreach ($wave_suits as $key=> $wave_suit)
+
+                @foreach ($my_suits as $key=> $my_suit)
+                    <?php
+                    $check_my_suit = false;
+                    if($my_suit->id == $wave_suit->id){
+                    $check_my_suit = true;
+                    }
+                    if($check_my_suit == true){
+                    //echo $my_suit->notice;
+                    break;
+                    }
+                    ?>
+
+                @endforeach
+            @endforeach
+
+            {{--forum 글 읽어오기--}}
+
+            <div id="category" class="text-left " style="margin-left:25px;">
+                <h4></h4>
+                <ul>
+                    @foreach($category as $categori)
+                        <li>
+                            <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="col-sm-6" style="white-space:normal;">
+        <div class="bigbox">
+
+        @if(isset($chk_payment))
+            <div class="well bg-warning">
+            <h4>비용 미입금 상태</h4>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
+            <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
+            </div>
+        @endif
+
+        </div>
+    </div>
+
+    {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
+    {{dd( Request::input(), http_build_query (Request::input()) ) }}
+    </div>--}}
 
 {{--    <div class="corner-ribbon top-left sticky red shadow">New</div>
 <div class="corner-ribbon top-right sticky blue">Updated</div>

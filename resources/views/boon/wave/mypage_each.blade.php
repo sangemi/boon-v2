@@ -59,17 +59,18 @@ echo "ddddddd다름";
     .bigbox h4 {border-bottom:1px solid tomato;padding:8px 0 3px 0;color:tomato;margin-top:0px;border-top-left-radius:10px;border-top-right-radius:10px;}
     h1 { color: #00BFFF; }
 
-    }
+    .tb_file_status {font-size:0.7em;}
 </style>
 
-<h2><?=$my_suits[0]['title']?></h2>
-    <div class="row text-center" style="padding:0 10px 10px 10px;">
+<h2><?=$wave_suit['title']?></h2>
+    <div class="row " style="padding:0 10px 10px 10px;">
 
         <div class="">
 
-            <div class="col-sm-6" style="white-space:normal;">
+            {{--접수 상태--}}
+            <div class="col-sm-12" style="white-space:normal;">
                 <div class="bigbox">
-                <h4>접수 상태{{--<small>+등록</small>--}}</h4>
+                <h4 class="text-center">접수 상태{{--<small>+등록</small>--}}</h4>
 
                 @if (empty($wave_client))
                     <div class="col-sm-12">
@@ -77,22 +78,58 @@ echo "ddddddd다름";
                     </div>
                 @else
 
-                    @foreach ($wave_client as $key=> $waveclient)
+
                         <div class="col-sm-12" style="text-align: left;">
-                            <b>
-                                <?=($key+1)?>. <?=$waveclient['name']?>
-                                <a href="{{ URL::to('wave/client/'.$waveclient['id'].'/edit') }}">
+                            <p style="font-weight:bold;">
+                                <?=$wave_client['name']?>
+                                <a href="{{ URL::to('wave/client/'.$wave_client['id'].'/edit') }}">
                                     <span class="btn btn-xs btn-link" aria-hidden="true">서류수정<span class="fa fa-pencil"></span></span>
                                 </a>
-                                <a class="btn btn-sm btn-link" href="/wave/file/create?client_id=<?=$waveclient['id']?>">증거제출</a>
+                                <a class="btn btn-sm btn-link" href="/wave/file/create?client_id=<?=$wave_client['id']?>">증거제출</a>
 
-                            </b>
-                            <p><?=$my_status[$key]['title']?></p>
-                            @if( $waveclient['chk_proof'] == '')
+                            </p>
+
+                            <h3>소송 진행상태</h3>
+                            <p><?=$wave_status['title']?></p>{{--신청확인중--}}
+
+
+                            {{--증거제출여부 테이블--}}
+                            <h3>증거제출 관리</h3>
+                            <table class="table table-condensed table-bordered  tb_file_status" >
+
+                                <?php // DB에 있는 file 제목들을 json으로 변환 후
+                                   $file_title_json = json_decode($wave_suit['file_title_json']);
+                                ?>
+
+                                    @if($file_title_json)
+                                        <tr><th>증거번호</th><th>서류명</th><th>비고</th><th>파일</th><th>확인</th></tr>
+                                        @foreach($file_title_json as $key3 => $file_title)
+                                            <tr>
+                                                <td><?=$file_title->title_no?></td>
+                                                <td><?=$file_title->title?></td>
+                                                <td><?=$file_title->type?></td>
+                                                <td>
+                                                @foreach($uploaded_files as $uploaded_file)
+                                                    @if($file_title->title_no == $uploaded_file->title_no)
+                                                        <a href="<?=$uploaded_file->uploaded_filename?>" target="_blank">[<?=$uploaded_file->source_filename?>]</a>
+                                                    @endif
+                                                @endforeach
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        @endforeach
+                                    @else
+                                        <tr><td>업로드한 자료가 없습니다.</td></tr>
+                                    @endif
+
+                            </table>
+
+                            @if( $wave_client['chk_proof'] == '')
 
                             @endif
 
-                            @if( $waveclient['chk_payment'] == '입금대기')
+                            <h3>비용</h3>
+                            @if( $wave_client['chk_payment'] == '입금대기')
                                 <?php
                                 $chk_payment = true;
                                     ?>
@@ -102,48 +139,58 @@ echo "ddddddd다름";
                                 </div>
                             @else
                                 <div class="bg_warning">
-                                    <p><?=$my_status[$key]['chk_payment']?></p>
+                                    <p><?=$wave_status['chk_payment']?></p>
                                 </div>
                             @endif
 
                         </div>
-                    @endforeach
+
 
 
                 @endif
                 </div>
             </div>
 
-            <div class="col-sm-6" style="white-space:normal;">
-                <div class="bigbox">
-
-                    {{--forum 글 읽어오기--}}
-                    <h4>공지사항</h4>
-                    <div id="category" class="text-left " style="margin-left:25px;">
-
-                        <ul>
-                        @foreach($forum_threads as $categori)
-                        <li>
-                            <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
-                        </li>
-                        @endforeach
-                        </ul>
-                    </div>
-
-
-                </div>
-            </div>
         </div>
 
 </div>
 
+<div class="row" style="padding:0 10px 10px 10px;">
 
-@if(isset($chk_payment))
-    <div class="well bg-warning">
-    <h4>비용 미입금 상태</h4>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
-    <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
+    {{--공지사항--}}
+    <div class="col-sm-6" style="white-space:normal;">
+        <div class="bigbox">
+
+            {{--forum 글 읽어오기--}}
+            <h4 class="text-center">공지사항</h4>
+            <div id="category" class="text-left " style="margin-left:25px;">
+
+                <ul>
+                    @foreach($forum_threads as $categori)
+                        <li>
+                            <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+
+
+        </div>
     </div>
-@endif
+
+    <div class="col-sm-6" style="white-space:normal;">
+        <div class="bigbox">
+            <h4 class="text-center">개인별 전달사항</h4>
+            @if(isset($chk_payment))
+                <div class="" style="padding:10px;">
+                <h5 class="">비용 미입금 상태</h5>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
+                <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
+                </div>
+            @endif
+        </div>
+    </div>
+
+</div>
 
 {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
 {{dd( Request::input(), http_build_query (Request::input()) ) }}
