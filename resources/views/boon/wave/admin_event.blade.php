@@ -183,6 +183,8 @@ if(isset($request->suit_id)){
         $("#btnEventConfirm").click(function(){
             var my_url = url;
             my_url += '/' + "save-event-result";
+
+            /*선택된 사람들 문자열로*/
             var selected_ids = '';
             $(".each_client").each(function(){
                 if( $(this).data('clicked') == true )
@@ -191,35 +193,23 @@ if(isset($request->suit_id)){
             selected_ids = trimChar(selected_ids, ',');
             alert(selected_ids);
             var formData = {
-                row_id: selected_ids
+                event_title: $("input[name=event_title]").val(),
+                event_explain: $("input[name=event_explain]").val(),
+                selected_ids: selected_ids
             };
+            console.dir(formData);
             $.ajax({
                 type: "POST", url: my_url, data: formData, dataType: 'json',
                 success: function (data) {
-                    console.log("detail-memo : " + JSON.stringify(data)); // js 배열 확인하기
+                    console.log("event-memo : " + JSON.stringify(data)); // js 배열 확인하기
                     if(data['result'] == 'success') {
-                        var memo_html = '';
-                        data['data'].forEach(function(value){
-                            memo_html +=
-                                    "<div class='col-sm-6' style='padding:3px;'>"+
-                                    "<div class='' style='padding:5px;background-color:#efefef; border:1px solid gray;' data-client_id='" + value['id'] + "'>" +
-                                    "<div class=''>" +
-                                    "<p class='' style=''>" + value['memo'] + "</p>" +
-                                    "</div>" +
-                                    "<p class='' style='font-size:0.6em;'></p>" +
-                                    "<p style='font-size:0.6em;'>타입 " + value['memo_type'] + " /입력 " + value['reg_id'] + " /담당 " + value['in_charge_id'] + "/처리 " + value['in_charge_check'] +'</p>'+
-                                    "<p class='text-right'>" + value['created_at'].substring(5,16) + " <span class='btn-del-memo btn btn-xs btn-default'>del</span></p>" +
-                                    "</div>" +
-                                    "</div>"
-                            ;
-                        });
-                        $("#userMemoBox").html(memo_html);
+                        alert('성공');
                     }else{
-                        $("#userMemoBox").html('메모가 없습니다.');
+                        alert('실패');
                     }
                 },
                 error: function (data) {
-                    console.log('SK Error 414:', data);
+                    console.log('SK Error 4124:', data);
                 }
             });
         });
@@ -241,6 +231,10 @@ if(isset($request->suit_id)){
                     <a class="btn btn-default" id="btnRandom">썩기</a>
                     <a class="btn btn-default" id="btnSelect100">100명선택</a>
                     <a class="btn btn-default" id="btnEventConfirm">확정</a>
+
+                    <input name="event_title" class="form-control" placeholder="이벤트제목" />
+                    <input name="event_explain" class="form-control" placeholder="이벤트설명" />
+
                     <div id="areaClientList">
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
@@ -277,7 +271,7 @@ if(isset($request->suit_id)){
                     <div style="display:block;clear:both;"></div>
                     <?php
                     if ($current_id == 1){ // SK만 보임
-                        echo "<p style='background-color:#eee;padding:10px;;' id='div_amt_total'>".number_format($cnt_total)."명 / 총액".number_format($amt_total)."원</p>";
+                        echo "<p style='background-color:#eee;padding:10px;;' id='div_amt_total'>".number_format($cnt_total)."명 </p>";
                         ?><script>$(document).ready(function() { $("#detailInfoBox").append($("#div_amt_total").html()) });</script><?php
                     }
                     ?>

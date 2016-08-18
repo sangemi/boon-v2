@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Lib\skHelper;
+use App\Models\Wave\WaveEventHistory;
 use App\Recommend;
 use App\UserMemo;
 use App\WaveClient;
+
 use App\WaveFile;
 use App\WaveSuit;
 use Illuminate\Http\Request;
@@ -89,6 +91,8 @@ class WaveMainController extends Controller
                 $('#task').val(data.task);
                 $('#description').val(data.description); */
 
+        /*                 여기서 어드민체크!!!!!!!!!!!!!!!!!!!!!!!!!                                     */
+
         if($task_name == 'change-payment') {
             //$task = ['task-title' => '입금처리', 'task-description' => '']; //Task::find($task_id);
             if($request->chk_payment){ //  && $request->amt_payment 입금액은 없을수도 있음.
@@ -140,6 +144,28 @@ class WaveMainController extends Controller
             if($saved) return array("result" => 'success');
             else  return array("result" => 'fail');
 
+        }else if($task_name == 'save-event-result'){
+
+            if(!$request->event_title) return array("result" => '제목 입력해주세요');
+
+            $event_history = new WaveEventHistory();
+            $event_history->title = $request->event_title;
+            $event_history->explain = $request->event_explain;
+            $event_history->start_client_id = "0";
+            $event_history->end_client_id = "1000";
+            $event_history->client_id_list = $request->selected_ids;
+            $saved = $event_history->save();
+
+            $selected_ids_arr = explode(",", $request->selected_ids);
+            /*     여러개의 이벤트도 포함할 수 있도록
+            DB::table('wave_clients')->whereIn('id', $selected_ids_arr )->update(['event_result' => 'event_result' . ','. $event_history->id]);
+            event_result = '1, 4, 6' 식으로 여러개의 이벤트도 포함할 수 있도록 하고 싶음. 근데 쿼리빌더 모르겠네. raw builder로 해야하나.
+            */
+            DB::table('wave_clients')->whereIn('id', $selected_ids_arr )->update(['event_result' => $event_history->id]);
+
+            if($saved) return array("result" => 'success');
+            else  return array("result" => 'fail');
+
         }else{
             $task = array("data" => "업무가 없음. SK1 Error", "result" => "fail");
         }
@@ -183,7 +209,7 @@ class WaveMainController extends Controller
     }
 
     /*/wave/mypage/client_id 이면 상세 접수내용. */
-    public function mypageEach(Request $request)
+    private function mypageEach(Request $request)
     {
         if ( !Auth::check() ) { return redirect()->to('/auth/login'); }
 
@@ -203,7 +229,7 @@ class WaveMainController extends Controller
     }
 
     /*그냥 /wave/mypage 이면 메인 상황실.*/
-    static function mypageAll()
+    private function mypageAll()
     {
         if ( !Auth::check() ) { return redirect()->to('/auth/login'); }
         $wave_suits = WaveSuit::all();
