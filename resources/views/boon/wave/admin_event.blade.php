@@ -1,3 +1,17 @@
+<?php use App\Lib\sk; ?>
+<?php /*위에꺼 지우고 자동로드하고 싶은데, composor.json에
+    "autoload": {
+    "classmap": [
+    "database"
+    ],
+    "psr-4": {
+    "App\\": "app/"
+    },
+    "files": [
+    "app/Lib/skHelper.php"
+    ]
+해도 안되네..*/ ?>
+
 @extends('layouts.master') {{--master를 상속받음--}}
 
 @section('title', '단체소송 - 분제로')
@@ -46,10 +60,10 @@ $current_id = Auth::user()->id; // SK인지 확인
 
 if(isset($request->suit_id)){
     $suit_id = $request->suit_id;
-    if($suit_id == 5) echo "<h2>코웨이 의뢰인 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
-    else if($suit_id == 6) echo "<h2>인터파크 의뢰인 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    if($suit_id == 5) echo "<h2>코웨이 이벤트 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    else if($suit_id == 6) echo "<h2>인터파크 이벤트 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }else{
-    echo "<h2>ALL 의뢰인 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    echo "<h2>ALL 이벤트 <a href='/wave/admin/event/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/event/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }
 
 
@@ -79,7 +93,7 @@ if(isset($request->suit_id)){
         /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
         $("#clientListBox").on("click", ".each_client", function(){
 
-            var final_to_number = '', final_to_name = '', final_to_user_id = '', total_cnt = 0;
+            var final_to_number = '', final_to_name = '', final_to_client_id = '', total_cnt = 0;
 
             if( $(this).data('clicked') == true ){
                 $(this).data('clicked', false); $(this).css('background-color', '');
@@ -92,7 +106,7 @@ if(isset($request->suit_id)){
                 if($(this).data('clicked')) {
                     final_to_number = final_to_number + ',' + $(this).data('tel');
                     final_to_name = final_to_name + ', ' + $(this).find(".each_name").text();
-                    final_to_user_id = final_to_user_id +  ',' + $(this).data('user_id');
+                    final_to_client_id = final_to_client_id +  ',' + $(this).data('client_id');
                     total_cnt++;
                 }
             });
@@ -100,10 +114,10 @@ if(isset($request->suit_id)){
 
             final_to_number = trimChar( trimChar(final_to_number, ' '), ',');
             final_to_name = trimChar( trimChar(final_to_name, ' '), ',');
-            final_to_user_id = trimChar( trimChar(final_to_user_id, ' '), ',');
+            final_to_client_id = trimChar( trimChar(final_to_client_id, ' '), ',');
             $("#sms_recive_num").val( final_to_number );
             $("#sms_to_list").html( final_to_name  + " <b>총 "+total_cnt+"명</b>");
-            $("#to_user_id").val( final_to_user_id );
+            $("#to_client_id").val( final_to_client_id );
         });
     });
 </script>
@@ -163,9 +177,53 @@ if(isset($request->suit_id)){
         });
         $("#btnSelect100").click(function(){
 
-            $(".each_client").slice(0, 99).click();
+            $(".each_client").slice(0, 100).click();
 
         });
+        $("#btnEventConfirm").click(function(){
+            var my_url = url;
+            my_url += '/' + "save-event-result";
+            var selected_ids = '';
+            $(".each_client").each(function(){
+                if( $(this).data('clicked') == true )
+                    selected_ids += $(this).data("client_id") + ',';
+            });
+            selected_ids = trimChar(selected_ids, ',');
+            alert(selected_ids);
+            var formData = {
+                row_id: selected_ids
+            };
+            $.ajax({
+                type: "POST", url: my_url, data: formData, dataType: 'json',
+                success: function (data) {
+                    console.log("detail-memo : " + JSON.stringify(data)); // js 배열 확인하기
+                    if(data['result'] == 'success') {
+                        var memo_html = '';
+                        data['data'].forEach(function(value){
+                            memo_html +=
+                                    "<div class='col-sm-6' style='padding:3px;'>"+
+                                    "<div class='' style='padding:5px;background-color:#efefef; border:1px solid gray;' data-client_id='" + value['id'] + "'>" +
+                                    "<div class=''>" +
+                                    "<p class='' style=''>" + value['memo'] + "</p>" +
+                                    "</div>" +
+                                    "<p class='' style='font-size:0.6em;'></p>" +
+                                    "<p style='font-size:0.6em;'>타입 " + value['memo_type'] + " /입력 " + value['reg_id'] + " /담당 " + value['in_charge_id'] + "/처리 " + value['in_charge_check'] +'</p>'+
+                                    "<p class='text-right'>" + value['created_at'].substring(5,16) + " <span class='btn-del-memo btn btn-xs btn-default'>del</span></p>" +
+                                    "</div>" +
+                                    "</div>"
+                            ;
+                        });
+                        $("#userMemoBox").html(memo_html);
+                    }else{
+                        $("#userMemoBox").html('메모가 없습니다.');
+                    }
+                },
+                error: function (data) {
+                    console.log('SK Error 414:', data);
+                }
+            });
+        });
+
     });
     function reorder(src) {
         return src.sort(function (a, b) { return 1 - (Math.random() * 2); });
@@ -182,6 +240,7 @@ if(isset($request->suit_id)){
                     <h4 class="text-center">입금완료 접수인단</h4>
                     <a class="btn btn-default" id="btnRandom">썩기</a>
                     <a class="btn btn-default" id="btnSelect100">100명선택</a>
+                    <a class="btn btn-default" id="btnEventConfirm">확정</a>
                     <div id="areaClientList">
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
@@ -197,24 +256,13 @@ if(isset($request->suit_id)){
                             ?>
                             <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"
                                                     data-chk_payment="<?=$client['chk_payment']?>"
-                                                    data-user_id="<?=$client['id']?>">
+                                                    data-client_id="<?=$client['id']?>">
                                 <?=($no+1)?>.
                                 <a href="javascript:showClientData('<?=$client['id']?>')">
-                                    <span  class="each_name"><?=$client['name']?></span>
+                                    <span  class="each_name"><?=sk::hide_kname($client['name'])?></span>
                                 </a>
-                                @if($client['chk_payment'] == '입금완료' || $client['chk_payment'] == '면제')
-                                    @if ($current_id == 1 || $current_id == 294 || $current_id == 300 ) {{--SK만 보임--}}
-                                        <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
-                                            <?=number_format($client['amt_payment'])?>원
-                                        </button>
-                                    @else
-                                            <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
-                                                <?=$client['chk_payment']?>
-                                            </button>
-                                    @endif
-                                @else
-                                    <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
-                                @endif
+                                <span><?=substr($client['phone'],-4)?></span>
+
                                 <?php //중복가능성 체크
                                     if(in_array($client['name'], $client_arr_untilnow)){
                                     echo "<small style='color:red;'>*중복확인</small>";
@@ -244,7 +292,7 @@ if(isset($request->suit_id)){
                 </div>
                 <div id="" class="row" style="background-color: cornsilk; padding:20px 0;">
                     <div class="col-sm-10">
-                        <textarea name="add_memo" id="textarea_add_memo" class="form-control" placeholder="의뢰인 선택후 메모 입력 (의뢰인에게 안보임)"></textarea>
+                        <textarea name="add_memo" id="textarea_add_memo" class="form-control" placeholder="선택 의뢰인 메모입력(다중 선택시 일괄)"></textarea>
                     </div>
                     <div class="col-sm-2">
                         <button type="button" id="btnAddMemo" class="form-control">입력</button>
@@ -713,9 +761,9 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
             ?>
         </div>
 
-        <form name="formSMS발송" id="formSMS발송" action="/lawfirm/consult.ajax.lawfirm.php" method="post"  enctype='multipart/form-data' target="winNewSMS">
+        <form name="formSMS발송" id="formSMS발송" action="" method="post"  enctype='multipart/form-data' target="winNewSMS">
             <input type="hidden" name="action" value="sendSMS" />
-            <input type="hidden" name="to_user_id" id="to_user_id" value="" />
+            <input type="hidden" name="to_client_id" id="to_client_id" value="" />
 
             <input type="hidden" name="consult_id" value="" />
 
@@ -794,7 +842,7 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
             /*$(this).attr("disabled", true);*/
 
             var str = "&from="+$("input[name=sms_number_from]").val()+"&to="+$("input[name=sms_number_to]").val()+"&text="+$("#sms_content").val()+""
-                    +"&to_user_id="+$("#to_user_id").val()+"";
+                    +"&to_client_id="+$("#to_client_id").val()+"";
             console.log(str);
             /*$.post("/lawfirm/consult.ajax.lawfirm.php", str, function(data){*/
             $.post("/sms/send", str, function(data){

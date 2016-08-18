@@ -265,7 +265,7 @@
 										@endif
 
 										<div class="text-center">
-											<a href="/wave/mypage/<?=$request->suit_number?>" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
+											<a href="/wave/mypage?suit_id=6" class="btn btn-lg btn-warning" style="color:black"> ▶ 접수 / 관리</a>
 											<a href="/forum/6" class="btn btn-lg btn-default" style="color:black"> 공지사항</a>
 										</div>
 

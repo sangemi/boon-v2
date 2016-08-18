@@ -177,7 +177,7 @@ class WaveMainController extends Controller
     {
         if(!Auth::check()) return redirect()->to('/auth/login');
 
-        $wave_client = WaveClient::where('suit_id', $request->suit_id)->where('chk_payment', '입금완료')->take(1000)->get(); // skip(1000)->take(1000)
+        $wave_client = WaveClient::where('suit_id', $request->suit_id)->where('chk_payment', '입금완료')->orderby('id', 'desc')->take(1000)->get(); // skip(1000)->take(1000)
 
         return view('boon.wave.admin_event', compact('wave_client','request') );
     }
@@ -228,15 +228,22 @@ class WaveMainController extends Controller
         return view('boon.wave.mypage_all', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads'));
 
     }
+
     public function mypage(Request $request)
     {
-        if(isset($request->client_id)){
-            return $this->mypageEach($request);
+        /*먼저 접수되어 있는 것 확인 > 하나도 접수X면 바로 접수페이지로*/
+        $wave_client = WaveClient::where('user_id', Auth::id())->get();
+        if(count($wave_client)){
+            if(isset($request->client_id)){
+                return $this->mypageEach($request);
+            }else{
+                return $this->mypageAll();
+            }
         }else{
-
-            return $this->mypageAll();
-
+            // 없으면 바로 소송접수!
+            return redirect('wave/client/create?suit_id='.$request->suit_id); //Route::resource('wave/client', 'WaveClientController');
         }
+
     }
     public function mypage_del(Request $request)
     {

@@ -46,10 +46,10 @@ $current_id = Auth::user()->id; // SK인지 확인
 
 if(isset($request->suit_id)){
     $suit_id = $request->suit_id;
-    if($suit_id == 5) echo "<h2>코웨이 이벤트 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
-    else if($suit_id == 6) echo "<h2>인터파크 이벤트 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    if($suit_id == 5) echo "<h2>코웨이 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    else if($suit_id == 6) echo "<h2>인터파크 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }else{
-    echo "<h2>ALL 이벤트 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
+    echo "<h2>ALL 의뢰인 <a href='/wave/admin/5' style='font-size:0.6em;'>코웨이</a> <a href='/wave/admin/6' style='font-size:0.6em;'>인터파크</a></h2>";
 }
 
 
@@ -692,7 +692,8 @@ btn_smsbox 를 클릭시 해당 text() 자동저장
             ?>
         </div>
 
-        <form name="formSMS발송" id="formSMS발송" action="/lawfirm/consult.ajax.lawfirm.php" method="post"  enctype='multipart/form-data' target="winNewSMS">
+        <form name="formSMS발송" id="formSMS발송" action="/sms" method="post"  enctype='multipart/form-data' target="winNewSMS">
+            {{--<form name="formSMS발송" id="formSMS발송" action="/lawfirm/consult.ajax.lawfirm.php" method="post"  enctype='multipart/form-data' target="winNewSMS">--}}
             <input type="hidden" name="action" value="sendSMS" />
             <input type="hidden" name="to_user_id" id="to_user_id" value="" />
 
