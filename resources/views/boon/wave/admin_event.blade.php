@@ -72,7 +72,7 @@ if(isset($request->suit_id)){
 {{-- 단체SMS 시작 --}}
 <div>
     <a href="javascript:void(0);" class="toggle_smsbox btn btn-default">SMS 발송</a>
-    <span class="btn btn-xs btn-default" id="btn-no-payment">미입금자 선택</span>
+    <span class="btn btn-xs btn-default" id="btn-no-payment">전체 선택</span>
     <span id="sms_to_list" style="font-size:0.8em;color:gray;">리스트를 클릭 후 발송버튼 눌러주세요.</span>
 </div>
 <script>
@@ -82,11 +82,11 @@ if(isset($request->suit_id)){
         });
         $("#btn-no-payment").click(function() {
             $(".each_client").each(function(){
-                var status = $(this).data('chk_payment');
+                /*var status = $(this).data('chk_payment');
                 if( status == '입금완료' || status == '해당없음' || status == '면제') {
-                }else{
+                }else{*/
                     $(this).click();
-                }
+                /*}*/
             });
         });
 
