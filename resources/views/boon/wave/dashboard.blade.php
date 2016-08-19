@@ -205,6 +205,10 @@ if(isset($request->suit_id)){
 
                         @endforeach
                     @endif
+
+                    {{ $wave_client->links() }}
+
+
                     <div style="display:block;clear:both;"></div>
                     <?php
                     if ($current_id == 1){ // SK만 보임
