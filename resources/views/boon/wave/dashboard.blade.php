@@ -127,7 +127,7 @@ if(isset($request->suit_id)){
 <script>
     $(function(){
 
-        $('#clientList').css('height', $(window).height() - 95);
+        $('#clientList').css('height', $(window).height() - 65);
         $('#detailInfoBox').css('height', $(window).height() - 105);
 
         /*따라다니는 레이어 시작*/
@@ -163,6 +163,7 @@ if(isset($request->suit_id)){
                 <div style="">
 
                     <h4 class="text-center">접수인단 <small>[결제]</small></h4>
+                    {{ $wave_client->links() }}
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
                     ?>
@@ -206,8 +207,6 @@ if(isset($request->suit_id)){
                         @endforeach
                     @endif
 
-                    {{ $wave_client->links() }}
-
 
                     <div style="display:block;clear:both;"></div>
                     <?php
@@ -218,6 +217,8 @@ if(isset($request->suit_id)){
                     ?>
                 </div>
                 <div style="display:block;clear:both;"></div>
+                {{ $wave_client->links() }}
+
             </div>
 
 
