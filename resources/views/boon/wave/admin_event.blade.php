@@ -296,7 +296,7 @@ if(isset($request->suit_id)){
                 <h4 class="text-center">당첨자 정보</h4>
                 <div  id="detailInfoBox">
                     <?php
-
+                    /*1차 이벤트 당첨자*/
                     $event_clients = \App\WaveClient::where('event_result', '2')->orderby('bank_name')->get();
                     ?>
                     <table class="table">
@@ -305,7 +305,7 @@ if(isset($request->suit_id)){
                         <tr>
                             <td><?=$event_client['id']?></td>
                             <td><?=$event_client['name']?></td>
-                            <td><?=$event_client['mobile']?></td>
+                            <td><?=$event_client['phone']?></td>
                             <td><?=$event_client['bank_name']?> <?=$event_client['bank_number']?> <?=$event_client['bank_owner']?></td>
                         </tr>
                     @endforeach
