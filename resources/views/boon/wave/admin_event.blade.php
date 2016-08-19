@@ -181,7 +181,7 @@ if(isset($request->suit_id)){
 
         });
         $("#btnEventConfirm").click(function(){
-            return false;
+            return false; // 이벤트 기간 아닐때는 닫음
 
 
 
