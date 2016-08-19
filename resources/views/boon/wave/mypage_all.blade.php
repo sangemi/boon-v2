@@ -248,7 +248,8 @@ echo "ddddddd다름";
                             감사합니다.
                         </p>
                         <p>
-                        <a href="mms://wm-005.cafe24.com/boonzero/wave/event/probono-event-20160818.wmv">선정절차 확인(동영상)</a>
+                            <a href="mms://wm-005.cafe24.com/boonzero/wave/event/probono-event1-20160818-1.wmv">선정절차 확인(동영상)</a>
+                            <a href="mms://wm-005.cafe24.com/boonzero/wave/event/probono-event1-20160818-2.wmv">선정절차 확인(동영상)</a>
                         </p>
                         {{--<video src="mms://wm-005.cafe24.com/boonzero/wave/event/probono-event-20160818.wmv"></video>
                         <embed src="mms://wm-005.cafe24.com/boonzero/probono-event-20160818.wmv"></embed>--}}
