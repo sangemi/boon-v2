@@ -236,6 +236,31 @@ echo "ddddddd다름";
                         </div>
                     </div>
                 </div>
+                <div class="bigbox">
+
+                    {{--forum 글 읽어오기--}}
+                    <h4>1차 환급 프로보노</h4>
+                    <div id="category" class="text-left " style="margin-left:25px;">
+
+                        <p>
+                        2016. 8. 19. 100명 환급대상자 선정하였습니다. 상세 상황실에 들어가시면 확인가능합니다. 환급절차는 순차적으로 진행됩니다.
+                            <small style="color:gray">(공지사항에 적힌 리스트가 확정본입니다. 프로그램 오류가 있을 수 있으니 많은 양해 바랍니다)</small>
+                            감사합니다.
+                        </p>
+                        <p>
+                        <a href="mms://wm-005.cafe24.com/boonzero/wave/event/probono-event-20160818.wmv">선정절차 확인(동영상)</a>
+                        </p>
+                        {{--<video src="mms://wm-005.cafe24.com/boonzero/wave/event/probono-event-20160818.wmv"></video>
+                        <embed src="mms://wm-005.cafe24.com/boonzero/probono-event-20160818.wmv"></embed>--}}
+
+
+                        <div class="text-right" style="margin:10px;">
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 

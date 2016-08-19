@@ -228,7 +228,7 @@ if(isset($request->suit_id)){
                 <div style="">
 
                     <h4 class="text-center">입금완료 접수인단</h4>
-                    <a class="btn btn-default" id="btnRandom">썩기</a>
+                    <a class="btn btn-default" id="btnRandom">순서섞기</a>
                     <a class="btn btn-default" id="btnSelect100">100명선택</a>
                     <a class="btn btn-default" id="btnEventConfirm">확정</a>
 

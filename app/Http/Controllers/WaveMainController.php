@@ -92,6 +92,7 @@ class WaveMainController extends Controller
                 $('#description').val(data.description); */
 
         /*                 여기서 어드민체크!!!!!!!!!!!!!!!!!!!!!!!!!                                     */
+        if ( !Auth::check() ) { $task = array("data" => "값을 선택해주세요 2", "result" => "fail"); return response()->json($task); }
 
         if($task_name == 'change-payment') {
             //$task = ['task-title' => '입금처리', 'task-description' => '']; //Task::find($task_id);
@@ -257,6 +258,8 @@ class WaveMainController extends Controller
 
     public function mypage(Request $request)
     {
+        if ( !Auth::check() ) { return redirect()->to('/auth/login'); }
+
         /*먼저 접수되어 있는 것 확인 > 하나도 접수X면 바로 접수페이지로*/
         $wave_client = WaveClient::where('user_id', Auth::id())->get();
         if(count($wave_client)){

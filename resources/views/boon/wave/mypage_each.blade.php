@@ -143,52 +143,72 @@ echo "ddddddd다름";
                                 </div>
                             @endif
 
-                        </div>
+
+
+                         </div>
 
 
 
                 @endif
-                </div>
             </div>
-
         </div>
+
+    </div>
 
 </div>
 
 <div class="row" style="padding:0 10px 10px 10px;">
 
-    {{--공지사항--}}
-    <div class="col-sm-6" style="white-space:normal;">
-        <div class="bigbox">
+{{--공지사항--}}
+<div class="col-sm-6" style="white-space:normal;">
+    <div class="bigbox">
 
-            {{--forum 글 읽어오기--}}
-            <h4 class="text-center">공지사항</h4>
-            <div id="category" class="text-left " style="margin-left:25px;">
+        {{--forum 글 읽어오기--}}
+        <h4 class="text-center">공지사항</h4>
+        <div id="category" class="text-left " style="margin-left:25px;">
 
-                <ul>
-                    @foreach($forum_threads as $categori)
-                        <li>
-                            <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
-                        </li>
-                    @endforeach
-                </ul>
+            <ul>
+            @foreach($forum_threads as $categori)
+                <li>
+                <a href="/forum/{{ $categori->category_id }}/{{ $categori->id }}">{{ $categori->title }}</a>
+                </li>
+            @endforeach
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="col-sm-6" style="white-space:normal;">
+    <div class="bigbox">
+        <h4 class="text-center">개인별 전달사항</h4>
+        @if(isset($chk_payment))
+            <div class="" style="padding:10px;">
+            <h5 class="">비용 미입금 상태</h5>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
+            <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
             </div>
-
-
-        </div>
+        @endif
     </div>
 
-    <div class="col-sm-6" style="white-space:normal;">
+    @if( $wave_client['event_result'] )
         <div class="bigbox">
-            <h4 class="text-center">개인별 전달사항</h4>
-            @if(isset($chk_payment))
-                <div class="" style="padding:10px;">
-                <h5 class="">비용 미입금 상태</h5>  (입금확인은 일괄적으로 진행하니 조금 기다려주세요)
-                <p>입금계좌 : <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b></p>
-                </div>
+            <h4 class="text-center">환급이벤트 선정결과</h4>
+            <?php
+            $wave_event_history = DB::table('wave_event_history')->where('id', $wave_client['event_result'])->first();
+            ?>
+            <div style="margin:20px;padding-left:20px;">
+                <p><b>환급대상자에 선정되셨습니다.</b></p>
+            @if( count($wave_event_history))
+                <p><?=$wave_event_history->title?></p>
+                <p><?=$wave_event_history->explain?></p>
             @endif
+            </div>
         </div>
-    </div>
+    @endif
+
+
+</div>
 
 </div>
 

@@ -100,10 +100,12 @@
             <li><a href="{{ URL::to('/wave/probono') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공익활동</a></li>
             <li><a href="{{ URL::to('/wave/recommendResult') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 추천활동</a></li>
 
-            <?php $current_id = Auth::user()->id; ?>
-            @if ($current_id == 1 || $current_id == 231 || $current_id == 294 || $current_id == 300 || $current_id == 16)
-                <li><a href="{{ URL::to('/wave/admin') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 관리자</a></li>
-                <li><a href="{{ URL::to('/wave/admin/event/6') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> [인]이벤트</a></li>
+            @if ( Auth::check() )
+                <?php $current_id = Auth::user()->id; ?>
+                @if ($current_id == 1 || $current_id == 231 || $current_id == 294 || $current_id == 300 || $current_id == 16)
+                    <li><a href="{{ URL::to('/wave/admin') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 관리자</a></li>
+                    <li><a href="{{ URL::to('/wave/admin/event/6') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> [인]이벤트</a></li>
+                @endif
             @endif
 
             {{--<li><a href="javascript:alert('대기중입니다')">나의 이력</a></li>--}}
