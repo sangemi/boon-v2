@@ -99,6 +99,7 @@ echo "ddddddd다름";
 
                                 <?php // DB에 있는 file 제목들을 json으로 변환 후
                                    $file_title_json = json_decode($wave_suit['file_title_json']);
+
                                 ?>
 
                                     @if($file_title_json)

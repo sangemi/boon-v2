@@ -58,6 +58,7 @@
             <li><a href="{{ URL::to('/forum/1') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 자유게시판</a></li>
             <li><a href="{{ URL::to('/forum/7') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 응원게시판</a></li>
             <li><a href="{{ URL::to('/forum/4') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 집단소송 공지</a></li>
+            <li><a href="{{ URL::to('/wave/mypage') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 상황실</a></li>
 
 
         @elseif(Request::is('ccmail/*')) {{--내용증명--}}

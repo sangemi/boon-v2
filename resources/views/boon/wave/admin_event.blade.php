@@ -181,6 +181,10 @@ if(isset($request->suit_id)){
 
         });
         $("#btnEventConfirm").click(function(){
+            return false;
+
+
+
             var my_url = url;
             my_url += '/' + "save-event-result";
 
@@ -230,7 +234,7 @@ if(isset($request->suit_id)){
                     <h4 class="text-center">입금완료 접수인단</h4>
                     <a class="btn btn-default" id="btnRandom">순서섞기</a>
                     <a class="btn btn-default" id="btnSelect100">100명선택</a>
-                    <a class="btn btn-default" id="btnEventConfirm">확정</a>
+                    <a class="btn btn-default" id="btnEventConfirm" >확정</a>
 
                     <input name="event_title" class="form-control" placeholder="이벤트제목" />
                     <input name="event_explain" class="form-control" placeholder="이벤트설명" />
@@ -269,12 +273,7 @@ if(isset($request->suit_id)){
                     @endif
                     </div>
                     <div style="display:block;clear:both;"></div>
-                    <?php
-                    if ($current_id == 1){ // SK만 보임
-                        echo "<p style='background-color:#eee;padding:10px;;' id='div_amt_total'>".number_format($cnt_total)."명 </p>";
-                        ?><script>$(document).ready(function() { $("#detailInfoBox").append($("#div_amt_total").html()) });</script><?php
-                    }
-                    ?>
+
                 </div>
                 <div style="display:block;clear:both;"></div>
             </div>
@@ -294,8 +293,23 @@ if(isset($request->suit_id)){
                 </div>
 
 
-                <h4 class="text-center">세부내용</h4>
+                <h4 class="text-center">당첨자 정보</h4>
                 <div  id="detailInfoBox">
+                    <?php
+
+                    $event_clients = \App\WaveClient::where('event_result', '2')->orderby('bank_name')->get();
+                    ?>
+                    <table class="table">
+                        <tr><td>id</td><td>이름</td><td>전번</td><td>은행</td></tr>
+                    @foreach($event_clients as $event_client)
+                        <tr>
+                            <td><?=$event_client['id']?></td>
+                            <td><?=$event_client['name']?></td>
+                            <td><?=$event_client['mobile']?></td>
+                            <td><?=$event_client['bank_name']?> <?=$event_client['bank_number']?> <?=$event_client['bank_owner']?></td>
+                        </tr>
+                    @endforeach
+                    </table>
 
                 </div>
             </div>
