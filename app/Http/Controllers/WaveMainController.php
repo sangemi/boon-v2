@@ -250,7 +250,7 @@ class WaveMainController extends Controller
 
         /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
         $category_id = 7; // 응원게시판
-        $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
+        $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->orderby('id', 'desc')->limit(10)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
 
         return view('boon.wave.mypage_all', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads'));
 
@@ -300,7 +300,7 @@ class WaveMainController extends Controller
 
             /*forum 정보 읽어오기. 하드코딩ㅜ.ㅜ*/
             $category_id = 7; // 응원게시판
-            $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
+            $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->orderby('id', 'desc')->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
 
             return view('boon.wave.mypage_all', compact('wave_client', 'my_suits', 'my_status', 'wave_suits', 'forum_threads'));
 
