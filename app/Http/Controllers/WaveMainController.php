@@ -196,7 +196,7 @@ class WaveMainController extends Controller
             }
         } else {
 
-            return "권한없음. 접속오류 : ". $current_id;
+            return "권한없음. 접속오류 : ". $current_id. " <a href='/auth/logout'>로그아웃</a>";
 
         }
 
