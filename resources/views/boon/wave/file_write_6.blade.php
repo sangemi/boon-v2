@@ -118,7 +118,19 @@ $(document).ready(function(){
                 <div class="choice-file_type <?=$document_ok[1]?>" style="" data-title_no="1" data-explain="<p>인터파크 웹사이트에서 유출여부를 확인해주세요.<br>해당 화면을 캡쳐(또는 휴대폰 사진)해서 업로드 해주세요.
                     <br><a href='http://www.interpark.com/malls/popup_apoligize.html' target='_blank'>>> 바로가기 클릭 <<</a>
                     <br><b>스마트폰에서 반응이 없는 경우</b>
-                    <br>브라우저 설정에서 팝업차단기능을 꺼주세요. 안될경우 PC에서 확인해주세요.</p>">
+                    <br>브라우저 설정에서 팝업차단기능을 꺼주세요. 안될경우 PC에서 확인해주세요.
+                    <br><br>
+                    <div class='well'>
+                    ※ 캡쳐화면이 없는 경우 ※ <br>
+                    내부 논의 후 인터파크 ID만를 알고 계신 경우 소송진행 가능하도록 정책 변경하였습니다.<br>
+                    미처 캡처를 못하시고 탈퇴한경우, 캡쳐화면 대신 직접 '사실확인서'를 써서 업로드 바랍니다.
+                    <br>A4용지에 다음 내용을 써서 '유출결과화면'에 올려주세요.
+                    <br><br><b>사실확인서</b><br>본인은 인터파크 가입자 OOO입니다 (아이디 : xxx).
+                    <br>현재는 피고 회사 사이트를 탈퇴하였으나, 사건 발생 후 인터파크 사이트 내에서 정보유출이 되었다는 사실을 확인하였습니다.
+                    <br>2016. x. x. OOO (인)
+                    </div>
+
+                    </p>">
                     (필수) 유출결과 화면
                 </div>
                 <div class="choice-file_type <?=$document_ok[2]?>" style="" data-title_no="2" data-explain="사안과 관련하여 재판부에 하실 말씀을 A4용지에 자유롭게 써서, 스캔/촬영하여 올려주세요.

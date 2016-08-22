@@ -419,6 +419,9 @@ if(isset($request->suit_id)){
                 dataType: 'json',
                 success: function (data) {
                     console.log("autologin : " + JSON.stringify(data)); // js 배열 확인
+                    if(data['result'] == 'success') {
+                        alert('로긴성공. 새창을 띄워서 작업 > 새창에서 로그아웃 > 새창에서 관리자로긴 > 이창으로 돌아와 계속작업')
+                    }
                 },
                 error: function (data) {
                     console.log('SK Error fff:', data);

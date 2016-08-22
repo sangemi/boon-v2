@@ -121,7 +121,7 @@ $(document).ready(function(){
                 <div class="choice-file_type <?=$document_ok[2]?>" style="" data-title_no="2" data-explain="<p>시리얼번호 사진이 없는 경우, 제품의 설치된 모습 사진</p>">
                     시리얼번호/제품 사진
                 </div>
-                <div class="choice-file_type <?=$document_ok[3]?>" style="" data-title_no="3" data-explain="모발/소변/혈액검사 결과지">
+                <div class="choice-file_type <?=$document_ok[3]?>" style="" data-title_no="3" data-explain="모발/소변/혈액검사 결과지<br> (사용중단 후 시간이 지난 경우, 굳이 검사하지 않으셔도 됩니다)">
                     중금속 검사결과
                 </div>
                 <div class="choice-file_type <?=$document_ok[4]?>" style="" data-title_no="4" data-explain="사적으로 수질검사를 한 경우에만 업로드 하시면 됩니다.">
