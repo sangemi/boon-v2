@@ -163,7 +163,7 @@ if(isset($request->suit_id)){
                 <div style="">
 
                     <h4 class="text-center">접수인단 <small>[결제]</small></h4>
-                    {{ $wave_client->links() }}
+                    {{--{{ $wave_client->links() }}--}}
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
                     ?>
@@ -217,7 +217,7 @@ if(isset($request->suit_id)){
                     ?>
                 </div>
                 <div style="display:block;clear:both;"></div>
-                {{ $wave_client->links() }}
+                {{--{{ $wave_client->links() }}--}}
 
             </div>
 
