@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/MemberController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/MemberController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -48,8 +49,20 @@
       <file leaf-file-name="MemberController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/MemberController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.178572">
-              <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+            <state vertical-scroll-proportion="-7.464286">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+              <folding>
+                <element signature="e#45#64#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.607142">
+              <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -107,56 +120,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6171617">
-              <caret line="173" column="25" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+            <state vertical-scroll-proportion="-8.642858">
+              <caret line="312" column="0" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
               <folding>
-                <marker date="1471846122795" expanded="true" signature="1034:1050" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="1091:1107" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="1202:1218" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="1259:1275" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="1353:1369" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="1410:1426" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="8082:8092" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="8547:8583" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="8563:8583" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="12193:16029" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="12199:16029" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="16859:16871" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="16926:16986" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="16938:16986" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="16970:16986" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="17024:17112" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="17024:17201" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="17024:17545" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="17024:17671" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="17254:17270" placeholder="..." />
-                <marker date="1471846122795" expanded="true" signature="17319:17335" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="1034:1050" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="1091:1107" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="1202:1218" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="1259:1275" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="1353:1369" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="1410:1426" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="8082:8092" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="8547:8583" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="8563:8583" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="12193:16241" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="12199:16241" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17071:17083" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17138:17198" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17150:17198" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17182:17198" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17236:17324" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17236:17413" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17236:17757" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17236:17883" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17466:17482" placeholder="..." />
+                <marker date="1471854466300" expanded="true" signature="17531:17547" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.321428">
-              <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.45874587">
+              <caret line="189" column="18" selection-start-line="189" selection-start-column="18" selection-end-line="189" selection-end-column="18" />
               <folding>
                 <element signature="e#40#61#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoonStatus.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/BoonStatus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.892858">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -223,10 +226,10 @@
         <option value="$PROJECT_DIR$/resources/views/includes/navbar.blade.php" />
         <option value="$PROJECT_DIR$/app/BoonStatus.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/dropout.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/MemberController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/mypage.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/MemberController.php" />
       </list>
     </option>
   </component>
@@ -1182,7 +1185,13 @@
       <option name="project" value="LOCAL" />
       <updated>1471841341204</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="3.4.0&#10;&#10;&#10;롤, 마이페이지 등&#10;&#10;">
+      <created>1471846230428</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1471846230428</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1583,14 +1592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.821428">
-          <caret line="88" column="40" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.392858">
@@ -1681,14 +1682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/MemberController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.178572">
-          <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/mypage.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.142858">
@@ -1699,42 +1692,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.321428">
-          <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-15.607142">
+          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6171617">
-          <caret line="173" column="25" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+        <state vertical-scroll-proportion="-8.642858">
+          <caret line="312" column="0" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
           <folding>
-            <marker date="1471846122795" expanded="true" signature="1034:1050" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="1091:1107" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="1202:1218" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="1259:1275" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="1353:1369" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="1410:1426" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="8082:8092" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="8547:8583" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="8563:8583" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="12193:16029" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="12199:16029" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="16859:16871" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="16926:16986" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="16938:16986" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="16970:16986" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="17024:17112" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="17024:17201" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="17024:17545" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="17024:17671" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="17254:17270" placeholder="..." />
-            <marker date="1471846122795" expanded="true" signature="17319:17335" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="1034:1050" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="1091:1107" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="1202:1218" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="1259:1275" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="1353:1369" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="1410:1426" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="8082:8092" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="8547:8583" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="8563:8583" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="12193:16241" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="12199:16241" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17071:17083" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17138:17198" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17150:17198" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17182:17198" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17236:17324" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17236:17413" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17236:17757" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17236:17883" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17466:17482" placeholder="..." />
+            <marker date="1471854466300" expanded="true" signature="17531:17547" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/MemberController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.464286">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding>
+            <element signature="e#45#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45874587">
+          <caret line="189" column="18" selection-start-line="189" selection-start-column="18" selection-end-line="189" selection-end-column="18" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

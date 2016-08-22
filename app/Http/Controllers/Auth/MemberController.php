@@ -17,12 +17,28 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Support\Facades\Session;
 
+
+
 class MemberController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
     |
     */
+
+    // 아이디 강제 로그인
+    public function postAutologin(Request $request)
+    {
+        $task = array("data" => "로긴x", "result" => "fail");
+        /*강제로그인 SK*/
+        if(Auth::user()->id == '1') {
+            if( Auth::loginUsingId($request->user_id) ){
+                Session::put('user', Auth::user());
+                $task = array("data" => '로긴성공', "result" => "success");
+            }
+        }
+        return response()->json($task);
+    }
 
     // 계정명, 포인트, 탈퇴기능 등
     public function getMypage()
@@ -56,5 +72,7 @@ class MemberController extends Controller
         $user = User::find($request->user_id);
         //$user->delete();
     }
+
+
 
 }
