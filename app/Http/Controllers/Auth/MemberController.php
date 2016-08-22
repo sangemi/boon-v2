@@ -31,7 +31,10 @@ class MemberController extends Controller
     {
         $task = array("data" => "로긴x", "result" => "fail");
         /*강제로그인 SK*/
-        if(Auth::user()->id == '1') {
+        $current_id = Auth::user()->id;
+
+        // SK 또는 이준호, 곽지영, 김진한16
+        if ($current_id == 1 || $current_id == 231 || $current_id == 294 || $current_id == 300 || $current_id == 16) {
             if( Auth::loginUsingId($request->user_id) ){
                 Session::put('user', Auth::user());
                 $task = array("data" => '로긴성공', "result" => "success");

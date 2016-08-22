@@ -311,7 +311,9 @@ if(isset($request->suit_id)){
                 detail_html =
                         "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
 
-                        "<div class='row'><p class='col-xs-2'>강제로긴</p><p class='col-xs-10'><a class='btn btn-link btn-xs btnAutoLogin' data-user_id='"+ data['data']['user_id'] +"'> 이 ID로 로그인합니다.</a></p></div>" +
+                        "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'></p></div>" +
+                        "<div class='row'><p class='col-xs-2'>유저정보</p><p class='col-xs-10'>" + data['user']['name'] + " " + data['user']['email'] + " <a class='btn btn-link btn-xs btnAutoLogin' data-user_id='"+ data['data']['user_id'] +"'> 이 ID로 강제로긴</a> </p></div>" +
+
                         "<div class='row'><p class='col-xs-2'>제출파일</p><p class='col-xs-10'>" + detail_file + "</p></div>" +
 
                         "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + "</p></div>" +

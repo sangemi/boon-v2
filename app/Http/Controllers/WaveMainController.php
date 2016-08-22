@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Lib\skHelper;
 use App\Models\Wave\WaveEventHistory;
 use App\Recommend;
+use App\User;
 use App\UserMemo;
 use App\WaveClient;
 
@@ -113,9 +114,11 @@ class WaveMainController extends Controller
             $wave_client = WaveClient::find($request->row_id);
             if(count($wave_client)) { //  && $request->amt_payment 입금액은 없을수도 있음.
                 $uploaded_files = WaveFile::where('client_id', $wave_client['id'])->orderBy('title_no', 'asc')->get();
+                $user_info = User::find($wave_client['user_id']);
 
                 $task["data"] = $wave_client;
                 $task["file"] = $uploaded_files;
+                $task["user"] = $user_info;
                 $task["result"] = "success";
 
             }else {
