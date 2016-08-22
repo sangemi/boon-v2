@@ -266,14 +266,17 @@
 											<div class="alert alert-info"><B>Tip.</B> {{ Session::get('tip') }}</div>
 										@endif
 
-										<div class="well" style="">
-											접수할 소송을 선택해주세요.<br><br>
-											<p>
+
+										<a href="/wave/mypage" class="btn btn-warning  btn-block" target="" style="color:gray;">관리페이지</a>
+
+
+										<div class="well well-sm" style="">
+											접수할 소송을 선택해주세요.
+											<div>
 												<a href="/wave/5" class="btn btn-link" target="">#6 코웨이 중금속 사건</a><br>
 												<a href="/wave/6" class="btn btn-link" target="">#7 인터파크 정보유출 사건</a>
-											</p>
+											</div>
 										</div>
-										<a href="/wave/mypage" class="btn btn-link" target="">관리페이지</a>
 
 									</div>
 
