@@ -185,7 +185,7 @@ class WaveMainController extends Controller
 
         if ($current_id == 1 || $current_id == 231 || $current_id == 294 || $current_id == 300 || $current_id == 16) { // SK 또는 이준호, 곽지영, 김진한
             if(isset($request->suit_id)){
-                $wave_client = WaveClient::where('suit_id', $request->suit_id)->paginate(500); //get();
+                $wave_client = WaveClient::where('suit_id', $request->suit_id)->get(); //->paginate(500)
                 return view('boon.wave.dashboard', compact('wave_client', 'request'));
             }else{
                 $wave_client = WaveClient::paginate(500); //all()

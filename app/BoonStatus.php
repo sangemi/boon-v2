@@ -13,7 +13,7 @@ class BoonStatus extends Model {
     protected $dates = ['deleted_at'];
 
     public function user(){
-        return $this->belongsToMany('App\User');
+        return $this->belongsTo('App\User');
     }
 
     public function boonPoint(){

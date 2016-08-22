@@ -79,7 +79,7 @@
 
                             <ul class="dropdown-menu" role="menu">
 
-                                <li><a >{{ Auth::user()->name }}</a></li>
+                                <li><a href="{{ url('/member/mypage') }}" >{{ Auth::user()->name }}</a></li>
                                 <li><a href="{{ url('/auth/logout') }}">로그아웃</a></li>
 
                                 @if(Auth::check() && (Auth::user()->name == '김상겸' || Auth::user()->name == '정지혜'

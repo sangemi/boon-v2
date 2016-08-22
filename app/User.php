@@ -24,8 +24,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
+    /** Http/Controllers/Auth/AuthController 수정함.
+     * // 회원가입할 때 hasOne인것들은 자동 추가 / SK 추가
+        UserInfo::create([
+            'user_id' => $user_id
+        ]);
      */
+
+    public function roles(){
+        return $this->belongsToMany('App\Role');
+    }
 
     public function userInfo(){
         return $this->hasOne('App\UserInfo');

@@ -38,6 +38,8 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/';
     //protected $redirectPath = '/adda'; //redirectTo, redirectPath 둘가 있으면 Path우선
+
+
     /**
      * Create a new authentication controller instance.
      *
@@ -94,7 +96,7 @@ class AuthController extends Controller
         ]);
 
         Session::flash('message', 'Boon 계정이 생성되었습니다. ');
-        Session::flash('tip', '내용증명을 미리 작성해두고, 나중 보관함에서 꺼내어 보낼 수도 있습니다. ');
+        Session::flash('tip', '분제로에서는 분쟁시작 내용증명부터 분쟁종결 소송절차까지 원스톱 지원가능합니다.');
 
         /*메일 보내는 방법
         $data['message'] = '김수로님';
@@ -106,11 +108,10 @@ class AuthController extends Controller
         return $user;
     }
 
-
-
     // 쇼설로긴? // 그냥 하니까 AuthenticatesAndRegistersUsers.php 덮어쓰네..
     public function getLogin()
     {
+
         /* 로그인전 화면으로 되돌아가기 1단계 */
         $prev_url = parse_url(URL::previous());
         if(isset($prev_url['path'])){

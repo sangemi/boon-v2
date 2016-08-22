@@ -56,7 +56,7 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
 
 
 
-    Route::group(['middleware' => 'auth'], function () {
+    Route::group(['middleware' => 'auth'], function () { // 여기 auth/login 이 아니라, 그냥 /login 으로 되어있는듯.
         Route::resource('ccmail/work', 'CcMailWorkController');
         //Route::get('ccmail/work/create/{id}', ['middleware'=>'auth', 'uses'=>'CcMailWorkController@create']);
         Route::get('ccmail/work/create/{id}', 'CcMailWorkController@create');
@@ -74,6 +74,8 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::controller('boon/payment', 'PaymentController'); /*pg사와 결제*/
 
 
+    /*여기 안통하네..
+    Route::get('/auth/mypage', 'Auth\AuthController@getMypage');*/
     //// 로그인 routes...
     Route::get('login', 'Auth\AuthController@getLogin');
     Route::post('login', 'Auth\AuthController@postLogin');
@@ -86,6 +88,8 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::controllers([
         'auth' => 'Auth\AuthController',
         'password' => 'Auth\PasswordController',
+        'member' => 'Auth\MemberController',
+
     ]);
     Route::get('home', function () { return redirect('/'); }); // 비번재설정 후 /home으로 가서
 
