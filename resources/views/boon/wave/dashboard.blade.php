@@ -187,14 +187,16 @@ if(isset($request->suit_id)){
                                     @if ($current_id == 1 || $current_id == 294 || $current_id == 300 ) {{--SK만 보임--}}
                                         <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
                                             <?=number_format($client['amt_payment'])?>원
-                                        </button>
+                                        </button>aaa
                                     @else
                                             <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
                                                 <?=$client['chk_payment']?>
                                             </button>
+
                                     @endif
-                                @else
+                                @else {{--입금대기 등--}}
                                     <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
+                                    <small style="color:gray"><?=$client['data11']?></small>
                                 @endif
                                 <?php //중복가능성 체크
                                     if(in_array($client['name'], $client_arr_untilnow)){

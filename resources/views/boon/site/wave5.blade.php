@@ -387,7 +387,7 @@
 				<div class="row p-b">
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">비용안내</h2>
-						<p>VAT별도</p>
+						<p>VAT포함</p>
 						<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
 
 						</p>
@@ -411,11 +411,11 @@
 									<td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
 										<nobr>A타입</nobr>
 										</td>
-									<td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
-									<td>20<small style="font-size:0.7em;">만</small></td>
-									<td>29<small style="font-size:0.7em;">만</small></td>
-									<td>37<small style="font-size:0.7em;">만</small></td>
-									<td>+8<small style="font-size:0.7em;">만씩추가</small></td>
+									<td style="color:royalblue;">12<small style="font-size:0.7em;">만</small>1<small style="font-size:0.7em;">천</small></td>
+									<td>22<small style="font-size:0.7em;">만</small></td>
+									<td>31<small style="font-size:0.7em;">만</small>9<small style="font-size:0.7em;">천</small></td>
+									<td>40<small style="font-size:0.7em;">만</small>7<small style="font-size:0.7em;">천</small></td>
+									<td>+8<small style="font-size:0.7em;">만</small>8<small style="font-size:0.7em;">천원씩추가</small></td>
 								</tr>
 								<tr>
 									<td></td>
@@ -425,11 +425,11 @@
 									<td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
 										B타입
 										</td>
-									<td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
-									<td>80<small style="font-size:0.7em;">만</small></td>
-									<td>116<small style="font-size:0.7em;">만</small></td>
-									<td>148<small style="font-size:0.7em;">만</small></td>
-									<td>+32<small style="font-size:0.7em;">만씩추가</small></td>
+									<td style="color:royalblue;">48<small style="font-size:0.7em;">만</small>4<small style="font-size:0.7em;">천</small></td>
+									<td>88<small style="font-size:0.7em;">만</small></td>
+									<td>127<small style="font-size:0.7em;">만</small>6<small style="font-size:0.7em;">천</small></td>
+									<td>162<small style="font-size:0.7em;">만</small>8<small style="font-size:0.7em;">천</small></td>
+									<td>+35<small style="font-size:0.7em;">만<원/small>2<small style="font-size:0.7em;">천씩추가</small></td>
 								</tr>
 								<tr>
 									<td></td>

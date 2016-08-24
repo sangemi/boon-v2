@@ -83,8 +83,8 @@ $(document).ready(function(){
             {!! BootForm::hidden( "suit_id" )->value( $data['suit_id'] )  !!}
 
             <style>
-                .choice-product {width:154px;height:160px;float:left;border-radius:10px;margin:6px;border:1px solid gray;
-                    background:url('/img/wave/wave-coway.jpg');background-repeat:no-repeat;}
+                .choice-product {width:145px;height:160px;float:left;border-radius:10px;margin:5px;border:1px solid gray;
+                    background:url('/img/wave/wave-coway.png');background-repeat:no-repeat;}
                 /*width:144px;height:128px;*/
                 .choice-product:hover {border:3px solid gray;}
             </style>
@@ -97,9 +97,12 @@ $(document).ready(function(){
             </script>
             <div style="border:1px solid #dadada;background-color:#dadada">
 
-                <div class="choice-product" style="background-position:-380px -10px;" data-name="370N (스파클링아이스)"></div>
-                <div class="choice-product" style="background-position:-35px -10px;" data-name="380N (한뼘아이스)"></div>
-                <div class="choice-product" style="background-position:-207px -10px;" data-name="430N (바리스타아이스)"></div>
+                <div class="choice-product" style="background-position:-390px -10px;" data-name="370N (스파클링아이스)"></div>
+                <div class="choice-product" style="background-position:-40px -10px;" data-name="380N (한뼘아이스)"></div>
+                <div class="choice-product" style="background-position:-210px -10px;" data-name="430N (바리스타아이스)"></div>
+                <div class="choice-product" style="background-position:-565px -10px;" data-name="코웨이-(모델명 직접입력)"></div>
+                <div class="choice-product" style="background-position:-735px -10px;" data-name="청호나이스-(모델명 직접입력)"></div>
+
                 <div style="clear:both;"></div>
             </div>
 
@@ -108,7 +111,7 @@ $(document).ready(function(){
 
                 </div>
 
-                {!! BootForm::text( "제품명" , 'data01')->placeholder("위 사진을 클릭하세요.")->readonly()  !!}
+                {!! BootForm::text( "제품명" , 'data01')->placeholder("위 사진을 클릭하세요.")  !!}
 
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label"></label>
@@ -234,9 +237,13 @@ $(document).ready(function(){
                     <label class="col-sm-2 col-lg-2 control-label">입금계좌</label>
                     <div class="col-sm-10 col-lg-10">
                         <b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b>
-                        <div><small>접수인원이 많을 경우 입금확인이 늦을 수 있으니 기다려주세요.</small></div>
+                        <div>
+                            <p style="color:tomato;">※ 입금자 성함이 달라서 신청인원을 확인하기 어렵습니다. <span style="color:red;">입금인성명 확인</span> 꼭 부탁 드립니다!</p>
+                            <small>기다려주시면 입금확인은 순차적으로 됩니다.</small>
+                        </div>
                     </div>
                 </div>
+
 
                 {{--{!! BootForm::textarea('비고', 'bigo')->addClass('ccmail-content') !!}--}}
 
