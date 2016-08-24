@@ -81,8 +81,8 @@ $(document).ready(function(){
             {!! BootForm::bind($waveClient) !!}
 
             <style>
-                .choice-product {width:154px;height:160px;float:left;border-radius:10px;margin:6px;border:1px solid gray;
-                    background:url('/img/wave/wave-coway.jpg');background-repeat:no-repeat;}
+                .choice-product {width:145px;height:160px;float:left;border-radius:10px;margin:5px;border:1px solid gray;
+                    background:url('/img/wave/wave-coway.png');background-repeat:no-repeat;}
                 /*width:144px;height:128px;*/
                 .choice-product:hover {border:3px solid gray;}
             </style>
@@ -90,14 +90,18 @@ $(document).ready(function(){
                 $(document).ready(function(){
                     $(".choice-product").click(function(){
                         $("input[name=data01]").val( $(this).data("name") );
+                        if($(this).data("alert")) alert( $(this).data("alert") );
                     });
                 });
             </script>
             <div style="border:1px solid #dadada;background-color:#dadada">
 
-                <div class="choice-product" style="background-position:-380px -10px;" data-name="370N (스파클링아이스)"></div>
-                <div class="choice-product" style="background-position:-35px -10px;" data-name="380N (한뼘아이스)"></div>
-                <div class="choice-product" style="background-position:-207px -10px;" data-name="430N (바리스타아이스)"></div>
+                <div class="choice-product" style="background-position:-390px -10px;" data-name="370N (스파클링아이스)"></div>
+                <div class="choice-product" style="background-position:-40px -10px;" data-name="380N (한뼘아이스)"></div>
+                <div class="choice-product" style="background-position:-210px -10px;" data-name="430N (바리스타아이스)"></div>
+                <div class="choice-product" style="background-position:-565px -10px;" data-name="코웨이-(모델명 직접입력)" data-alert="※해당 모델에 대해서 소송인단이 충분하지 않아 소송진행이 취소될 경우, 입금금액은 전액 환불 드립니다. 해당 모델명을 정확히 입력해주세요."></div>
+                <div class="choice-product" style="background-position:-735px -10px;" data-name="청호나이스-(모델명 직접입력)" data-alert="※해당 모델에 대해서 소송인단이 충분하지 않아 소송진행이 취소될 경우, 입금금액은 전액 환불 드립니다. 해당 모델명을 정확히 입력해주세요."></div>
+
                 <div style="clear:both;"></div>
             </div>
 
@@ -106,7 +110,7 @@ $(document).ready(function(){
 
                 </div>
 
-                {!! BootForm::text( "제품명" , 'data01')->placeholder("위 사진을 클릭하세요.")->readonly()  !!}
+                {!! BootForm::text( "제품명" , 'data01')->placeholder("위 사진을 클릭하세요.")  !!}
 
                 <div class="form-group">
                     <label class="col-sm-2 col-lg-2 control-label"></label>
