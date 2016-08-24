@@ -349,60 +349,7 @@ $(document).ready(function(){
 
                     <span class="b">착수금 별표1.</span><br />
                     <br />
-                    A타입) 위자료 및 검진비만을 청구 – 11만원 (VAT포함)<br />
-                    B타입) 위자료, 검진비에 추가적으로 상해 치료비 청구 – 44만원 (VAT포함)<br />
-                    <br />
-                    * 동거인(주민등록상 주소지 동일한 가족)이 모두 원고가 되는 경우, 다음 표에 따름<br />
-                    <div id="div비용표" style="display:block;">
-                        <table class="table text-center">
-                            <tr>
-                                <th></th>
-                                <th class="text-center" style="color:royalblue;">1명</th>
-                                <th class="text-center"><nobr>2명</nobr></th>
-                                <th class="text-center">3명</th>
-                                <th class="text-center">4명</th>
-                                <th class="text-center">5명 이상</th>
-                            </tr>
-                            <tr>
-                                <td><small style="font-size:0.7em;"><nobr>집단소송</nobr></small><br>
-                                    <nobr>A타입</nobr>
-                                </td>
-                                <td style="color:royalblue;">11<small style="font-size:0.7em;">만</small></td>
-                                <td>20<small style="font-size:0.7em;">만</small></td>
-                                <td>29<small style="font-size:0.7em;">만</small></td>
-                                <td>37<small style="font-size:0.7em;">만</small></td>
-                                <td>8<small style="font-size:0.7em;">만+</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
-                            </tr>
-                            <tr>
-                                <td><small style="font-size:0.7em;"><nobr>개별소송</nobr></small><br>
-                                    B타입
-                                </td>
-                                <td style="color:royalblue;">44<small style="font-size:0.7em;">만</small></td>
-                                <td>80<small style="font-size:0.7em;">만</small></td>
-                                <td>116<small style="font-size:0.7em;">만</small></td>
-                                <td>148<small style="font-size:0.7em;">만</small></td>
-                                <td>32<small style="font-size:0.7em;">만+</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 일부 포함 </small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6"><small style="font-size:0.7em;">※ 동거인이 있을경우 복수신청 가능합니다. <br> 다만 <u>주민등록상 주소와 정수기 설치주소가 동일한 경우</u>라야 합니다.</small></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="6">입금계좌 <b>신한 100-029-697933 법무법인 예율 </b></td>
-                            </tr>
-
-                        </table>
-                    </div>
-
+                    <a href="/wave/5">메인화면</a>을 참고해주세요
 
 
 
