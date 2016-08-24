@@ -429,7 +429,7 @@
 									<td>88<small style="font-size:0.7em;">만</small></td>
 									<td>127<small style="font-size:0.7em;">만</small>6<small style="font-size:0.7em;">천</small></td>
 									<td>162<small style="font-size:0.7em;">만</small>8<small style="font-size:0.7em;">천</small></td>
-									<td>+35<small style="font-size:0.7em;">만<원/small>2<small style="font-size:0.7em;">천씩추가</small></td>
+									<td>+35<small style="font-size:0.7em;">만</small>2<small style="font-size:0.7em;">천씩추가</small></td>
 								</tr>
 								<tr>
 									<td></td>
