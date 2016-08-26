@@ -1,9 +1,9 @@
-<?php
+<?php namespace Riari\Forum\Frontend\Support;
 
-namespace Riari\Forum\Frontend\Support;
-
-use App\Lib\sk;
-use ReflectionClass;
+use Illuminate\Routing\Router;
+use Riari\Forum\Models\Category;
+use Riari\Forum\Models\Post;
+use Riari\Forum\Models\Thread;
 use Session;
 
 class Forum
@@ -38,7 +38,6 @@ class Forum
      */
     public static function render($content)
     {
-
         return nl2br(e($content));
     }
 
@@ -51,42 +50,42 @@ class Forum
      */
     public static function route($route, $model = null)
     {
-        if (!starts_with($route, 'forum.')) {
-            $route = "forum.{$route}";
+        if (!starts_with($route, config('forum.routing.as'))) {
+            $route = config('forum.routing.as') . $route;
         }
 
         $params = [];
         $append = '';
+
         if ($model) {
-            $class = new ReflectionClass($model);
-            switch ($class->getShortName()) {
-                case 'Category':
+            switch (true) {
+                case $model instanceof Category:
                     $params = [
                         'category'      => $model->id,
-                        'category_slug' => $model->slug
-                    ];// 원래 $model->slug 였음!!!!!! title로 바꿨다가... id로 바꿈. sk modi 수정.
+                        'category_slug' => $model->id /*static::slugify($model->title)*/
+                    ];
                     break;
-                case 'Thread':
+                case $model instanceof Thread:
                     $params = [
                         'category'      => $model->category->id,
-                        'category_slug' => $model->category->slug,
+                        'category_slug' => $model->category->id, /*static::slugify($model->category->title),*/
                         'thread'        => $model->id,
-                        'thread_slug'   => $model->slug
-                    ];// 원래 $model->category->slug, $model->slug 였음!!!!!! sk modi 수정.
+                        'thread_slug'   => $model->id /*static::slugify($model->title)*/
+                    ];
                     break;
-                case 'Post':
+                case $model instanceof Post:
                     $params = [
                         'category'      => $model->thread->category->id,
-                        'category_slug' => $model->thread->category->slug,
+                        'category_slug' => $model->thread->category->id, /*static::slugify($model->thread->category->title),*/
                         'thread'        => $model->thread->id,
-                        'thread_slug'   => $model->thread->slug
-                    ];// 원래 $model->thread->slug 였음!!!!!! sk modi 수정.
+                        'thread_slug'   => $model->thread->id /*static::slugify($model->thread->title)*/
+                    ];
 
-                    if ($route == 'forum.thread.show') {
+                    if ($route == config('forum.routing.as') . 'thread.show') {
                         // The requested route is for a thread; we need to specify the page number and append a hash for
                         // the post
-                        $params['page'] = ceil($model->thread->lastPage / $model->thread->getPerPage());
-                        $append = "#post-{$model->id}";
+                        $params['page'] = ceil($model->sequenceNumber / $model->getPerPage());
+                        $append = "#post-{$model->sequenceNumber}";
                     } else {
                         // Other post routes require the post parameter
                         $params['post'] = $model->id;
@@ -96,5 +95,68 @@ class Forum
         }
 
         return route($route, $params) . $append;
+    }
+
+    /**
+     * Register the standard forum routes.
+     *
+     * @param  Router  $router
+     * @return void
+     */
+    public static function routes(Router $router)
+    {
+        $controllers = config('forum.frontend.controllers');
+
+        // Forum index
+        $router->get('/', ['as' => 'index', 'uses' => "{$controllers['category']}@index"]);
+
+        // New/updated threads
+        $router->get('new', ['as' => 'index-new', 'uses' => "{$controllers['thread']}@indexNew"]);
+        $router->patch('new', ['as' => 'mark-new', 'uses' => "{$controllers['thread']}@markNew"]);
+
+        // Categories
+        $router->post('category/create', ['as' => 'category.store', 'uses' => "{$controllers['category']}@store"]);
+        /*$router->group(['prefix' => '{category}-{category_slug}'], function ($router) use ($controllers) {*/
+        /*모든 slug없앰*/
+        $router->group(['prefix' => '{category}'], function ($router) use ($controllers) {
+            $router->get('/', ['as' => 'category.show', 'uses' => "{$controllers['category']}@show"]);
+            $router->patch('/', ['as' => 'category.update', 'uses' => "{$controllers['category']}@update"]);
+            $router->delete('/', ['as' => 'category.delete', 'uses' => "{$controllers['category']}@destroy"]);
+
+            // Threads
+            $router->get('{thread}', ['as' => 'thread.show', 'uses' => "{$controllers['thread']}@show"]);
+            $router->get('thread/create', ['as' => 'thread.create', 'uses' => "{$controllers['thread']}@create"]);
+            $router->post('thread/create', ['as' => 'thread.store', 'uses' => "{$controllers['thread']}@store"]);
+            $router->patch('{thread}', ['as' => 'thread.update', 'uses' => "{$controllers['thread']}@update"]);
+            $router->delete('{thread}', ['as' => 'thread.delete', 'uses' => "{$controllers['thread']}@destroy"]);
+
+            // Posts
+            $router->get('{thread}/post/{post}', ['as' => 'post.show', 'uses' => "{$controllers['post']}@show"]);
+            $router->get('{thread}/reply', ['as' => 'post.create', 'uses' => "{$controllers['post']}@create"]);
+            $router->post('{thread}/reply', ['as' => 'post.store', 'uses' => "{$controllers['post']}@store"]);
+            $router->get('{thread}/post/{post}/edit', ['as' => 'post.edit', 'uses' => "{$controllers['post']}@edit"]);
+            $router->patch('{thread}/{post}', ['as' => 'post.update', 'uses' => "{$controllers['post']}@update"]);
+            $router->delete('{thread}/{post}', ['as' => 'post.delete', 'uses' => "{$controllers['post']}@destroy"]);
+        });
+
+        // Bulk actions
+        $router->group(['prefix' => 'bulk', 'as' => 'bulk.'], function ($router) use ($controllers) {
+            $router->patch('thread', ['as' => 'thread.update', 'uses' => "{$controllers['thread']}@bulkUpdate"]);
+            $router->delete('thread', ['as' => 'thread.delete', 'uses' => "{$controllers['thread']}@bulkDestroy"]);
+            $router->patch('post', ['as' => 'post.update', 'uses' => "{$controllers['post']}@bulkUpdate"]);
+            $router->delete('post', ['as' => 'post.delete', 'uses' => "{$controllers['post']}@bulkDestroy"]);
+        });
+    }
+
+    /**
+     * Convert the given string to a URL-friendly slug.
+     *
+     * @param  string  $string
+     * @return string
+     */
+    public static function slugify($string)
+    {
+        return preg_replace('/\s+/u', '-', trim($string)); // utf8 한글!
+        return str_slug($string, '-');
     }
 }

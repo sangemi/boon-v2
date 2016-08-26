@@ -187,7 +187,7 @@ if(isset($request->suit_id)){
                                     @if ($current_id == 1 || $current_id == 294 || $current_id == 300 ) {{--SK만 보임--}}
                                         <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
                                             <?=number_format($client['amt_payment'])?>원
-                                        </button>aaa
+                                        </button>
                                     @else
                                             <button class="btn btn-link btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>">
                                                 <?=$client['chk_payment']?>

@@ -9,6 +9,7 @@ Route::pattern('id', '[0-9]+');
 
 Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기본
 
+    Route::controller('admin', 'Admin\AdminController');
     // IP start !!
     Route::group(array('domain' => 'ip.local-boonzero.com'), function() { //{account}.
         Route::get('/','IpMainController@index');
@@ -122,8 +123,7 @@ Route::get('sitemap/xml', 'Admin\SitemapController@showXML');
 
 
 
-Route::get('admin', 'Admin\AdminController@index');
-//Route::controller('admin', 'Admin\AdminController');
+//Route::get('admin', 'Admin\AdminController@index');
 
 # Admin routes 베껴봤음ㅋ
 /*Route::when('admin/*', 'admin'); # Route filters

@@ -164,6 +164,11 @@ return [
         Riari\Forum\ForumServiceProvider::class, // forum
         Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
 
+        /*Bican Roles*/
+        Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
+        Illuminate\Auth\AuthServiceProvider::class,
+        Bican\Roles\RolesServiceProvider::class,
+
         App\Providers\skServiceProvider::class,
     ],
 

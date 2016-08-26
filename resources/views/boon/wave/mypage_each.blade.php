@@ -90,7 +90,11 @@ echo "ddddddd다름";
                             </p>
 
                             <h3>소송 진행상태</h3>
-                            <p><?=$wave_status['title']?></p>{{--신청확인중--}}
+                            <p>
+                                <b><?=$wave_status['title']?></b>
+                                <?=$wave_status['status_show']?>
+                                <?=$wave_status['explain']?>
+                            </p>{{--신청확인중--}}
 
 
                             {{--증거제출여부 테이블--}}
@@ -140,7 +144,7 @@ echo "ddddddd다름";
                                 </div>
                             @else
                                 <div class="bg_warning">
-                                    <p><?=$wave_status['chk_payment']?></p>
+                                    <p><?=$wave_client['chk_payment']?></p>
                                 </div>
                             @endif
 

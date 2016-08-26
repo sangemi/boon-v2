@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Role__del extends Model
 {
     //
     public $timestamps = false; // DB에 없슴.

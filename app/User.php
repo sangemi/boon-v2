@@ -2,10 +2,22 @@
 
 namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+/*use Illuminate\Foundation\Auth\User as Authenticatable; 라라벨네이티브 Authorization*/
+/*bican add*/
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Bican\Roles\Traits\HasRoleAndPermission;
+use Bican\Roles\Contracts\HasRoleAndPermission as HasRoleAndPermissionContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Authenticatable
+
+//class User extends Authenticatable // 원래.
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasRoleAndPermissionContract
 {
+    use Authenticatable, CanResetPassword, HasRoleAndPermission;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -30,10 +42,10 @@ class User extends Authenticatable
             'user_id' => $user_id
         ]);
      */
-
+/*
     public function roles(){
         return $this->belongsToMany('App\Role');
-    }
+    }*/
 
     public function userInfo(){
         return $this->hasOne('App\UserInfo');

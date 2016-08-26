@@ -111,6 +111,21 @@
 
             {{--<li><a href="javascript:alert('대기중입니다')">나의 이력</a></li>--}}
 
+        @elseif(Request::is('admin*'))
+            <div class="title-area">
+                <div class="title-container">
+                    <h1 class="title-small">분쟁관리</h1>
+                    <h1 class="title-large">관리자</h1>
+                </div>
+            </div>
+            {{--<li><a href="{{ URL::to('/forum/6') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공지사항</a></li>--}}
+            <li><a href="{{ URL::to('/admin/role') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 역할관리</a></li>
+            <li><a href="{{ URL::to('/wave/mypage') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 소송상황실</a></li>
+            <li><a href="{{ URL::to('/forum') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 게시판</a></li>
+            <li><a href="{{ URL::to('/wave/recommendResult') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 추천활동</a></li>
+
+
+
         @else {{--메인메뉴 등 일반적인 경우--}}
             <div class="title-area">
                 <div class="title-container">
