@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
+use App\UserMemo;
+use App\WaveClient;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -45,9 +47,64 @@ class AdminController extends Controller
 
     }
 
+    public function postTasks(Request $request, $task_name)
+    {
+        if ($task_name == 'search-user') {
+            if ($request->searchtext) {
+                $user = User::where("name", $request->searchtext)->orWhere("email", $request->searchtext)
+                    ->leftjoin('users_info', 'users.id', '=', 'users_info.user_id')->get();
+
+                $task["data"]["user"] = $user;
+                //$task["data"]["role"] = $role;
+                $task["result"] = "success";
+            } else {
+                $task = array("data" => "값을 선택해주세요", "result" => "fail");
+            }
+
+
+        }else if($task_name == 'show-user-detail'){
+            $user = User::where("users.id", $request->row_id)->leftjoin('users_info', 'users.id', '=', 'users_info.user_id')->first();
+            $role = $user->roles();
+
+            if(count($user)) {
+                $task["data"]["user"] = $user;
+                $task["data"]["role"] = $role;
+                $task["result"] = "success";
+            }else {
+                $task = array("data" => "정보가 없습니다.", "esult" => "fail");
+            }
+        }else if($task_name == 'show-user-memo'){
+            $user_memo = UserMemo::where('model_id', $request->row_id)->where('model_name', 'WaveClient')->get();
+            if(count($user_memo)) { //  && $request->amt_payment 입금액은 없을수도 있음.
+                $task["data"] = $user_memo;
+                $task["result"] = "success";
+
+            }else {
+                $task = array("data" => "메모가 없습니다.", "result" => "fail");
+            }
+        }else if($task_name == 'add-user-memo'){
+            $user_memo = new UserMemo();
+            $user_memo->user_id = WaveClient::find($request->row_id)->first()->user_id;
+            $user_memo->model_name = 'WaveClient';
+            $user_memo->model_id = $request->row_id;
+            $user_memo->memo_type = '';
+            $user_memo->memo = $request->memo;
+            $user_memo->reg_id = Auth::user()->id;
+            //$user_memo->in_charge_id = '';
+
+            $saved = $user_memo->save();
+            if($saved) return array("result" => 'success');
+            else  return array("result" => 'fail');
+
+        } else {
+            $task = array("data" => "task 없음. SK21 Error", "result" => "fail");
+        }
+
+        return response()->json($task); //return Response::json($task); 5.1에서는 이거 쓰지 마. 헬퍼클래스 쓰면 됨.
+    }
+
     public function getRole()
     {
-
         /*해당 역할을 가진 모든 유저*/
         /*$role_slug = 'admin';
         $adminUsers = User::leftjoin('role_user', 'users.id', '=', 'role_user.user_id')
@@ -59,7 +116,7 @@ class AdminController extends Controller
             ->leftjoin('roles', 'role_user.role_id', '=', 'roles.id')
             ->select('users.*','roles.*', 'users.name as name','users.id as user_id','roles.name as role_name')
             ->where('role_user.id', '<>', '')->get();
-        $roles = Role::all();
+        $roles = Role::orderby('level')->get();
         return view('admin.role', compact('roleUsers', 'roles'));
 
         /*if ($user->is('admin|moderator')) { // 최소 하나만 가져도

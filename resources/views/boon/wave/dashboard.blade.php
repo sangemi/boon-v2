@@ -291,8 +291,7 @@ if(isset($request->suit_id)){
     }
 
     function showDetailInfo(row_id){
-        var my_url = url;
-        my_url += '/' + "show-detail-info";
+        var my_url = "/wave/admin/tasks/show-detail-info";
         var formData = {
             row_id: row_id
         }
@@ -363,8 +362,7 @@ if(isset($request->suit_id)){
 
     }
     function showUserMemoBox(){
-        var my_url = url;
-        my_url += '/' + "show-user-memo";
+        var my_url = "/admin/tasks/show-user-memo";
         var formData = {
             row_id: row_id
         };
@@ -433,8 +431,8 @@ if(isset($request->suit_id)){
 
         $('#btnAddMemo').click(function () { // 메모 신규입력
             if(!row_id) return false;
-            var my_url = url;
-            my_url += '/' + "add-user-memo";
+            var my_url = "/admin/tasks/add-user-memo";
+
             var formData = {
                 row_id: row_id,
                 memo: $("#textarea_add_memo").val()

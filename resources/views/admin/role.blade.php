@@ -80,7 +80,8 @@
             });
 
             /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
-            $(".each_client").click(function(){
+            $("#clientList").on('click', '.each_client', function() {
+
                 var final_to_number = '', final_to_name = '', final_to_user_id = '', total_cnt = 0;
 
                 if( $(this).data('clicked') == true ){
@@ -167,12 +168,14 @@
 
                     <h4 class="text-center">역할지정자 <small>  </small></h4>
 
+                    <form onsubmit="searchUser();return false;">
                     <div class="input-group">
-                        <input type="text" name="searchtext"  class="form-control" placeholder="이름, 이메일..">
+                        <input type="text" name="searchtext" id="searchtext" class="form-control" placeholder="이름, 이메일..">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">검색</button>
+                            <button class="btn btn-default" id="btnSearchUser" type="submit">검색</button>
                         </span>
                     </div><!-- /input-group -->
+                    </form>
                     {{--{{ $wave_client->links() }}--}}
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
@@ -235,7 +238,7 @@
 
                 <h4 class="text-center">세부내용</h4>
                 <div  id="detailInfoBox">
-
+a
                 </div>
             </div>
 
@@ -247,7 +250,6 @@
     </div>
 
     <div class="" style="clear:both;display:block;"></div>
-
     {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">
         {{dd( Request::input(), http_build_query (Request::input()) ) }}
     </div>--}}
@@ -269,11 +271,12 @@
     <div class="" style="margin-top:30px;">
 
     </div>
+<?php
 
+    ?>
     {{--이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤--}}
     <meta name="_token" content="{!! csrf_token() !!}" />
     <script>
-        var url = "/wave/admin/tasks";
         var task_name = '',row_id = '';
 
         function showClientData(clicking_row_id) {
@@ -286,63 +289,33 @@
         }
 
         function showDetailInfo(row_id){
-            var my_url = url;
-            my_url += '/' + "show-detail-info";
+            var my_url = "/admin/tasks/show-user-detail";
             var formData = {
                 row_id: row_id
-            }
+            };
             $.ajax({
                 type: "POST",
                 url: my_url,
                 data: formData,
                 dataType: 'json',
-                success: function (data) {
-                    console.log("detail-info : " + JSON.stringify(data)); // js 배열 확인하기
+                success: function (data) { console.log("[" + my_url + " 반환값] " + JSON.stringify(data)); // js 배열 확인하기
                     var detail_html = '';
                     var detail_file = '';
 
-                    data['file'].forEach(function(value){
-                        detail_file += "<a href='" + value['uploaded_filename'] + "' target='_blank'>" + value['title_no'] + "번</a> ";
-                        console.log("detail-file : " + JSON.stringify(value)); // js 배열 확인하기
-                    });
+
                     detail_html =
                             "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
 
                             "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'></p></div>" +
-                            "<div class='row'><p class='col-xs-2'>유저정보</p><p class='col-xs-10'>" + data['user']['name'] + " " + data['user']['email'] + " <a class='btn btn-link btn-xs btnAutoLogin' data-user_id='"+ data['data']['user_id'] +"'> 이 ID로 강제로긴</a> </p></div>" +
 
-                            "<div class='row'><p class='col-xs-2'>제출파일</p><p class='col-xs-10'>" + detail_file + "</p></div>" +
 
-                            "<div class='row'><p class='col-xs-2'>서류상태</p><p class='col-xs-10'>" + data['data']['chk_proof'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>입금상태</p><p class='col-xs-10'>" + data['data']['chk_payment'] + "[입금액:"+data['data']['amt_payment']+"]원</p></div>" +
+                            "<div class='row'><p class='col-xs-2'>유저정보</p><p class='col-xs-10'>" + data['data']['user']['name'] + " " + data['data']['user']['email'] + " " +
+                            "<a class='btn btn-link btn-xs btnAutoLogin' data-row_id='"+ data['data']['user']['user_id'] +"'> 이 ID로 강제로긴</a> </p></div>" +
 
-                            "<div class='row'><p class='col-xs-2'>소송타입</p><p class='col-xs-10'>" + data['data']['data15'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>내부상태</p><p class='col-xs-10'>" + data['data']['status_inner'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>외부상태</p><p class='col-xs-10'>" + data['data']['status_show'] + "</p></div>" +
-
-                            "<div class='row'><p class='col-xs-2'><b>이름</b></p><p class='col-xs-10'>" + data['data']['name'] + "</p></div>" +
                             "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" +
-                            "<a href='javascript:void(0)' class='btn_smsbox'>" + data['data']['phone'] + "</a>" +
+                            "<a href='javascript:void(0)' class='btn_smsbox'>" + data['data']['user']['phone'] + "</a>" +
                             "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>주민</p><p class='col-xs-10'>" + data['data']['jumin'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>주소</p><p class='col-xs-10'>" + data['data']['addr'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>주소2</p><p class='col-xs-10'>" + data['data']['addr2'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>우편번호</p><p class='col-xs-10'>" + data['data']['postcode'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>제품명</p><p class='col-xs-10'>" + data['data']['data01'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>구입렌탈일</p><p class='col-xs-10'>" + data['data']['data02'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>설치일</p><p class='col-xs-10'>" + data['data']['data03'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>음용량</p><p class='col-xs-10'>" + data['data']['data04'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>신체증상</p><p class='col-xs-10'>" + data['data']['data05'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>인원</p><p class='col-xs-10'>" + data['data']['data06'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>동거인</p><p class='col-xs-10'>" + data['data']['data07'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>은행명</p><p class='col-xs-10'>" + data['data']['data08'] + data['data']['data09'] + data['data']['data10'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>입금인</p><p class='col-xs-10'>" + data['data']['data11'] + "</p></div>" +
-
-                            "<div class='row'><p class='col-xs-2'>성보입금</p><p class='col-xs-10'>" + data['data']['bank_name'] + data['data']['bank_number']+ data['data']['bank_owner'] + "</p></div>" +
-
-                            "<div class='row'><p class='col-xs-2'>철회여부</p><p class='col-xs-10'>" + data['data']['withdraw'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>비고</p><p class='col-xs-10'>" + data['data']['bigo'] + "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['created_at'] + "</p></div>" +
+                            "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['user']['created_at'] + "</p></div>" +
 
                             "<div class='row'><p class='col-xs-12 text-right'><span class='btn-del-client btn btn-xs btn-default'>신청서 삭제</span></p></div>" +
                             "</div>"
@@ -358,15 +331,13 @@
 
         }
         function showUserMemoBox(){
-            var my_url = url;
-            my_url += '/' + "show-user-memo";
+            var my_url = "/admin/tasks/show-user-memo";
             var formData = {
                 row_id: row_id
             };
             $.ajax({
                 type: "POST", url: my_url, data: formData, dataType: 'json',
-                success: function (data) {
-                    console.log("detail-memo : " + JSON.stringify(data)); // js 배열 확인하기
+                success: function (data) { console.log("[" + my_url + " 반환값] " + JSON.stringify(data)); // js 배열 확인하기
                     if(data['result'] == 'success') {
                         var memo_html = '';
                         data['data'].forEach(function(value){
@@ -393,6 +364,42 @@
                 }
             });
         }
+        function searchUser(){
+            var my_url = "/admin/tasks/search-user";
+            var formData = {
+                searchtext: $("#searchtext").val()
+            };
+            $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
+                success: function (data) { console.log("[" + my_url + " 반환값] " + JSON.stringify(data)); // js 배열 확인하기
+                    if(data['result'] == 'success') {
+                        var memo_html = '';
+                        data['data']['user'].forEach(function(value){
+                            memo_html +=
+                                    "<div class='each_client' data-tel='" +value['phone']+ "'" +
+                                        "data-user_id='"+value['id']+"'>" +
+
+                                        "<a href='javascript:showClientData("+value['id']+")'>" +
+                                        "<span  class='each_name'>"+value['name']+"</span>" +
+                                        "</a>" +
+
+                                        "<button class='btn btn-default btn-xs btn-detail open-modal' value='change-payment' data-user_id='"+value['user_id']+"'>"+value['role_name']+"</button>" +
+
+                                        "<small style='color:gray'>"+value['email']+"</small>" +
+
+
+                                    "</div>";
+                            ;
+                        });
+                        $("#clientList").append(memo_html);
+                    }else{
+                        $("#clientList").append('실패');
+                    }
+                },
+                error: function (data) {
+                    console.log('SK Error 414:', data);
+                }
+            });
+        }
 
 
         $(document).ready(function() {
@@ -400,8 +407,7 @@
 
             // 관리자 오토로그인
             $(document).on('click', '.btnAutoLogin', function() {
-                var my_url = '';
-                my_url = '/member/autologin';
+                var my_url = '/member/autologin';
                 alert($(this).data('user_id'));
                 var formData = {
                     user_id: $(this).data('user_id')
@@ -428,8 +434,8 @@
 
             $('#btnAddMemo').click(function () { // 메모 신규입력
                 if(!row_id) return false;
-                var my_url = url;
-                my_url += '/' + "add-user-memo";
+                var my_url = "/admin/tasks/add-user-memo";
+
                 var formData = {
                     row_id: row_id,
                     memo: $("#textarea_add_memo").val()

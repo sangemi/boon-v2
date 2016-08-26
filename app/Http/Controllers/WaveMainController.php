@@ -125,29 +125,6 @@ class WaveMainController extends Controller
                 $task = array("data" => "값을 선택해주세요 2", "result" => "fail");
             }
 
-        }else if($task_name == 'show-user-memo'){
-            $user_memo = UserMemo::where('model_id', $request->row_id)->where('model_name', 'WaveClient')->get();
-            if(count($user_memo)) { //  && $request->amt_payment 입금액은 없을수도 있음.
-                $task["data"] = $user_memo;
-                $task["result"] = "success";
-
-            }else {
-                $task = array("data" => "메모가 없습니다.", "result" => "fail");
-            }
-        }else if($task_name == 'add-user-memo'){
-            $user_memo = new UserMemo();
-            $user_memo->user_id = WaveClient::find($request->row_id)->first()->user_id;
-            $user_memo->model_name = 'WaveClient';
-            $user_memo->model_id = $request->row_id;
-            $user_memo->memo_type = '';
-            $user_memo->memo = $request->memo;
-            $user_memo->reg_id = Auth::user()->id;
-            //$user_memo->in_charge_id = '';
-
-            $saved = $user_memo->save();
-            if($saved) return array("result" => 'success');
-            else  return array("result" => 'fail');
-
         }else if($task_name == 'save-event-result'){
 
             if(!$request->event_title) return array("result" => '제목 입력해주세요');
