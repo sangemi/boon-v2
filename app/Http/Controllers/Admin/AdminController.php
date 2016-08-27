@@ -63,15 +63,18 @@ class AdminController extends Controller
 
 
         }else if($task_name == 'show-user-detail'){
-            $user = User::where("users.id", $request->row_id)->leftjoin('users_info', 'users.id', '=', 'users_info.user_id')->first();
+            /*$user = User::where("users.id", $request->row_id)->leftjoin('users_info', 'users.id', '=', 'users_info.user_id')->first();*/
+            $user = User::find($request->row_id);
+            $userinfo = $user->userinfo()->first();
             $role = $user->roles()->get();
 
             if(count($user)) {
                 $task["user"] = $user;
+                $task["userinfo"] = $userinfo;
                 $task["role"] = $role;
                 $task["result"] = "success";
             }else {
-                $task = array("data" => "정보가 없습니다.", "esult" => "fail");
+                $task = array("data" => "정보가 없습니다.", "result" => "fail");
             }
         }else if($task_name == 'show-user-memo'){
             $user_memo = UserMemo::where('model_id', $request->row_id)->where('model_name', 'WaveClient')->get();

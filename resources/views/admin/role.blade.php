@@ -316,12 +316,12 @@ $role = $user->roles();
                             "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'></p></div>" +
 
                             "<div class='row'><p class='col-xs-2'>유저정보</p><p class='col-xs-10'>" + data['user']['name'] + " " + data['user']['email'] + " " +
-                            "<a class='btn btn-link btn-xs btnAutoLogin' data-row_id='"+ data['user']['user_id'] +"'> 이 ID로 강제로긴</a> </p></div>" +
+                            "<a class='btn btn-link btn-xs btnAutoLogin' data-row_id='"+ data['user']['id'] +"'> 이 ID로 강제로긴</a> </p></div>" +
 
                             "<div class='row'><p class='col-xs-2'>역할</p><p class='col-xs-10'>" + role_list + "</p></div>" +
 
                             "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" +
-                            "<a href='javascript:void(0)' class='btn_smsbox'>" + data['user']['phone'] + "</a>" +
+                            "<a href='javascript:void(0)' class='btn_smsbox'>" + data['userinfo']['phone'] + "</a>" +
                             "</p></div>" +
                             "<div class='row'><p class='col-xs-2'>가입일</p><p class='col-xs-10'>" + data['user']['created_at'] + "</p></div>" +
 
