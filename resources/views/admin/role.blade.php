@@ -385,8 +385,8 @@ $role = $user->roles();
                             html +=
                                     "<div class='each_client' data-tel='" +value['phone']+ "'" +
                                         "data-user_id='"+value['id']+"'>" +
-                                        value['id'] + ". " +
-                                        "<a href='javascript:showClientData("+value['id']+")'>" +
+                                        value['user_id'] + ". " +
+                                        "<a href='javascript:showClientData("+value['user_id']+")'>" +
                                         "<span  class='each_name'>"+value['name']+"</span>" +
                                         "</a>" +
 
