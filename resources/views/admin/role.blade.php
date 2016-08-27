@@ -192,8 +192,8 @@
                             ?>
                             <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"
                                  data-chk_payment="<?=$client['chk_payment']?>"
-                                 data-user_id="<?=$client['id']?>">
-                                <?=$client['id']?>.
+                                 data-user_id="<?=$client['user_id']?>">
+                                <?=$client['user_id']?>.
                                 <a href="javascript:showClientData('<?=$client['user_id']?>')">
                                     <span  class="each_name"><?=$client['name']?></span>
                                 </a>

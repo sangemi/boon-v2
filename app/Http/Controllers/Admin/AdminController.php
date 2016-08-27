@@ -152,7 +152,7 @@ class AdminController extends Controller
         /*역할이 지정된 모든 유저*/
         $roleUsers = User::leftjoin('role_user', 'users.id', '=', 'role_user.user_id')
             ->leftjoin('roles', 'role_user.role_id', '=', 'roles.id')
-            ->select('users.*','roles.*', 'users.name as name','users.id as user_id','roles.name as role_name')
+            ->select( 'roles.*', 'users.id as user_id', 'users.name as name','users.email','roles.name as role_name')
             ->where('role_user.id', '<>', '')->get();
         $roles = Role::orderby('level')->get();
         return view('admin.role', compact('roleUsers', 'roles'));
