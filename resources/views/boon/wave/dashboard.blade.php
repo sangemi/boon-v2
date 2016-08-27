@@ -275,8 +275,10 @@ if(isset($request->suit_id)){
 
     </div>
 
-{{--이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤--}}
-<meta name="_token" content="{!! csrf_token() !!}" />
+{{--ajax post 이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤 >> head.blade.php로 옮김--}}
+{{--<meta name="_token" content="{!! csrf_token() !!}" />--}}
+{{--<script> $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') } }); </script>--}}
+
 <script>
     var url = "/wave/admin/tasks";
     var task_name = '',row_id = '';
@@ -302,14 +304,14 @@ if(isset($request->suit_id)){
             dataType: 'json',
             success: function (data) {
                 console.log("detail-info : " + JSON.stringify(data)); // js 배열 확인하기
-                var detail_html = '';
                 var detail_file = '';
-
-                data['file'].forEach(function(value){
-                    detail_file += "<a href='" + value['uploaded_filename'] + "' target='_blank'>" + value['title_no'] + "번</a> ";
-                    console.log("detail-file : " + JSON.stringify(value)); // js 배열 확인하기
-                });
-                detail_html =
+                if(Array.isArray(data['file'])) {
+                    data['file'].forEach(function (value) {
+                        detail_file += "<a href='" + value['uploaded_filename'] + "' target='_blank'>" + value['title_no'] + "번</a> ";
+                        console.log("detail-file : " + JSON.stringify(value)); // js 배열 확인하기
+                    });
+                }
+                var detail_html =
                         "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
 
                         "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'></p></div>" +
@@ -392,7 +394,7 @@ if(isset($request->suit_id)){
                 }
             },
             error: function (data) {
-                console.log('SK Error 414:', data);
+                console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
             }
         });
     }
@@ -424,7 +426,7 @@ if(isset($request->suit_id)){
                     }
                 },
                 error: function (data) {
-                    console.log('SK Error fff:', data);
+                    console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                 }
             });
         });
@@ -455,7 +457,7 @@ if(isset($request->suit_id)){
                     }
                 },
                 error: function (data) {
-                    console.log('SK Error 418:', data);
+                    console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                 }
             });
         });
@@ -497,15 +499,8 @@ if(isset($request->suit_id)){
 
             })*/
         });
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-            }
-        });
-
         //create new task / update existing task
         $("#btn-save").click(function (e) {
-            /*이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤*/
 
             e.preventDefault();
 

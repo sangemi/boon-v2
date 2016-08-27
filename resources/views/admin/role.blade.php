@@ -80,7 +80,7 @@
             });
 
             /*단체문자. 클릭하면 리스트에 포함됨. 이미 된거면 빼기*/
-            $("#clientList").on('click', '.each_client', function() {
+            $("#usersArea").on('click', '.each_client', function() {
 
                 var final_to_number = '', final_to_name = '', final_to_user_id = '', total_cnt = 0;
 
@@ -131,7 +131,7 @@
     <script>
         $(function(){
 
-            $('#clientList').css('height', $(window).height() - 65);
+            $('#usersArea').css('height', $(window).height() - 65);
             $('#detailInfoBox').css('height', $(window).height() - 105);
 
             /*따라다니는 레이어 시작*/
@@ -141,7 +141,7 @@
             /*사용자 설정 값 시작*/
             var speed          = 100;     // 따라다닐 속도 : "slow", "normal", or "fast" or numeric(단위:msec)
             var easing         = 'linear'; // 따라다니는 방법 기본 두가지 linear, swing
-            var $layer         = $('#clientList'); // 레이어 셀렉팅
+            var $layer         = $('#usersArea'); // 레이어 셀렉팅
             var layerTopOffset = 0;   // 레이어 높이 상한선, 단위:px
             $layer.css('position', 'absolute');
             /*사용자 설정 값 끝*/
@@ -163,7 +163,7 @@
 
     <div style="position:relative;white-space: nowrap;padding:0 10px 10px 10px;">
         <div class="row">
-            <div id="clientList" class="bigbox box2 col-xs-6" style="overflow-y:scroll;height:600px;">
+            <div id="usersArea" class="bigbox box2 col-xs-6" style="overflow-y:scroll;height:600px;">
                 <div style="">
 
                     <h4 class="text-center">역할지정자 <small>  </small></h4>
@@ -177,6 +177,7 @@
                     </div><!-- /input-group -->
                     </form>
                     {{--{{ $wave_client->links() }}--}}
+                    <div id="usersList">
                     <?php
                     $amt_total = 0; $cnt_total = 0; $client_arr_untilnow = Array();
                     ?>
@@ -193,7 +194,7 @@
                                  data-chk_payment="<?=$client['chk_payment']?>"
                                  data-user_id="<?=$client['id']?>">
                                 <?=($no+1)?>.
-                                <a href="javascript:showClientData('<?=$client['id']?>')">
+                                <a href="javascript:showClientData('<?=$client['user_id']?>')">
                                     <span  class="each_name"><?=$client['name']?></span>
                                 </a>
 
@@ -201,11 +202,12 @@
                                 <small style="color:gray"><?=$client['description']?></small>
                                     <?=$client['slug']?>
                                     <?=$client['level']?>
-
                             </div>
 
                         @endforeach
+
                     @endif
+                    </div>
 
 
                     <div style="display:block;clear:both;"></div>
@@ -272,12 +274,15 @@ a
 
     </div>
 <?php
-
+/*$user = \App\User::where("users.id",1)->leftjoin('users_info', 'users.id', '=', 'users_info.user_id')->first();
+$role = $user->roles();
+        dd($role->first()->name);*/
     ?>
-    {{--이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤--}}
-    <meta name="_token" content="{!! csrf_token() !!}" />
+
+
     <script>
         var task_name = '',row_id = '';
+
 
         function showClientData(clicking_row_id) {
             if(clicking_row_id){
@@ -293,31 +298,34 @@ a
             var formData = {
                 row_id: row_id
             };
-            $.ajax({
-                type: "POST",
-                url: my_url,
-                data: formData,
-                dataType: 'json',
+
+            $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
                 success: function (data) { console.log("[" + my_url + " 반환값] " + JSON.stringify(data)); // js 배열 확인하기
-                    var detail_html = '';
-                    var detail_file = '';
+                    var role_list = '';
+                    if(Array.isArray(data['role'])){
+                        data['role'].forEach(function(value){
+                            role_list += "<a href='" + value['slug'] + "' target='_blank'>" + value['name'] + "</a> ";
+                            console.log("detail-role : " + JSON.stringify(value)); // js 배열 확인하기
+                        });
+                    }
+                    role_list += " <a class='btn btn-xs btn-default' target='_blank' href='/admin/role-add?user_id="+ data['user']['id'] +"'>+역할</a>";
 
-
-                    detail_html =
-                            "<div class='detail_client' data-client_id='" + data['data']['id'] + "' >" +
+                    var detail_html =
+                            "<div class='detail_client' data-client_id='" + data['user']['id'] + "' >" +
 
                             "<div class='row'><p class='col-xs-2'></p><p class='col-xs-10'></p></div>" +
 
+                            "<div class='row'><p class='col-xs-2'>유저정보</p><p class='col-xs-10'>" + data['user']['name'] + " " + data['user']['email'] + " " +
+                            "<a class='btn btn-link btn-xs btnAutoLogin' data-row_id='"+ data['user']['user_id'] +"'> 이 ID로 강제로긴</a> </p></div>" +
 
-                            "<div class='row'><p class='col-xs-2'>유저정보</p><p class='col-xs-10'>" + data['data']['user']['name'] + " " + data['data']['user']['email'] + " " +
-                            "<a class='btn btn-link btn-xs btnAutoLogin' data-row_id='"+ data['data']['user']['user_id'] +"'> 이 ID로 강제로긴</a> </p></div>" +
+                            "<div class='row'><p class='col-xs-2'>역할</p><p class='col-xs-10'>" + role_list + "</p></div>" +
 
                             "<div class='row'><p class='col-xs-2'><b>전번</b></p><p class='col-xs-10'>" +
-                            "<a href='javascript:void(0)' class='btn_smsbox'>" + data['data']['user']['phone'] + "</a>" +
+                            "<a href='javascript:void(0)' class='btn_smsbox'>" + data['user']['phone'] + "</a>" +
                             "</p></div>" +
-                            "<div class='row'><p class='col-xs-2'>접수일</p><p class='col-xs-10'>" + data['data']['user']['created_at'] + "</p></div>" +
+                            "<div class='row'><p class='col-xs-2'>가입일</p><p class='col-xs-10'>" + data['user']['created_at'] + "</p></div>" +
 
-                            "<div class='row'><p class='col-xs-12 text-right'><span class='btn-del-client btn btn-xs btn-default'>신청서 삭제</span></p></div>" +
+                            "<div class='row'><p class='col-xs-12 text-right'><span class='btn-del-user btn btn-xs btn-default'>회원 탈퇴</span></p></div>" +
                             "</div>"
                     ;
 
@@ -360,7 +368,7 @@ a
                     }
                 },
                 error: function (data) {
-                    console.log('SK Error 414:', data);
+                    console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                 }
             });
         }
@@ -373,7 +381,7 @@ a
                 success: function (data) { console.log("[" + my_url + " 반환값] " + JSON.stringify(data)); // js 배열 확인하기
                     if(data['result'] == 'success') {
                         var memo_html = '';
-                        data['data']['user'].forEach(function(value){
+                        data['user'].forEach(function(value){
                             memo_html +=
                                     "<div class='each_client' data-tel='" +value['phone']+ "'" +
                                         "data-user_id='"+value['id']+"'>" +
@@ -390,13 +398,14 @@ a
                                     "</div>";
                             ;
                         });
-                        $("#clientList").append(memo_html);
+                        $("#usersList").prepend(memo_html);
+
                     }else{
-                        $("#clientList").append('실패');
+                        $("#usersList").prepend('실패');
                     }
                 },
                 error: function (data) {
-                    console.log('SK Error 414:', data);
+                    console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                 }
             });
         }
@@ -404,22 +413,17 @@ a
 
         $(document).ready(function() {
 
-
             // 관리자 오토로그인
             $(document).on('click', '.btnAutoLogin', function() {
                 var my_url = '/member/autologin';
-                alert($(this).data('user_id'));
+                alert($(this).data('user_id') + "번으로 로그인합니다.");
                 var formData = {
                     user_id: $(this).data('user_id')
                 };
                 console.log("formData-autologin : " + JSON.stringify(formData)); // js 배열 확인
 
-                $.ajax({
-                    type: "POST",
+                $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
                     target:'_blank',
-                    url: my_url,
-                    data: formData,
-                    dataType: 'json',
                     success: function (data) {
                         console.log("autologin : " + JSON.stringify(data)); // js 배열 확인
                         if(data['result'] == 'success') {
@@ -427,7 +431,7 @@ a
                         }
                     },
                     error: function (data) {
-                        console.log('SK Error fff:', data);
+                        console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                     }
                 });
             });
@@ -442,11 +446,7 @@ a
                 };
                 console.log("aformDatamo : " + JSON.stringify(formData)); // js 배열 확인
 
-                $.ajax({
-                    type: "POST",
-                    url: my_url,
-                    data: formData,
-                    dataType: 'json',
+                $.ajax({type: "POST", url: my_url, data: formData, dataType: 'json',
                     success: function (data) {
                         console.log("add-memo : " + JSON.stringify(data)); // js 배열 확인
                         if(data['result'] == 'success') {
@@ -458,16 +458,16 @@ a
                         }
                     },
                     error: function (data) {
-                        console.log('SK Error 418:', data);
+                        console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                     }
                 });
             });
 
-            $(document).on('click', '.btn-del-client', function() {
+            $(document).on('click', '.btn-del-user', function() {
                 if(confirm('정말 삭제하시겠습니까? \n\n되돌릴 수 없습니다.')){
-
+                    /*아직 탈퇴기능 안됨           */
                     $this = $(this);
-                    var my_url = '/wave/client/' + $this.parents(".detail_client").data('client_id');
+                    var my_url = '/admin/user/' + $this.parents(".detail_client").data('client_id');
                     var formData = {
                         /* client_id: $(this).parents(".detail_client").data('client_id'),*/
                     }
@@ -500,15 +500,9 @@ a
 
                  })*/
             });
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-                }
-            });
 
             //create new task / update existing task
             $("#btn-save").click(function (e) {
-                /*이것때문에 500 에러 생김!! ㅜ.ㅜ 3시간쯤*/
 
                 e.preventDefault();
 

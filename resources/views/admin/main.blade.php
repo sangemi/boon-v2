@@ -388,7 +388,7 @@ echo "<h2>어드민 <a href='/admin/role' style='font-size:0.6em;'>역할관리<
                 }
             },
             error: function (data) {
-                console.log('SK Error 414:', data);
+                console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
             }
         });
     }
@@ -420,7 +420,7 @@ echo "<h2>어드민 <a href='/admin/role' style='font-size:0.6em;'>역할관리<
                     }
                 },
                 error: function (data) {
-                    console.log('SK Error fff:', data);
+                    console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                 }
             });
         });
@@ -451,7 +451,7 @@ echo "<h2>어드민 <a href='/admin/role' style='font-size:0.6em;'>역할관리<
                     }
                 },
                 error: function (data) {
-                    console.log('SK Error 418:', data);
+                    console.log('SK Error 넘긴값 :', formData); console.log('SK Error 반환값 :', data);
                 }
             });
         });

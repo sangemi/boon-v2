@@ -51,10 +51,10 @@ class AdminController extends Controller
     {
         if ($task_name == 'search-user') {
             if ($request->searchtext) {
-                $user = User::where("name", $request->searchtext)->orWhere("email", $request->searchtext)
+                $user = User::where("name", 'like', '%'.$request->searchtext.'%')->orWhere("email", 'like', '%'.$request->searchtext.'%')
                     ->leftjoin('users_info', 'users.id', '=', 'users_info.user_id')->get();
 
-                $task["data"]["user"] = $user;
+                $task["user"] = $user;
                 //$task["data"]["role"] = $role;
                 $task["result"] = "success";
             } else {
@@ -64,11 +64,11 @@ class AdminController extends Controller
 
         }else if($task_name == 'show-user-detail'){
             $user = User::where("users.id", $request->row_id)->leftjoin('users_info', 'users.id', '=', 'users_info.user_id')->first();
-            $role = $user->roles();
+            $role = $user->roles()->get();
 
             if(count($user)) {
-                $task["data"]["user"] = $user;
-                $task["data"]["role"] = $role;
+                $task["user"] = $user;
+                $task["role"] = $role;
                 $task["result"] = "success";
             }else {
                 $task = array("data" => "정보가 없습니다.", "esult" => "fail");
@@ -82,6 +82,9 @@ class AdminController extends Controller
             }else {
                 $task = array("data" => "메모가 없습니다.", "result" => "fail");
             }
+        }else if($task_name == 'aaaa'){
+            $task = array("data" => "333.", "result" => "fail");
+
         }else if($task_name == 'add-user-memo'){
             $user_memo = new UserMemo();
             $user_memo->user_id = WaveClient::find($request->row_id)->first()->user_id;
@@ -96,12 +99,47 @@ class AdminController extends Controller
             if($saved) return array("result" => 'success');
             else  return array("result" => 'fail');
 
+        }else if($task_name == 'role-attatch'){
+            /*user_id, role_slug 변수 받아야*/
+
+            $adminRole = Role::where('slug', '=', $request->role_slug)->first();
+            $user = User::find($request->user_id);
+            $result = $user->attachRole($adminRole);
+
+            $task["data"] = $result;
+            $task["result"] = "success";
+
         } else {
             $task = array("data" => "task 없음. SK21 Error", "result" => "fail");
         }
 
         return response()->json($task); //return Response::json($task); 5.1에서는 이거 쓰지 마. 헬퍼클래스 쓰면 됨.
     }
+
+    /*역할 추가 팝업*/
+    public function getRoleAdd(Request $request)
+    {
+        if(!$request->user_id) return false;
+        $user = User::find($request->user_id);
+        $currentRoles = $user->roles()->get();
+        $roles = $roles = Role::orderby('level')->get();
+        return view('admin.role_add_popup', compact('user', 'currentRoles', 'roles'));
+
+    }
+    public function postRoleAction(Request $request)
+    {
+        if(!$request->row_id || !$request->action) return false;
+        $user = User::find($request->row_id);
+        $role = Role::find($request->role_id);
+        if($request->action == 'add'){
+            $result["data"] = $user->attachRole($role); $result["result"] = "success";
+        }elseif($request->action == 'del'){
+            $result["data"] = $user->detachRole($role); $result["result"] = "success";
+        }
+        return response()->json($result);
+
+    }
+    /*역할 추가 팝업*/
 
     public function getRole()
     {
