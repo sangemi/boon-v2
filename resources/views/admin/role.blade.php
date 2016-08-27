@@ -193,7 +193,7 @@
                             <div class="each_client" data-tel="<?=\app\Lib\skHelper::tel_db($client['phone'])?>"
                                  data-chk_payment="<?=$client['chk_payment']?>"
                                  data-user_id="<?=$client['id']?>">
-                                <?=($no+1)?>.
+                                <?=$client['id']?>.
                                 <a href="javascript:showClientData('<?=$client['user_id']?>')">
                                     <span  class="each_name"><?=$client['name']?></span>
                                 </a>
@@ -380,12 +380,12 @@ $role = $user->roles();
             $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
                 success: function (data) { console.log("[" + my_url + " 반환값] " + JSON.stringify(data)); // js 배열 확인하기
                     if(data['result'] == 'success') {
-                        var memo_html = '';
+                        var html = '';
                         data['user'].forEach(function(value){
-                            memo_html +=
+                            html +=
                                     "<div class='each_client' data-tel='" +value['phone']+ "'" +
                                         "data-user_id='"+value['id']+"'>" +
-
+                                        value['id'] + ". " +
                                         "<a href='javascript:showClientData("+value['id']+")'>" +
                                         "<span  class='each_name'>"+value['name']+"</span>" +
                                         "</a>" +
@@ -398,7 +398,7 @@ $role = $user->roles();
                                     "</div>";
                             ;
                         });
-                        $("#usersList").prepend(memo_html);
+                        $("#usersList").prepend(html);
 
                     }else{
                         $("#usersList").prepend('실패');
