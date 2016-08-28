@@ -140,7 +140,6 @@ class AdminController extends Controller
             $result["data"] = $user->detachRole($role); $result["result"] = "success";
         }
         return response()->json($result);
-
     }
     /*역할 추가 팝업*/
 

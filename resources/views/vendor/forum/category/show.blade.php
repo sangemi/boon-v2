@@ -122,12 +122,15 @@
                                 @endcan
                             </tr>
                         @endforeach
+
                     @else
+
                         <tr>
                             <td>
                                 {{ trans('forum::threads.none_found') }}
                             </td>
                             <td class="text-right" colspan="3">
+
                                 @can ('createThreads', $category)
                                     <a href="{{ Forum::route('thread.create', $category) }}">{{ trans('forum::threads.post_the_first') }}</a>
                                 @endcan
