@@ -196,8 +196,15 @@ if(isset($request->suit_id)){
                                     @endif
                                 @else {{--입금대기 등--}}
                                     <button class="btn btn-default btn-xs btn-detail open-modal" value="change-payment" data-row_id="<?=$client['id']?>"><?=$client['chk_payment']?></button>
-                                    <small style="color:gray"><?=$client['data11']?></small>
+                                    <small style="color:gray"><?=$client['data11']?></small>{{--입금자명--}}
                                 @endif
+
+
+
+                                {{--철회여부--}}
+                                <small style="color:red"><?=$client['withdraw']?></small>
+
+
                                 <?php //중복가능성 체크
                                     if(in_array($client['name'], $client_arr_untilnow)){
                                     echo "<small style='color:red;'>*중복확인</small>";
