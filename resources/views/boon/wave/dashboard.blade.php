@@ -368,8 +368,7 @@ if(isset($request->suit_id)){
         var formData = {
             row_id: row_id
         };
-        $.ajax({
-            type: "POST", url: my_url, data: formData, dataType: 'json',
+        $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
             success: function (data) {
                 console.log("detail-memo : " + JSON.stringify(data)); // js 배열 확인하기
                 if(data['result'] == 'success') {
@@ -413,12 +412,7 @@ if(isset($request->suit_id)){
             };
             console.log("formData-autologin : " + JSON.stringify(formData)); // js 배열 확인
 
-            $.ajax({
-                type: "POST",
-                target:'_blank',
-                url: my_url,
-                data: formData,
-                dataType: 'json',
+            $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',target:'_blank',
                 success: function (data) {
                     console.log("autologin : " + JSON.stringify(data)); // js 배열 확인
                     if(data['result'] == 'success') {
@@ -441,11 +435,7 @@ if(isset($request->suit_id)){
             };
             console.log("aformDatamo : " + JSON.stringify(formData)); // js 배열 확인
 
-            $.ajax({
-                type: "POST",
-                url: my_url,
-                data: formData,
-                dataType: 'json',
+            $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
                 success: function (data) {
                     console.log("add-memo : " + JSON.stringify(data)); // js 배열 확인
                     if(data['result'] == 'success') {
@@ -471,8 +461,7 @@ if(isset($request->suit_id)){
                     /* client_id: $(this).parents(".detail_client").data('client_id'),*/
                 }
 
-                $.ajax({
-                    type: "DELETE", url: my_url, data: formData, dataType: 'json',
+                $.ajax({ type: "DELETE", url: my_url, data: formData, dataType: 'json',
                     success: function (data) {
                         console.log(data);
                         if(data['result'] == 'success'){
@@ -512,7 +501,6 @@ if(isset($request->suit_id)){
 
             //used to determine the http verb to use [add=POST], [update=PUT]
             var state = "update"; // $('#btn-save').val();
-            var type = "POST"; //for creating new resource
             var my_url = url;
 
             if (state == "update"){
@@ -520,11 +508,7 @@ if(isset($request->suit_id)){
                 my_url += '/' + task_name; // + '/' + row_id; // '/change-payment/' +
             }
             console.log('SK:'+type+' - ', formData);
-            $.ajax({
-                type: type,
-                url: my_url,
-                data: formData,
-                dataType: 'json',
+            $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
                 success: function (data) {
                     console.log(data);
                     if(data['result'] == 'success'){

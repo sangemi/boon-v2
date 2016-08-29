@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Admin\LatentClient;
 use App\User;
 use App\UserMemo;
 use App\WaveClient;
@@ -15,7 +14,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Controller;
 use Bican\Roles\Models\Role;
 
-class AdminController extends Controller
+class LatentClientController extends Controller
 {
     public function __construct()
     {
@@ -169,9 +168,9 @@ class AdminController extends Controller
 
     }
 
-    public function getLatentClient(){
-        $latentClient = LatentClient::all();
-        return view('admin.client_latent', compact('latentClient'));
+    public function getSmsAuto(){
+        $latent = latentUser::all();
+        return view('admin.sms-auto', compact('latentUser'));
     }
 
 

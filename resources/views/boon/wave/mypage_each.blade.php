@@ -140,11 +140,21 @@ echo "ddddddd다름";
                                     ?>
                                 <div>
                                     <p class="bg-warning">입금대기 상태입니다</p>
-
                                 </div>
                             @else
                                 <div class="bg_warning">
                                     <p><?=$wave_client['chk_payment']?></p>
+                                </div>
+                            @endif
+
+                            @if( $wave_client['withdraw'] )
+                                <h3>철회 여부</h3>
+                                <div class="bg-warning" style="padding:10px;">
+                                    <p><?=$wave_client['withdraw']?></p>
+                                    <p>
+                                        ※ 철회신청작업 종료 후 접수하신 신청정보를 모두 파기합니다. 파기후에는 본 페이지게 접속하실 수 없습니다.
+                                        잠시 기다려주세요.
+                                    </p>
                                 </div>
                             @endif
 
@@ -215,6 +225,44 @@ echo "ddddddd다름";
 
 </div>
 
+</div>
+
+
+<div class="" style="padding:0 10px 10px 10px;color:gray;">
+    <div class="">
+        <h5>신청 철회방법</h5>
+        <p>
+            접수하신 소송위임의 철회는 <b>소장접수 전까지 가능</b>합니다.
+            단순 변심에 의한 철회는 은행 수수료(약 금500원)를 제외하고 모두 환불드립니다. 절차상 1~2주 소요되는점 양해바랍니다.
+            신철 철회시에는 금액 환불절차 이후 일괄적으로 모든 정보를 파기합니다.
+
+            사이트의 탈퇴는 기능이 셋업되기 전까지는, 별도 이메일로 주시면 개별 처리해드리겠습니다.
+        </p>
+        <a class="btn btn-link btn-xs" id="btnEndClient">신청 철회</a>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#btnEndClient").click(function(){
+                if( confirm("접수하신 소송에 대해서 신청을 철회합니다.")){
+                    if( !confirm("철회 후 번복이 불가합니다. 단순 실수 클릭인 경우 '확인'을 눌러주세요.")){
+                        var my_url = '/wave/client/withdraw/<?=$wave_client['id']?>';
+                        var formData = {                        };
+                        $.ajax({ type: "POST", url: my_url, data: formData, dataType: 'json',
+                            success: function (data) { console.log(data);
+                                if(data['result'] == 'success'){
+                                    alert('신청서가 철회되었습니다.');
+                                    location.reload();
+                                }else{
+                                    alert(data['result'] + '\n\n' + data['data']);
+                                }
+                            },
+                            error: function (data) { console.log('SK Error 667:', data); }
+                        });
+                    }
+                }
+            })
+        })
+    </script>
 </div>
 
 {{--<div class="text-center" style="overflow-x:scroll;white-space: nowrap;padding:0 10px 10px 10px;">

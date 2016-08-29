@@ -37,6 +37,7 @@ Route::group(['middleware' => ['web']], function () { // Session, CSRF 등 기�
     Route::get('/wave/recommendResult', 'WaveMainController@recommendResult');
 
     Route::resource('wave/client', 'WaveClientController');
+    Route::post('wave/client/withdraw/{client_id}', 'WaveClientController@withdraw');
     Route::resource('wave/file', 'WaveFileController');
     // 집단소송
 

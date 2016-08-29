@@ -120,6 +120,7 @@
             </div>
             {{--<li><a href="{{ URL::to('/forum/6') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 공지사항</a></li>--}}
             <li><a href="{{ URL::to('/admin/role') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 역할관리</a></li>
+            <li><a href="{{ URL::to('/admin/latent-client') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 잠재의뢰인</a></li>
             <li><a href="{{ URL::to('/wave/mypage') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 소송상황실</a></li>
             <li><a href="{{ URL::to('/forum') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 게시판</a></li>
             <li><a href="{{ URL::to('/wave/recommendResult') }}" style="white-space:nowrap"><span class="fa  fa-folder-o"></span> 추천활동</a></li>

@@ -320,12 +320,24 @@ class WaveClientController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
+	/*관리자페이지에서 삭제 누른 경우*/
 	public function destroy($id)
 	{
 		WaveClient::destroy($id);
 		Session::flash('message', '삭제되었습니다.');
 		$return = array("data" => "삭제완료", "result" => "success");
 		return response()->json($return); //return "success"; //$this->index();
+	}
+
+	/*의뢰인이 직접 철회신청한 경우*/
+	public function withdraw($client_id)
+	{
+		$client = WaveClient::find($client_id);
+		$client->withdraw = '철회 신청이 접수되었습니다.';
+		$client->save();
+		Session::flash('message', '철회 신청이 접수되었습니다.');
+		$return = array("data" => "철회 신청 완료", "result" => "success");
+		return response()->json($return);
 	}
 
 }

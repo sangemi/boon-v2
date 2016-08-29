@@ -25,7 +25,6 @@ class CategoryPolicy
         }else{
             return true;
         }
-
     }
 
     /**
