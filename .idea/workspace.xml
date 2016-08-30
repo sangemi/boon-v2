@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/forum.integration.php" afterPath="$PROJECT_DIR$/config/forum.integration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,8 +127,8 @@
       <file leaf-file-name="forum.integration.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6699577">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.7235543">
+              <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -761,12 +759,6 @@
       <option name="number" value="Default" />
       <updated>1470876682524</updated>
     </task>
-    <task id="LOCAL-00022" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
-      <created>1471314698812</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1471314698812</updated>
-    </task>
     <task id="LOCAL-00023" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
       <created>1471316095094</created>
       <option name="number" value="00023" />
@@ -1055,7 +1047,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472538239992</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
+      <created>1472538524159</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1472538524160</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1596,8 +1594,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6699577">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.7235543">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
           <folding />
         </state>
       </provider>
