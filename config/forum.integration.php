@@ -9,26 +9,25 @@ return [
     |
     | Here we specify the policy classes to use. Change these if you want to
     | extend the provided classes and use your own instead.
-    |
-            Riari\Forum\Models\Category::class  => Riari\Forum\Policies\CategoryPolicy::class,
-    */
 
-    'policies' => [
+    | 테스트 서버에서는 되는데..... 실서버에서는 오류가 나네!!! 뭐지
+    */
+    /*'policies' => [
         'forum' => Riari\Forum\Policies\ForumPolicy::class,
         'model' => [
             Riari\Forum\Models\Category::class  => Riari\Forum\Policies\CategoryPolicy::class,
             Riari\Forum\Models\Thread::class    => Riari\Forum\Policies\ThreadPolicy::class,
             Riari\Forum\Models\Post::class      => Riari\Forum\Policies\PostPolicy::class
         ]
-    ],
-    /*'policies' => [
+    ],*/
+    'policies' => [
         'forum' => App\Policies\Forum\ForumPolicy::class,
         'model' => [
             Riari\Forum\Models\Category::class  => App\Policies\Forum\CategoryPolicy::class,
             Riari\Forum\Models\Thread::class    => App\Policies\Forum\ThreadPolicy::class,
             Riari\Forum\Models\Post::class      => App\Policies\Forum\PostPolicy::class
         ]
-    ],*/
+    ],
 
     'category' => [
         'groups' => [
