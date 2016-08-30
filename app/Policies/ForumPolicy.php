@@ -10,7 +10,7 @@ class ForumPolicy
 {
     use HandlesAuthorization;
 
-    /**
+    /**            이건 안씀 지워.
      * Create a new policy instance.
      *
      * @return void
@@ -22,11 +22,6 @@ class ForumPolicy
     public function create(User $user, Category $category)
     {
         return $category;
-        if( in_array($category, [4, 5, 6]) ) // 공지사항들.
-        {
-            if($user->level()->get() <= 50)
-                return true;
-        }
 
         return false;
     }

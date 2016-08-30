@@ -13,11 +13,23 @@ return [
     */
 
     'controllers' => [
-        'namespace' => 'Riari\Forum\Frontend\Http\Controllers',
+        /*'namespace' => 'Riari\Forum\Frontend\Http\Controllers',*/
+        'namespace' => 'App\Http\Controllers\Forum',
         'category'  => 'CategoryController',
         'thread'    => 'ThreadController',
         'post'      => 'PostController'
     ],
+
+    /* ForumFrontendServiceProvider.php에 보니까 라우터도 개별 설정이 가능하네!!
+
+     * if (config('forum.frontend.routes')) {
+        $this->loadRoutes($router);
+    }*/
+    /* 이렇게 한번 해볼까?
+    'routes' =>  .......class,
+    */
+
+
 
     /*
     |--------------------------------------------------------------------------
