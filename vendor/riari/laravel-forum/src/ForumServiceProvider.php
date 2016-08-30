@@ -10,7 +10,6 @@ use Riari\Forum\Models\Post;
 use Riari\Forum\Models\Thread;
 use Riari\Forum\Models\Observers\PostObserver;
 use Riari\Forum\Models\Observers\ThreadObserver;
-use App\Policies\Forum;
 
 class ForumServiceProvider extends ServiceProvider
 {
