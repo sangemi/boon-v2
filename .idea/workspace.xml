@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Policies/forum/ForumPolicy.php" afterPath="$PROJECT_DIR$/app/Policies/forum/ForumPolicy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/forum.integration.php" afterPath="$PROJECT_DIR$/config/forum.integration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,18 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Forum/CategoryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.357143">
-              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-              <folding>
-                <element signature="e#46#56#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CategoryPolicy.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Policies/Forum/CategoryPolicy.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,33 +66,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForumServiceProvider.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ForumServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7503526">
-              <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+            <state vertical-scroll-proportion="-14.928572">
+              <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Forum/PostController.php">
+      <file leaf-file-name="ForumFrontendServiceProvider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/ForumFrontendServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.928572">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="e#46#56#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-12.892858">
+              <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForumPolicy.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum/src/Policies/ForumPolicy.php">
+      <file leaf-file-name="forum.frontend.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/다운로드/forum.frontend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3571428">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state vertical-scroll-proportion="-12.892858">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forum.integration.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/다운로드/forum.integration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.607142">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.392857">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -120,24 +126,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forum.integration.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forum.integration.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.25">
-              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.6699577">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Forum/ThreadController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.892857">
-              <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
-              <folding>
-                <element signature="e#46#56#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -195,9 +189,7 @@
         <option value="$PROJECT_DIR$/app/Policies/ForumPolicy.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Post/PostController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Forum/BaseController.php" />
-        <option value="$PROJECT_DIR$/config/forum.integration.php" />
         <option value="$PROJECT_DIR$/config/forum.routing.php" />
-        <option value="$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/ForumFrontendServiceProvider.php" />
         <option value="$PROJECT_DIR$/config/forum.frontend.php" />
         <option value="$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/Http/Controllers/CategoryController.php" />
         <option value="$PROJECT_DIR$/app/Policies/Forum/CategoryPolicy.php" />
@@ -208,6 +200,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Forum/PostController.php" />
         <option value="$PROJECT_DIR$/app/Policies/Forum/ForumPolicy.php" />
         <option value="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
+        <option value="$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/ForumFrontendServiceProvider.php" />
+        <option value="$PROJECT_DIR$/config/forum.integration.php" />
       </list>
     </option>
   </component>
@@ -767,12 +761,6 @@
       <option name="number" value="Default" />
       <updated>1470876682524</updated>
     </task>
-    <task id="LOCAL-00021" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
-      <created>1471312773534</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1471312773534</updated>
-    </task>
     <task id="LOCAL-00022" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
       <created>1471314698812</created>
       <option name="number" value="00022" />
@@ -1061,7 +1049,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472537898456</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
+      <created>1472538239992</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1472538239992</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1127,40 +1121,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/forum/thread/index-new.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.642857">
-          <caret line="26" column="69" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/forum/thread/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/forum/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="43.964287">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34413967">
-          <caret line="2695" column="29" selection-start-line="2695" selection-start-column="29" selection-end-line="2695" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/roles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.535714">
@@ -1476,14 +1436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/ForumFrontendServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.428572">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/Http/Controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.321428">
@@ -1576,14 +1528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.25">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Policies/Forum/CategoryPolicy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.392857">
@@ -1602,10 +1546,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/다운로드/ForumServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3751763">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.392857">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7503526">
-          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+        <state vertical-scroll-proportion="-14.928572">
+          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/ForumFrontendServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.892858">
+          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/다운로드/forum.frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.892858">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/다운로드/forum.integration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.607142">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6699577">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding />
         </state>
       </provider>

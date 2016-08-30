@@ -50,7 +50,7 @@ class ForumServiceProvider extends ServiceProvider
         $this->setPublishables();
         $this->loadStaticFiles();
 
-        $this->namespace = 'Riari\Forum\Http\Controllers';
+        $this->namespace = 'Riari\Forum\Http\Controllers'; //config('forum.frontend.controllers.namespace');//
 
         $this->observeModels();
 
