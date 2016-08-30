@@ -71,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6156112">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -201,8 +201,8 @@
         <option value="$PROJECT_DIR$/app/Policies/Forum/ForumPolicy.php" />
         <option value="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
         <option value="$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/ForumFrontendServiceProvider.php" />
-        <option value="$PROJECT_DIR$/config/forum.integration.php" />
         <option value="$PROJECT_DIR$/app/Policies/Forum/CategoryPolicy.php" />
+        <option value="$PROJECT_DIR$/config/forum.integration.php" />
       </list>
     </option>
   </component>
@@ -832,12 +832,6 @@
       <option name="number" value="Default" />
       <updated>1470876682524</updated>
     </task>
-    <task id="LOCAL-00024" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
-      <created>1471332816198</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1471332816198</updated>
-    </task>
     <task id="LOCAL-00025" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
       <created>1471410042340</created>
       <option name="number" value="00025" />
@@ -1126,7 +1120,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472538532193</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
+      <created>1472540102486</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1472540102486</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1666,7 +1666,7 @@
     <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6156112">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding />
         </state>
       </provider>
