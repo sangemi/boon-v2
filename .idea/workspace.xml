@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor.zip" afterPath="$PROJECT_DIR$/vendor.zip" />
+    <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/forum.integration.php" afterPath="$PROJECT_DIR$/config/forum.integration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -830,12 +827,6 @@
       <option name="number" value="Default" />
       <updated>1470876682524</updated>
     </task>
-    <task id="LOCAL-00028" summary="3.2.2&#10;&#10;메모기능 추가&#10;&#10;&#10;">
-      <created>1471437805936</created>
-      <option name="number" value="00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1471437805936</updated>
-    </task>
     <task id="LOCAL-00029" summary="3.2.2&#10;&#10;마이페이지 세분화&#10;&#10;&#10;">
       <created>1471508287364</created>
       <option name="number" value="00029" />
@@ -1124,7 +1115,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472540640457</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
+      <created>1472541642386</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1472541642386</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="ToolWindowManager">
