@@ -4,7 +4,6 @@
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/forum.integration.php" afterPath="$PROJECT_DIR$/config/forum.integration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +60,8 @@
       <file leaf-file-name="forum.integration.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5036819">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.75552285">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -204,8 +203,8 @@
         <option value="$PROJECT_DIR$/app/Policies/Forum/ForumPolicy.php" />
         <option value="$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/ForumFrontendServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Policies/Forum/CategoryPolicy.php" />
-        <option value="$PROJECT_DIR$/config/forum.integration.php" />
         <option value="$PROJECT_DIR$/vendor/riari/laravel-forum/src/ForumServiceProvider.php" />
+        <option value="$PROJECT_DIR$/config/forum.integration.php" />
       </list>
     </option>
   </component>
@@ -835,12 +834,6 @@
       <option name="number" value="Default" />
       <updated>1470876682524</updated>
     </task>
-    <task id="LOCAL-00026" summary="3.2&#10;&#10;wave.bonzero.com 권리지킴이활동.&#10;&#10;&#10;">
-      <created>1471410088138</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1471410088138</updated>
-    </task>
     <task id="LOCAL-00027" summary="3.2.1&#10;&#10;메모기능 추가&#10;&#10;&#10;">
       <created>1471437124203</created>
       <option name="number" value="00027" />
@@ -1129,7 +1122,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472540133793</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
+      <created>1472540598530</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1472540598530</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1670,8 +1669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/forum.integration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5036819">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.75552285">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding />
         </state>
       </provider>
