@@ -484,7 +484,14 @@
 							<tr>
 								<td colspan="6"><small style="font-size:0.7em;">인지대, 송달료 포함 </small></td>
 							</tr>
-
+							<tr>
+								<td><b style="font-size:1.2em;">신한 100-029-697933 법무법인 예율</b>
+								<div>
+									<p style="color:tomato;">※ 입금자 성함이 달라서 신청여부 확인이 어렵습니다. 꼭 신청하신분 이름으로 송금부탁 드립니다!</p>
+									<small>기다려주시면 입금확인은 순차적으로 됩니다.</small>
+								</div>
+								</td>
+							</tr>
 						</table>
 					</div>
 				</div>
