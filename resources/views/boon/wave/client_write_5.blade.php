@@ -296,7 +296,7 @@ $(document).ready(function(){
                         <div class="big1 b">3. 사건의 표시</div>
                         <div class="b">제조물 결함으로 인한 손해배상청구 등
                             1) 원고 : 갑
-                            2) 피고 : 코웨이 주식회사</div>
+                            2) 피고 : 코웨이 주식회사 또는 청호나이스 주식회사</div>
 
                         <div class="c" style="margin:40px 0;">상기 당사자들은 위 표시 사건의 사건처리에 관한 위임계약을 다음과 같이 체결한다.</div>
 
@@ -413,7 +413,8 @@ $(document).ready(function(){
                             </tr>
                             <tr>
                                 <td></td>
-                                <td colspan="6">입금계좌 <b>신한 100-029-697933 법무법인 예율 </b></td>
+                                <td colspan="6">입금계좌 <b>신한 100-029-697933 법무법인 예율 </b>
+                                </td>
                             </tr>
 
                         </table>

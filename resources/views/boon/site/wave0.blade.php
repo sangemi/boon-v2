@@ -147,7 +147,7 @@
 										다수의 경험으로 집단소송을 관리해드립니다. <br>정기적 진행보고. <big>차별화된 소송지원</big>을 경험하세요.
 									</h2>
 									<p class="wow fadeInUp" style="display:none;" data-wow-duration="1s" data-wow-delay="1.4s">
-										<a href="/wave/5" class="btn btn-primary btn-sm" target="">#6 코웨이</a>
+										<a href="/wave/5" class="btn btn-primary btn-sm" target="">#6 코웨이/청호</a>
 										<a href="/wave/6" class="btn btn-primary btn-sm" target="">#7 인터파크</a>
 										<br>
 										<a href="#소송안내" class="btn btn-primary  btn-outline btn-sm">안내</a>
@@ -273,7 +273,7 @@
 										<div class="well well-sm" style="">
 											접수할 소송을 선택해주세요.
 											<div>
-												<a href="/wave/5" class="btn btn-link" target="">#6 코웨이 중금속 사건</a><br>
+												<a href="/wave/5" class="btn btn-link" target="">#6 정수기 중금속 사건</a><br>
 												<a href="/wave/6" class="btn btn-link" target="">#7 인터파크 정보유출 사건</a>
 											</div>
 										</div>
