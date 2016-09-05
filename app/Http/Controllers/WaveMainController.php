@@ -205,7 +205,8 @@ class WaveMainController extends Controller
         $wave_suit = $wave_client->suit()->first();
         $category_id = $wave_client->suit()->first()->forum_category_id; // wave_suits T에 공지 forum 번호
 
-        $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->get(); // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
+        $forum_threads = DB::table('forum_threads')->where('category_id', $category_id)->paginate(30); //get();
+        // 인터파크 //$category = route("forum.api.category.fetch", $request->route('category'));
 
         $uploaded_files = WaveFile::where('client_id', $request->client_id)->orderBy('title_no', 'asc')->get();
 

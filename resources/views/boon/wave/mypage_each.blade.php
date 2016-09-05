@@ -190,6 +190,10 @@ echo "ddddddd다름";
             @endforeach
             </ul>
         </div>
+        <!--페이징-->
+        <div class="text-center">
+            {!! $forum_threads->appends( Request::input() )->render() !!}
+        </div>
 
 
     </div>
