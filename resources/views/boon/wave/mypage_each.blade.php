@@ -243,6 +243,7 @@ echo "ddddddd다름";
             사이트의 탈퇴는 기능이 셋업되기 전까지는, 별도 이메일로 주시면 개별 처리해드리겠습니다.
         </p>
         <a class="btn btn-link btn-xs" id="btnEndClient">신청 철회</a>
+        <span style="color:tomato">※ 소송자체를 하지 않으실 분만 클릭해주세요. 서류를 두번 접수하신 분은 본 버튼을 누르시면 안됩니다. </span>
     </div>
     <script>
         $(document).ready(function(){
