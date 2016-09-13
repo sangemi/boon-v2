@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/mypage_each.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/mypage_each.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,44 +75,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WaveMainController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65585333">
-              <caret line="207" column="99" selection-start-line="207" selection-start-column="99" selection-end-line="207" selection-end-column="99" />
+            <state vertical-scroll-proportion="-13.892858">
+              <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.392857">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.20028208">
+              <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
               <folding>
-                <marker date="1472470367638" expanded="true" signature="1034:1050" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="1091:1107" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="1202:1218" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="1259:1275" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="1353:1369" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="1410:1426" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="8343:8353" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="8808:8844" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="8824:8844" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="12650:16857" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="12656:16857" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17659:17671" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17726:17786" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17738:17786" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17770:17786" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17824:17912" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17824:18001" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17824:18345" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="17824:18471" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="18054:18070" placeholder="..." />
-                <marker date="1472470367638" expanded="true" signature="18119:18135" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="1034:1050" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="1091:1107" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="1202:1218" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="1259:1275" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="1353:1369" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="1410:1426" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="8632:8642" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="9097:9133" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="9113:9133" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="12939:17146" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="12945:17146" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="17948:17960" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18015:18075" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18027:18075" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18059:18075" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18113:18201" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18113:18290" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18113:18634" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18113:18760" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18343:18359" placeholder="..." />
+                <marker date="1473742479665" expanded="true" signature="18408:18424" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.535714">
+              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,19 +169,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_write_6.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/client_write_6.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.821428">
-              <caret line="207" column="30" selection-start-line="203" selection-start-column="20" selection-end-line="207" selection-end-column="30" />
-              <folding>
-                <marker date="1471303290502" expanded="true" signature="2067:2186" placeholder="..." />
-                <marker date="1471303290502" expanded="true" signature="2170:2184" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -211,7 +207,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_08_28_182644_create_latent_clients_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveClientController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Policies/Policies/PostPolicy.php" />
         <option value="$PROJECT_DIR$/app/Policies/forum/PostPolicy.php" />
         <option value="$PROJECT_DIR$/app/Policies/ForumPolicy.php" />
@@ -239,6 +234,7 @@
         <option value="$PROJECT_DIR$/resources/views/boon/wave/client_write_5.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
         <option value="$PROJECT_DIR$/resources/views/boon/wave/mypage_each.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -252,7 +248,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="668" />
+    <option name="x" value="670" />
     <option name="width" value="1267" />
     <option name="height" value="1057" />
   </component>
@@ -664,12 +660,6 @@
       <option name="number" value="Default" />
       <updated>1470876682524</updated>
     </task>
-    <task id="LOCAL-00035" summary="3.3.0&#10;&#10;이벤트 페이지 추가&#10;&#10;&#10;">
-      <created>1471528052488</created>
-      <option name="number" value="00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1471528052488</updated>
-    </task>
     <task id="LOCAL-00036" summary="3.3.0&#10;&#10;이벤트 결과 게재&#10;&#10;&#10;">
       <created>1471591858510</created>
       <option name="number" value="00036" />
@@ -958,11 +948,17 @@
       <option name="project" value="LOCAL" />
       <updated>1473060132292</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
+      <created>1473235365590</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1473235365590</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="668" y="0" width="1267" height="1057" extended-state="0" />
+    <frame x="670" y="0" width="1267" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1024,14 +1020,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.0">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/riari/laravel-forum-frontend/src/Http/Controllers/ThreadController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.571428">
@@ -1418,36 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <marker date="1472470367638" expanded="true" signature="1034:1050" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="1091:1107" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="1202:1218" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="1259:1275" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="1353:1369" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="1410:1426" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="8343:8353" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="8808:8844" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="8824:8844" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="12650:16857" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="12656:16857" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17659:17671" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17726:17786" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17738:17786" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17770:17786" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17824:17912" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17824:18001" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17824:18345" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="17824:18471" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="18054:18070" placeholder="..." />
-            <marker date="1472470367638" expanded="true" signature="18119:18135" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/mypage_all.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.25">
@@ -1479,9 +1437,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65585333">
-          <caret line="207" column="99" selection-start-line="207" selection-start-column="99" selection-end-line="207" selection-end-column="99" />
+        <state vertical-scroll-proportion="-13.892858">
+          <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.535714">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20028208">
+          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+          <folding>
+            <marker date="1473742479665" expanded="true" signature="1034:1050" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="1091:1107" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="1202:1218" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="1259:1275" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="1353:1369" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="1410:1426" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="8632:8642" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="9097:9133" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="9113:9133" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="12939:17146" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="12945:17146" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="17948:17960" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18015:18075" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18027:18075" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18059:18075" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18113:18201" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18113:18290" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18113:18634" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18113:18760" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18343:18359" placeholder="..." />
+            <marker date="1473742479665" expanded="true" signature="18408:18424" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

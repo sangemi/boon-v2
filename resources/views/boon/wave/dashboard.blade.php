@@ -59,12 +59,20 @@ if(isset($request->suit_id)){
 <div>
     <a href="javascript:void(0);" class="toggle_smsbox btn btn-default">SMS 발송</a>
     <span class="btn btn-xs btn-default" id="btn-no-payment">미입금자 선택</span>
+    <span class="btn btn-xs btn-default" id="btn-select-all">전체 선택</span>
     <span id="sms_to_list" style="font-size:0.8em;color:gray;">리스트를 클릭 후 발송버튼 눌러주세요.</span>
 </div>
 <script>
     $(document).ready(function(){
         $(".toggle_smsbox").click(function() {
             toggle_smsbox();
+        });
+
+        $("#btn-select-all").click(function() {
+            $(".each_client").each(function(){
+                var status = $(this).data('chk_payment');
+                $(this).click();
+            });
         });
         $("#btn-no-payment").click(function() {
             $(".each_client").each(function(){
