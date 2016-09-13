@@ -60,7 +60,7 @@ if(isset($request->suit_id)){
     <a href="javascript:void(0);" class="toggle_smsbox btn btn-default">SMS 발송</a>
     <span class="btn btn-xs btn-default" id="btn-no-payment">미입금자 선택</span>
     <span class="btn btn-xs btn-default" id="btn-select-all">전체 선택</span>
-    <span id="sms_to_list" style="font-size:0.8em;color:gray;">리스트를 클릭 후 발송버튼 눌러주세요.</span>
+    <span id="sms_to_list" style="font-size:0.8em;color:gray;max-height:100px;overflow-y:scroll;">리스트를 클릭 후 발송버튼 눌러주세요.</span>
 </div>
 <script>
     $(document).ready(function(){
