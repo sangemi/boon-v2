@@ -96,7 +96,7 @@ class WaveMainController extends Controller
         if (Auth::check()) {
             if ($paper_name == 'clientlist') {
                 $wave_suit = WaveSuit::find($paper_number);
-                $wave_client = WaveClient::where('suit_id', $paper_number)->get(); //->paginate(500)
+                $wave_client = WaveClient::where('suit_id', $paper_number)->where('chk_payment', '입금완료')->get(); //->paginate(500)
 
                 return view('boon.wave.paper_client', compact('wave_client', 'wave_suit', 'request'));
             }
