@@ -21,9 +21,9 @@ class WaveMainController extends Controller
 {
     public function index(Request $request)
     {
-        if(isset($request->suit_number)){
+        if (isset($request->suit_number)) {
             return view('boon.site.wave' . $request->suit_number, compact('request'));
-        }else{
+        } else {
             return view('boon.site.wave0', compact('request'));
         }
 
@@ -32,7 +32,7 @@ class WaveMainController extends Controller
     /*추천활동 내역*/
     public function recommendResult(Request $request)
     {
-        if(Auth::check()) {
+        if (Auth::check()) {
             //$recommend_data = Recommend::where('recommending_id', Auth::user()->id)->where('category', '=', 'wave')->paginate(10); // ->get();
             $recommend_click = DB::table('recommend_users')
                 ->where('recommending_id', Auth::user()->id)
@@ -52,7 +52,7 @@ class WaveMainController extends Controller
                 ->where('category', '=', 'wave')->get();
 
             return view('boon.wave.recommend_result', compact('recommend_click', 'recommend_join', 'recommend_pay'));
-        }else{
+        } else {
             return redirect()->to('/auth/login'); //로그인
         }
 
@@ -69,8 +69,10 @@ class WaveMainController extends Controller
             return view('boon.site.wave0');
         }
     }
+
     /*추천링크 DB 기록*/
-    private function recordRecommend($data){
+    private function recordRecommend($data)
+    {
 
         $recommend_data = new Recommend();
         $recommend_data->category = 'wave';
@@ -81,10 +83,26 @@ class WaveMainController extends Controller
 
         $recommend_data->save();
     }
+
     /*공익활동 프로보노. 추천현황확인*/
     public function probono(Request $request)
     {
         return view('boon.wave.probono', compact('request'));
+    }
+
+    /*필요 서류 자동완성기*/
+    public function papers(Request $request, $paper_name, $paper_number)
+    {
+        if (Auth::check()) {
+            if ($paper_name == 'clientlist') {
+                $wave_suit = WaveSuit::find($paper_number);
+                $wave_client = WaveClient::where('suit_id', $paper_number)->get(); //->paginate(500)
+
+                return view('boon.wave.paper_client', compact('wave_client', 'wave_suit', 'request'));
+
+
+            }
+        }
     }
     public function tasks(Request $request, $task_name) // ajax 요청들.. // $row_id : client_id
     {

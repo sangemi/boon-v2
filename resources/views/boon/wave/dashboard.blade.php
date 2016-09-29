@@ -30,6 +30,10 @@
         <a href="{{ URL::to('wave/admin/event') }}">event</a>
     </li>
 
+    <li>
+        <a href="{{ URL::to('wave/admin/paper/clientlist/6') }}">원고목록</a>
+    </li>
+
 
     {{--<li class="pull-right"><a href="{{ URL::to('ip/work/create') }}">
         <span class="btn btn-xs btn-default" aria-hidden="true">의뢰 <span class="fa fa-pencil"></span></span></a>
@@ -60,7 +64,7 @@ if(isset($request->suit_id)){
     <a href="javascript:void(0);" class="toggle_smsbox btn btn-default">SMS 발송</a>
     <span class="btn btn-xs btn-default" id="btn-no-payment">미입금자 선택</span>
     <span class="btn btn-xs btn-default" id="btn-select-all">전체 선택</span>
-    <div id="sms_to_list" style="font-size:0.8em;color:gray;max-height:100px;overflow-y:scroll;">리스트를 클릭 후 발송버튼 눌러주세요.</div>
+    <div id="sms_to_list" style="font-size:0.8em;color:gray;max-height:60px;overflow-y:scroll;">리스트를 클릭 후 발송버튼 눌러주세요.</div>
 </div>
 <script>
     $(document).ready(function(){
@@ -396,7 +400,7 @@ if(isset($request->suit_id)){
                                 "<p class='' style=''>" + value['memo'] + "</p>" +
                                 "</div>" +
                             "<p class='' style='font-size:0.6em;'></p>" +
-                            "<p style='font-size:0.6em;'>타입 " + value['memo_type'] + " /입력 " + value['reg_id'] + " /담당 " + value['in_charge_id'] + "/처리 " + value['in_charge_check'] +'</p>'+
+                            "<p style='font-size:0.ㅣ6em;'>타입 " + value['memo_type'] + " /입력 " + value['reg_id'] + " /담당 " + value['in_charge_id'] + "/처리 " + value['in_charge_check'] +'</p>'+
                                 "<p class='text-right'>" + value['created_at'].substring(5,16) + " <span class='btn-del-memo btn btn-xs btn-default'>del</span></p>" +
                             "</div>" +
                             "</div>"
