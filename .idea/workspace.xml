@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e034bde4-d96b-4dfe-b58b-751120630be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WaveMainController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/boon/wave/paper_client.blade.php" afterPath="$PROJECT_DIR$/resources/views/boon/wave/paper_client.blade.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -77,12 +76,12 @@
       <file leaf-file-name="paper_client.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/paper_client.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84775084">
-              <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.38638985">
+              <caret line="119" column="44" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="44" />
               <folding>
                 <element signature="e#1715#1748#0#HTML" expanded="true" />
-                <element signature="e#5525#5558#0#HTML" expanded="true" />
-                <element signature="e#5660#5682#0#HTML" expanded="true" />
+                <element signature="e#5515#5548#0#HTML" expanded="true" />
+                <element signature="e#5650#5672#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -663,12 +662,6 @@
       <option name="number" value="Default" />
       <updated>1470876682524</updated>
     </task>
-    <task id="LOCAL-00040" summary="3.3.0&#10;&#10;이벤트 결과 게재&#10;&#10;&#10;">
-      <created>1471596116704</created>
-      <option name="number" value="00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1471596116704</updated>
-    </task>
     <task id="LOCAL-00041" summary="3.3.0&#10;&#10;이벤트 결과 게재&#10;&#10;&#10;">
       <created>1471596195818</created>
       <option name="number" value="00041" />
@@ -957,7 +950,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475149978775</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="3.5.2&#10;&#10;&#10;게시판에 Role 설정&#10;&#10;">
+      <created>1475150108372</created>
+      <option name="number" value="00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1475150108372</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1418,12 +1417,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/boon/wave/paper_client.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84775084">
-          <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.38638985">
+          <caret line="119" column="44" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="44" />
           <folding>
             <element signature="e#1715#1748#0#HTML" expanded="true" />
-            <element signature="e#5525#5558#0#HTML" expanded="true" />
-            <element signature="e#5660#5682#0#HTML" expanded="true" />
+            <element signature="e#5515#5548#0#HTML" expanded="true" />
+            <element signature="e#5650#5672#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

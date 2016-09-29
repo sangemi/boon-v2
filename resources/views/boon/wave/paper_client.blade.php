@@ -85,7 +85,7 @@ echo "ddddddd다름";
                     <div class="col-sm-12" style="text-align: left;">
 
                         <h3></h3>
-                        @if($wave_suit['suit_id'] == 5)
+                        @if($wave_suit['id'] == 5)
                             <table class="table table-condensed table-bordered  tb_file_status" >
                                 <tr><th>순번</th><th>성명</th><th>주민등록번호</th><th>주소</th><th>연락처</th></tr>
                                 @foreach($wave_client as $key => $each_client)
@@ -117,7 +117,7 @@ echo "ddddddd다름";
                                     @endif
                                 @endforeach
                             </table>
-                        @elseif($wave_suit['suit_id'] == 6)
+                        @elseif($wave_suit['id'] == 6)
                             <table class="table table-condensed table-bordered  tb_file_status" >
                             <tr><th>순번</th><th>성명</th><th>주민등록번호</th><th>주소</th><th>연락처</th></tr>
                             @foreach($wave_client as $key => $each_client)
