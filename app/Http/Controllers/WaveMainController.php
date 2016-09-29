@@ -99,8 +99,6 @@ class WaveMainController extends Controller
                 $wave_client = WaveClient::where('suit_id', $paper_number)->get(); //->paginate(500)
 
                 return view('boon.wave.paper_client', compact('wave_client', 'wave_suit', 'request'));
-
-
             }
         }
     }

@@ -133,7 +133,8 @@ echo "ddddddd다름";
                                 @endif
                             @endforeach
                             </table>
-
+                        @else
+                            wave_suit 선택안됨
                         @endif
 
 
