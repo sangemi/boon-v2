@@ -117,9 +117,9 @@ echo "ddddddd다름";
                                     @endif
                                 @endforeach
                             </table>
-                        @elseif($wave_suit['id'] == 6)
+                        @elseif($wave_suit['id'] == 6) {{--인터파크--}}
                             <table class="table table-condensed table-bordered  tb_file_status" >
-                            <tr><th>순번</th><th>성명</th><th>주민등록번호</th><th>주소</th><th>연락처</th></tr>
+                            <tr><th>순번</th><th>성명</th><th>주민등록번호</th><th>주소</th><th>연락처</th><th>인터파크 아이디</th></tr>
                             @foreach($wave_client as $key => $each_client)
                                 @if( !$each_client->withdraw )
                                     <tr>
@@ -128,6 +128,9 @@ echo "ddddddd다름";
                                         <td><?=$each_client->jumin?></td>
                                         <td>(<?=$each_client->postcode?>) <?=$each_client->addr?> <?=$each_client->addr2?></td>
                                         <td><?=\App\Lib\skHelper::tel_html($each_client->phone)?></td>
+                                        <td><?=$each_client->data01?></td>
+                                        {{--<td><?=$each_client->data02?></td>--}}
+
 
                                     </tr>
                                 @endif
